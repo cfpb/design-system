@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '../../abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 .a-tagline {
   font-size: math.div(12px, $base-font-size-px) + rem;

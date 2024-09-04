@@ -35,44 +35,6 @@ variation_groups:
           underlines elsewhere, e.g. to underline links in a `nav` element,
           simply add a `border-bottom-width: 1px;` to the link.'
         variation_specs: ''
-      - variation_name: List link
-        variation_code_snippet: |-
-          <ul class="m-list m-list--links">
-              <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                     <span class="a-link__text">List item 1</span>
-                  </a>
-              </li>
-              <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                      <span class="a-link__text">List item 2</span>
-                      {% include icons/external-link.svg %}
-                  </a>
-              </li>
-              <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                    <span class="a-link__text">List item 3</span>
-                    {% include icons/right.svg %}
-                  </a>
-              </li>
-              <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                    <span class="a-link__text">Read a report on our post-proposal qualitative testing of the new Spanish and refinance disclosures
-                    </span>
-                    {% include icons/download.svg %}
-                  </a>
-              </li>
-          </ul>
-        variation_description: List links (or call-to-action links) are links
-          that highlight a users' next steps. They are medium weight and often
-          used in unordered lists.
-        variation_implementation: Call-to-action links are used in
-          [cards](https://cfpb.github.io/design-system/patterns/cards) and [info
-          unit
-          groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
-          among other places.
-        variation_jinja_code_snippet: ''
-        variation_specs: ''
       - variation_name: Destructive link
         variation_code_snippet: |-
           <a class="a-btn a-btn--link a-btn--warning" href="#">
@@ -122,15 +84,7 @@ variation_groups:
             href="#">
           <span class="a-link__text">Jump link</span>
               {% include icons/right.svg %}
-          </a></p><p>
-          <a class="a-link
-                    a-link--jump"
-            href="#">
-          <span class="a-link__text">External link jump link</span>
-              {% include icons/external-link.svg %}
-              {% include icons/right.svg %}
           </a></p>
-
       - variation_is_deprecated: false
         variation_name: Jump link with icon on left
         variation_description: Jump links can also have icons before the text, like icon links.
@@ -140,14 +94,61 @@ variation_groups:
             href="#">
               {% include icons/left.svg %}
               <span class="a-link__text">Jump link with icon on left</span>
-          </a></p><p>
-          <a class="a-link
-                    a-link--jump"
-            href="#">
-              {% include icons/left.svg %}
-          <span class="a-link__text">External link jump link</span>
-              {% include icons/external-link.svg %}
           </a></p>
+      - variation_name: List link
+        variation_code_snippet: |-
+          <ul class="m-list m-list--links">
+              <li class="m-list__item">
+                  <a class="a-link a-link--jump" href="#">
+                     <span class="a-link__text">List item 1</span>
+                  </a>
+              </li>
+              <li class="m-list__item">
+                  <a class="a-link a-link--jump" href="#">
+                      <span class="a-link__text">List item 2</span>
+                      {% include icons/external-link.svg %}
+                  </a>
+              </li>
+              <li class="m-list__item">
+                  <a class="a-link a-link--jump" href="#">
+                    <span class="a-link__text">List item 3</span>
+                    {% include icons/right.svg %}
+                  </a>
+              </li>
+              <li class="m-list__item">
+                  <a class="a-link a-link--jump" href="#">
+                    <span class="a-link__text">Read a report on our post-proposal qualitative testing of the new Spanish and refinance disclosures
+                    </span>
+                    {% include icons/download.svg %}
+                  </a>
+              </li>
+              <li class="m-list__item">
+                  <a class="a-link
+                        a-link--jump"
+                href="#">
+              <span class="a-link__text">External link jump link</span>
+                  {% include icons/external-link.svg %}
+                  {% include icons/right.svg %}
+                </a>
+              </li>
+              <li class="m-list__item">
+                  <a class="a-link a-link--jump" href="#">
+                    {% include icons/left.svg %}
+                    <span class="a-link__text">External link jump link</span>
+                      {% include icons/external-link.svg %}
+                  </a>
+              </li>
+          </ul>
+        variation_description: List links (or call-to-action links) are links
+          that highlight a users' next steps. They are medium weight and often
+          used in unordered lists.
+        variation_implementation: Call-to-action links are used in
+          [cards](https://cfpb.github.io/design-system/patterns/cards) and [info
+          unit
+          groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
+          among other places.
+        variation_jinja_code_snippet: ''
+        variation_specs: ''
       - variation_is_deprecated: false
         variation_name: Printed links
         variation_description: When a page is printed from

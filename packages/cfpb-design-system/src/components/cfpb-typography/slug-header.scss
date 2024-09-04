@@ -1,7 +1,7 @@
 @use 'sass:math';
 @use './vars.scss' as *;
-@use '../../abstracts' as *;
-@use '../../abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 .m-slug-header {
   border-top: 1px solid $slug-header-border-thin;

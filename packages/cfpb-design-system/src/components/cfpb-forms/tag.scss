@@ -1,15 +1,20 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-typography/mixins' as *;
 
 /* ==========================================================================
    consumerfinance.gov
    tag
    ========================================================================== */
 
-.a-tag {
+// Filter tags appear in filtered contexts, often as part of multiselects.
+.a-tag-filter {
+  display: flex;
+  gap: 10px;
+
   border: 1px solid var(--teal);
-  padding: 4px 10px;
+  padding: 4px 6px;
   background-color: var(--teal-20);
   border-radius: math.div(3px, $base-font-size-px) + rem;
   color: var(--black);
@@ -29,13 +34,11 @@
   }
 
   .cf-icon-svg {
-    display: inline-block;
-    margin-left: 10px;
     pointer-events: none;
   }
 }
 
-a.a-tag {
+a.a-tag-filter {
   // Colors for :link, :visited, :hover, :focus, :active.
   @include u-link-colors(
     var(--black),
@@ -46,8 +49,68 @@ a.a-tag {
   );
 }
 
+// Topic tags
+.a-tag-topic {
+  @include u-jump-link(
+    $is-gold: true,
+    $jump-link-text-class: 'a-tag-topic__text'
+  );
+}
+@include u-jump-link-group($jump-link-class: 'a-tag-topic');
+
+@include respond-to-min($bp-sm-min) {
+  a.a-tag-topic,
+  a.a-tag-topic:hover {
+    border-bottom: none;
+  }
+
+  .a-tag-topic__text {
+    // Colors for :link, :visited, :hover, :focus, :active
+    @include u-link-colors(
+      var(--gray),
+      var(--gray),
+      var(--gray),
+      var(--gray),
+      var(--gray)
+    );
+  }
+
+  .a-tag-topic:visited .a-tag-topic__text,
+  .a-tag-topic:hover .a-tag-topic__text,
+  .a-tag-topic:focus .a-tag-topic__text,
+  .a-tag-topic:active .a-tag-topic__text {
+    border-bottom: 1px solid var(--gold-80);
+  }
+}
+
+// Tag group sets the spacing between tags.
 .m-tag-group {
-  display: flex;
-  gap: math.div(15px, $btn-font-size) + em;
-  flex-wrap: wrap;
+  // Remove list (ul/ol) bullets styles.
+  padding-left: 0;
+  list-style-type: none;
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    display: flex;
+    gap: math.div(15px, $btn-font-size) + em;
+    flex-wrap: wrap;
+  }
+
+  &:has(.a-tag-filter) {
+    display: flex;
+    gap: math.div(15px, $btn-font-size) + em;
+    flex-wrap: wrap;
+  }
+}
+
+html[lang='ar'] .m-tag-group {
+  // This is needed for right-to-left (RTL) lists.
+  padding-right: 0;
 }

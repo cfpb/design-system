@@ -1,0 +1,80 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities' as *;
+
+//
+// Jump link
+//
+
+@mixin u-jump-link($is-gold: false, $jump-link-text-class: 'a-link__text') {
+  @if $is-gold {
+    font-size: math.div(12px, $base-font-size-px) + rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--gold-80);
+    border-color: var(--gold-80);
+    letter-spacing: 1px;
+
+    @include u-link-colors(var(--gold-80));
+
+    .#{$jump-link-text-class} {
+      color: var(--gray);
+      border-bottom-color: var(--gold-80);
+      word-break: break-word;
+    }
+  } @else {
+    font-weight: 500;
+  }
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    display: flex;
+    align-items: center;
+    gap: math.div(5px, $base-font-size-px) + rem;
+
+    box-sizing: border-box;
+    padding-top: math.div(10px, $base-font-size-px) + em;
+    padding-bottom: math.div(10px, $base-font-size-px) + em;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+
+    // 100% width is needed when block or jump link are applied to a <button>.
+    width: 100%;
+
+    // Only right-hand align arrow icons.
+    .cf-icon-svg--right {
+      margin-left: auto;
+    }
+
+    .a-link__text {
+      border-bottom-width: 0;
+
+      // Arbitrary high value for flex-shrink to prevent squeezing of the icon
+      // when the link text is very long.
+      flex-shrink: 10;
+    }
+  }
+}
+
+@mixin u-jump-link-group($jump-link-class: 'a-link--jump') {
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    // Handle the borders of jump links that are adjacent in a list.
+    li:has(.#{$jump-link-class}) + li:has(.#{$jump-link-class}) {
+      .#{$jump-link-class} {
+        position: relative;
+        border-top: none;
+      }
+
+      .#{$jump-link-class}:hover::before {
+        position: absolute;
+        top: -1px;
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        border-top: 1px solid currentcolor;
+      }
+    }
+  }
+}

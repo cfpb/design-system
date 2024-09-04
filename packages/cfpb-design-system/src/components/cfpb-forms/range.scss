@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '../../abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 @mixin u-range-track-styles() {
   height: math.div(11px, $base-font-size-px) + rem;

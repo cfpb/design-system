@@ -55,7 +55,7 @@
 /* stylelint-disable selector-class-pattern */
 @mixin u-grid-push($offset: 1, $grid-total-columns: $grid-total-columns) {
   /* stylelint-enable */
-  $push: math.percentage($offset / $grid-total-columns);
+  $push: math.percentage(math.div($offset, $grid-total-columns));
 
   position: relative;
   left: $push;
@@ -64,7 +64,7 @@
 /* stylelint-disable selector-class-pattern */
 @mixin u-grid-pull($offset: 1, $grid-total-columns: $grid-total-columns) {
   /* stylelint-enable */
-  $pull: math.percentage($offset / $grid-total-columns);
+  $pull: math.percentage(math.div($offset, $grid-total-columns));
 
   position: relative;
   right: $pull;

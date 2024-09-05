@@ -1,4 +1,19 @@
 
+## v3.1.2 (2024-09-05)
+
+#### Breaking Change
+* `cfpb-design-system`
+  * [#2027](https://github.com/cfpb/design-system/pull/2027) Remove `$font-size` variable ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2036](https://github.com/cfpb/design-system/pull/2036) Adjust tags outline and coloring ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.1.1 (2024-09-05)
 
 #### Bug Fix

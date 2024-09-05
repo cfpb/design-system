@@ -1,4 +1,19 @@
 
+## v3.1.1 (2024-09-05)
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2034](https://github.com/cfpb/design-system/pull/2034) Update accordion BEM fix ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-design-system`
+  * [#2035](https://github.com/cfpb/design-system/pull/2035) Update types/react, decap-cms-app, cypress, postcss, sass, saucectl, stylelint ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.1.0 (2024-09-04)
 
 #### Enhancement

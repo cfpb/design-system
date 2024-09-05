@@ -1,4 +1,15 @@
 
+## v3.1.3 (2024-09-05)
+
+#### Enhancement
+* `cfpb-design-system`
+  * [#2038](https://github.com/cfpb/design-system/pull/2038) Add tag RTL code ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.1.2 (2024-09-05)
 
 #### Breaking Change

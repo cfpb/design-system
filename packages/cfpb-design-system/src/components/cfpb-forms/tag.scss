@@ -134,7 +134,11 @@ a.a-tag-filter {
   }
 }
 
-html[lang='ar'] .m-tag-group {
-  // This is needed for right-to-left (RTL) lists.
-  padding-right: 0;
+// Right-to-left (RTL) adjustments for arabic pages.
+html[lang='ar'] {
+  .m-tag-group {
+    direction: rtl;
+    // This is needed for right-to-left (RTL) lists.
+    padding-right: 0;
+  }
 }

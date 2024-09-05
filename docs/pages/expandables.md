@@ -255,10 +255,10 @@ variation_groups:
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
         variation_description:
           To show only one open expandable at a time, use an
-          accordion group. Add the `o-expandable-group__accordion` class to the
-          expandable group to activate the accordion mode.
+          accordion group. Add the `o-expandable-group--accordion` modifier
+          class to the expandable group to activate the accordion mode.
         variation_code_snippet: >-
-          <div class="o-expandable-group o-expandable-group__accordion">
+          <div class="o-expandable-group o-expandable-group--accordion">
               <div class="o-expandable">
                   <button class="o-expandable__header"
                           title="Expand content">

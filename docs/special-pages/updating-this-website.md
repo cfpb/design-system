@@ -32,7 +32,7 @@ description: >-
   It's powered by GitHub and will let you edit any page of this website.
 
 
-  <div class="o-expandable-group o-expandable-group__accordion">
+  <div class="o-expandable-group o-expandable-group--accordion">
       <div class="o-expandable">
           <button class="o-expandable__header"
                   title="Expand content">

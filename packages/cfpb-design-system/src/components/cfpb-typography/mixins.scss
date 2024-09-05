@@ -28,6 +28,7 @@
 
   // Mobile only.
   @include respond-to-max($bp-xs-max) {
+    position: relative;
     display: flex;
     align-items: center;
     gap: math.div(5px, $base-font-size-px) + rem;
@@ -40,6 +41,24 @@
 
     // 100% width is needed when block or jump link are applied to a <button>.
     width: 100%;
+
+    // We create a faux focus rectangle in the ::after pseudoelement to better
+    // control the positioning of the focus rectangle, which would overwise
+    // overlap the top border of the jumplink when it appears in a group.
+    &:focus {
+      outline: none;
+
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        outline: 1px dotted var(--gray);
+        outline-offset: 2px;
+      }
+    }
 
     // Only right-hand align arrow icons.
     .cf-icon-svg--right {
@@ -66,7 +85,8 @@
         border-top: none;
       }
 
-      .#{$jump-link-class}:hover::before {
+      .#{$jump-link-class}:hover::before,
+      .#{$jump-link-class}:focus::before {
         position: absolute;
         top: -1px;
         content: '';

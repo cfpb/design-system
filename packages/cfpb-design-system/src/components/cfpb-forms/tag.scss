@@ -59,7 +59,6 @@ a.a-tag-filter {
     $jump-link-text-class: 'a-tag-topic__text'
   );
 }
-
 @include u-jump-link-group($jump-link-class: 'a-tag-topic');
 
 .a-tag-topic__bullet {
@@ -67,6 +66,7 @@ a.a-tag-filter {
   line-height: 1rem;
 }
 
+// Tablet and above.
 @include respond-to-min($bp-sm-min) {
   .a-tag-topic__text {
     // Colors for :link, :visited, :hover, :focus, :active
@@ -85,9 +85,7 @@ a.a-tag-filter {
   .a-tag-topic:focus,
   .a-tag-topic:active {
     border-bottom: none;
-
-    // Normally we offset the focus 2px, but we need 3px here for the underline.
-    outline-offset: 3px;
+    outline-offset: 1px;
 
     .a-tag-topic__text {
       // Move the underline down 1px.
@@ -98,6 +96,14 @@ a.a-tag-filter {
 
   .a-tag-topic:hover .a-tag-topic__text {
     border-bottom: 1px solid var(--gold-80);
+  }
+
+  .a-tag-topic:focus {
+    outline-color: var(--gray);
+
+    .a-tag-topic__text {
+      border-bottom-style: solid !important;
+    }
   }
 }
 

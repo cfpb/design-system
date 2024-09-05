@@ -1,4 +1,15 @@
 
+## v3.1.4 (2024-09-05)
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2039](https://github.com/cfpb/design-system/pull/2039) Update index.scss ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.1.3 (2024-09-05)
 
 #### Enhancement

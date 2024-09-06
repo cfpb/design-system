@@ -28,7 +28,7 @@
 
     &:focus {
       outline: 1px dotted var(--pacific);
-      outline-offset: 2px;
+      outline-offset: 1px;
     }
 
     &[aria-expanded='false']::before {
@@ -42,7 +42,7 @@
       right: 0;
 
       // 4px is needed because the 2px movement of the content's bounding box.
-      top: calc(-100% + 4px);
+      top: calc(-100% + 2px);
       background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0%) 0%,

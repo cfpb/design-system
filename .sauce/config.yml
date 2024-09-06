@@ -1,55 +1,53 @@
-apiVersion: v1
-kind: cypress
-defaults: {}
-showConsoleLog: false
-npm:
-  registries:
-    - url: https://registry.npmjs.org
-  packages:
-    '@cfpb/browserslist-config': '0.0.2'
+apiVersion: v1alpha
+kind: xcuitest
 sauce:
   region: us-west-1
-  concurrency: 15
-  sauceignore: .sauceignore
-cypress:
-  configFile: cypress.config.js
-  version: 13.7.3
-  record: false
-  key: ''
-  reporters: []
+  concurrency: 3
+  metadata:
+    tags:
+      - e2e
+    build: Release $CI_COMMIT_SHORT_SHA
+
+xcuitest:
+  app: $APP
+  testApp: $TEST_APP
+
 suites:
-  - name: cypress - Windows 10 - chrome
-    browser: 'chrome'
-    browserVersion: 'latest'
-    platformName: 'Windows 10'
-    config:
-      testingType: e2e
-      specPattern:
-        - 'test/cypress/e2e/**/*.cy.js'
-      # Increase the VM's resolution for Decap CMS tests that require a wider viewport.
-      screenResolution: '1920x1200'
-  - name: cypress - Windows 11 - edge
-    browser: 'microsoftedge'
-    browserVersion: '119'
-    platformName: 'Windows 11'
-    config:
-      testingType: e2e
-      specPattern:
-        - 'test/cypress/e2e/**/*.cy.js'
-      screenResolution: '1920x1200'
-      exclude:
-        # Decap CMS is only tested with Chrome
-        - 'test/cypress/e2e/docs/decap-cms.cy.js'
-  - name: cypress - Windows 10 - firefox
-    browser: 'firefox'
-    browserVersion: '123'
-    platformName: 'Windows 10'
-    config:
-      testingType: e2e
-      specPattern:
-        - 'test/cypress/e2e/**/*.cy.js'
-      screenResolution: '1920x1200'
-      exclude:
-        # Decap CMS is only tested with Chrome
-        - 'test/cypress/e2e/docs/decap-cms.cy.js'
-rootDir: .
+  - name: 'saucy xcuitest'
+    devices:
+      # If set, only device by ID will be queried.
+      #- id: <rdc_device_id>
+      - name: 'iPhone.*'
+        options:
+          # If set, only devices with a SIM card will be queried.
+          carrierConnectivity: false
+          # Possible values [ANY, PHONE, TABLET]
+          deviceType: ANY
+          # If set, only private devices will be queried.
+          private: false
+  - name: 'saucy xcuitest test filter by class'
+    testOptions:
+      class:
+        - DemoAppUITests.DemoAppUITestsLaunchTests
+    devices:
+      # If set, only device by ID will be queried.
+      #- id: <rdc_device_id>
+      - name: 'iPhone.*'
+        options:
+          # If set, only devices with a SIM card will be queried.
+          carrierConnectivity: false
+          # Possible values [ANY, PHONE, TABLET]
+          deviceType: ANY
+          # If set, only private devices will be queried.
+          private: false
+
+artifacts:
+  download:
+    when: always
+    match:
+      - 'junit.xml'
+    directory: ./artifacts/
+
+reporters:
+  spotlight: # Prints an overview of failed or otherwise interesting jobs.
+    enabled: true

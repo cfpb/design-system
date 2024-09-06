@@ -22,7 +22,7 @@ variation_groups:
           ![CFPB primary seal](/design-system/images/uploads/seal_071620.png)
 
           </div>
-        variation_name: ''
+        variation_name: ""
         variation_specs: |-
           The seal is comprised of the following colors.
 
@@ -113,7 +113,7 @@ variation_groups:
             </tbody></table>
   - variation_group_name: Variations
     variations:
-      - variation_name: ''
+      - variation_name: ""
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -166,7 +166,7 @@ guidelines: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  ### Cleaspace
+  ### Clear space
 
 
   Use ample space around the seal to ensure maximum impact and keep the mark from looking cluttered. The clear space on each side of the seal should be ¼” of the seal’s size. 
@@ -317,9 +317,9 @@ guidelines: >-
 
 
   </div>
-behavior: ''
 restrictions: []
-related_items: ''
-last_updated: 2020-02-27T16:56:46.952Z
 eyebrow: Brand symbols
+behavior: ""
+related_items: ""
+last_updated: 2020-02-27T16:56:46.952Z
 ---

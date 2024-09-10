@@ -23,9 +23,8 @@
   ],
   "scripts": {
     "a11y": "lhci autorun",
-    "build": "node ./esbuild/docs/build.js",
+    "build": "node ./esbuild/packages/build.js && node ./esbuild/docs/build.js",
     "build-decap": "yarn install && yarn after-install && yarn build && bundle exec jekyll build",
-    "build-packages": "node ./esbuild/packages/build.js",
     "changelog": "./scripts/generate-changelog.sh",
     "copy-assets": "./scripts/fonts.sh && cp -r packages/cfpb-design-system/src/components/cfpb-icons/icons docs/_includes/",
     "design-system-link": "lerna exec -- yarn link",

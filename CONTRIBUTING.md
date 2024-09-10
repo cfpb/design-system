@@ -40,7 +40,7 @@ here's what you'd do:
 1. `yarn design-system-link` to [link](https://yarnpkg.com/lang/en/docs/cli/link/) your local CF components.
 1. `cd ~/wherever/cfgov-refresh/` to navigate to another project where you'd like to test your buttons changes (in this case, cfgov-refresh).
 1. `yarn link @cfpb/cfpb-buttons` to link @cfpb/cfpb-buttons to cfgov-refresh.
-1. `yarn build-packages` in cfgov-refresh to compile your stylesheets.
+1. `yarn build` in cfgov-refresh to compile your stylesheets.
 1. [Start cfgov-refresh](https://cfpb.github.io/cfgov-refresh/usage/) and navigate to a page with buttons to view your @cfpb/cfpb-buttons changes.
 1. When you're pleased with your changes, `cd` back to your `design-system` repo and commit your changes: `git commit -am "Fix button border radius"`
 1. `git push origin button-fix` to push your branch up to GitHub.

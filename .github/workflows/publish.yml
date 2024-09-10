@@ -23,7 +23,7 @@ jobs:
         run: yarn install
 
       - name: Build assets
-        run: yarn build-packages
+        run: yarn build
 
       - name: Publish
         run: |

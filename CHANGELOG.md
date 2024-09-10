@@ -1,4 +1,20 @@
 
+## v3.1.5 (2024-09-10)
+
+#### Enhancement
+* `cfpb-design-system`
+  * [#2042](https://github.com/cfpb/design-system/pull/2042) Add stacked topic tag group modifier ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2037](https://github.com/cfpb/design-system/pull/2037) Adjust focus rectangle offset for default links, expandables, summaries ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- John Paul Doguin ([@doguin](https://github.com/doguin))
+
+
+
 ## v3.1.4 (2024-09-05)
 
 #### Bug Fix

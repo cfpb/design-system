@@ -53,12 +53,12 @@ a.a-tag-filter {
 .a-tag-topic {
   display: flex;
   gap: math.div(5px, $btn-font-size) + rem;
-
-  @include u-jump-link(
-    $is-gold: true,
-    $jump-link-text-class: 'a-tag-topic__text'
-  );
 }
+@include u-jump-link(
+  $jump-link-class: 'a-tag-topic',
+  $jump-link-text-class: 'a-tag-topic__text',
+  $is-gold: true
+);
 @include u-jump-link-group($jump-link-class: 'a-tag-topic');
 
 .a-tag-topic__bullet {
@@ -68,7 +68,7 @@ a.a-tag-filter {
 
 // Tablet and above.
 @include respond-to-min($bp-sm-min) {
-  .a-tag-topic__text {
+  a.a-tag-topic__text {
     // Colors for :link, :visited, :hover, :focus, :active
     @include u-link-colors(
       var(--gray),
@@ -79,11 +79,11 @@ a.a-tag-filter {
     );
   }
 
-  .a-tag-topic,
-  .a-tag-topic:visited,
-  .a-tag-topic:hover,
-  .a-tag-topic:focus,
-  .a-tag-topic:active {
+  a.a-tag-topic,
+  a.a-tag-topic:visited,
+  a.a-tag-topic:hover,
+  a.a-tag-topic:focus,
+  a.a-tag-topic:active {
     border-bottom: none;
     outline-offset: 1px;
 
@@ -94,11 +94,11 @@ a.a-tag-filter {
     }
   }
 
-  .a-tag-topic:hover .a-tag-topic__text {
+  a.a-tag-topic:hover .a-tag-topic__text {
     border-bottom: 1px solid var(--gold-80);
   }
 
-  .a-tag-topic:focus {
+  a.a-tag-topic:focus {
     outline-color: var(--gray);
 
     .a-tag-topic__text {

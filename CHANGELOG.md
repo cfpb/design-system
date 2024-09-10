@@ -1,4 +1,15 @@
 
+## v3.1.6 (2024-09-10)
+
+#### Enhancement
+* `cfpb-design-system`
+  * [#2045](https://github.com/cfpb/design-system/pull/2045) Add non-link topic tags ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.1.5 (2024-09-10)
 
 #### Enhancement

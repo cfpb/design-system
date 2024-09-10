@@ -1,4 +1,15 @@
 
+## v3.1.7 (2024-09-10)
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2046](https://github.com/cfpb/design-system/pull/2046) Update gap in tags ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.1.6 (2024-09-10)
 
 #### Enhancement

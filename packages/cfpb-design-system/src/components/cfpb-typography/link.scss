@@ -13,9 +13,5 @@
 //
 // Jump link
 //
-
-.a-link--jump {
-  @include u-jump-link;
-}
-
-@include u-jump-link-group;
+@include u-jump-link('a-link--jump', 'a-link__text');
+@include u-jump-link-group('a-link--jump');

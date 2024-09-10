@@ -53,6 +53,25 @@ variation_groups:
             </li>
           </ol>
       - variation_is_deprecated: false
+        variation_name: Non-link topic tags
+        variation_description: A group of topic tags that are not links.
+        variation_code_snippet: >-
+          <ol class="m-tag-group">
+            <li>
+              <span class="a-tag-topic">
+                <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
+                <span class="a-tag-topic__text">Open government</span>
+              </a>
+            </li>
+
+            <li>
+              <span class="a-tag-topic">
+                <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
+                <span class="a-tag-topic__text">Banking</span>
+              </a>
+            </li>
+          </ol>
+      - variation_is_deprecated: false
         variation_name: Filter tag
         variation_description: Filter tags are used as a part of
           [multiselects](https://cfpb.github.io/design-system/components/selects#multiselect)

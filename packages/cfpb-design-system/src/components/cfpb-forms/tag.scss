@@ -113,17 +113,14 @@ a.a-tag-filter {
   padding-left: 0;
   list-style-type: none;
 
-  // Mobile only.
-  @include respond-to-max($bp-xs-max) {
-    li {
-      margin-bottom: 0;
-    }
+  li {
+    margin-bottom: 0;
   }
 
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {
     display: flex;
-    column-gap: math.div(15px, $btn-font-size) + em;
+    gap: math.div(15px, $btn-font-size) + em;
     flex-wrap: wrap;
 
     &--stacked {

@@ -21,7 +21,7 @@ variation_groups:
             <li>
               <a href="#" class="a-tag-topic">
                 <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
-                <span class="a-tag-topic__text">Discrimination</span>
+                <span class="a-tag-topic__text">Access to credit</span>
               </a>
             </li>
 
@@ -29,6 +29,26 @@ variation_groups:
               <a href="#" class="a-tag-topic">
                 <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
                 <span class="a-tag-topic__text">Mortgages</span>
+              </a>
+            </li>
+          </ol>
+
+      - variation_is_deprecated: false
+        variation_name: Topic tag (stacked)
+        variation_description: A topic tags group that is stacked at all screen sizes.
+        variation_code_snippet: >-
+          <ol class="m-tag-group m-tag-group--stacked">
+            <li>
+              <a href="#" class="a-tag-topic">
+                <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
+                <span class="a-tag-topic__text">Open government</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="a-tag-topic">
+                <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
+                <span class="a-tag-topic__text">Banking</span>
               </a>
             </li>
           </ol>

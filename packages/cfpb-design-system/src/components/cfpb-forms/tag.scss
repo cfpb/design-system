@@ -123,8 +123,13 @@ a.a-tag-filter {
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {
     display: flex;
-    gap: math.div(15px, $btn-font-size) + em;
+    column-gap: math.div(15px, $btn-font-size) + em;
     flex-wrap: wrap;
+
+    &--stacked {
+      flex-direction: column;
+      width: fit-content;
+    }
   }
 
   &:has(.a-tag-filter) {

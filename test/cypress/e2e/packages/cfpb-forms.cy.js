@@ -89,7 +89,7 @@ describe('Multiselect', () => {
       '.a-live__code .o-multiselect__options li[data-option=option2] label',
     ).click();
     cy.get(
-      '.a-live__code .o-multiselect .m-tag-group label[for=test_select__multiple-option2]',
+      '.a-live__code .o-multiselect .m-tag-group label[for=test_select__multiple-option2] svg',
     ).should('be.visible');
   });
 });

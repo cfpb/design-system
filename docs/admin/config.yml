@@ -206,7 +206,7 @@ collections:
                 required: false
               - name: 'variation_jinja_code_snippet'
                 label: 'Variation Jinja links or snippet'
-                hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
+                hint: 'Use this field to add links to Jinja2 templates in consumerfinance.gov.'
                 required: false
                 widget: 'markdown'
                 minimal: true

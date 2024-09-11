@@ -1,6 +1,6 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
-// Taken from enhancements/layout.scss in cfgov-refresh
+// Taken from enhancements/layout.scss in consumerfinance.gov
 .wrapper--match-content {
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {

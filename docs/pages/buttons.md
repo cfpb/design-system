@@ -34,7 +34,7 @@ variation_groups:
           when possible.
 
 
-          Apply the `a-btn` class to a link, button and submit input field to receive the atomic button styles. For more information, see [cf.gov refresh documentation on atomic styles](https://cfpb.github.io/cfgov-refresh/atomic-structure/).
+          Apply the `a-btn` class to a link, button and submit input field to receive the atomic button styles. For more information, see [cf.gov refresh documentation on atomic styles](https://cfpb.github.io/consumerfinance.gov/atomic-structure/).
         variation_specs: ''
         variation_name: Primary button
       - variation_code_snippet: >-

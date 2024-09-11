@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+# Make sure we don't have any linting errors.
+yarn lint
+
 # Make sure everything is current and built and generate changelog.
 yarn build
 

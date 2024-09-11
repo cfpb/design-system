@@ -150,12 +150,34 @@
                 
                 
                     <div class="ds-nav ds-nav-2">
-                        <div class="h5">Atomic</div>
+                        <div class="h5">General principles</div>
                         
                         <ul class="m-list m-list--links">
                         
                             <li class="m-list__item">
                                 <a class="a-link a-link--jump" href="/design-system/development/atomic-components">Atomic components</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/variables">Variables</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Getting started</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/getting-started">Getting Started</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/integrating-the-design-system-into-your-project">Integrating the Design System into your project</a>
                             </li>
                         
                         </ul>
@@ -167,10 +189,6 @@
                         <div class="h5">Layout</div>
                         
                         <ul class="m-list m-list--links">
-                        
-                            <li class="m-list__item">
-                                <a class="a-link a-link--jump" href="/design-system/development/base-images">Base images</a>
-                            </li>
                         
                             <li class="m-list__item">
                                 <a class="a-link a-link--jump" href="/design-system/development/blocks">Blocks</a>
@@ -196,10 +214,6 @@
                         
                             <li class="m-list__item">
                                 <a class="a-link a-link--jump" href="/design-system/development/media-queries">Media queries</a>
-                            </li>
-                        
-                            <li class="m-list__item">
-                                <a class="a-link a-link--jump" href="/design-system/development/variables">Variables</a>
                             </li>
                         
                         </ul>
@@ -233,7 +247,7 @@
   <div class="ds-content">
     <section>
       <div class="h5">
-        Atomic
+        General conventions
       </div>
     
 
@@ -251,16 +265,15 @@
     
     <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
         
-        <li class="m-list__item">
-            <a href="#use-cases">Use cases</a>
-        </li>
-        
     </ul>
     
 
     
     <section id="description" class="u-mb30">
-        <p>Atomic Component is a micro framework for building Atomic Design components that utilize JavaScript. It is a dependency of other packages and isn’t used on its own.</p>
+        <p>In general, our components employ the concept of atomic design, meaning that we break them down into atoms, molecules, and organisms, each successive level being more complex than the previous. (We do not currently use the template or page concepts as described in <a href="http://bradfrost.com/blog/post/atomic-web-design/">Brad Frost’s seminal article introducing atomic design</a>).
+Our components are composed (on the front-end) of HTML, SCSS (Sass), and JavaScript. If a component doesn’t have user interactions or require styling, then it won’t have an associated JS and/or SCSS file.</p>
+<h2 id="css-class-name-prefixes">CSS class name prefixes</h2>
+<p>The atomic components have CSS class names with the prefixes <code class="language-plaintext highlighter-rouge">a-</code>, <code class="language-plaintext highlighter-rouge">m-</code>, <code class="language-plaintext highlighter-rouge">o-</code>, corresponding to atoms, molecules, and organisms. Additionally, utility classes have the <code class="language-plaintext highlighter-rouge">u-</code> prefix. These classes are for one-off adjustments, that are shared across several components and don’t fit neatly into the atomic hierarchy.</p>
 
     </section>
     
@@ -268,77 +281,6 @@
     
 
     
-    
-        <section class="sticky-header u-mb45">
-
-            
-                <h2 id="use-cases">Use cases</h2>
-                <div class="content__line content__line--wide u-mb20"></div>
-                <p>
-                </p>
-<p>This framework is intended to be used in conjunction with adherence to Atomic Design principles. It helps provide a uniform way to build Atomic components using HTML, CSS, and JavaScript.</p>
-
-<p>Atomic prefixing standards for atoms, molecules, and organisms are covered in greater detail in <a href="https://cfpb.github.io/cfgov-refresh/atomic-structure/">cfgov-refresh documentation</a>.</p>
-
-<p>An example use case in building a Molecule: molecules are prefixed with “m-” in CSS, JavaScript, and HTML files, as demonstrated below.</p>
-
-<h3 id="html">HTML:</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="m-notification"&gt;
-    &lt;span class="m-notification__icon cf-icon"&gt;&lt;/span&gt;
-    &lt;div class="m-notification__content" role="alert"&gt;
-        &lt;div class="m-notification__message"&gt;message&lt;/div&gt;
-            &lt;p class="m-notification__explanation"&gt;
-              Please check the URL and try again.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre></div></div>
-
-<h3 id="css">CSS:</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.m-notification {
-    display: none;
-    position: relative;
-    padding: @notification-padding__px;
-    …
-</code></pre></div></div>
-
-<h3 id="javascript">JavaScript:</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const CONSTANTS = { MESSAGE: 'message', EXPLANATION: 'explanation' };
-
-const NotificationMolecule = Molecule.extend( {
-      classes: {
-        isVisible:   'm-notification--visible'
-      },
-
-      ui: {
-        base:        '.m-notification',
-        explanation: '.m-notification__explanation',
-        message:     '.m-notification__message'
-      },
-
-      initialize: function() {
-        this.ui.message.textContent = CONSTANTS.MESSAGE;
-        this.ui.explanation.textContent = CONSTANTS.EXPLANATION;
-      }
-});
-
-NotificationMolecule.constants = CONSTANTS;
-NotificationMolecule.init();
-</code></pre></div></div>
-
-                
-            
-
-            
-
-            
-
-            
-        </section>
     
 
     
@@ -360,8 +302,8 @@ NotificationMolecule.init();
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/atomic-components.md">
-                            <time datetime="2024-09-10 18:12:26 -0400">
-                                 6:12:26 PM Sep 10, 2024
+                            <time datetime="2024-09-11 15:57:07 -0400">
+                                 3:57:07 PM Sep 11, 2024
                             </time>
                         </a>
                     </section>

@@ -308,7 +308,7 @@
             'behavior': "Placement%0A%0A%0A++Form-level+alerts+should+appear+below+the+form+title.%0A++Field-level+alerts+%28icon+and+validation+status+message%29+should+always+appear+below+the+input+field.%0A%0A%0AValidation%0A%0AWhere+possible%2C+display+formatting+errors+immediately+using+client-side+validation+so+the+user+doesn%E2%80%99t+have+to+wait+until+submitting+to+see+what+went+wrong+%28this+is+especially+frustrating+if+the+information+the+user+enters+the+first+time+around+is+not+cached+on+submit+and+they+have+to+fill+out+all+the+fields+again+from+scratch%29.+If+letters+are+entered+in+a+date+field%2C+if+an+email+address+is+missing+the+%E2%80%9C%40%E2%80%9D+sign%2C+let+the+user+know+right+away+by+showing+a+field-level+error+on+blur.%0A%0AThat+said%2C+it%E2%80%99s+a+good+idea+to+always+validate+on+the+server+side+even+if+you+use+client-side+validation+for+formatting+checks.+That%E2%80%99s+because+JavaScript+validation+may+not+work+on+all+clients%3B+JavaScript+errors+could+occur+no+matter+the+client%3B+and+JS+validation+can+easily+be+bypassed%2C+which+raises+security+concerns.%0A%0AIn+general%2C+the+best+practice+for+server-side+validation+is+to+mark+errors+with+both+form-level+and+field-level+errors.%0A",
             'accessibility': "%0A++For+screen+reader+accessibility%2C+form-level+errors+should+include+anchor+links+to+the+problem+field+in+question.%0A++Place+form-level+alerts+below+the+form+title.%0A++In+general%2C+use+distinct+icons%2C+contrasting+colors%2C+prominent+placement%2C+and+text+to+indicate+errors.+Don%E2%80%99t+rely+on+just+one+method%2C+as+users+can+have+many+different+accessibility+needs+%28color+blind+users%2C+visually+impaired+users%2C+users+with+motor+control+issues%2C+etc.%29.%0A%0A",
             'research': "%0A",
-            'related_items': "%0A++Notifications+variables%0A%0A",
+            'related_items': "%0A",
             'url': 'components/alerts'
         }
         ,
@@ -355,8 +355,8 @@
 
 
             'title': 'Atomic components',
-            'description': "Atomic+Component+is+a+micro+framework+for+building+Atomic+Design+components+that+utilize+JavaScript.+It+is+a+dependency+of+other+packages+and+isn%E2%80%99t+used+on+its+own.%0A",
-            'use_cases': "This+framework+is+intended+to+be+used+in+conjunction+with+adherence+to+Atomic+Design+principles.+It+helps+provide+a+uniform+way+to+build+Atomic+components+using+HTML%2C+CSS%2C+and+JavaScript.%0A%0AAtomic+prefixing+standards+for+atoms%2C+molecules%2C+and+organisms+are+covered+in+greater+detail+in+cfgov-refresh+documentation.%0A%0AAn+example+use+case+in+building+a+Molecule%3A+molecules+are+prefixed+with+%E2%80%9Cm-%E2%80%9D+in+CSS%2C+JavaScript%2C+and+HTML+files%2C+as+demonstrated+below.%0A%0AHTML%3A%0A%0A%26lt%3Bdiv+class%3D%22m-notification%22%26gt%3B%0A++++%26lt%3Bspan+class%3D%22m-notification__icon+cf-icon%22%26gt%3B%26lt%3B%2Fspan%26gt%3B%0A++++%26lt%3Bdiv+class%3D%22m-notification__content%22+role%3D%22alert%22%26gt%3B%0A++++++++%26lt%3Bdiv+class%3D%22m-notification__message%22%26gt%3Bmessage%26lt%3B%2Fdiv%26gt%3B%0A++++++++++++%26lt%3Bp+class%3D%22m-notification__explanation%22%26gt%3B%0A++++++++++++++Please+check+the+URL+and+try+again.%0A++++++++++++%26lt%3B%2Fp%26gt%3B%0A++++++++%26lt%3B%2Fdiv%26gt%3B%0A++++%26lt%3B%2Fdiv%26gt%3B%0A%26lt%3B%2Fdiv%26gt%3B%0A%0A%0ACSS%3A%0A%0A.m-notification+%7B%0A++++display%3A+none%3B%0A++++position%3A+relative%3B%0A++++padding%3A+%40notification-padding__px%3B%0A++++%E2%80%A6%0A%0A%0AJavaScript%3A%0A%0Aconst+CONSTANTS+%3D+%7B+MESSAGE%3A+%27message%27%2C+EXPLANATION%3A+%27explanation%27+%7D%3B%0A%0Aconst+NotificationMolecule+%3D+Molecule.extend%28+%7B%0A++++++classes%3A+%7B%0A++++++++isVisible%3A+++%27m-notification--visible%27%0A++++++%7D%2C%0A%0A++++++ui%3A+%7B%0A++++++++base%3A++++++++%27.m-notification%27%2C%0A++++++++explanation%3A+%27.m-notification__explanation%27%2C%0A++++++++message%3A+++++%27.m-notification__message%27%0A++++++%7D%2C%0A%0A++++++initialize%3A+function%28%29+%7B%0A++++++++this.ui.message.textContent+%3D+CONSTANTS.MESSAGE%3B%0A++++++++this.ui.explanation.textContent+%3D+CONSTANTS.EXPLANATION%3B%0A++++++%7D%0A%7D%29%3B%0A%0ANotificationMolecule.constants+%3D+CONSTANTS%3B%0ANotificationMolecule.init%28%29%3B%0A%0A",
+            'description': "In+general%2C+our+components+employ+the+concept+of+atomic+design%2C+meaning+that+we+break+them+down+into+atoms%2C+molecules%2C+and+organisms%2C+each+successive+level+being+more+complex+than+the+previous.+%28We+do+not+currently+use+the+template+or+page+concepts+as+described+in+Brad+Frost%E2%80%99s+seminal+article+introducing+atomic+design%29.%0AOur+components+are+composed+%28on+the+front-end%29+of+HTML%2C+SCSS+%28Sass%29%2C+and+JavaScript.+If+a+component+doesn%E2%80%99t+have+user+interactions+or+require+styling%2C+then+it+won%E2%80%99t+have+an+associated+JS+and%2For+SCSS+file.%0ACSS+class+name+prefixes%0AThe+atomic+components+have+CSS+class+names+with+the+prefixes+a-%2C+m-%2C+o-%2C+corresponding+to+atoms%2C+molecules%2C+and+organisms.+Additionally%2C+utility+classes+have+the+u-+prefix.+These+classes+are+for+one-off+adjustments%2C+that+are+shared+across+several+components+and+don%E2%80%99t+fit+neatly+into+the+atomic+hierarchy.%0A",
+            'use_cases': "%0A",
             'guidelines': "%0A",
             'behavior': "%0A",
             'accessibility': "%0A",
@@ -542,43 +542,6 @@
             'research': "%0A",
             'related_items': "%0A",
             'url': 'guidelines/bar-charts'
-        }
-        ,
-        
-
-        
-        
-
-        'development-base-images': {
-
-            // Cycle through the variation fields of this page.
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Full-width images',
-                    'variation_description1': "Gives+all+images+a+default+max-width+of+100%25+of+their+container.%0A",
-                    'variation_code_snippet1': `&lt;img src=&quot;https://dummyimage.com/800x40/addc91/101820&quot; alt=&quot;&quot;&gt;`,
-                
-                    'variation_name2': 'Figure',
-                    'variation_description2': "Resets+browser+default+side+margins+for+figure+to+0%2C+and+removes+bottom+inline+spacing+from+img+elements+within.%0A",
-                    'variation_code_snippet2': `&lt;figure&gt;
-    &lt;img src=&quot;https://dummyimage.com/340x320/addc91/101820&quot; alt=&quot;&quot;&gt;
-&lt;/figure&gt;`,
-                
-            
-
-
-            'title': 'Base images',
-            'description': "Images+have+a+max-width+of+100%25+by+default.%0A",
-            'use_cases': "%0A",
-            'guidelines': "%0A",
-            'behavior': "%0A",
-            'accessibility': "%0A",
-            'research': "%0A",
-            'related_items': "%0A",
-            'url': 'development/base-images'
         }
         ,
         
@@ -785,7 +748,7 @@
             'behavior': "%0A",
             'accessibility': "%0A",
             'research': "%0A",
-            'related_items': "%0A++Layout+variables%0A%0A",
+            'related_items': "%0A",
             'url': 'development/blocks'
         }
         ,
@@ -934,7 +897,7 @@
             'behavior': "%0A",
             'accessibility': "%0A",
             'research': "%0A",
-            'related_items': "%0A++Button+variables%0A%0A",
+            'related_items': "%0A",
             'url': 'components/buttons'
         }
         ,
@@ -2508,7 +2471,7 @@ Label
             'behavior': "Collapsed%0A%0AThe+default+collapsed+state+should+include+a+heading+and+the+expand%2Fcollapse+minicon+within+a+circle.%0A%0AExpanded%0A%0AThe+content+of+an+expandable+can+contain+normal+paragraphs%2C+headings%2C+lists%2C+wells%2C+and+images.%0A%0AExpandables+can+make+use+of+an+optional+stroke+under+the+title+when+expanded.+The+title+stroke+can+help+to+define+the+title+from+the+expanded+content+for+longer+sections+of+text.+It+should+be+indented+left+and+right+to+match+the+text+within+the+expandable+section.%0A",
             'accessibility': "The+find+function+will+not+discover+information+hidden+by+a+collapsed+expandable%2C+so+use+good+judgement+in+deciding+which+information+to+hide.+Non-javaScript+users+should+default+to+the+expanded+state.+Otherwise%2C+the+default+state+%28expanded+or+collapsed%29+will+depend+on+the+circumstance.%0A",
             'research': "%0A",
-            'related_items': "%0A++Expandables+variables%0A%0A",
+            'related_items': "%0A",
             'url': 'components/expandables'
         }
         ,
@@ -2593,7 +2556,7 @@ Label
             'behavior': "%0A++%0A++++%0A++++++Above+600+px%0A++++++Below+601+px%0A++++%0A++%0A++%0A++++%0A++++++%0A++++++%0A++++%0A++%0A%0A%0AResponsive+visual+behavior%0A%0AAt+desktop+size%2C+the+ratio+of+text+and+visual+changes+with+screen+size+to+keep+the+full+height+of+the+image+visible.+As+available+width+dips+below+the+maximum+page+width%2C+the+text+area+shrinks+in+width+while+the+visual+maintains+a+fixed+width+of+270px.+That+means+that+the+height+and+aspect+ratio+of+the+visual+will+change+as+the+screen+shrinks%2C+and+the+image+will+be+cropped+between+16%25+and+29%25+from+each+side.%0A%0AAt+larger+screen+sizes%2C+the+image+moves+to+the+right+of+the+text%2C+occupying+a+fixed+width+of+270px+%28equal+to+3+of+12+columns+at+max+page+width%29.+By+default%2C+the+left+edge+of+the+image+is+anchored+to+the+left+side+of+the+visual%E2%80%99s+270px-wide+area%2C+and+the+right+side+is+cropped+off.+The+aspect+ratio+of+the+visual+area+increases+as+screen+size+increases%2C+resulting+in+slightly+different+image+cropping+at+different+screen+sizes%2C+but+the+left+edge+of+the+image+remains+anchored+in+view.+The+full+height+of+the+image+is+always+in+view%3B+the+top+and+bottom+are+never+cropped.+See+above+for+modifiers+that+change+the+image%E2%80%99s+horizontal+anchoring.%0A",
             'accessibility': "%0A",
             'research': "%0A",
-            'related_items': "%0A++Variables+for+featured+content+modules%0A%0A",
+            'related_items': "%0A",
             'url': 'patterns/featured-content-module'
         }
         ,
@@ -3071,7 +3034,7 @@ Label
         
         
 
-        'getting-started-index': {
+        'development-getting-started': {
 
             // Cycle through the variation fields of this page.
             
@@ -3085,7 +3048,7 @@ Label
             'accessibility': "%0A",
             'research': "%0A",
             'related_items': "%0A",
-            'url': 'getting-started/index'
+            'url': 'development/getting-started'
         }
         ,
         
@@ -3169,27 +3132,23 @@ Label
                 
 
                 
-                    'variation_name1': 'Variables',
-                    'variation_description1': "See+grid+variables.%0A",
-                    'variation_code_snippet1': ``,
-                
-                    'variation_name2': 'Wrappers',
-                    'variation_description2': "Wrappers+are+centered+containers+with+a+max-width%0Aand+outside+left%2Fright+padding+of+%C2%BD+the+gutter+width+on+each+side.%0A%0ASass+mixin%0A%0A%40include+u-grid-wrapper%28+%40grid_wrapper-width%3A+%40grid_wrapper-width+%29%0A%0A%0AYou+can+create+a+wrapper+with+max-width+other+than+the+default%0Aby+passing+a+pixel+value+into+the+mixin.%0A%0AExample%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.wide-wrapper+%7B%0A++++%40include+u-grid-wrapper%28+1900px+%29%3B%0A%7D%0A%0A",
-                    'variation_code_snippet2': `&lt;div class=&quot;main-wrapper&quot; style=&quot;background-color: #f9f9f9&quot;&gt;This container now has left and right padding and a centered max width.&lt;/div&gt;
+                    'variation_name1': 'Wrappers',
+                    'variation_description1': "Wrappers+are+centered+containers+with+a+max-width%0Aand+outside+left%2Fright+padding+of+%C2%BD+the+gutter+width+on+each+side.%0A%0ASass+mixin%0A%0A%40include+u-grid-wrapper%28+%40grid_wrapper-width%3A+%40grid_wrapper-width+%29%0A%0A%0AYou+can+create+a+wrapper+with+max-width+other+than+the+default%0Aby+passing+a+pixel+value+into+the+mixin.%0A%0AExample%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.wide-wrapper+%7B%0A++++%40include+u-grid-wrapper%28+1900px+%29%3B%0A%7D%0A%0A",
+                    'variation_code_snippet1': `&lt;div class=&quot;main-wrapper&quot; style=&quot;background-color: #f9f9f9&quot;&gt;This container now has left and right padding and a centered max width.&lt;/div&gt;
 &lt;div class=&quot;wide-wrapper&quot; style=&quot;background-color: #f9f9f9&quot;&gt;This container is the same except it has a wider max-width.&lt;/div&gt;`,
                 
-                    'variation_name3': 'Columns',
-                    'variation_description3': "Mixin%0A%0A.u-grid-column%28+%40columns%3A+1%3B+%40total%3A+%40grid_total-columns%3B+%40prefix%3A+0%3B+%40suffix%3A+0+%29%0A%0A%0ACreate+a+grid+column+that+is+%40columns+wide+given+%40total+total+grid+columns.%0A%0AOptionally+give+the+column+left+or+right+padding+with+the%0A%40prefix+and+%40suffix+parameters.%0A%0AGrid+columns+use+transparent+borders+to+create+the+gutters+of+the+grid%2C%0Aso+if+you+want+a+column+to+have+a+background+or+border%2C+you%E2%80%99ll+need+to%0Aadd+a+wrapper+just+inside+the+column+to+be+styled+that+way.%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.half+%7B%0A++++.u-grid-column%281%2C+2%29%3B%0A%7D%0A.styled+%7B%0A++++border%3A+1px+solid+%23999%3B%0A++++background%3A+%23EEE%3B%0A%7D%0A%0A%0ANOTE%3A+cf-grid+does+not+have+a+%E2%80%9Crow%E2%80%9D+concept.%0AIf+you+have+a+12-column+grid+and+place+24+columns+inside+a+wrapper%2C%0Acf-grid+columns+will+automatically+stack+into+two+rows+of+12.%0A",
-                    'variation_code_snippet3': `&lt;div class=&quot;main-wrapper&quot;&gt;
+                    'variation_name2': 'Columns',
+                    'variation_description2': "Mixin%0A%0A.u-grid-column%28+%40columns%3A+1%3B+%40total%3A+%40grid_total-columns%3B+%40prefix%3A+0%3B+%40suffix%3A+0+%29%0A%0A%0ACreate+a+grid+column+that+is+%40columns+wide+given+%40total+total+grid+columns.%0A%0AOptionally+give+the+column+left+or+right+padding+with+the%0A%40prefix+and+%40suffix+parameters.%0A%0AGrid+columns+use+transparent+borders+to+create+the+gutters+of+the+grid%2C%0Aso+if+you+want+a+column+to+have+a+background+or+border%2C+you%E2%80%99ll+need+to%0Aadd+a+wrapper+just+inside+the+column+to+be+styled+that+way.%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.half+%7B%0A++++.u-grid-column%281%2C+2%29%3B%0A%7D%0A.styled+%7B%0A++++border%3A+1px+solid+%23999%3B%0A++++background%3A+%23EEE%3B%0A%7D%0A%0A%0ANOTE%3A+cf-grid+does+not+have+a+%E2%80%9Crow%E2%80%9D+concept.%0AIf+you+have+a+12-column+grid+and+place+24+columns+inside+a+wrapper%2C%0Acf-grid+columns+will+automatically+stack+into+two+rows+of+12.%0A",
+                    'variation_code_snippet2': `&lt;div class=&quot;main-wrapper&quot;&gt;
     &lt;div class=&quot;half&quot;&gt;I am half of my parent.&lt;/div&gt;
     &lt;div class=&quot;half&quot;&gt;
             &lt;div class=&quot;styled&quot;&gt;I am half of my parent. I also have a border and background.&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name4': 'Nested columns',
-                    'variation_description4': "Since+all+grid+columns+have+left+and+right+gutters%2C%0Ayou+will+notice+undesirable+offsetting+when+nesting+columns.%0ANormally+this+is+removed+with+complex+selectors%0Aor+by+adding+classes+to+the+first+and+last+column+per+%E2%80%98row%E2%80%99.%0A%0AIn+cf-grid%2C+the+way+to+get+around+this+is+by+wrapping+your+columns%0Ain+a+container+that+utilizes+the+.u-grid-nested-col-group%28%29+mixin.%0AThis+mixin+uses+negative+left+and+right+margins+to%0Apull+the+columns+back+into+alignment+with+parent+columns.%0A%0AWorking+this+way+allows+you+to+easily+create+responsive+grids.%0AYou+are+free+to+control+the+number+of+columns+per+%E2%80%9Crow%E2%80%9D+at+different+breakpoints%0Awithout+having+to+deal+with+the+first+and+last+columns+of+each+row.%0A%0AMixin%0A%0A.u-grid-nested-col-group%28%29%0A%0A%0AUsage%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.nested+%7B%0A++++.u-grid-nested-col-group%28%29%3B%0A%7D%0A.half+%7B%0A++++.u-grid-column%281%2C+2%29%3B%0A%7D%0A%0A",
-                    'variation_code_snippet4': `&lt;div class=&quot;main-wrapper&quot;&gt;
+                    'variation_name3': 'Nested columns',
+                    'variation_description3': "Since+all+grid+columns+have+left+and+right+gutters%2C%0Ayou+will+notice+undesirable+offsetting+when+nesting+columns.%0ANormally+this+is+removed+with+complex+selectors%0Aor+by+adding+classes+to+the+first+and+last+column+per+%E2%80%98row%E2%80%99.%0A%0AIn+cf-grid%2C+the+way+to+get+around+this+is+by+wrapping+your+columns%0Ain+a+container+that+utilizes+the+.u-grid-nested-col-group%28%29+mixin.%0AThis+mixin+uses+negative+left+and+right+margins+to%0Apull+the+columns+back+into+alignment+with+parent+columns.%0A%0AWorking+this+way+allows+you+to+easily+create+responsive+grids.%0AYou+are+free+to+control+the+number+of+columns+per+%E2%80%9Crow%E2%80%9D+at+different+breakpoints%0Awithout+having+to+deal+with+the+first+and+last+columns+of+each+row.%0A%0AMixin%0A%0A.u-grid-nested-col-group%28%29%0A%0A%0AUsage%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.nested+%7B%0A++++.u-grid-nested-col-group%28%29%3B%0A%7D%0A.half+%7B%0A++++.u-grid-column%281%2C+2%29%3B%0A%7D%0A%0A",
+                    'variation_code_snippet3': `&lt;div class=&quot;main-wrapper&quot;&gt;
     &lt;div class=&quot;half&quot;&gt;
         &lt;div class=&quot;nested&quot;&gt;
             &lt;div class=&quot;half&quot;&gt;&lt;/div&gt;
@@ -3204,9 +3163,9 @@ Label
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name5': 'Nesting',
-                    'variation_description5': "%0A",
-                    'variation_code_snippet5': `&lt;div class=&quot;cols-12&quot;&gt;
+                    'variation_name4': 'Nesting',
+                    'variation_description4': "%0A",
+                    'variation_code_snippet4': `&lt;div class=&quot;cols-12&quot;&gt;
     &lt;section&gt;
         &lt;div class=&quot;col col-6&quot;&gt;
             &lt;div&gt;six&lt;/div&gt;
@@ -3257,15 +3216,15 @@ Label
     &lt;/section&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name6': 'Cf-grid helpers: Wrapper',
-                    'variation_description6': "Turns+an+element+into+a+cf-grid+wrapper+at+801px+and+above+%28e.g.%2C+%26lt%3Bdiv+class%3D%22wrapper%22%26gt%3B%29.+Includes+some+explicit+declarations+for+Internet+Explorer+8+due+to+the+fact+that+it+doesn%E2%80%99t+support+media+queries.%0A",
-                    'variation_code_snippet6': `&lt;div class=&quot;wrapper&quot;&gt;
+                    'variation_name5': 'Cf-grid helpers: Wrapper',
+                    'variation_description5': "Turns+an+element+into+a+cf-grid+wrapper+at+801px+and+above+%28e.g.%2C+%26lt%3Bdiv+class%3D%22wrapper%22%26gt%3B%29.+Includes+some+explicit+declarations+for+Internet+Explorer+8+due+to+the+fact+that+it+doesn%E2%80%99t+support+media+queries.%0A",
+                    'variation_code_snippet5': `&lt;div class=&quot;wrapper&quot;&gt;
     Wrapper
 &lt;/div&gt;`,
                 
-                    'variation_name7': 'Cf-grid helpers: Column divider modifiers',
-                    'variation_description7': "See+the+column+dividers+page+for+information.%0A",
-                    'variation_code_snippet7': ``,
+                    'variation_name6': 'Cf-grid helpers: Column divider modifiers',
+                    'variation_description6': "See+the+column+dividers+page+for+information.%0A",
+                    'variation_code_snippet6': ``,
                 
             
 
@@ -3277,7 +3236,7 @@ Label
             'behavior': "%0A",
             'accessibility': "%0A",
             'research': "%0A",
-            'related_items': "%0A++Grid+variables%0A%0A",
+            'related_items': "%0A",
             'url': 'foundation/grid'
         }
         ,
@@ -3396,7 +3355,7 @@ Example of a non heading element:
             'behavior': "%0A",
             'accessibility': "Since+categories+can+be+repetitive%2C+we+suggest+placing+a+label+with+.u-visually-hidden+prior+to+the+headings+with+icons+to+add+more+context+for+screen+readers.%0A",
             'research': "%0A",
-            'related_items': "%0A++Paragraphs%0A++Fonts%0A++Typography+variables%0A%0A",
+            'related_items': "%0A++Paragraphs%0A++Fonts%0A%0A",
             'url': 'foundation/headings'
         }
         ,
@@ -3651,7 +3610,7 @@ Label
             'behavior': "%0A",
             'accessibility': "For+screen+reader+accessibility%2C+consider+using+the+aria-describedby+attribute+for+helper+text%2C+which+gives+screen+readers+users+the+information+if+they+need+while+allowing+more+flexibility+with+placement.%0A",
             'research': "%0A",
-            'related_items': "%0A++Labels+and+legends%0A++Color+variables+for+helper+text%0A++Designing+forms%0A%0A",
+            'related_items': "%0A++Labels+and+legends%0A++Designing+forms%0A%0A",
             'url': 'components/helper-text'
         }
         ,
@@ -3945,7 +3904,7 @@ NOTE: in consumerfinance.gov these styles are generated by the CMS and placed in
             'behavior': "For+style+at+different+breakpoints%2C+see+specs+for+standard+heroes.%0A%0A%0A++%0A++++%0A++++++Above+600+px%0A++++++Below+601+px%0A++++%0A++%0A++%0A++++%0A++++++Text+and+hero+image+appear+side-by-side%0A++++++Text+and+hero+image+stack+vertically%0A++++%0A++++%0A++++++%0A++++++%0A++++%0A++%0A%0A",
             'accessibility': "%0A",
             'research': "%0A",
-            'related_items': "%0A++Variables%0A++Landing+pages%0A++Sublanding+pages%0A++Text+introductions%0A++Item+introductions%0A%0A",
+            'related_items': "%0A++Landing+pages%0A++Sublanding+pages%0A++Text+introductions%0A++Item+introductions%0A%0A",
             'url': 'patterns/heroes'
         }
         ,
@@ -4107,21 +4066,21 @@ NOTE: in consumerfinance.gov these styles are generated by the CMS and placed in
         
         
 
-        'getting-started-integrating-the-design-system-into-your-project': {
+        'development-integrating-the-design-system-into-your-project': {
 
             // Cycle through the variation fields of this page.
             
 
 
             'title': 'Integrating the Design System into your project',
-            'description': "The+Design+System+provides+a+set+of+modular+HTML%2C+CSS%2C+and+JavaScript+patterns+that+can+be+used+both+collectively+and+individually.+There+are+several+ways+to+integrate+it+into+your+project%3A%0A%0A%0A++Installing+individual+components+with+npm+or+Yarn%0A++Downloading+the+compiled+CSS%0A%0A%0AInstalling+individual+components+with+Yarn+or+npm%0A%0AJust+want+one+or+two+Design+System+components+and+not+the+entire+framework%3F%0ASimply+install+and+%40import+only+the+components+you+need.%0A%0AInstall+with+Yarn+or+npm%0A%0APick+one%3A%0A%0Ayarn+add+%40cfpb%2Fcfpb-buttons+%40cfpb%2Fcfpb-icons%0A%0A%0Aor%0A%0Anpm+install+%40cfpb%2Fcfpb-buttons+%40cfpb%2Fcfpb-icons%0A%0A%0AImport+CSS%0A%0A%2F%2A+adjust+paths+to+the+modules+as+necessary+%2A%2F%0A%40import++%22node_modules%2F%40cfpb%2Fcfpb-buttons%2Fsrc%2Fcfpb-buttons.scss%22%3B%0A%40import++%22node_modules%2F%40cfpb%2Fcfpb-icons%2Fsrc%2Fcfpb-icons.scss%22%3B%0A%0A%0ANote%3A+Be+sure+to+run+the+SCSS+files+through%0AAutoprefixer%2C%0Aor+your+compiled+CSS+might+not+work+perfectly+in+older+browsers.%0A%0AImport+JavaScript%0A%0Aimport+%7B+Expandable+%7D+from+%27%40cfpb%2Fcfpb-expandables%27%3B%0A%0A%2F%2F+initialize+all+expandables+with+class+.o-expandable%0A%2F%2F+if+they+are+within+an+element+with+id+%23container%0AExpandable.init%28+document.querySelector%28+%27%23container%27+%29+%29%3B%0A%0A%0ADownloading+the+compiled+CSS+and+JavaScript%0A%0AWhile+we+recommend+the+above+installation+method+to+make+future+updates+smaller+and+safer+by+allowing+you+to+update+one+component+at+a+time%2C+there+may+be+some+use+cases+where+it%E2%80%99s+more+appropriate+to+just+grab+a+snapshot+of+the+full+Design+System%E2%80%99s+compiled+CSS+and+JavaScript+and+drop+it+into+a+page.+You+can+download+the+compiled+Design+System+CSS+and+JavaScript+from+UNPKG.%0A%0ADownload+the+cfpb-design-system.css+and+cfpb-design-system.js+files+to+your+project+and+use+standard+%26lt%3Blink%26gt%3B+and+%26lt%3Bscript%26gt%3B+tags+to+include+them.+For+example%3A%0A%0A%26lt%3B%21DOCTYPE+html%26gt%3B%0A%26lt%3Bhtml%26gt%3B%0A%26lt%3Bhead%26gt%3B%0A++++%26lt%3Btitle%26gt%3BMy+Awesome+Project%26lt%3B%2Ftitle%26gt%3B%0A++++%26lt%3Blink+rel%3D%22stylesheet%22+href%3D%22css%2Fcfpb-design-system.css%22%26gt%3B%0A++++%26lt%3Blink+rel%3D%22stylesheet%22+href%3D%22css%2Fyour-project-styles.css%22%26gt%3B%0A%26lt%3B%2Fhead%26gt%3B%0A%26lt%3Bbody%26gt%3B%0A++++%26lt%3B%21--+Your+project%27s+HTML+goes+here.+--%26gt%3B%0A++++%26lt%3Bscript+src%3D%22js%2Fcfpb-design-system.js%22%26gt%3B%26lt%3B%2Fscript%26gt%3B%0A++++%26lt%3Bscript+src%3D%22js%2Fyour-project-scripts.js%22%26gt%3B%26lt%3B%2Fscript%26gt%3B%0A%26lt%3B%2Fbody%26gt%3B%0A%26lt%3B%2Fhtml%26gt%3B%0A%0A",
+            'description': "The+Design+System+provides+a+set+of+modular+HTML%2C+CSS%2C+and+JavaScript+patterns%0Athat+can+be+used+both+collectively+and+individually.+There+are+several+ways+to%0Aintegrate+it+into+your+project%3A%0A%0A%0A++%0A++++Build+pre-requisites%0A++%0A++%0A++++Installing+components+in+your+project%0A++%0A++%0A++++Downloading+the+compiled+CSS+and+JavaScript%0A++%0A%0A%0ABuild+pre-requisites%0A%0A%0A++%0A++++SCSS.+Your+project+will+need+a+way+of+building+.scss+files.+The+Design+System+uses%0Aesbuild+for+this+task.%0A++%0A++%0A++++Embedding+SVG+icons.+There+are+some+instances+where+SVG+icons+are+embedded+in+the+CSS.%0AThe+Design+System+uses+a+special+CSS+custom+property%2C+--cfpb-background-icon-svg%2C+which+gets+swapped+out+with+an+SVG+file+from+the%0ASVG+icons+directory.+Your+build+will+need+to%0Aperform+that+swap%2C+if+you+are+using+the+source+SCSS+files+and+include%0Acomponents+that+have+embedded+icons+%28the+drop-down+selects%2C+for+example%29.%0AA+esbuild+script+for+processing+the+icons+can+be+found+in+the+Design+System+project.%0A++%0A%0A%0AInstalling+components+in+your+project%0A%0AThe+Design+System+is+distributed+via+the+npm+%40cfpb%2Fcfpb-design-system%0Apackage%2C+which+you+can+install+via+yarn+or+npm.%0A%0APick+one%3A%0A%0A%0Ayarn+add+%40cfpb%2Fcfpb-design-system%0A%0A%0A%0Aor%0A%0A%0Anpm+install+%40cfpb%2Fcfpb-design-system%0A%0A%0A%0AFolder+structure%0A%0AThe+folder+architecture+loosely+follows+the+Sass+opinionated+style+guide%2C+which+breaks+it+down+into%3A%0A%0A%0A++abstracts+-+definition+files+for+variables+and+global+mixins.%0A++base+-+CSS+base+styling.%0A++components+-+Specific+component+packages.%0A++utilities+-+Global+utilities+shared+across+components.%0A%0A%0AAdditionally%2C+the+project+has+a+root+directory+index.scss+and+index.js%0Afile%2C+which+point+to+the+other+directory+sources.%0A%0AImport+CSS%0A%0AAfter+installing+the+Design+System+via+yarn+or+npm%2C+you%E2%80%99ll+be+able+to%0Aimport+the+CSS+into+your+project.+This+should+happen+in+your+main+CSS+entry-point+file.%0A%0A%2F%2F+Adjust+paths+to+the+package+as+necessary.%0A%0A%40use+%27node_modules%2F%40cfpb%2Fcfpb-design-system%2Fsrc%2Fabstracts%27+as+%2A%3B%0A%40use+%27node_modules%2F%40cfpb%2Fcfpb-design-system%2Fsrc%2Fbase%27+as+%2A%3B%0A%40use+%27node_modules%2F%40cfpb%2Fcfpb-design-system%2Fdist%2Findex.css%27+as+%2A%3B%0A%0A%0ADefine+custom+properties%0A%0ANext+you%E2%80%99ll+want+to+define+the+custom+CSS+properties+%28variables%29+that+set+the%0Acolors+and+font+stack.%0A%0A%40include+define-custom-props%3B%0A%0A%0ASet+official+font+stack%0A%0AIf+the+project+has+access+to+Avenir+Next+.woff+files%2C+you%E2%80%99ll+include+a+mixin%0Ato+point+to+those+woff+files+and+create+the+Avenir+Next+%40font-face+rules.%0A%0A%2F%2F+This+is+the+path+for+self-hosted+fonts.%0A%40include+licensed-font%28%27%2Fpath%2Fto%2Fthe%2Ffont%2Fwoff%2Ffiles%27%29%3B%0A%0A%0AResolve+references%0A%0AAny+file+that+references+Design+System+variables+or+mixins%2C+needs+to+import%0Aa+reference+to+where+those+references+are+defined.+Most+often+this+will+mean%0Arepeating+an+import+of+the+abstracts+directory+in+your+.scss+files.%0A%0A%40use+%27node_modules%2F%40cfpb%2Fcfpb-design-system%2Fsrc%2Fabstracts%27+as+%2A%3B%0A%0A%0AAlthough+discouraged%2C+occasionally+you+may+reference+a+variable+that+appears+within+a+component+itself%2C+in+which+case+you+need+to+reference+that+components+SCSS%2C+such+as%3A%0A%0A%40use+%27node_modules%2F%40cfpb%2Fcfpb-design-system%2Fsrc%2Fcomponents%2Fcfpb-buttons%2Fbutton-link%27+as+%2A%3B%0A%0A%0AImport+JavaScript%0A%0A%0Aimport+%7B+Expandable+%7D+from+%27%40cfpb%2Fcfpb-design-system%27%3B%0A%0A%0A%2F%2F+initialize+all+expandables+with+class+.o-expandable%0A%0A%2F%2F+if+they+are+within+an+element+with+id+%23container%0A%0AExpandable.init%28+document.querySelector%28+%27%23container%27+%29+%29%3B%0A%0A%0A%0ADownloading+the+compiled+CSS+and+JavaScript%0A%0AWhile+we+recommend+the+above+installation+method+to+make+future+updates+smaller+and+safer+by+allowing+you+to+update+one+component+at+a+time%2C+there+may+be+some+use+cases+where+it%E2%80%99s+more+appropriate+to+just+grab+a+snapshot+of+the+full+Design+System%E2%80%99s+compiled+CSS+and+JavaScript+and+drop+it+into+a+page.+You+can+download+the+compiled+Design+System+CSS+and+JavaScript+from+UNPKG.%0A%0ADownload+the+%40cfpb%2Fcfpb-design-system%2Fdist%2Findex.css+and+%40cfpb%2Fcfpb-design-system%2Fdist%2Findex.js+files+to+your+project+and+use+standard+%26lt%3Blink%26gt%3B+and+%26lt%3Bscript%26gt%3B+tags+to+include+them.+For+example%3A%0A%0A%0A%26lt%3B%21DOCTYPE+html%26gt%3B%0A%0A%26lt%3Bhtml%26gt%3B%0A%0A%26lt%3Bhead%26gt%3B%0A++++%26lt%3Btitle%26gt%3BMy+Awesome+Project%26lt%3B%2Ftitle%26gt%3B%0A++++%26lt%3Blink+rel%3D%22stylesheet%22+href%3D%22css%2Fcfpb-design-system%2Fdist%2Findex.css%22%26gt%3B%0A++++%26lt%3Blink+rel%3D%22stylesheet%22+href%3D%22css%2Fyour-project-styles.css%22%26gt%3B%0A%26lt%3B%2Fhead%26gt%3B%0A%0A%26lt%3Bbody%26gt%3B%0A++++%26lt%3B%21--+Your+project%27s+HTML+goes+here.+--%26gt%3B%0A++++%26lt%3Bscript+src%3D%22js%2Fcfpb-design-system%2Fdist%2Findex.js%22%26gt%3B%26lt%3B%2Fscript%26gt%3B%0A++++%26lt%3Bscript+src%3D%22js%2Fyour-project-scripts.js%22%26gt%3B%26lt%3B%2Fscript%26gt%3B%0A%26lt%3B%2Fbody%26gt%3B%0A%0A%26lt%3B%2Fhtml%26gt%3B%0A%0A%0A",
             'use_cases': "%0A",
             'guidelines': "%0A",
             'behavior': "%0A",
             'accessibility': "%0A",
             'research': "%0A",
             'related_items': "%0A",
-            'url': 'getting-started/integrating-the-design-system-into-your-project'
+            'url': 'development/integrating-the-design-system-into-your-project'
         }
         ,
         
@@ -4486,7 +4445,7 @@ Label heading
             'behavior': "Opening+a+link+in+the+current+tab+%28default%29%0A%0AIn+general%2C+links+should+default+to+opening+in+the+current+page+or+browser+tab.+This+allows+the+user+to+choose+whether+they+want+to+open+an+additional+window+in+order+to+view+the+content.+This+applies+to+document+and+external+links.%0A%0AOpening+a+link+in+a+new+tab%0A%0ALinks+should+open+in+a+new+tab+in+situations+where+users+enter+data+or+make+selections+that+would+be+lost+if+they+left+the+page.+This+includes+interactive+tools%2C+search+filters%2C+and+forms+where+the+user+has+to+enter+and+submit+information.%0A%0AAdd+target%3D%22_blank%22+rel%3D%22noopener+noreferrer%22+to+direct+these+links+to+securely+open+in+a+new+tab.%0A%0AAdd+an+aria-label+that+includes+the+link+text+and+informs+users+with+visual+impairments+that+the+link+will+open+in+a+new+tab.+An+example+would+be+aria-label%3D%22Learn+why+some+county+data+are+unavailable.+%28Link+opens+in+new+tab.%29%22+This+meets+WCAG+guideline+3.2+that+webpages+should+work+in+a+predictable+way.%0A",
             'accessibility': "Link+text+should+clearly+describe+where+it+will+take+the+user+if+activated.+If+a+screen+reader+user+is+cycling+through+the+links+on+a+page%2C+link+text+such+as+%E2%80%9CRead+more%E2%80%9D+or+%E2%80%9CClick+here%E2%80%9D+is+not+helpful+for+knowing+where+that+link+will+take+them.+%0A%0AWrite+the+link+with+language+clearly+describing+the+link%E2%80%99s+destination.+In+situations+where+that%E2%80%99s+untenable%2C+you+can+improve+the+situation+for+screen+reader+users+by+coding+the+link+with+the+aria-label+attribute+and+adding+more+descriptive+link+text%2C+which+will+be+read+aloud+by+screen+readers.%0A",
             'research': "%0A",
-            'related_items': "%0A++Variables%0A++Buttons%0A++Typography%0A++Iconography%0A%0A",
+            'related_items': "%0A++Buttons%0A++Typography%0A++Iconography%0A%0A",
             'url': 'components/links'
         }
         ,
@@ -4923,7 +4882,7 @@ Label heading
             'behavior': "On+small+screens%2C+the+buttons+display+next+to+each+other%2C+stacked+on+top+of+the+form+%28%40bp-xs-max%29.%0A%0A%0A++%0A++++%0A++++++Above+600+px%0A++++++Below+601+px%0A++++%0A++%0A++%0A++++%0A++++++%0A++++++%0A++++%0A++%0A%0A",
             'accessibility': "%0A",
             'research': "%0A",
-            'related_items': "%0A++Pagination+variables%0A%0A",
+            'related_items': "%0A",
             'url': 'components/pagination'
         }
         ,
@@ -4975,7 +4934,7 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
             'behavior': "%0A",
             'accessibility': "%0A",
             'research': "%0A",
-            'related_items': "%0A++Headings%0A++Fonts%0A++Typography+variables%0A%0A",
+            'related_items': "%0A++Headings%0A++Fonts%0A%0A",
             'url': 'foundation/paragraphs'
         }
         ,
@@ -5502,7 +5461,7 @@ Label
             'behavior': "%0A",
             'accessibility': "Selects%0A%0AKeep+in+mind+that+selects+behave+differently+on+various+mobile+devices%2C+taking+up+different+amounts+of+real+estate+and+requiring+different+interactions.+Mobile+also+doesn%E2%80%99t+allow+for+the+use+of+typeahead+to+navigate+quickly+to+an+item+in+a+list%2C+so+navigating+long+lists+can+be+especially+cumbersome.%0A%0AMultiselects%0A%0AFrom+an+accessibility+standpoint%2C+browser+defaults+for+multiple+select+components+require+the+use+of+a+mouse+%28e.g.+holding+down+the+control+key+and+clicking+several+items%29.+The+default+components+are+a+poor+choice+for+the+visually+impaired.+If+a+multiselect+component+is+desired%2C+use+custom+JavaScript+to+make+it+accessible.%0A",
             'research': "%0A",
-            'related_items': "%0A++Forms+variables%0A%0A",
+            'related_items': "%0A",
             'url': 'components/selects'
         }
         ,
@@ -5775,7 +5734,7 @@ Label
             'behavior': "%0A",
             'accessibility': "%0A",
             'research': "%0A",
-            'related_items': "%0A++Layout+variables%0A++Blocks%0A++Grid%0A%0A",
+            'related_items': "%0A++Blocks%0A++Grid%0A%0A",
             'url': 'development/main-content-and-sidebars'
         }
         ,
@@ -6348,7 +6307,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
             'behavior': "%0A",
             'accessibility': "Remember+to+always+use+headers+%28that+is%2C+%26lt%3Bth%26gt%3B+elements%29+for+all+data+tables+to+make+tabular+data+accessible.%0A",
             'research': "%0A",
-            'related_items': "%0A++Tables+variables%0A%0A",
+            'related_items': "%0A",
             'url': 'components/tables'
         }
         ,
@@ -6414,7 +6373,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 
                     'variation_name1': 'Topic tag',
                     'variation_description1': "Topic+tags+appear+with+content+such+as+blog+posts+and+press+releases+to+display+associated+topics.+When+clicked%2C+a+topic+tag+takes+a+user+to+a+filtered+view+of+other+items+tagged+with+the+same+topic+tag.+In+this+filtered+view%2C+a+topic+tag+appears+as+a+filter+tag.%0A",
-                    'variation_code_snippet1': `&lt;ol class=&quot;m-tag-group&quot;&gt;
+                    'variation_code_snippet1': `&lt;ul class=&quot;m-tag-group&quot;&gt;
   &lt;li&gt;
     &lt;a href=&quot;#&quot; class=&quot;a-tag-topic&quot;&gt;
       &lt;span class=&quot;a-tag-topic__bullet&quot; aria-hidden=&quot;true&quot;&gt;•&lt;/span&gt;
@@ -6428,11 +6387,11 @@ Note: While th elements normally only contain raw text, they may sometimes conta
       &lt;span class=&quot;a-tag-topic__text&quot;&gt;Mortgages&lt;/span&gt;
     &lt;/a&gt;
   &lt;/li&gt;
-&lt;/ol&gt;`,
+&lt;/ul&gt;`,
                 
                     'variation_name2': 'Topic tag (stacked)',
                     'variation_description2': "A+topic+tags+group+that+is+stacked+at+all+screen+sizes.%0A",
-                    'variation_code_snippet2': `&lt;ol class=&quot;m-tag-group m-tag-group--stacked&quot;&gt;
+                    'variation_code_snippet2': `&lt;ul class=&quot;m-tag-group m-tag-group--stacked&quot;&gt;
   &lt;li&gt;
     &lt;a href=&quot;#&quot; class=&quot;a-tag-topic&quot;&gt;
       &lt;span class=&quot;a-tag-topic__bullet&quot; aria-hidden=&quot;true&quot;&gt;•&lt;/span&gt;
@@ -6446,11 +6405,11 @@ Note: While th elements normally only contain raw text, they may sometimes conta
       &lt;span class=&quot;a-tag-topic__text&quot;&gt;Banking&lt;/span&gt;
     &lt;/a&gt;
   &lt;/li&gt;
-&lt;/ol&gt;`,
+&lt;/ul&gt;`,
                 
                     'variation_name3': 'Non-link topic tags',
                     'variation_description3': "A+group+of+topic+tags+that+are+not+links.%0A",
-                    'variation_code_snippet3': `&lt;ol class=&quot;m-tag-group&quot;&gt;
+                    'variation_code_snippet3': `&lt;ul class=&quot;m-tag-group&quot;&gt;
   &lt;li&gt;
     &lt;span class=&quot;a-tag-topic&quot;&gt;
       &lt;span class=&quot;a-tag-topic__bullet&quot; aria-hidden=&quot;true&quot;&gt;•&lt;/span&gt;
@@ -6464,11 +6423,11 @@ Note: While th elements normally only contain raw text, they may sometimes conta
       &lt;span class=&quot;a-tag-topic__text&quot;&gt;Banking&lt;/span&gt;
     &lt;/a&gt;
   &lt;/li&gt;
-&lt;/ol&gt;`,
+&lt;/ul&gt;`,
                 
                     'variation_name4': 'Filter tag',
                     'variation_description4': "Filter+tags+are+used+as+a+part+of+multiselects+to+display+categories%2C+topics%2C+and+languages+selected+in+a+filterable+list+control+panel.%0A",
-                    'variation_code_snippet4': `&lt;ol class=&quot;m-tag-group&quot;&gt;
+                    'variation_code_snippet4': `&lt;ul class=&quot;m-tag-group&quot;&gt;
   &lt;li&gt;
     &lt;button class=&quot;a-tag-filter&quot;&gt;
       Option 1
@@ -6494,7 +6453,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
       &lt;/svg&gt;
     &lt;/button&gt;
   &lt;/li&gt;
-&lt;/ol&gt;`,
+&lt;/ul&gt;`,
                 
             
 
@@ -6642,7 +6601,7 @@ value=&quot;Input text&quot;&gt;
             'behavior': "As+the+screen+size+gets+smaller%2C+break+multi-column+inputs+into+a+single%2C+stacked+column.+Fields+that+are+next+to+each+other+on+a+large+screen%2C+should+stack+at+smaller+screen+sizes.+When+possible%2C+fields+should+span+the+entire+width+of+the+screen+at+the+smallest+screen+sizes.%0A",
             'accessibility': "Inputs+should+always+be+paired+with+a+label+for+accessibility+reasons.%0A%0AUsers+of+screen+readers+use+the+tab+key+to+move+focus+from+one+form+control+to+another.+Make+sure+that+tab+focus+order+reflects+the+way+you+would+like+users+to+navigate+through+the+form.+Consider+whether+tabs+should+move+a+user+down+or+across+the+page.%0A",
             'research': "%0A",
-            'related_items': "%0A++Text+input+variables%0A%0A",
+            'related_items': "%0A",
             'url': 'components/text-inputs'
         }
         ,
@@ -6862,7 +6821,7 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
             'behavior': "%0A",
             'accessibility': "%0A%0AWeb+Content+Accessibility+%28WCAG%29+standards+ensure+that+content+is+accessible+by+everyone%2C+regardless+of+any+disability+or+user+device.+To+learn+more%2C+refer+to+the+http%3A%2F%2Fwww.section508.gov.%0A%0ADon%E2%80%99t+use+type+in+illustrations+or+graphics%0A%0AType+should+generally+not+be+used+within+an+illustration+or+other+graphic%2C+as+assistive+technology+such+as+screen+readers+can%E2%80%99t+make+sense+of+the+words.%0A%0AColored+type+is+restricted%0A%0ANever+use+colored+type%2C+unless+it%E2%80%99s+a+link.++This+restriction+includes+all+brand+colors%2C+including+CFPB+green.%0A%0AAlthough+accessible%2C+the+combinations+of+black+type+on+green+or+green+type+on+black+should+never+be+used.%0A%0AAccessible+and+brand+compliant+combinations%0A%0ATo+ensure+text+remains+compliant+with+WCAG+2.0+standards%2C+use+only+these+permitted+type+and+background+color+combinations%2C+which+fall+within+the+range+of+foreground%2Fbackground+color+contrast+permitted+by+the+Section+508+guidelines.+For+specific+color+values%2C+visit+our+Color+page.%0A%0ABlack+type+on+colored+backgrounds%0A%0ABlack+type+is+accessible+on+all+brand+colors+with+20%25+saturation+or+below+when+using+at+least+14pt+type.+Hex+values+for+those+colors+are+shown+in+parentheses+in+the+image+below%3B+for+their+RGB+equivalents%2C+visit+our+Color+page.%0A%0AA+few+colors+allow+for+slightly+darker+saturations+while+still+maintaining+accessibility.+If+you%E2%80%99re+looking+to+use+a+combination+not+listed+here%2C+check+WebAIM+Contrast+Checker++to+verify+accessibility.%0A%0A%0A%0AWhite+type+on+colored+backgrounds%0A%0AWhite+type+is+accessible+on+CFPB+brand+colors+at+100%25+saturation+and+their+darker+shades+when+using+at+least+14pt+type%2C+with+the+following+two+exceptions%3A%0A%0A%0A++White+type+is+accessible+on+CFPB+green+at+100%25+saturation+and+its+darker+shades+only+when+using+at+least+14pt+bold+type.+Alternatively%2C+use+at+least+18pt+regular+type.%0A++White+type+is+not+accessible+on+any+CFPB+shade+of+gold.%0A%0A%0AThe+graphic+below+shows+accessible+combinations+of+white+type+on+CFPB+brand+colors+at+100%25+saturation.+Hex+values+for+those+colors+are+shown+in+parentheses%3B+for+their+RGB+equivalents%2C+visit+our+Color+page.%0A%0A%0A",
             'research': "%0A",
-            'related_items': "%0A++Headings%0A++Paragraphs%0A++Typography+variables%0A%0A",
+            'related_items': "%0A++Headings%0A++Paragraphs%0A%0A",
             'url': 'foundation/fonts'
         }
         ,
@@ -6901,119 +6860,23 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
                 
 
                 
-                    'variation_name1': 'Color',
-                    'variation_description1': "%2F%2F+.btn%0A%40btn-text%3A++++++++++++++++++var%28--white%29%3B%0A%40btn-bg%3A++++++++++++++++++++var%28--pacific%29%3B%0A%40btn-bg-hover%3A++++++++++++++var%28--pacific-dark%29%3B%0A%40btn-bg-active%3A+++++++++++++var%28--navy%29%3B%0A%40btn-divider%3A+++++++++++++++var%28--pacific-60%29%3B%0A%0A%2F%2F+.btn__secondary%0A%40btn__secondary-text%3A+++++++var%28--white%29%3B%0A%40btn__secondary-bg%3A+++++++++var%28--gray%29%3B%0A%40btn__secondary-bg-hover%3A+++var%28--gray-dark%29%3B%0A%40btn__secondary-bg-active%3A++var%28--black%29%3B%0A%40btn__secondary-divider%3A++++var%28--gray-40%29%3B%0A%0A%2F%2F+.btn__warning%0A%40btn__warning-text%3A+++++++++var%28--white%29%3B%0A%40btn__warning-bg%3A+++++++++++var%28--red-mid-dark%29%3B%0A%40btn__warning-bg-hover%3A+++++var%28--red-dark%29%3B%0A%40btn__warning-bg-active%3A++++var%28--gray-dark%29%3B%0A%40btn__warning-divider%3A++++++var%28--red-60%29%3B%0A%0A%2F%2F+.btn__disabled%0A%40btn__disabled-text%3A++++++++var%28--gray%29%3B%0A%40btn__disabled-bg%3A++++++++++var%28--gray-20%29%3B%0A%40btn__disabled-outline%3A+++++var%28--gray-20%29%3B%0A%40btn__disabled-divider%3A+++++var%28--gray-60%29%3B%0A%0A",
+                    'variation_name1': 'Color and Font custom props',
+                    'variation_description1': "There+is+a+Sass+mixin+for+defining+the+CSS+custom+variables%0A%28CSS+custom+properties%29+used+in+the+project.+This+should+be+used+and%0Aincluded+once+in+your+project%E2%80%99s+CSS+entry-point+file.%0A%0A%40use+%27%40cfpb%2Fcfpb-design-system%2Fsrc%2Fabstracts%27+as+%2A%3B%0A%40include+define-custom-props%3B%0A%0A",
                     'variation_code_snippet1': ``,
                 
-                    'variation_name2': 'Sizing',
-                    'variation_description2': "%2F%2F+.btn%0A%40btn-font-size%3A+++++++++++++%40base-font-size-px%3B%0A%40btn-border-radius-size%3A++++4px%3B%0A%40btn-v-padding%3A+++++++++++++8px%3B%0A%40btn-h-padding%3A+++++++++++++14px%3B%0A%0A",
+                    'variation_name2': 'Font stack',
+                    'variation_description2': "Override+this+variable+in+order+to+specify+a+font+stack+other+than+the%0ACFPB%E2%80%99s+default+brand+font+and+fallback.%0A%0A--font-stack%3A+%27Avenir+Next%27%2C+Arial%2C+sans-serif%3B%0A%0A",
                     'variation_code_snippet2': ``,
                 
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Color',
-                    'variation_description1': "%2F%2F+.a-text-input+borders%0A%40input-border%3A++++++++++++++++++++++++++++var%28--gray-60%29%3B%0A%40input-border__hover%3A+++++++++++++++++++++var%28--pacific%29%3B%0A%40input-border__focused%3A+++++++++++++++++++var%28--pacific%29%3B%0A%40input-border__active%3A++++++++++++++++++++var%28--pacific%29%3B%0A%40input-border__error%3A+++++++++++++++++++++var%28--red%29%3B%0A%40input-border__error__hover%3A++++++++++++++var%28--red-dark%29%3B%0A%40input-border__warning%3A+++++++++++++++++++var%28--gold%29%3B%0A%40input-border__warning__hover%3A++++++++++++var%28--gold-dark%29%3B%0A%40input-border__success%3A+++++++++++++++++++var%28--green%29%3B%0A%40input-border__success__hover%3A++++++++++++var%28--green-dark%29%3B%0A%40input-border__selected%3A++++++++++++++++++var%28--pacific%29%3B%0A%0A%2F%2F+.a-text-input+backgrounds%0A%40input-bg%3A++++++++++++++++++++++++++++++++var%28--white%29%3B%0A%40input-bg__selected%3A++++++++++++++++++++++var%28--pacific%29%3B%0A%40input-bg__disabled%3A++++++++++++++++++++++var%28--gray-10%29%3B%0A%40input-bg__disabled-selected%3A+++++++++++++var%28--gray-40%29%3B%0A%0A%2F%2F+.a-text-input+text%0A%40input-text%3A++++++++++++++++++++++++++++++var%28--black%29%3B%0A%40input-text__disabled%3A++++++++++++++++++++var%28--gray%29%3B%0A%40input-text__placeholder%3A+++++++++++++++++var%28--gray%29%3B%0A%0A%2F%2F+.a-text-input+icons%0A%40input-icon__error%3A+++++++++++++++++++++++var%28--red%29%3B%0A%0A%2F%2F+.a-select%0A%40select-border%3A+++++++++++++++++++++++++++%40input-border%3B%0A%40select-icon-bg%3A++++++++++++++++++++++++++var%28--gray-10%29%3B%0A%40select-text__disabled%3A+++++++++++++++++++%40input-text__disabled%3B%0A%0A%2F%2F+.m-form-field%0A%40form-field-input-border%3A+++++++++++++++++%40input-border%3B%0A%40form-field-input-border__focused%3A++++++++%40input-border%3B%0A%40form-field-input-border__disabled%3A+++++++var%28--gray-60%29%3B%0A%0A%2F%2F+.m-form-field--lg-target%0A%40form-field-input-lg-target-bg%3A+++++++++++var%28--gray-10%29%3B%0A%40form-field-input-lg-target-bg__selected%3A+var%28--pacific-20%29%3B%0A%40form-field-input-lg-target-bg__disabled%3A+var%28--gray-20%29%3B%0A%40form-field-input-lg-target-border%3A+++++++var%28--pacific%29%3B%0A%0A%2F%2F+.a-label__helper%0A%40label-helper%3A++++++++++++++++++++++++++++var%28--gray%29%3B%0A%0A",
-                    'variation_code_snippet1': ``,
-                
-                    'variation_name2': 'Sizing',
-                    'variation_description2': "%2F%2F+.a-select%0A%40select-height%3A+30px%3B%0A%0A",
-                    'variation_code_snippet2': ``,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Breakpoints',
-                    'variation_description1': "%40bp-xs-max%3A++600px%3B%0A%40bp-sm-min%3A++%40bp-xs-max+%2B+1px%3B%0A%40bp-sm-max%3A++900px%3B%0A%40bp-med-min%3A+%40bp-sm-max+%2B+1px%3B%0A%40bp-med-max%3A+1020px%3B%0A%40bp-lg-min%3A++%40bp-med-max+%2B+1px%3B%0A%40bp-lg-max%3A++1230px%3B%0A%40bp-xl-min%3A++%40bp-lg-max+%2B+1px%3B%0A%0A",
-                    'variation_code_snippet1': ``,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Sizing',
-                    'variation_description1': "The+standard+icon+height+in+ems+matches+the+19px+rendered+canvas+of+text+set+in+Avenir+Next+sized+at+16px+%2819%2F16+%3D+1.1875%29.%0A%40cf-icon-height%3A+1.1875em%3B%0A%0A",
-                    'variation_code_snippet1': ``,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Color',
-                    'variation_description1': "%2F%2F+.block%0A%40block--bg%3A+++++++++++++++++var%28--gray-5%29%3B%0A%40block--border%3A+++++++++++++var%28--gray-40%29%3B%0A%40block--border-top%3A+++++++++var%28--gray-40%29%3B%0A%40block--border-right%3A+++++++var%28--gray-40%29%3B%0A%40block--border-bottom%3A++++++var%28--gray-40%29%3B%0A%40block--border-left%3A++++++++var%28--gray-40%29%3B%0A%0A%2F%2F+.content__main%0A%40content__main-border%3A+++++++var%28--gray-40%29%3B%0A%0A%2F%2F+.content__line%0A%40content__line%3A++++++++++++++var%28--gray-40%29%3B%0A%0A%2F%2F+.u-grid-column__top-divider%0A%40u-grid-column__top-divider%3A++var%28--gray-40%29%3B%0A%0A%2F%2F+.u-grid-column__left-divider%0A%40u-grid-column__left-divider%3A+var%28--gray-40%29%3B%0A%0A%0A",
-                    'variation_code_snippet1': ``,
-                
-                    'variation_name2': 'Heroes and featured content modules',
-                    'variation_description2': "Color%0A%2F%2F+Hero+variables%0A%40hero-bg%3A+++++++++++++++++++var%28--gray-5%29%3B%0A%40hero-knockout-bg%3A++++++++++var%28--gray%29%3B%0A%40hero-knockout-text%3A++++++++var%28--white%29%3B%0A%0A%2F%2F+Featured+Content+Module+variables%0A%40fcm-bg%3A++++++++++++++++++++%40block--bg%3B%0A%0A%0ASizing%0A%2F%2F+Hero+variables%0A%40hero-desktop-height%3A+285px%3B%0A%0A",
-                    'variation_code_snippet2': ``,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Color',
-                    'variation_description1': "%40notification-bg%3A+++++++++++++var%28--gray-5%29%3B%0A%40notification-bg-success%3A+++++var%28--green-10%29%3B%0A%40notification-bg-warning%3A+++++var%28--gold-10%29%3B%0A%40notification-bg-error%3A+++++++var%28--red-10%29%3B%0A%0A%40notification-border%3A+++++++++var%28--gray-40%29%3B%0A%40notification-border-success%3A+var%28--green%29%3B%0A%40notification-border-warning%3A+var%28--gold%29%3B%0A%40notification-border-error%3A+++var%28--red%29%3B%0A%0A%40notification-icon%3A+++++++++++var%28--gray%29%3B%0A%40notification-icon-success%3A+++var%28--green%29%3B%0A%40notification-icon-warning%3A+++var%28--gold%29%3B%0A%40notification-icon-error%3A+++++var%28--red%29%3B%0A%0A",
-                    'variation_code_snippet1': ``,
-                
-                    'variation_name2': 'Sizing',
-                    'variation_description2': "%40notification-padding__px%3A+15px%3B%0A",
-                    'variation_code_snippet2': ``,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Color',
-                    'variation_description1': "%40pagination-text%3A+var%28--gray%29%3B%0A%40pagination-bg%3A+++var%28--gray-10%29%3B%0A%0A",
-                    'variation_code_snippet1': ``,
-                
-                    'variation_name2': 'Sizing',
-                    'variation_description2': "%40pagination-btn-min-width-px%3A+130px%3B%0A%0A",
-                    'variation_code_snippet2': ``,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Color',
-                    'variation_description1': "%40table-cell-bg%3A++++++++++++++var%28--white%29%3B%0A%40table-cell-bg_alt%3A++++++++++var%28--gray-5%29%3B%0A%40table-row-link-bg-hover%3A++++var%28--pacific-80%29%3B%0A%40table-row-link-hover-color%3A+var%28--white%29%3B%0A%40table-head-text%3A++++++++++++%40text%3B%0A%40table-head-bg%3A++++++++++++++var%28--gray-5%29%3B%0A%40table-scrolling-border%3A+++++var%28--gray-40%29%3B%0A%40table-border%3A+++++++++++++++var%28--gray%29%3B%0A%0A%0A",
-                    'variation_code_snippet1': ``,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Color',
-                    'variation_description1': "%2F%2F+Running+text+elements%0A%0A%2F%2F+.a-date%0A%40date%3A++++++++++++++++++++++var%28--gray%29%3B%0A%0A%2F%2F+.m-pull-quote%0A%40pull-quote_body%3A+++++++++++var%28--black%29%3B%0A%40pull-quote_citation%3A+++++++var%28--gray%29%3B%0A%0A%2F%2F+Headers%0A%0A%2F%2F+.m-slug-header%0A%40slug-header_border__thin%3A++var%28--gray-10%29%3B%0A%40slug-header_border__thick%3A+var%28--green%29%3B%0A%0A%2F%2F+.m-meta-header%0A%40meta-header_border%3A++++++++var%28--gray-40%29%3B%0A%0A%2F%2F+Body%0A%40text%3A++++++++++++++++++++++var%28--black%29%3B%0A%0A%2F%2F+Links%0A%2F%2F+a%0A%40link-text%3A++++++++++++++var%28--pacific%29%3B%0A%40link-underline%3A+++++++++var%28--pacific%29%3B%0A%40link-text-visited%3A++++++var%28--teal%29%3B%0A%40link-underline-visited%3A+var%28--teal%29%3B%0A%40link-text-hover%3A++++++++var%28--pacific-dark%29%3B%0A%40link-underline-hover%3A+++var%28--pacific-dark%29%3B%0A%40link-text-active%3A+++++++var%28--navy%29%3B%0A%40link-underline-active%3A++var%28--navy%29%3B%0A%0A%2F%2F+code%0A%40code-text%3A++++++++++++++%40text%3B%0A%40code-bg%3A++++++++++++++++var%28--gray-5%29%3B%0A%0A",
-                    'variation_code_snippet1': ``,
-                
-                    'variation_name2': 'Sizing',
-                    'variation_description2': "%40base-font-size-px%3A+++16px%3B%0A%40base-line-height-px%3A+22px%3B%0A%40base-line-height%3A++++%40base-line-height+%2F+%40base-font-size%3B%0A%0A%40size-xl%3A+++++++++++++48px%3B+%2F%2F+Super-size%0A%0A%40size-i%3A++++++++++++++34px%3B+%2F%2F+h1-size%0A%40size-ii%3A+++++++++++++26px%3B+%2F%2F+h2-size%0A%40size-iii%3A++++++++++++22px%3B+%2F%2F+h3-size%0A%40size-iv%3A+++++++++++++18px%3B+%2F%2F+h4-size%0A%40size-v%3A++++++++++++++14px%3B+%2F%2F+h5-site%0A%40size-vi%3A+++++++++++++12px%3B+%2F%2F+h6-size%0A%40size-code%3A+++++++++++13px%3B+%2F%2F+Custom+size+only+for+Mono+code+blocks%0A%0A",
-                    'variation_code_snippet2': ``,
-                
-                    'variation_name3': 'Font stack',
-                    'variation_description3': "Override+this+variable+in+order+to+specify+a+font+stack+other+than+the+CFPB%E2%80%99s+default+brand+font+and+fallback.%0A--font-stack%3A+%27Avenir+Next%27%2C+Arial%2C+sans-serif%3B%0A",
+                    'variation_name3': 'Font source',
+                    'variation_description3': "There+is+a+Sass+mixin+for+specifying+the+path+to+the+woff+and+woff2+font+files+for+the+CFPB+default+brand+font%2C+Avenir+Next.%0APass+in+the+path+to+the+files.+The+path+can+be+either+a+relative+or+absolute+path.%0A%0A%40include+licensed-font%28%27%2Fpath%2Fto%2Ffonts%2Fwoff%2Ffiles%27%29%3B%0A%0A",
                     'variation_code_snippet3': ``,
-                
-                    'variation_name4': 'Font source',
-                    'variation_description4': "There+is+a+Sass+mixin+for+specifying+the+path+to+the+woff+and+woff2+font+files+for+the+CFPB+default+brand+font%2C+Avenir+Next.+Pass+in+the+path+to+the+files.+The+path+can+be+either+a+relative+or+absolute+path.%0A%40include+licensed-font%28%27%2Fpath%2Fto%2Ffonts%2Fwoff%2Ffiles%27%29%60%3B%0A%0A",
-                    'variation_code_snippet4': ``,
                 
             
 
 
             'title': 'Variables',
-            'description': "Component+variables+are+used+to+theme+a+component.+They+likely+will+be+left+as+is%2C+but+if+needed+can+be+overwritten+by+duplicating+the+variable+in+a+%40key%3A+value+format+with+a+different+value.+This+customized+variable+would+be+placed+in+the+same+file+where+this+component%E2%80%99s+less+file+is+imported.+Color+variables+referenced+in+comments+are+from+custom-props.scss.%0A",
+            'description': "Variables+are+either+processed+at+build-time+by+the+Sass+compiler%2C+if+they+are+Sass+variables%2C+or+at+run-time+by+the+browser%2C+if+they+are+CSS+custom+variables+%28CSS+custom+properties%29.%0A%0AThe+Sass+variables+appear+as+a+%40key%3Avalue+format+and+are+generally+used+to+theme+a+component.+CSS+custom+properties+appear+as+a+--key%3A+value+format.%0A",
             'use_cases': "%0A",
             'guidelines': "%0A",
             'behavior': "%0A",

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Variables - CFPB Design System</title>
+  <title>Integrating the Design System into your project - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -246,13 +246,9 @@
 
   <div class="ds-content">
     <section>
-      <div class="h5">
-        Utilities
-      </div>
-    
 
     <h1 class="component-header u-mb30">
-        Variables
+        Integrating the Design System into your project
     </h1>
 
     
@@ -265,156 +261,168 @@
     
     <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
         
-        <li class="m-list__item">
-            <a href="#typography">Typography</a>
-        </li>
-        
     </ul>
     
 
     
     <section id="description" class="u-mb30">
-        <p>Variables are either processed at build-time by the Sass compiler, if they are Sass variables, or at run-time by the browser, if they are CSS custom variables (CSS custom properties).</p>
+        <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns
+that can be used both collectively and individually. There are several ways to
+integrate it into your project:</p>
 
-<p>The Sass variables appear as a <code class="language-plaintext highlighter-rouge">@key:value</code> format and are generally used to theme a component. CSS custom properties appear as a <code class="language-plaintext highlighter-rouge">--key: value</code> format.</p>
+<ol>
+  <li>
+    <p><a href="#build-pre-requisites">Build pre-requisites</a></p>
+  </li>
+  <li>
+    <p><a href="#installing-components-in-your-project">Installing components in your project</a></p>
+  </li>
+  <li>
+    <p><a href="#downloading-the-compiled-css-and-javascript">Downloading the compiled CSS and JavaScript</a></p>
+  </li>
+</ol>
+
+<h2 id="build-pre-requisites">Build pre-requisites</h2>
+
+<ol>
+  <li>
+    <p><strong>SCSS</strong>. Your project will need a way of building <code class="language-plaintext highlighter-rouge">.scss</code> files. The Design System uses
+<a href="https://esbuild.github.io/">esbuild</a> for this task.</p>
+  </li>
+  <li>
+    <p><strong>Embedding SVG icons</strong>. There are some instances where SVG icons are embedded in the CSS.
+The Design System uses a special CSS custom property, <code class="language-plaintext highlighter-rouge">--cfpb-background-icon-svg</code>, which gets swapped out with an SVG file from the
+<a href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons">SVG icons directory</a>. Your build will need to
+perform that swap, if you are using the source SCSS files and include
+components that have embedded icons (the drop-down selects, for example).
+A esbuild script for processing the icons can be <a href="https://github.com/cfpb/design-system/blob/main/esbuild/plugins/postcss-process-icons.js">found in the Design System project</a>.</p>
+  </li>
+</ol>
+
+<h2 id="installing-components-in-your-project">Installing components in your project</h2>
+
+<p>The Design System is distributed via the npm <code class="language-plaintext highlighter-rouge">@cfpb/cfpb-design-system</code>
+package, which you can install via <code class="language-plaintext highlighter-rouge">yarn</code> or <code class="language-plaintext highlighter-rouge">npm</code>.</p>
+
+<p>Pick one:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+yarn add @cfpb/cfpb-design-system
+
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+npm <span class="nb">install</span> @cfpb/cfpb-design-system
+
+</code></pre></div></div>
+
+<h3 id="folder-structure">Folder structure</h3>
+
+<p>The folder architecture loosely follows the <a href="https://sass-guidelin.es/#architecture">Sass opinionated style guide</a>, which breaks it down into:</p>
+
+<ul>
+  <li>
+<strong>abstracts</strong> - definition files for variables and global mixins.</li>
+  <li>
+<strong>base</strong> - CSS base styling.</li>
+  <li>
+<strong>components</strong> - Specific component packages.</li>
+  <li>
+<strong>utilities</strong> - Global utilities shared across components.</li>
+</ul>
+
+<p>Additionally, the project has a root directory <code class="language-plaintext highlighter-rouge">index.scss</code> and <code class="language-plaintext highlighter-rouge">index.js</code>
+file, which point to the other directory sources.</p>
+
+<h3 id="import-css">Import CSS</h3>
+
+<p>After installing the Design System via <code class="language-plaintext highlighter-rouge">yarn</code> or <code class="language-plaintext highlighter-rouge">npm</code>, you’ll be able to
+import the CSS into your project. This should happen in your main CSS entry-point file.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Adjust paths to the package as necessary.</span>
+
+<span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
+<span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/base'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
+<span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/dist/index.css'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="define-custom-properties">Define custom properties</h3>
+
+<p>Next you’ll want to define the custom CSS properties (variables) that set the
+colors and font stack.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">define-custom-props</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="set-official-font-stack">Set official font stack</h3>
+
+<p>If the project has access to Avenir Next <code class="language-plaintext highlighter-rouge">.woff</code> files, you’ll include a mixin
+to point to those woff files and create the Avenir Next <code class="language-plaintext highlighter-rouge">@font-face</code> rules.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This is the path for self-hosted fonts.</span>
+<span class="k">@include</span> <span class="nd">licensed-font</span><span class="p">(</span><span class="s1">'/path/to/the/font/woff/files'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="resolve-references">Resolve references</h3>
+
+<p>Any file that references Design System variables or mixins, needs to import
+a reference to where those references are defined. Most often this will mean
+repeating an import of the abstracts directory in your <code class="language-plaintext highlighter-rouge">.scss</code> files.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Although discouraged, occasionally you may reference a variable that appears within a component itself, in which case you need to reference that components SCSS, such as:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/components/cfpb-buttons/button-link'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="import-javascript">Import JavaScript</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Expandable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@cfpb/cfpb-design-system</span><span class="dl">'</span><span class="p">;</span>
+
+
+<span class="c1">// initialize all expandables with class .o-expandable</span>
+
+<span class="c1">// if they are within an element with id #container</span>
+
+<span class="nx">Expandable</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span> <span class="dl">'</span><span class="s1">#container</span><span class="dl">'</span> <span class="p">)</span> <span class="p">);</span>
+
+</code></pre></div></div>
+
+<h2 id="downloading-the-compiled-css-and-javascript">Downloading the compiled CSS and JavaScript</h2>
+
+<p>While we recommend the above installation method to make future updates smaller and safer by allowing you to update one component at a time, there may be some use cases where it’s more appropriate to just grab a snapshot of the full Design System’s compiled CSS and JavaScript and drop it into a page. <a class="cf-download" href="https://unpkg.com/@cfpb/cfpb-design-system/">You can download the compiled Design System CSS and JavaScript from UNPKG.</a></p>
+
+<p>Download the <code class="language-plaintext highlighter-rouge">@cfpb/cfpb-design-system/dist/index.css</code> and <code class="language-plaintext highlighter-rouge">@cfpb/cfpb-design-system/dist/index.js</code> files to your project and use standard <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tags to include them. For example:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="nt">&lt;html&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>My Awesome Project<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/cfpb-design-system/dist/index.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/your-project-styles.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!-- Your project's HTML goes here. --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/cfpb-design-system/dist/index.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/your-project-scripts.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span>
+
+</code></pre></div></div>
 
     </section>
     
 
-    
-    
-    <section class="o-variation-group" id="typography">
-
-        
-        <h2 class="o-variation-group__title">
-            Typography
-        </h2>
-        
-
-        
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Color and Font custom props
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>There is a Sass mixin for defining the CSS custom variables
-(CSS custom properties) used in the project. This should be used and
-included once in your project’s CSS entry-point file.</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'@cfpb/cfpb-design-system/src/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
-<span class="k">@include</span> <span class="nd">define-custom-props</span><span class="p">;</span>
-</code></pre></div></div>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Font stack
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>Override this variable in order to specify a font stack other than the
-CFPB’s default brand font and fallback.</p>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">--font-stack</span><span class="o">:</span> <span class="s2">'Avenir Next'</span><span class="o">,</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span>
-</code></pre></div></div>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Font source
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>There is a Sass mixin for specifying the path to the woff and woff2 font files for the CFPB default brand font, Avenir Next.
-Pass in the path to the files. The path can be either a relative or absolute path.</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">licensed-font</span><span class="p">(</span><span class="s1">'/path/to/fonts/woff/files'</span><span class="p">);</span>
-</code></pre></div></div>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-    </section>
-    
     
 
     
@@ -449,7 +457,7 @@ Pass in the path to the files. The path can be either a relative or absolute pat
                         
                         
                         
-                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/variables.md">
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/integrating-the-design-system-into-your-project.md">
                             <time datetime="2024-09-11 15:57:07 -0400">
                                  3:57:07 PM Sep 11, 2024
                             </time>
@@ -465,17 +473,8 @@ Pass in the path to the files. The path can be either a relative or absolute pat
 
 <!-- .content__main --> 
 
-    <div class="o-editor" id="toggle-details">
-      <a class="a-btn" href="#" title="Show all details">
-        <span class="a-btn__text">Show all details</span>
-        <span class="a-btn__icon"><svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--lightbulb" viewbox="0 0 11 19"><path d="M10.328 6.83a5.9 5.9 0 0 1-1.439 3.64 2.9 2.9 0 0 0-.584 1v1.037a.95.95 0 0 1-.95.95h-3.71a.95.95 0 0 1-.95-.95V11.47a2.9 2.9 0 0 0-.584-1A5.9 5.9 0 0 1 .67 6.83a4.83 4.83 0 0 1 9.28-1.878 4.8 4.8 0 0 1 .38 1.88zm-.95 0a3.878 3.878 0 0 0-7.756 0c0 2.363 2.023 3.409 2.023 4.64v1.037h3.71V11.47c0-1.231 2.023-2.277 2.023-4.64M7.83 14.572a.475.475 0 0 1-.475.476h-3.71a.475.475 0 0 1 0-.95h3.71a.475.475 0 0 1 .475.474m-.64 1.262a.24.24 0 0 1-.078.265 2.67 2.67 0 0 1-3.274 0 .237.237 0 0 1 .145-.425h2.983a.24.24 0 0 1 .225.16z"></path></svg></span>
-      </a>
-    </div>
-
-    
-
     <div class="o-editor" id="edit-page">
-      <a class="a-btn" href="/design-system/updating-this-website?page=Variables" title="Edit this page in Decap CMS">
+      <a class="a-btn" href="/design-system/updating-this-website?page=Integrating+the+Design+System+into+your+project" title="Edit this page in Decap CMS">
         <span class="a-btn__text">Edit page</span>
         <span class="a-btn__icon"><svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--edit" viewbox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg></span>
       </a>
@@ -496,7 +495,7 @@ Pass in the path to the files. The path can be either a relative or absolute pat
                 If you see something wrong or missing,
                 <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
                 If you can’t make those changes yourself,
-                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Variables%3A+Add+issue+description">file an issue</a>.
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Integrating%20the%20Design%20System%20into%20your%20project%3A+Add+issue+description">file an issue</a>.
                 If you have a substantial change to an existing page, or a new standard you want to add,
                 <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
             </small>

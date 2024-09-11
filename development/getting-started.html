@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Integrating the Design System into your project - CFPB Design System</title>
+  <title>Getting Started - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -147,6 +147,81 @@
                 </div>
 
             
+                
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">General principles</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/atomic-components">Atomic components</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/variables">Variables</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Getting started</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/getting-started">Getting Started</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/integrating-the-design-system-into-your-project">Integrating the Design System into your project</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Layout</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/blocks">Blocks</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/main-content-and-sidebars">Main content and sidebars</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Utilities</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/helper-classes-and-mixins">Helper classes and mixins</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/media-queries">Media queries</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+            
             </div>
         </li>
     
@@ -173,7 +248,7 @@
     <section>
 
     <h1 class="component-header u-mb30">
-        Integrating the Design System into your project
+        Getting Started
     </h1>
 
     
@@ -191,70 +266,17 @@
 
     
     <section id="description" class="u-mb30">
-        <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be used both collectively and individually. There are several ways to integrate it into your project:</p>
+        <h2 id="for-getting-up-and-running-with-the-cfpb-design-system">For getting up and running with the CFPB Design System</h2>
 
-<ol>
-  <li><a href="#installing-individual-components-with-yarn-or-npm">Installing individual components with npm or Yarn</a></li>
-  <li><a href="#downloading-the-compiled-css">Downloading the compiled CSS</a></li>
-</ol>
+<p>Setting up the framework for your project and creating new components should be quick and easy. <a href="https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md#changing-the-codebase">Learn how to integrate CFPB Design System into your project</a>.</p>
 
-<h2 id="installing-individual-components-with-yarn-or-npm">Installing individual components with Yarn or npm</h2>
+<h2 id="for-designing-wireframes-or-prototypes-with-the-cfpb-design-system">For designing wireframes or prototypes with the CFPB Design System</h2>
 
-<p>Just want one or two Design System components and not the entire framework?
-Simply install and <code class="language-plaintext highlighter-rouge">@import</code> only the components you need.</p>
+<p><a href="https://cfpb.github.io/design-system/components/">Browse our components</a> for specifications or <a href="https://cfpb.github.io/design-system/foundation/">go to the Foundation section</a> for more general information on using our logo, color palette, icons and fonts.</p>
 
-<h3 id="install-with-yarn-or-npm">Install with Yarn or npm</h3>
+<h2 id="help-us-make-improvements">Help us make improvements</h2>
 
-<p>Pick one:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @cfpb/cfpb-buttons @cfpb/cfpb-icons
-</code></pre></div></div>
-
-<p>or</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install @cfpb/cfpb-buttons @cfpb/cfpb-icons
-</code></pre></div></div>
-
-<h3 id="import-css">Import CSS</h3>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* adjust paths to the modules as necessary */</span>
-<span class="k">@import</span>  <span class="s1">"node_modules/@cfpb/cfpb-buttons/src/cfpb-buttons.scss"</span><span class="p">;</span>
-<span class="k">@import</span>  <span class="s1">"node_modules/@cfpb/cfpb-icons/src/cfpb-icons.scss"</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p><em>Note:</em> Be sure to run the SCSS files through
-<a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>,
-or your compiled CSS might not work perfectly in older browsers.</p>
-
-<h3 id="import-javascript">Import JavaScript</h3>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Expandable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@cfpb/cfpb-expandables</span><span class="dl">'</span><span class="p">;</span>
-
-<span class="c1">// initialize all expandables with class .o-expandable</span>
-<span class="c1">// if they are within an element with id #container</span>
-<span class="nx">Expandable</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span> <span class="dl">'</span><span class="s1">#container</span><span class="dl">'</span> <span class="p">)</span> <span class="p">);</span>
-</code></pre></div></div>
-
-<h2 id="downloading-the-compiled-css-and-javascript">Downloading the compiled CSS and JavaScript</h2>
-
-<p>While we recommend the above installation method to make future updates smaller and safer by allowing you to update one component at a time, there may be some use cases where it’s more appropriate to just grab a snapshot of the full Design System’s compiled CSS and JavaScript and drop it into a page. <a class="cf-download" href="https://unpkg.com/@cfpb/cfpb-design-system/">You can download the compiled Design System CSS and JavaScript from UNPKG.</a></p>
-
-<p>Download the <code class="language-plaintext highlighter-rouge">cfpb-design-system.css</code> and <code class="language-plaintext highlighter-rouge">cfpb-design-system.js</code> files to your project and use standard <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tags to include them. For example:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>My Awesome Project<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/cfpb-design-system.css"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/your-project-styles.css"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="c">&lt;!-- Your project's HTML goes here. --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/cfpb-design-system.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/your-project-scripts.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
+<p>We are constantly updating our documentation. If you can help, review our directions to <a href="https://cfpb.github.io/design-system/updating-this-website/index">get started editing and adding pages</a>. We also provide complete instructions on how to <a href="https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md">contribute to code base</a>.</p>
 
     </section>
     
@@ -293,9 +315,9 @@ or your compiled CSS might not work perfectly in older browsers.</p>
                         
                         
                         
-                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/integrating-the-design-system-into-your-project.md">
-                            <time datetime="2024-09-10 18:12:26 -0400">
-                                 6:12:26 PM Sep 10, 2024
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/getting-started.md">
+                            <time datetime="2024-09-11 15:57:07 -0400">
+                                 3:57:07 PM Sep 11, 2024
                             </time>
                         </a>
                     </section>
@@ -310,7 +332,7 @@ or your compiled CSS might not work perfectly in older browsers.</p>
 <!-- .content__main --> 
 
     <div class="o-editor" id="edit-page">
-      <a class="a-btn" href="/design-system/updating-this-website?page=Integrating+the+Design+System+into+your+project" title="Edit this page in Decap CMS">
+      <a class="a-btn" href="/design-system/updating-this-website?page=Getting+Started" title="Edit this page in Decap CMS">
         <span class="a-btn__text">Edit page</span>
         <span class="a-btn__icon"><svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--edit" viewbox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg></span>
       </a>
@@ -331,7 +353,7 @@ or your compiled CSS might not work perfectly in older browsers.</p>
                 If you see something wrong or missing,
                 <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
                 If you can’t make those changes yourself,
-                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Integrating%20the%20Design%20System%20into%20your%20project%3A+Add+issue+description">file an issue</a>.
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Getting%20Started%3A+Add+issue+description">file an issue</a>.
                 If you have a substantial change to an existing page, or a new standard you want to add,
                 <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
             </small>

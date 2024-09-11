@@ -70,15 +70,18 @@ describe('Multiselect', () => {
   it('should let the user remove a choice', () => {
     // Verify option1 is selected by default.
     cy.get(
-      '.o-multiselect .m-tag-group label[for=test_select__multiple-option1]',
+      '.o-multiselect .m-tag-group label[for=test_select__multiple-option1] svg',
     ).should('be.visible');
 
     // Verify option1 can be removed.
     cy.get(
-      '.o-multiselect .m-tag-group label[for=test_select__multiple-option1]',
-    ).click();
+      '.o-multiselect .m-tag-group label[for=test_select__multiple-option1] svg',
+    )
+      .parent()
+      .parent()
+      .click();
     cy.get(
-      '.o-multiselect .m-tag-group label[for=test_select__multiple-option1]',
+      '.o-multiselect .m-tag-group label[for=test_select__multiple-option1] svg',
     ).should('not.exist');
   });
 

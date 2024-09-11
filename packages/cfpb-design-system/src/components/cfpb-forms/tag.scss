@@ -36,6 +36,12 @@
   .cf-icon-svg {
     pointer-events: none;
   }
+
+  // If the contents are wrapped in a label, negate the label's display.
+  > label {
+    display: contents;
+    pointer-events: none;
+  }
 }
 
 a.a-tag-filter {

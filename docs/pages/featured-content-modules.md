@@ -191,9 +191,7 @@ behavior: >-
   At larger screen sizes, the image moves to the right of the text, occupying a fixed width of 270px (equal to 3 of 12 columns at max page width). By default, the left edge of the image is anchored to the left side of the visual’s 270px-wide area, and the right side is cropped off. The aspect ratio of the visual area increases as screen size increases, resulting in slightly different image cropping at different screen sizes, but the left edge of the image remains anchored in view. The full height of the image is always in view; the top and bottom are never cropped. See above for modifiers that change the image’s horizontal anchoring.
 accessibility: ''
 research: ''
-related_items: "* [Variables for featured content
-  modules](https://cfpb.github.io/design-system/development/variables#heroes-an\
-  d-featured-content-modules)"
+related_items: ''
 last_updated: 2019-10-17T14:52:11.082Z
 eyebrow: Featured content
 ---

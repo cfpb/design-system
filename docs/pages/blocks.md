@@ -221,9 +221,7 @@ guidelines: ''
 behavior: ''
 accessibility: ''
 research: ''
-related_items: "* [Layout
-  variables](https://cfpb.github.io/design-system/development/variables#color-4\
-  )"
+related_items: ''
 last_updated: 2020-01-06T20:29:09.912Z
 eyebrow: Layout
 ---

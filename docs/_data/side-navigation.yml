@@ -94,19 +94,22 @@ first-level:
           - page: Story pages
   - heading: Development
     second-level:
-      - heading: Atomic
+      - heading: General principles
         nav-items:
           - page: Atomic components
+          - page: Variables
+      - heading: Getting started
+        nav-items:
+          - page: Getting Started
+          - page: Integrating the Design System into your project
       - heading: Layout
         nav-items:
-          - page: Base images
           - page: Blocks
           - page: Main content and sidebars
       - heading: Utilities
         nav-items:
           - page: Helper classes and mixins
           - page: Media queries
-          - page: Variables
   - heading: Guidelines
     second-level:
       - heading: Accessibility

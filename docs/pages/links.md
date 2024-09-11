@@ -201,9 +201,6 @@ accessibility: >-
 
   Write the link with language clearly describing the link's destination. In situations where that's untenable, you can improve the situation for screen reader users by coding the link with the `aria-label` attribute and adding more descriptive link text, which will be read aloud by screen readers.
 related_items: >-
-  *
-  [Variables](https://cfpb.github.io/design-system/development/variables#typography-1)
-
   * [Buttons](https://cfpb.github.io/design-system/components/buttons)
 
   * [Typography](https://cfpb.github.io/design-system/foundation/fonts)

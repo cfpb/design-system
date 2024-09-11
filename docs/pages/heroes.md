@@ -795,9 +795,6 @@ behavior: >-
   | ![Mockup of hero graphic at desktop size](/design-system/images/uploads/hero_behavior_large.png "Mockup of hero graphic at desktop size") | ![Mockup of hero graphic at small size](/design-system/images/uploads/hero_behavior_small.png "Mockup of hero graphic at small size") |
 accessibility: ''
 related_items: >-
-  -
-  [Variables](https://cfpb.github.io/design-system/development/variables#heroes-and-featured-content-modules)
-
   - [Landing pages](https://cfpb.github.io/design-system/pages/landing-pages)
 
   - [Sublanding pages](https://cfpb.github.io/design-system/pages/sublanding-pages)

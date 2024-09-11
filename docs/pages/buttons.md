@@ -186,9 +186,7 @@ restrictions:
       </button>
 eyebrow: Components
 accessibility: ''
-related_items: "* [Button
-  variables](https://cfpb.github.io/design-system/development/variables#buttons\
-  )"
+related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
 research: ''
 ---

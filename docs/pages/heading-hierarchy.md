@@ -191,8 +191,6 @@ related_items: >-
   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
 
   * [Fonts](https://cfpb.github.io/design-system/foundation/fonts)
-
-  * [Typography variables](https://cfpb.github.io/design-system/development/variables#typography)
 last_updated: 2019-10-21T21:54:52.744Z
 research: ''
 ---

@@ -282,9 +282,6 @@ behavior: ''
 accessibility: ''
 research: ''
 related_items: >-
-  * [Layout
-  variables](https://cfpb.github.io/design-system/development/variables#color-4)
-
   * [Blocks](https://cfpb.github.io/design-system/development/blocks)
 
   * [Grid](https://cfpb.github.io/design-system/foundation/grid)

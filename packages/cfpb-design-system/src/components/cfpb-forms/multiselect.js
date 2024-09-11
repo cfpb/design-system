@@ -265,6 +265,7 @@ function Multiselect(element) {
 
     const selectionsItemLabelDom = create('button', selectionsItemDom, {
       type: 'button',
+      class: 'a-tag-filter',
       innerHTML:
         '<label for=' + optionId + '>' + option.text + closeIcon + '</label>',
     });
@@ -464,7 +465,7 @@ function Multiselect(element) {
 
     // Create all our markup but wait to manipulate the DOM just once
     _selectionsDom = create('ul', null, {
-      className: BASE_CLASS + '__choices',
+      className: 'm-tag-group',
     });
 
     _headerDom = create('header', _containerDom, {

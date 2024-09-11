@@ -37,7 +37,9 @@ describe('Multiselect', () => {
       const option = document.querySelector('option');
       option.defaultSelected = true;
       multiselect.init();
-      const choices = document.querySelectorAll('.o-multiselect__choices li');
+      const choices = document.querySelectorAll(
+        '.o-multiselect .m-tag-group li',
+      );
 
       expect(choices.length).toBe(1);
       expect(choices[0].innerHTML).toContain('Debt collection');
@@ -52,7 +54,9 @@ describe('Multiselect', () => {
       expect(multiselect.getModel().isAtMaxSelections()).toBe(true);
 
       // renderTags
-      const choices = document.querySelectorAll('.o-multiselect__choices li');
+      const choices = document.querySelectorAll(
+        '.o-multiselect .m-tag-group li',
+      );
       expect(choices.length).toBe(0);
     });
   });

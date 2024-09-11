@@ -60,6 +60,7 @@ a.a-tag-filter {
   display: flex;
   gap: math.div(5px, $btn-font-size) + rem;
 }
+
 @include u-jump-link(
   $jump-link-class: 'a-tag-topic',
   $jump-link-text-class: 'a-tag-topic__text',
@@ -146,6 +147,7 @@ a.a-tag-filter {
 html[lang='ar'] {
   .m-tag-group {
     direction: rtl;
+
     // This is needed for right-to-left (RTL) lists.
     padding-right: 0;
   }

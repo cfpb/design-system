@@ -1,4 +1,20 @@
 
+## v3.1.8 (2024-09-11)
+
+#### Enhancement
+* `cfpb-design-system`
+  * [#2049](https://github.com/cfpb/design-system/pull/2049) Replace multiselect tags with filter tags ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#2048](https://github.com/cfpb/design-system/pull/2048) Restructure and update development docs ([@anselmbradford](https://github.com/anselmbradford))
+* [#2044](https://github.com/cfpb/design-system/pull/2044) Update concurrently and saucectl ([@anselmbradford](https://github.com/anselmbradford))
+* [#2043](https://github.com/cfpb/design-system/pull/2043) Combine build scripts ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.1.7 (2024-09-10)
 
 #### Bug Fix

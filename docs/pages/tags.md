@@ -17,7 +17,7 @@ variation_groups:
           takes a user to a filtered view of other items tagged with the same
           topic tag. In this filtered view, a topic tag appears as a filter tag.
         variation_code_snippet: >-
-          <ol class="m-tag-group">
+          <ul class="m-tag-group">
             <li>
               <a href="#" class="a-tag-topic">
                 <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
@@ -31,13 +31,13 @@ variation_groups:
                 <span class="a-tag-topic__text">Mortgages</span>
               </a>
             </li>
-          </ol>
+          </ul>
 
       - variation_is_deprecated: false
         variation_name: Topic tag (stacked)
         variation_description: A topic tags group that is stacked at all screen sizes.
         variation_code_snippet: >-
-          <ol class="m-tag-group m-tag-group--stacked">
+          <ul class="m-tag-group m-tag-group--stacked">
             <li>
               <a href="#" class="a-tag-topic">
                 <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
@@ -51,12 +51,12 @@ variation_groups:
                 <span class="a-tag-topic__text">Banking</span>
               </a>
             </li>
-          </ol>
+          </ul>
       - variation_is_deprecated: false
         variation_name: Non-link topic tags
         variation_description: A group of topic tags that are not links.
         variation_code_snippet: >-
-          <ol class="m-tag-group">
+          <ul class="m-tag-group">
             <li>
               <span class="a-tag-topic">
                 <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
@@ -70,7 +70,7 @@ variation_groups:
                 <span class="a-tag-topic__text">Banking</span>
               </a>
             </li>
-          </ol>
+          </ul>
       - variation_is_deprecated: false
         variation_name: Filter tag
         variation_description: Filter tags are used as a part of
@@ -79,7 +79,7 @@ variation_groups:
           list control
           panel](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels).
         variation_code_snippet: >-
-          <ol class="m-tag-group">
+          <ul class="m-tag-group">
             <li>
               <button class="a-tag-filter">
                 Option 1
@@ -105,7 +105,7 @@ variation_groups:
                 </svg>
               </button>
             </li>
-          </ol>
+          </ul>
     variation_group_name: Types
 behavior: To clear a filter tag selection, click the “x” icon inside of the filter tag.
 related_items: >-

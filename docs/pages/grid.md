@@ -94,10 +94,6 @@ variation_groups:
 
       * `xl`: 1231px and up
   - variations:
-      - variation_code_snippet: ''
-        variation_description: See [grid
-          variables](https://cfpb.github.io/design-system/development/variables#grid-1).
-        variation_name: Variables
       - variation_code_snippet: >-
           <div class="main-wrapper" style="background-color: #f9f9f9">This
           container now has left and right padding and a centered max
@@ -406,8 +402,7 @@ description: >
 use_cases: ''
 behavior: ''
 accessibility: ''
-related_items: '* [Grid
-  variables](https://cfpb.github.io/design-system/development/variables#grid-1)'
+related_items: ''
 last_updated: 2019-09-10T15:02:08.752Z
 research: ''
 ---

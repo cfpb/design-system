@@ -26,8 +26,8 @@ We work off feature branches from the `main` branch.
 After you've edited a component,
 open a Pull Request to merge your feature branch back into `main`.
 
-For example, if you wanted to change `@cfpb/cfpb-buttons` and use it in
-[cfgov-refresh](https://github.com/cfpb/cfgov-refresh),
+For example, if you wanted to change some button code in `@cfpb/cfpb-design-system` and use it in
+[consumerfinance.gov](https://github.com/cfpb/consumerfinance.gov),
 here's what you'd do:
 
 1. `git clone git@github.com:cfpb/design-system.git`, if you haven't already.
@@ -36,12 +36,11 @@ here's what you'd do:
 1. `yarn install` to install dependencies and set up [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
 1. `yarn after-install` to copy assets and configure Ruby dependencies.
 1. `git checkout -b button-fix` to create a new branch for your changes.
-1. Edit file(s) in `/packages/cfpb-buttons/` however you want.
-1. `yarn design-system-link` to [link](https://yarnpkg.com/lang/en/docs/cli/link/) your local CF components.
-1. `cd ~/wherever/cfgov-refresh/` to navigate to another project where you'd like to test your buttons changes (in this case, cfgov-refresh).
-1. `yarn link @cfpb/cfpb-buttons` to link @cfpb/cfpb-buttons to cfgov-refresh.
-1. `yarn build` in cfgov-refresh to compile your stylesheets.
-1. [Start cfgov-refresh](https://cfpb.github.io/cfgov-refresh/usage/) and navigate to a page with buttons to view your @cfpb/cfpb-buttons changes.
+1. Edit file(s) in `/packages/cfpb-design-system/src/components/cfpb-buttons` however you want.
+1. Copy `/packages/cfpb-design-system/` into `node_modules/@cfpb/cfpb-design-system/` in your consumerfinance.gov or other repo.
+1. `cd ~/wherever/consumerfinance.gov/` to navigate to another project where you'd like to test your buttons changes (in this case, consumerfinance.gov).
+1. `yarn build` in consumerfinance.gov to compile your stylesheets.
+1. [Start consumerfinance.gov](https://cfpb.github.io/consumerfinance.gov/usage/) and navigate to a page with buttons to view your `@cfpb/cfpb-design-system` changes.
 1. When you're pleased with your changes, `cd` back to your `design-system` repo and commit your changes: `git commit -am "Fix button border radius"`
 1. `git push origin button-fix` to push your branch up to GitHub.
 1. Go to https://github.com/cfpb/design-system and open a pull request to merge `button-fix` into `main`.
@@ -69,33 +68,9 @@ Automated tests can be run with the command `yarn test:browser`.
 
 ### Browser support
 
-We configure [Autoprefixer](#autoprefixer)
-to support the following list of browsers.
-
-- Latest 2 releases of all browsers including:
-  - Chrome
-  - Firefox
-  - Safari
-  - Internet Explorer
-  - Edge
-  - Opera
-  - iOS Safari
-  - Opera Mini
-  - Android Browser
-  - BlackBerry Browser
-  - Opera Mobile
-  - Chrome for Android
-  - Firefox for Android
-  - Samsung Internet
-- Internet Explorer 9
-
-http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+9
-
-As well as additional Autoprefixer support for:
-
-- Internet Explorer 8
-
-http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+8
+Per the [best practices published by browserslist](https://github.com/browserslist/browserslist?tab=readme-ov-file#best-practices),
+we use a 0.2% cutoff with this config for the browsers
+that get fed into our build systems.
 
 What this means to the end-user is we've added a level of backward
 compatability for modern features as much as possible. This doesn't
@@ -106,41 +81,12 @@ but we do ensure that default browser features continue to work so users
 that can't or don't want to upgrade continue to have access to the site and
 our content.
 
-#### Browser Testing
-
-We have automated tests that use a headless version of Chrome to ensure
-the majority of the site is working as expected. For manual testing, we
-realistically test this project locally or in a virtual environment with the
-following list of browsers:
-
-- Chrome
-- Firefox
-- Safari
-- Internet Explorer 8, 9, 10, and 11
-- Edge
-- iOS Safari
-- Chrome for Android
-
 #### Autoprefixer
 
 Autoprefixer parses our CSS and adds vendor prefixes to rules where necessary
 using reported feature support by [Can I Use](https://caniuse.com/). For more
 information visit the [Autoprefixer documentation site]
 (https://autoprefixer.github.io/).
-
-#### Known feature differences
-
-- JavaScript: We do not serve interactive scripting to IE 8 but we do deliver
-  analytics via JavaScript.
-- Icons: We currently use icon fonts to deliver scalable icons. Browsers that
-  do not support icon fonts unfortunately do not receive backups but we try to
-  always pair icons with text.
-
-#### Resources
-
-- https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
-- https://saucelabs.com/beta/dashboard/tests
-- http://developer.samsung.com/remotetestlab/rtlDeviceList.action#
 
 ## Release management
 
@@ -172,45 +118,33 @@ Then, do a release:
 1. Confirm the `CHANGELOG.md` file has been updated
    and committed to the `main` branch.
 
-## Notes
-
-The CSS and JavaScript files that are generated during the build task are only
-used for testing. Because this project doesn't necessarily produce a final
-product it is up to the projects that use it to generate and maintain their own
-browser support config. An example of this is
-[consumerfinance.gov](https://github.com/cfpb/cfgov-refresh), which generates
-specific IE 8 and 9 stylesheets, whereas the Design System build task
-bundles those with the main stylesheet. Despite the differences in delivery,
-the output and support are the same.
-
 ### Adhere to any linting errors or warnings
 
-The `yarn lint` linting tasks that are set up within the build processes
-are there to promote consistency.
-When contributing code please publicly track that there are no linting errors
-or warnings using the testing checklist in the pull request description.
+The `yarn lint` command can be used to lint the CSS and JS. Linting tasks that are set up within the pre-release processes are there to promote consistency.
 
 ### Follow our CSS naming conventions
 
-**We are using a customized BEM format:**
+**We are using the getBEM format:**
 
-```
+```css
 .block-name
-.block-name_element-name
-.block-name__block-modifier
-.block-name_element-name__element-modifier
+.block-name__element-name
+.block-name--block-modifier
+
+/* Modifiers on elements is discouraged, but they would look like */
+.block-name__element-name--element-modifier
 ```
 
 **Avoid creating elements of modifiers**
 
 Appending an element name to a modifier class can result in a confusing class
-name like `.list__space_item`.
-Avoid this in favor of using a descendant, like this: `.list__spaced .list_item`.
+name like `.list--space__item`.
+Avoid this in favor of using a descendant, like this: `.list--spaced .list__item`.
 
 ### Shoot for mobile first declarations
 
 In most cases styles should be declared mobile first,
-then enhanced with `min-width` media queries.
+then enhanced with media queries.
 By doing this we create a base experience that all devices can use
 and one that does not require media query support.
 
@@ -219,12 +153,12 @@ and one that does not require media query support.
 Instructions for developers who've received a new or updated icon from a designer:
 
 1. Place SVG file (named with its canonical name, i.e., `canonical.svg`)
-   in [`packages/cfpb-design-system/src/components/cfpb-icons/icons`](tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons/)
-1. If it has a `-round` or `-square` version, ensure those are in place as well
-1. Run `yarn process-icon-svgs` from the root of the repository
-   - This script compresses and standardizes the SVG code for all of our icons
-   - It should be a no-op for icons that have not changed
-1. From the repo root, copy the icons into the docs site with `yarn copy-assets'
+   in [`packages/cfpb-design-system/src/components/cfpb-icons/icons`](tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons/).
+1. If it has a `-round` or `-square` version, ensure those are in place as well.
+1. Run `yarn process-icon-svgs` from the root of the repository.
+   - This script compresses and standardizes the SVG code for all of our icons.
+   - It should be a no-op for icons that have not changed.
+1. From the repo root, copy the icons into the docs site with `yarn copy-assets`.
 
 1. If adding a new icon or updating any names, update the tables on both
    [`packages/cfpb-design-system/src/components/cfpb-icons/usage.md`](tree/main/packages/cfpb-design-system/src/components/cfpb-icons/usage.md)

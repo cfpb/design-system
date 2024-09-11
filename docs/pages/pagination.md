@@ -103,9 +103,9 @@ variation_groups:
       content, along with an inline form (input field, submit button) to enable
       users to navigate to specific pages by number.
 guidelines: >-
-  * Display 25 results per page. 
+  * Display 25 results per page.
 
-  * If content is sorted by date, label the navigation buttons "Older" and "Newer"; otherwise, label the buttons "Previous" and "Next". 
+  * If content is sorted by date, label the navigation buttons "Older" and "Newer"; otherwise, label the buttons "Previous" and "Next".
 
   * Tables with over 20 rows can be paired with pagination.
 eyebrow: Components
@@ -124,9 +124,7 @@ behavior: >-
 
   | ![Pagination at breakpoints above 600 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.03-pm.png) | ![Pagination at breakpoints below 601 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.30-pm.png) |
 accessibility: ''
-related_items: "* [Pagination
-  variables](https://cfpb.github.io/design-system/development/variables#paginat\
-  ion-1)"
+related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
 research: ''
 ---

@@ -47,7 +47,7 @@ variation_groups:
           #### When other options are better
 
 
-          * When content doesn’t require imagery 
+          * When content doesn’t require imagery
 
           * When there are multiple paragraphs of copy
         variation_specs: >-
@@ -56,7 +56,7 @@ variation_groups:
           unit group: specs for 25/75 image and text")
 
 
-          * Imagery: 1:1 ratio, may be illustration or photography 
+          * Imagery: 1:1 ratio, may be illustration or photography
 
           * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
 
@@ -90,7 +90,7 @@ variation_groups:
           #### When other options are better
 
 
-          * When content doesn’t require imagery 
+          * When content doesn’t require imagery
 
           * When there are multiple paragraphs of copy
         variation_specs: >-
@@ -123,13 +123,13 @@ variation_groups:
 
           * When the number of components would be better featured in multiples of 2, use the 50/50 text component instead
 
-          * When headings are too long for the narrower width, for example, when they break to 3 lines or more 
+          * When headings are too long for the narrower width, for example, when they break to 3 lines or more
 
           * When content doesn't require imagery
 
           * When there are multiple paragraphs of copy
         variation_specs: >-
-          * Imagery: 1:1 ratio, may be illustration or photography 
+          * Imagery: 1:1 ratio, may be illustration or photography
 
           * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
 
@@ -159,10 +159,10 @@ variation_groups:
 
           * When content requires imagery, use the 50/50 image and text or 25/75 image and text components
         variation_jinja_code_snippet: >-
-          File in https://github.com/cfpb/cfgov-refresh:
+          File in https://github.com/cfpb/consumerfinance.gov:
 
 
-          https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html
+          https://github.com/cfpb/consumerfinance.gov/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html
         variation_name: 50/50 text component
         variation_specs: >-
           * Headings: Use H3 or H4. Do not use both.
@@ -192,10 +192,10 @@ variation_groups:
 
           * When content requires imagery, use the 50/50 image and text or the 25/75 image and text instead
         variation_jinja_code_snippet: >-
-          File in https://github.com/cfpb/cfgov-refresh:
+          File in https://github.com/cfpb/consumerfinance.gov:
 
 
-          https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
+          https://github.com/cfpb/consumerfinance.gov/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
         variation_name: 33/33/33 text component
         variation_specs: >-
           * Headings: Use H3 or H4. Do not use both.
@@ -247,7 +247,7 @@ guidelines: >-
   #### Call to action
 
 
-  * 25/75 image and text component: 65 characters max 
+  * 25/75 image and text component: 65 characters max
 
   * 50/50 image and text component: 40 characters max
 
@@ -265,7 +265,7 @@ guidelines: >-
   ### Stylistic guidelines
 
 
-  * If an info unit group contains both an image and a call to action link, you have the option of having the image link to the call to action URL. If there are multiple call to action links, the image will link to the first link. 
+  * If an info unit group contains both an image and a call to action link, you have the option of having the image link to the call to action URL. If there are multiple call to action links, the image will link to the first link.
 
 
 

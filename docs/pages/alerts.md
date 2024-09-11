@@ -237,9 +237,7 @@ accessibility: >-
   * Place form-level alerts below the form title.
 
   * In general, use distinct icons, contrasting colors, prominent placement, and text to indicate errors. Don’t rely on just one method, as users can have many different accessibility needs (color blind users, visually impaired users, users with motor control issues, etc.).
-related_items: "* [Notifications
-  variables](https://cfpb.github.io/design-system/development/variables#notific\
-  ations)"
+related_items: ''
 redirect_from:
   - /notifications
   - /components/notifications

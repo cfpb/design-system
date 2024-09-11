@@ -502,9 +502,7 @@ use_cases: >-
 behavior: ''
 accessibility: Remember to always use headers (that is, `<th>` elements) for all
   data tables to make tabular data accessible.
-related_items: "* [Tables
-  variables](https://cfpb.github.io/design-system/development/variables#tables-\
-  1)"
+related_items: ''
 last_updated: 2019-08-30T15:18:28.960Z
 research: ''
 ---

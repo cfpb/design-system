@@ -117,7 +117,7 @@ description: >-
 
   ### Setup and contribution
 
-  <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be integrated into your project. <a href="https://cfpb.github.io/design-system/getting-started/integrating-the-design-system-into-your-project">Integrate the Design System into your project</a>.</p>
+  <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be integrated into your project. <a href="https://cfpb.github.io/design-system/development/integrating-the-design-system-into-your-project">Integrate the Design System into your project</a>.</p>
 
   <p>
 

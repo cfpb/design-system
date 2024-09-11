@@ -2,56 +2,9 @@
 
 The Consumer Financial Protection Bureau's user interface framework and documentation.
 
-|                                                                  atomic-component                                                                   |                                                              buttons                                                              |                                                            core                                                             |                                                                expandables                                                                |                                                             forms                                                             |                                                            grid                                                             |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
-| [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-atomic-component.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-atomic-component) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-buttons.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-buttons) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-core.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-core) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-expandables.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-expandables) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-forms.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-forms) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-grid.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-grid) |
+## Getting Started
 
-|                                                             icons                                                             |                                                             layout                                                              |                                                                 notifications                                                                 |                                                               pagination                                                                |                                                             tables                                                              |                                                               typography                                                                |
-| :---------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
-| [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-icons.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-icons) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-layout.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-layout) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-notifications.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-notifications) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-pagination.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-pagination) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-tables.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-tables) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-typography.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-typography) |
-
-## Installation
-
-Install components using yarn or npm:
-
-```sh
-yarn add @cfpb/cfpb-buttons
-# or
-npm install @cfpb/cfpb-buttons
-```
-
-Or you can install all components at once:
-
-```sh
-yarn add @cfpb/cfpb-design-system
-# or
-npm install @cfpb/cfpb-design-system
-```
-
-## Usage
-
-Import individual SCSS stylesheets or the entire design system into your project:
-
-```scss
-@import '@cfpb/cfpb-buttons/src/cfpb-buttons.scss';
-@import '@cfpb/cfpb-typography/src/cfpb-typography.scss';
-// or
-@import '@cfpb/cfpb-design-system/src/cfpb-design-system.scss';
-
-// the rest of your stylesheet...
-```
-
-Components with JavaScript can also be imported:
-
-```js
-import { Expandable } from '@cfpb/cfpb-expandables';
-
-Expandable.init(document.querySelector('#container'));
-```
-
-> NOTE: Be sure to run the SCSS files through
-> [Autoprefixer](https://github.com/postcss/autoprefixer),
-> or your compiled CSS might not work perfectly in older browsers.
+Visit the [getting started section](https://cfpb.github.io/design-system/development/getting-started) in the Design System documentation.
 
 ## Documentation
 
@@ -91,7 +44,7 @@ yarn start
 Visit http://localhost:4000/design-system/ to view the site.
 Editing a page locally will change your local files.
 
-To run accessibility tests against your local files:
+To run Google Lighthouse accessibility tests against your local files:
 
 ```shell
 yarn a11y

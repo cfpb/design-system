@@ -408,9 +408,7 @@ accessibility: The `find` function will not discover information hidden by a
   collapsed expandable, so use good judgement in deciding which information to
   hide. Non-javaScript users should default to the expanded state. Otherwise,
   the default state (expanded or collapsed) will depend on the circumstance.
-related_items: "* [Expandables
-  variables](https://cfpb.github.io/design-system/development/variables#expanda\
-  bles) "
+related_items: ''
 last_updated: 2019-12-16T18:43:19.784Z
 research: ''
 ---

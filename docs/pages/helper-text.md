@@ -71,8 +71,6 @@ related_items: >-
   * [Labels and
   legends](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-  * [Color variables for helper text](https://cfpb.github.io/design-system/development/variables#forms)
-
   * [Designing forms](https://cfpb.github.io/design-system/patterns/designing-forms)
 last_updated: 2020-01-28T15:55:47.394Z
 ---

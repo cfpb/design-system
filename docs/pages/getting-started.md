@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 layout: variation
-section: getting-started
+section: development
 description: >-
   ## For getting up and running with the CFPB Design System
 

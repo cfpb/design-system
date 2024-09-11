@@ -163,9 +163,7 @@ accessibility: >-
 
 
   Users of screen readers use the tab key to move focus from one form control to another. Make sure that tab focus order reflects the way you would like users to navigate through the form. Consider whether tabs should move a user down or across the page.
-related_items: "* [Text input
-  variables](https://cfpb.github.io/design-system/development/variables#forms-1\
-  )"
+related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
 research: ''
 ---

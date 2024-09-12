@@ -145,7 +145,6 @@ a.a-tag-filter {
     display: flex;
     gap: math.div(15px, $btn-font-size) + em;
     flex-wrap: wrap;
-    inline-size: min-content;
   }
 }
 

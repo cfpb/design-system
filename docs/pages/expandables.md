@@ -47,7 +47,7 @@ variation_groups:
           #### toggleTargetState( element )
 
 
-          ```
+          ```js
 
           const element = document.querySelector( '.o-expandable__header' );
 
@@ -67,7 +67,7 @@ variation_groups:
           #### getLabelText()
 
 
-          ```
+          ```js
 
           expandables[0].getLabelText();
 

@@ -12,7 +12,7 @@ variation_groups:
       converts them to the corresponding min or max width media query.
 
 
-      ```
+      ```scss
 
       @include respond-to-min(vars-breakpoints.@bp) {
           @rules
@@ -27,7 +27,7 @@ variation_groups:
 
       Ex.
 
-      ```
+      ```scss
 
       // Tablet and above.
       @include respond-to-min(vars-breakpoints.@bp-sm-min) {
@@ -52,7 +52,7 @@ variation_groups:
       This mixin takes both min and max px values and a set of style rules and
       converts them to the corresponding min and max media query.
 
-      ```
+      ```scss
 
       @include respond-to-range(@bp1, @bp2) {
         @rules
@@ -62,7 +62,7 @@ variation_groups:
 
       Ex.
 
-      ```
+      ```scss
       // Tablet only.
       @include respond-to-range(@bp-sm-min, @bp-sm-max) {
           .title {
@@ -87,7 +87,7 @@ variation_groups:
 
       This mixin allows us to easily write styles that target both `@media print` and `.print`.
 
-      ```
+      ```scss
 
       // The following LESS...
 

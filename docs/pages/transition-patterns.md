@@ -47,7 +47,7 @@ variation_groups:
           MoveTransition instance in JavaScript and calling its methods:
 
 
-          ```
+          ```js
 
           // Create reference to an element in the DOM.
 
@@ -111,7 +111,7 @@ variation_groups:
           new AlphaTransition instance in JavaScript and calling its methods:
 
 
-          ```
+          ```js
 
           // Create reference to an element in the DOM.
 
@@ -183,7 +183,7 @@ variation_groups:
           MaxHeightTransition instance in JavaScript and calling its methods:
 
 
-          ```
+          ```js
 
           // Create reference to an element in the DOM.
 
@@ -300,7 +300,7 @@ variation_groups:
           For example, at its most basic, the structure is:
 
 
-          ```
+          ```html
 
           <div data-js-hook="behavior_flyout-menu">
             <button data-js-hook="behavior_flyout-menu_trigger">
@@ -320,7 +320,7 @@ variation_groups:
           The initialization would then look like:
 
 
-          ```\<div
+          ```js
 
           // Create reference to the container and content element in the DOM.
 

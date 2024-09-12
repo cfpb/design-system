@@ -27,7 +27,7 @@ variation_groups:
 
 
 
-          ```
+          ```html
 
           <html class="no-js">
 
@@ -37,7 +37,7 @@ variation_groups:
           2. Add a script to remove the no-js class after confirming JavaScript is available
 
 
-          ```
+          ```html
 
           <script>
                 // Confirm availability of JavaScript and remove no-js class from html
@@ -50,7 +50,7 @@ variation_groups:
           3. Add the utility class to the element you want to hide
 
 
-          ```
+          ```html
 
           <div class="u-js-only"></div>
 
@@ -81,7 +81,7 @@ variation_groups:
           For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the `u-visually-hidden` class.
 
 
-          ```
+          ```html
 
           <h1>
               <a href="#">
@@ -103,14 +103,14 @@ variation_groups:
         variation_description: |-
           _DEPRECATED._ Identical to `display: inline-block.`
 
-          ```
+          ```html
           <div class="u-inline-block"></div>
           ```
         variation_name: '"Inline block" helper class [DEPRECATED]'
       - variation_code_snippet: ''
         variation_name: '"Float right" helper class'
         variation_description: |-
-          ```
+          ```html
           <div class="u-right"></div>
           ```
       - variation_code_snippet: >-
@@ -391,7 +391,7 @@ variation_groups:
           `.u-small-text(@context)`
 
 
-          ```
+          ```js
 
           // Ex.
 

@@ -106,7 +106,7 @@ variation_groups:
 
           #### Sass mixin
 
-          ```
+          ```scss
           @include u-grid-wrapper( @grid_wrapper-width: @grid_wrapper-width )
           ```
 
@@ -115,7 +115,7 @@ variation_groups:
 
           #### Example
 
-          ```
+          ```scss
           .main-wrapper {
               @include u-grid-wrapper();
           }
@@ -135,7 +135,7 @@ variation_groups:
           #### Mixin
 
 
-          ```
+          ```scss
 
           .u-grid-column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
 
@@ -158,7 +158,7 @@ variation_groups:
 
 
 
-          ```
+          ```scss
 
           .main-wrapper {
               @include u-grid-wrapper();
@@ -226,7 +226,7 @@ variation_groups:
           #### Mixin
 
 
-          ```
+          ```scss
 
           .u-grid-nested-col-group()
 
@@ -236,7 +236,7 @@ variation_groups:
           #### Usage
 
 
-          ```
+          ```scss
 
           .main-wrapper {
               @include u-grid-wrapper();
@@ -347,7 +347,7 @@ variation_groups:
       to your column wrappers, like this:
 
 
-      ```
+      ```scss
 
       <div class="col-half"> … </div>
 
@@ -361,7 +361,7 @@ variation_groups:
       and apply the mixins to those semantic classes, like this:
 
 
-      ```
+      ```scss
 
       <div class="description"> … </div>
 
@@ -370,7 +370,7 @@ variation_groups:
       ```
 
 
-      ```
+      ```scss
 
       .description,
 

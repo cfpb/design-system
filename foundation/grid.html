@@ -584,21 +584,21 @@ layout to your content without needing to use non-semantic grid classes.</p>
 <p>For example, when creating a half-and-half layout, instead of applying classes
 to your column wrappers, like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="col-half"&gt; … &lt;/div&gt;
-&lt;div class="col-half"&gt; … &lt;/div&gt;
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s2">"col-half"</span><span class="o">&gt;</span> <span class="err">…</span> <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s2">"col-half"</span><span class="o">&gt;</span> <span class="err">…</span> <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
 </code></pre></div></div>
 
 <p>You can give your wrappers semantic class names that describe their content,
 and apply the mixins to those semantic classes, like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="description"&gt; … &lt;/div&gt;
-&lt;div class="illustration"&gt; … &lt;/div&gt;
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s2">"description"</span><span class="o">&gt;</span> <span class="err">…</span> <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s2">"illustration"</span><span class="o">&gt;</span> <span class="err">…</span> <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.description,
-.illustration {
-    .u-grid-column(1, 2);
-}
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.description</span><span class="o">,</span>
+<span class="nc">.illustration</span> <span class="p">{</span>
+    <span class="nc">.u-grid-column</span><span class="o">(</span><span class="nt">1</span><span class="o">,</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>Read on for more details on the variables and mixins this component provides.</p>
@@ -638,7 +638,7 @@ and outside left/right padding of ½ the gutter width on each side.</p>
 
 <h4 id="sass-mixin">Sass mixin</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@include u-grid-wrapper( @grid_wrapper-width: @grid_wrapper-width )
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">u-grid-wrapper</span><span class="p">(</span> <span class="o">@</span><span class="n">grid_wrapper-width</span><span class="o">:</span> <span class="o">@</span><span class="n">grid_wrapper-width</span> <span class="p">)</span>
 </code></pre></div></div>
 
 <p>You can create a wrapper with max-width other than the default
@@ -646,12 +646,12 @@ by passing a pixel value into the mixin.</p>
 
 <h4 id="example">Example</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.main-wrapper {
-    @include u-grid-wrapper();
-}
-.wide-wrapper {
-    @include u-grid-wrapper( 1900px );
-}
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.main-wrapper</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">u-grid-wrapper</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nc">.wide-wrapper</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">u-grid-wrapper</span><span class="p">(</span> <span class="m">1900px</span> <span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
             </div>
@@ -738,7 +738,7 @@ by passing a pixel value into the mixin.</p>
             <div class="m-variation__description">
                 <h4 id="mixin">Mixin</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.u-grid-column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">.</span><span class="na">u-grid-column</span><span class="err">( @</span><span class="nl">columns</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span> <span class="k">@total</span><span class="nd">:</span> <span class="o">@</span><span class="nt">grid_total-columns</span><span class="p">;</span> <span class="k">@prefix</span><span class="nd">:</span> <span class="nt">0</span><span class="p">;</span> <span class="k">@suffix</span><span class="nd">:</span> <span class="nt">0</span> <span class="o">)</span>
 </code></pre></div></div>
 
 <p>Create a grid column that is <code class="language-plaintext highlighter-rouge">@columns</code> wide given <code class="language-plaintext highlighter-rouge">@total</code> total grid columns.</p>
@@ -750,16 +750,16 @@ by passing a pixel value into the mixin.</p>
 so if you want a column to have a background or border, you’ll need to
 add a wrapper just inside the column to be styled that way.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.main-wrapper {
-    @include u-grid-wrapper();
-}
-.half {
-    .u-grid-column(1, 2);
-}
-.styled {
-    border: 1px solid #999;
-    background: #EEE;
-}
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.main-wrapper</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">u-grid-wrapper</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nc">.half</span> <span class="p">{</span>
+    <span class="nc">.u-grid-column</span><span class="o">(</span><span class="nt">1</span><span class="o">,</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.styled</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="mh">#999</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="mh">#EEE</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p><strong>NOTE:</strong> cf-grid does not have a “row” concept.
@@ -789,15 +789,15 @@ cf-grid columns will automatically stack into two rows of 12.</p>
             
 
             <div class="a-toggle__code">
-                <button href="#details-columns-mixin-u-grid-column-colu-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-columns-mixin-u-grid-column-colu-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-columns-mixin-scss-u-grid-column-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-columns-mixin-scss-u-grid-column-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-columns-mixin-u-grid-column-colu-2">
+            <div class="m-tabs u-hidden" id="details-columns-mixin-scss-u-grid-column-2">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-columns-mixin-u-grid-column-colu-html-code-snippet-2">
+                        <a class="m-tabs__tab" href="#details-columns-mixin-scss-u-grid-column-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -809,7 +809,7 @@ cf-grid columns will automatically stack into two rows of 12.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-columns-mixin-u-grid-column-colu-html-code-snippet-2">
+                <section class="m-tabs__panel" id="details-columns-mixin-scss-u-grid-column-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -872,20 +872,20 @@ without having to deal with the first and last columns of each row.</p>
 
 <h4 id="mixin">Mixin</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.u-grid-nested-col-group()
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.u-grid-nested-col-group</span><span class="o">()</span>
 </code></pre></div></div>
 
 <h4 id="usage">Usage</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.main-wrapper {
-    @include u-grid-wrapper();
-}
-.nested {
-    .u-grid-nested-col-group();
-}
-.half {
-    .u-grid-column(1, 2);
-}
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.main-wrapper</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">u-grid-wrapper</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nc">.nested</span> <span class="p">{</span>
+    <span class="nc">.u-grid-nested-col-group</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.half</span> <span class="p">{</span>
+    <span class="nc">.u-grid-column</span><span class="o">(</span><span class="nt">1</span><span class="o">,</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
             </div>
@@ -1303,8 +1303,8 @@ without having to deal with the first and last columns of each row.</p>
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/grid.md">
-                            <time datetime="2024-09-12 10:01:55 -0400">
-                                10:01:55 AM Sep 12, 2024
+                            <time datetime="2024-09-12 18:20:59 -0400">
+                                 6:20:59 PM Sep 12, 2024
                             </time>
                         </a>
                     </section>

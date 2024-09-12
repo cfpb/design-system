@@ -301,28 +301,28 @@
         <div class="o-variation-group__description">
             <p>These mixins take a px value breakpoint and set of style rules and converts them to the corresponding min or max width media query.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@include respond-to-min(vars-breakpoints.@bp) {
-    @rules
-}
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">respond-to-min</span><span class="p">(</span><span class="n">vars-breakpoints</span><span class="o">.@</span><span class="n">bp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">@rules</span>
+<span class="p">}</span>
 
-@include respond-to-max(vars-breakpoints.@bp) {
-    @rules
-}
+<span class="k">@include</span> <span class="nd">respond-to-max</span><span class="p">(</span><span class="n">vars-breakpoints</span><span class="o">.@</span><span class="n">bp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">@rules</span>
+<span class="p">}</span>
 </code></pre></div></div>
 <p>Ex.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Tablet and above. @include respond-to-min(vars-breakpoints.@bp-sm-min) {
-    .title {
-        font-size: 2em;
-    }
-}
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Tablet and above. @include respond-to-min(vars-breakpoints.@bp-sm-min) {</span>
+    <span class="nc">.title</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-// Compiles to
+<span class="c1">// Compiles to</span>
 
-@media only all and (min-width: 37.5625em) {
-    .title {
-        font-size: 2em;
-    }
-}
+<span class="k">@media</span> <span class="n">only</span> <span class="n">all</span> <span class="nf">and</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">37</span><span class="mi">.5625em</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nc">.title</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
         </div>
@@ -342,12 +342,12 @@
         
         <div class="o-variation-group__description">
             <p>This mixin takes both min and max px values and a set of style rules and converts them to the corresponding min and max media query.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@include respond-to-range(@bp1, @bp2) {
-  @rules
-}
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">respond-to-range</span><span class="p">(</span><span class="o">@</span><span class="n">bp1</span><span class="o">,</span> <span class="o">@</span><span class="n">bp2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@rules</span>
+<span class="p">}</span>
 </code></pre></div></div>
 <p>Ex.
-``` // Tablet only. @include respond-to-range(@bp-sm-min, @bp-sm-max) {
+```scss // Tablet only. @include respond-to-range(@bp-sm-min, @bp-sm-max) {
     .title {
         font-size: 2em;
     }
@@ -380,26 +380,26 @@
         <div class="o-variation-group__description">
             
 <p>This mixin allows us to easily write styles that target both <code class="language-plaintext highlighter-rouge">@media print</code> and <code class="language-plaintext highlighter-rouge">.print</code>.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The following LESS...
-.example {
-    color: var(--gray);
-    @include respond-to-print() {
-        color: var(--black);
-    }
-}
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// The following LESS...</span>
+<span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="no">gray</span><span class="p">);</span>
+    <span class="k">@include</span> <span class="nd">respond-to-print</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="no">black</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-// ...Exports to
-.example {
-    color: #75787B;
-}
-@media print {
-    .example {
-        color: #101820;
-    }
-}
-.print .example {
-    color: #101820;
-}
+<span class="c1">// ...Exports to</span>
+<span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="mh">#75787B</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="n">print</span> <span class="p">{</span>
+    <span class="nc">.example</span> <span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="mh">#101820</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nc">.print</span> <span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="mh">#101820</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
         </div>
@@ -432,8 +432,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/media-queries.md">
-                            <time datetime="2024-09-12 10:01:55 -0400">
-                                10:01:55 AM Sep 12, 2024
+                            <time datetime="2024-09-12 18:20:59 -0400">
+                                 6:20:59 PM Sep 12, 2024
                             </time>
                         </a>
                     </section>

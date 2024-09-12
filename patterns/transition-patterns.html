@@ -439,17 +439,17 @@
                         <div style="padding:40px">
                             <p>The move transition is added to an element by creating a new MoveTransition instance in JavaScript and calling its methods:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create reference to an element in the DOM.
-const element = document.querySelector( '.example-box' );
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create reference to an element in the DOM.</span>
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span> <span class="dl">'</span><span class="s1">.example-box</span><span class="dl">'</span> <span class="p">);</span>
 
-// Create a new transition instance and pass in the element reference.
-const transition = new MoveTransition( element );
+<span class="c1">// Create a new transition instance and pass in the element reference.</span>
+<span class="kd">const</span> <span class="nx">transition</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MoveTransition</span><span class="p">(</span> <span class="nx">element</span> <span class="p">);</span>
 
-// Initialize the transition.
-transition.init();
+<span class="c1">// Initialize the transition.</span>
+<span class="nx">transition</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 
-// Call methods on the transition.
-transition.moveRight();
+<span class="c1">// Call methods on the transition.</span>
+<span class="nx">transition</span><span class="p">.</span><span class="nx">moveRight</span><span class="p">();</span>
 </code></pre></div></div>
 
                         </div>
@@ -578,17 +578,17 @@ transition.moveRight();
                         <div style="padding:40px">
                             <p>The alpha (opacity) transition is added to an element by creating a new AlphaTransition instance in JavaScript and calling its methods:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create reference to an element in the DOM.
-const element = document.querySelector( '.example-box' );
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create reference to an element in the DOM.</span>
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span> <span class="dl">'</span><span class="s1">.example-box</span><span class="dl">'</span> <span class="p">);</span>
 
-// Create a new transition instance and pass in the element reference.
-const transition = new AlphaTransition( element );
+<span class="c1">// Create a new transition instance and pass in the element reference.</span>
+<span class="kd">const</span> <span class="nx">transition</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AlphaTransition</span><span class="p">(</span> <span class="nx">element</span> <span class="p">);</span>
 
-// Initialize the transition.
-transition.init();
+<span class="c1">// Initialize the transition.</span>
+<span class="nx">transition</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 
-// Call methods on the transition.
-transition.fadeOut();
+<span class="c1">// Call methods on the transition.</span>
+<span class="nx">transition</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">();</span>
 </code></pre></div></div>
 
                         </div>
@@ -727,17 +727,17 @@ transition.fadeOut();
                         <div style="padding:40px">
                             <p>The max-height transition is added to an element by creating a new MaxHeightTransition instance in JavaScript and calling its methods:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create reference to an element in the DOM.
-const element = document.querySelector( '.example-box' );
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create reference to an element in the DOM.</span>
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span> <span class="dl">'</span><span class="s1">.example-box</span><span class="dl">'</span> <span class="p">);</span>
 
-// Create a new transition instance and pass in the element reference.
-const transition = new MaxHeightTransition( element );
+<span class="c1">// Create a new transition instance and pass in the element reference.</span>
+<span class="kd">const</span> <span class="nx">transition</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MaxHeightTransition</span><span class="p">(</span> <span class="nx">element</span> <span class="p">);</span>
 
-// Initialize the transition.
-transition.init();
+<span class="c1">// Initialize the transition.</span>
+<span class="nx">transition</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 
-// Call methods on the transition.
-transition.maxHeightSummary();
+<span class="c1">// Call methods on the transition.</span>
+<span class="nx">transition</span><span class="p">.</span><span class="nx">maxHeightSummary</span><span class="p">();</span>
 </code></pre></div></div>
 
                         </div>
@@ -921,37 +921,37 @@ The structure is:
 <p>The second trigger is optional and may be used for a button in the content area, which may obscure the first trigger. The flyout can be triggered through a click of either trigger.
 For example, at its most basic, the structure is:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div data-js-hook="behavior_flyout-menu"&gt;
-  &lt;button data-js-hook="behavior_flyout-menu_trigger"&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">data-js-hook=</span><span class="s">"behavior_flyout-menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">data-js-hook=</span><span class="s">"behavior_flyout-menu_trigger"</span><span class="nt">&gt;</span>
     Click me!
-  &lt;/button&gt;
-  &lt;div data-js-hook="behavior_flyout-menu_content"&gt;
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-js-hook=</span><span class="s">"behavior_flyout-menu_content"</span><span class="nt">&gt;</span>
     Show this content
-  &lt;/div&gt;
-&lt;/div&gt;
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 
 <p>The <code class="language-plaintext highlighter-rouge">data-js-hook</code> attributes can be hardcoded in markup, or added via a JavaScript initialization script.</p>
 
 <p>The initialization would then look like:</p>
 
-<pre><code class="language-\&lt;div">// Create reference to the container and content element in the DOM.
-const elementDom = document.querySelector( [data-js-hook="behavior_flyout-menu"] ); const elementContentDom = elementDom.querySelector( [data-js-hook="behavior_flyout-menu_content"] );
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create reference to the container and content element in the DOM.</span>
+<span class="kd">const</span> <span class="nx">elementDom</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span> <span class="p">[</span><span class="nx">data</span><span class="o">-</span><span class="nx">js</span><span class="o">-</span><span class="nx">hook</span><span class="o">=</span><span class="dl">"</span><span class="s2">behavior_flyout-menu</span><span class="dl">"</span><span class="p">]</span> <span class="p">);</span> <span class="kd">const</span> <span class="nx">elementContentDom</span> <span class="o">=</span> <span class="nx">elementDom</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span> <span class="p">[</span><span class="nx">data</span><span class="o">-</span><span class="nx">js</span><span class="o">-</span><span class="nx">hook</span><span class="o">=</span><span class="dl">"</span><span class="s2">behavior_flyout-menu_content</span><span class="dl">"</span><span class="p">]</span> <span class="p">);</span>
 
-// Create a new transition instance and pass in the content area reference.
-const transition = new MaxHeightTransition(elementContentDom);
+<span class="c1">// Create a new transition instance and pass in the content area reference.</span>
+<span class="kd">const</span> <span class="nx">transition</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MaxHeightTransition</span><span class="p">(</span><span class="nx">elementContentDom</span><span class="p">);</span>
 
-// Initialize the transition.
-transition.init();
+<span class="c1">// Initialize the transition.</span>
+<span class="nx">transition</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 
-// Create a new FlyoutMenu instance and pass in the container reference.
-const flyout = new FlyoutMenu(elementDom);
+<span class="c1">// Create a new FlyoutMenu instance and pass in the container reference.</span>
+<span class="kd">const</span> <span class="nx">flyout</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FlyoutMenu</span><span class="p">(</span><span class="nx">elementDom</span><span class="p">);</span>
 
-// Set the expand/collapse transitions.
-flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
-// Initialize the flyout.
-flyout.init();
-</code></pre>
+<span class="c1">// Set the expand/collapse transitions.</span>
+<span class="nx">flyout</span><span class="p">.</span><span class="nx">setTransition</span><span class="p">(</span><span class="nx">transition</span><span class="p">,</span> <span class="nx">transition</span><span class="p">.</span><span class="nx">maxHeightZero</span><span class="p">,</span> <span class="nx">transition</span><span class="p">.</span><span class="nx">maxHeightDefault</span><span class="p">);</span>
+<span class="c1">// Initialize the flyout.</span>
+<span class="nx">flyout</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+</code></pre></div></div>
 
                         </div>
                     </div>
@@ -992,8 +992,8 @@ flyout.init();
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/transition-patterns.md">
-                            <time datetime="2024-09-12 10:01:55 -0400">
-                                10:01:55 AM Sep 12, 2024
+                            <time datetime="2024-09-12 18:20:59 -0400">
+                                 6:20:59 PM Sep 12, 2024
                             </time>
                         </a>
                     </section>

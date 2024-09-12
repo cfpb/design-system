@@ -37,6 +37,7 @@
 
   .cf-icon-svg {
     pointer-events: none;
+
     // Prevent flexbox from squishing icon when tag text is long.
     flex: none;
   }

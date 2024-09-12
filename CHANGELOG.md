@@ -1,4 +1,15 @@
 
+## v3.1.9 (2024-09-12)
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2051](https://github.com/cfpb/design-system/pull/2051) Filter tag tweaks ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.1.8 (2024-09-11)
 
 #### Enhancement

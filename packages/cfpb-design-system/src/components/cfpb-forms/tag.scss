@@ -18,6 +18,8 @@
   background-color: var(--teal-20);
   border-radius: math.div(3px, $base-font-size-px) + rem;
   color: var(--black);
+  text-align: left;
+  min-width: fit-content;
 
   &:hover {
     background-color: var(--teal-40);
@@ -35,6 +37,8 @@
 
   .cf-icon-svg {
     pointer-events: none;
+    // Prevent flexbox from squishing icon when tag text is long.
+    flex: none;
   }
 
   // If the contents are wrapped in a label, negate the label's display.
@@ -122,6 +126,7 @@ a.a-tag-filter {
 
   li {
     margin-bottom: 0;
+    display: contents;
   }
 
   // Tablet and above.

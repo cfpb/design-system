@@ -603,14 +603,6 @@ and apply the mixins to those semantic classes, like this:</p>
 
 <p>Read on for more details on the variables and mixins this component provides.</p>
 
-<blockquote>
-  <p>NOTE: If you use <code class="language-plaintext highlighter-rouge">cf-grid.scss</code> directly,
-  be sure to run the file through
-  <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>,
-  or your compiled Capital Framework CSS will
-  not work perfectly in older browsers.</p>
-</blockquote>
-
         </div>
         
 
@@ -738,15 +730,11 @@ by passing a pixel value into the mixin.</p>
             <div class="m-variation__description">
                 <h4 id="mixin">Mixin</h4>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">.</span><span class="na">u-grid-column</span><span class="err">( @</span><span class="nl">columns</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span> <span class="k">@total</span><span class="nd">:</span> <span class="o">@</span><span class="nt">grid_total-columns</span><span class="p">;</span> <span class="k">@prefix</span><span class="nd">:</span> <span class="nt">0</span><span class="p">;</span> <span class="k">@suffix</span><span class="nd">:</span> <span class="nt">0</span> <span class="o">)</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">u-grid-column</span><span class="p">(</span> <span class="nv">$columns</span><span class="o">:</span> <span class="m">1</span><span class="o">,</span> <span class="nv">$total</span><span class="o">:</span> <span class="nv">$grid-total-columns</span> <span class="p">)</span>
 </code></pre></div></div>
 
-<p>Create a grid column that is <code class="language-plaintext highlighter-rouge">@columns</code> wide given <code class="language-plaintext highlighter-rouge">@total</code> total grid columns.</p>
-
-<p>Optionally give the column left or right padding with the
-<code class="language-plaintext highlighter-rouge">@prefix</code> and <code class="language-plaintext highlighter-rouge">@suffix</code> parameters.</p>
-
-<p>Grid columns use transparent borders to create the gutters of the grid,
+<p>Create a grid column that is <code class="language-plaintext highlighter-rouge">$columns</code> wide given <code class="language-plaintext highlighter-rouge">$total</code> total grid columns.
+Grid columns use transparent borders to create the gutters of the grid,
 so if you want a column to have a background or border, you’ll need to
 add a wrapper just inside the column to be styled that way.</p>
 
@@ -789,15 +777,15 @@ cf-grid columns will automatically stack into two rows of 12.</p>
             
 
             <div class="a-toggle__code">
-                <button href="#details-columns-mixin-scss-u-grid-column-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-columns-mixin-scss-u-grid-column-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-columns-mixin-scss-include-u-gri-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-columns-mixin-scss-include-u-gri-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-columns-mixin-scss-u-grid-column-2">
+            <div class="m-tabs u-hidden" id="details-columns-mixin-scss-include-u-gri-2">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-columns-mixin-scss-u-grid-column-html-code-snippet-2">
+                        <a class="m-tabs__tab" href="#details-columns-mixin-scss-include-u-gri-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -809,7 +797,7 @@ cf-grid columns will automatically stack into two rows of 12.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-columns-mixin-scss-u-grid-column-html-code-snippet-2">
+                <section class="m-tabs__panel" id="details-columns-mixin-scss-include-u-gri-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1303,8 +1291,8 @@ without having to deal with the first and last columns of each row.</p>
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/grid.md">
-                            <time datetime="2024-09-12 18:20:59 -0400">
-                                 6:20:59 PM Sep 12, 2024
+                            <time datetime="2024-09-13 09:42:48 -0400">
+                                 9:42:48 AM Sep 13, 2024
                             </time>
                         </a>
                     </section>

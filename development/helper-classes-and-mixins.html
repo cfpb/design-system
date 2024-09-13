@@ -316,27 +316,27 @@
             <div class="m-variation__description">
                 <p>Hide an element when JavaScript isn’t available. Requires a small script in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> of your <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> document that removes a <code class="language-plaintext highlighter-rouge">.no-js</code> class.</p>
 
-<ol>
+<ul>
   <li>Add a <code class="language-plaintext highlighter-rouge">no-js</code> class to the html</li>
-</ol>
+</ul>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html</span> <span class="na">class=</span><span class="s">"no-js"</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 
-<ol>
+<ul>
   <li>Add a script to remove the no-js class after confirming JavaScript is available</li>
-</ol>
+</ul>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
-      <span class="c1">// Confirm availability of JavaScript and remove no-js class from html</span>
-      <span class="kd">var</span> <span class="nx">docElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">;</span>
-      <span class="nx">docElement</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">docElement</span><span class="p">.</span><span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(</span><span class="sr">^|</span><span class="se">\s)</span><span class="sr">no-js</span><span class="se">(\s</span><span class="sr">|$</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span> <span class="dl">'</span><span class="s1">$1$2</span><span class="dl">'</span><span class="p">);</span>
-  <span class="nt">&lt;/script&gt;</span>
+    <span class="c1">// Confirm availability of JavaScript and remove no-js class from html</span>
+    <span class="kd">var</span> <span class="nx">docElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">;</span>
+    <span class="nx">docElement</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">docElement</span><span class="p">.</span><span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(</span><span class="sr">^|</span><span class="se">\s)</span><span class="sr">no-js</span><span class="se">(\s</span><span class="sr">|$</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span> <span class="dl">'</span><span class="s1">$1$2</span><span class="dl">'</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 
-<ol>
+<ul>
   <li>Add the utility class to the element you want to hide</li>
-</ol>
+</ul>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-js-only"</span><span class="nt">&gt;&lt;/div&gt;</span>
 </code></pre></div></div>
@@ -1261,7 +1261,13 @@
                 <!--NOTE: Inline style properties for demonstration only-->
 
 <h4>16:9 flexible video player</h4>
-<p>To create a 16:9 flexible video player, wrap the video element in an element with <code>u-flexible-container</code> and add the <code>u-flexible-container__inner</code> to the video element.</p>
+<p>
+    To create a 16:9 flexible video player,
+    wrap the video element in an element with
+    <code>u-flexible-container</code>
+    and add the <code>u-flexible-container__inner</code>
+    to the video element.
+</p>
 <div class="u-flexible-container">
     <video class="u-flexible-container__inner" style="background:#75787B;" controls>
     </video>
@@ -1270,7 +1276,10 @@
 <br>
 
 <h4>Flexible container with background</h4>
-<p>To create a flexible container with only a background (no inner video or object element), omit the inner container.</p>
+<p>
+    To create a flexible container with only a background
+    (no inner video or object element), omit the inner container.
+</p>
 <div class="u-flexible-container" style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
             background-position: center center;
             background-repeat: no-repeat;"></div>
@@ -1278,7 +1287,10 @@
 <br>
 
 <h4>4:3 flexible video player</h4>
-<p>To create a 4:3 flexible video player, add the <code>__4_3 modifier</code> to the container.</p>
+<p>
+    To create a 4:3 flexible video player,
+    add the <code>__4_3 modifier</code> to the container.
+</p>
 <div class="u-flexible-container u-flexible-container--4-3">
     <video class="u-flexible-container__inner" style="background:#75787B;" controls>
     </video>
@@ -1321,7 +1333,13 @@
                             <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only--&gt;
 
 &lt;h4&gt;16:9 flexible video player&lt;/h4&gt;
-&lt;p&gt;To create a 16:9 flexible video player, wrap the video element in an element with &lt;code&gt;u-flexible-container&lt;/code&gt; and add the &lt;code&gt;u-flexible-container__inner&lt;/code&gt; to the video element.&lt;/p&gt;
+&lt;p&gt;
+    To create a 16:9 flexible video player,
+    wrap the video element in an element with
+    &lt;code&gt;u-flexible-container&lt;/code&gt;
+    and add the &lt;code&gt;u-flexible-container__inner&lt;/code&gt;
+    to the video element.
+&lt;/p&gt;
 &lt;div class="u-flexible-container"&gt;
     &lt;video class="u-flexible-container__inner"
           style="background:#75787B;"
@@ -1332,7 +1350,10 @@
 &lt;br /&gt;
 
 &lt;h4&gt;Flexible container with background&lt;/h4&gt;
-&lt;p&gt;To create a flexible container with only a background (no inner video or object element), omit the inner container.&lt;/p&gt;
+&lt;p&gt;
+    To create a flexible container with only a background
+    (no inner video or object element), omit the inner container.
+&lt;/p&gt;
 &lt;div class="u-flexible-container"
     style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
             background-position: center center;
@@ -1341,7 +1362,10 @@
 &lt;br /&gt;
 
 &lt;h4&gt;4:3 flexible video player&lt;/h4&gt;
-&lt;p&gt;To create a 4:3 flexible video player, add the &lt;code&gt;__4_3 modifier&lt;/code&gt; to the container.&lt;/p&gt;
+&lt;p&gt;
+    To create a 4:3 flexible video player,
+    add the &lt;code&gt;__4_3 modifier&lt;/code&gt; to the container.
+&lt;/p&gt;
 &lt;div class="u-flexible-container u-flexible-container--4-3"&gt;
     &lt;video class="u-flexible-container__inner"
           style="background:#75787B;"
@@ -1600,8 +1624,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/helper-classes-mixins.md">
-                            <time datetime="2024-09-12 18:20:59 -0400">
-                                 6:20:59 PM Sep 12, 2024
+                            <time datetime="2024-09-13 09:42:48 -0400">
+                                 9:42:48 AM Sep 13, 2024
                             </time>
                         </a>
                     </section>

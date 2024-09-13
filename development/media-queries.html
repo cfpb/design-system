@@ -309,16 +309,16 @@
     <span class="k">@rules</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<p>Ex.</p>
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Tablet and above. @include respond-to-min(vars-breakpoints.@bp-sm-min) {</span>
+<p>For example…</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Tablet and above.</span>
+<span class="k">@include</span> <span class="nd">respond-to-min</span><span class="p">(</span><span class="n">vars-breakpoints</span><span class="o">.@</span><span class="n">bp-sm-min</span><span class="p">)</span> <span class="p">{</span>
     <span class="nc">.title</span> <span class="p">{</span>
         <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="c1">// Compiles to</span>
-
-<span class="k">@media</span> <span class="n">only</span> <span class="n">all</span> <span class="nf">and</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">37</span><span class="mi">.5625em</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div></div>
+<p>…compiles to…</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@media</span> <span class="n">only</span> <span class="n">all</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">37.5625em</span><span class="p">)</span> <span class="p">{</span>
     <span class="nc">.title</span> <span class="p">{</span>
         <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
     <span class="p">}</span>
@@ -342,25 +342,30 @@
         
         <div class="o-variation-group__description">
             <p>This mixin takes both min and max px values and a set of style rules and converts them to the corresponding min and max media query.</p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">respond-to-range</span><span class="p">(</span><span class="o">@</span><span class="n">bp1</span><span class="o">,</span> <span class="o">@</span><span class="n">bp2</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">@rules</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<p>Ex.
-```scss // Tablet only. @include respond-to-range(@bp-sm-min, @bp-sm-max) {
-    .title {
-        font-size: 2em;
-    }
-}</p>
 
-<p>// Compiles to</p>
+<p>For example…</p>
 
-<p>@media only all and (min-width: 37.5625em) and (max-width: 56.25em) {
-    .title {
-        font-size: 2em;
-    }
-}
-```</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Tablet only.</span>
+<span class="k">@include</span> <span class="nd">respond-to-range</span><span class="p">(</span><span class="o">@</span><span class="n">bp-sm-min</span><span class="o">,</span> <span class="o">@</span><span class="n">bp-sm-max</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nc">.title</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>…compiles to…</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@media</span> <span class="n">only</span> <span class="n">all</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">37.5625em</span><span class="p">)</span> <span class="n">and</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">56.25em</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nc">.title</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
         </div>
         
@@ -380,25 +385,26 @@
         <div class="o-variation-group__description">
             
 <p>This mixin allows us to easily write styles that target both <code class="language-plaintext highlighter-rouge">@media print</code> and <code class="language-plaintext highlighter-rouge">.print</code>.</p>
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// The following LESS...</span>
-<span class="nc">.example</span> <span class="p">{</span>
+
+<p>The following SCSS…</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.example</span> <span class="p">{</span>
     <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="no">gray</span><span class="p">);</span>
     <span class="k">@include</span> <span class="nd">respond-to-print</span><span class="p">()</span> <span class="p">{</span>
         <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="no">black</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="c1">// ...Exports to</span>
-<span class="nc">.example</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="mh">#75787B</span><span class="p">;</span>
+</code></pre></div></div>
+<p>…compiles to…</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#75787B</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="n">print</span> <span class="p">{</span>
     <span class="nc">.example</span> <span class="p">{</span>
-        <span class="nl">color</span><span class="p">:</span> <span class="mh">#101820</span><span class="p">;</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="m">#101820</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="nc">.print</span> <span class="nc">.example</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="mh">#101820</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#101820</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -432,8 +438,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/media-queries.md">
-                            <time datetime="2024-09-12 18:20:59 -0400">
-                                 6:20:59 PM Sep 12, 2024
+                            <time datetime="2024-09-13 09:42:48 -0400">
+                                 9:42:48 AM Sep 13, 2024
                             </time>
                         </a>
                     </section>

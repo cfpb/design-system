@@ -3138,7 +3138,7 @@ Label
 &lt;div class=&quot;wide-wrapper&quot; style=&quot;background-color: #f9f9f9&quot;&gt;This container is the same except it has a wider max-width.&lt;/div&gt;`,
                 
                     'variation_name2': 'Columns',
-                    'variation_description2': "Mixin%0A%0A.u-grid-column%28+%40columns%3A+1%3B+%40total%3A+%40grid_total-columns%3B+%40prefix%3A+0%3B+%40suffix%3A+0+%29%0A%0A%0ACreate+a+grid+column+that+is+%40columns+wide+given+%40total+total+grid+columns.%0A%0AOptionally+give+the+column+left+or+right+padding+with+the%0A%40prefix+and+%40suffix+parameters.%0A%0AGrid+columns+use+transparent+borders+to+create+the+gutters+of+the+grid%2C%0Aso+if+you+want+a+column+to+have+a+background+or+border%2C+you%E2%80%99ll+need+to%0Aadd+a+wrapper+just+inside+the+column+to+be+styled+that+way.%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.half+%7B%0A++++.u-grid-column%281%2C+2%29%3B%0A%7D%0A.styled+%7B%0A++++border%3A+1px+solid+%23999%3B%0A++++background%3A+%23EEE%3B%0A%7D%0A%0A%0ANOTE%3A+cf-grid+does+not+have+a+%E2%80%9Crow%E2%80%9D+concept.%0AIf+you+have+a+12-column+grid+and+place+24+columns+inside+a+wrapper%2C%0Acf-grid+columns+will+automatically+stack+into+two+rows+of+12.%0A",
+                    'variation_description2': "Mixin%0A%0A%40include+u-grid-column%28+%24columns%3A+1%2C+%24total%3A+%24grid-total-columns+%29%0A%0A%0ACreate+a+grid+column+that+is+%24columns+wide+given+%24total+total+grid+columns.%0AGrid+columns+use+transparent+borders+to+create+the+gutters+of+the+grid%2C%0Aso+if+you+want+a+column+to+have+a+background+or+border%2C+you%E2%80%99ll+need+to%0Aadd+a+wrapper+just+inside+the+column+to+be+styled+that+way.%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.half+%7B%0A++++.u-grid-column%281%2C+2%29%3B%0A%7D%0A.styled+%7B%0A++++border%3A+1px+solid+%23999%3B%0A++++background%3A+%23EEE%3B%0A%7D%0A%0A%0ANOTE%3A+cf-grid+does+not+have+a+%E2%80%9Crow%E2%80%9D+concept.%0AIf+you+have+a+12-column+grid+and+place+24+columns+inside+a+wrapper%2C%0Acf-grid+columns+will+automatically+stack+into+two+rows+of+12.%0A",
                     'variation_code_snippet2': `&lt;div class=&quot;main-wrapper&quot;&gt;
     &lt;div class=&quot;half&quot;&gt;I am half of my parent.&lt;/div&gt;
     &lt;div class=&quot;half&quot;&gt;
@@ -3373,7 +3373,7 @@ Example of a non heading element:
 
                 
                     'variation_name1': '&quot;JS only&quot; helper class',
-                    'variation_description1': "Hide+an+element+when+JavaScript+isn%E2%80%99t+available.+Requires+a+small+script+in+the+%26lt%3Bhead%26gt%3B+of+your+%26lt%3Bhtml%26gt%3B+document+that+removes+a+.no-js+class.%0A%0A%0A++Add+a+no-js+class+to+the+html%0A%0A%0A%26lt%3Bhtml+class%3D%22no-js%22%26gt%3B%0A%0A%0A%0A++Add+a+script+to+remove+the+no-js+class+after+confirming+JavaScript+is+available%0A%0A%0A%26lt%3Bscript%26gt%3B%0A++++++%2F%2F+Confirm+availability+of+JavaScript+and+remove+no-js+class+from+html%0A++++++var+docElement+%3D+document.documentElement%3B%0A++++++docElement.className+%3D+docElement.className.replace%28%2F%28%5E%7C%5Cs%29no-js%28%5Cs%7C%24%29%2F%2C+%27%241%242%27%29%3B%0A++%26lt%3B%2Fscript%26gt%3B%0A%0A%0A%0A++Add+the+utility+class+to+the+element+you+want+to+hide%0A%0A%0A%26lt%3Bdiv+class%3D%22u-js-only%22%26gt%3B%26lt%3B%2Fdiv%26gt%3B%0A%0A",
+                    'variation_description1': "Hide+an+element+when+JavaScript+isn%E2%80%99t+available.+Requires+a+small+script+in+the+%26lt%3Bhead%26gt%3B+of+your+%26lt%3Bhtml%26gt%3B+document+that+removes+a+.no-js+class.%0A%0A%0A++Add+a+no-js+class+to+the+html%0A%0A%0A%26lt%3Bhtml+class%3D%22no-js%22%26gt%3B%0A%0A%0A%0A++Add+a+script+to+remove+the+no-js+class+after+confirming+JavaScript+is+available%0A%0A%0A%26lt%3Bscript%26gt%3B%0A++++%2F%2F+Confirm+availability+of+JavaScript+and+remove+no-js+class+from+html%0A++++var+docElement+%3D+document.documentElement%3B%0A++++docElement.className+%3D+docElement.className.replace%28%2F%28%5E%7C%5Cs%29no-js%28%5Cs%7C%24%29%2F%2C+%27%241%242%27%29%3B%0A%26lt%3B%2Fscript%26gt%3B%0A%0A%0A%0A++Add+the+utility+class+to+the+element+you+want+to+hide%0A%0A%0A%26lt%3Bdiv+class%3D%22u-js-only%22%26gt%3B%26lt%3B%2Fdiv%26gt%3B%0A%0A",
                     'variation_code_snippet1': `&lt;html class=&quot;no-js&quot;&gt;
 &lt;script&gt;
       // Confirm availability of JavaScript and remove no-js class from html
@@ -3501,7 +3501,13 @@ Example of a non heading element:
                     'variation_code_snippet1': `&lt;!--NOTE: Inline style properties for demonstration only--&gt;
 
 &lt;h4&gt;16:9 flexible video player&lt;/h4&gt;
-&lt;p&gt;To create a 16:9 flexible video player, wrap the video element in an element with &lt;code&gt;u-flexible-container&lt;/code&gt; and add the &lt;code&gt;u-flexible-container__inner&lt;/code&gt; to the video element.&lt;/p&gt;
+&lt;p&gt;
+    To create a 16:9 flexible video player,
+    wrap the video element in an element with
+    &lt;code&gt;u-flexible-container&lt;/code&gt;
+    and add the &lt;code&gt;u-flexible-container__inner&lt;/code&gt;
+    to the video element.
+&lt;/p&gt;
 &lt;div class=&quot;u-flexible-container&quot;&gt;
     &lt;video class=&quot;u-flexible-container__inner&quot;
           style=&quot;background:#75787B;&quot;
@@ -3512,7 +3518,10 @@ Example of a non heading element:
 &lt;br /&gt;
 
 &lt;h4&gt;Flexible container with background&lt;/h4&gt;
-&lt;p&gt;To create a flexible container with only a background (no inner video or object element), omit the inner container.&lt;/p&gt;
+&lt;p&gt;
+    To create a flexible container with only a background
+    (no inner video or object element), omit the inner container.
+&lt;/p&gt;
 &lt;div class=&quot;u-flexible-container&quot;
     style=&quot;background-image: url(https://dummyimage.com/700x394/addc91/101820);
             background-position: center center;
@@ -3521,7 +3530,10 @@ Example of a non heading element:
 &lt;br /&gt;
 
 &lt;h4&gt;4:3 flexible video player&lt;/h4&gt;
-&lt;p&gt;To create a 4:3 flexible video player, add the &lt;code&gt;__4_3 modifier&lt;/code&gt; to the container.&lt;/p&gt;
+&lt;p&gt;
+    To create a 4:3 flexible video player,
+    add the &lt;code&gt;__4_3 modifier&lt;/code&gt; to the container.
+&lt;/p&gt;
 &lt;div class=&quot;u-flexible-container u-flexible-container--4-3&quot;&gt;
     &lt;video class=&quot;u-flexible-container__inner&quot;
           style=&quot;background:#75787B;&quot;

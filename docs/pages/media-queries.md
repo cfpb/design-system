@@ -25,20 +25,23 @@ variation_groups:
 
       ```
 
-      Ex.
+      For example…
 
       ```scss
 
       // Tablet and above.
+
       @include respond-to-min(vars-breakpoints.@bp-sm-min) {
           .title {
               font-size: 2em;
           }
       }
 
+      ```
 
-      // Compiles to
+      …compiles to…
 
+      ```css
 
       @media only all and (min-width: 37.5625em) {
           .title {
@@ -52,6 +55,7 @@ variation_groups:
       This mixin takes both min and max px values and a set of style rules and
       converts them to the corresponding min and max media query.
 
+
       ```scss
 
       @include respond-to-range(@bp1, @bp2) {
@@ -60,19 +64,27 @@ variation_groups:
 
       ```
 
-      Ex.
+
+      For example…
+
 
       ```scss
+
       // Tablet only.
+
       @include respond-to-range(@bp-sm-min, @bp-sm-max) {
           .title {
               font-size: 2em;
           }
       }
 
+      ```
 
-      // Compiles to
 
+      …compiles to…
+
+
+      ```css
 
       @media only all and (min-width: 37.5625em) and (max-width: 56.25em) {
           .title {
@@ -87,9 +99,10 @@ variation_groups:
 
       This mixin allows us to easily write styles that target both `@media print` and `.print`.
 
-      ```scss
 
-      // The following LESS...
+      The following SCSS…
+
+      ```scss
 
       .example {
           color: var(--gray);
@@ -98,8 +111,11 @@ variation_groups:
           }
       }
 
+      ```
 
-      // ...Exports to
+      …compiles to…
+
+      ```css
 
       .example {
           color: #75787B;

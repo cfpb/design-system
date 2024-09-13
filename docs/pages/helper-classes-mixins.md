@@ -2,9 +2,6 @@
 title: Helper classes and mixins
 layout: variation
 section: development
-status: Released
-description: 'Helper classes and mixins are utilities to help front-end web
-  development meet our design standards. '
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -23,7 +20,7 @@ variation_groups:
           `.no-js` class.
 
 
-          1. Add a `no-js` class to the html
+          * Add a `no-js` class to the html
 
 
 
@@ -34,20 +31,21 @@ variation_groups:
           ```
 
 
-          2. Add a script to remove the no-js class after confirming JavaScript is available
+          * Add a script to remove the no-js class after confirming JavaScript is available
 
 
           ```html
 
           <script>
-                // Confirm availability of JavaScript and remove no-js class from html
-                var docElement = document.documentElement;
-                docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
-            </script>
+              // Confirm availability of JavaScript and remove no-js class from html
+              var docElement = document.documentElement;
+              docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+          </script>
+
           ```
 
 
-          3. Add the utility class to the element you want to hide
+          * Add the utility class to the element you want to hide
 
 
           ```html
@@ -263,7 +261,13 @@ variation_groups:
 
           <h4>16:9 flexible video player</h4>
 
-          <p>To create a 16:9 flexible video player, wrap the video element in an element with <code>u-flexible-container</code> and add the <code>u-flexible-container__inner</code> to the video element.</p>
+          <p>
+              To create a 16:9 flexible video player,
+              wrap the video element in an element with
+              <code>u-flexible-container</code>
+              and add the <code>u-flexible-container__inner</code>
+              to the video element.
+          </p>
 
           <div class="u-flexible-container">
               <video class="u-flexible-container__inner"
@@ -278,7 +282,10 @@ variation_groups:
 
           <h4>Flexible container with background</h4>
 
-          <p>To create a flexible container with only a background (no inner video or object element), omit the inner container.</p>
+          <p>
+              To create a flexible container with only a background
+              (no inner video or object element), omit the inner container.
+          </p>
 
           <div class="u-flexible-container"
               style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
@@ -290,7 +297,10 @@ variation_groups:
 
           <h4>4:3 flexible video player</h4>
 
-          <p>To create a 4:3 flexible video player, add the <code>__4_3 modifier</code> to the container.</p>
+          <p>
+              To create a 4:3 flexible video player,
+              add the <code>__4_3 modifier</code> to the container.
+          </p>
 
           <div class="u-flexible-container u-flexible-container--4-3">
               <video class="u-flexible-container__inner"
@@ -416,11 +426,14 @@ variation_groups:
           }
 
           ```
-use_cases: ''
 guidelines: ''
+eyebrow: Utilities
+status: Released
+description: 'Helper classes and mixins are utilities to help front-end web
+  development meet our design standards. '
+use_cases: ''
 behavior: ''
 accessibility: ''
 last_updated: 2019-09-13T18:46:32.716Z
-eyebrow: Utilities
 research: ''
 ---

@@ -137,18 +137,12 @@ variation_groups:
 
           ```scss
 
-          .u-grid-column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
+          @include u-grid-column( $columns: 1, $total: $grid-total-columns )
 
           ```
 
 
-          Create a grid column that is `@columns` wide given `@total` total grid columns.
-
-
-          Optionally give the column left or right padding with the
-
-          `@prefix` and `@suffix` parameters.
-
+          Create a grid column that is `$columns` wide given `$total` total grid columns.
 
           Grid columns use transparent borders to create the gutters of the grid,
 
@@ -383,16 +377,6 @@ variation_groups:
 
       Read on for more details on the variables and mixins this component provides.
 
-
-      > NOTE: If you use `cf-grid.scss` directly,
-
-      >   be sure to run the file through
-
-      >   [Autoprefixer](https://github.com/postcss/autoprefixer),
-
-      >   or your compiled Capital Framework CSS will
-
-      >   not work perfectly in older browsers.
 guidelines: ''
 eyebrow: Basics
 title: Grid

@@ -14,6 +14,7 @@ export * from './components/cfpb-layout';
 export * from './components/cfpb-notifications';
 export * from './components/cfpb-pagination';
 export * from './components/cfpb-tables';
+export * from './components/cfpb-tooltips';
 export * from './components/cfpb-typography';
 
 export * from './utilities';

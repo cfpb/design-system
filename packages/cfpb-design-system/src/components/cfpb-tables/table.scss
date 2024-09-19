@@ -76,12 +76,17 @@
     }
 
     td[data-label]::before {
-      @include heading-5;
       display: block;
       margin-top: 0;
       margin-bottom: math.div(5px, $base-font-size-px) + em;
       content: attr(data-label);
       line-height: 1.83333333;
+
+      // h5 size.
+      font-size: math.div($size-v, $base-font-size-px) + em;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     td:last-child,

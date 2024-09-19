@@ -26,16 +26,11 @@ $meta-header-item-gap: 21px;
     display: grid;
     grid-template-columns: 0 auto 1fr;
     row-gap: math.div(5px, $base-font-size-px) + rem;
+    text-wrap: balance;
 
-    @include h4;
+    margin-bottom: 0;
 
-    // TODO: Move this above the h4 mixin. Mixin needs to allow margin override.
-    /* stylelint-disable no-duplicate-selectors */
-    & {
-      text-wrap: balance;
-      margin-bottom: 0;
-    }
-    /* stylelint-enable */
+    @include heading-4($has-margin-bottom: false);
 
     // Mobile only.
     @include respond-to-max($bp-xs-max) {

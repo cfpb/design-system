@@ -100,7 +100,7 @@
   // Shrink heading at smaller screen sizes.
   &__heading {
     @include respond-to-max($bp-med-min) {
-      @include h3;
+      @include heading-3;
     }
   }
 
@@ -234,7 +234,7 @@
 
     // Breakout cards have larger links.
     .m-card__footer > span {
-      @include heading-3;
+      @include heading-3($is-responsive: false);
     }
   }
 }

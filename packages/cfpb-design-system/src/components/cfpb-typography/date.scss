@@ -2,8 +2,8 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 .a-date {
-  @include heading-5;
-
   color: $date;
   white-space: nowrap;
+
+  @include heading-5;
 }

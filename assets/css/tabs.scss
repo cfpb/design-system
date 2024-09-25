@@ -13,10 +13,11 @@
   }
 
   &__list-item {
-    @include heading-5;
     border-bottom: 0;
     margin-bottom: 0;
     margin-left: 0;
+
+    @include heading-5($has-margin-bottom: false);
 
     &:first-child {
       .m-tabs__tab {

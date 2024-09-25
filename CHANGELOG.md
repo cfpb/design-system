@@ -1,4 +1,23 @@
 
+## v3.2.0 (2024-09-25)
+
+#### Breaking Change
+* `cfpb-design-system`
+  * [#2055](https://github.com/cfpb/design-system/pull/2055) Refactor heading mixins ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2053](https://github.com/cfpb/design-system/pull/2053) More color contrast adjustments | Formatting fixes ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-design-system`
+  * [#2056](https://github.com/cfpb/design-system/pull/2056) Update types/react@18.3.8, concurrently@9.0.1, postcss@8.4.47, sass@179.2, saucectl@0.186.0 ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.1.9 (2024-09-12)
 
 #### Bug Fix

@@ -11,7 +11,8 @@ variation_groups:
   - variations:
       - variation_is_deprecated: false
         variation_name: Topic tag
-        variation_description: Topic tags appear with content such as blog posts and
+        variation_description:
+          Topic tags appear with content such as blog posts and
           press releases to display associated topics. When clicked, a topic tag
           takes a user to a filtered view of other items tagged with the same
           topic tag. In this filtered view, a topic tag appears as a filter tag.
@@ -33,7 +34,8 @@ variation_groups:
           </ul>
       - variation_is_deprecated: false
         variation_name: Topic tag (stacked)
-        variation_description: A topic tags group can be stacked at all screen sizes by
+        variation_description:
+          A topic tags group can be stacked at all screen sizes by
           adding the \`m-tag-group--stacked\` modifier to the tag group.
         variation_code_snippet: |-
           <ul class="m-tag-group m-tag-group--stacked">

@@ -6,11 +6,11 @@
   border-top: 1px solid $slug-header-border-thin;
 
   &__heading {
-    @include heading-5;
-
     display: inline-block;
     padding-top: math.div(4px, $size-v) + em;
     border-top: 5px solid $slug-header-border-thick;
     margin-top: -3px;
+
+    @include heading-5($has-margin-top: false);
   }
 }

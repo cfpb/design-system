@@ -8,78 +8,91 @@
    Base styles
    ========================================================================== */
 
-@mixin heading-1() {
-  margin-bottom: math.div(15px, $size-i) + em;
+@mixin heading-1(
+  $has-margin-bottom: true,
+  $has-margin-top: true,
+  $is-responsive: true
+) {
   font-size: math.div($size-i, $base-font-size-px) + em;
   font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
-}
 
-@mixin heading-2() {
-  margin-bottom: math.div(15px, $size-ii) + em;
-  font-size: math.div($size-ii, $base-font-size-px) + em;
-  font-weight: 600;
-  letter-spacing: inherit;
-  line-height: 1.25;
-  text-transform: inherit;
-}
-
-@mixin heading-3() {
-  margin-bottom: math.div(15px, $size-iii) + em;
-  font-size: math.div($size-iii, $base-font-size-px) + em;
-  font-weight: normal;
-  letter-spacing: inherit;
-  line-height: 1.25;
-  text-transform: inherit;
-}
-
-@mixin heading-4() {
-  margin-bottom: math.div(15px, $size-iv) + em;
-  font-size: math.div($size-iv, $base-font-size-px) + em;
-  font-weight: 500;
-  letter-spacing: inherit;
-  line-height: 1.25;
-  text-transform: inherit;
-}
-
-@mixin heading-5() {
-  margin-bottom: math.div(15px, $size-v) + em;
-  font-size: math.div($size-v, $base-font-size-px) + em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-@mixin heading-6() {
-  margin-bottom: math.div(15px, $size-vi) + em;
-  font-size: math.div($size-vi, $base-font-size-px) + em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-@mixin h1() {
-  @include heading-1;
-
-  p + &,
-  ul + &,
-  ol + &,
-  dl + &,
-  figure + &,
-  img + &,
-  table + &,
-  blockquote + & {
-    margin-top: math.div(60px, $size-i) + em;
+  @if $has-margin-bottom {
+    margin-bottom: math.div(15px, $size-i) + em;
   }
 
-  // Mobile only.
-  @include respond-to-max($bp-xs-max) {
-    @include heading-2;
+  @if $has-margin-top {
+    p + &,
+    ul + &,
+    ol + &,
+    dl + &,
+    figure + &,
+    img + &,
+    table + &,
+    blockquote + & {
+      margin-top: math.div(60px, $size-i) + em;
+    }
 
+    @if $is-responsive {
+      // Mobile only.
+      @include respond-to-max($bp-xs-max) {
+        p + &,
+        ul + &,
+        ol + &,
+        dl + &,
+        figure + &,
+        img + &,
+        table + &,
+        blockquote + & {
+          margin-top: math.div(45px, $size-ii) + em;
+        }
+        h2 + &,
+        .h2 + &,
+        h3 + &,
+        .h3 + &,
+        h4 + &,
+        .h4 + &,
+        h5 + &,
+        .h5 + &,
+        h6 + &,
+        .h6 + & {
+          margin-top: math.div(30px, $size-ii) + em;
+        }
+      }
+    }
+  }
+
+  @if $is-responsive {
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      @include heading-2(
+        $has-margin-bottom,
+        $has-margin-top,
+        $is-responsive: false
+      );
+    }
+  }
+}
+
+@mixin heading-2(
+  $has-margin-bottom: true,
+  $has-margin-top: true,
+  $is-responsive: true,
+  $font-weight: 600
+) {
+  font-size: math.div($size-ii, $base-font-size-px) + em;
+  font-weight: $font-weight;
+  letter-spacing: inherit;
+  line-height: 1.25;
+  text-transform: inherit;
+
+  @if $has-margin-bottom {
+    margin-bottom: math.div(15px, $size-ii) + em;
+  }
+
+  @if $has-margin-top {
     p + &,
     ul + &,
     ol + &,
@@ -90,8 +103,9 @@
     blockquote + & {
       margin-top: math.div(45px, $size-ii) + em;
     }
-    h2 + &,
-    .h2 + &,
+
+    h1 + &,
+    .h1 + &,
     h3 + &,
     .h3 + &,
     h4 + &,
@@ -102,40 +116,54 @@
     .h6 + & {
       margin-top: math.div(30px, $size-ii) + em;
     }
+
+    @if $is-responsive {
+      // Mobile only.
+      @include respond-to-max($bp-xs-max) {
+        p + &,
+        ul + &,
+        ol + &,
+        dl + &,
+        figure + &,
+        img + &,
+        table + &,
+        blockquote + & {
+          margin-top: math.div(30px, $size-iii) + em;
+        }
+      }
+    }
+  }
+
+  @if $is-responsive {
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      @include heading-3(
+        $has-margin-bottom,
+        $has-margin-top,
+        $is-responsive: false,
+        $font-weight: $font-weight
+      );
+    }
   }
 }
 
-@mixin h2() {
-  @include heading-2;
+@mixin heading-3(
+  $has-margin-bottom: true,
+  $has-margin-top: true,
+  $is-responsive: true,
+  $font-weight: normal
+) {
+  font-size: math.div($size-iii, $base-font-size-px) + em;
+  font-weight: $font-weight;
+  letter-spacing: inherit;
+  line-height: 1.25;
+  text-transform: inherit;
 
-  p + &,
-  ul + &,
-  ol + &,
-  dl + &,
-  figure + &,
-  img + &,
-  table + &,
-  blockquote + & {
-    margin-top: math.div(45px, $size-ii) + em;
+  @if $has-margin-bottom {
+    margin-bottom: math.div(15px, $size-iii) + em;
   }
 
-  h1 + &,
-  .h1 + &,
-  h3 + &,
-  .h3 + &,
-  h4 + &,
-  .h4 + &,
-  h5 + &,
-  .h5 + &,
-  h6 + &,
-  .h6 + & {
-    margin-top: math.div(30px, $size-ii) + em;
-  }
-
-  // Mobile only.
-  @include respond-to-max($bp-xs-max) {
-    @include heading-3;
-
+  @if $has-margin-top {
     p + &,
     ul + &,
     ol + &,
@@ -143,136 +171,163 @@
     figure + &,
     img + &,
     table + &,
-    blockquote + & {
+    blockquote + &,
+    h1 + &,
+    .h1 + &,
+    h2 + &,
+    .h2 + &,
+    h4 + &,
+    .h4 + &,
+    h5 + &,
+    .h5 + &,
+    h6 + &,
+    .h6 + & {
       margin-top: math.div(30px, $size-iii) + em;
+    }
+  }
+
+  @if $is-responsive {
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      @include heading-4(
+        $has-margin-bottom,
+        $has-margin-top,
+        $is-responsive: false,
+        $font-weight: $font-weight
+      );
     }
   }
 }
 
-@mixin h3() {
-  @include heading-3;
+@mixin heading-4(
+  $has-margin-bottom: true,
+  $has-margin-top: true,
+  $is-responsive: true,
+  $font-weight: 500
+) {
+  font-size: math.div($size-iv, $base-font-size-px) + em;
+  font-weight: $font-weight;
+  letter-spacing: inherit;
+  line-height: 1.25;
+  text-transform: inherit;
 
-  p + &,
-  ul + &,
-  ol + &,
-  dl + &,
-  figure + &,
-  img + &,
-  table + &,
-  blockquote + &,
-  h1 + &,
-  .h1 + &,
-  h2 + &,
-  .h2 + &,
-  h4 + &,
-  .h4 + &,
-  h5 + &,
-  .h5 + &,
-  h6 + &,
-  .h6 + & {
-    margin-top: math.div(30px, $size-iii) + em;
+  @if $has-margin-bottom {
+    margin-bottom: math.div(15px, $size-iv) + em;
   }
 
-  // Mobile only.
-  @include respond-to-max($bp-xs-max) {
-    @include heading-4;
-  }
-}
-
-@mixin h4() {
-  @include heading-4;
-
-  p + &,
-  ul + &,
-  ol + &,
-  dl + &,
-  figure + &,
-  img + &,
-  table + &,
-  blockquote + &,
-  h1 + &,
-  .h1 + &,
-  h2 + &,
-  .h2 + &,
-  h3 + &,
-  .h3 + &,
-  h5 + &,
-  .h5 + &,
-  h6 + &,
-  .h6 + & {
-    margin-top: math.div(30px, $size-iv) + em;
+  @if $has-margin-top {
+    p + &,
+    ul + &,
+    ol + &,
+    dl + &,
+    figure + &,
+    img + &,
+    table + &,
+    blockquote + &,
+    h1 + &,
+    .h1 + &,
+    h2 + &,
+    .h2 + &,
+    h3 + &,
+    .h3 + &,
+    h5 + &,
+    .h5 + &,
+    h6 + &,
+    .h6 + & {
+      margin-top: math.div(30px, $size-iv) + em;
+    }
   }
 
-  // Mobile only.
-  @include respond-to-max($bp-xs-max) {
-    $h4-font-size-on-xs: $base-font-size-px;
-    margin-bottom: math.div(10px, $h4-font-size-on-xs) + em;
-    font-size: math.div($h4-font-size-on-xs, $base-font-size-px) + em;
-    line-height: math.div(18px, $h4-font-size-on-xs);
+  @if $is-responsive {
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      margin-bottom: math.div(10px, $base-font-size-px) + em;
+      font-size: 1em;
+      line-height: math.div(18px, $base-font-size-px);
+    }
   }
 }
 
-@mixin h5() {
-  @include heading-5;
+@mixin heading-5($has-margin-bottom: true, $has-margin-top: true) {
+  font-size: math.div($size-v, $base-font-size-px) + em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  text-transform: uppercase;
 
-  p + &,
-  ul + &,
-  ol + &,
-  dl + &,
-  figure + &,
-  img + &,
-  table + &,
-  blockquote + &,
-  h1 + &,
-  .h1 + &,
-  h2 + &,
-  .h2 + &,
-  h3 + &,
-  .h3 + &,
-  h4 + &,
-  .h4 + &,
-  h6 + &,
-  .h6 + & {
-    margin-top: math.div(30px, $size-v) + em;
+  @if $has-margin-bottom {
+    margin-bottom: math.div(15px, $size-v) + em;
+  }
+
+  @if $has-margin-top {
+    p + &,
+    ul + &,
+    ol + &,
+    dl + &,
+    figure + &,
+    img + &,
+    table + &,
+    blockquote + &,
+    h1 + &,
+    .h1 + &,
+    h2 + &,
+    .h2 + &,
+    h3 + &,
+    .h3 + &,
+    h4 + &,
+    .h4 + &,
+    h6 + &,
+    .h6 + & {
+      margin-top: math.div(30px, $size-v) + em;
+    }
   }
 }
 
-@mixin h6() {
-  @include heading-6;
+@mixin heading-6($has-margin-bottom: true, $has-margin-top: true) {
+  font-size: math.div($size-vi, $base-font-size-px) + em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  text-transform: uppercase;
 
-  p + &,
-  ul + &,
-  ol + &,
-  dl + &,
-  figure + &,
-  img + &,
-  table + &,
-  blockquote + &,
-  h1 + &,
-  .h1 + &,
-  h2 + &,
-  .h2 + &,
-  h3 + &,
-  .h3 + &,
-  h4 + &,
-  .h4 + &,
-  h5 + &,
-  .h5 + & {
-    margin-top: math.div(30px, $size-vi) + em;
+  @if $has-margin-bottom {
+    margin-bottom: math.div(15px, $size-vi) + em;
+  }
+
+  @if $has-margin-top {
+    p + &,
+    ul + &,
+    ol + &,
+    dl + &,
+    figure + &,
+    img + &,
+    table + &,
+    blockquote + &,
+    h1 + &,
+    .h1 + &,
+    h2 + &,
+    .h2 + &,
+    h3 + &,
+    .h3 + &,
+    h4 + &,
+    .h4 + &,
+    h5 + &,
+    .h5 + & {
+      margin-top: math.div(30px, $size-vi) + em;
+    }
   }
 }
 
 @mixin u-lead-paragraph() {
-  @include heading-3;
-
   margin-top: 0;
   margin-bottom: 15px;
 
-  // Mobile only.
-  @include respond-to-max($bp-xs-max) {
-    // Use the same regular weight but reduce the sizes to h4 size.
-    font-size: math.div(18px, $base-font-size-px) + em;
-  }
+  @include heading-3(
+    $has-margin-bottom: false,
+    $has-margin-top: false,
+    $is-responsive: true,
+    $font-weight: normal
+  );
 }
 
 // For when you want a heading that's bigger than a normal H1.

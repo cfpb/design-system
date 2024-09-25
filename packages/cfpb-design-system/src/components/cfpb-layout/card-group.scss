@@ -124,7 +124,7 @@ _:-ms-lang(x),
     // center the content of the first card and increase the heading.
     .m-card:nth-of-type(1) {
       h3 {
-        @include h2;
+        @include heading-2;
       }
 
       > a {

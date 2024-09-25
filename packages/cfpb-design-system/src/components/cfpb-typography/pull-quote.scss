@@ -3,20 +3,19 @@
 
 .m-pull-quote {
   &__body {
-    @include heading-3;
-
     color: $pull-quote-body;
 
-    // Mobile only.
-    @include respond-to-max($bp-xs-max) {
-      @include heading-4;
-    }
+    @include heading-3(
+      $has-margin-bottom: false,
+      $has-margin-top: false,
+      $is-responsive: true
+    );
   }
 
   &__citation {
-    @include heading-5;
-
     color: $pull-quote-citation;
+
+    @include heading-5;
 
     &::before {
       // An em dash before the cited author name.

@@ -13,7 +13,7 @@ $hero-desktop-height: 285px;
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {
     .m-hero__subhead {
-      @include heading-3;
+      @include heading-3($is-responsive: false);
     }
   }
 
@@ -26,8 +26,7 @@ $hero-desktop-height: 285px;
       @include u-superheading;
     }
     .m-hero__subhead {
-      @include heading-2;
-      font-weight: 400;
+      @include heading-2($is-responsive: false, $font-weight: 400);
     }
   }
 }
@@ -50,7 +49,7 @@ $hero-desktop-height: 285px;
   }
 
   &__heading {
-    @include heading-1;
+    @include heading-1($is-responsive: false);
   }
 
   &__subhead {
@@ -129,7 +128,7 @@ $hero-desktop-height: 285px;
 @include respond-to-max($bp-sm-max) {
   .m-hero {
     &__heading {
-      @include heading-2;
+      @include heading-2($is-responsive: false);
     }
     &__subhead {
       font-size: $size-iv;

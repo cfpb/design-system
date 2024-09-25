@@ -18,17 +18,11 @@
   }
 
   &--heading {
-    @include h4;
+    display: block;
 
-    // TODO: Move this above the h4 mixin. Mixin needs to allow margin override.
-    /* stylelint-disable no-duplicate-selectors */
-    & {
-      display: block;
+    margin-bottom: math.div(10px, $size-iv) + em;
 
-      // Overwrites heading-4 margin.
-      margin-bottom: math.div(10px, $size-iv) + em;
-    }
-    /* stylelint-enable */
+    @include heading-4($has-margin-bottom: false);
 
     // Add a gap between the label helper and label heading
     .a-label__helper--block {

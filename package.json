@@ -25,15 +25,11 @@
     "a11y": "lhci autorun",
     "build": "node ./esbuild/packages/build.js && node ./esbuild/docs/build.js",
     "build-decap": "yarn install && yarn after-install && yarn build && bundle exec jekyll build",
-    "changelog": "./scripts/generate-changelog.sh",
     "copy-assets": "./scripts/fonts.sh && cp -r packages/cfpb-design-system/src/components/cfpb-icons/icons docs/_includes/",
-    "design-system-link": "lerna exec -- yarn link",
-    "design-system-unlink": "lerna exec -- yarn unlink",
     "after-install": "yarn copy-assets && bundle install",
     "lint": "scripts/lint.sh",
     "process-icon-svgs": "svgo -f packages/cfpb-design-system/src/components/cfpb-icons/icons --config=svgo.config.js",
-    "pre-release": "./scripts/pre-release.sh",
-    "release": "lerna publish",
+    "release": "yarn lint && yarn build && release-it --only-version",
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-decap": "npx decap-server",
@@ -60,6 +56,7 @@
     "@cfpb/browserslist-config": "0.0.3",
     "@csstools/postcss-sass": "5.1.1",
     "@lhci/cli": "0.14.0",
+    "auto-changelog": "2.5.0",
     "autoprefixer": "10.4.20",
     "concurrently": "9.0.1",
     "cypress": "13.14.2",
@@ -77,29 +74,41 @@
     "jest": "29.7.0",
     "jest-cli": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
-    "lerna": "8.1.8",
-    "lerna-changelog": "2.2.0",
     "postcss": "8.4.47",
     "postcss-replace": "2.0.1",
     "prettier": "3.3.3",
     "prop-types": "15.8.1",
+    "release-it": "17.6.0",
     "sass": "1.79.2",
     "saucectl": "0.186.0",
     "stylelint": "16.9.0",
     "stylelint-config-standard-scss": "13.1.0",
     "svgo": "3.3.0"
   },
-  "changelog": {
-    "labels": {
-      "lerna-changelog/breaking": "Breaking Change",
-      "lerna-changelog/enhancement": "Enhancement",
-      "lerna-changelog/bug": "Bug Fix",
-      "lerna-changelog/documentation": "Documentation",
-      "lerna-changelog/internal": "Internal"
-    }
-  },
   "prettier": {
     "singleQuote": true
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "ignoreCommitPattern": "^Update \".+\" page",
+    "output": "packages/cfpb-design-system/CHANGELOG.md",
+    "startingVersion": "v3",
+    "stdout": true,
+    "template": "scripts/changelog-template.hbs",
+    "unreleased": false
+  },
+  "release-it": {
+    "git": {
+      "changelog": "auto-changelog",
+      "commitsPath": "packages/cfpb-design-system",
+      "requireCommits": true
+    },
+    "hooks": {
+      "after:bump": "auto-changelog -p"
+    },
+    "github": {
+      "release": true
+    }
   },
   "type": "module",
   "version": "3.2.0"

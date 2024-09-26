@@ -8,3 +8,4 @@ test/unit-test-coverage/
 .stylelintignore
 CHANGELOG.md
 packages/cfpb-*/dist/
+changelog-template.hbs

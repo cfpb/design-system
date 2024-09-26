@@ -105,18 +105,9 @@ Then, do a release:
 
 1. Ensure you're on the `main` branch with `git checkout main`
    and pull latest with `git pull`.
-1. [Check closed Pull Requests](https://github.com/cfpb/design-system/pulls?q=is%3Apr+is%3Aclosed) and ensure Pull Requests that change the `/packages/` have a label
-   that begins with a `lerna-changelog/…` label.
-1. Run `yarn pre-release`
-1. Decide what version (major, minor, or patch) you will be releasing and
-   manually update to that version in `CHANGELOG.md`.
-   This is the future version that will be tagged shortly.
-1. Run `git add . && git commit -m "Bump version" && yarn release` to start the release.
-1. It'll ask if you want to do a major, minor or patch release.
-   Select whichever matches the latest changelog version.
-   Lerna will tag and publish every package to npm.
-1. Confirm the `CHANGELOG.md` file has been updated
-   and committed to the `main` branch.
+1. Run `yarn release`
+1. Follow the prompts to decide what version (major, minor, or patch)
+   you will be releasing.
 
 ### Adhere to any linting errors or warnings
 

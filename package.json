@@ -35,8 +35,7 @@
     "serve-decap": "npx decap-server",
     "start": "yarn build && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
-    "test:browser": "yarn cypress run",
-    "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && node_modules/saucectl/bin/saucectl run"
+    "test:browser": "yarn cypress run"
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
@@ -80,7 +79,6 @@
     "prop-types": "15.8.1",
     "release-it": "17.6.0",
     "sass": "1.79.3",
-    "saucectl": "0.186.0",
     "stylelint": "16.9.0",
     "stylelint-config-standard-scss": "13.1.0",
     "svgo": "3.3.0"

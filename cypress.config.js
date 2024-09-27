@@ -1,6 +1,7 @@
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
+  projectId: '2hroh3',
   e2e: {
     baseUrl: 'http://127.0.0.1:4000/design-system/',
     defaultCommandTimeout: 40000,

@@ -36,7 +36,8 @@
     "start": "yarn build && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "test:browser": "yarn cypress run",
-    "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && node_modules/saucectl/bin/saucectl run"
+    "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && node_modules/saucectl/bin/saucectl run",
+    "changelog": "auto-changelog --package ./packages/cfpb-design-system/package.json"
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
@@ -99,6 +100,7 @@
   },
   "release-it": {
     "git": {
+      "commit": false,
       "requireBranch": "main",
       "changelog": "auto-changelog",
       "commitsPath": "packages/cfpb-design-system",
@@ -109,6 +111,7 @@
     },
     "npm": {
       "versionArgs": [
+        "--workspace=packages/cfpb-design-system/",
         "--workspaces-update=false",
         "--workspaces=true"
       ],
@@ -120,8 +123,7 @@
       }
     },
     "github": {
-      "release": true,
-      "assets": "packages/cfpb-design-system"
+      "release": true
     }
   },
   "type": "module"

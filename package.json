@@ -109,6 +109,7 @@
     },
     "npm": {
       "versionArgs": [
+        "--workspaces-update=false",
         "--workspaces=true"
       ],
       "publishArgs": [

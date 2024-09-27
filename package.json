@@ -112,6 +112,7 @@
       "publishArgs": [
         "--publish-path=packages/cfpb-design-system"
       ],
+      "publish": true,
       "publishConfig": {
         "registry": "https://registry.npmjs.org"
       },

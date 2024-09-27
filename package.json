@@ -109,11 +109,15 @@
     },
     "npm": {
       "versionArgs": [
-        "--workspaces=true"
+        "--workspaces=true",
+        "--legacy-peer-deps=true"
       ],
       "publishArgs": [
         "--publish-path=packages/cfpb-design-system"
-      ]
+      ],
+      "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+      }
     },
     "github": {
       "release": true

@@ -3,11 +3,6 @@
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-typography/mixins' as *;
 
-/* ==========================================================================
-   consumerfinance.gov
-   tag
-   ========================================================================== */
-
 // Filter tags appear in filtered contexts, often as part of multiselects.
 .a-tag-filter {
   display: flex;

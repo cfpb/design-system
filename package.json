@@ -115,6 +115,7 @@
       "publishConfig": {
         "registry": "https://registry.npmjs.org"
       },
+      "skipChecks": true,
       "versionArgs": [
         "--workspace=packages/cfpb-design-system/",
         "--workspaces-update=false",

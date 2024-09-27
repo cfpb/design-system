@@ -105,7 +105,7 @@
       "requireCommits": true
     },
     "hooks": {
-      "after:bump": "auto-changelog -p"
+      "after:bump": "auto-changelog --package ./packages/cfpb-design-system/package.json"
     },
     "npm": {
       "versionArgs": [
@@ -120,7 +120,8 @@
       }
     },
     "github": {
-      "release": true
+      "release": true,
+      "assets": "packages/cfpb-design-system"
     }
   },
   "type": "module"

@@ -109,8 +109,7 @@
     },
     "npm": {
       "versionArgs": [
-        "--workspaces=true",
-        "--legacy-peer-deps=true"
+        "--workspaces=true"
       ],
       "publishArgs": [
         "--publish-path=packages/cfpb-design-system"

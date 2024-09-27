@@ -99,6 +99,7 @@
   },
   "release-it": {
     "git": {
+      "requireBranch": "main",
       "changelog": "auto-changelog",
       "commitsPath": "packages/cfpb-design-system",
       "requireCommits": true
@@ -106,10 +107,17 @@
     "hooks": {
       "after:bump": "auto-changelog -p"
     },
+    "npm": {
+      "versionArgs": [
+        "--workspaces=true"
+      ],
+      "publishArgs": [
+        "--publish-path=packages/cfpb-design-system"
+      ]
+    },
     "github": {
       "release": true
     }
   },
-  "type": "module",
-  "version": "3.2.1"
+  "type": "module"
 }

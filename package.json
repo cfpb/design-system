@@ -39,7 +39,7 @@
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
-    "@types/react": "18.3.9",
+    "@types/react": "18.3.11",
     "anchor-js": "5.0.0",
     "decap-cms-app": "3.3.3",
     "html-entities": "2.5.2",
@@ -77,9 +77,9 @@
     "postcss-replace": "2.0.1",
     "prettier": "3.3.3",
     "prop-types": "15.8.1",
-    "release-it": "17.6.0",
-    "sass": "1.79.3",
-    "stylelint": "16.9.0",
+    "release-it": "17.9.0",
+    "sass": "1.79.5",
+    "stylelint": "16.10.0",
     "stylelint-config-standard-scss": "13.1.0",
     "svgo": "3.3.0"
   },

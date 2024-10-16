@@ -35,7 +35,7 @@
     "serve-decap": "npx decap-server",
     "start": "yarn build && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
-    "test:browser": "yarn cypress run"
+    "cy": "./scripts/cypress.sh"
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {

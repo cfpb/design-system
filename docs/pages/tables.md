@@ -144,9 +144,9 @@ variation_groups:
           structure, even on smaller screens.
 
 
-          The `.o-table-wrapper--scrolling` class must be added to the parent element of the `table` (by adding a wrapping `div`, in most cases). The `table` element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table--striped class, below).
+          The `.o-table--scrolling` class must be added to the parent element of the `table` (by adding a wrapping `div`, in most cases). The `table` element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table--striped class, below).
         variation_code_snippet: |-
-          <div class="o-table o-table-wrapper--scrolling">
+          <div class="o-table o-table--scrolling">
               <table>
                   <thead>
                       <tr>

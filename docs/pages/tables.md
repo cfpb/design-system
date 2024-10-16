@@ -92,50 +92,6 @@ variation_groups:
               </tbody>
           </table>
         variation_specs: ''
-      - variation_name: Responsive stacked table with header (directory table)
-        variation_description: >-
-          The directory table is a variation of the stacked table. At the small
-          screen breakpoint, the directory table pattern uses first column data
-          (employee name, for instance) as a way to group and label stacks of
-          rows.
-
-
-          This is useful when data is read across rows, instead of down columns. For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding.
-
-          At the small screen breakpoint, the first column (in the example shown below, employee names) become headers, and the remaining data points in the same row (phone number, email address) are stacked below.
-
-
-          The `.o-table--entry-header-on-small` class in addition to `.o-table--stack-on-small` class changes the first column to be styled as an entry header. This style requires both classes be added.
-        variation_code_snippet: |-
-          <table class="o-table
-                        o-table--stack-on-small
-                        o-table--entry-header-on-small">
-              <thead>
-                  <tr>
-                      <th>Employee name</th>
-                      <th>Phone number</th>
-                      <th>Email address</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td data-label="Employee name">Andrew Able</td>
-                      <td data-label="Phone number">(202) XXX-XXXX</td>
-                      <td data-label="Email address">aable@example.com</td>
-                  </tr>
-                  <tr>
-                      <td data-label="Employee name">Betsy Bort</td>
-                      <td data-label="Phone number">(202) XXX-XXXX</td>
-                      <td data-label="Email address">bbort@example.com</td>
-                  </tr>
-                  <tr>
-                      <td data-label="Employee name">Charles Clark</td>
-                      <td data-label="Phone number">(202) XXX-XXXX</td>
-                      <td data-label="Email address">cclark@example.com</td>
-                  </tr>
-              </tbody>
-          </table>
-        variation_specs: ''
       - variation_name: Responsive table with horizontal scroll
         variation_description: >-
           Use a table with horizontal scroll when the data you’re presenting has

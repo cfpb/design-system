@@ -1,6 +1,12 @@
 ## Changelog
 
-### [v3.2.4](https://github.com/cfpb/design-system/compare/v3.2.3...v3.2.4) - 
+### [v3.2.5](https://github.com/cfpb/design-system/compare/v3.2.4...v3.2.5) - 
+
+### General Changes
+
+- Remove `o-table--entry-header-on-small` class (Ans - [#2069](https://github.com/cfpb/design-system/pull/2069))
+
+### [v3.2.4](https://github.com/cfpb/design-system/compare/v3.2.3...v3.2.4) -  23 October 2024 
 
 ### [v3.2.3](https://github.com/cfpb/design-system/compare/v3.2.2...v3.2.3) -  16 October 2024 
 

@@ -94,26 +94,4 @@
       margin-bottom: math.div(30px, $base-font-size-px) + em;
     }
   }
-
-  .o-table--entry-header-on-small {
-    & > tbody td:first-child {
-      padding-bottom: 0.75em;
-      border-bottom: 1px solid $table-border;
-      margin-bottom: math.div(10px, $base-font-size-px) + em;
-      margin-top: 0;
-      background-color: $table-head-bg;
-      font-size: 1.125em;
-      font-weight: 400;
-      line-height: 1.22222222;
-    }
-
-    & > tbody td:first-child::before {
-      display: none;
-    }
-
-    & > tbody > tr {
-      border-bottom: none;
-      margin-bottom: math.div(30px, $base-font-size-px) + em;
-    }
-  }
 }

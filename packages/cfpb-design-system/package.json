@@ -20,5 +20,16 @@
     "url": "https://github.com/cfpb/design-system/issues"
   },
   "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "auto-changelog": "2.5.0"
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "ignoreCommitPattern": "^Update \".+\" page",
+    "output": "./CHANGELOG.md",
+    "startingVersion": "v3",
+    "template": "./changelog-template.hbs",
+    "unreleased": true
+  }
 }

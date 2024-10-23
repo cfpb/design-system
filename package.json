@@ -55,7 +55,6 @@
     "@cfpb/browserslist-config": "0.0.3",
     "@csstools/postcss-sass": "5.1.1",
     "@lhci/cli": "0.14.0",
-    "auto-changelog": "2.5.0",
     "autoprefixer": "10.4.20",
     "concurrently": "9.0.1",
     "cypress": "13.15.0",
@@ -86,24 +85,15 @@
   "prettier": {
     "singleQuote": true
   },
-  "auto-changelog": {
-    "commitLimit": false,
-    "ignoreCommitPattern": "^Update \".+\" page",
-    "output": "packages/cfpb-design-system/CHANGELOG.md",
-    "startingVersion": "v3",
-    "stdout": true,
-    "template": "scripts/changelog-template.hbs",
-    "unreleased": false
-  },
   "release-it": {
     "git": {
       "requireBranch": "main",
-      "changelog": "auto-changelog",
+      "changelog": "cd packages/cfpb-design-system && auto-changelog",
       "commitsPath": "packages/cfpb-design-system",
       "requireCommits": true
     },
     "hooks": {
-      "after:bump": "auto-changelog --package ./packages/cfpb-design-system/package.json"
+      "after:bump": "cd packages/cfpb-design-system && auto-changelog -p"
     },
     "npm": {
       "publish": false,

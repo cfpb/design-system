@@ -5996,40 +5996,9 @@ Note: While th elements normally only contain raw text, they may sometimes conta
     &lt;/tbody&gt;
 &lt;/table&gt;`,
                 
-                    'variation_name2': 'Responsive stacked table with header (directory table)',
-                    'variation_description2': "The+directory+table+is+a+variation+of+the+stacked+table.+At+the+small+screen+breakpoint%2C+the+directory+table+pattern+uses+first+column+data+%28employee+name%2C+for+instance%29+as+a+way+to+group+and+label+stacks+of+rows.%0A%0AThis+is+useful+when+data+is+read+across+rows%2C+instead+of+down+columns.+For+instance%2C+contact+information+is+comprised+of+a+name%2C+phone+number%2C+and+email+address.+An+event+is+made+up+of+the+name+of+the+event%2C+time%2C+and+location.+You+need+all+three+pieces+of+data+to+create+an+understanding+of+the+thing+being+shown%2C+and+the+first+column+of+data+is+the+key+to+that+understanding.%0AAt+the+small+screen+breakpoint%2C+the+first+column+%28in+the+example+shown+below%2C+employee+names%29+become+headers%2C+and+the+remaining+data+points+in+the+same+row+%28phone+number%2C+email+address%29+are+stacked+below.%0A%0AThe+.o-table--entry-header-on-small+class+in+addition+to+.o-table--stack-on-small+class+changes+the+first+column+to+be+styled+as+an+entry+header.+This+style+requires+both+classes+be+added.%0A",
-                    'variation_code_snippet2': `&lt;table class=&quot;o-table
-              o-table--stack-on-small
-              o-table--entry-header-on-small&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Employee name&lt;/th&gt;
-            &lt;th&gt;Phone number&lt;/th&gt;
-            &lt;th&gt;Email address&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Employee name&quot;&gt;Andrew Able&lt;/td&gt;
-            &lt;td data-label=&quot;Phone number&quot;&gt;(202) XXX-XXXX&lt;/td&gt;
-            &lt;td data-label=&quot;Email address&quot;&gt;aable@example.com&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Employee name&quot;&gt;Betsy Bort&lt;/td&gt;
-            &lt;td data-label=&quot;Phone number&quot;&gt;(202) XXX-XXXX&lt;/td&gt;
-            &lt;td data-label=&quot;Email address&quot;&gt;bbort@example.com&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Employee name&quot;&gt;Charles Clark&lt;/td&gt;
-            &lt;td data-label=&quot;Phone number&quot;&gt;(202) XXX-XXXX&lt;/td&gt;
-            &lt;td data-label=&quot;Email address&quot;&gt;cclark@example.com&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;`,
-                
-                    'variation_name3': 'Responsive table with horizontal scroll',
-                    'variation_description3': "Use+a+table+with+horizontal+scroll+when+the+data+you%E2%80%99re+presenting+has+more+columns+than+will+fit+comfortably+on+the+screen%2C+and+you+want+to+ensure+all+information+can+be+accessed+in+its+original+tabular+structure%2C+even+on+smaller+screens.%0A%0AThe+.o-table--scrolling+class+must+be+added+to+the+parent+element+of+the+table+%28by+adding+a+wrapping+div%2C+in+most+cases%29.+The+table+element+does+not+need+additional+markup+in+this+case.+The+%E2%80%9CComparative+with+horizontal+scroll%E2%80%9D+style+also+adds+striped+rows+to+the+table+contained+within%2C+and+remains+striped+on+small+screens+%28unlike+the+o-table%E2%80%93striped+class%2C+below%29.%0A",
-                    'variation_code_snippet3': `&lt;div class=&quot;o-table o-table--scrolling&quot;&gt;
+                    'variation_name2': 'Responsive table with horizontal scroll',
+                    'variation_description2': "Use+a+table+with+horizontal+scroll+when+the+data+you%E2%80%99re+presenting+has+more+columns+than+will+fit+comfortably+on+the+screen%2C+and+you+want+to+ensure+all+information+can+be+accessed+in+its+original+tabular+structure%2C+even+on+smaller+screens.%0A%0AThe+.o-table--scrolling+class+must+be+added+to+the+parent+element+of+the+table+%28by+adding+a+wrapping+div%2C+in+most+cases%29.+The+table+element+does+not+need+additional+markup+in+this+case.+The+%E2%80%9CComparative+with+horizontal+scroll%E2%80%9D+style+also+adds+striped+rows+to+the+table+contained+within%2C+and+remains+striped+on+small+screens+%28unlike+the+o-table%E2%80%93striped+class%2C+below%29.%0A",
+                    'variation_code_snippet2': `&lt;div class=&quot;o-table o-table--scrolling&quot;&gt;
     &lt;table&gt;
         &lt;thead&gt;
             &lt;tr&gt;

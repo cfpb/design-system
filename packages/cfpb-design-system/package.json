@@ -9,7 +9,9 @@
     "url": "https://cfpb.github.io/design-system"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "next"
   },
   "license": "SEE LICENSE IN TERMS.md",
   "repository": {

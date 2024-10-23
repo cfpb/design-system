@@ -1,5 +1,32 @@
 ## Changelog
 
+### [v3.2.4](https://github.com/cfpb/design-system/compare/v3.2.3...v3.2.4) - 
+
+### [v3.2.3](https://github.com/cfpb/design-system/compare/v3.2.2...v3.2.3) -  16 October 2024 
+
+### General Changes
+
+- Rename `o-table-wrapper--scrolling` to `o-table--scrolling` (Ans - [#2068](https://github.com/cfpb/design-system/pull/2068))
+- Lighthouse: Use envvar instead of set-output command (Ans - [#2067](https://github.com/cfpb/design-system/pull/2067))
+- Update release-it, sass, stylelint (Ans - [#2066](https://github.com/cfpb/design-system/pull/2066))
+
+### [v3.2.2](https://github.com/cfpb/design-system/compare/v3.2.1...v3.2.2) -  27 September 2024 
+
+### General Changes
+
+- Adjust code comments (Ans - [#2064](https://github.com/cfpb/design-system/pull/2064))
+- Add Cypress Cloud integration (Ans - [#2059](https://github.com/cfpb/design-system/pull/2059))
+
+### [v3.2.1](https://github.com/cfpb/design-system/compare/v3.2.0...v3.2.1) -  27 September 2024 
+
+### General Changes
+
+- Refresh npm cache (Ans - [#2063](https://github.com/cfpb/design-system/pull/2063))
+- Further adjust release-it config (Ans - [#2062](https://github.com/cfpb/design-system/pull/2062))
+- Adjust release-it config (Ans - [#2061](https://github.com/cfpb/design-system/pull/2061))
+- Update types/react@18.3.9, cypress@13.15.0, esbuild@0.24.0, sass@1.79.3 (Ans - [#2060](https://github.com/cfpb/design-system/pull/2060))
+- Swap lerna with release-it (Ans - [#2058](https://github.com/cfpb/design-system/pull/2058))
+
 ### [v3.2.0](https://github.com/cfpb/design-system/compare/v3.1.9...v3.2.0) -  25 September 2024 
 
 ### General Changes

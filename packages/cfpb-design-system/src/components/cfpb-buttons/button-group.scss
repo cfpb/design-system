@@ -2,7 +2,7 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 .m-btn-group {
-  .a-btn + .a-btn {
-    margin-left: math.div(6px, $btn-font-size) + em;
-  }
+  display: flex;
+  gap: math.div(10px, $base-font-size-px) + rem;
+  flex-wrap: wrap;
 }

@@ -9,13 +9,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.3
-      - uses: actions/checkout@v4
-      - run: ./scripts/update-gh-pages.sh
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Shared setup
+        uses:  ./.github/actions/shared-action-setup
+
+      - name: Update GitHub pages
+        run: ./scripts/update-gh-pages.sh
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

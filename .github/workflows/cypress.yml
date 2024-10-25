@@ -11,23 +11,11 @@ jobs:
       # matrix:
       #  containers: [1, 2] # Uses 2 parallel instances
     steps:
-      - name: Checkout
+      - name: Check out the repo
         uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Set up Ruby for Jekyll
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.3
-
-      - name: Install dependencies with Yarn
-        run: |
-          yarn install
-          yarn after-install
+      - name: Shared setup
+        uses:  ./.github/actions/shared-action-setup
 
       - name: Cypress run
         # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action

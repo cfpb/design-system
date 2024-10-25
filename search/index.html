@@ -798,39 +798,50 @@
                 
                     'variation_name1': 'Primary button',
                     'variation_description1': "Use+a+primary+button+for+an+action+that+goes+to+the+next+step.+Avoid+using+multiple+primary+buttons+on+a+single+page%3B+there+can+be+multiple+secondary+buttons+per+page.%0A",
-                    'variation_code_snippet1': `&lt;button class=&quot;a-btn&quot; title=&quot;Default state&quot;&gt;Default state&lt;/button&gt;
+                    'variation_code_snippet1': `&lt;div class=&quot;m-btn-group&quot;&gt;
+  &lt;button class=&quot;a-btn&quot; title=&quot;Default state&quot;&gt;Default state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
+  &lt;button class=&quot;a-btn hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn focus&quot; title=&quot;Focused state&quot;&gt;Focused state&lt;/button&gt;
+  &lt;button class=&quot;a-btn focus&quot; title=&quot;Focused state&quot;&gt;Focused state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn active&quot; title=&quot;Active state&quot;&gt;Active state&lt;/button&gt;`,
+  &lt;button class=&quot;a-btn active&quot; title=&quot;Active state&quot;&gt;Active state&lt;/button&gt;
+&lt;/div&gt;`,
                 
                     'variation_name2': 'Secondary button',
                     'variation_description2': "Use+a+secondary+button+for+actions+that+happen+on+the+current+page.%0A",
-                    'variation_code_snippet2': `&lt;button class=&quot;a-btn a-btn--secondary&quot; title=&quot;Default state&quot;&gt;Default state&lt;/button&gt;
+                    'variation_code_snippet2': `&lt;div class=&quot;m-btn-group&quot;&gt;
+  &lt;button class=&quot;a-btn a-btn--secondary&quot; title=&quot;Default state&quot;&gt;Default
+  state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--secondary hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
+  &lt;button class=&quot;a-btn a-btn--secondary hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--secondary focus&quot; title=&quot;Focused state&quot;&gt;Focused state&lt;/button&gt;
+  &lt;button class=&quot;a-btn a-btn--secondary focus&quot; title=&quot;Focused state&quot;&gt;Focused state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--secondary active&quot; title=&quot;Active state&quot;&gt;Active state&lt;/button&gt;`,
+  &lt;button class=&quot;a-btn a-btn--secondary active&quot; title=&quot;Active state&quot;&gt;Active state&lt;/button&gt;
+&lt;/div&gt;`,
                 
                     'variation_name3': 'Disabled button',
                     'variation_description3': "%0A",
-                    'variation_code_snippet3': `&lt;button class=&quot;a-btn a-btn--disabled&quot; title=&quot;Default state&quot; disabled&gt;Default state&lt;/button&gt;
+                    'variation_code_snippet3': `&lt;div class=&quot;m-btn-group&quot;&gt;
+  &lt;button class=&quot;a-btn a-btn--disabled&quot; title=&quot;Default state&quot;
+  disabled&gt;Default state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--disabled hover&quot; title=&quot;Hovered state&quot; disabled&gt;Hovered state&lt;/button&gt;
+  &lt;button class=&quot;a-btn a-btn--disabled hover&quot; title=&quot;Hovered state&quot; disabled&gt;Hovered state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--disabled focus&quot; title=&quot;Focused state&quot; disabled&gt;Focused state&lt;/button&gt;`,
+  &lt;button class=&quot;a-btn a-btn--disabled focus&quot; title=&quot;Focused state&quot; disabled&gt;Focused state&lt;/button&gt;
+&lt;/div&gt;`,
                 
                     'variation_name4': 'Destructive button',
                     'variation_description4': "%0A",
-                    'variation_code_snippet4': `&lt;button class=&quot;a-btn a-btn--warning&quot; title=&quot;Default state&quot;&gt;Default state&lt;/button&gt;
+                    'variation_code_snippet4': `&lt;div class=&quot;m-btn-group&quot;&gt;
+  &lt;button class=&quot;a-btn a-btn--warning&quot; title=&quot;Default state&quot;&gt;Default
+  state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--warning hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
+  &lt;button class=&quot;a-btn a-btn--warning hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--warning focus&quot; title=&quot;Focused state&quot;&gt;Focused state&lt;/button&gt;`,
+  &lt;button class=&quot;a-btn a-btn--warning focus&quot; title=&quot;Focused state&quot;&gt;Focused state&lt;/button&gt;
+&lt;/div&gt;`,
                 
                     'variation_name5': 'Destructive action',
                     'variation_description5': "When+paired+with+a+primary+action%2C+indicate+the+destructive+action+using+a+destructive+action+button+link+to+the+right+of+the+primary+button.%0A",
@@ -841,57 +852,54 @@
                 
                     'variation_name6': 'Full-width button (on x-small screens)',
                     'variation_description6': "Reduce+screen+size+to+see+this+button+in+action.%0A",
-                    'variation_code_snippet6': `&lt;button class=&quot;a-btn a-btn--full-on-xs&quot; title=&quot;Default state&quot;&gt;Default state&lt;/button&gt;
+                    'variation_code_snippet6': `&lt;div class=&quot;m-btn-group&quot;&gt;
+  &lt;button class=&quot;a-btn a-btn--full-on-xs&quot; title=&quot;Default state&quot;&gt;Default
+  state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--full-on-xs hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
+  &lt;button class=&quot;a-btn a-btn--full-on-xs hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--full-on-xs focus&quot; title=&quot;Focused state&quot;&gt;Focused state&lt;/button&gt;
+  &lt;button class=&quot;a-btn a-btn--full-on-xs focus&quot; title=&quot;Focused state&quot;&gt;Focused state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn--full-on-xs active&quot; title=&quot;Active state&quot;&gt;Active state&lt;/button&gt;`,
-                
-                    'variation_name7': 'Button group',
-                    'variation_description7': "%0A",
-                    'variation_code_snippet7': `&lt;div class=&quot;m-btn-group&quot;&gt;
-    &lt;button class=&quot;a-btn&quot;&gt;Yes&lt;/button&gt;
-    &lt;button class=&quot;a-btn&quot;&gt;No&lt;/button&gt;
-    &lt;button class=&quot;a-btn&quot;&gt;Maybe&lt;/button&gt;
+  &lt;button class=&quot;a-btn a-btn--full-on-xs active&quot; title=&quot;Active state&quot;&gt;Active state&lt;/button&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name8': 'Button with icon',
-                    'variation_description8': "An+icon+should+appear+after+the+text+it+represents.+The+only+exception+is+the+back+button%2C+in+which+the+icon+should+appear+before+the+button%E2%80%99s+text.+Each+icon+should+be+used+exclusively+and+consistently+for+one+action.+Icons+should+never+be+underlined.%0A",
-                    'variation_code_snippet8': `&lt;button class=&quot;a-btn&quot;&gt;
-    &lt;span class=&quot;a-btn__icon
-                 a-btn__icon--on-left&quot;&gt;
-       <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
-    &lt;/span&gt;
-    Back
-&lt;/button&gt;
+                    'variation_name7': 'Button with icon',
+                    'variation_description7': "An+icon+should+appear+after+the+text+it+represents.+The+only+exception+is+the+back+button%2C+in+which+the+icon+should+appear+before+the+button%E2%80%99s+text.+Each+icon+should+be+used+exclusively+and+consistently+for+one+action.+Icons+should+never+be+underlined.%0A",
+                    'variation_code_snippet7': `&lt;div class=&quot;m-btn-group&quot;&gt;
+  &lt;button class=&quot;a-btn&quot;&gt;
+      &lt;span class=&quot;a-btn__icon
+                  a-btn__icon--on-left&quot;&gt;
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
+      &lt;/span&gt;
+      Back
+  &lt;/button&gt;
 
-&lt;button class=&quot;a-btn&quot;&gt;
-    Next
-    &lt;span class=&quot;a-btn__icon
-                 a-btn__icon--on-right&quot;&gt;
-        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"/></svg>
-    &lt;/span&gt;
-&lt;/button&gt;`,
+  &lt;button class=&quot;a-btn&quot;&gt;
+      Next
+      &lt;span class=&quot;a-btn__icon
+                  a-btn__icon--on-right&quot;&gt;
+          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"/></svg>
+      &lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;`,
                 
-                    'variation_name9': 'Button with animated icon',
-                    'variation_description9': "Use+an+animated+icon+in+a+button+to+reassure+the+user+that+the+action+they+are+attempting+to+perform+is+functioning+as+intended.%0A",
-                    'variation_code_snippet9': `&lt;button class=&quot;a-btn&quot;&gt;
+                    'variation_name8': 'Button with animated icon',
+                    'variation_description8': "Use+an+animated+icon+in+a+button+to+reassure+the+user+that+the+action+they+are+attempting+to+perform+is+functioning+as+intended.%0A",
+                    'variation_code_snippet8': `&lt;button class=&quot;a-btn&quot;&gt;
     Submit your complaint
     &lt;span class=&quot;a-btn__icon
                  a-btn__icon--on-right&quot;&gt;<svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--updating" viewBox="0 0 16 19"><path d="M5.857 3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.4 5.4 0 0 0-1.032 2.27 1.03 1.03 0 1 1-2.02-.395A7.46 7.46 0 0 1 2.235 4.91h-.748a1.03 1.03 0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03m-3.25 9.237a1.03 1.03 0 0 1-1.358-.523 7.5 7.5 0 0 1-.37-1.036 1.03 1.03 0 1 1 1.983-.55 5.5 5.5 0 0 0 .269.751 1.03 1.03 0 0 1-.524 1.358m2.905 2.439a1.03 1.03 0 0 1-1.42.322 7.5 7.5 0 0 1-.885-.652 1.03 1.03 0 0 1 1.34-1.563 5.4 5.4 0 0 0 .643.473 1.03 1.03 0 0 1 .322 1.42m3.68.438a1.03 1.03 0 0 1-1.014 1.044h-.106a8 8 0 0 1-.811-.044 1.03 1.03 0 0 1 .224-2.046 5 5 0 0 0 .664.031h.014a1.03 1.03 0 0 1 1.03 1.015zm.034-12.847a1.03 1.03 0 0 1-1.029 1.01h-.033a1.03 1.03 0 0 1 .017-2.06h.017l.019.001a1.03 1.03 0 0 1 1.009 1.05zm3.236 11.25a1.03 1.03 0 0 1-.3 1.425 8 8 0 0 1-.797.453 1.03 1.03 0 1 1-.905-1.849 6 6 0 0 0 .578-.328 1.03 1.03 0 0 1 1.424.3zM10.475 3.504a1.03 1.03 0 0 1 1.41-.359l.018.011a1.03 1.03 0 1 1-1.06 1.764l-.01-.006a1.03 1.03 0 0 1-.358-1.41m4.26 9.445a8 8 0 0 1-.315.56 1.03 1.03 0 1 1-1.749-1.086 5 5 0 0 0 .228-.405 1.03 1.03 0 1 1 1.836.93zm-1.959-6.052a1.03 1.03 0 0 1 1.79-1.016l.008.013a1.03 1.03 0 1 1-1.79 1.017zm2.764 2.487a9 9 0 0 1 0 .366 1.03 1.03 0 0 1-1.029 1.005h-.025A1.03 1.03 0 0 1 13.482 9.7a5 5 0 0 0 0-.266 1.03 1.03 0 0 1 1.003-1.055h.026a1.03 1.03 0 0 1 1.029 1.004z"/></svg>&lt;/span&gt;
 &lt;/button&gt;`,
                 
-                    'variation_name10': 'Printed button',
-                    'variation_description10': "When+a+consumerfinance.gov+page+is+printed%2C%C2%A0buttons%C2%A0are+presented%C2%A0as+links.+See+Printed+links+on+the+Links%C2%A0page+for+specifications.%0A",
-                    'variation_code_snippet10': ``,
+                    'variation_name9': 'Printed button',
+                    'variation_description9': "When+a+consumerfinance.gov+page+is+printed%2C%C2%A0buttons%C2%A0are+presented%C2%A0as+links.+See+Printed+links+on+the+Links%C2%A0page+for+specifications.%0A",
+                    'variation_code_snippet9': ``,
                 
             
 
 
             'title': 'Buttons',
-            'description': "Buttons+are+UI+elements+that+signal+actions.+They+should+be+used+sparingly%3B+each+additional+button+on+a+page+reduces+the+visual+prominence+of+a+call+to+action.+In+contrast%2C+links+should+lead+users+to+another+page+or+further+information.%0A",
+            'description': "Buttons+are+UI+elements+that+signal+actions.+They+should+be+used+sparingly%3B+each+additional+button+on+a+page+reduces+the+visual+prominence+of+a+call+to+action.+In+contrast%2C+links+should+lead+users+to+another+page+or+further+information.%0AButtons+that+appear+in+a+group+together+with+other+buttons+should+be+wrapped+in+a+container+with+the+m-btn-group+class+to+properly+space+the+buttons+across+screen+sizes.%0A",
             'use_cases': "Buttons+signal+actions.+They+should+be+used+sparingly%3B+each+additional+button+on+a+page+reduces+the+visual+prominence+of+a+call+to+action.+In+contrast%2C+links+should+lead+users+to+another+page+or+further+information.%0A",
             'guidelines': "%0A++Use+generous+white+space+to+bring+focus+to+a+button+and+better+make+it+appear+actionable.%0A++Write+labels+in+sentence+case.%0A++Use+verbs+and+an+active+voice.%0A++Use+clear%2C+succinct%2C+and+informative+language.%0A++Limit+the+copy+length+to+22+characters.%0A%0A",
             'behavior': "%0A",

@@ -308,7 +308,8 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Buttons are UI elements that signal actions. They should be used sparingly; each additional button on a page reduces the visual prominence of a call to action. In contrast, <a href="https://cfpb.github.io/design-system/components/links">links</a> should lead users to another page or further information.</p>
+        <p>Buttons are UI elements that signal actions. They should be used sparingly; each additional button on a page reduces the visual prominence of a call to action. In contrast, <a href="https://cfpb.github.io/design-system/components/links">links</a> should lead users to another page or further information.
+Buttons that appear in a group together with other buttons should be wrapped in a container with the <code class="language-plaintext highlighter-rouge">m-btn-group</code> class to properly space the buttons across screen sizes.</p>
 
     </section>
     
@@ -357,13 +358,15 @@
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <button class="a-btn" title="Default state">Default state</button>
+                <div class="m-btn-group">
+  <button class="a-btn" title="Default state">Default state</button>
 
-<button class="a-btn hover" title="Hovered state">Hovered state</button>
+  <button class="a-btn hover" title="Hovered state">Hovered state</button>
 
-<button class="a-btn focus" title="Focused state">Focused state</button>
+  <button class="a-btn focus" title="Focused state">Focused state</button>
 
-<button class="a-btn active" title="Active state">Active state</button>
+  <button class="a-btn active" title="Active state">Active state</button>
+</div>
             </div>
             
 
@@ -405,13 +408,15 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;button class="a-btn" title="Default state"&gt;Default state&lt;/button&gt;
+                            <pre><code class="language-html">&lt;div class="m-btn-group"&gt;
+  &lt;button class="a-btn" title="Default state"&gt;Default state&lt;/button&gt;
 
-&lt;button class="a-btn hover" title="Hovered state"&gt;Hovered state&lt;/button&gt;
+  &lt;button class="a-btn hover" title="Hovered state"&gt;Hovered state&lt;/button&gt;
 
-&lt;button class="a-btn focus" title="Focused state"&gt;Focused state&lt;/button&gt;
+  &lt;button class="a-btn focus" title="Focused state"&gt;Focused state&lt;/button&gt;
 
-&lt;button class="a-btn active" title="Active state"&gt;Active state&lt;/button&gt;</code></pre>
+  &lt;button class="a-btn active" title="Active state"&gt;Active state&lt;/button&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -470,13 +475,16 @@ when possible.</p>
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <button class="a-btn a-btn--secondary" title="Default state">Default state</button>
+                <div class="m-btn-group">
+  <button class="a-btn a-btn--secondary" title="Default state">Default
+  state</button>
 
-<button class="a-btn a-btn--secondary hover" title="Hovered state">Hovered state</button>
+  <button class="a-btn a-btn--secondary hover" title="Hovered state">Hovered state</button>
 
-<button class="a-btn a-btn--secondary focus" title="Focused state">Focused state</button>
+  <button class="a-btn a-btn--secondary focus" title="Focused state">Focused state</button>
 
-<button class="a-btn a-btn--secondary active" title="Active state">Active state</button>
+  <button class="a-btn a-btn--secondary active" title="Active state">Active state</button>
+</div>
             </div>
             
 
@@ -512,13 +520,16 @@ when possible.</p>
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;button class="a-btn a-btn--secondary" title="Default state"&gt;Default state&lt;/button&gt;
+                            <pre><code class="language-html">&lt;div class="m-btn-group"&gt;
+  &lt;button class="a-btn a-btn--secondary" title="Default state"&gt;Default
+  state&lt;/button&gt;
 
-&lt;button class="a-btn a-btn--secondary hover" title="Hovered state"&gt;Hovered state&lt;/button&gt;
+  &lt;button class="a-btn a-btn--secondary hover" title="Hovered state"&gt;Hovered state&lt;/button&gt;
 
-&lt;button class="a-btn a-btn--secondary focus" title="Focused state"&gt;Focused state&lt;/button&gt;
+  &lt;button class="a-btn a-btn--secondary focus" title="Focused state"&gt;Focused state&lt;/button&gt;
 
-&lt;button class="a-btn a-btn--secondary active" title="Active state"&gt;Active state&lt;/button&gt;</code></pre>
+  &lt;button class="a-btn a-btn--secondary active" title="Active state"&gt;Active state&lt;/button&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -564,11 +575,13 @@ when possible.</p>
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <button class="a-btn a-btn--disabled" title="Default state" disabled>Default state</button>
+                <div class="m-btn-group">
+  <button class="a-btn a-btn--disabled" title="Default state" disabled>Default state</button>
 
-<button class="a-btn a-btn--disabled hover" title="Hovered state" disabled>Hovered state</button>
+  <button class="a-btn a-btn--disabled hover" title="Hovered state" disabled>Hovered state</button>
 
-<button class="a-btn a-btn--disabled focus" title="Focused state" disabled>Focused state</button>
+  <button class="a-btn a-btn--disabled focus" title="Focused state" disabled>Focused state</button>
+</div>
             </div>
             
 
@@ -580,15 +593,15 @@ when possible.</p>
             
 
             <div class="a-toggle__code">
-                <button href="#details-disabled-button-button-class-a-b-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-disabled-button-button-class-a-b-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-disabled-button-div-class-m-btn--3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-disabled-button-div-class-m-btn--3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-disabled-button-button-class-a-b-3">
+            <div class="m-tabs u-hidden" id="details-disabled-button-div-class-m-btn--3">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-disabled-button-button-class-a-b-html-code-snippet-3">
+                        <a class="m-tabs__tab" href="#details-disabled-button-div-class-m-btn--html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -600,15 +613,18 @@ when possible.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-disabled-button-button-class-a-b-html-code-snippet-3">
+                <section class="m-tabs__panel" id="details-disabled-button-div-class-m-btn--html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;button class="a-btn a-btn--disabled" title="Default state" disabled&gt;Default state&lt;/button&gt;
+                            <pre><code class="language-html">&lt;div class="m-btn-group"&gt;
+  &lt;button class="a-btn a-btn--disabled" title="Default state"
+  disabled&gt;Default state&lt;/button&gt;
 
-&lt;button class="a-btn a-btn--disabled hover" title="Hovered state" disabled&gt;Hovered state&lt;/button&gt;
+  &lt;button class="a-btn a-btn--disabled hover" title="Hovered state" disabled&gt;Hovered state&lt;/button&gt;
 
-&lt;button class="a-btn a-btn--disabled focus" title="Focused state" disabled&gt;Focused state&lt;/button&gt;</code></pre>
+  &lt;button class="a-btn a-btn--disabled focus" title="Focused state" disabled&gt;Focused state&lt;/button&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -654,11 +670,14 @@ when possible.</p>
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <button class="a-btn a-btn--warning" title="Default state">Default state</button>
+                <div class="m-btn-group">
+  <button class="a-btn a-btn--warning" title="Default state">Default
+  state</button>
 
-<button class="a-btn a-btn--warning hover" title="Hovered state">Hovered state</button>
+  <button class="a-btn a-btn--warning hover" title="Hovered state">Hovered state</button>
 
-<button class="a-btn a-btn--warning focus" title="Focused state">Focused state</button>
+  <button class="a-btn a-btn--warning focus" title="Focused state">Focused state</button>
+</div>
             </div>
             
 
@@ -670,15 +689,15 @@ when possible.</p>
             
 
             <div class="a-toggle__code">
-                <button href="#details-destructive-button-button-class--4" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-destructive-button-button-class--4" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-destructive-button-div-class-m-b-4" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-destructive-button-div-class-m-b-4" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-destructive-button-button-class--4">
+            <div class="m-tabs u-hidden" id="details-destructive-button-div-class-m-b-4">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-destructive-button-button-class--html-code-snippet-4">
+                        <a class="m-tabs__tab" href="#details-destructive-button-div-class-m-b-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
@@ -690,15 +709,18 @@ when possible.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-destructive-button-button-class--html-code-snippet-4">
+                <section class="m-tabs__panel" id="details-destructive-button-div-class-m-b-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;button class="a-btn a-btn--warning" title="Default state"&gt;Default state&lt;/button&gt;
+                            <pre><code class="language-html">&lt;div class="m-btn-group"&gt;
+  &lt;button class="a-btn a-btn--warning" title="Default state"&gt;Default
+  state&lt;/button&gt;
 
-&lt;button class="a-btn a-btn--warning hover" title="Hovered state"&gt;Hovered state&lt;/button&gt;
+  &lt;button class="a-btn a-btn--warning hover" title="Hovered state"&gt;Hovered state&lt;/button&gt;
 
-&lt;button class="a-btn a-btn--warning focus" title="Focused state"&gt;Focused state&lt;/button&gt;</code></pre>
+  &lt;button class="a-btn a-btn--warning focus" title="Focused state"&gt;Focused state&lt;/button&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -832,13 +854,16 @@ when possible.</p>
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <button class="a-btn a-btn--full-on-xs" title="Default state">Default state</button>
+                <div class="m-btn-group">
+  <button class="a-btn a-btn--full-on-xs" title="Default state">Default
+  state</button>
 
-<button class="a-btn a-btn--full-on-xs hover" title="Hovered state">Hovered state</button>
+  <button class="a-btn a-btn--full-on-xs hover" title="Hovered state">Hovered state</button>
 
-<button class="a-btn a-btn--full-on-xs focus" title="Focused state">Focused state</button>
+  <button class="a-btn a-btn--full-on-xs focus" title="Focused state">Focused state</button>
 
-<button class="a-btn a-btn--full-on-xs active" title="Active state">Active state</button>
+  <button class="a-btn a-btn--full-on-xs active" title="Active state">Active state</button>
+</div>
             </div>
             
 
@@ -874,102 +899,15 @@ when possible.</p>
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;button class="a-btn a-btn--full-on-xs" title="Default state"&gt;Default state&lt;/button&gt;
-
-&lt;button class="a-btn a-btn--full-on-xs hover" title="Hovered state"&gt;Hovered state&lt;/button&gt;
-
-&lt;button class="a-btn a-btn--full-on-xs focus" title="Focused state"&gt;Focused state&lt;/button&gt;
-
-&lt;button class="a-btn a-btn--full-on-xs active" title="Active state"&gt;Active state&lt;/button&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Button group
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live__code">
-                <div class="m-btn-group">
-    <button class="a-btn">Yes</button>
-    <button class="a-btn">No</button>
-    <button class="a-btn">Maybe</button>
-</div>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle__code">
-                <button href="#details-button-group-div-class-m-btn-gro-7" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-button-group-div-class-m-btn-gro-7" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-button-group-div-class-m-btn-gro-7">
-                <ul class="m-tabs__list">
-                    
-                    <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-button-group-div-class-m-btn-gro-html-code-snippet-7">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs__panel" id="details-button-group-div-class-m-btn-gro-html-code-snippet-7">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
                             <pre><code class="language-html">&lt;div class="m-btn-group"&gt;
-    &lt;button class="a-btn"&gt;Yes&lt;/button&gt;
-    &lt;button class="a-btn"&gt;No&lt;/button&gt;
-    &lt;button class="a-btn"&gt;Maybe&lt;/button&gt;
+  &lt;button class="a-btn a-btn--full-on-xs" title="Default state"&gt;Default
+  state&lt;/button&gt;
+
+  &lt;button class="a-btn a-btn--full-on-xs hover" title="Hovered state"&gt;Hovered state&lt;/button&gt;
+
+  &lt;button class="a-btn a-btn--full-on-xs focus" title="Focused state"&gt;Focused state&lt;/button&gt;
+
+  &lt;button class="a-btn a-btn--full-on-xs active" title="Active state"&gt;Active state&lt;/button&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                     </div>
@@ -1016,21 +954,23 @@ when possible.</p>
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <button class="a-btn">
-    <span class="a-btn__icon
-                 a-btn__icon--on-left">
-       <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg>
-    </span>
-    Back
-</button>
+                <div class="m-btn-group">
+  <button class="a-btn">
+      <span class="a-btn__icon
+                  a-btn__icon--on-left">
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg>
+      </span>
+      Back
+  </button>
 
-<button class="a-btn">
-    Next
-    <span class="a-btn__icon
-                 a-btn__icon--on-right">
-        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
-    </span>
-</button>
+  <button class="a-btn">
+      Next
+      <span class="a-btn__icon
+                  a-btn__icon--on-right">
+          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
+      </span>
+  </button>
+</div>
             </div>
             
 
@@ -1042,15 +982,15 @@ when possible.</p>
             
 
             <div class="a-toggle__code">
-                <button href="#details-button-with-icon-an-icon-should--8" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-button-with-icon-an-icon-should--8" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-button-with-icon-an-icon-should--7" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-button-with-icon-an-icon-should--7" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-button-with-icon-an-icon-should--8">
+            <div class="m-tabs u-hidden" id="details-button-with-icon-an-icon-should--7">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-button-with-icon-an-icon-should--html-code-snippet-8">
+                        <a class="m-tabs__tab" href="#details-button-with-icon-an-icon-should--html-code-snippet-7">
                             HTML code snippet
                         </a>
                     </li>
@@ -1062,25 +1002,27 @@ when possible.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-button-with-icon-an-icon-should--html-code-snippet-8">
+                <section class="m-tabs__panel" id="details-button-with-icon-an-icon-should--html-code-snippet-7">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;button class="a-btn"&gt;
-    &lt;span class="a-btn__icon
-                 a-btn__icon--on-left"&gt;
-       <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg>
-    &lt;/span&gt;
-    Back
-&lt;/button&gt;
+                            <pre><code class="language-html">&lt;div class="m-btn-group"&gt;
+  &lt;button class="a-btn"&gt;
+      &lt;span class="a-btn__icon
+                  a-btn__icon--on-left"&gt;
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg>
+      &lt;/span&gt;
+      Back
+  &lt;/button&gt;
 
-&lt;button class="a-btn"&gt;
-    Next
-    &lt;span class="a-btn__icon
-                 a-btn__icon--on-right"&gt;
-        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
-    &lt;/span&gt;
-&lt;/button&gt;</code></pre>
+  &lt;button class="a-btn"&gt;
+      Next
+      &lt;span class="a-btn__icon
+                  a-btn__icon--on-right"&gt;
+          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
+      &lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1142,15 +1084,15 @@ when possible.</p>
             
 
             <div class="a-toggle__code">
-                <button href="#details-button-with-animated-icon-use-an-9" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-button-with-animated-icon-use-an-9" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-button-with-animated-icon-use-an-8" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-button-with-animated-icon-use-an-8" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-button-with-animated-icon-use-an-9">
+            <div class="m-tabs u-hidden" id="details-button-with-animated-icon-use-an-8">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-button-with-animated-icon-use-an-html-code-snippet-9">
+                        <a class="m-tabs__tab" href="#details-button-with-animated-icon-use-an-html-code-snippet-8">
                             HTML code snippet
                         </a>
                     </li>
@@ -1162,7 +1104,7 @@ when possible.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-button-with-animated-icon-use-an-html-code-snippet-9">
+                <section class="m-tabs__panel" id="details-button-with-animated-icon-use-an-html-code-snippet-8">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1383,8 +1325,8 @@ when possible.</p>
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/buttons.md">
-                            <time datetime="2024-10-25 16:57:48 -0400">
-                                 4:57:48 PM Oct 25, 2024
+                            <time datetime="2024-10-25 17:24:11 -0400">
+                                 5:24:11 PM Oct 25, 2024
                             </time>
                         </a>
                     </section>

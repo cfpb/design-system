@@ -87,7 +87,7 @@
   "release-it": {
     "git": {
       "requireBranch": "main",
-      "changelog": "cd packages/cfpb-design-system && auto-changelog",
+      "changelog": "cd packages/cfpb-design-system && auto-changelog --stdout",
       "commitsPath": "packages/cfpb-design-system",
       "requireCommits": true
     },

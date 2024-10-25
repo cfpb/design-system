@@ -23,9 +23,6 @@
   },
   "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e",
   "type": "module",
-  "devDependencies": {
-    "auto-changelog": "2.5.0"
-  },
   "auto-changelog": {
     "commitLimit": false,
     "ignoreCommitPattern": "^Update \".+\" page",

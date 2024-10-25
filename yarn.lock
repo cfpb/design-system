@@ -424,8 +424,6 @@ __metadata:
 "@cfpb/cfpb-design-system@workspace:packages/cfpb-design-system":
   version: 0.0.0-use.local
   resolution: "@cfpb/cfpb-design-system@workspace:packages/cfpb-design-system"
-  dependencies:
-    auto-changelog: "npm:2.5.0"
   languageName: unknown
   linkType: soft
 
@@ -3445,6 +3443,7 @@ __metadata:
     "@lhci/cli": "npm:0.14.0"
     "@types/react": "npm:18.3.12"
     anchor-js: "npm:5.0.0"
+    auto-changelog: "npm:2.5.0"
     autoprefixer: "npm:10.4.20"
     concurrently: "npm:9.0.1"
     cypress: "npm:13.15.1"

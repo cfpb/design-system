@@ -17,5 +17,5 @@ jobs:
 
       - name: Update GitHub pages
         run: ./scripts/update-gh-pages.sh
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,6 +1,20 @@
 ## Changelog
 
-### [v3.2.5](https://github.com/cfpb/design-system/compare/v3.2.4...v3.2.5) - 
+### [v3.2.6](https://github.com/cfpb/design-system/compare/v3.2.5...v3.2.6) - 
+
+### General Changes
+
+- Update button groups to use flexbox (Ans - [#2075](https://github.com/cfpb/design-system/pull/2075))
+- workflows/pages.yml - Fix indenting (Ans - [#2080](https://github.com/cfpb/design-system/pull/2080))
+- Create shared setup action for the GH action workflows (Ans - [#2079](https://github.com/cfpb/design-system/pull/2079))
+- Add `on: workflow_dispatch:` to allow manually triggering of Lighthouse job (Ans - [#2078](https://github.com/cfpb/design-system/pull/2078))
+- Adjust yarn 4 config (Ans - [#2077](https://github.com/cfpb/design-system/pull/2077))
+- Lighthouse action: Update yarn cache path (Ans - [#2076](https://github.com/cfpb/design-system/pull/2076))
+- Update Cypress command (Ans - [#2070](https://github.com/cfpb/design-system/pull/2070))
+- Update to yarn 4.5.1 (Ans - [#1916](https://github.com/cfpb/design-system/pull/1916))
+- Update dependencies: `@types/react`, `release-it`, `sass` (Ans - [#2074](https://github.com/cfpb/design-system/pull/2074))
+
+### [v3.2.5](https://github.com/cfpb/design-system/compare/v3.2.4...v3.2.5) -  23 October 2024 
 
 ### General Changes
 

@@ -1,0 +1,19 @@
+name: "Shared action - setup"
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Set up Ruby for Jekyll
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.2.3
+
+    - name: Install dependencies with Yarn
+      shell: bash
+      run: |
+        yarn install
+        yarn after-install

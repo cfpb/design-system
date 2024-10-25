@@ -14,13 +14,8 @@ jobs:
     - name: Check out the repo
       uses: actions/checkout@v4
 
-    - name: Set up Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-
-    - name: Install dependencies with Yarn
-      run: yarn install
+    - name: Shared setup
+      uses:  ./.github/actions/shared-action-setup
 
     - name: Run unit tests
       run: yarn jest

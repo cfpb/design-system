@@ -4,6 +4,8 @@ on:
   # Run every night at midnight UTC.
   schedule:
     - cron: '0 0 * * *'
+  # Allow manual triggering of the action.
+  workflow_dispatch:
 
 jobs:
   lighthouseci:

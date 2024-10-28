@@ -28,10 +28,3 @@ jobs:
         run: yarn lhci autorun
         env:
           LHCI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Attach results as artifact to GitHub Actions run
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: lighthouse-results
-          path: .lighthouseci

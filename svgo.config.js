@@ -21,6 +21,12 @@ export default {
       },
     },
     {
+      name: 'addAttributesToSVGElement',
+      params: {
+        attributes: [{ 'aria-hidden': 'true' }],
+      },
+    },
+    {
       name: 'addClassesToSVGElement',
       params: { className: 'cf-icon-svg', suffixPattern: '--$FILENAME' },
       fn: addClassesToSVGElement.fn,

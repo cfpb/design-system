@@ -10,8 +10,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "tag": "next"
+    "registry": "https://registry.npmjs.org/"
   },
   "license": "SEE LICENSE IN TERMS.md",
   "repository": {

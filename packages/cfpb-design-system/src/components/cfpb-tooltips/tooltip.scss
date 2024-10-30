@@ -1,7 +1,7 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
-@import 'tippy.js/dist/tippy.css';
-@import 'tippy.js/dist/border.css';
+@use 'tippy.js/dist/tippy.css';
+@use 'tippy.js/dist/border.css';
 
 // Custom theme, see https://atomiks.github.io/tippyjs/v6/themes/
 .tippy-box[data-theme='cfpb'] {
@@ -24,4 +24,9 @@
     font-size: math.div(16px, $base-font-size-px) + rem;
     margin-top: math.div(15px, $base-font-size-px) + rem;
   }
+}
+
+// Hide tooltip trigger elements when JS isn't supported
+.no-js [data-tooltip] {
+  display: none;
 }

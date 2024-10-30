@@ -70,8 +70,9 @@ guidelines: Be judicious in using tooltips and explore other design options that
   keep content visible before choosing to use a tooltip. Only consider using a
   tooltip for short, non-critical information in a space-constrained user
   interface. Because a tooltip is hidden until activated, ensure content within
-  a tooltip is not essential for completing a task on the page. For more
-  guidance, see the [USWDS tooltip
+  a tooltip is not essential for completing a task on the page. The tooltip
+  trigger element (usually a help icon) will be hidden for users with JavaScript
+  disabled. For more guidance, see the [USWDS tooltip
   page](https://designsystem.digital.gov/components/tooltip/).
 eyebrow: Components
 behavior: >

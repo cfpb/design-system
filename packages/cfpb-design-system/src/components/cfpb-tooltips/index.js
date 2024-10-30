@@ -54,10 +54,10 @@ function Tooltip(element) {
             }
             return {
               onShow() {
-                document.addEventListener('keydown', onKeyDown);
+                document.body.addEventListener('keydown', onKeyDown);
               },
               onHide() {
-                document.removeEventListener('keydown', onKeyDown);
+                document.body.removeEventListener('keydown', onKeyDown);
               },
             };
           },

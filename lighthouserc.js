@@ -1,5 +1,5 @@
-const glob = require('glob');
-const path = require('path');
+import { glob } from 'glob';
+import { path } from 'path';
 
 let extraCollect = {};
 
@@ -48,7 +48,7 @@ if (!urlsSpecified) {
   };
 }
 
-module.exports = {
+export default {
   ci: {
     collect: {
       numberOfRuns: 1,

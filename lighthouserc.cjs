@@ -24,7 +24,7 @@ if (!urlsSpecified) {
       "No HTML files found; build the docs first with 'yarn build-decap'.",
     );
 
-    // eslint-disable-next-line no-process-exit
+     
     process.exit(1);
   }
 

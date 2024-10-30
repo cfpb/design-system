@@ -5,7 +5,7 @@ const path = require('path');
 exports.name = 'addClassesToSVGElement';
 exports.description = 'adds classnames to an outer <svg> element';
 
-var ENOCLS = `Error in plugin "addClassesToSVGElement": absent parameters.
+const ENOCLS = `Error in plugin "addClassesToSVGElement": absent parameters.
 It should have a list of classes in "classNames" or one "className".
 Config example:
 plugins: [
@@ -42,34 +42,34 @@ plugins: [
  * Add classnames to an outer <svg> element. Example config:
  *
  * plugins: [
- *   {
- *     name: "addClassesToSVGElement",
- *     params: {
- *       className: "mySvg"
- *     }
- *   }
+ * {
+ * name: "addClassesToSVGElement",
+ * params: {
+ * className: "mySvg"
+ * }
+ * }
  * ]
  *
  * plugins: [
- *   {
- *     name: "addClassesToSVGElement",
- *     params: {
- *       classNames: ["mySvg", "size-big"]
- *     }
- *   }
+ * {
+ * name: "addClassesToSVGElement",
+ * params: {
+ * classNames: ["mySvg", "size-big"]
+ * }
+ * }
  * ]
  *
  * Use the suffixPattern parameter to add an arbitrary suffix to
  * the class names.
  *
  * plugins: [
- *   {
- *     name: "addClassesToSVGElement",
- *     params: {
- *       classNames: ["mySvg"],
- *       suffixPattern: "__$FILENAME"
- *     }
- *   }
+ * {
+ * name: "addClassesToSVGElement",
+ * params: {
+ * classNames: ["mySvg"],
+ * suffixPattern: "__$FILENAME"
+ * }
+ * }
  * ]
  *
  * Use the boolean doesPreserveClasses parameter to preserve any
@@ -77,17 +77,15 @@ plugins: [
  * classes will be removed.
  *
  * plugins: [
- *   {
- *     name: "addClassesToSVGElement",
- *     params: {
- *       classNames: ["mySvg"],
- *       doesPreserveClasses: true
- *     }
- *   }
+ * {
+ * name: "addClassesToSVGElement",
+ * params: {
+ * classNames: ["mySvg"],
+ * doesPreserveClasses: true
+ * }
+ * }
  * ]
- *
  * @author April Arcus, Anselm Bradford
- *
  * @type {import('./plugins-types').Plugin<'addClassesToSVGElement'>}
  */
 exports.fn = (root, params, info) => {
@@ -114,7 +112,7 @@ exports.fn = (root, params, info) => {
     let suffixPattern = params.suffixPattern;
     const filename = path.basename(info.path, '.svg');
     suffixPattern = suffixPattern.replace('$FILENAME', filename);
-    for (var i = 0, len = classNames.length; i < len; i++) {
+    for (let i = 0, len = classNames.length; i < len; i++) {
       classNames.push(classNames[i] + suffixPattern);
     }
   }

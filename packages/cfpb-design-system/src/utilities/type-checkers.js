@@ -121,7 +121,7 @@ function isFunction(value) {
 }
 
 // TODO Fix complexity issue
-/* eslint-disable complexity, no-mixed-operators */
+
 /**
  * @name isEmpty
  * @kind function
@@ -138,7 +138,6 @@ function isEmpty(value) {
     /^\s*$/.test(value)
   );
 }
-/* eslint-enable complexity, no-mixed-operators */
 
 // Expose public methods.
 export {

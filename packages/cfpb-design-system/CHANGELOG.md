@@ -1,6 +1,13 @@
 ## Changelog
 
-### [v3.2.6](https://github.com/cfpb/design-system/compare/v3.2.5...v3.2.6) - 
+### [v3.2.7](https://github.com/cfpb/design-system/compare/v3.2.6...v3.2.7) - 
+
+### General Changes
+
+- Add `aria-hidden:true` to SVG icons (Ans - [#2082](https://github.com/cfpb/design-system/pull/2082))
+- Remove unused Lighthouse results upload (Andy Chosak - [#2081](https://github.com/cfpb/design-system/pull/2081))
+
+### [v3.2.6](https://github.com/cfpb/design-system/compare/v3.2.5...v3.2.6) -  25 October 2024 
 
 ### General Changes
 

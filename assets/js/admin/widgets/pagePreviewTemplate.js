@@ -9,7 +9,7 @@ import Tabs from '../../../../assets/js/tabs.js';
 import { encode } from 'html-entities';
 import slugify from 'slugify';
 import template from '../../../../_includes/variation-content.html';
-// eslint-disable-next-line import/namespace
+
 import { marked } from '../../../../../node_modules/marked/lib/marked.esm.js';
 
 // react-liquid (https://github.com/aquibm/react-liquid/) isn't able to `include` other files so we
@@ -71,7 +71,7 @@ export default class Preview extends Component {
     };
     return (
       // TODO: We're breaking some a11y here by making the whole page clickable.
-      // eslint-disable-next-line
+      // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
       <div ref={this.containerRef} onClick={(event) => this.handleClick(event)}>
         <ReactLiquid template={templateWithIcons} data={data} html />
       </div>

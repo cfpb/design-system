@@ -1,6 +1,3 @@
-/* eslint-disable handle-callback-err */
-/* eslint-disable no-undef */
-
 const getIframeBody = () => {
   // Get the iframe > document > body
   // and retry until the body element is not empty

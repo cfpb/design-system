@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import {
   BEHAVIOR_PREFIX,
   JS_HOOK,

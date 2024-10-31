@@ -319,7 +319,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-33 content-first" markdown="1">
+  <div class="content-67 content-first" markdown="1">
 
 
   <h4 class="h5">Trademark Notice </h4>
@@ -331,7 +331,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-67 content-last" markdown="1">
+  <div class="content-33 content-last" markdown="1">
 
 
   </div>

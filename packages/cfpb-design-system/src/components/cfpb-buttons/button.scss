@@ -42,6 +42,7 @@ input.a-btn::-moz-focus-inner {
   &:focus,
   &.focus {
     background-color: $btn-bg-hover;
+    color: $btn-text;
   }
 
   &:focus,

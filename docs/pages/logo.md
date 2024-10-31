@@ -624,21 +624,11 @@ guidelines: >-
   </div>
 
 
-  <div class="content-67 content-first" markdown="1">
 
 
   <h4 class="h5">Trademark Notice </h4>
 
 
   <small> The CFPB’s logo and the standard characters Consumer Financial Protection Bureau, CFPB, Know Before You Owe, and Money as You Grow are registered trademarks owned by the CFPB. Nothing on this website shall be construed as granting any license to use any trademark displayed on the website without the express written permission of the CFPB. Your use of these registered trademarks must comply with intellectual property laws. You may not use the CFPB trademarks to state or imply an association with or endorsement of your goods, services, or activities, nor in any manner that infringes upon the CFPB trademarks. Requests to use the CFPB trademarks should be made to the Office of the General Counsel, <a href="mailto:cfpb_ip@cfpb.gov">cfpb_ip@cfpb.gov</a>.
-
-
-  </div>
-
-
-  <div class="content-33 content-last" markdown="1">
-
-
-  </div>
 related_items: ""
 ---

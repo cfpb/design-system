@@ -4,11 +4,11 @@ layout: variation
 section: foundation
 eyebrow: Brand symbols
 description: >-
-
+  
   The CFPB logo was designed to symbolize vigilance, transparency, and a consumer focus. Consumers are the foundation and focus of our mission and our logo reflects that. A soft beam of light symbolizes our efforts to illuminate the financial landscape and foster transparency in the marketplace.
 variation_groups:
   - variation_group_name: Lockups
-    variation_group_description: ''
+    variation_group_description: ""
     variations:
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -109,7 +109,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ''
+        variation_specs: ""
       - variation_name: Isolated
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -128,7 +128,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ''
+        variation_specs: ""
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -147,7 +147,7 @@ variation_groups:
 
           </div>
         variation_name: Small execution
-  - variation_group_description: ''
+  - variation_group_description: ""
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
@@ -171,7 +171,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ''
+        variation_specs: ""
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -190,7 +190,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ''
+        variation_specs: ""
 guidelines: >-
   ### Clear space
 
@@ -619,6 +619,26 @@ guidelines: >-
 
 
   ![Example of misuse: logo directly on color background](/design-system/images/uploads/logo_misuse_background_071720.png)
+
+
+  </div>
+
+
+
+
+  <div class="content-67 content-first" markdown="1">
+
+
+  <h4 class="h5">Trademark Notice </h4>
+
+
+  <small> The CFPB’s logo and the standard characters Consumer Financial Protection Bureau, CFPB, Know Before You Owe, and Money as You Grow are registered trademarks owned by the CFPB. Nothing on this website shall be construed as granting any license to use any trademark displayed on the website without the express written permission of the CFPB. Your use of these registered trademarks must comply with intellectual property laws. You may not use the CFPB trademarks to state or imply an association with or endorsement of your goods, services, or activities, nor in any manner that infringes upon the CFPB trademarks. Requests to use the CFPB trademarks should be made to the Office of the General Counsel, <a href="mailto:cfpb_ip@cfpb.gov">cfpb_ip@cfpb.gov</a>.
+
+
+  </div>
+
+
+  <div class="content-33 content-last" markdown="1">
 
 
   </div>

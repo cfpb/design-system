@@ -5,4 +5,5 @@
   display: flex;
   gap: math.div(10px, $base-font-size-px) + rem;
   flex-wrap: wrap;
+  align-items: center;
 }

@@ -137,6 +137,17 @@ variation_groups:
           Use an animated icon in a button to reassure the user that the action
           they are attempting to perform is functioning as intended.
       - variation_is_deprecated: false
+        variation_name: Button link
+        variation_code_snippet: >-
+          <div class="m-btn-group">
+              <a class="a-btn">Submit</a>
+              <a class="a-btn a-btn--link a-btn--secondary" href="#">
+                  See Privacy Act statement
+              </a>
+          </div>
+        variation_description: >
+          A link can be styled as a button, and vice versa.
+      - variation_is_deprecated: false
         variation_name: Printed button
         variation_description: When a
           [consumerfinance.gov](https://www.consumerfinance.gov/) page is

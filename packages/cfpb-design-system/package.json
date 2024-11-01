@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-design-system",
-  "version": "3.2.7",
+  "version": "3.2.8",
   "description": "CFPB's UI framework",
   "main": "src/index.js",
   "author": {

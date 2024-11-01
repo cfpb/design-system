@@ -7,11 +7,18 @@ All notable changes to this project will be documented in this file.
 ### PRs in this release
 
 - PR #[2083](https://github.com/cfpb/design-system/pull/2083): Update to ESLint@9.x - Ans
+- PR #[2085](https://github.com/cfpb/design-system/pull/2085): Add button link example | Correctly vertically align button group link buttons - Ans
+- PR #[2090](https://github.com/cfpb/design-system/pull/2090): Switch to git-cliff from auto-changelog - Ans
 
 ### General
 
 - Update to ESLint@9.x - ([b7fff18](https://github.com/cfpb/design-system/commit/b7fff18ecbc44e9916d65738a52ed24e7cce9d75)) - Ans
-- Switch to git-cliff from auto-changelog - ([633b043](https://github.com/cfpb/design-system/commit/633b04345fd83ea3e0f63f6065c6bfa42803f8b7)) - Ans
+- Add button link example | Correctly vertically align button group link buttons - ([3da715a](https://github.com/cfpb/design-system/commit/3da715a64b907cc71dc753395db42148408519fc)) - Ans
+- Add button color to hover - ([5acef20](https://github.com/cfpb/design-system/commit/5acef20549ef2d2c224dfc767f24af740bf10fa2)) - Ans
+- Change to center alignment - ([7f38dc7](https://github.com/cfpb/design-system/commit/7f38dc76307f4c9d00b581892259d676cb1fd867)) - Ans
+- Switch to git-cliff from auto-changelog - ([3f6d1be](https://github.com/cfpb/design-system/commit/3f6d1bef9f8204bc92dae6b1f9c9c7b80f9dd30d)) - Ans
+- Rebuild assets - ([cbcb6d6](https://github.com/cfpb/design-system/commit/cbcb6d6ad4c98376e7116a23f72ad09fd9669af9)) - Ans
+- Adjust release changelog command - ([a93b228](https://github.com/cfpb/design-system/commit/a93b228ca863c4408dd2630fe2f3e6ae4324e7e1)) - Ans
 
 ## [3.2.7](https://github.com/cfpb/design-system/compare/v3.2.6..v3.2.7) - 2024-10-30
 

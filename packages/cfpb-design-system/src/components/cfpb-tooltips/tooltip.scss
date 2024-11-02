@@ -26,7 +26,11 @@
   }
 }
 
-// Hide tooltip trigger elements when JS isn't supported
-.no-js [data-tooltip] {
-  display: none;
+[data-tooltip] {
+  cursor: pointer;
+
+  // Hide tooltip trigger elements when JS isn't supported
+  .no-js & {
+    display: none;
+  }
 }

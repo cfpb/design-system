@@ -94,7 +94,7 @@
       "requireCommits": true
     },
     "hooks": {
-      "after:bump": "yarn exec git-cliff -o 'packages/cfpb-design-system/CHANGELOG.md' --include-path 'packages/cfpb-design-system/**/*'"
+      "after:git:beforeRelease": "yarn exec git-cliff -o 'packages/cfpb-design-system/CHANGELOG.md' --include-path 'packages/cfpb-design-system/**/*'"
     },
     "npm": {
       "publish": false,

@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [3.2.8](https://github.com/cfpb/design-system/compare/v3.2.7..v3.2.8) - 2024-11-01
 
 ### PRs in this release
 

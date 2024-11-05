@@ -59,7 +59,7 @@ variation_groups:
       - variation_code_snippet: >-
           <nav class="m-pagination" role="navigation" aria-label="Pagination">
 
-          <a class="a-btn  a-btn--disabled m-pagination__btn-prev">
+          <a class="a-btn a-btn--disabled m-pagination__btn-prev">
 
           {% include icons/left.svg %}<span>Newer</span></a>
 

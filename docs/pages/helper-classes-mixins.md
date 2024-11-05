@@ -401,7 +401,7 @@ variation_groups:
           `.u-small-text(@context)`
 
 
-          ```js
+          ```scss
 
           // Ex.
 
@@ -413,19 +413,20 @@ variation_groups:
             }
           }
 
-
           // Compiles to
 
           .example {
             font-size: 1.25em;
           }
 
-
           .example small {
             font-size: 0.7em;
           }
 
           ```
+
+          There is also a modifier, `u-small-text--subtle`, which sets the color
+          to be gray.
 guidelines: ''
 eyebrow: Utilities
 status: Released

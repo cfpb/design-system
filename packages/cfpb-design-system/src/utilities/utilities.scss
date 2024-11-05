@@ -425,4 +425,8 @@
 small,
 .u-small-text {
   @include u-small-text;
+
+  &--subtle {
+    color: var(--gray);
+  }
 }

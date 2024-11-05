@@ -13,9 +13,18 @@ input.a-btn::-moz-focus-inner {
   border: 0;
 }
 
+@mixin a-btn-divider() {
+  content: '';
+  border-left: 1px solid $btn-divider;
+  order: 2;
+  place-self: normal;
+}
+
 @mixin a-btn() {
   appearance: none;
-  display: inline-block;
+  display: flex;
+  gap: math.div(10px, $base-font-size-px) + rem;
+
   box-sizing: border-box;
   padding: math.div($btn-v-padding, $btn-font-size) + em
     math.div($btn-h-padding, $btn-font-size) + em;
@@ -154,6 +163,37 @@ input.a-btn::-moz-focus-inner {
     @include respond-to-max($bp-xs-max) {
       display: block;
       width: 100%;
+    }
+  }
+
+  // Handle button with icon logic.
+  &:has(svg):before {
+    @include a-btn-divider;
+  }
+
+  &--secondary:has(svg):before {
+    border-color: $btn-secondary-divider;
+  }
+
+  &--warning:has(svg):before {
+    border-color: $btn-warning-divider;
+  }
+
+  &--disabled:has(svg):before,
+  &[disabled]:has(svg):before {
+    border-color: $btn-disabled-divider;
+  }
+
+  // Set either the text or icon as the last item in the button.
+  &:has(svg + span) {
+    span {
+      order: 3;
+    }
+  }
+
+  &:has(span + svg) {
+    svg {
+      order: 3;
     }
   }
 }

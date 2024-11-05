@@ -7,77 +7,51 @@
 //
 
 .m-pagination {
-  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    'pag-btn-prev . pag-btn-next'
+    'pag-form pag-form pag-form';
 
   &__form {
-    padding: math.div(5px, $base-font-size-px) + em;
-    border-radius: math.div(4px, $base-font-size-px) + em;
+    grid-area: pag-form;
+    display: flex;
+    flex-flow: wrap;
+    place-content: center;
+    gap: math.div(10px, $base-font-size-px) + rem;
+
+    padding: math.div(5px, $base-font-size-px) + rem;
+    border-radius: math.div(4px, $base-font-size-px) + rem;
     background: $pagination-bg;
     color: $pagination-text;
-    text-align: center;
   }
 
   &__current-page {
     // 45px is a magic number to provide enough room for three digits
     // and the number spinners for type="number" inputs on desktop
-    width: math.div(45px, $base-font-size-px) + em;
+    width: math.div(45px, $base-font-size-px) + rem;
 
-    // 10px + a normal inline single space ~= spec'ed value of 15px
-    margin-right: math.div(10px, $base-font-size-px) + em;
-    margin-left: math.div(10px, $base-font-size-px) + em;
     font-weight: 500;
     text-align: right;
   }
 
   &__label {
-    display: inline-block;
-
-    // 10px + a normal inline single space ~= spec'ed value of 15px
-    margin-right: math.div(10px, $base-font-size-px) + em;
-    vertical-align: middle;
+    display: contents;
+    white-space: nowrap;
   }
 
-  &__btn-submit {
-    margin: 0;
-    vertical-align: middle;
+  &__btn-prev {
+    grid-area: pag-btn-prev;
   }
-
-  &__btn-prev,
   &__btn-next {
-    min-width: $pagination-btn-min-width-px;
-
-    // 22px is a magic number to vertically center the type in the button
-    // TODO: Consider refactoring with flexbox for vertical centering
-    line-height: 22px;
-    text-align: center;
-
-    &.a-btn--disabled {
-      background-color: $pagination-bg;
-      border-color: transparent;
-    }
-  }
-
-  &__btn-next {
-    position: absolute;
-    right: 0;
-  }
-
-  // Mobile only.
-  @include respond-to-max($bp-xs-max) {
-    &__btn-prev,
-    &__btn-next {
-      margin-bottom: math.div(15px, $base-font-size-px) + em;
-    }
+    grid-area: pag-btn-next;
   }
 
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {
-    &__btn-prev,
-    &__btn-next {
-      height: 100%;
-    }
+    grid-template-areas: 'pag-btn-prev pag-form pag-btn-next';
+
     &__btn-prev {
-      position: absolute;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }

@@ -16,16 +16,6 @@
     display: inline-block;
   }
 
-  .a-btn__text {
-    display: inline;
-  }
-
-  .a-btn__icon {
-    padding-left: 0.6875em;
-    border-left: 1px solid #80b9e7;
-    margin-left: 0.4375em;
-  }
-
   // Hide the admin buttons when printing
   @include respond-to-print {
     display: none;

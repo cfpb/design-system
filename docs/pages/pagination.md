@@ -87,7 +87,7 @@ variation_groups:
         variation_description:
           When on the first or last page of paginated content, be
           sure to disable the appropriate buttons by adding the
-          `a_btn__disabled` modifier and removing their `href` attribute.
+          `a-btn--disabled` modifier and removing their `href` attribute.
         variation_jinja_code_snippet: ''
         variation_name: First and last pages
     variation_group_name: Standard pagination

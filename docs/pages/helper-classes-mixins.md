@@ -98,14 +98,6 @@ variation_groups:
           class from the element after verifying support.
         variation_name: '"Totally hidden" helper class'
       - variation_code_snippet: ''
-        variation_description: |-
-          _DEPRECATED._ Identical to `display: inline-block.`
-
-          ```html
-          <div class="u-inline-block"></div>
-          ```
-        variation_name: '"Inline block" helper class [DEPRECATED]'
-      - variation_code_snippet: ''
         variation_name: '"Float right" helper class'
         variation_description: |-
           ```html

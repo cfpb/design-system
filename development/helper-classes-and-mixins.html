@@ -1558,28 +1558,27 @@
 
 <p><code class="language-plaintext highlighter-rouge">.u-small-text</code></p>
 
+<p>There is also a modifier, <code class="language-plaintext highlighter-rouge">u-small-text--subtle</code>, which sets the color to be gray.</p>
 <h4 id="mixin"><strong>Mixin</strong></h4>
 
 <p>Sets the element to <code class="language-plaintext highlighter-rouge">14px</code> (in <code class="language-plaintext highlighter-rouge">em</code>s) based on the text size passed as <code class="language-plaintext highlighter-rouge">@context</code>.</p>
 
 <p><code class="language-plaintext highlighter-rouge">.u-small-text(@context)</code></p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Ex.</span>
-<span class="p">.</span><span class="nx">example</span> <span class="p">{</span>
-  <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="p">:</span> <span class="nx">math</span><span class="p">.</span><span class="nx">div</span><span class="p">(</span><span class="mi">20</span><span class="nx">px</span><span class="p">,</span> <span class="p">@</span><span class="nd">base</span><span class="o">-</span><span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="o">-</span><span class="nx">px</span><span class="p">)</span> <span class="o">+</span> <span class="nx">em</span><span class="p">;</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Ex.</span>
+<span class="nc">.example</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="n">math</span><span class="o">.</span><span class="nf">div</span><span class="p">(</span><span class="m">20px</span><span class="o">,</span> <span class="o">@</span><span class="n">base-font-size-px</span><span class="p">)</span> <span class="o">+</span> <span class="n">em</span><span class="p">;</span>
 
-  <span class="nx">small</span> <span class="p">{</span>
-    <span class="p">.</span><span class="nx">u</span><span class="o">-</span><span class="nx">small</span><span class="o">-</span><span class="nx">text</span><span class="p">(</span><span class="mi">20</span><span class="nx">px</span><span class="p">);</span>
+  <span class="nt">small</span> <span class="p">{</span>
+    <span class="nc">.u-small-text</span><span class="o">(</span><span class="nt">20px</span><span class="o">)</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
-
 <span class="c1">// Compiles to</span>
-<span class="p">.</span><span class="nx">example</span> <span class="p">{</span>
-  <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="p">:</span> <span class="mf">1.25</span><span class="nx">em</span><span class="p">;</span>
+<span class="nc">.example</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.25em</span><span class="p">;</span>
 <span class="p">}</span>
-
-<span class="p">.</span><span class="nx">example</span> <span class="nx">small</span> <span class="p">{</span>
-  <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="p">:</span> <span class="mf">0.7</span><span class="nx">em</span><span class="p">;</span>
+<span class="nc">.example</span> <span class="nt">small</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">0</span><span class="mi">.7em</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -1624,8 +1623,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/helper-classes-mixins.md">
-                            <time datetime="2024-11-05 16:41:45 -0500">
-                                 4:41:45 PM Nov 05, 2024
+                            <time datetime="2024-11-06 10:18:56 -0500">
+                                10:18:56 AM Nov 06, 2024
                             </time>
                         </a>
                     </section>

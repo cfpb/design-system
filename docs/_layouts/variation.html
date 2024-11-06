@@ -10,8 +10,8 @@ layout: default
 
     <div class="o-editor" id="toggle-details">
       <a class="a-btn" href="#" title="Show all details">
-        <span class="a-btn__text">Show all details</span>
-        <span class="a-btn__icon">{% include icons/lightbulb.svg %}</span>
+        <span>Show all details</span>
+        {% include icons/lightbulb.svg %}
       </a>
     </div>
 
@@ -23,8 +23,8 @@ layout: default
         href="/design-system/updating-this-website?page={{ page.title | url_encode }}"
         title="Edit this page in Decap CMS"
       >
-        <span class="a-btn__text">Edit page</span>
-        <span class="a-btn__icon">{% include icons/edit.svg %}</span>
+        <span>Edit page</span>
+        {% include icons/edit.svg %}
       </a>
     </div>
   </div>

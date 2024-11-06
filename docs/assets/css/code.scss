@@ -459,8 +459,21 @@ code {
   border-radius: 3px;
 }
 
+.source-code {
+  overflow: scroll;
+}
+
+.source-code pre {
+  background: none;
+  clear: both;
+  margin: 0;
+  padding: 40px;
+}
+
 pre {
-  display: block;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
   padding: 1em;
   font-size: 0.8em;
   line-height: 1.4;
@@ -469,7 +482,6 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f7f8f9;
-  border: 1px dotted #d2d3d5;
 
   code {
     padding: 0;
@@ -518,11 +530,4 @@ pre {
 
 .highlight pre {
   margin-bottom: 0;
-}
-
-.source-code pre {
-  background: none;
-  clear: both;
-  margin: 0;
-  padding: 40px;
 }

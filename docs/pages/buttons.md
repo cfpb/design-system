@@ -110,28 +110,51 @@ variation_groups:
         variation_code_snippet: |-
           <div class="m-btn-group">
             <button class="a-btn">
-                <span class="a-btn__icon
-                            a-btn__icon--on-left">
-                  {% include icons/left.svg %}
-                </span>
-                Back
+                {% include icons/left.svg %}
+                <span>Back</span>
             </button>
 
             <button class="a-btn">
-                Next
-                <span class="a-btn__icon
-                            a-btn__icon--on-right">
-                    {% include icons/right.svg %}
-                </span>
+                <span>Next</span>
+                {% include icons/right.svg %}
+            </button>
+
+            <button class="a-btn a-btn--secondary">
+                {% include icons/left.svg %}
+                <span>Back</span>
+            </button>
+
+            <button class="a-btn a-btn--secondary">
+                <span>Next</span>
+                {% include icons/right.svg %}
+            </button>
+
+            <button class="a-btn a-btn--warning">
+                {% include icons/left.svg %}
+                <span>Back</span>
+            </button>
+
+            <button class="a-btn a-btn--warning">
+                <span>Next</span>
+                {% include icons/right.svg %}
+            </button>
+
+            <button class="a-btn a-btn--disabled">
+                {% include icons/left.svg %}
+                <span>Back</span>
+            </button>
+
+            <button class="a-btn" disabled>
+                <span>Next</span>
+                {% include icons/right.svg %}
             </button>
           </div>
       - variation_is_deprecated: false
         variation_name: Button with animated icon
         variation_code_snippet: >-
           <button class="a-btn">
-              Submit your complaint
-              <span class="a-btn__icon
-                           a-btn__icon--on-right">{% include icons/updating.svg %}</span>
+              <span>Submit your complaint</span>
+              {% include icons/updating.svg %}
           </button>
         variation_description: >
           Use an animated icon in a button to reassure the user that the action
@@ -176,19 +199,13 @@ restrictions:
       much, much too long</button>
   - restrictions_do: |-
       <button class="a-btn">
-          <span class="a-btn__icon
-                       a-btn__icon--on-left">
-             {% include icons/left.svg %}
-          </span>
-          Back
+          {% include icons/left.svg %}
+          <span>Back</span>
       </button>
     restrictions_do_not: |-
       <button class="a-btn">
-          Back
-          <span class="a-btn__icon
-                       a-btn__icon--on-right">
-              {% include icons/left.svg %}
-          </span>
+          <span>Back</span>
+          {% include icons/left.svg %}
       </button>
 eyebrow: Components
 accessibility: ''

@@ -15,27 +15,18 @@ variation_groups:
               <a class="a-btn
                         m-pagination__btn-prev"
                 href="?page=21#pagination_content">
-                  <span class="a-btn__icon a-btn__icon--on-left">{% include icons/left.svg %}</span>
-                  Newer
-              </a>
-
-              <a class="a-btn
-                        m-pagination__btn-next"
-                href="?page=23#pagination_content">Older
-                  <span class="a-btn__icon a-btn__icon--on-right">{% include icons/right.svg %}</span>
-
+                  {% include icons/left.svg %}
+                  <span>Newer</span>
               </a>
 
               <form class="m-pagination__form"
                     action="#pagination_content">
-                  <label class="m-pagination__label"
-                        for="m-pagination__current-page">
+                  <label class="m-pagination__label">
                       Page
                       <span class="u-visually-hidden">
                           number 22 out
                       </span>
                       <input class="m-pagination__current-page"
-                            id="m-pagination__current-page-default"
                             name="page"
                             type="number"
                             min="1"
@@ -46,11 +37,16 @@ variation_groups:
                       of 149
                   </label>
                   <button class="a-btn
-                                a-btn--link
-                                m-pagination__btn-submit"
-                          id="m-pagination__btn-submit-default"
+                                 a-btn--link"
                           type="submit">Go</button>
               </form>
+
+              <a class="a-btn
+                        m-pagination__btn-next"
+                href="?page=23#pagination_content">
+                  <span>Older</span>
+                  {% include icons/right.svg %}
+              </a>
           </nav>
         variation_description: ''
         variation_name: Default pagination
@@ -63,23 +59,14 @@ variation_groups:
       - variation_code_snippet: >-
           <nav class="m-pagination" role="navigation" aria-label="Pagination">
 
-          <a class="a-btn  a-btn--disabled m-pagination__btn-prev">
+          <a class="a-btn a-btn--disabled m-pagination__btn-prev">
 
-          <span class="a-btn__icon a-btn__icon--on-left">{% include icons/left.svg %}</span>        Newer </a>
-
-
-          <a class="a-btn m-pagination__btn-next" href="?page=2#pagination_content">        Older
-
-          <span class="a-btn__icon a-btn__icon--on-right">{% include icons/right.svg %}</span>
-
-          </a>
-
+          {% include icons/left.svg %}<span>Newer</span></a>
 
           <form class="m-pagination__form" action="#pagination_content">
-            <label class="m-pagination__label" for="m-pagination__current-page">  Page
+            <label class="m-pagination__label">  Page
               <span class="u-visually-hidden">number 1 out</span>
               <input class="m-pagination__current-page"
-                id="m-pagination__current-page-first-last"
                 name="page"
                 type="number"
                 min="1"
@@ -88,13 +75,18 @@ variation_groups:
                 inputmode="numeric" value="1">
              of 149
             </label>
-          <button class="a-btn a-btn--link m-pagination__btn-submit" id="m-pagination__btn-submit-first-last" type="submit">Go</button> </form>
+          <button class="a-btn a-btn--link" type="submit">Go</button> </form>
+
+          <a class="a-btn m-pagination__btn-next" href="?page=2#pagination_content">
+            <span>Older</span>
+            {% include icons/right.svg %}
+          </a>
 
           </nav>
         variation_description:
           When on the first or last page of paginated content, be
           sure to disable the appropriate buttons by adding the
-          `a_btn__disabled` modifier and removing their `href` attribute.
+          `a-btn--disabled` modifier and removing their `href` attribute.
         variation_jinja_code_snippet: ''
         variation_name: First and last pages
     variation_group_name: Standard pagination

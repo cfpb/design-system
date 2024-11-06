@@ -167,20 +167,20 @@ input.a-btn::-moz-focus-inner {
   }
 
   // Handle button with icon logic.
-  &:has(svg):before {
+  &:has(svg)::before {
     @include a-btn-divider;
   }
 
-  &--secondary:has(svg):before {
+  &--secondary:has(svg)::before {
     border-color: $btn-secondary-divider;
   }
 
-  &--warning:has(svg):before {
+  &--warning:has(svg)::before {
     border-color: $btn-warning-divider;
   }
 
-  &--disabled:has(svg):before,
-  &[disabled]:has(svg):before {
+  &--disabled:has(svg)::before,
+  &[disabled]:has(svg)::before {
     border-color: $btn-disabled-divider;
   }
 

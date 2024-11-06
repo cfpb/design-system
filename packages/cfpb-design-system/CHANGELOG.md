@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.9](https://github.com/cfpb/design-system/compare/v3.2.8..v3.2.9) - 2024-11-06
+
+### PRs in this release
+
+- PR #[2097](https://github.com/cfpb/design-system/pull/2097): Add `u-small-text--subtle` - Ans
+
+### General
+
+- Tweak changelog config - ([e944523](https://github.com/cfpb/design-system/commit/e944523ee676c529483bb2583f74d2d380f7f411)) - Ans
+- Add `u-small-text--subtle` - ([3108763](https://github.com/cfpb/design-system/commit/31087639e456f52370dfcaea57f0d14d48572e79)) - Ans
+- Rebuild assets - ([6a6f917](https://github.com/cfpb/design-system/commit/6a6f91724677614eda3e2d0d474ec9912e450192)) - Ans
+
 ## [3.2.8](https://github.com/cfpb/design-system/compare/v3.2.7..v3.2.8) - 2024-11-01
 
 ### PRs in this release

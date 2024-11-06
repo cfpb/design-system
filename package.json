@@ -89,7 +89,7 @@
   "release-it": {
     "git": {
       "requireBranch": "main",
-      "changelog": "yarn exec git-cliff -o - --include-path 'packages/cfpb-design-system/**/*' --latest",
+      "changelog": "yarn exec git-cliff -o - --include-path 'packages/cfpb-design-system/**/*' --latest --bump",
       "commitsPath": "packages/cfpb-design-system",
       "requireCommits": true
     },

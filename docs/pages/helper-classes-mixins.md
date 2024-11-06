@@ -104,31 +104,6 @@ variation_groups:
           <div class="u-right"></div>
           ```
       - variation_code_snippet: >-
-          <!--NOTE: Inline style properties for demonstration only.-->
-
-
-          <div class="u-break-word u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;">
-              This link should break:
-              <a href="#">
-                  something@something.com
-              </a>
-          </div>
-
-
-          <div class="u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;">
-              This link should not:
-              <a href="#">
-                  something@something.com
-              </a>
-          </div>
-        variation_description: >-
-          Force word breaks within an element. Useful for small containers where
-          text may over-run the width of the container.
-
-
-          _This only works in Internet Explorer 8 when the element with the `.u-break-word` class has layout. See <http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8> for more information._
-        variation_name: '"Break word" helper class'
-      - variation_code_snippet: >-
           <h4 class="u-mb0">Demonstration of heading 4 with zero bottom
           margin</h4>
 

@@ -29,7 +29,7 @@
     "after-install": "yarn copy-assets && bundle install",
     "lint": "scripts/lint.sh",
     "process-icon-svgs": "svgo -f packages/cfpb-design-system/src/components/cfpb-icons/icons --config=svgo.config.js",
-    "release": "yarn lint && yarn build && release-it --only-version && cd packages/cfpb-design-system && npm publish",
+    "release": "./scripts/release.sh",
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-decap": "npx decap-server",
@@ -89,7 +89,6 @@
   "release-it": {
     "git": {
       "requireBranch": "main",
-      "changelog": "./scripts/changelog.sh stdout",
       "commitsPath": "packages/cfpb-design-system",
       "requireCommits": true
     },
@@ -105,7 +104,8 @@
       ]
     },
     "github": {
-      "release": true
+      "release": true,
+      "releaseNotes": "./scripts/changelog.sh stdout"
     }
   },
   "type": "module",

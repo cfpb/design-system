@@ -22,7 +22,7 @@ variation_groups:
           ![CFPB primary seal](/design-system/images/uploads/seal_071620.png)
 
           </div>
-        variation_name: ""
+        variation_name: ''
         variation_specs: |-
           The seal is comprised of the following colors.
 
@@ -113,7 +113,7 @@ variation_groups:
             </tbody></table>
   - variation_group_name: Variations
     variations:
-      - variation_name: ""
+      - variation_name: ''
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -330,7 +330,7 @@ guidelines: >-
   <small> The CFPB’s logo and the standard characters Consumer Financial Protection Bureau, CFPB, Know Before You Owe, and Money as You Grow are registered trademarks owned by the CFPB. Nothing on this website shall be construed as granting any license to use any trademark displayed on the website without the express written permission of the CFPB. Your use of these registered trademarks must comply with intellectual property laws. You may not use the CFPB trademarks to state or imply an association with or endorsement of your goods, services, or activities, nor in any manner that infringes upon the CFPB trademarks. Requests to use the CFPB trademarks should be made to the Office of the General Counsel, <a href="mailto:cfpb_ip@cfpb.gov">cfpb_ip@cfpb.gov</a>.
 restrictions: []
 eyebrow: Brand symbols
-behavior: ""
-related_items: ""
+behavior: ''
+related_items: ''
 last_updated: 2020-02-27T16:56:46.952Z
 ---

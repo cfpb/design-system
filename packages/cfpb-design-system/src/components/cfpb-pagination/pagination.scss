@@ -12,6 +12,7 @@
   grid-template-areas:
     'pag-btn-prev . pag-btn-next'
     'pag-form pag-form pag-form';
+  row-gap: math.div(15px, $base-font-size-px) + rem;
 
   &__form {
     grid-area: pag-form;

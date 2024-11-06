@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.2.12](https://github.com/cfpb/design-system/compare/v3.2.11..v3.2.12) - 2024-11-06
+## [3.3.1](https://github.com/cfpb/design-system/compare/v3.3.0..3.3.1) - 2024-11-06
+
+### PRs in this release
+
+- PR #[2099](https://github.com/cfpb/design-system/pull/2099): Point to the right npm repo in the DS - Ans
+
+### General
+
+- Point to the right npm repo in the DS - ([f61ef71](https://github.com/cfpb/design-system/commit/f61ef71e4bdd0e7df503d6d8afade621ca561a75)) - Ans
+
+## [3.3.0](https://github.com/cfpb/design-system/compare/v3.2.11..v3.3.0) - 2024-11-06
 
 ### PRs in this release
 

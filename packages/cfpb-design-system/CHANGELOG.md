@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.11](https://github.com/cfpb/design-system/compare/v3.2.10..v3.2.11) - 2024-11-06
+
+### PRs in this release
+
+- PR #[2091](https://github.com/cfpb/design-system/pull/2091): Refactor buttons and pagination to fix alignment issues - Ans
+- PR #[2098](https://github.com/cfpb/design-system/pull/2098): Linter fixes | Patch bump Cypress - Ans
+
+### General
+
+- Refactor buttons to fix alignment issues - ([3ee904e](https://github.com/cfpb/design-system/commit/3ee904ef5d1b45c149f6bde964d2cacb70675f8e)) - Ans
+- Add `row-gap` - ([d6ea4c1](https://github.com/cfpb/design-system/commit/d6ea4c1480dfbf043a4dd0f37d59e73bbb9ed94f)) - Ans
+- Linter fixes - ([6f84a1b](https://github.com/cfpb/design-system/commit/6f84a1b12fbd32720cd5f109d8d5ac0da683e51a)) - Ans
+
 ## [3.2.10](https://github.com/cfpb/design-system/compare/v3.2.9..v3.2.10) - 2024-11-06
 
 ### PRs in this release

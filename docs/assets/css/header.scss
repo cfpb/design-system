@@ -18,6 +18,11 @@
   }
 }
 
+#search-form {
+  display: flex;
+  gap: 5px;
+}
+
 // Mobile only.
 @include respond-to-max($bp-xs-max) {
   .site-header {
@@ -47,9 +52,8 @@
   #search-form {
     margin: 0;
     float: right;
-    display: flex;
-    gap: 5px;
   }
+
   .site-header-wrapper {
     padding-bottom: math.div(16px, $base-font-size-px) + em;
     border-bottom: 4px solid var(--green);

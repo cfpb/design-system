@@ -45,11 +45,11 @@ function toggleDetails(button, document = window.document, state) {
  */
 function toggleAllDetails(toggleBtn) {
   if (isShowingAllDetails) {
-    toggleBtn.querySelector('.a-btn__text').innerHTML = 'Show all details';
+    toggleBtn.querySelector('.a-btn span').innerHTML = 'Show all details';
     toggleBtn.setAttribute('title', 'Show all details');
     window.localStorage.setItem('toggleState', 'show');
   } else {
-    toggleBtn.querySelector('.a-btn__text').innerHTML = 'Hide all details';
+    toggleBtn.querySelector('.a-btn span').innerHTML = 'Hide all details';
     toggleBtn.setAttribute('title', 'Hide all details');
     window.localStorage.setItem('toggleState', 'hide');
   }

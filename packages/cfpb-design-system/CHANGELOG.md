@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.10](https://github.com/cfpb/design-system/compare/v3.2.9..v3.2.10) - 2024-11-06
+
+### PRs in this release
+
+- PR #[2096](https://github.com/cfpb/design-system/pull/2096): Remove `u-inline-block` - Ans
+
+### General
+
+- Bump changelog - ([ad0f6dc](https://github.com/cfpb/design-system/commit/ad0f6dc23d18cad72f3ff953e857a30261bebc60)) - Ans
+- Remove `u-inline-block` - ([ad8824d](https://github.com/cfpb/design-system/commit/ad8824d097d77ce5291170b5ac8752e9c0499d3a)) - Ans
+
 ## [3.2.9](https://github.com/cfpb/design-system/compare/v3.2.8..v3.2.9) - 2024-11-06
 
 ### PRs in this release

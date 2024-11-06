@@ -120,23 +120,23 @@ variation_groups:
             </button>
 
             <button class="a-btn a-btn--secondary">
-                {% include icons/plus.svg %}
+                {% include icons/left.svg %}
                 <span>Back</span>
             </button>
 
             <button class="a-btn a-btn--secondary">
                 <span>Next</span>
-                {% include icons/minus.svg %}
+                {% include icons/right.svg %}
             </button>
 
             <button class="a-btn a-btn--warning">
-                {% include icons/warning-round.svg %}
+                {% include icons/left.svg %}
                 <span>Back</span>
             </button>
 
             <button class="a-btn a-btn--warning">
                 <span>Next</span>
-                {% include icons/warning.svg %}
+                {% include icons/right.svg %}
             </button>
 
             <button class="a-btn a-btn--disabled">

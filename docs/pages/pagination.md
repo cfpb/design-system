@@ -43,9 +43,9 @@ variation_groups:
 
               <a class="a-btn
                         m-pagination__btn-next"
-                href="?page=23#pagination_content"><span>Older</span>
+                href="?page=23#pagination_content">
+                  <span>Older</span>
                   {% include icons/right.svg %}
-
               </a>
           </nav>
         variation_description: ''
@@ -77,10 +77,9 @@ variation_groups:
             </label>
           <button class="a-btn a-btn--link" type="submit">Go</button> </form>
 
-          <a class="a-btn m-pagination__btn-next" href="?page=2#pagination_content">        <span>Older</span>
-
-          {% include icons/right.svg %}
-
+          <a class="a-btn m-pagination__btn-next" href="?page=2#pagination_content">
+            <span>Older</span>
+            {% include icons/right.svg %}
           </a>
 
           </nav>

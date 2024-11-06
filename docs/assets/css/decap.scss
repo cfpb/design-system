@@ -10,12 +10,6 @@
     bottom: 105px;
   }
 
-  .a-btn {
-    border-radius: 8px;
-    box-shadow: 1px 1px 3px #999;
-    display: inline-block;
-  }
-
   // Hide the admin buttons when printing
   @include respond-to-print {
     display: none;

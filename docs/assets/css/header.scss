@@ -47,6 +47,8 @@
   #search-form {
     margin: 0;
     float: right;
+    display: flex;
+    gap: 5px;
   }
   .site-header-wrapper {
     padding-bottom: math.div(16px, $base-font-size-px) + em;

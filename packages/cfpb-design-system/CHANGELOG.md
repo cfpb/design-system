@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.12](https://github.com/cfpb/design-system/compare/v3.2.11..v3.2.12) - 2024-11-06
+
+### PRs in this release
+
+- PR #[2095](https://github.com/cfpb/design-system/pull/2095): Remove `u-break-word` - Ans
+
+### General
+
+- Remove `u-break-word` - ([e9df86d](https://github.com/cfpb/design-system/commit/e9df86d6ae6e0c5c800222a738da905e4ad86e83)) - Ans
+
 ## [3.2.11](https://github.com/cfpb/design-system/compare/v3.2.10..v3.2.11) - 2024-11-06
 
 ### PRs in this release

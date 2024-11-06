@@ -13,7 +13,11 @@ export { EventObserver } from './event-observer.js';
 
 export { checkDom, instantiateAll, setInitFlag } from './atomic-helpers.js';
 
-export { attach, checkBehaviorDom, find, remove } from './behavior/behavior.js';
+export {
+  behaviorAttach,
+  checkBehaviorDom,
+  behaviorFind,
+} from './behavior/behavior.js';
 
 export {
   isUndefined,

@@ -45,7 +45,7 @@ function _findElements(behaviorSelector, baseElement) {
     behaviorElements.length === 0 &&
     behaviorSelector.indexOf(BEHAVIOR_PREFIX) === -1
   ) {
-    behaviorElements = find(behaviorSelector, baseElement);
+    behaviorElements = behaviorFind(behaviorSelector, baseElement);
   }
 
   return behaviorElements;
@@ -60,7 +60,7 @@ function _findElements(behaviorSelector, baseElement) {
  *   for the behavior element.
  * @returns {Array|NodeList} if it exists in the dom, null otherwise.
  */
-function attach(behaviorElement, event, eventHandler, baseElement) {
+function behaviorAttach(behaviorElement, event, eventHandler, baseElement) {
   let behaviorElements = [];
 
   if (behaviorElement instanceof NodeList === true) {
@@ -118,21 +118,12 @@ function checkBehaviorDom(element, behaviorDataAttr) {
  *   for the behavior element.
  * @returns {NodeList} if it exists in the dom, null otherwise.
  */
-function find(behaviorSelector, baseElement) {
+function behaviorFind(behaviorSelector, baseElement) {
   behaviorSelector = JS_HOOK + '*=' + BEHAVIOR_PREFIX + behaviorSelector;
   behaviorSelector = '[' + behaviorSelector + ']';
 
   return _findElements(behaviorSelector, baseElement);
 }
 
-/**
- * @param {HTMLElement} behaviorElement - Element in which to remove the event.
- * @param {string} event - Event type to remove from the element.
- * @param {Function} eventHandler - Callback for event.
- */
-function remove(behaviorElement, event, eventHandler) {
-  behaviorElement.removeEventListener(event, eventHandler);
-}
-
 // Expose public methods.
-export { attach, checkBehaviorDom, find, remove };
+export { behaviorAttach, checkBehaviorDom, behaviorFind };

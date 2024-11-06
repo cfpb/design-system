@@ -379,6 +379,7 @@ variation_groups:
           `.u-link__hover-child(@c)`
         variation_code_snippet: ''
       - variation_name: '"Small text utility" mixin'
+        variation_code_snippet: ''
         variation_description: >-
           #### **Class**
 
@@ -386,11 +387,15 @@ variation_groups:
           Sets the element to `14px` (in `em`s).
 
 
-          *To be used on default `16px` text only. To use on text set to another size, use the mixin below.*
+          *To be used on default `16px` text only.
+          To use on text set to another size, use the mixin below.*
 
 
           `.u-small-text`
 
+
+          There is also a modifier, `u-small-text--subtle`, which sets the color
+          to be gray.
 
           #### **Mixin**
 
@@ -401,7 +406,7 @@ variation_groups:
           `.u-small-text(@context)`
 
 
-          ```js
+          ```scss
 
           // Ex.
 
@@ -413,13 +418,11 @@ variation_groups:
             }
           }
 
-
           // Compiles to
 
           .example {
             font-size: 1.25em;
           }
-
 
           .example small {
             font-size: 0.7em;

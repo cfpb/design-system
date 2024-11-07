@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.1](https://github.com/cfpb/design-system/compare/v3.4.0..3.4.1) - 2024-11-07
+## [3.4.2](https://github.com/cfpb/design-system/compare/v3.4.1..3.4.2) - 2024-11-07
+
+### PRs in this release
+
+- PR #[2102](https://github.com/cfpb/design-system/pull/2102): Remove extraneous button-with-icon.scss reference - Ans
+
+### General
+
+- Remove button-with-icon reference - ([ee36f36](https://github.com/cfpb/design-system/commit/ee36f3676c2160415c8e75cf0c8affffad9a7f22)) - Ans
+
+## [3.4.1](https://github.com/cfpb/design-system/compare/v3.4.0..v3.4.1) - 2024-11-07
 
 ### PRs in this release
 
@@ -359,7 +369,7 @@ All notable changes to this project will be documented in this file.
 - Create root package index.scss - ([b4ae5d0](https://github.com/cfpb/design-system/commit/b4ae5d08c7bee7f09ef478743038b02e7bb4d55d)) - Ans
 - V3.0.1 - ([dbcf5b3](https://github.com/cfpb/design-system/commit/dbcf5b3bcc5b64fa7760011f05c7d7fa8517406a)) - Ans
 
-## [3.0.0] - 2024-08-16
+## [3.0.0] - August 16, 2024
 
 ### PRs in this release
 

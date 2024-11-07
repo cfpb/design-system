@@ -1,4 +1,4 @@
-# CFPB's Design System [![npm](https://img.shields.io/npm/v/design-system.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-design-system)
+# CFPB's Design System [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-design-system.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-design-system)
 
 This UI library was developed at the
 [Consumer Financial Protection Bureau](https://consumerfinance.gov).

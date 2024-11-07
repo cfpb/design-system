@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.0](https://github.com/cfpb/design-system/compare/v3.3.1..3.4.0) - 2024-11-07
+## [3.4.1](https://github.com/cfpb/design-system/compare/v3.4.0..3.4.1) - 2024-11-07
+
+### PRs in this release
+
+- PR #[2101](https://github.com/cfpb/design-system/pull/2101): Add behavior JS unit tests - Ans
+
+### General
+
+- Add behavior specs - ([dd956be](https://github.com/cfpb/design-system/commit/dd956be595a500b2fd654faa9c88700851057eb1)) - Ans
+
+## [3.4.0](https://github.com/cfpb/design-system/compare/v3.3.1..v3.4.0) - 2024-11-07
 
 ### PRs in this release
 

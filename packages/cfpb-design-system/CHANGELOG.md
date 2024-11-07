@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.2](https://github.com/cfpb/design-system/compare/v3.4.1..3.4.2) - 2024-11-07
+## [3.4.3](https://github.com/cfpb/design-system/compare/v3.4.2..3.4.3) - 2024-11-07
+
+### PRs in this release
+
+- PR #[2104](https://github.com/cfpb/design-system/pull/2104): Fix npm badge image URL - Ans
+
+### General
+
+- Fix badge URL - ([ce2a58a](https://github.com/cfpb/design-system/commit/ce2a58a6b4b82b6dee28725e502462bd8ed67e47)) - Ans
+
+## [3.4.2](https://github.com/cfpb/design-system/compare/v3.4.1..v3.4.2) - 2024-11-07
 
 ### PRs in this release
 

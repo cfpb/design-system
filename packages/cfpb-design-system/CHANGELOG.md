@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.3.1](https://github.com/cfpb/design-system/compare/v3.3.0..3.3.1) - 2024-11-06
+## [3.4.0](https://github.com/cfpb/design-system/compare/v3.3.1..3.4.0) - 2024-11-07
+
+### PRs in this release
+
+- PR #[2100](https://github.com/cfpb/design-system/pull/2100): Update behavior method names - Ans
+
+### General
+
+- Update behavior method names - ([8ae891d](https://github.com/cfpb/design-system/commit/8ae891de2b6d0f3f3f6fd5744f174302ac3b0465)) - Ans
+- Adjust release-it process - ([222f302](https://github.com/cfpb/design-system/commit/222f30216e47e36ca3f01d2835fe53280af8ba4e)) - Ans
+
+## [3.3.1](https://github.com/cfpb/design-system/compare/v3.3.0..v3.3.1) - 2024-11-06
 
 ### PRs in this release
 

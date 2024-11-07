@@ -57,7 +57,7 @@ describe('atomic-helpers', () => {
         'Check that element is a DOM node with ' +
         `class ".${testClass}"`;
       /**
-       *
+       * Mock error function.
        */
       function errFunc() {
         checkDom(null, testClass);
@@ -68,7 +68,7 @@ describe('atomic-helpers', () => {
     it('should throw an error if element class not found', () => {
       const errMsg = 'mock-class not found on or in passed DOM node.';
       /**
-       *
+       * Mock error function.
        */
       function errFunc() {
         checkDom(componentDom, 'mock-class');

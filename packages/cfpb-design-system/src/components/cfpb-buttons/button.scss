@@ -167,8 +167,16 @@ input.a-btn::-moz-focus-inner {
   }
 
   // Handle button with icon logic.
-  &:has(svg)::before {
+  &:not(.a-btn--hide-icon):has(svg)::before {
     @include a-btn-divider;
+  }
+
+  // Hide the icon if the a-btn--hide-icon modifier is set.
+  // Useful for showing and hiding a loading icon, for example.
+  &--hide-icon {
+    svg {
+      display: none;
+    }
   }
 
   &--secondary:has(svg)::before {

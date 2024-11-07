@@ -159,6 +159,9 @@ variation_groups:
         variation_description: >
           Use an animated icon in a button to reassure the user that the action
           they are attempting to perform is functioning as intended.
+
+          The icon can be hidden when the action is complete by adding the
+          `a-btn--hide-icon` class to the button.
       - variation_is_deprecated: false
         variation_name: Button link
         variation_code_snippet: >-

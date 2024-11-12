@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.4](https://github.com/cfpb/design-system/compare/v3.4.3..3.4.4) - November 12, 2024
+## [3.4.5](https://github.com/cfpb/design-system/compare/v3.4.4..3.4.5) - November 12, 2024
+
+### PRs in this release
+
+- PR #[2105](https://github.com/cfpb/design-system/pull/2105): Buttons: add `justify-content: center` - Ans
+
+### General
+
+- Add `justify-content: center` - ([c7993b5](https://github.com/cfpb/design-system/commit/c7993b5281ed84dd301c3640f9ce9ef0cce14c68)) - Ans
+- Rebuild assets - ([2f1ab96](https://github.com/cfpb/design-system/commit/2f1ab964c1cfab0d4ad6b914baaac68382073d41)) - Ans
+
+## [3.4.4](https://github.com/cfpb/design-system/compare/v3.4.3..v3.4.4) - November 12, 2024
 
 ### PRs in this release
 

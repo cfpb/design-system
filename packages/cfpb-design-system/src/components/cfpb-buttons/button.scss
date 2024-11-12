@@ -24,6 +24,7 @@ input.a-btn::-moz-focus-inner {
   appearance: none;
   display: flex;
   gap: math.div(10px, $base-font-size-px) + rem;
+  justify-content: center;
 
   box-sizing: border-box;
   padding: math.div($btn-v-padding, $btn-font-size) + em

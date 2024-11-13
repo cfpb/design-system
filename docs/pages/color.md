@@ -1347,9 +1347,6 @@ variation_groups:
           being CFPB Green followed by Navy. In addition to color, please
           differentiate your data types with patterning.
 
-
-          ![Main palette]()
-
             <table class="color-table">
                 <thead>
                     <tr>
@@ -1404,10 +1401,6 @@ variation_groups:
             </tbody></table>
       - variation_name: Diverging palette
         variation_description: |-
-          
-
-          ![Divergent palette]()
-
           <table class="color-table">
                 <thead>
                     <tr>
@@ -1453,10 +1446,8 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Cool palette
-        variation_description: |-
-          ![Cool palette]()
-
-            <table class="color-table">
+        variation_description: |-2
+           <table class="color-table">
                 <thead>
                     <tr>
 
@@ -1533,10 +1524,8 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Warm palette
-        variation_description: |-
-          ![Warm palette]()
-
-            <table class="color-table">
+        variation_description: |-2
+           <table class="color-table">
                 <thead>
                     <tr>
 

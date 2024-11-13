@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.8](https://github.com/cfpb/design-system/compare/v3.4.7..3.4.8) - November 13, 2024
+## [3.4.9](https://github.com/cfpb/design-system/compare/v3.4.8..3.4.9) - November 13, 2024
+
+### PRs in this release
+
+- PR #[2112](https://github.com/cfpb/design-system/pull/2112): Pagination: move z-index to buttons - Ans
+
+### General
+
+- Move z-index to buttons - ([48e4c68](https://github.com/cfpb/design-system/commit/48e4c68cda895e8b7103b4091627e6d31e859a88)) - Ans
+
+## [3.4.8](https://github.com/cfpb/design-system/compare/v3.4.7..v3.4.8) - November 13, 2024
 
 ### PRs in this release
 

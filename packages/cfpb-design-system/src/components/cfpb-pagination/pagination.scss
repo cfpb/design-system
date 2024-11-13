@@ -25,6 +25,7 @@
     border-radius: math.div(4px, $base-font-size-px) + rem;
     background: $pagination-bg;
     color: $pagination-text;
+    z-index: -1;
   }
 
   &__current-page {

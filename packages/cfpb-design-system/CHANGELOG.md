@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.5](https://github.com/cfpb/design-system/compare/v3.4.4..3.4.5) - November 12, 2024
+## [3.4.6](https://github.com/cfpb/design-system/compare/v3.4.5..3.4.6) - November 13, 2024
+
+### PRs in this release
+
+- PR #[2106](https://github.com/cfpb/design-system/pull/2106): Refine button links - add icon examples - Ans
+
+### General
+
+- Refine button with link - ([5edc8e5](https://github.com/cfpb/design-system/commit/5edc8e5cc7124e4654a86f065b28d94e70bd45f7)) - Ans
+
+## [3.4.5](https://github.com/cfpb/design-system/compare/v3.4.4..v3.4.5) - November 12, 2024
 
 ### PRs in this release
 

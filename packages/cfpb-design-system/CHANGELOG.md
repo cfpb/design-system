@@ -2,7 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.6](https://github.com/cfpb/design-system/compare/v3.4.5..3.4.6) - November 13, 2024
+## [3.4.7](https://github.com/cfpb/design-system/compare/v3.4.6..3.4.7) - November 13, 2024
+
+### PRs in this release
+
+- PR #[2108](https://github.com/cfpb/design-system/pull/2108): Add text-free icon button examples - Ans
+- PR #[2109](https://github.com/cfpb/design-system/pull/2109): Add button link state examples - Ans
+
+### General
+
+- Add text-free icon buttons - ([8527b37](https://github.com/cfpb/design-system/commit/8527b37bbaa56611d2883d43289c4a6c2d2e078a)) - Ans
+- Tweak button dimensions - ([8595c33](https://github.com/cfpb/design-system/commit/8595c33afd3b92557c02d4494200e3d08729c053)) - Ans
+- Rebuild assets - ([a27795f](https://github.com/cfpb/design-system/commit/a27795fe7fe0072e42b217f5e331a2736e1bcb5a)) - Ans
+
+## [3.4.6](https://github.com/cfpb/design-system/compare/v3.4.5..v3.4.6) - November 13, 2024
 
 ### PRs in this release
 

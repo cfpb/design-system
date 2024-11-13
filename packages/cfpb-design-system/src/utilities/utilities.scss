@@ -158,6 +158,21 @@
 // Link mixins
 //
 
+/*
+Link text and underline, unless otherwise specified.
+$c: Link color.
+$v: Link visited color.
+$h: Link hover color.
+$f: Link focus color.
+$a: Link active color.
+
+// Separate out a different underline color.
+$bc: Link underline color.
+$bv: Link underline visited color.
+$bh: Link underline hover color.
+$bf: Link underline focus color.
+$ba: Link underline active color.
+*/
 /* stylelint-disable selector-class-pattern */
 @mixin u-link-colors(
   $c: '',

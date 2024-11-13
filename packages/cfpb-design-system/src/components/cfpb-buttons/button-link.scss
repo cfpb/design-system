@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use './vars.scss' as *;
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
@@ -5,7 +6,47 @@
 // Button link
 //
 
-// TODO: Refactor the rule combos for simplicity
+/*
+Link text and underline.
+$v: Link link and visited color.
+$h: Link hover color.
+$f: Link focus color.
+$a: Link active color.
+*/
+@mixin u-btn-link-states($selector, $v, $h, $f, $a) {
+  #{$selector} {
+    &,
+    &:link,
+    &:visited {
+      text-decoration-color: $v;
+      background-color: transparent;
+      color: $v;
+    }
+
+    &:hover,
+    &.hover {
+      text-decoration-color: $h;
+      text-decoration-style: solid;
+      background-color: transparent;
+      color: $h;
+    }
+
+    &:focus,
+    &.focus {
+      text-decoration-style: solid;
+      background-color: transparent;
+      outline: 1px dotted $f;
+    }
+
+    &:active,
+    &.active {
+      text-decoration-color: $a;
+      text-decoration-style: solid;
+      background-color: transparent;
+      color: $a;
+    }
+  }
+}
 
 .a-btn--link {
   padding: 0;
@@ -18,96 +59,45 @@
   text-decoration-style: dotted;
   text-underline-offset: 4.5px;
 
-  &,
-  &:link,
-  &:visited {
-    text-decoration-color: $link-underline;
-    background-color: transparent;
-    color: $link-text;
-  }
+  &:has(svg) {
+    // Button links should be closer to their icon.
+    gap: math.div(5px, $base-font-size-px) + rem;
 
-  &:hover,
-  &.hover {
-    text-decoration-color: $link-underline-hover;
-    text-decoration-style: solid;
-    background-color: transparent;
-    color: $link-text-hover;
-  }
-
-  &:focus,
-  &.focus {
-    text-decoration-style: solid;
-    background-color: transparent;
-    outline: 1px dotted $link-underline;
-  }
-
-  &:active,
-  &.active {
-    text-decoration-color: $link-underline-active;
-    text-decoration-style: solid;
-    background-color: transparent;
-    color: $link-text-active;
-  }
-
-  //
-  // Secondary button link
-  //
-
-  &.a-btn--secondary {
-    &,
-    &:link,
-    &:visited {
-      text-decoration-color: $btn-secondary-bg;
-      background-color: transparent;
-      color: $btn-secondary-bg;
-    }
-
-    &:hover,
-    &.hover {
-      text-decoration-color: $btn-secondary-bg-hover;
-      color: $btn-secondary-bg-hover;
-    }
-
-    &:focus,
-    &.focus {
-      outline-color: $btn-secondary-bg;
-    }
-
-    &:active,
-    &.active {
-      text-decoration-color: $btn-secondary-bg-active;
-      color: $btn-secondary-bg-active;
-    }
-  }
-
-  //
-  // Destructive action button link
-  //
-
-  &.a-btn--warning {
-    &,
-    &:link,
-    &:visited {
-      text-decoration-color: $btn-warning-bg;
-      background-color: transparent;
-      color: $btn-warning-bg;
-    }
-
-    &:hover,
-    &.hover {
-      text-decoration-color: $btn-warning-bg-hover;
-      color: $btn-warning-bg-hover;
-    }
-
-    &:focus,
-    &.focus {
-      outline-color: $btn-warning-bg;
-    }
-
-    &:active,
-    &.active {
-      text-decoration-color: $btn-warning-bg-active;
-      color: $btn-warning-bg-active;
+    // Button links shouldn't have a divider.
+    &::before {
+      display: none;
     }
   }
 }
+
+@include u-btn-link-states(
+  '.a-btn--link',
+  $link-text,
+  $link-text-hover,
+  $link-text,
+  $link-text-active
+);
+
+//
+// Secondary button link
+//
+
+@include u-btn-link-states(
+  '.a-btn--link.a-btn--secondary',
+  $btn-secondary-bg,
+  $btn-secondary-bg-hover,
+  $btn-secondary-bg,
+  $btn-secondary-bg-active
+);
+
+//
+// Destructive action button link
+//
+
+@include u-btn-link-states(
+  '.a-btn--link.a-btn--warning',
+  $btn-warning-bg,
+  $btn-warning-bg-hover,
+  $btn-warning-bg,
+  $btn-warning-bg-active
+);

@@ -13,7 +13,7 @@ input.a-btn::-moz-focus-inner {
   border: 0;
 }
 
-@mixin a-btn-divider() {
+@mixin u-btn-divider() {
   content: '';
   border-left: 1px solid $btn-divider;
   order: 2;
@@ -24,7 +24,6 @@ input.a-btn::-moz-focus-inner {
   appearance: none;
   display: flex;
   gap: math.div(10px, $base-font-size-px) + rem;
-  justify-content: center;
 
   box-sizing: border-box;
   padding: math.div($btn-v-padding, $btn-font-size) + em
@@ -39,6 +38,8 @@ input.a-btn::-moz-focus-inner {
   text-align: center;
   text-decoration: none;
   transition: background-color 0.1s;
+  width: fit-content;
+  justify-content: center;
 
   &,
   &:link,
@@ -167,19 +168,6 @@ input.a-btn::-moz-focus-inner {
     }
   }
 
-  // Handle button with icon logic.
-  &:not(.a-btn--hide-icon):has(svg)::before {
-    @include a-btn-divider;
-  }
-
-  // Hide the icon if the a-btn--hide-icon modifier is set.
-  // Useful for showing and hiding a loading icon, for example.
-  &--hide-icon {
-    svg {
-      display: none;
-    }
-  }
-
   &--secondary:has(svg)::before {
     border-color: $btn-secondary-divider;
   }
@@ -203,6 +191,19 @@ input.a-btn::-moz-focus-inner {
   &:has(span + svg) {
     svg {
       order: 3;
+    }
+  }
+
+  // Handle button with icon divider logic.
+  &:not(.a-btn--hide-icon):has(svg)::before {
+    @include u-btn-divider;
+  }
+
+  // Hide the icon if the a-btn--hide-icon modifier is set.
+  // Useful for showing and hiding a loading icon, for example.
+  &--hide-icon {
+    svg {
+      display: none;
     }
   }
 }

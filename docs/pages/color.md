@@ -1,7 +1,5 @@
 ---
-layout: variation
 section: foundation
-status: Released
 variation_groups:
   - variation_group_name: Palettes
     variations:
@@ -1343,68 +1341,66 @@ variation_groups:
         variation_name: Tints
   - variation_group_name: Data visualization palettes
     variations:
-      - variation_name: Data visualization main palette
+      - variation_name: Main palette
         variation_description: >-
-          ![Main
-          palette](/design-system/images/uploads/data_viz_main_071520.png)
+          Use these colors in the following order with your first data type
+          being CFPB Green followed by Navy. In addition to color, please
+          differentiate your data types with patterning.
 
-           <table class="color-table">
-              <thead>
-                  <tr>
+            <table class="color-table">
+                <thead>
+                    <tr>
 
           <th></th>
+                    <th>Name</th>
+                    <th>Hex</th>
+                    <th>RGB</th>
+                    <th>CMYK</th>
+                </tr></thead>
 
+            <tbody><tr>
+                <td class="swatch__field swatch__field--green"></td>
+                <td>CFPB Green</td>
+                <td>#20aa3f</td>
+                <td>32, 170, 63</td>
+                <td>80, 0, 100, 0</td>
+            </tr>
 
-          <th>Purpose</th>
-                  <th>Name</th>
-                  <th>Hex</th>
-                  <th>RGB</th>
-                  <th>CMYK</th>
-              </tr>
+            <tr>
+                <td class="swatch__field swatch__field--navy"></td>
+                <td>Navy</td>
+                <td>#254b87</td>
+                <td>37, 75, 135</td>
+                <td>82, 58, 0, 31</td>
+            </tr>
 
-          </thead>
+            <tr>
+                <td class="swatch__field swatch__field--pacific-60"></td>
+                <td>Pacific 60</td>
+                <td>#7eb7e8</td>
+                <td>126, 183, 232</td>
+                <td>46, 16, 0, 0</td>
+            </tr>
 
+            <tr>
+                <td class="swatch__field swatch__field--gold-80"></td>
+                <td>Gold 80</td>
+                <td>#ffb858</td>
+                <td>255, 184, 88</td>
+                <td>0, 34, 76, 0</td>
+            </tr>
 
-          <tbody>
+            <tr>
+                <td class="swatch__field swatch__field--purple-80"></td>
+                <td>Purple 80</td>
+                <td>#c55998</td>
+                <td>197, 89, 152</td>
+                <td>21, 79, 9, 0</td>
+            </tr>
 
-
-          <tr>
-                  <td class="swatch__field swatch__field--green-60"></td>
-
-          <td>Main color</td>
-                  <td>Green 60</td>
-                  <td>#addc91</td>
-                  <td>173, 220, 145</td>
-                  <td>32, 0, 52, 0</td>
-              </tr>
-              <tr>
-                  <td class="swatch__field swatch__field--green-mid-dark"></td>
-
-          <td>Emphasis</td>
-                  <td>Mid Dark Green</td>
-                  <td>#1fa040</td>
-                  <td>31, 160, 64</td>
-                  <td>80, 0, 100, 8</td>
-              </tr>
-              <tr>
-                  <td class="swatch__field swatch__field--gray-20"></td>
-
-          <td>No data</td>
-                  <td>Gray 20</td>
-                  <td>#d2d3d5</td>
-                  <td>210, 211, 213</td>
-                  <td>0, 0, 0, 20</td>
-              </tr>
-          </tbody>
-
-
-          </table>
+            </tbody></table>
       - variation_name: Diverging palette
-        variation_description: >-
-          ![Divergent
-          palette](/design-system/images/uploads/data_viz_divergent_071520.png)
-
-
+        variation_description: |-
           <table class="color-table">
                 <thead>
                     <tr>
@@ -1450,11 +1446,8 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Cool palette
-        variation_description: >-
-          ![Cool
-          palette](/design-system/images/uploads/data_viz_cool_071520.png)
-
-            <table class="color-table">
+        variation_description: |-2
+           <table class="color-table">
                 <thead>
                     <tr>
 
@@ -1531,11 +1524,8 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Warm palette
-        variation_description: >-
-          ![Warm
-          palette](/design-system/images/uploads/data_viz_warm_071520.png)
-
-            <table class="color-table">
+        variation_description: |-2
+           <table class="color-table">
                 <thead>
                     <tr>
 
@@ -1615,8 +1605,11 @@ variation_groups:
             </tr>
 
             </tbody></table>
-content_guidelines: ''
+content_guidelines: ""
+eyebrow: Basics
 title: Color
+layout: variation
+status: Released
 description: A minimal palette, clear hierarchy, and ample whitespace ensure a
   voice of authority and expertise in communication. The following sets of
   colors maintain CFPB brand cohesion and create accessible graphics.
@@ -1652,7 +1645,7 @@ use_cases: >-
 
 
   ![Sequential example](/design-system/images/uploads/sequential-color-1.png)
-behavior: ''
+behavior: ""
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization
   because of accessibility standards for people who are blind and visually
@@ -1692,5 +1685,4 @@ accessibility: >-
     * For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.
     * Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.
 last_updated: 2019-08-30T18:31:00.000Z
-eyebrow: Basics
 ---

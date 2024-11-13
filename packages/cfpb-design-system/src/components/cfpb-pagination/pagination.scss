@@ -25,7 +25,6 @@
     border-radius: math.div(4px, $base-font-size-px) + rem;
     background: $pagination-bg;
     color: $pagination-text;
-    z-index: -1;
   }
 
   &__current-page {
@@ -44,9 +43,11 @@
 
   &__btn-prev {
     grid-area: pag-btn-prev;
+    z-index: 1;
   }
   &__btn-next {
     grid-area: pag-btn-next;
+    z-index: 1;
   }
 
   // Tablet and above.

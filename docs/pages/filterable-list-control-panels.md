@@ -11,7 +11,7 @@ variation_groups:
   - variations:
       - variation_code_snippet: >-
           <div id="o-filterable-list-controls"
-          class="o-filterable-list-controls">
+               class="o-filterable-list-controls">
               <div class="o-expandable
                           o-expandable--background
                           o-expandable--border
@@ -121,14 +121,15 @@ variation_groups:
                                   </div>
                               </div>
                               <div class="content-l__col
-                                  content-l__col-1
-                                  m-btn-group">
-                                  <button class="a-btn" type="submit">
-                                  Apply filters
-                                  </button>
-                                  <a class="a-btn a-btn--link a-btn--warning" href="#">
-                                  Clear filters
-                                  </a>
+                                          content-l__col-1">
+                                    <div class="m-btn-group">
+                                        <button class="a-btn" type="submit">
+                                        Apply filters
+                                        </button>
+                                        <a class="a-btn a-btn--link a-btn--warning" href="#">
+                                        Clear filters
+                                        </a>
+                                    </div>
                               </div>
                           </div>
                       </form>

@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.7](https://github.com/cfpb/design-system/compare/v3.4.6..3.4.7) - November 13, 2024
+## [3.4.8](https://github.com/cfpb/design-system/compare/v3.4.7..3.4.8) - November 13, 2024
+
+### PRs in this release
+
+- PR #[2110](https://github.com/cfpb/design-system/pull/2110): Fix z-index on pagination - Ans
+
+### General
+
+- Fix z-index on pagination - ([1b26267](https://github.com/cfpb/design-system/commit/1b2626760824f74c333b7ea4d24bbfc0f5760cdb)) - Ans
+
+## [3.4.7](https://github.com/cfpb/design-system/compare/v3.4.6..v3.4.7) - November 13, 2024
 
 ### PRs in this release
 

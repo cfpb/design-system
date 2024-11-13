@@ -36,6 +36,7 @@ $a: Link active color.
       text-decoration-style: solid;
       background-color: transparent;
       outline: 1px dotted $f;
+      color: $f;
     }
 
     &:active,
@@ -49,10 +50,8 @@ $a: Link active color.
 }
 
 .a-btn--link {
-  padding: 0;
-
   // Padding added so the focus rectangle falls below the underline.
-  padding-bottom: 1.5px;
+  padding: 1.5px 0px 1.5px 0;
   border-radius: 0;
   text-decoration-line: underline;
   text-decoration-thickness: 1px;

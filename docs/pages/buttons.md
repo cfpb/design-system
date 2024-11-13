@@ -148,6 +148,14 @@ variation_groups:
                 <span>Next</span>
                 {% include icons/right.svg %}
             </button>
+
+            <button class="a-btn" aria-label="Back">
+                {% include icons/left.svg %}
+            </button>
+
+            <button class="a-btn" aria-label="Next">
+                {% include icons/right.svg %}
+            </button>
           </div>
       - variation_is_deprecated: false
         variation_name: Button with animated icon

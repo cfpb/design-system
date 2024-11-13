@@ -168,19 +168,6 @@ input.a-btn::-moz-focus-inner {
     }
   }
 
-  &--secondary:has(svg)::before {
-    border-color: $btn-secondary-divider;
-  }
-
-  &--warning:has(svg)::before {
-    border-color: $btn-warning-divider;
-  }
-
-  &--disabled:has(svg)::before,
-  &[disabled]:has(svg)::before {
-    border-color: $btn-disabled-divider;
-  }
-
   // Set either the text or icon as the last item in the button.
   &:has(svg + span) {
     span {
@@ -195,8 +182,23 @@ input.a-btn::-moz-focus-inner {
   }
 
   // Handle button with icon divider logic.
-  &:not(.a-btn--hide-icon):has(svg)::before {
+  &:not(.a-btn--hide-icon):has(svg + span)::before,
+  &:not(.a-btn--hide-icon):has(span + svg)::before {
     @include u-btn-divider;
+  }
+
+  // Handle different coloring in divider.
+  &--secondary:has(svg)::before {
+    border-color: $btn-secondary-divider !important;
+  }
+
+  &--warning:has(svg)::before {
+    border-color: $btn-warning-divider !important;
+  }
+
+  &--disabled:has(svg)::before,
+  &[disabled]:has(svg)::before {
+    border-color: $btn-disabled-divider !important;
   }
 
   // Hide the icon if the a-btn--hide-icon modifier is set.

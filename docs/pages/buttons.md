@@ -174,7 +174,19 @@ variation_groups:
         variation_name: Button link
         variation_code_snippet: >-
           <div class="m-btn-group">
-              <a class="a-btn">Submit</a>
+            <a class="a-btn a-btn--link" title="Default state" href="#">Default state</button>
+
+            <a class="a-btn a-btn--link hover" title="Hovered state" href="#">Hovered state</button>
+
+            <a class="a-btn a-btn--link focus" title="Focused state" href="#">Focused state</button>
+
+            <a class="a-btn a-btn--link active" title="Active state" href="#">Active state</button>
+          </div>
+
+          <br>
+
+          <div class="m-btn-group">
+              <a class="a-btn" href="#">Submit</a>
               <a class="a-btn a-btn--link a-btn--secondary" href="#">
                   See Privacy Act statement
               </a>

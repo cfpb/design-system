@@ -3481,14 +3481,14 @@ __metadata:
     autoprefixer: "npm:10.4.20"
     concurrently: "npm:9.1.0"
     cypress: "npm:13.15.2"
-    decap-cms-app: "npm:3.3.3"
+    decap-cms-app: "npm:3.4.0"
     esbuild: "npm:0.24.0"
     esbuild-plugin-liquid: "npm:0.2.0"
     eslint: "npm:9.14.0"
     eslint-config-prettier: "npm:9.1.0"
     eslint-plugin-cypress: "npm:4.1.0"
     eslint-plugin-import: "npm:2.31.0"
-    eslint-plugin-jsdoc: "npm:50.4.3"
+    eslint-plugin-jsdoc: "npm:50.5.0"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-react: "npm:7.37.2"
     git-cliff: "npm:2.6.1"
@@ -3501,7 +3501,7 @@ __metadata:
     jest-environment-jsdom: "npm:29.7.0"
     lunr: "npm:2.3.9"
     marked: "npm:12.0.2"
-    postcss: "npm:8.4.47"
+    postcss: "npm:8.4.49"
     postcss-replace: "npm:2.0.1"
     prettier: "npm:3.3.3"
     prop-types: "npm:15.8.1"
@@ -3509,7 +3509,7 @@ __metadata:
     react-is: "npm:18.3.1"
     react-liquid: "npm:2.0.1"
     release-it: "npm:17.10.0"
-    sass: "npm:1.80.6"
+    sass: "npm:1.80.7"
     slugify: "npm:1.6.6"
     stylelint: "npm:16.10.0"
     stylelint-config-standard-scss: "npm:13.1.0"
@@ -4463,9 +4463,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-app@npm:3.3.3":
-  version: 3.3.3
-  resolution: "decap-cms-app@npm:3.3.3"
+"decap-cms-app@npm:3.4.0":
+  version: 3.4.0
+  resolution: "decap-cms-app@npm:3.4.0"
   dependencies:
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
@@ -4479,11 +4479,11 @@ __metadata:
     decap-cms-backend-gitlab: "npm:^3.2.2"
     decap-cms-backend-proxy: "npm:^3.1.4"
     decap-cms-backend-test: "npm:^3.1.3"
-    decap-cms-core: "npm:^3.4.2"
+    decap-cms-core: "npm:^3.5.0"
     decap-cms-editor-component-image: "npm:^3.1.3"
     decap-cms-lib-auth: "npm:^3.0.5"
     decap-cms-lib-util: "npm:^3.1.0"
-    decap-cms-lib-widgets: "npm:^3.0.2"
+    decap-cms-lib-widgets: "npm:^3.1.0"
     decap-cms-locales: "npm:^3.2.0"
     decap-cms-ui-default: "npm:^3.1.4"
     decap-cms-widget-boolean: "npm:^3.1.3"
@@ -4494,7 +4494,7 @@ __metadata:
     decap-cms-widget-image: "npm:^3.1.3"
     decap-cms-widget-list: "npm:^3.2.2"
     decap-cms-widget-map: "npm:^3.1.4"
-    decap-cms-widget-markdown: "npm:^3.1.6"
+    decap-cms-widget-markdown: "npm:^3.2.0"
     decap-cms-widget-number: "npm:^3.1.3"
     decap-cms-widget-object: "npm:^3.1.4"
     decap-cms-widget-relation: "npm:^3.3.2"
@@ -4509,7 +4509,7 @@ __metadata:
   peerDependencies:
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 10c0/f1f14612d1e3d65c5efd4a5006dee58bce61633bec0a108eb0a6b5cd5acf9a9201f3095068cabdd743d6434389219908c61d9df7f626f02975e9dff2b0467b78
+  checksum: 10c0/dfe1c108b8f9abbc3839b7db42bcaaed8e7ce7a27db6edf4dce870868c48cc74936a4bef74603d06d683e0f587ab895996d04bf72147dc2b305e85120892f474
   languageName: node
   linkType: hard
 
@@ -4686,9 +4686,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-core@npm:^3.4.2":
-  version: 3.4.2
-  resolution: "decap-cms-core@npm:3.4.2"
+"decap-cms-core@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "decap-cms-core@npm:3.5.0"
   dependencies:
     "@iarna/toml": "npm:2.2.5"
     "@reduxjs/toolkit": "npm:^1.9.1"
@@ -4754,7 +4754,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-immutable-proptypes: ^2.1.0
-  checksum: 10c0/da3de410f1a5616c829833c592a52036d905eecd63837a87219bb9de211e184dff69e14f2f68a0cfaa3fb6107569209a2ac899e0cbdfc5889eddc0b0bf4b6948
+  checksum: 10c0/6d0efc6747920cab95c1965a02d4a48a0ebca77cc412b1193cd2321323ee2b6e3f81fec885fc322322a7b71fe84ed62c1df0a1ed317d61e02c15ba855ce3da9e
   languageName: node
   linkType: hard
 
@@ -4792,15 +4792,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-lib-widgets@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "decap-cms-lib-widgets@npm:3.0.2"
+"decap-cms-lib-widgets@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "decap-cms-lib-widgets@npm:3.1.0"
   dependencies:
     dayjs: "npm:^1.11.10"
   peerDependencies:
     immutable: ^3.7.6
     lodash: ^4.17.11
-  checksum: 10c0/9bcc2ffd84cddf26f098173979222d53d608bba9786d4c00f3879e603a3a8953e5c9519c95c5284c0a1ab95565a545b2a3bd3504c0ad5c627ea180da5019d8f6
+  checksum: 10c0/acc7b81c5c792331fad5a649ca92454af6a1a86570f0c2cecd687f2e17fb993e3fb5f9898db3b962723b21f5bb336001e7729f4c88a2ec2d4d10ed1ba4780897
   languageName: node
   linkType: hard
 
@@ -4960,9 +4960,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-widget-markdown@npm:^3.1.6":
-  version: 3.1.6
-  resolution: "decap-cms-widget-markdown@npm:3.1.6"
+"decap-cms-widget-markdown@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "decap-cms-widget-markdown@npm:3.2.0"
   dependencies:
     dompurify: "npm:^2.2.6"
     is-hotkey: "npm:^0.2.0"
@@ -4996,7 +4996,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-immutable-proptypes: ^2.1.0
-  checksum: 10c0/d3765f3486834d19b7b925c0b2bc6d4d5d6481d3d70698dc9a42c33387d8a660cb20d948482276c063bb25f335f1c64d53e6855c0583ee9a8cd018a0305e1991
+  checksum: 10c0/4de627d78f801c02e0a92409aa47e4776271fcaee47fa0a3684e683d30a411c3d697b8487cfcb08ef57e1a24de5eda6f1a003b302e39bc6a078ffa66b8bd568d
   languageName: node
   linkType: hard
 
@@ -5918,9 +5918,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:50.4.3":
-  version: 50.4.3
-  resolution: "eslint-plugin-jsdoc@npm:50.4.3"
+"eslint-plugin-jsdoc@npm:50.5.0":
+  version: 50.5.0
+  resolution: "eslint-plugin-jsdoc@npm:50.5.0"
   dependencies:
     "@es-joy/jsdoccomment": "npm:~0.49.0"
     are-docs-informative: "npm:^0.0.2"
@@ -5935,7 +5935,7 @@ __metadata:
     synckit: "npm:^0.9.1"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10c0/96067f8fc3553371e9afdc6d03c166228bfd3cb004fcd70c4357d49185732f384351e20f44c21b0a13ea318c8aabbd584b627804f62a2a80376507646708a786
+  checksum: 10c0/07754c7ba91cfc9dc5adacf25132bd7621f4e5bacc6150bd6f1909ae653180e988fa8bced66ac26565d7196c0bb8c2066df3ad2364c33256ac3ceffa60623aaa
   languageName: node
   linkType: hard
 
@@ -7614,6 +7614,13 @@ __metadata:
   version: 4.3.7
   resolution: "immutable@npm:4.3.7"
   checksum: 10c0/9b099197081b22f6433003e34929da8ecddbbdc1474cdc8aa3b7669dee4adda349c06143de22def36016d1b6de5322b043eccd7a11db1dad2ca85dad4fff5435
+  languageName: node
+  linkType: hard
+
+"immutable@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "immutable@npm:5.0.2"
+  checksum: 10c0/0d97ad95384e49563b6ed68f90e5ea83c149fd96ff417fae8274e1c524e3ef800eb1a2e8009e29d9b8ffdf63affd7692f87c8af72714181aad8dca88747fb5ac
   languageName: node
   linkType: hard
 
@@ -11203,7 +11210,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.0.0, picocolors@npm:^1.0.1, picocolors@npm:^1.1.0":
+"picocolors@npm:^1.0.0, picocolors@npm:^1.0.1, picocolors@npm:^1.1.0, picocolors@npm:^1.1.1":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
   checksum: 10c0/e2e3e8170ab9d7c7421969adaa7e1b31434f789afb9b3f115f6b96d91945041ac3ceb02e9ec6fe6510ff036bcc0bf91e69a1772edc0b707e12b19c0f2d6bcf58
@@ -11319,7 +11326,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.47, postcss@npm:^8.4.47":
+"postcss@npm:8.4.49":
+  version: 8.4.49
+  resolution: "postcss@npm:8.4.49"
+  dependencies:
+    nanoid: "npm:^3.3.7"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10c0/f1b3f17aaf36d136f59ec373459f18129908235e65dbdc3aee5eef8eba0756106f52de5ec4682e29a2eab53eb25170e7e871b3e4b52a8f1de3d344a514306be3
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.47":
   version: 8.4.47
   resolution: "postcss@npm:8.4.47"
   dependencies:
@@ -12735,20 +12753,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.80.6":
-  version: 1.80.6
-  resolution: "sass@npm:1.80.6"
+"sass@npm:1.80.7":
+  version: 1.80.7
+  resolution: "sass@npm:1.80.7"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
-    immutable: "npm:^4.0.0"
+    immutable: "npm:^5.0.2"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   dependenciesMeta:
     "@parcel/watcher":
       optional: true
   bin:
     sass: sass.js
-  checksum: 10c0/04ce40d4dcf06cf2a94a66c1cc4fd4a9eb4033fd039291acd0be9d1d4123860da568c5cbef9de8493ffbedd8acae1cd0b8346f5da21c6f7cf0ffd3477730beca
+  checksum: 10c0/e0e0df8dc9dd7694826f915196a96cda45fe0fc849be9fc08b43c12aa1250eb512130979ed239e1106476973ace1f52abbcc1d5900a075d3813c282a626dcbf7
   languageName: node
   linkType: hard
 

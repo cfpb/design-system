@@ -1446,7 +1446,7 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Cool palette
-        variation_description: |2-
+        variation_description: |-2
            <table class="color-table">
                 <thead>
                     <tr>
@@ -1524,7 +1524,7 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Warm palette
-        variation_description: |2-
+        variation_description: |-2
            <table class="color-table">
                 <thead>
                     <tr>
@@ -1540,12 +1540,12 @@ variation_groups:
 
             <tbody>
 
-          <tr>
-                <td class="swatch__field swatch__field--gold-70"></td>
-                <td>Gold 70</td>
-                <td>#ffc372</td>
-                <td>255, 195, 114</td>
-                <td>0, 27, 62, 0</td>
+            <tr>
+                <td class="swatch__field swatch__field--gold-80"></td>
+                <td>Gold 80</td>
+                <td>#ffb858</td>
+                <td>255, 184, 88</td>
+                <td>0, 34, 76, 0</td>
             </tr>
 
             <tr>
@@ -1605,7 +1605,7 @@ variation_groups:
             </tr>
 
             </tbody></table>
-content_guidelines: ''
+content_guidelines: ""
 eyebrow: Basics
 title: Color
 layout: variation
@@ -1645,7 +1645,7 @@ use_cases: >-
 
 
   ![Sequential example](/design-system/images/uploads/sequential-color-1.png)
-behavior: ''
+behavior: ""
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization
   because of accessibility standards for people who are blind and visually

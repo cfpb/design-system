@@ -351,12 +351,8 @@ $ba: Link underline active color.
 // Width utilities
 //
 
-@mixin u-w100pct() {
-  width: 100%;
-}
-
 .u-w100pct {
-  @include u-w100pct;
+  width: 100%;
 }
 
 .u-w90pct {

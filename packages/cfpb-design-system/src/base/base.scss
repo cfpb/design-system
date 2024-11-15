@@ -27,6 +27,16 @@ textarea {
   font-family: var(--font-stack);
 }
 
+/*
+ * On iOS Safari the input is collapsed till it's clicked.
+ * This sets the appearance to that of a textfield and then reverts the display
+ * to vertically align the date.
+ */
+input[type='date'] {
+  appearance: textfield;
+  display: revert;
+}
+
 strong,
 b {
   font-weight: 600;

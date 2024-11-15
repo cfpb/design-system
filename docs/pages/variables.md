@@ -34,7 +34,9 @@ variation_groups:
 
 
           ```css
-          --font-stack: 'Avenir Next', Arial, sans-serif;
+          :root {
+            --font-stack: 'Avenir Next', Arial, sans-serif;
+          }
           ```
       - variation_name: Font source
         variation_description: |-

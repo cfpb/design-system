@@ -73,7 +73,7 @@
 
 // Gives 100% width to all tables
 table {
-  @include u-w100pct;
+  width: 100%;
 }
 
 .a-live__code table {

@@ -121,59 +121,67 @@ variation_groups:
           <!--NOTE: Inline style properties for demonstration only.-->
 
 
-          <div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px; font-size:12px;">
               <code>.u-w100pct</code>
           </div>
 
-          <div class="u-w90pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w90pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w90pct</code>
           </div>
 
-          <div class="u-w80pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w80pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w80pct</code>
           </div>
 
-          <div class="u-w70pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w70pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w70pct</code>
           </div>
 
-          <div class="u-w60pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w60pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w60pct</code>
           </div>
 
-          <div class="u-w50pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w50pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w50pct</code>
           </div>
 
-          <div class="u-w40pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w40pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w40pct</code>
           </div>
 
-          <div class="u-w30pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w30pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w30pct</code>
           </div>
 
-          <div class="u-w20pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w20pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w20pct</code>
           </div>
 
-          <div class="u-w10pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w10pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w10pct</code>
           </div>
 
-          <div class="u-w75pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w75pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w75pct</code>
           </div>
 
-          <div class="u-w25pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w25pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w25pct</code>
           </div>
 
-          <div class="u-w66pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w65pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+              <code>.u-w65pct</code>
+          </div>
+
+          <div class="u-w15pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+              <code>.u-w15pct</code>
+          </div>
+
+          <div class="u-w66pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w66pct</code>
           </div>
 
-          <div class="u-w33pct" style="background: #f4edf3; margin-bottom: 1px;">
+          <div class="u-w33pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
               <code>.u-w33pct</code>
           </div>
         variation_description: Set the `width` of an element in percentages.

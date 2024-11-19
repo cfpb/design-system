@@ -119,12 +119,21 @@ variation_groups:
                     placeholder="Placeholder text">Input text</textarea>
       - variation_is_deprecated: false
         variation_name: Text area input (full width)
-        variation_description: |-
+        variation_code_snippet: |-
           <div class="m-form-field">
               <textarea class="a-text-input a-text-input--full"
                         id="full-textarea-example"
                      placeholder="Placeholder text">Input text</textarea>
           </div>
+  - variation_group_name: Date input
+    variations:
+      - variation_is_deprecated: false
+        variation_name: Date input
+        variation_description:
+          Date inputs use the browser's built-in date picker, where available,
+          otherwise they fall back to a text input.
+        variation_code_snippet: |-
+          <input type="date" class="a-text-input a-text-input--full" placeholder="mm/dd/yyyy" data-type="date" id="o-filterable-list-controls_from-date">
 guidelines: >-
   ### Stylistic guidelines
 

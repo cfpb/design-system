@@ -2,7 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.10](https://github.com/cfpb/design-system/compare/v3.4.9..3.4.10) - November 19, 2024
+## [3.4.11](https://github.com/cfpb/design-system/compare/v3.4.10..3.4.11) - November 19, 2024
+
+### PRs in this release
+
+- PR #[2118](https://github.com/cfpb/design-system/pull/2118): Add `u-w65pct` and `u-w15pct` utilities - Ans
+- PR #[2116](https://github.com/cfpb/design-system/pull/2116): Adds date input example and adjusts baseline appearance - Ans
+
+### General
+
+- Add `u-w65pct` and `u-w15pct` utilities - ([ea2e45b](https://github.com/cfpb/design-system/commit/ea2e45bb961d4cd3fc1e5551c0b9ccf4fce74725)) - Ans
+- Shrink demo width utility text size to fit on one line each - ([5b80eaa](https://github.com/cfpb/design-system/commit/5b80eaa670f1a32ce47f006c8d0d0fb02dd890b1)) - Ans
+- Rebuild assets - ([533f0c6](https://github.com/cfpb/design-system/commit/533f0c640029664ccb44459b3859fe03f28ee64d)) - Ans
+- Adds date input example and adjusts baseline appearance - ([0cd1019](https://github.com/cfpb/design-system/commit/0cd1019a10ecb2a35776d26778cfe60b15511c04)) - Ans
+- Rebuild assets - ([869583a](https://github.com/cfpb/design-system/commit/869583add82cf0c4b6000ce28078aa88e8ff1e91)) - Ans
+
+## [3.4.10](https://github.com/cfpb/design-system/compare/v3.4.9..v3.4.10) - November 19, 2024
 
 ### PRs in this release
 

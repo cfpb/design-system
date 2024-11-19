@@ -45,13 +45,20 @@
 }
 
 a.a-tag-filter {
+  line-height: normal;
+
   // Colors for :link, :visited, :hover, :focus, :active.
   @include u-link-colors(
     var(--black),
     var(--black),
     var(--black),
     var(--black),
-    var(--black)
+    var(--black),
+    var(--teal),
+    var(--teal),
+    var(--teal),
+    var(--teal),
+    var(--teal)
   );
 }
 

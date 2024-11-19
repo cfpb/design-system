@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.9](https://github.com/cfpb/design-system/compare/v3.4.8..3.4.9) - November 13, 2024
+## [3.4.10](https://github.com/cfpb/design-system/compare/v3.4.9..3.4.10) - November 19, 2024
+
+### PRs in this release
+
+- PR #[2120](https://github.com/cfpb/design-system/pull/2120): Add filter tag anchor markup example - Ans
+
+### General
+
+- Add filter tag link example - ([195cf5c](https://github.com/cfpb/design-system/commit/195cf5c3c16d6a755c4b482d227a75d229726790)) - Ans
+
+## [3.4.9](https://github.com/cfpb/design-system/compare/v3.4.8..v3.4.9) - November 13, 2024
 
 ### PRs in this release
 

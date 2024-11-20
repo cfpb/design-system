@@ -35,6 +35,10 @@ textarea {
 input[type='date'] {
   appearance: textfield;
   display: revert;
+
+  &.a-text-input--full {
+    -webkit-min-logical-width: calc(100% - 16px);
+  }
 }
 
 strong,

@@ -125,15 +125,6 @@ variation_groups:
                         id="full-textarea-example"
                      placeholder="Placeholder text">Input text</textarea>
           </div>
-  - variation_group_name: Date input
-    variations:
-      - variation_is_deprecated: false
-        variation_name: Date input
-        variation_description:
-          Date inputs use the browser's built-in date picker, where available,
-          otherwise they fall back to a text input.
-        variation_code_snippet: |-
-          <input type="date" class="a-text-input a-text-input--full" placeholder="mm/dd/yyyy" data-type="date" id="o-filterable-list-controls_from-date">
 guidelines: >-
   ### Stylistic guidelines
 

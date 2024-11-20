@@ -17,8 +17,8 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: Date picker (full-width)
         variation_description:
-          Date inputs use the browser's built-in date picker, where available,
-          otherwise they fall back to a text input.
+          Date inputs may use the `a-text-input--full` modifier to fill their
+          available space.
         variation_code_snippet: |-
           <input type="date" class="a-text-input a-text-input--full" placeholder="mm/dd/yyyy">
         variation_group_name: Types

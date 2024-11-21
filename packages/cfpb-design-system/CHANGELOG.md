@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.13](https://github.com/cfpb/design-system/compare/v3.4.12..3.4.13) - November 21, 2024
+## [3.4.14](https://github.com/cfpb/design-system/compare/v3.4.13..3.4.14) - November 21, 2024
+
+### PRs in this release
+
+- PR #[2122](https://github.com/cfpb/design-system/pull/2122): Add non-clickable filter tag - Ans
+
+### General
+
+- Add non-clickable filter tag - ([b0b50c1](https://github.com/cfpb/design-system/commit/b0b50c1fe0b980273ee2f9b79e322b781f850ee8)) - Ans
+
+## [3.4.13](https://github.com/cfpb/design-system/compare/v3.4.12..v3.4.13) - November 21, 2024
 
 ### PRs in this release
 

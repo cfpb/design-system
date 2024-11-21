@@ -138,7 +138,7 @@ variation_groups:
         variation_description: There can be elements that have the appearance of a filter tag, but are not clickable. This is used like an inline notification.
         variation_code_snippet: >-
           <div class="a-tag-filter">
-            Option 1
+            Note
           </div>
     variation_group_name: Types
 behavior: To clear a filter tag selection, click the “x” icon inside of the filter tag.

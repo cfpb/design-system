@@ -16,6 +16,21 @@
   text-align: left;
   min-width: fit-content;
 
+  .cf-icon-svg {
+    pointer-events: none;
+
+    // Prevent flexbox from squishing icon when tag text is long.
+    flex: none;
+  }
+
+  // If the contents are wrapped in a label, negate the label's display.
+  > label {
+    display: contents;
+    pointer-events: none;
+  }
+}
+
+button.a-tag-filter {
   &:hover {
     background-color: var(--teal-40);
     cursor: pointer;
@@ -28,19 +43,6 @@
 
   &:active {
     background-color: var(--teal);
-  }
-
-  .cf-icon-svg {
-    pointer-events: none;
-
-    // Prevent flexbox from squishing icon when tag text is long.
-    flex: none;
-  }
-
-  // If the contents are wrapped in a label, negate the label's display.
-  > label {
-    display: contents;
-    pointer-events: none;
   }
 }
 

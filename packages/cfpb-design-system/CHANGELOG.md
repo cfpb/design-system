@@ -2,7 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.11](https://github.com/cfpb/design-system/compare/v3.4.10..3.4.11) - November 19, 2024
+## [3.4.12](https://github.com/cfpb/design-system/compare/v3.4.11..3.4.12) - November 21, 2024
+
+### PRs in this release
+
+- PR #[2117](https://github.com/cfpb/design-system/pull/2117): Add overflow-wrap: break-word to `a-link__text` - Ans
+- PR #[2121](https://github.com/cfpb/design-system/pull/2121): Tweak and consolidate date picker - Ans
+
+### General
+
+- Add overflow-wrap: break-word to `a-link__text` - ([362af9b](https://github.com/cfpb/design-system/commit/362af9b39034f31ca54bf4f84b3eae769aa36868)) - Ans
+- Rebuild assets - ([696aa1d](https://github.com/cfpb/design-system/commit/696aa1d51e14bce883e7bdfd6084d50572b59104)) - Ans
+- Tweak and consolidate date picker - ([b950e9d](https://github.com/cfpb/design-system/commit/b950e9d051b0d1ebc7d4e031012784dd43ccac0f)) - Ans
+- Update date-picker.md - ([62cc483](https://github.com/cfpb/design-system/commit/62cc483290cc3e6fb1ebb9e8806ab4c29366450c)) - Ans
+- More tweaks to wrangle aligning iOS with everyone else - ([c41101f](https://github.com/cfpb/design-system/commit/c41101f6be4994c8532b884191525df269529a9d)) - Ans
+
+## [3.4.11](https://github.com/cfpb/design-system/compare/v3.4.10..v3.4.11) - November 19, 2024
 
 ### PRs in this release
 

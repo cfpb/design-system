@@ -2,7 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.12](https://github.com/cfpb/design-system/compare/v3.4.11..3.4.12) - November 21, 2024
+## [3.4.13](https://github.com/cfpb/design-system/compare/v3.4.12..3.4.13) - November 21, 2024
+
+### PRs in this release
+
+- PR #[2123](https://github.com/cfpb/design-system/pull/2123): Adjust date picker min-height/min-width to prevent size difference between empty and filled date picker - Ans
+
+### General
+
+- Adjust date picker min-height to prevent size difference between empty and filled date picker - ([1bb457a](https://github.com/cfpb/design-system/commit/1bb457a727354b5d154e19e08f7b41dcaf231ac4)) - Ans
+- Date picker: Adjust min-width to be a nice round number - ([5d41c85](https://github.com/cfpb/design-system/commit/5d41c859fb91d0b3b7df79061415716a5b9e7a09)) - Ans
+- Remove top/bottom padding - ([30f215c](https://github.com/cfpb/design-system/commit/30f215ccb0fd5d7df1c2424ab587dbb5fe3281c4)) - Ans
+- Date picker: Reduce height by 1px - ([ef7a039](https://github.com/cfpb/design-system/commit/ef7a03962b400fcd0eca1a2308048ad16c876fee)) - Ans
+- Regenerate assets - ([56ca4fd](https://github.com/cfpb/design-system/commit/56ca4fd28bd026feb140f4308dd2e47b441e2c2a)) - Ans
+
+## [3.4.12](https://github.com/cfpb/design-system/compare/v3.4.11..v3.4.12) - November 21, 2024
 
 ### PRs in this release
 

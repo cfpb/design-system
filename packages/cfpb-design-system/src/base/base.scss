@@ -34,8 +34,10 @@ textarea {
  */
 input[type='date'] {
   display: revert;
-  min-width: 98px;
-  min-height: 29px;
+  min-width: 100px;
+  min-height: 35px;
+  padding-top: 0;
+  padding-bottom: 0;
 
   &.a-text-input--full {
     min-width: 100%;

@@ -284,10 +284,6 @@
     <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
         
         <li class="m-list__item">
-            <a href="#types">Types</a>
-        </li>
-        
-        <li class="m-list__item">
             <a href="#accessibility">Accessibility</a>
         </li>
         
@@ -307,12 +303,11 @@
 
     
     
-    <section class="o-variation-group" id="types">
+    <section class="o-variation-group" id="">
 
         
-        <h2 class="o-variation-group__title">
-            Types
-        </h2>
+        
+        <div class="u-mb15"></div>
         
 
         
@@ -336,7 +331,7 @@
 
             
             <div class="m-variation__description">
-                
+                <p>Date inputs use the browser’s built-in date picker, where available, otherwise they fall back to a text input.</p>
 
             </div>
             
@@ -344,9 +339,7 @@
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <div class="m-form-field">
-    <input class="a-text-input" type="date" id="datepicker-example" placeholder="mm/dd/yyyy">
-</div>
+                <input type="date" class="a-text-input" placeholder="mm/dd/yyyy">
             </div>
             
 
@@ -358,15 +351,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-date-picker-div-class-m-form-fie-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-date-picker-div-class-m-form-fie-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-date-picker-date-inputs-use-the--1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-date-picker-date-inputs-use-the--1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-date-picker-div-class-m-form-fie-1">
+            <div class="m-tabs u-hidden" id="details-date-picker-date-inputs-use-the--1">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-date-picker-div-class-m-form-fie-html-code-snippet-1">
+                        <a class="m-tabs__tab" href="#details-date-picker-date-inputs-use-the--html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -378,16 +371,93 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-date-picker-div-class-m-form-fie-html-code-snippet-1">
+                <section class="m-tabs__panel" id="details-date-picker-date-inputs-use-the--html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-form-field"&gt;
-    &lt;input class="a-text-input"
-          type="date"
-          id="datepicker-example"
-         placeholder="mm/dd/yyyy"&gt;
-&lt;/div&gt;</code></pre>
+                            <pre><code class="language-html">&lt;input type="date" class="a-text-input" placeholder="mm/dd/yyyy"&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Date picker (full-width)
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Date inputs may use the <code class="language-plaintext highlighter-rouge">a-text-input--full</code> modifier to fill their available space.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <input type="date" class="a-text-input a-text-input--full" placeholder="mm/dd/yyyy">
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-date-picker-full-width-date-inpu-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-date-picker-full-width-date-inpu-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-date-picker-full-width-date-inpu-2">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-date-picker-full-width-date-inpu-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-date-picker-full-width-date-inpu-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;input type="date" class="a-text-input a-text-input--full" placeholder="mm/dd/yyyy"&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -471,8 +541,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/date-picker.md">
-                            <time datetime="2024-11-20 18:12:51 -0500">
-                                 6:12:51 PM Nov 20, 2024
+                            <time datetime="2024-11-21 15:15:08 -0500">
+                                 3:15:08 PM Nov 21, 2024
                             </time>
                         </a>
                     </section>

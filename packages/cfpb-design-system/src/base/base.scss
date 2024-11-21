@@ -29,15 +29,16 @@ textarea {
 
 /*
  * On iOS Safari the input is collapsed till it's clicked.
- * This sets the appearance to that of a textfield and then reverts the display
- * to vertically align the date.
+ * This sets the default min width and height to what it would be if the
+ * appearance was a textfield.
  */
 input[type='date'] {
-  appearance: textfield;
   display: revert;
+  min-width: 98px;
+  min-height: 29px;
 
   &.a-text-input--full {
-    -webkit-min-logical-width: calc(100% - 16px);
+    min-width: 100%;
   }
 }
 

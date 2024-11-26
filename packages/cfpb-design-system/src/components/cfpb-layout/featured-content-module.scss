@@ -70,26 +70,4 @@
       transform: translateX(-50%);
     }
   }
-
-  // Modifiers
-  &--left {
-    /* Left modifier doesn't have a border/background. If in the future we
-       have a left arranged FCM we'll want to make the border/background
-       its own modifer */
-    border: initial;
-    background-color: initial;
-
-    .o-featured-content-module__visual {
-      left: 0;
-      right: initial;
-    }
-
-    .o-featured-content-module__text {
-      // Tablet and above.
-      @include respond-to-min($bp-sm-min) {
-        padding-left: $fcm-visual-width + $grid-gutter-width;
-        padding-right: math.div($grid-gutter-width, $base-font-size-px) + em;
-      }
-    }
-  }
 }

@@ -98,32 +98,6 @@ variation_groups:
           the image area. Make sure the subject of the thumbnail photo is not
           awkwardly obscured by the play button.
         variation_name: Visual anchored on the right (default)
-      - variation_code_snippet: >-
-          <section class="o-featured-content-module
-                          o-featured-content-module--left">
-              <div class="o-featured-content-module__text">
-                  <h2>Featured content</h2>
-                  <p>
-                      Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-                      instructior ex pri. Cu pri inani constituto, cum aeque noster
-                      commodo cu.
-                  </p>
-                  <a class="a-link
-                            a-link--jump">
-                      <span class="a-link__text">Read more about the feature</span>
-                  </a>
-              </div>
-              <div class="o-featured-content-module__visual">
-                  <img class="o-featured-content-module__img"
-                      src="https://dummyimage.com/1076x606/addc91/101820"
-                      alt="">
-              </div>
-          </section>
-        variation_description: >-
-          Adding the `o-featured-content-module--left` modifier places the
-          visual to the left of the text and doesn't include a background
-          color or border.
-        variation_name: Left-anchored visual
     variation_group_name: Variations
     variation_group_description: >-
       The modifiers below describe how to change where the featured content

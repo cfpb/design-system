@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.4.14](https://github.com/cfpb/design-system/compare/v3.4.13..3.4.14) - November 21, 2024
+## [3.5.0](https://github.com/cfpb/design-system/compare/v3.4.14..3.5.0) - November 26, 2024
+
+### PRs in this release
+
+- PR #[2127](https://github.com/cfpb/design-system/pull/2127): Update hero text margin to `auto 0` - Ans
+- PR #[2128](https://github.com/cfpb/design-system/pull/2128): Remove `o-featured-content-module--left` - Ans
+
+### General
+
+- Update hero text margin to `auto 0` - ([a731483](https://github.com/cfpb/design-system/commit/a73148309e7d36ce20ed786f0b57b47d1acfa0d0)) - Ans
+- Remove `o-featured-content-module--left` - ([c12548f](https://github.com/cfpb/design-system/commit/c12548feea774c37c781a7f1268551be3703094b)) - Ans
+
+## [3.4.14](https://github.com/cfpb/design-system/compare/v3.4.13..v3.4.14) - November 21, 2024
 
 ### PRs in this release
 

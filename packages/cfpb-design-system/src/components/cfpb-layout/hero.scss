@@ -108,6 +108,7 @@ $hero-desktop-height: 285px;
     &__image-wrapper {
       margin-top: math.div($grid-gutter-width, $base-font-size-px) + em;
     }
+
     &--overlay {
       .m-hero__wrapper {
         // Overwrite the image that is set in the markup because
@@ -115,6 +116,7 @@ $hero-desktop-height: 285px;
         background-image: none !important;
       }
     }
+
     &--jumbo {
       .m-hero__wrapper {
         // Keep hero image flush with container on mobile
@@ -130,6 +132,7 @@ $hero-desktop-height: 285px;
     &__heading {
       @include heading-2($is-responsive: false);
     }
+
     &__subhead {
       font-size: $size-iv;
     }
@@ -145,9 +148,11 @@ $hero-desktop-height: 285px;
       padding-left: math.div($grid-gutter-width, 2);
       min-height: $hero-desktop-height - ($grid-gutter-width * 2);
     }
+
     &__text {
-      margin: auto;
+      margin: auto 0;
     }
+
     &__image-wrapper {
       padding-right: math.div($grid-gutter-width, 2);
       padding-left: math.div(
@@ -157,6 +162,7 @@ $hero-desktop-height: 285px;
       display: flex;
       align-items: center;
     }
+
     &--bleeding {
       .m-hero__image-wrapper {
         width: 100%;
@@ -172,11 +178,13 @@ $hero-desktop-height: 285px;
         background-size: cover;
       }
     }
+
     &--overlay {
       .m-hero__image {
         display: none;
       }
     }
+
     &--jumbo {
       .m-hero__wrapper {
         background-position: 50%;
@@ -187,6 +195,7 @@ $hero-desktop-height: 285px;
         display: none;
       }
     }
+
     &--50-50 {
       .m-hero__wrapper {
         grid-template-columns: 1fr 1fr;

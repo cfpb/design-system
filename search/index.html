@@ -3189,7 +3189,7 @@ Label
 &lt;div class=&quot;wide-wrapper&quot; style=&quot;background-color: #f9f9f9&quot;&gt;This container is the same except it has a wider max-width.&lt;/div&gt;`,
                 
                     'variation_name2': 'Columns',
-                    'variation_description2': "Mixin%0A%0A%40include+u-grid-column%28+%24columns%3A+1%2C+%24total%3A+%24grid-total-columns+%29%0A%0A%0ACreate+a+grid+column+that+is+%24columns+wide+given+%24total+total+grid+columns.%0AGrid+columns+use+transparent+borders+to+create+the+gutters+of+the+grid%2C%0Aso+if+you+want+a+column+to+have+a+background+or+border%2C+you%E2%80%99ll+need+to%0Aadd+a+wrapper+just+inside+the+column+to+be+styled+that+way.%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.half+%7B%0A++++.u-grid-column%281%2C+2%29%3B%0A%7D%0A.styled+%7B%0A++++border%3A+1px+solid+%23999%3B%0A++++background%3A+%23EEE%3B%0A%7D%0A%0A%0ANOTE%3A+cf-grid+does+not+have+a+%E2%80%9Crow%E2%80%9D+concept.%0AIf+you+have+a+12-column+grid+and+place+24+columns+inside+a+wrapper%2C%0Acf-grid+columns+will+automatically+stack+into+two+rows+of+12.%0A",
+                    'variation_description2': "Mixin%0A%0A%40include+u-grid-column%28+%24columns%3A+1%2C+%24total%3A+%24grid-total-columns+%29%0A%0A%0ACreate+a+grid+column+that+is+%24columns+wide+given+%24total+total+grid+columns.%0AGrid+columns+use+transparent+borders+to+create+the+gutters+of+the+grid%2C%0Aso+if+you+want+a+column+to+have+a+background+or+border%2C+you%E2%80%99ll+need+to%0Aadd+a+wrapper+just+inside+the+column+to+be+styled+that+way.%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%3B%0A%7D%0A.half+%7B%0A++++%40include+u-grid-column%281%2C+2%29%3B%0A%7D%0A.styled+%7B%0A++++border%3A+1px+solid+%23999%3B%0A++++background%3A+%23EEE%3B%0A%7D%0A%0A%0ANOTE%3A+cf-grid+does+not+have+a+%E2%80%9Crow%E2%80%9D+concept.%0AIf+you+have+a+12-column+grid+and+place+24+columns+inside+a+wrapper%2C%0Acf-grid+columns+will+automatically+stack+into+two+rows+of+12.%0A",
                     'variation_code_snippet2': `&lt;div class=&quot;main-wrapper&quot;&gt;
     &lt;div class=&quot;half&quot;&gt;I am half of my parent.&lt;/div&gt;
     &lt;div class=&quot;half&quot;&gt;
@@ -3198,7 +3198,7 @@ Label
 &lt;/div&gt;`,
                 
                     'variation_name3': 'Nested columns',
-                    'variation_description3': "Since+all+grid+columns+have+left+and+right+gutters%2C%0Ayou+will+notice+undesirable+offsetting+when+nesting+columns.%0ANormally+this+is+removed+with+complex+selectors%0Aor+by+adding+classes+to+the+first+and+last+column+per+%E2%80%98row%E2%80%99.%0A%0AIn+cf-grid%2C+the+way+to+get+around+this+is+by+wrapping+your+columns%0Ain+a+container+that+utilizes+the+.u-grid-nested-col-group%28%29+mixin.%0AThis+mixin+uses+negative+left+and+right+margins+to%0Apull+the+columns+back+into+alignment+with+parent+columns.%0A%0AWorking+this+way+allows+you+to+easily+create+responsive+grids.%0AYou+are+free+to+control+the+number+of+columns+per+%E2%80%9Crow%E2%80%9D+at+different+breakpoints%0Awithout+having+to+deal+with+the+first+and+last+columns+of+each+row.%0A%0AMixin%0A%0A.u-grid-nested-col-group%28%29%0A%0A%0AUsage%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%28%29%3B%0A%7D%0A.nested+%7B%0A++++.u-grid-nested-col-group%28%29%3B%0A%7D%0A.half+%7B%0A++++.u-grid-column%281%2C+2%29%3B%0A%7D%0A%0A",
+                    'variation_description3': "Since+all+grid+columns+have+left+and+right+gutters%2C%0Ayou+will+notice+undesirable+offsetting+when+nesting+columns.%0ANormally+this+is+removed+with+complex+selectors%0Aor+by+adding+classes+to+the+first+and+last+column+per+%E2%80%98row%E2%80%99.%0A%0AIn+cf-grid%2C+the+way+to+get+around+this+is+by+wrapping+your+columns%0Ain+a+container+that+utilizes+the+%40include+u-grid-nested-col-group+mixin.%0AThis+mixin+uses+negative+left+and+right+margins+to%0Apull+the+columns+back+into+alignment+with+parent+columns.%0A%0AWorking+this+way+allows+you+to+easily+create+responsive+grids.%0AYou+are+free+to+control+the+number+of+columns+per+%E2%80%9Crow%E2%80%9D+at+different+breakpoints%0Awithout+having+to+deal+with+the+first+and+last+columns+of+each+row.%0A%0AMixin%0A%0A%40include+u-grid-nested-col-group%3B%0A%0A%0AUsage%0A%0A.main-wrapper+%7B%0A++++%40include+u-grid-wrapper%3B%0A%7D%0A.nested+%7B%0A++++%40include+u-grid-nested-col-group%3B%0A%7D%0A.half+%7B%0A++++%40include+u-grid-column%281%2C+2%29%3B%0A%7D%0A%0A",
                     'variation_code_snippet3': `&lt;div class=&quot;main-wrapper&quot;&gt;
     &lt;div class=&quot;half&quot;&gt;
         &lt;div class=&quot;nested&quot;&gt;
@@ -3272,10 +3272,6 @@ Label
                     'variation_code_snippet5': `&lt;div class=&quot;wrapper&quot;&gt;
     Wrapper
 &lt;/div&gt;`,
-                
-                    'variation_name6': 'Cf-grid helpers: Column divider modifiers',
-                    'variation_description6': "See+the+column+dividers+page+for+information.%0A",
-                    'variation_code_snippet6': ``,
                 
             
 
@@ -3404,7 +3400,7 @@ Example of a non heading element:
             'use_cases': "%0A",
             'guidelines': "Content%0A%0A%0A++Headings+should+be+sentence+case.%0A++Do+not+include+punctuation+in+headings.%0A++Keep+headings+to+one+line+on+desktop+when+possible.%0A%0A%0ASpacing%0A%0ARefer+to+the+Guidelines+section+of+the+Fonts+page+for+information+about+heading+spacing.%0A",
             'behavior': "%0A",
-            'accessibility': "Since+categories+can+be+repetitive%2C+we+suggest+placing+a+label+with+.u-visually-hidden+prior+to+the+headings+with+icons+to+add+more+context+for+screen+readers.%0A",
+            'accessibility': "Since+categories+can+be+repetitive%2C+we+suggest+placing+a+label+with+%40include+u-visually-hidden+prior+to+the+headings+with+icons+to+add+more+context+for+screen+readers.%0A",
             'research': "%0A",
             'related_items': "%0A++Paragraphs%0A++Fonts%0A%0A",
             'url': 'foundation/headings'

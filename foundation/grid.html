@@ -597,7 +597,7 @@ and apply the mixins to those semantic classes, like this:</p>
 
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.description</span><span class="o">,</span>
 <span class="nc">.illustration</span> <span class="p">{</span>
-    <span class="nc">.u-grid-column</span><span class="o">(</span><span class="nt">1</span><span class="o">,</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+    <span class="k">@include</span> <span class="nd">u-grid-column</span><span class="p">(</span><span class="m">1</span><span class="o">,</span> <span class="m">2</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -739,10 +739,10 @@ so if you want a column to have a background or border, you’ll need to
 add a wrapper just inside the column to be styled that way.</p>
 
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.main-wrapper</span> <span class="p">{</span>
-    <span class="k">@include</span> <span class="nd">u-grid-wrapper</span><span class="p">();</span>
+    <span class="k">@include</span> <span class="nd">u-grid-wrapper</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nc">.half</span> <span class="p">{</span>
-    <span class="nc">.u-grid-column</span><span class="o">(</span><span class="nt">1</span><span class="o">,</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+    <span class="k">@include</span> <span class="nd">u-grid-column</span><span class="p">(</span><span class="m">1</span><span class="o">,</span> <span class="m">2</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="nc">.styled</span> <span class="p">{</span>
     <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="mh">#999</span><span class="p">;</span>
@@ -850,7 +850,7 @@ Normally this is removed with complex selectors
 or by adding classes to the first and last column per ‘row’.</p>
 
 <p>In cf-grid, the way to get around this is by wrapping your columns
-in a container that utilizes the <code class="language-plaintext highlighter-rouge">.u-grid-nested-col-group()</code> mixin.
+in a container that utilizes the <code class="language-plaintext highlighter-rouge">@include u-grid-nested-col-group</code> mixin.
 This mixin uses negative left and right margins to
 pull the columns back into alignment with parent columns.</p>
 
@@ -860,19 +860,19 @@ without having to deal with the first and last columns of each row.</p>
 
 <h4 id="mixin">Mixin</h4>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.u-grid-nested-col-group</span><span class="o">()</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">u-grid-nested-col-group</span><span class="p">;</span>
 </code></pre></div></div>
 
 <h4 id="usage">Usage</h4>
 
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.main-wrapper</span> <span class="p">{</span>
-    <span class="k">@include</span> <span class="nd">u-grid-wrapper</span><span class="p">();</span>
+    <span class="k">@include</span> <span class="nd">u-grid-wrapper</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nc">.nested</span> <span class="p">{</span>
-    <span class="nc">.u-grid-nested-col-group</span><span class="o">()</span><span class="p">;</span>
+    <span class="k">@include</span> <span class="nd">u-grid-nested-col-group</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nc">.half</span> <span class="p">{</span>
-    <span class="nc">.u-grid-column</span><span class="o">(</span><span class="nt">1</span><span class="o">,</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+    <span class="k">@include</span> <span class="nd">u-grid-column</span><span class="p">(</span><span class="m">1</span><span class="o">,</span> <span class="m">2</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -1230,41 +1230,6 @@ without having to deal with the first and last columns of each row.</p>
 
         </div>
         
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Cf-grid helpers: Column divider modifiers
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>See the <a href="https://cfpb.github.io/design-system/development/column-dividers">column dividers</a> page for information.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
     </section>
     
     
@@ -1291,8 +1256,8 @@ without having to deal with the first and last columns of each row.</p>
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/grid.md">
-                            <time datetime="2024-11-26 17:28:01 -0500">
-                                 5:28:01 PM Nov 26, 2024
+                            <time datetime="2024-11-29 14:41:20 -0500">
+                                 2:41:20 PM Nov 29, 2024
                             </time>
                         </a>
                     </section>

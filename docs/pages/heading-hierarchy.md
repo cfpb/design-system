@@ -185,7 +185,7 @@ description: A successful type hierarchy establishes the order of importance of
 use_cases: ''
 behavior: ''
 accessibility: Since categories can be repetitive, we suggest placing a label
-  with `.u-visually-hidden` prior to the headings with icons to add more context
+  with `@include u-visually-hidden` prior to the headings with icons to add more context
   for screen readers.
 related_items: >-
   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)

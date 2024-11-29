@@ -155,11 +155,11 @@ variation_groups:
           ```scss
 
           .main-wrapper {
-              @include u-grid-wrapper();
+              @include u-grid-wrapper;
           }
 
           .half {
-              .u-grid-column(1, 2);
+              @include u-grid-column(1, 2);
           }
 
           .styled {
@@ -203,7 +203,7 @@ variation_groups:
 
           In cf-grid, the way to get around this is by wrapping your columns
 
-          in a container that utilizes the `.u-grid-nested-col-group()` mixin.
+          in a container that utilizes the `@include u-grid-nested-col-group` mixin.
 
           This mixin uses negative left and right margins to
 
@@ -222,7 +222,7 @@ variation_groups:
 
           ```scss
 
-          .u-grid-nested-col-group()
+          @include u-grid-nested-col-group;
 
           ```
 
@@ -233,15 +233,15 @@ variation_groups:
           ```scss
 
           .main-wrapper {
-              @include u-grid-wrapper();
+              @include u-grid-wrapper;
           }
 
           .nested {
-              .u-grid-nested-col-group();
+              @include u-grid-nested-col-group;
           }
 
           .half {
-              .u-grid-column(1, 2);
+              @include u-grid-column(1, 2);
           }
 
           ```
@@ -309,11 +309,6 @@ variation_groups:
           <div class="wrapper">
               Wrapper
           </div>
-      - variation_name: 'Cf-grid helpers: Column divider modifiers'
-        variation_description: See the [column
-          dividers](https://cfpb.github.io/design-system/development/column-dividers)
-          page for information.
-        variation_code_snippet: ''
     variation_group_name: Development
     variation_group_description: >-
 
@@ -369,7 +364,7 @@ variation_groups:
       .description,
 
       .illustration {
-          .u-grid-column(1, 2);
+          @include u-grid-column(1, 2);
       }
 
       ```

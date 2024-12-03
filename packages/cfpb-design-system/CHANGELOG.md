@@ -2,7 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.5.0](https://github.com/cfpb/design-system/compare/v3.4.14..3.5.0) - November 26, 2024
+## [3.6.0](https://github.com/cfpb/design-system/compare/v3.5.0..3.6.0) - December  3, 2024
+
+### General
+
+- Add new tooltip component to DS
+
+We have two cf.gov apps that use tooltips but limited documentation
+on best practices or how to use them in new projects. This PR adds
+one implementation to the DS. It requires a third party library called
+Tippy.js. - ([b718f49](https://github.com/cfpb/design-system/commit/b718f4925b35a1f0e396663dfa455fb9ed68d2de)) - Chris Contolini
+- Rebuild dist bundles - ([e7d8d57](https://github.com/cfpb/design-system/commit/e7d8d5790b50d9eb4c2abe204ee1a70899876231)) - Chris Contolini
+- Add exports config to DS package
+
+The `exports` field allows multiple entrypoints to be defined instead of
+just a single `main` entrypoint. This allows the bundled code to be selectively
+imported by developers. For our purposes, we can package the majority of our DS
+code into a single file but keep the tooltip code separate. Tooltips are used
+on very few pages and they rely on a third party library that we don't want users
+to unnecessarily download on every page of cf.gov.
+
+See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https://github.com/cfpb/design-system/commit/005bce900a9652fff77c746c108e05b5a9a778ab)) - Chris Contolini
+- Hide tooltip trigger elements if JS is disabled - ([eb584f8](https://github.com/cfpb/design-system/commit/eb584f8dca6a07f9b1bb5a570ce9431a6136468c)) - Chris Contolini
+- Change cursor to pointer on tooltip trigger hover - ([979f268](https://github.com/cfpb/design-system/commit/979f268281721fa6aca5900e1b90fa3d2e100f4d)) - CFPBot
+- Rebuild assets, move new packages to yarn cache dir - ([e0e9531](https://github.com/cfpb/design-system/commit/e0e95310cf3d94706ec143e23caa90157f7129f2)) - Chris Contolini
+- Remove erroneous auto-changelog dependency and config - ([980d9eb](https://github.com/cfpb/design-system/commit/980d9eb65147732323ce42f56014e17ffc638d5a)) - Chris Contolini
+
+## [3.5.0](https://github.com/cfpb/design-system/compare/v3.4.14..v3.5.0) - November 26, 2024
 
 ### PRs in this release
 

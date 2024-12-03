@@ -6712,6 +6712,69 @@ value=&quot;Input text&quot;&gt;
         
         
 
+        'components-tooltips': {
+
+            // Cycle through the variation fields of this page.
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': '',
+                    'variation_description1': "%0A",
+                    'variation_code_snippet1': `The APR for the World Bank Platinum Credit Card is 9.7% &lt;span data-tooltip=&quot;relevant-tooltip&quot;&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--help-round" viewBox="0 0 17 19"><path d="M16.476 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0m-5.034-2.687c0-.404-.073-.774-.223-1.13A2.9 2.9 0 0 0 9.692 4.22a2.75 2.75 0 0 0-1.116-.227 2.9 2.9 0 0 0-2.672 1.773 2.8 2.8 0 0 0-.227 1.128v.02a.792.792 0 0 0 1.583 0v-.02a1.33 1.33 0 0 1 .814-1.22c.155-.067.315-.098.502-.098.18 0 .334.03.485.096a1.3 1.3 0 0 1 .7.71c.067.158.098.322.098.513 0 .225-.027.368-.05.45a1.6 1.6 0 0 1-.132.335 2 2 0 0 1-.219.318q-.19.226-.365.424-.203.213-.374.412c-.17.2-.323.414-.451.639q-.221.388-.342.842c-.08.301-.12.636-.12.995v.035a.792.792 0 1 0 1.583 0v-.035q0-.334.068-.59.066-.253.187-.463a2.5 2.5 0 0 1 .276-.39q.148-.173.329-.363l.018-.02q.194-.217.403-.466.208-.249.384-.556a3.1 3.1 0 0 0 .388-1.567zM9.58 14.195a.98.98 0 0 0-.614-.919l-.004-.001a1.02 1.02 0 0 0-.78 0 .97.97 0 0 0-.62.92q.001.208.08.391a1 1 0 0 0 .541.536 1 1 0 0 0 .78.001l.004-.002a1.02 1.02 0 0 0 .534-.534 1 1 0 0 0 .08-.392z"/></svg>&lt;/span&gt;
+
+&lt;template id=&quot;relevant-tooltip&quot;&gt;
+    &lt;div class=&quot;tippy-heading&quot;&gt;This data is accurate as of June 2023&lt;/div&gt;
+    &lt;div class=&quot;tippy-body&quot;&gt;
+        APRs change over time and are specific to the applicant. Check rates before applying.
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;!--
+Tooltips require a &lt;template&gt; element with an &#39;id&#39; that matches the &#39;data-tooltip&#39;
+attribute of the tooltip&#39;s trigger element. The template can be anywhere on the page.
+
+Additionally, the tooltip component must be imported independently of the rest of
+the Design System using the namespace &#39;@cfpb/cfpb-design-system/tooltips&#39;.
+For example, your project&#39;s JavaScript file might look like:
+
+import {
+  Expandable,
+  ExpandableGroup,
+  Summary,
+  Multiselect,
+} from &#39;@cfpb/cfpb-design-system&#39;;
+import { Tooltip } from &#39;@cfpb/cfpb-design-system/tooltips&#39;;
+
+Summary.init();
+Expandable.init();
+ExpandableGroup.init();
+Multiselect.init();
+Tooltip.init();
+
+...rest of your code
+--&gt;`,
+                
+            
+
+
+            'title': 'Tooltips',
+            'description': "A+tooltip+provides+short%2C+descriptive+information+when+a+user+hovers+or+focuses+on+an+element.+It+contains+helpful+but+non-critical+information+and+is+useful+in+a+space-constrained+user+interface.%0A",
+            'use_cases': "%0A",
+            'guidelines': "Be+judicious+in+using+tooltips+and+explore+other+design+options+that+keep+content+visible+before+choosing+to+use+a+tooltip.+Only+consider+using+a+tooltip+for+short%2C+non-critical+information+in+a+space-constrained+user+interface.+Because+a+tooltip+is+hidden+until+activated%2C+ensure+content+within+a+tooltip+is+not+essential+for+completing+a+task+on+the+page.+The+tooltip+trigger+element+%28usually+a+help+icon%29+will+be+hidden+for+users+with+JavaScript+disabled.+For+more+guidance%2C+see+the+USWDS+tooltip+page.%0A",
+            'behavior': "%0A++Activate+a+tooltip+by+hovering+or+focusing+on+a+help+%28question+mark%29+icon+situated+next+to+text.%0A++Press+the+escape+key+to+dismiss+open+tooltips.%0A++When+a+tooltip+is+at+the+edge+of+the+user%E2%80%99s+viewport%2C+it+should+automatically+reorient+itself+away+from+the+edge+of+the+screen+to+prevent+content+clipping.%0A%0A",
+            'accessibility': "As+USWDS+states%2C+tooltips+are+progressive+enhancements+for+the+title+attribute+and+will+display+as+the+title+attribute+if+the+component+doesn%E2%80%99t+initialize.+When+testing+tooltips+for+accessibility%2C+ensure+they+are+compliant+with+USWDS+tooltip+accessibility+tests.%0A",
+            'research': "%0A",
+            'related_items': "%0A",
+            'url': 'components/tooltips'
+        }
+        ,
+        
+
+        
+        
+
         'patterns-transition-patterns': {
 
             // Cycle through the variation fields of this page.

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Helper text - CFPB Design System</title>
+  <title>Tooltips - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -278,7 +278,7 @@
     
 
     <h1 class="component-header u-mb30">
-        Helper text
+        Tooltips
     </h1>
 
     
@@ -292,7 +292,7 @@
     <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
         
         <li class="m-list__item">
-            <a href="#types">Types</a>
+            <a href="#standard-tooltip">Standard tooltip</a>
         </li>
         
         <li class="m-list__item">
@@ -300,11 +300,11 @@
         </li>
         
         <li class="m-list__item">
-            <a href="#accessibility">Accessibility</a>
+            <a href="#behavior">Behavior</a>
         </li>
         
         <li class="m-list__item">
-            <a href="#related-items">Related items</a>
+            <a href="#accessibility">Accessibility</a>
         </li>
         
     </ul>
@@ -312,18 +312,18 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Helper text is used with form elements to give the user context about their usage. Types of helper text include block helper text, inline helper text, and placeholder text.</p>
+        <p>A tooltip provides short, descriptive information when a user hovers or focuses on an element. It contains helpful but non-critical information and is useful in a space-constrained user interface.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation-group" id="types">
+    <section class="o-variation-group" id="standard-tooltip">
 
         
         <h2 class="o-variation-group__title">
-            Types
+            Standard tooltip
         </h2>
         
 
@@ -343,17 +343,10 @@
             
 
             
-            <div class="m-variation__name">
-                <h3>
-                    Block helper text
-                    
-                </h3>
-            </div>
-            
 
             
             <div class="m-variation__description">
-                <p>Block helper text appears directly beneath a form label. Use it to explain why a piece of information is being requested, address security and privacy concerns, or to suggest ways of providing answers other than providing formatting examples.</p>
+                
 
             </div>
             
@@ -361,12 +354,39 @@
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <label class="a-label a-label--heading" for="helper-block-example">
-Label
-    <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
-</label>
+                The APR for the World Bank Platinum Credit Card is 9.7% <span data-tooltip="relevant-tooltip"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--help-round" viewbox="0 0 17 19"><path d="M16.476 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0m-5.034-2.687c0-.404-.073-.774-.223-1.13A2.9 2.9 0 0 0 9.692 4.22a2.75 2.75 0 0 0-1.116-.227 2.9 2.9 0 0 0-2.672 1.773 2.8 2.8 0 0 0-.227 1.128v.02a.792.792 0 0 0 1.583 0v-.02a1.33 1.33 0 0 1 .814-1.22c.155-.067.315-.098.502-.098.18 0 .334.03.485.096a1.3 1.3 0 0 1 .7.71c.067.158.098.322.098.513 0 .225-.027.368-.05.45a1.6 1.6 0 0 1-.132.335 2 2 0 0 1-.219.318q-.19.226-.365.424-.203.213-.374.412c-.17.2-.323.414-.451.639q-.221.388-.342.842c-.08.301-.12.636-.12.995v.035a.792.792 0 1 0 1.583 0v-.035q0-.334.068-.59.066-.253.187-.463a2.5 2.5 0 0 1 .276-.39q.148-.173.329-.363l.018-.02q.194-.217.403-.466.208-.249.384-.556a3.1 3.1 0 0 0 .388-1.567zM9.58 14.195a.98.98 0 0 0-.614-.919l-.004-.001a1.02 1.02 0 0 0-.78 0 .97.97 0 0 0-.62.92q.001.208.08.391a1 1 0 0 0 .541.536 1 1 0 0 0 .78.001l.004-.002a1.02 1.02 0 0 0 .534-.534 1 1 0 0 0 .08-.392z"></path></svg></span>
 
-<input class="a-text-input" type="text" id="helper-block-example">
+<template id="relevant-tooltip">
+    <div class="tippy-heading">This data is accurate as of June 2023</div>
+    <div class="tippy-body">
+        APRs change over time and are specific to the applicant. Check rates before applying.
+    </div>
+</template>
+
+<!--
+Tooltips require a <template> element with an 'id' that matches the 'data-tooltip'
+attribute of the tooltip's trigger element. The template can be anywhere on the page.
+
+Additionally, the tooltip component must be imported independently of the rest of
+the Design System using the namespace '@cfpb/cfpb-design-system/tooltips'.
+For example, your project's JavaScript file might look like:
+
+import {
+  Expandable,
+  ExpandableGroup,
+  Summary,
+  Multiselect,
+} from '@cfpb/cfpb-design-system';
+import { Tooltip } from '@cfpb/cfpb-design-system/tooltips';
+
+Summary.init();
+Expandable.init();
+ExpandableGroup.init();
+Multiselect.init();
+Tooltip.init();
+
+...rest of your code
+-->
             </div>
             
 
@@ -378,15 +398,15 @@ Label
             
 
             <div class="a-toggle__code">
-                <button href="#details-block-helper-text-block-helper-t-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-block-helper-text-block-helper-t-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-the-apr-for-the-world-bank-plati-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-the-apr-for-the-world-bank-plati-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-block-helper-text-block-helper-t-1">
+            <div class="m-tabs u-hidden" id="details-the-apr-for-the-world-bank-plati-1">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-block-helper-text-block-helper-t-html-code-snippet-1">
+                        <a class="m-tabs__tab" href="#details-the-apr-for-the-world-bank-plati-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -398,198 +418,43 @@ Label
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-block-helper-text-block-helper-t-html-code-snippet-1">
+                <section class="m-tabs__panel" id="details-the-apr-for-the-world-bank-plati-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;label class="a-label a-label--heading" for="helper-block-example"&gt;
-Label
-    &lt;small class="a-label__helper a-label__helper--block"&gt;Use block helper text for instructions&lt;/small&gt;
-&lt;/label&gt;
+                            <pre><code class="language-html">The APR for the World Bank Platinum Credit Card is 9.7% &lt;span data-tooltip="relevant-tooltip"&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--help-round" viewbox="0 0 17 19"><path d="M16.476 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0m-5.034-2.687c0-.404-.073-.774-.223-1.13A2.9 2.9 0 0 0 9.692 4.22a2.75 2.75 0 0 0-1.116-.227 2.9 2.9 0 0 0-2.672 1.773 2.8 2.8 0 0 0-.227 1.128v.02a.792.792 0 0 0 1.583 0v-.02a1.33 1.33 0 0 1 .814-1.22c.155-.067.315-.098.502-.098.18 0 .334.03.485.096a1.3 1.3 0 0 1 .7.71c.067.158.098.322.098.513 0 .225-.027.368-.05.45a1.6 1.6 0 0 1-.132.335 2 2 0 0 1-.219.318q-.19.226-.365.424-.203.213-.374.412c-.17.2-.323.414-.451.639q-.221.388-.342.842c-.08.301-.12.636-.12.995v.035a.792.792 0 1 0 1.583 0v-.035q0-.334.068-.59.066-.253.187-.463a2.5 2.5 0 0 1 .276-.39q.148-.173.329-.363l.018-.02q.194-.217.403-.466.208-.249.384-.556a3.1 3.1 0 0 0 .388-1.567zM9.58 14.195a.98.98 0 0 0-.614-.919l-.004-.001a1.02 1.02 0 0 0-.78 0 .97.97 0 0 0-.62.92q.001.208.08.391a1 1 0 0 0 .541.536 1 1 0 0 0 .78.001l.004-.002a1.02 1.02 0 0 0 .534-.534 1 1 0 0 0 .08-.392z"></path></svg>&lt;/span&gt;
 
-&lt;input class="a-text-input" type="text" id="helper-block-example"&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
+&lt;template id="relevant-tooltip"&gt;
+    &lt;div class="tippy-heading"&gt;This data is accurate as of June 2023&lt;/div&gt;
+    &lt;div class="tippy-body"&gt;
+        APRs change over time and are specific to the applicant. Check rates before applying.
+    &lt;/div&gt;
+&lt;/template&gt;
 
-                <!-- Jinja snippet -->
-                
+&lt;!--
+Tooltips require a &lt;template&gt; element with an 'id' that matches the 'data-tooltip'
+attribute of the tooltip's trigger element. The template can be anywhere on the page.
 
-                <!-- Implementation details -->
-                
+Additionally, the tooltip component must be imported independently of the rest of
+the Design System using the namespace '@cfpb/cfpb-design-system/tooltips'.
+For example, your project's JavaScript file might look like:
 
-                <!-- Specs -->
-                
+import {
+  Expandable,
+  ExpandableGroup,
+  Summary,
+  Multiselect,
+} from '@cfpb/cfpb-design-system';
+import { Tooltip } from '@cfpb/cfpb-design-system/tooltips';
 
-            </div>
-            
+Summary.init();
+Expandable.init();
+ExpandableGroup.init();
+Multiselect.init();
+Tooltip.init();
 
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Inline helper text
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>Inline helper text appears directly after a form label. Use it to indicate whether a field is optional. See the <a href="#behavior">behavior section</a> for more information.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live__code">
-                <label class="a-label a-label--heading" for="helper-inline-example">
- Label <small class="a-label__helper">(optional)</small>
-</label>
-
-<input class="a-text-input" type="text" id="helper-inline-example">
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle__code">
-                <button href="#details-inline-helper-text-inline-helper-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-inline-helper-text-inline-helper-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-inline-helper-text-inline-helper-2">
-                <ul class="m-tabs__list">
-                    
-                    <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-inline-helper-text-inline-helper-html-code-snippet-2">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs__panel" id="details-inline-helper-text-inline-helper-html-code-snippet-2">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;label class="a-label a-label--heading" for="helper-inline-example"&gt;
- Label &lt;small class="a-label__helper"&gt;(optional)&lt;/small&gt;
-&lt;/label&gt;
-
-&lt;input class="a-text-input" type="text" id="helper-inline-example"&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Placeholder text
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>Placeholder text appears within a text input field, and disappears once a user begins typing in that field. Use it for formatting examples only.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live__code">
-                <label class="a-label a-label--heading" for="textinput-example-email-default">
-    Email address
-</label>
-<input class="a-text-input" type="text" id="textinput-example-email-default" placeholder="email@example.com">
-
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle__code">
-                <button href="#details-placeholder-text-placeholder-tex-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-placeholder-text-placeholder-tex-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-placeholder-text-placeholder-tex-3">
-                <ul class="m-tabs__list">
-                    
-                    <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-placeholder-text-placeholder-tex-html-code-snippet-3">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs__panel" id="details-placeholder-text-placeholder-tex-html-code-snippet-3">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;label class="a-label a-label--heading" for="textinput-example-email-default"&gt;
-    Email address
-&lt;/label&gt;
-&lt;input class="a-text-input"
-      type="text"
-      id="textinput-example-email-default"
-      placeholder="email@example.com"&gt;</code></pre>
+...rest of your code
+--&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -624,14 +489,23 @@ Label
                 <div class="content__line content__line--wide u-mb20"></div>
                 <p>
                 </p>
-<h3 id="required-vs-optional-fields">Required vs. optional fields</h3>
-<p>Where possible, design your forms to only include required fields. If it’s not required, ask yourself if it’s really necessary to include at all. Add instructions at the top of the form to clearly indicate that all fields are required unless otherwise noted. If a field is optional, indicate it with inline helper text, as shown above. Don’t indicate which fields are required; that would only introduce redundant visual noise.</p>
-
-<p>Try not to design forms consisting mainly of optional fields. If you must do so, mark required field labels only with inline helper text.</p>
+<p>Be judicious in using tooltips and explore other design options that keep content visible before choosing to use a tooltip. Only consider using a tooltip for short, non-critical information in a space-constrained user interface. Because a tooltip is hidden until activated, ensure content within a tooltip is not essential for completing a task on the page. The tooltip trigger element (usually a help icon) will be hidden for users with JavaScript disabled. For more guidance, see the <a href="https://designsystem.digital.gov/components/tooltip/">USWDS tooltip page</a>.</p>
 
                 
             
 
+            
+                <h2 id="behavior">Behavior</h2>
+                <div class="content__line content__line--wide u-mb20"></div>
+                <p>
+                </p>
+<ul>
+  <li>Activate a tooltip by hovering or focusing on a help (question mark) icon situated next to text.</li>
+  <li>Press the escape key to dismiss open tooltips.</li>
+  <li>When a tooltip is at the edge of the user’s viewport, it should automatically reorient itself away from the edge of the screen to prevent content clipping.</li>
+</ul>
+
+                
             
 
             
@@ -644,7 +518,7 @@ Label
             <div class="content__line content__line--wide u-mb20"></div>
             <p>
                 </p>
-<p>For screen reader accessibility, consider using the <code class="language-plaintext highlighter-rouge">aria-describedby</code> attribute for helper text, which gives screen readers users the information if they need while allowing more flexibility with placement.</p>
+<p>As USWDS states, tooltips are progressive enhancements for the title attribute and will display as the title attribute if the component doesn’t initialize. When testing tooltips for accessibility, ensure they are compliant with <a href="https://designsystem.digital.gov/components/tooltip/accessibility-tests/">USWDS tooltip accessibility tests</a>.</p>
 
             
         </section>
@@ -652,22 +526,6 @@ Label
 
     
 
-    
-        <section class="content-l u-mb45">
-            <div class="content-l__col content-l__col-1">
-                <div>
-                    <section>
-                        <h2 id="related-items">Related Items</h2>
-                        <div class="content__line--wide content__line u-mb20"></div>
-                        <ul>
-  <li><a href="https://cfpb.github.io/design-system/components/labels-and-legends">Labels and legends</a></li>
-  <li><a href="https://cfpb.github.io/design-system/patterns/designing-forms">Designing forms</a></li>
-</ul>
-
-                    </section>
-                </div>
-            </div>
-        </section>
     
 
     
@@ -682,7 +540,7 @@ Label
                         
                         
                         
-                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/helper-text.md">
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/tooltips.md">
                             <time datetime="2024-12-03 15:41:53 -0500">
                                  3:41:53 PM Dec 03, 2024
                             </time>
@@ -708,7 +566,7 @@ Label
     
 
     <div class="o-editor" id="edit-page">
-      <a class="a-btn" href="/design-system/updating-this-website?page=Helper+text" title="Edit this page in Decap CMS">
+      <a class="a-btn" href="/design-system/updating-this-website?page=Tooltips" title="Edit this page in Decap CMS">
         <span>Edit page</span>
         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--edit" viewbox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg>
       </a>
@@ -729,7 +587,7 @@ Label
                 If you see something wrong or missing,
                 <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
                 If you can’t make those changes yourself,
-                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Helper%20text%3A+Add+issue+description">file an issue</a>.
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Tooltips%3A+Add+issue+description">file an issue</a>.
                 If you have a substantial change to an existing page, or a new standard you want to add,
                 <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
             </small>

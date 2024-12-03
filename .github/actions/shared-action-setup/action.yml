@@ -15,5 +15,6 @@ runs:
     - name: Install dependencies with Yarn
       shell: bash
       run: |
+        corepack enable
         yarn install
         yarn after-install

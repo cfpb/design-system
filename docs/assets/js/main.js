@@ -11,6 +11,7 @@ import {
   MaxHeightTransition,
   MoveTransition,
 } from '@cfpb/cfpb-design-system';
+import { Tooltip } from '@cfpb/cfpb-design-system/tooltips';
 import Tabs from './tabs.js';
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
@@ -37,6 +38,7 @@ SummaryMinimal.init();
 ExpandableGroup.init();
 Expandable.init();
 Multiselect.init();
+Tooltip.init();
 
 // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.

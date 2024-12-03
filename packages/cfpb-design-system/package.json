@@ -2,7 +2,10 @@
   "name": "@cfpb/cfpb-design-system",
   "version": "3.5.0",
   "description": "CFPB's UI framework",
-  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./tooltips": "./src/components/cfpb-tooltips/index.js"
+  },
   "author": {
     "name": "Consumer Financial Protection Bureau",
     "email": "tech@cfpb.gov",
@@ -21,5 +24,8 @@
     "url": "https://github.com/cfpb/design-system/issues"
   },
   "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "tippy.js": "6.3.7"
+  }
 }

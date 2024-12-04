@@ -46,6 +46,7 @@ export default [
           paths: ['src'],
           extensions: ['.js', '.ts', '.d.ts', '.tsx'],
         },
+        typescript: {},
       },
       react: {
         version: 'detect',

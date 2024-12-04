@@ -25,7 +25,7 @@ function Tooltip(element) {
    * @returns {Tooltip} An instance.
    */
   function init() {
-    tippy(element, {
+    return tippy(element, {
       theme: 'cfpb',
       maxWidth: 450,
       content: function (reference) {

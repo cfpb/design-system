@@ -46,6 +46,11 @@ export default [
           paths: ['src'],
           extensions: ['.js', '.ts', '.d.ts', '.tsx'],
         },
+        typescript: {
+          // This project doesn't use typescript but the typescript
+          // resolver solves an issue with package.json `exports`
+          // See https://github.com/cfpb/design-system/pull/2133
+        },
       },
       react: {
         version: 'detect',

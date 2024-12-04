@@ -6,7 +6,6 @@ All notable changes to this project will be documented in this file.
 
 ### PRs in this release
 
-- PR #[2054](https://github.com/cfpb/design-system/pull/2054): Add new tooltip component to DS - Chris Contolini
 - PR #[2133](https://github.com/cfpb/design-system/pull/2133): Add ESLint typescript resolver to fix exports issue - Chris Contolini
 
 ### General
@@ -14,6 +13,10 @@ All notable changes to this project will be documented in this file.
 - Return Tooltip instance to match JSDoc description - ([290b87e](https://github.com/cfpb/design-system/commit/290b87e4889c16c5e846e3039a7266ebb7c09e99)) - Chris Contolini
 
 ## [3.6.0](https://github.com/cfpb/design-system/compare/v3.5.0..v3.6.0) - December  3, 2024
+
+### PRs in this release
+
+- PR #[2054](https://github.com/cfpb/design-system/pull/2054): Add new tooltip component to DS - Chris Contolini
 
 ### General
 

@@ -94,12 +94,15 @@ Ready to publish changes to npm?
 
 First, set some credentials:
 
-1. Export a personal access token called
-   [`GITHUB_AUTH`](https://github.com/lerna/lerna-changelog#github-token).
+1. Create and export a personal access token called
+   [`GITHUB_TOKEN`](https://github.com/release-it/release-it/blob/main/docs/github-releases.md#automated).
+1. Confirm your environment has the above token properly defined and is not blank: `echo $GITHUB_TOKEN`.
 1. Create an npm account if you don't already have one and ensure you're
    listed as a "collaborator" on all our npm packages (e.g.
    [cfpb-buttons](https://www.npmjs.com/package/@cfpb/cfpb-buttons)).
 1. Check that you are logged in with `npm whoami`. If you aren't shown your username, run `npm login`.
+
+**Note:** If you run into issues with your npm account not approving your MFA code, try resetting your npm password at npmjs.com.
 
 Then, do a release:
 

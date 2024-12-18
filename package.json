@@ -98,7 +98,6 @@
     },
     "npm": {
       "publish": false,
-      "skipChecks": true,
       "versionArgs": [
         "--workspace=packages/cfpb-design-system/",
         "--workspaces-update=false",
@@ -107,6 +106,7 @@
     },
     "github": {
       "release": true,
+      "skipChecks": true,
       "releaseNotes": "./scripts/changelog.sh stdout"
     }
   },

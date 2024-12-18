@@ -4,7 +4,8 @@
   "description": "CFPB's UI framework",
   "exports": {
     ".": "./src/index.js",
-    "./tooltips": "./src/components/cfpb-tooltips/index.js"
+    "./tooltips": "./src/components/cfpb-tooltips/index.js",
+    "./icons/": "./src/components/cfpb-icons/icons/"
   },
   "author": {
     "name": "Consumer Financial Protection Bureau",

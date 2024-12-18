@@ -37,6 +37,9 @@
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "cy": "./scripts/cypress.sh"
   },
+  "npm": {
+    "skipChecks": true
+  },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
     "@types/react": "18.3.12",

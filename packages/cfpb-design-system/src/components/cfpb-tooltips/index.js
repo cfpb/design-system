@@ -22,7 +22,7 @@ function Tooltip(element) {
 
   /**
    * Set up and create the tooltip.
-   * @returns {Tooltip} An instance.
+   * @returns {object} An initialized tippy tooltip instance.
    */
   function init() {
     return (this.tooltip = tippy(element, {

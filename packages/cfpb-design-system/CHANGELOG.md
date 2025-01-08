@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.6.2](https://github.com/cfpb/design-system/compare/v3.6.1..3.6.2) - December 18, 2024
+## [3.6.3](https://github.com/cfpb/design-system/compare/v3.6.2..3.6.3) - January  8, 2025
+
+### PRs in this release
+
+- PR #[2139](https://github.com/cfpb/design-system/pull/2139): Provide instantiated tooltip object on initialized component - Wyatt Pearsall
+
+### General
+
+- Provide instantiated tooltip object on initialized component - ([c4fee52](https://github.com/cfpb/design-system/commit/c4fee5263ea4869c914e980cbc8b9ce3beb9178b)) - Wyatt Pearsall
+- Update jsdoc - ([72163a3](https://github.com/cfpb/design-system/commit/72163a3ac16e801179f32a5c8fbaa07cdba2dea1)) - Wyatt Pearsall
+- Add tooltip update dist - ([4a3916b](https://github.com/cfpb/design-system/commit/4a3916bc13d5076153e6e3008f4bf18aa1c27a36)) - Wyatt Pearsall
+
+## [3.6.2](https://github.com/cfpb/design-system/compare/v3.6.1..v3.6.2) - December 18, 2024
 
 ### PRs in this release
 

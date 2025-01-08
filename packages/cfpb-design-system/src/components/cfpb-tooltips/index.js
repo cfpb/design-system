@@ -22,10 +22,10 @@ function Tooltip(element) {
 
   /**
    * Set up and create the tooltip.
-   * @returns {Tooltip} An instance.
+   * @returns {object} An initialized tippy tooltip instance.
    */
   function init() {
-    return tippy(element, {
+    return (this.tooltip = tippy(element, {
       theme: 'cfpb',
       maxWidth: 450,
       content: function (reference) {
@@ -63,11 +63,12 @@ function Tooltip(element) {
           },
         },
       ],
-    });
+    }));
   }
 
   // Attach public events.
   this.init = init;
+  this.tooltip = null;
 
   return this;
 }

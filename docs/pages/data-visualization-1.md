@@ -3,11 +3,10 @@ title: Data visualization guidelines
 collection_name: pages
 layout: variation
 section: guidelines
-eyebrow: Data visualization
-description: 'Data visualization can be an excellent way to increase
+description: "Data visualization can be an excellent way to increase
   understanding of information and make comparisons of data. Using visuals to
   convey meaning and tell stories can engage the user and create a memorable
-  experience. '
+  experience. "
 variation_groups:
   - variation_group_name: Types
     variation_group_description: >-
@@ -26,39 +25,6 @@ variation_groups:
 
       A data visualization may appear as a static image, such as in a report or social media graphic, or as an interactive graphic, such as on a web page detailing [origination activity for auto loans](https://www.consumerfinance.gov/data-research/consumer-credit-trends/auto-loans/origination-activity/).
     variations: []
-use_cases: >-
-  It is critical to choose the correct visualization for your data. Make sure
-  you understand the data and the relationship of your data before you decide
-  how to visualize it. It's also important to ensure your data visualization
-  communicates a main point that users can easily recognize and walk away with.
-
-
-  Occasionally, data visualization isn’t the best approach. A well-crafted sentence or table may work better to convey a specific point or precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.
-
-
-  ### Audience
-
-
-  Consider your audience when creating a visualization. 
-
-
-  * Who is your audience?
-
-  * What is their familiarity with data visualization?
-
-  * How much information do they need?
-
-
-  #### General public
-
-
-  If your user group is general (i.e. the American public), stick with basic and most common chart types that people can easily understand. Adding emphasis and labels will help highlight the point of the visual and tell the story of the information. Consider using multiple simple charts to step the user through the data, rather than one big complex visualization.
-
-
-  #### Specific users
-
-
-  If your data visualization is designed with a specific audience in mind, take into consideration their familiarity with the data, visualization types, and terminology used to label and describe data. More complex stories might necessitate more complex visuals, however, this does not mean it should lack emphasis.
 guidelines: >-
   Whether you’re using Excel, Tableau, D3.js, or any other program, follow these
   guidelines to create effective and consistent data visualizations.
@@ -243,6 +209,41 @@ guidelines: >-
   * If there are percentages, do they add up to 100%? Why not?
 
   * What is the source of the data?
+eyebrow: Data visualization
+use_cases: >-
+  It is critical to choose the correct visualization for your data. Make sure
+  you understand the data and the relationship of your data before you decide
+  how to visualize it. It's also important to ensure your data visualization
+  communicates a main point that users can easily recognize and walk away with.
+  Test.
+
+
+  Occasionally, data visualization isn’t the best approach. A well-crafted sentence or table may work better to convey a specific point or precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.
+
+
+  ### Audience
+
+
+  Consider your audience when creating a visualization. 
+
+
+  * Who is your audience?
+
+  * What is their familiarity with data visualization?
+
+  * How much information do they need?
+
+
+  #### General public
+
+
+  If your user group is general (i.e. the American public), stick with basic and most common chart types that people can easily understand. Adding emphasis and labels will help highlight the point of the visual and tell the story of the information. Consider using multiple simple charts to step the user through the data, rather than one big complex visualization.
+
+
+  #### Specific users
+
+
+  If your data visualization is designed with a specific audience in mind, take into consideration their familiarity with the data, visualization types, and terminology used to label and describe data. More complex stories might necessitate more complex visuals, however, this does not mean it should lack emphasis.
 accessibility: >-
   Allowing all users to be able to comprehend data visualizations is a key part
   of being a government agency that serves the entire American public. 
@@ -273,7 +274,7 @@ accessibility: >-
   * How would someone using a screen reader interact with this visualization?
 
   * How would someone with low vision interact with this visualization?
-research: ''
+research: ""
 related_items: >-
   * [Data visualization color
   palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1)

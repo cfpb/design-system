@@ -86,38 +86,23 @@ variation_groups:
                   </select>
               </div>
           </div>
-        variation_description:
-          Allows the user to select a single item from a dropdown
+        variation_description: Allows the user to select a single item from a dropdown
           list of options.
         variation_name: Single select
-        variation_specs: ''
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Multiselect
-        variation_description:
-          Allows the user to select multiple items from a dropdown
+        variation_description: Allows the user to select multiple items from a dropdown
           list of options.
-        variation_code_snippet: >-
-          <div class="m-form-field">
-              <label class="a-label a-label--heading" for="test_select__multiple">
-                  Label
-              </label>
-              <select class="o-multiselect" id="test_select__multiple" multiple>
-                  <option value="option1" selected>Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                  <option value="option4" selected>Option 4</option>
-                  <option value="option5">Option 5</option>
-                  <option value="option6">Option 6</option>
-                  <option value="option7">Option 7</option>
-                  <option value="option8">Multiselect options can also contain long words like supercalifragilisticexpialidocious</option>
-              </select>
-          </div>
-        variation_implementation:
-          'Custom JavaScript may be required to make the default
+        variation_code_snippet: |-
+          <div>
+                      <usa-link></usa-link>
+                    </div>
+        variation_implementation: "Custom JavaScript may be required to make the default
           multiselect component accessible for the visually impaired. See the
-          [accessibility](#accessibility) section for more information. '
+          [accessibility](#accessibility) section for more information. "
     variation_group_name: Types
-guidelines: ''
+guidelines: ""
 eyebrow: Components
 use_cases: >-
   While selects are easy to implement, they aren’t always the best choice from a
@@ -149,10 +134,10 @@ accessibility: >-
 
 
   From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multiselect component is desired, use custom JavaScript to make it accessible.
-related_items: ''
+related_items: ""
 redirect_from:
   - /components/dropdowns-and-multiselects
 last_updated: 2020-01-06T20:31:06.632Z
-behavior: ''
-research: ''
+behavior: ""
+research: ""
 ---

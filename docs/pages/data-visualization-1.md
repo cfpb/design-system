@@ -48,13 +48,21 @@ variation_groups:
           length of time displayed in the chart, while moving the slider within
           the bar changes the starting and ending dates in the chart.
   - variation_group_name: Pie chart
-    variation_group_description: Pie charts are good at showing parts of a whole.
-      Slices should always add up to 100 percent.
+    variation_group_description: >-
+      Pie charts are good at showing parts of a whole. Slices should always add
+      up to 100 percent.
+
+
+      ![Pie chart example](/design-system/images/uploads/pie_chart.png)
   - variation_group_name: Area chart
-    variation_group_description: Area charts are good at showing trends over time
-      much like line charts. Unlike line charts, area charts use filled areas
-      which help draw attention to the changing values. They are good at
-      emphasizing the size of change over time.
+    variation_group_description: >-
+      Area charts are good at showing trends over time much like line charts.
+      Unlike line charts, area charts use filled areas which help draw attention
+      to the changing values. They are good at emphasizing the size of change
+      over time.
+
+
+      ![Area chart example](/design-system/images/uploads/area_chart.png)
   - variation_group_name: Tile grid map
     variation_group_description: Tile grid maps can show comparative state data
       where population figures or geographic size are not part of the story. In

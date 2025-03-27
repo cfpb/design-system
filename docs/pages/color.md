@@ -1631,7 +1631,7 @@ accessibility: >-
   ### Check contrast
 
 
-  Use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and accessibility guidance on our [Fonts page](https://cfpb.github.io/design-system/foundation/fonts) to check and confirm the accessibility of colors at different type sizes. When viewing the contrast checker, you’ll see that normal size text needs a contrast ratio of at least 4.5:1 and large text needs a contrast ratio of at least 3.1 to pass accessibility.  
+  Use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and accessibility guidance on our [Fonts page](https://cfpb.github.io/design-system/foundation/fonts#accessibility) to check and confirm the accessibility of colors at different type sizes. When viewing the contrast checker, you’ll see that normal size text needs a contrast ratio of at least 4.5:1 and large text needs a contrast ratio of at least 3.1 to pass accessibility.  
 
 
   ### Understand color blindness

@@ -1400,7 +1400,13 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Diverging palette
-        variation_description: |-
+        variation_description: >-
+          Instead of a green/red color combination, use a teal/red color
+          combination to show pro/con, yes/no, and positive/negative
+          relationships. See the Understand color blindness section below to
+          learn more. 
+
+
           <table class="color-table">
                 <thead>
                     <tr>
@@ -1446,7 +1452,7 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Cool palette
-        variation_description: |2-
+        variation_description: |-2
            <table class="color-table">
                 <thead>
                     <tr>
@@ -1524,7 +1530,7 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Warm palette
-        variation_description: |2-
+        variation_description: |-2
            <table class="color-table">
                 <thead>
                     <tr>
@@ -1605,7 +1611,7 @@ variation_groups:
             </tr>
 
             </tbody></table>
-content_guidelines: ''
+content_guidelines: ""
 eyebrow: Basics
 title: Color
 layout: variation
@@ -1613,51 +1619,22 @@ status: Released
 description: A minimal palette, clear hierarchy, and ample whitespace ensure a
   voice of authority and expertise in communication. The following sets of
   colors maintain CFPB brand cohesion and create accessible graphics.
-use_cases: >-
-  When used properly, color can help clarify relationships between data, provide
-  emphasis for certain data points, and maintain a consistent brand voice. When
-  used poorly, color can overwhelm the user, make the data confusing and break
-  with brand standards to appear inconsistent.
-
-
-  ### Subsets and relationships
-
-
-  To highlight part of a set of data, or show that things are related, use a tint or a shade of the main color.
-
-
-  ![Subsets and relationships example](/design-system/images/uploads/data_subsets_relationships.png)
-
-
-  ### Categorical
-
-
-  Use categorical color schemes when you’re visualizing groups of things. These are discrete colors that do not imply a visual relationship between the sets of data.
-
-
-  ![Categorical example](/design-system/images/uploads/data_categorical.png)
-
-
-  ### Sequential
-
-
-  When you’re displaying sequential data that shows a range of data in a ranked order, use these sequential colors to imply the relationship.
-
-
-  ![Sequential example](/design-system/images/uploads/sequential-color-1.png)
-behavior: ''
+use_cases: ""
+behavior: ""
 accessibility: >-
-  Color should never be solely relied on to convey meaning in a visualization
-  because of accessibility standards for people who are blind and visually
-  impaired. There should be other clues beyond color to convey meaning or
-  relationship; this is a key reason that also directly labeling data and using
-  patterns is important.
+  Color should never be solely relied on as a means of conveying information,
+  indicating an action, prompting a response, or distinguishing a visual
+  element. Use clues beyond color to ensure information is accessible to people
+  who are blind and visually impaired.  
 
 
-  Please use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) or reference our [Fonts page](https://cfpb.github.io/design-system/foundation/fonts) to check and confirm the accessibility of colors at different type sizes.
+  ### Check contrast
 
 
-  ### Color blindness
+  Use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and accessibility guidance on our [Fonts page](https://cfpb.github.io/design-system/foundation/fonts) to check and confirm the accessibility of colors at different type sizes. When viewing the contrast checker, you’ll see that normal size text needs a contrast ratio of at least 4.5:1 and large text needs a contrast ratio of at least 3.1 to pass accessibility.  
+
+
+  ### Understand color blindness
 
 
   When choosing colors for a graph, keep in mind that they may look different to people with color blindness. About [1 in 12 men with Northern European ancestry have green/red color blindness](https://nei.nih.gov/health/color_blindness/facts_about).
@@ -1676,13 +1653,5 @@ accessibility: >-
 
 
   ![](/design-system/images/uploads/screen-shot-2019-09-04-at-4.30.36-pm.png)
-
-
-  * Do not use color as the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
-
-  * Text should have a contrast ratio of at least 4.5 : 1, but there are exceptions.
-
-    * For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.
-    * Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.
 last_updated: 2019-08-30T18:31:00.000Z
 ---

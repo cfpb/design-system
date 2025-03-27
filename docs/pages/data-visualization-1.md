@@ -13,14 +13,24 @@ variation_groups:
     variations:
       - variation_is_deprecated: false
         variation_name: Vertical bar chart
+        variation_description: "![Vertical bar chart
+          example](/design-system/images/uploads/vertical_bar_chart.png)"
       - variation_is_deprecated: false
         variation_name: Horizontal bar chart
+        variation_description: "![Horizontal bar chart
+          example](/design-system/images/uploads/horizontal_bar_chart.png)"
       - variation_is_deprecated: false
         variation_name: Grouped bar chart
+        variation_description: "![Grouped bar chart
+          example](/design-system/images/uploads/grouped_bar_chart.png)"
       - variation_is_deprecated: false
         variation_name: Stacked bar chart
+        variation_description: "![Stacked bar chart
+          example](/design-system/images/uploads/stacked_bar_chart.png)"
       - variation_is_deprecated: false
         variation_name: Bar chart stacked to 100 percent
+        variation_description: "![Example of a bar chart stacked to
+          100%](/design-system/images/uploads/bar_chart_stacked_to_100.png)"
   - variation_group_name: Line chart
     variation_group_description: Line charts are good at showing a change over time. Start your axis at 0.
     variations:

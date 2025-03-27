@@ -36,6 +36,8 @@ variation_groups:
     variations:
       - variation_is_deprecated: false
         variation_name: Simple line chart
+        variation_description: "![Simple line chart
+          example](/design-system/images/uploads/simple_line_chart.png)"
       - variation_is_deprecated: false
         variation_name: Date/time chart 
         variation_description: A date/time chart is a line chart which graphs continuous

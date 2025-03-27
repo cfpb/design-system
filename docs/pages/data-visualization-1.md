@@ -68,11 +68,15 @@ variation_groups:
 
       ![Area chart example](/design-system/images/uploads/area_chart.png)
   - variation_group_name: Tile grid map
-    variation_group_description: Tile grid maps can show comparative state data
-      where population figures or geographic size are not part of the story. In
-      tile grid maps, each state is the same size and shape. This prevents
-      regions with large areas from dominating a map and prevent regions with
-      small areas from going unnoticed.
+    variation_group_description: >-
+      Tile grid maps can show comparative state data where population figures or
+      geographic size are not part of the story. In tile grid maps, each state
+      is the same size and shape. This prevents regions with large areas from
+      dominating a map and prevent regions with small areas from going
+      unnoticed.
+
+
+      ![Tile grid map example](/design-system/images/uploads/interactive-charts_tile-grid-map.png)
 guidelines: >-
   ### Limit the data you include 
 

@@ -50,7 +50,7 @@ variation_groups:
           changes the starting and ending dates in the chart.
 
 
-          ![Date/time chart example](/design-system/images/uploads/interactive-charts_date-time.png)
+          ![Date/time chart example](/design-system/images/uploads/date_time_chart.png)
   - variation_group_name: Pie chart
     variation_group_description: >-
       Pie charts are good at showing parts of a whole. Slices should always add
@@ -76,7 +76,7 @@ variation_groups:
       unnoticed.
 
 
-      ![Tile grid map example](/design-system/images/uploads/interactive-charts_tile-grid-map.png)
+      ![Tile grid map example](/design-system/images/uploads/tile_grid_map.png)
 guidelines: >-
   ### Limit the data you include 
 
@@ -84,7 +84,7 @@ guidelines: >-
   **Include no more than five types of data in your chart.** For example, a line chart should have no more than five lines, and a pie chart should have no more than five slices. It is important not to exceed this number to ensure charts are readable and accessible. If you need to show more than five data types, break your chart into multiple smaller charts.  
 
 
-  ### Use accessible colors and pattens 
+  ### Use accessible colors and patterns 
 
 
   When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing and break with brand standards to appear inconsistent. 

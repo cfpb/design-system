@@ -177,9 +177,9 @@ accessibility: >-
   As stated in the Guidelines section above, please ensure your visualization includes the following. 
 
 
-  * Accessible colors and patterns
+  * [Accessible colors and patterns](https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines#use-accessible-colors-and-patterns)
 
-  * Required information including a chart title, alt text, downloadable source data, download text, and axis labels
+  * [Required information](https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines#required-information) including a chart title, alt text, downloadable source data, download text, and axis labels
 research: ""
 related_items: >-
   * [Data visualization color

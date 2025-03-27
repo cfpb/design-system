@@ -81,7 +81,6 @@ first-level:
           - heading: Main content
             nav-items:
               - page: Info unit groups
-              - page: Interactive charts
   - heading: Pages
     second-level:
       - heading: Page templates
@@ -120,9 +119,6 @@ first-level:
       - heading: Data visualization
         nav-items:
           - page: Data visualization guidelines
-          - page: Bar charts
-          - page: Line charts
-          - page: Pie charts
       - heading: Equity-centered design
         nav-items:
           - page: Overview

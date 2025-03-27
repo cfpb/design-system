@@ -3,290 +3,166 @@ title: Data visualization guidelines
 collection_name: pages
 layout: variation
 section: guidelines
-eyebrow: Data visualization
-description: 'Data visualization can be an excellent way to increase
-  understanding of information and make comparisons of data. Using visuals to
-  convey meaning and tell stories can engage the user and create a memorable
-  experience. '
+description: Data visualization can be a great way to tell stories, convey
+  meaning, and help users make comparisons. At the CFPB, we’ve built the
+  guidance below into our Content Management System (CMS) and Data visualization
+  Excel file.
 variation_groups:
-  - variation_group_name: Types
+  - variation_group_name: Bar chart
+    variation_group_description: Bar charts are good at showing comparisons of discrete items or categories.
+    variations:
+      - variation_is_deprecated: false
+        variation_name: Vertical bar chart
+        variation_description: "![Vertical bar chart
+          example](/design-system/images/uploads/vertical_bar_chart.png)"
+      - variation_is_deprecated: false
+        variation_name: Horizontal bar chart
+        variation_description: "![Horizontal bar chart
+          example](/design-system/images/uploads/horizontal_bar_chart.png)"
+      - variation_is_deprecated: false
+        variation_name: Grouped bar chart
+        variation_description: "![Grouped bar chart
+          example](/design-system/images/uploads/grouped_bar_chart.png)"
+      - variation_is_deprecated: false
+        variation_name: Stacked bar chart
+        variation_description: "![Stacked bar chart
+          example](/design-system/images/uploads/stacked_bar_chart.png)"
+      - variation_is_deprecated: false
+        variation_name: Bar chart stacked to 100 percent
+        variation_description: "![Example of a bar chart stacked to
+          100%](/design-system/images/uploads/bar_chart_stacked_to_100.png)"
+  - variation_group_name: Line chart
+    variation_group_description: Line charts are good at showing a change over time. Start your axis at 0.
+    variations:
+      - variation_is_deprecated: false
+        variation_name: Simple line chart
+        variation_description: "![Simple line chart
+          example](/design-system/images/uploads/simple_line_chart.png)"
+      - variation_is_deprecated: false
+        variation_name: Date/time chart 
+        variation_description: >-
+          A date/time chart is a line chart which graphs continuous data over a
+          period of time. The chart includes buttons to select time ranges of 1,
+          3, or 5 years. The x axis is always based on time, and the period of
+          time can be controlled in more detail with the slider control.
+          Clicking and dragging the handles of the slider changes the length of
+          time displayed in the chart, while moving the slider within the bar
+          changes the starting and ending dates in the chart.
+
+
+          ![Date/time chart example](/design-system/images/uploads/date_time_chart.png)
+  - variation_group_name: Pie chart
     variation_group_description: >-
-      Data visualization types commonly produced by the CFPB include the
-      following. 
+      Pie charts are good at showing parts of a whole. Slices should always add
+      up to 100 percent.
 
 
-      * [Bar chart](https://cfpb.github.io/design-system/guidelines/bar-charts)
-
-      * [Line chart](https://cfpb.github.io/design-system/guidelines/line-charts)
-
-      * [Pie chart](https://cfpb.github.io/design-system/guidelines/pie-charts)
-
-      * Map
-
-
-      A data visualization may appear as a static image, such as in a report or social media graphic, or as an interactive graphic, such as on a web page detailing [origination activity for auto loans](https://www.consumerfinance.gov/data-research/consumer-credit-trends/auto-loans/origination-activity/).
-    variations: []
-use_cases: >-
-  It is critical to choose the correct visualization for your data. Make sure
-  you understand the data and the relationship of your data before you decide
-  how to visualize it. It's also important to ensure your data visualization
-  communicates a main point that users can easily recognize and walk away with.
+      ![Pie chart example](/design-system/images/uploads/pie_chart.png)
+  - variation_group_name: Area chart
+    variation_group_description: >-
+      Area charts are good at showing trends over time much like line charts.
+      Unlike line charts, area charts use filled areas which help draw attention
+      to the changing values. They are good at emphasizing the size of change
+      over time.
 
 
-  Occasionally, data visualization isn’t the best approach. A well-crafted sentence or table may work better to convey a specific point or precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.
+      ![Area chart example](/design-system/images/uploads/area_chart.png)
+  - variation_group_name: Tile grid map
+    variation_group_description: >-
+      Tile grid maps can show comparative state data where population figures or
+      geographic size are not part of the story. In tile grid maps, each state
+      is the same size and shape. This prevents regions with large areas from
+      dominating a map and prevent regions with small areas from going
+      unnoticed.
 
 
-  ### Audience
-
-
-  Consider your audience when creating a visualization. 
-
-
-  * Who is your audience?
-
-  * What is their familiarity with data visualization?
-
-  * How much information do they need?
-
-
-  #### General public
-
-
-  If your user group is general (i.e. the American public), stick with basic and most common chart types that people can easily understand. Adding emphasis and labels will help highlight the point of the visual and tell the story of the information. Consider using multiple simple charts to step the user through the data, rather than one big complex visualization.
-
-
-  #### Specific users
-
-
-  If your data visualization is designed with a specific audience in mind, take into consideration their familiarity with the data, visualization types, and terminology used to label and describe data. More complex stories might necessitate more complex visuals, however, this does not mean it should lack emphasis.
+      ![Tile grid map example](/design-system/images/uploads/tile_grid_map.png)
 guidelines: >-
-  Whether you’re using Excel, Tableau, D3.js, or any other program, follow these
-  guidelines to create effective and consistent data visualizations.
+  ### Limit the data you include 
 
 
-  ### Font
+  **Include no more than five types of data in your chart.** For example, a line chart should have no more than five lines, and a pie chart should have no more than five slices. It is important not to exceed this number to ensure charts are readable and accessible. If you need to show more than five data types, break your chart into multiple smaller charts.  
 
 
-  All data, labels, and titles for data visualizations should be in a sans-serif font. While serif fonts are generally easier to read for long blocks of text, data visualizations rarely include long blocks. The lack of serifs, especially on numbers, helps cut down on the amount of lines and visual clutter. This lack also increases the legibility of small text by eliminating thin serifs.
+  ### Use accessible colors and patterns 
 
 
-  * Use Avenir Next if it is available.
+  When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing and break with brand standards to appear inconsistent. 
 
-  * If Avenir Next is not available, use Arial. 
 
+  * **Color:** Refer to our [Data visualization color palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes) and [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility). 
 
-  Using the appropriate font not only increases consistency with the core brand, it assures legibility and good visual hierarchy. 
+  * **Patterns:** In addition to colors, use patterns to promote accessibility. We’ve built the following patterns into our CMS and Excel template: square dot, round dot, dash, and long dash.
 
 
-  ### Color
+  ### Include critical information 
 
 
-  When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing, and break with brand standards.
+  Elements such as a chart title and alt text help validate the data and increase comprehension. Please reference the image and lists below regarding required and optional information to include in a data visualization. 
 
 
-  When using color, ensure the following.
+  #### Required information
 
 
-  * Your use of color has a purpose.
+  * **Title:** The title should be as descriptive as possible to give users a sense of what the chart will be about.  
 
-  * You’re not relying solely on color to connote meaning. Use other visual qualities such as patterning to distinguish between data points. 
+    * **Character count:** No more than a single line at desktop screen size (approx. 95 characters including spaces) 
+  * **Alt text (short description):** Alt text should include the chart type, type of data, and main takeaway. This text will not be visible on the page. Rather, it will be read by a screen reader.  
 
-  * You’ve accounted for color blindness. We use specific color combinations to create accessible, on-brand data visualizations. [View our data visualization color palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1). We also have a set of guidelines detailing the accessible use of color in both web and print. [View color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility).
+    * **Character count:** No more than 250 characters including spaces
+    * **Example:** *“Line chart showing average credit card debt between June 2018 and September 2019 stayed relatively stable across respondents, whether they reported difficulty paying expenses.”*
+  * **Downloadable source data:** Provide the data used to create the chart in an Excel or CSV file. Within the file, format the data as a table with header columns for accessibility. Please reference this table accessibility video for guidance.   
 
+    * **Download text:** Write a short phrase of text to appear as the link text when a user clicks to download the data. The text should succinctly describe the data the file contains so it is clear to a user using a screen reader what they are downloading. 
+  * **Axis labels:** Include and label one X axis and one Y axis per chart. 
 
-  ### Chart components
 
+  #### Optional information
 
-  Elements such as clear titles and proper labeling help users quickly understand data visualizations, increase comprehension, and contribute to accessibility.
 
+  If relevant to your chart, you may include the following information. 
 
-  ![Chart components](/design-system/images/uploads/parts-of-a-chart_titles.png)
 
+  * **Figure number:** If there will be many charts on a page, include a figure number with each chart. This will appear as text above the chart’s title.
 
-  #### Figure number
+  * **Intro text:** Can be used to call out key takeaways and trends in the chart data. This will help a user understand why they may want to explore the data.
 
+    * **Character count:** No more than three lines at desktop screen size (approx. 250 characters including spaces)
+  * **Data source:** Cite where the data is from. This helps to promote trust and validity. Whenever possible, link to the original source. 
 
-  The figure number style varies depending on where the data visualization is presented.  
+  * **Date published:** The date the data in the chart was last updated.
 
+  * **Notes:** Include any additional notes about the chart and data to describe aspects such as caveats or inconsistencies with the data. 
 
-  * In a report, use the Figure number style (all caps).
+  * **Supporting text:** Increase the visualization’s accessibility by further describing it in the main body of text. In addition to text placed within the data visualization itself, describe the chart data, trends, and key takeaways in greater detail in the paragraphs directly following the visualization. This is especially necessary for more complex charts.
+eyebrow: Data visualization
+use_cases: >-
+  When deciding if and how to create a data visualization, consider the
+  following. 
 
-  * On a web page, use the H5 heading style.
 
-  * On a blog or social post, do not include a figure number.
+  * Is a data visualization truly the best format for your information? Data visualizations can be powerful in showing aspects such as patterns and comparisons. But sometimes data visualization isn’t the best approach, and a well-crafted sentence or table may actually be more impactful in conveying a specific point. 
 
+  * Make sure you understand the data before deciding how to visualize it. For instance, bar graphs are good at showing comparisons whereas line graphs are good at showing a change over time.  
 
-  #### Title
+  * Consider your audience, their familiarity with data visualization, and how much information they need. 
 
-
-  Titles should be as descriptive as possible to give users a sense of what the chart will be about and ensure someone who cannot see the chart can understand the general trends. This provides users a framework of what they are viewing. It also helps with 508 accessibility and decreases the amount of text necessary in alt tags.
-
-
-  * Write the title to provide an overview of what the graph is about.
-
-  * Use the h3 heading style.
-
-  * Include no more than two lines of text.
-
-
-  #### Subtitle
-
-
-  As with a title, ensure your data visualization has a descriptive subtitle.
-
-
-  * Write the subtitle to explain the general trends of the graph and what that means, including why it is important.
-
-  * Use the body text paragraph style.
-
-  * Include no more than three lines of text.
-
-
-  #### Notes
-
-
-  Include notes with your data visualization to describe any caveats or inconsistencies with the data. For instance, when using charts that show percentages, users expect numbers to add up to 100%. Not adding up to 100% undermines the integrity of the visuals by leaving the user with missing pieces. 
-
-
-  To remedy this effect, add a note at the bottom to explain the missing data.
-
-
-  * *Example: “Percentages may not sum to 100% due to rounding.”*
-
-
-  You can also use notes to add in other caveats, such as if the data was taken from a specific time period.
-
-
-  * *Example: “Percent change is based on a 3-month period (October-December) and compared to the previous year.”*
-
-  * *Example: “Company-level information should be considered in context of total complaints, company size, and market share in a given geographic area.*
-
-
-  #### Data source
-
-
-  It is important to clearly state where data is from to promote trustworthiness and validity. If possible, provide a link to the URL of a spreadsheet or to the source of the data. This will enable people to dive deeper into the data, explore the nuances for themselves, and replicate the visualization themselves. 
-
-
-  #### Labels and key
-
-
-  Whenever possible, place labels directly on the data visualization rather than putting labels in a key. Direct labeling reduces the cognitive burden for a user by preventing them from having to hunt for labels or try to connect color meaning to the data.  
-
-
-  ![Labels and keys](/design-system/images/uploads/parts-of-a-chart_012.png)
-
-
-  ![Labels and keys](/design-system/images/uploads/parts-of-a-chart_013.png)
-
-
-  #### Logo
-
-
-  If the data visualization appears on its own, such as in a social media post, include the CFPB logo. This will help with identification and determining the graphic’s origin if it gets reused. 
-
-
-  ### Creating emphasis
-
-
-  Highlighting parts of your chart will help users quickly understand the point of the graphic and accurately comprehend the information.
-
-
-  When considering how to create emphasis, ask yourself the following.
-
-
-  * What is the point of the chart?
-
-  * Can someone who hasn’t seen the chart before figure out the point from a quick look and the title?
-
-
-  To help create emphasis, ensure your visualization has a strong visual hierarchy. This will allow the user to focus on the most important piece of content first and work their way into the graphic. 
-
-
-  #### Check hierarchy with a squint test
-
-
-  The title and subtitle should be the biggest and first things the user reads when viewing the chart to give them context of what the chart is about. Take a step back from your data visualization, squint your eyes, and say what you see first, second, third, and so on. This will give you a sense what your users will likely identify first. 
-
-
-  #### Use labels to call out information
-
-
-  Goals, trends, and important outliers should be highlighted with labels to help the user discern what is going on with the data. 
-
-
-  #### Deemphasize projected values
-
-
-  When dealing with projected or predicted data, the predicted data should be deemphasized. Use a color change to a lighter tint or dashed outline for bar charts, a dotted line for line charts, and a label explaining what part of the data is predicted or projected.
-
-
-  ![Projected values](/design-system/images/uploads/projected-values-1.png)
-
-
-  ![Projected values](/design-system/images/uploads/projected-values-2.png)
-
-
-  ### Ensuring accuracy
-
-
-  A chart is only as good as the validity of its data. It is important to check both the data and chart several times with multiple people before publishing. One small error can invalidate the integrity of an entire visualization. Several errors in data accuracy can damage credibility. Include notes with your data visualization to describe any caveats or inconsistencies and be sure to clearly state where data is from to promote trustworthiness and validity. 
-
-
-  To ensure accuracy, ask yourself the following. 
-
-
-  * Is this an accurate way to represent this data?
-
-  * Did someone else look at the chart and data for feedback?
-
-  * If there are percentages, do they add up to 100%? Why not?
-
-  * What is the source of the data?
+  * Ensure your data visualization communicates a main point that users can easily recognize and walk away with.
 accessibility: >-
-  Allowing all users to be able to comprehend data visualizations is a key part
-  of being a government agency that serves the entire American public. 
+  Enabling all users to comprehend data visualizations is a key part of being a
+  government agency that serves the entire American public.  
 
 
-  When building your data visualization, it’s important to ensure the following.
+  As stated in the Guidelines section above, please ensure your visualization includes the following. 
 
 
-  * Include descriptive titles. 
+  * Accessible colors and patterns
 
-  * Be mindful of your use of color. Do not rely solely on color to connect data to its meaning, account for color blindness, and ensure adequate color contrast.
-
-
-  ### Alt tags
-
-
-  Alt tags are what a screen reader will say instead of the image. This is important for not only web materials but also for charts that are in pdfs and charts that are placed as images into word documents. Screen readers read all of the text in an alt tag without allowing users to speed up or skip. Make sure the information in the alt tag is descriptive but succinct.
-
-
-  * When writing an alt tag, include one sentence of what the chart is, including the chart type, for users with limited vision who can see part of it but may not be able to have a full understanding of the graph. *Example: “Bar chart showing complaints by type for New York metro area, New York state and the United States.”*
-
-  * Link to a CSV or other machine-readable data format with the data so people with impaired vision can tab through the data with a screen reader. The data should have descriptive column labels and provide a link.
-
-
-  When determining how to create an accessible data visualization, ask yourself the following.
-
-
-  * How would someone using a screen reader interact with this visualization?
-
-  * How would someone with low vision interact with this visualization?
-research: ''
+  * Required information including a chart title, alt text, downloadable source data, download text, and axis labels
+research: ""
 related_items: >-
   * [Data visualization color
   palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1)
 
-
-  * [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility)
-
-
-  * [Bar charts](https://cfpb.github.io/design-system/guidelines/bar-charts)
-
-
-  *  [Line charts](https://cfpb.github.io/design-system/guidelines/line-charts)
-
-
-  * [Pie charts](https://cfpb.github.io/design-system/guidelines/pie-charts)
+  * [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility)[](https://cfpb.github.io/design-system/guidelines/bar-charts)[](https://cfpb.github.io/design-system/guidelines/pie-charts)
 ---

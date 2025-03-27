@@ -40,13 +40,17 @@ variation_groups:
           example](/design-system/images/uploads/simple_line_chart.png)"
       - variation_is_deprecated: false
         variation_name: Date/time chart 
-        variation_description: A date/time chart is a line chart which graphs continuous
-          data over a period of time. The chart includes buttons to select time
-          ranges of 1, 3, or 5 years. The x axis is always based on time, and
-          the period of time can be controlled in more detail with the slider
-          control. Clicking and dragging the handles of the slider changes the
-          length of time displayed in the chart, while moving the slider within
-          the bar changes the starting and ending dates in the chart.
+        variation_description: >-
+          A date/time chart is a line chart which graphs continuous data over a
+          period of time. The chart includes buttons to select time ranges of 1,
+          3, or 5 years. The x axis is always based on time, and the period of
+          time can be controlled in more detail with the slider control.
+          Clicking and dragging the handles of the slider changes the length of
+          time displayed in the chart, while moving the slider within the bar
+          changes the starting and ending dates in the chart.
+
+
+          ![Date/time chart example](/design-system/images/uploads/interactive-charts_date-time.png)
   - variation_group_name: Pie chart
     variation_group_description: >-
       Pie charts are good at showing parts of a whole. Slices should always add

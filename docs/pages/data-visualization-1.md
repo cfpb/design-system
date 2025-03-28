@@ -178,5 +178,5 @@ related_items: >-
   * [Data visualization color
   palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1)
 
-  * [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility)[](https://cfpb.github.io/design-system/guidelines/bar-charts)[](https://cfpb.github.io/design-system/guidelines/pie-charts)
+  * [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility)
 ---

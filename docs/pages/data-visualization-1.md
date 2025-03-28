@@ -51,7 +51,7 @@ variation_groups:
         variation_description: >-
           A date/time chart is a line chart which graphs continuous data over a
           period of time. The chart includes buttons to select time ranges of 1,
-          3, or 5 years. The x axis is always based on time, and the period of
+          3, or 5 years. The X axis is always based on time, and the period of
           time can be controlled in more detail with the slider control.
           Clicking and dragging the handles of the slider changes the length of
           time displayed in the chart, while moving the slider within the bar
@@ -95,24 +95,24 @@ guidelines: >-
   ### Limit the data you include 
 
 
-  **Include no more than five types of data in your chart.** For example, a line chart should have no more than five lines, and a pie chart should have no more than five slices. It is important not to exceed this number to ensure charts are readable and accessible. If you need to show more than five data types, break your chart into multiple smaller charts.  
+  Include no more than five data types in your chart to help ensure it will be readable and accessible. For example, a line chart should have no more than five lines, and a pie chart should have no more than five slices. If you need to show more than five data types, break your chart into multiple smaller charts.  
 
 
   ### Use accessible colors and patterns 
 
 
-  When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing and break with brand standards to appear inconsistent. 
+  When used properly, color and patterns can help clarify relationships and differences between data and maintain a consistent brand voice. When used poorly, color and patterns can overwhelm the user, make the data confusing, and break with brand standards. 
 
 
-  * **Color:** Refer to our [Data visualization color palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes) and [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility). 
+  * **Color:** Refer to our [Data visualization color palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes) and [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility) when choosing colors for your visualization. 
 
-  * **Patterns:** In addition to colors, use patterns to promote accessibility. We’ve built the following patterns into our CMS and Excel template: square dot, round dot, dash, and long dash.
+  * **Patterns:** We’ve built the following patterns into our CMS and Excel template: square dot, round dot, dash, and long dash.
 
 
   ### Include critical information 
 
 
-  Elements such as a chart title and alt text help validate the data and increase comprehension. Please reference the image and lists below regarding required and optional information to include in a data visualization. 
+  Elements such as a chart title and alt text help validate the data and increase comprehension. 
 
 
   #### Required information
@@ -124,8 +124,8 @@ guidelines: >-
   * **Alt text (short description):** Alt text should include the chart type, type of data, and main takeaway. This text will not be visible on the page. Rather, it will be read by a screen reader.  
 
     * **Character count:** No more than 250 characters including spaces
-    * **Example:** *“Line chart showing average credit card debt between June 2018 and September 2019 stayed relatively stable across respondents, whether they reported difficulty paying expenses.”*
-  * **Downloadable source data:** Provide the data used to create the chart in an Excel or CSV file. Within the file, format the data as a table with header columns for accessibility. Please reference this table accessibility video for guidance.   
+    * **Example:** *“Line chart showing average credit card debt between June 2018 and September 2019 stayed relatively stable across respondents, whether or not they reported difficulty paying expenses.”*
+  * **Downloadable source data:** Provide the data used to create the chart in an Excel or CSV file. Within the file, format the data as a table with header columns for accessibility. Please reference this [table accessibility video](https://www.section508.gov/training/spreadsheets/aed-cop-xlsx05/) for guidance.   
 
     * **Download text:** Write a short phrase of text to appear as the link text when a user clicks to download the data. The text should succinctly describe the data the file contains so it is clear to a user using a screen reader what they are downloading. 
   * **Axis labels:** Include and label one X axis and one Y axis per chart. 
@@ -144,7 +144,7 @@ guidelines: >-
     * **Character count:** No more than three lines at desktop screen size (approx. 250 characters including spaces)
   * **Data source:** Cite where the data is from. This helps to promote trust and validity. Whenever possible, link to the original source. 
 
-  * **Date published:** The date the data in the chart was last updated.
+  * **Date published:** The date the data in the chart was last updated
 
   * **Notes:** Include any additional notes about the chart and data to describe aspects such as caveats or inconsistencies with the data. 
 
@@ -157,7 +157,7 @@ use_cases: >-
 
   * Is a data visualization truly the best format for your information? Data visualizations can be powerful in showing aspects such as patterns and comparisons. But sometimes data visualization isn’t the best approach, and a well-crafted sentence or table may actually be more impactful in conveying a specific point. 
 
-  * Make sure you understand the data before deciding how to visualize it. For instance, bar graphs are good at showing comparisons whereas line graphs are good at showing a change over time.  
+  * Make sure you understand the data before deciding how to visualize it. For instance, bar charts are good at showing comparisons whereas line charts are good at showing a change over time.  
 
   * Consider your audience, their familiarity with data visualization, and how much information they need. 
 

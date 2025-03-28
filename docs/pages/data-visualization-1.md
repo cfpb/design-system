@@ -38,7 +38,8 @@ variation_groups:
           100%](/design-system/images/uploads/bar_chart_stacked_to_100.png)"
         variation_implementation: Available for creation in CFPB's CMS and Excel template
   - variation_group_name: Line chart
-    variation_group_description: Line charts are good at showing a change over time. Start your axis at 0.
+    variation_group_description: Line charts are good at showing a change over time.
+      A line chart's axis should always start at 0.
     variations:
       - variation_is_deprecated: false
         variation_name: Simple line chart

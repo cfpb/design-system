@@ -60,16 +60,11 @@ description: >-
   <a href="https://github.com/cfpb/design-system">View source code on GitHub</a></p></div>
 
 
-  <br>
-
-
   ### For designers
 
 
   Check out <a href="https://www.figma.com/community/file/1487539003249310850">CFPB Design System</a> in the Figma Community.
 
-
-  <br>
 
   <br>
 

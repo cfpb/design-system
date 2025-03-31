@@ -25,8 +25,51 @@ description: >-
   ## Getting started
 
 
-  Our [general principles](https://cfpb.github.io/design-system/general-principles) form the strategic underpinnings for the CFPB’s design and development standards. Our [accessibility principles](https://cfpb.github.io/design-system/guidelines/accessibility-principles) lay the foundation for ensuring that our web content is available for all users.
+  Start with our [general principles](https://cfpb.github.io/design-system/general-principles), which form the strategic underpinnings for the CFPB’s design and development standards. Also check out our [accessibility principles](https://cfpb.github.io/design-system/guidelines/accessibility-principles), which lay the foundation for ensuring that our web content is available for all users.
 
+
+  ### For developers
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  #### Setup and contribution
+
+  <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be integrated into your project. <a href="https://cfpb.github.io/design-system/development/integrating-the-design-system-into-your-project">Integrate the Design System into your project</a>.</p>
+
+  <p>
+
+  Learn how to contribute to the Design System code base and update the documentation.  <a href="https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md">Get started</a>.
+
+  </p>
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  #### Using source code
+
+
+  The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov).
+
+  <p>
+
+  <a href="https://github.com/cfpb/design-system">View source code on GitHub</a></p></div>
+
+
+  <br>
+
+
+  ### For designers
+
+
+  Check out <a href="https://www.figma.com/community/file/1487539003249310850">CFPB Design System</a> in the Figma Community.
+
+
+  <br>
 
   <br>
 
@@ -102,43 +145,6 @@ description: >-
   <p><a href="https://cfpb.github.io/design-system/guidelines/">Browse guidelines</a></p>
 
   </div>
-
-
-  <br>
-
-  <br>
-
-
-  ## Get started as a developer
-
-
-  <div class="content-50 content-last" markdown="1">
-
-
-  ### Setup and contribution
-
-  <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be integrated into your project. <a href="https://cfpb.github.io/design-system/development/integrating-the-design-system-into-your-project">Integrate the Design System into your project</a>.</p>
-
-  <p>
-
-  Learn how to contribute to the Design System code base and update the documentation.  <a href="https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md">Get started</a>.
-
-  </p>
-
-  </div>
-
-
-  <div class="content-50 content-last" markdown="1">
-
-
-  ### Using source code
-
-
-  The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov).
-
-  <p>
-
-  <a href="https://github.com/cfpb/design-system">View source code on GitHub</a></p></div>
 
 
   <br>

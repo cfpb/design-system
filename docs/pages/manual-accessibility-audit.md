@@ -22,13 +22,13 @@ variation_groups:
       criteria](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0&levels=aaa).
       The audit, which is written in Excel, includes coverage for automated
       testing, screen reader testing, mobile testing, keyboard testing, plus
-      additional tests for sensory sensitivity and forms. 
+      additional tests for sensory sensitivity and forms.
 
 
-      **The audit is written for use on a MacBook installed with both Microsoft Excel and the Chrome browser, as well as an iPhone.** 
+      **The audit is written for use on a MacBook installed with both Microsoft Excel and the Chrome browser, as well as an iPhone.**
 
 
-      [Download the CFPB manual accessibility audit](/design-system/assets/CFPB.manual.accessibility.audit.open.source.v1.0_09.30.21.xlsx)  
+      [Download the CFPB manual accessibility audit](/design-system/assets/files/CFPB.manual.accessibility.audit.open.source.v1.0_09.30.21.xlsx)
 
 
       If you have any feedback, please let us know [by filing a issue](https://github.com/cfpb/design-system/issues).
@@ -115,7 +115,7 @@ guidelines: >-
 
   **3: Unrelated to main page/component purpose**\
 
-  Example: Landmarks contain the word "navigation" twice because of redundant labeling 
+  Example: Landmarks contain the word "navigation" twice because of redundant labeling
 
 
   #### Page type or functionality
@@ -128,7 +128,7 @@ guidelines: >-
 
   **Top 20 page**\
 
-  A single page that, based on analytics, falls within the top 20 most visited pages of your site 
+  A single page that, based on analytics, falls within the top 20 most visited pages of your site
 
 
   **Site-wide pattern**\

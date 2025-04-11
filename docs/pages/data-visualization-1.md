@@ -134,7 +134,7 @@ guidelines: >-
   #### Optional information
 
 
-  If relevant to your chart, you may include the following information. 
+  ![If relevant to your chart, you may include the following optional information. ](/design-system/images/uploads/data_visualization_optional_info.png)
 
 
   * **Figure number:** If there will be many charts on a page, include a figure number with each chart. This will appear as text above the chart’s title.

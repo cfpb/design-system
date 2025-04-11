@@ -95,7 +95,7 @@ guidelines: >-
   ### Limit the data you include 
 
 
-  Include no more than five data types in your chart to help ensure it will be readable and accessible. For example, a line chart should have no more than five lines, and a pie chart should have no more than five slices. If you need to show more than five data types, break your chart into multiple smaller charts.  
+  Include no more than five data types in your chart to ensure it will be readable and accessible. For example, a line chart should have no more than five lines, and a pie chart should have no more than five slices. If you need to show more than five data types, break your chart into multiple smaller charts.  
 
 
   ### Use accessible colors and patterns 

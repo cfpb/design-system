@@ -29,7 +29,7 @@ variation_groups:
                   </div>
                   <div class="o-email-signup__buttons">
                       <button class="a-btn">Sign up</button>
-                      <a class="a-btn a-btn--link a-btn--secondary" href="#" target="_blank" rel="noopener noreferrer">
+                      <a class="a-btn a-btn--link" href="#" target="_blank" rel="noopener noreferrer">
                       See Privacy Act statement
                       </a>
                   </div>
@@ -69,7 +69,7 @@ variation_groups:
                       </div>
                       <div class="o-email-signup__buttons">
                           <button class="a-btn">Sign up</button>
-                          <a class="a-btn a-btn--link a-btn--secondary" href="#" target="_blank" rel="noopener noreferrer">
+                          <a class="a-btn a-btn--link" href="#" target="_blank" rel="noopener noreferrer">
                           See Privacy Act statement
                           </a>
                       </div>

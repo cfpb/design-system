@@ -19,10 +19,12 @@ $btn-bg-active: var(--navy);
 $btn-divider: var(--pacific-60);
 
 // .btn__secondary
-$btn-secondary-text: var(--white);
-$btn-secondary-bg: var(--gray);
-$btn-secondary-bg-hover: var(--gray-dark);
-$btn-secondary-bg-active: var(--black);
+$btn-secondary-text: var(--pacific);
+$btn-secondary-text-hover: var(--pacific-dark);
+$btn-secondary-bg: var(--white);
+$btn-secondary-border: var(--pacific);
+$btn-secondary-border-hover: var(--pacific-dark);
+$btn-secondary-border-active: var(--navy);
 $btn-secondary-divider: var(--gray-40);
 
 // .btn__warning

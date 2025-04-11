@@ -81,23 +81,27 @@ input.a-btn::-moz-focus-inner {
     &:visited {
       background-color: $btn-secondary-bg;
       color: $btn-secondary-text;
+      box-shadow: 0 0 0 1px $btn-secondary-border inset;
     }
 
     &:hover,
     &.hover,
     &:focus,
     &.focus {
-      background-color: $btn-secondary-bg-hover;
+      background-color: $btn-secondary-bg;
+      color: $btn-secondary-text-hover;
+      box-shadow: 0 0 0 1px $btn-secondary-border-hover inset;
     }
 
     &:focus,
     &.focus {
-      outline-color: $btn-secondary-bg;
+      outline-color: $btn-secondary-border;
     }
 
     &:active,
     &.active {
-      background-color: $btn-secondary-bg-active;
+      background-color: $btn-secondary-bg;
+      box-shadow: 0 0 0 1px $btn-secondary-border-active inset;
     }
   }
 

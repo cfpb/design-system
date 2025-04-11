@@ -92,13 +92,13 @@ variation_groups:
         variation_description: "![Tile grid map
           example](/design-system/images/uploads/tile_grid_map.png)"
 guidelines: >-
-  ### Limit the data you include 
+  ### Limited data
 
 
   Include no more than five data types in your chart to ensure it will be readable and accessible. For example, a line chart should have no more than five lines, and a pie chart should have no more than five slices. If you need to show more than five data types, break your chart into multiple smaller charts.  
 
 
-  ### Use accessible colors and patterns 
+  ### Accessible colors and patterns 
 
 
   When used properly, color and patterns can help clarify relationships and differences between data and maintain a consistent brand voice. When used poorly, color and patterns can overwhelm the user, make the data confusing, and break with brand standards. 
@@ -109,29 +109,26 @@ guidelines: >-
   * **Patterns:** We’ve built the following patterns into our CMS and Excel template: square dot, round dot, dash, and long dash.
 
 
-  ### Include critical information 
+  ### Required information
 
 
-  Elements such as a chart title and alt text help validate the data and increase comprehension. 
-
-
-  #### Required information
+  ![The following information is required in a data visualization.](/design-system/images/uploads/data_visualization_required_information.png)
 
 
   * **Title:** The title should be as descriptive as possible to give users a sense of what the chart will be about.  
 
     * **Character count:** No more than a single line at desktop screen size (approx. 95 characters including spaces) 
+  * **Axis labels:** Include and label one X axis and one Y axis per chart. 
+
+  * **Downloadable source data:** Provide the data used to create the chart in an Excel or CSV file. Within the file, format the data as a table with header columns for accessibility. Please reference this [table accessibility video](https://www.section508.gov/training/spreadsheets/aed-cop-xlsx05/) for guidance.   
+
+    * **Download text:** Write a short phrase of text to appear as the link text when a user clicks to download the data. The text should succinctly describe the data the file contains so it is clear to a user using a screen reader what they are downloading. 
   * **Alt text (short description):** Alt text should include the chart type, type of data, and main takeaway. This text will not be visible on the page. Rather, it will be read by a screen reader.  
 
     * **Character count:** No more than 250 characters including spaces
     * **Example:** *“Line chart showing average credit card debt between June 2018 and September 2019 stayed relatively stable across respondents, whether or not they reported difficulty paying expenses.”*
-  * **Downloadable source data:** Provide the data used to create the chart in an Excel or CSV file. Within the file, format the data as a table with header columns for accessibility. Please reference this [table accessibility video](https://www.section508.gov/training/spreadsheets/aed-cop-xlsx05/) for guidance.   
 
-    * **Download text:** Write a short phrase of text to appear as the link text when a user clicks to download the data. The text should succinctly describe the data the file contains so it is clear to a user using a screen reader what they are downloading. 
-  * **Axis labels:** Include and label one X axis and one Y axis per chart. 
-
-
-  #### Optional information
+  ### Optional information
 
 
   ![If relevant to your chart, you may include the following optional information. ](/design-system/images/uploads/data_visualization_optional_info.png)

@@ -112,7 +112,7 @@ guidelines: >-
   ### Required information
 
 
-  ![The following information is required in a data visualization.](/design-system/images/uploads/data_visualization_required_information.png)
+  ![When creating a data visualization, you must include a title, axis labels, downloadable source data, and alt text.](/design-system/images/uploads/data_visualization_required_information.png)
 
 
   * **Title:** The title should be as descriptive as possible to give users a sense of what the chart will be about.  

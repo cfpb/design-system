@@ -29,7 +29,8 @@ variation_groups:
                   </div>
                   <div class="o-email-signup__buttons">
                       <button class="a-btn">Sign up</button>
-                      <a class="a-btn a-btn--link a-btn--secondary" href="#" target="_blank" rel="noopener noreferrer">
+                      <a class="a-btn a-btn--link" href="#" target="_blank"
+                      rel="noopener noreferrer">
                       See Privacy Act statement
                       </a>
                   </div>
@@ -69,7 +70,7 @@ variation_groups:
                       </div>
                       <div class="o-email-signup__buttons">
                           <button class="a-btn">Sign up</button>
-                          <a class="a-btn a-btn--link a-btn--secondary" href="#" target="_blank" rel="noopener noreferrer">
+                          <a class="a-btn a-btn--link" href="#" target="_blank" rel="noopener noreferrer">
                           See Privacy Act statement
                           </a>
                       </div>
@@ -85,9 +86,6 @@ variation_groups:
           [Browse](https://cfpb.github.io/design-system/pages/browse-pages)
           pages. It should be used when the email CTA is more important to the
           purpose of the page than the sidebar or prefooter placement reflects.
-
-
-          ![Inset email signup](/design-system/images/uploads/2e07e378-4adf-11e8-96a7-67d2534eec85.png)
 
 
           #### When to use inset email signup

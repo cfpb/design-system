@@ -81,13 +81,8 @@ $a: Link active color.
 // Secondary button link
 //
 
-@include u-btn-link-states(
-  '.a-btn--link.a-btn--secondary',
-  $btn-secondary-bg,
-  $btn-secondary-bg-hover,
-  $btn-secondary-bg,
-  $btn-secondary-bg-active
-);
+// The .a-btn--link.a-btn--secondary combo shouldn't be used,
+// so we provide no styles.
 
 //
 // Destructive action button link

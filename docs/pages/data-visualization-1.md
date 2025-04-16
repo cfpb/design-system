@@ -14,40 +14,41 @@ variation_groups:
     variations:
       - variation_is_deprecated: false
         variation_name: Vertical bar chart
-        variation_description: "![Vertical bar chart
-          example](/design-system/images/uploads/vertical_bar_chart.png)"
+        variation_description: '![Vertical bar chart
+          example](/design-system/images/uploads/vertical_bar_chart.png)'
         variation_implementation: Available for creation in CFPB's CMS and Excel template
       - variation_is_deprecated: false
         variation_name: Horizontal bar chart
-        variation_description: "![Horizontal bar chart
-          example](/design-system/images/uploads/horizontal_bar_chart.png)"
+        variation_description: '![Horizontal bar chart
+          example](/design-system/images/uploads/horizontal_bar_chart.png)'
         variation_implementation: Available for creation in CFPB's CMS and Excel template
       - variation_is_deprecated: false
         variation_name: Grouped bar chart
-        variation_description: "![Grouped bar chart
-          example](/design-system/images/uploads/grouped_bar_chart.png)"
+        variation_description: '![Grouped bar chart
+          example](/design-system/images/uploads/grouped_bar_chart.png)'
         variation_implementation: Available for creation in CFPB's CMS and Excel template
       - variation_is_deprecated: false
         variation_name: Stacked bar chart
-        variation_description: "![Stacked bar chart
-          example](/design-system/images/uploads/stacked_bar_chart.png)"
+        variation_description: '![Stacked bar chart
+          example](/design-system/images/uploads/stacked_bar_chart.png)'
         variation_implementation: Available for creation in CFPB's CMS and Excel template
       - variation_is_deprecated: false
         variation_name: Bar chart stacked to 100 percent
-        variation_description: "![Example of a bar chart stacked to
-          100%](/design-system/images/uploads/bar_chart_stacked_to_100.png)"
+        variation_description: '![Example of a bar chart stacked to
+          100%](/design-system/images/uploads/bar_chart_stacked_to_100.png)'
         variation_implementation: Available for creation in CFPB's CMS and Excel template
   - variation_group_name: Line chart
-    variation_group_description: Line charts are good at showing a change over time.
+    variation_group_description:
+      Line charts are good at showing a change over time.
       A line chart's axis should always start at 0.
     variations:
       - variation_is_deprecated: false
         variation_name: Simple line chart
-        variation_description: "![Simple line chart
-          example](/design-system/images/uploads/simple_line_chart.png)"
+        variation_description: '![Simple line chart
+          example](/design-system/images/uploads/simple_line_chart.png)'
         variation_implementation: Available for creation in CFPB's CMS and Excel template
       - variation_is_deprecated: false
-        variation_name: Date/time chart 
+        variation_name: Date/time chart
         variation_description: >-
           A date/time chart is a line chart which graphs continuous data over a
           period of time. The chart includes buttons to select time ranges of 1,
@@ -59,26 +60,31 @@ variation_groups:
 
 
           ![Date/time chart example](/design-system/images/uploads/date_time_chart.png)
-        variation_implementation: Not currently available for creation in CFPB's CMS or
+        variation_implementation:
+          Not currently available for creation in CFPB's CMS or
           Excel template. Requires custom development.
   - variation_group_name: Pie chart
-    variation_group_description: Pie charts are good at showing parts of a whole.
+    variation_group_description:
+      Pie charts are good at showing parts of a whole.
       Slices should always add up to 100 percent.
     variations:
       - variation_is_deprecated: false
-        variation_implementation: Available for creation in CFPB's Excel template. Not
+        variation_implementation:
+          Available for creation in CFPB's Excel template. Not
           currently available for creation in CFPB's CMS.
-        variation_description: "![Pie chart example](/design-system/images/uploads/pie_chart.png)"
+        variation_description: '![Pie chart example](/design-system/images/uploads/pie_chart.png)'
   - variation_group_name: Area chart
-    variation_group_description: Area charts are good at showing trends over time
+    variation_group_description:
+      Area charts are good at showing trends over time
       much like line charts. Unlike line charts, area charts use filled areas
       which help draw attention to the changing values. They are good at
       emphasizing the size of change over time.
     variations:
       - variation_is_deprecated: false
-        variation_implementation: Available for creation in CFPB's Excel template. Not
+        variation_implementation:
+          Available for creation in CFPB's Excel template. Not
           currently available for creation in CFPB's CMS.
-        variation_description: "![Area chart example](/design-system/images/uploads/area_chart.png)"
+        variation_description: '![Area chart example](/design-system/images/uploads/area_chart.png)'
   - variation_group_name: Tile grid map
     variation_group_description: Tile grid maps can show comparative state data
       where population figures or geographic size are not part of the story. In
@@ -87,10 +93,11 @@ variation_groups:
       small areas from going unnoticed.
     variations:
       - variation_is_deprecated: false
-        variation_implementation: Not currently available for creation in CFPB's CMS or
+        variation_implementation:
+          Not currently available for creation in CFPB's CMS or
           Excel template. Requires custom development.
-        variation_description: "![Tile grid map
-          example](/design-system/images/uploads/tile_grid_map.png)"
+        variation_description: '![Tile grid map
+          example](/design-system/images/uploads/tile_grid_map.png)'
 guidelines: >-
   ### Limited data
 
@@ -170,7 +177,7 @@ accessibility: >-
   * [Accessible colors and patterns](https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines#use-accessible-colors-and-patterns)
 
   * [Required information](https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines#required-information) including a chart title, alt text, downloadable source data, download text, and axis labels
-research: ""
+research: ''
 related_items: >-
   * [Data visualization color
   palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1)

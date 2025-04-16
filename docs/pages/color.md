@@ -1452,7 +1452,7 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Cool palette
-        variation_description: |-2
+        variation_description: |2-
            <table class="color-table">
                 <thead>
                     <tr>
@@ -1530,7 +1530,7 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Warm palette
-        variation_description: |-2
+        variation_description: |2-
            <table class="color-table">
                 <thead>
                     <tr>
@@ -1611,7 +1611,7 @@ variation_groups:
             </tr>
 
             </tbody></table>
-content_guidelines: ""
+content_guidelines: ''
 eyebrow: Basics
 title: Color
 layout: variation
@@ -1619,8 +1619,8 @@ status: Released
 description: A minimal palette, clear hierarchy, and ample whitespace ensure a
   voice of authority and expertise in communication. The following sets of
   colors maintain CFPB brand cohesion and create accessible graphics.
-use_cases: ""
-behavior: ""
+use_cases: ''
+behavior: ''
 accessibility: >-
   Color should never be solely relied on as a means of conveying information,
   indicating an action, prompting a response, or distinguishing a visual

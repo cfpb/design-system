@@ -101,6 +101,7 @@ input.a-btn::-moz-focus-inner {
     &:active,
     &.active {
       background-color: $btn-secondary-bg;
+      color: $btn-secondary-text-active;
       box-shadow: 0 0 0 1px $btn-secondary-border-active inset;
     }
   }
@@ -183,6 +184,9 @@ input.a-btn::-moz-focus-inner {
   &:has(span + svg) {
     svg {
       order: 3;
+
+      // Prevent icon from shrinking when button wraps.
+      flex: none;
     }
   }
 

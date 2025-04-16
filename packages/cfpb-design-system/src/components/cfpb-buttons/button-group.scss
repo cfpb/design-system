@@ -3,7 +3,7 @@
 
 .m-btn-group {
   display: flex;
-  gap: math.div(10px, $base-font-size-px) + rem;
+  gap: math.div(15px, $base-font-size-px) + rem;
   flex-wrap: wrap;
   align-items: center;
   width: fit-content;

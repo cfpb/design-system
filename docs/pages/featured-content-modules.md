@@ -24,15 +24,11 @@ variation_groups:
                       alt="">
               </div>
           </section>
-        variation_description: ""
+        variation_description: There is only one type of FCM layout. When the pattern
+          appears on a page in a language that reads right to left, such as
+          Arabic, the layout remains the same, but the text is aligned right
+          rather than left.
         variation_name: Standard
-      - variation_is_deprecated: false
-        variation_name: Right to left
-        variation_description: >-
-          Used on pages in languages, such as Arabic, that read right to left
-
-
-          ![When an FCM appears on a page in a language that reads right to left, the pattern's layout remains the same as in the standard FCM with the image to the right of the content at larger browser width and stacked above the content at small browser width. The text has a right alignment in the content area vs. a left alignment in the standard FCM layout.](/design-system/images/uploads/rtl_fcm.png)
     variation_group_name: Types
     variation_group_description: ""
 guidelines: >-

@@ -28,14 +28,18 @@ variation_groups:
         variation_name: Standard
       - variation_is_deprecated: false
         variation_name: Right to left
-        variation_description: Used on pages in languages, such as Arabic, that read right to left
+        variation_description: >-
+          Used on pages in languages, such as Arabic, that read right to left
+
+
+          ![When an FCM appears on a page in a language that reads right to left, the pattern's layout remains the same as in the standard FCM with the image to the right of the content at larger browser width and stacked above the content at small browser width. The text has a right alignment in the content area vs. a left alignment in the standard FCM layout.](/design-system/images/uploads/rtl_fcm.png)
     variation_group_name: Types
     variation_group_description: ""
 guidelines: >-
   ### Placement 
 
 
-  * Can appear on any page type 
+  * Can appear on any [page type](https://cfpb.github.io/design-system/pages/) 
 
   * Should sit below a page’s introduction and retain that position on all screen sizes  
 
@@ -76,7 +80,7 @@ guidelines: >-
   * 1076px width by 606px height 
 
     * This is a 16:9 aspect ratio and 2x the rendered width.   
-    * See the behavior guidelines below regarding how the image will crop as the browser width changes.   
+    * See the [behavior guidelines](https://cfpb.github.io/design-system/patterns/featured-content-module#behavior) below regarding how the image will crop as the browser width changes.   
   * If there is a video, a 60 by 60px play button will appear in the center of the image. Make sure the image’s subject is not obscured by the play button, particularly ensuring that no faces are covered by the button.
 eyebrow: Featured content
 title: Featured content module

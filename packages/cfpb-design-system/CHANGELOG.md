@@ -2,7 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.6.3](https://github.com/cfpb/design-system/compare/v3.6.2..3.6.3) - January  8, 2025
+## [3.7.0](https://github.com/cfpb/design-system/compare/v3.6.3..3.7.0) - April 17, 2025
+
+### PRs in this release
+
+- PR #[2142](https://github.com/cfpb/design-system/pull/2142): Update browserslist-config, cypress, eslint, eslint-config-prettier, eslint-plugin-react, git-cliff, postcss, release-it, sass, stylelint - Ans
+- PR #[2187](https://github.com/cfpb/design-system/pull/2187): Increase gap in button groups - Ans
+- PR #[2185](https://github.com/cfpb/design-system/pull/2185): Update secondary button appearance - Ans
+- PR #[2186](https://github.com/cfpb/design-system/pull/2186): Notifications: Set max-width of content - Ans
+
+### General
+
+- Update browserslist-config, cypress, eslint, eslint-config-prettier, eslint-plugin-react, git-cliff, postcss, release-it, sass, stylelint - ([b90f42a](https://github.com/cfpb/design-system/commit/b90f42a6278acf8f815505c2b60829010db40d12)) - Ans
+- Increase gap in button groups
+: - ([9e09997](https://github.com/cfpb/design-system/commit/9e09997aa7d358ddd49b389e9c333570da7dad1c)) - Ans
+- Update secondary button appearance - ([3327b25](https://github.com/cfpb/design-system/commit/3327b255d8d85584c282cd07ecb0d5e77101a81a)) - Ans
+- Update secondary button divider to pacific-60 - ([bff0461](https://github.com/cfpb/design-system/commit/bff0461328a242a307959b499b61643a902c98c8)) - Ans
+- Correct active state - ([7b120d5](https://github.com/cfpb/design-system/commit/7b120d51da12b89658639e2b7e31ed4474e3d197)) - Ans
+- Set max-width of notification content - ([05121be](https://github.com/cfpb/design-system/commit/05121be6bb953e63da5ae64f4b1066e0aff10b4c)) - Ans
+- Re-build assets - ([dbeb169](https://github.com/cfpb/design-system/commit/dbeb16934dced1e50137664fff270fb48c1066b6)) - Ans
+
+## [3.6.3](https://github.com/cfpb/design-system/compare/v3.6.2..v3.6.3) - January  8, 2025
 
 ### PRs in this release
 
@@ -25,18 +45,12 @@ All notable changes to this project will be documented in this file.
 - Update CHANGELOG.md - ([bfd91e3](https://github.com/cfpb/design-system/commit/bfd91e39d31d829ea8a2dcb296bea0fd9c36cbbd)) - Chris Contolini
 - Provide icon exports - ([9eccdc4](https://github.com/cfpb/design-system/commit/9eccdc415730d3f0e3b42c28ba51fda00d3aa7f6)) - Wyatt Pearsall
 
-## [3.6.1](https://github.com/cfpb/design-system/compare/v3.6.0..v3.6.1) - December  4, 2024
+## [3.6.1](https://github.com/cfpb/design-system/compare/v3.5.0..v3.6.1) - December  4, 2024
 
 ### PRs in this release
 
 - PR #[2054](https://github.com/cfpb/design-system/pull/2054): Add new tooltip component to DS - Chris Contolini
 - PR #[2133](https://github.com/cfpb/design-system/pull/2133): Add ESLint typescript resolver to fix exports issue - Chris Contolini
-
-### General
-
-- Return Tooltip instance to match JSDoc description - ([290b87e](https://github.com/cfpb/design-system/commit/290b87e4889c16c5e846e3039a7266ebb7c09e99)) - Chris Contolini
-
-## [3.6.0](https://github.com/cfpb/design-system/compare/v3.5.0..v3.6.0) - December  3, 2024
 
 ### General
 
@@ -61,6 +75,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Change cursor to pointer on tooltip trigger hover - ([979f268](https://github.com/cfpb/design-system/commit/979f268281721fa6aca5900e1b90fa3d2e100f4d)) - CFPBot
 - Rebuild assets, move new packages to yarn cache dir - ([e0e9531](https://github.com/cfpb/design-system/commit/e0e95310cf3d94706ec143e23caa90157f7129f2)) - Chris Contolini
 - Remove erroneous auto-changelog dependency and config - ([980d9eb](https://github.com/cfpb/design-system/commit/980d9eb65147732323ce42f56014e17ffc638d5a)) - Chris Contolini
+- Return Tooltip instance to match JSDoc description - ([290b87e](https://github.com/cfpb/design-system/commit/290b87e4889c16c5e846e3039a7266ebb7c09e99)) - Chris Contolini
 
 ## [3.5.0](https://github.com/cfpb/design-system/compare/v3.4.14..v3.5.0) - November 26, 2024
 

@@ -66,6 +66,10 @@
     display: block;
   }
 
+  &__content {
+    max-width: 41.875rem;
+  }
+
   // Only adding left padding if an icon is present.
   .cf-icon-svg + &__content {
     padding-left: math.div(25px, $base-font-size-px) + rem;

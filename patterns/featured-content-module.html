@@ -292,11 +292,7 @@
     <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
         
         <li class="m-list__item">
-            <a href="#standard-featured-content-module">Standard featured content module</a>
-        </li>
-        
-        <li class="m-list__item">
-            <a href="#variations">Variations</a>
+            <a href="#types">Types</a>
         </li>
         
         <li class="m-list__item">
@@ -316,139 +312,24 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Featured content modules (FCMs) highlight one specific piece of content at the top of a page. Content can be a video, link, or download.</p>
+        <p>A featured content module (FCM) is a “mini story” used to highlight a specific piece of content, such as a video. FCM content is featured rather than integral to the main content of the page.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation-group" id="standard-featured-content-module">
+    <section class="o-variation-group" id="types">
 
         
         <h2 class="o-variation-group__title">
-            Standard featured content module
-        </h2>
-        
-
-        
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-
-            
-            <div class="m-variation__description">
-                <p>FCMs contain a headline, body copy text, a call to action (either a text link or a play button), and a graphical element related to the piece of content being featured. They are a “mini story” and never simply a dominant visual.
-FCMs appear below the page introduction and retain that position on all screen sizes, unless appearing on the homepage where all content is featured and placement can vary by priority. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br></p>
-
-<p><img src="/design-system/images/uploads/fcm-desktop02.png" alt="Image of a featured content module"></p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle__code">
-                <button href="#details-fcms-contain-a-headline-body-cop-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-fcms-contain-a-headline-body-cop-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-fcms-contain-a-headline-body-cop-1">
-                <ul class="m-tabs__list">
-                    
-                    
-                    
-                    
-                    <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#details-fcms-contain-a-headline-body-cop-specs-1">
-                            Specs
-                        </a>
-                    </li>
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-                <section class="m-tabs__panel" id="details-fcms-contain-a-headline-body-cop-specs-1">
-                    <div>
-                        <h4 class="variation-specs-title">Specs</h4>
-                        <div style="padding:40px">
-                            <h3 id="standard-desktop-style">Standard desktop style</h3>
-
-<ul>
-  <li>Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page, unless featured on the homepage.</li>
-  <li>When the visual is anchored to the right of the text, the background color of the module is Gray 5 with a 1px Gray 40 stroke.</li>
-  <li>Visual is always 270px wide and 220px tall at maximum page width.</li>
-  <li>Text spans 5 columns at maximum page width and is left and top aligned. There is 30px of padding around all sides of the text.</li>
-  <li>The ratio of text and visual changes with screen size to keep the full height of the image visible. As available width dips below the maximum page width, the text area shrinks in width while the visual maintains a fixed width of 270px. That means that the height and aspect ratio of the visual will change as the screen shrinks, and the image will be cropped between 16% and 29% from each side.</li>
-  <li>Heading: H3, 35 maximum character count (including spaces)</li>
-  <li>Body copy: 16px, appears 15px below the headline, 160 maximum character count (including spaces)</li>
-  <li>Call to action link: 16px, standard link colors, appears 15px below body copy, 35 maximum character count (including spaces)</li>
-  <li>Play button (for FCMs with a video): 60px diameter, Black background at 75% opacity that changes to Pacific on hover, White icon, 2px Gray 5 border, centered in the visual</li>
-</ul>
-
-<h3 id="differences-in-style-at-mobile-size">Differences in style at mobile size</h3>
-
-<ul>
-  <li>Text and visual are stacked instead of side by side with 30px space between text and top of visual</li>
-  <li>Headline: H4</li>
-  <li>Visual is always in a 16:9 ratio</li>
-  <li>15px of left, right, and bottom padding around all content in the FCM</li>
-</ul>
-
-<h3 id="video-thumbnails">Video thumbnails</h3>
-
-<ul>
-  <li>For videos, a 60x60 px play button appears in the center of the image area (horizontally and vertically centered). Make sure the subject of the thumbnail image is not awkwardly obscured by the play button. In particular, make sure that no faces are covered by the play button. This may require a photo composed with the subject on the left or right side of the image.</li>
-</ul>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-            </div>
-            
-
-        </div>
-        
-    </section>
-    
-    <section class="o-variation-group" id="variations">
-
-        
-        <h2 class="o-variation-group__title">
-            Variations
+            Types
         </h2>
         
 
         
         <div class="o-variation-group__description">
-            <p>The modifiers below describe how to change where the featured content module visual is positioned relative to the text.</p>
+            
 
         </div>
         
@@ -464,7 +345,7 @@ FCMs appear below the page introduction and retain that position on all screen s
             
             <div class="m-variation__name">
                 <h3>
-                    Reversed layout without background
+                    Standard
                     
                 </h3>
             </div>
@@ -472,91 +353,7 @@ FCMs appear below the page introduction and retain that position on all screen s
 
             
             <div class="m-variation__description">
-                <p>In cases when the featured content module appears next to another component with a background color, this variation can be applied to reduce visual overload.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle__code">
-                <button href="#details-reversed-layout-without-backgrou-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-reversed-layout-without-backgrou-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-reversed-layout-without-backgrou-1">
-                <ul class="m-tabs__list">
-                    
-                    
-                    
-                    
-                    <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#details-reversed-layout-without-backgrou-specs-1">
-                            Specs
-                        </a>
-                    </li>
-                    
-                </ul>
-
-                <!-- HTML snippet -->
                 
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-                <section class="m-tabs__panel" id="details-reversed-layout-without-backgrou-specs-1">
-                    <div>
-                        <h4 class="variation-specs-title">Specs</h4>
-                        <div style="padding:40px">
-                            <ul>
-  <li>No background or border</li>
-  <li>Visual is left-aligned instead of right-aligned.</li>
-  <li>Text is aligned to the left edge of the image.</li>
-</ul>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Visual anchored on the right (default)
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>When the featured content module visual is a video, or a static image composed with its subject in the middle. The center of the image is to the center of the available space so that the focal point of the visual remains in view at all screen sizes.
-For videos, note that a 60 x 60 px play button appears centered within the image area. Make sure the subject of the thumbnail photo is not awkwardly obscured by the play button.</p>
 
             </div>
             
@@ -592,15 +389,15 @@ For videos, note that a 60 x 60 px play button appears centered within the image
             
 
             <div class="a-toggle__code">
-                <button href="#details-visual-anchored-on-the-right-def-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-visual-anchored-on-the-right-def-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-standard-section-class-o-feature-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-standard-section-class-o-feature-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-visual-anchored-on-the-right-def-2">
+            <div class="m-tabs u-hidden" id="details-standard-section-class-o-feature-1">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-visual-anchored-on-the-right-def-html-code-snippet-2">
+                        <a class="m-tabs__tab" href="#details-standard-section-class-o-feature-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -612,7 +409,7 @@ For videos, note that a 60 x 60 px play button appears centered within the image
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-visual-anchored-on-the-right-def-html-code-snippet-2">
+                <section class="m-tabs__panel" id="details-standard-section-class-o-feature-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -654,6 +451,41 @@ For videos, note that a 60 x 60 px play button appears centered within the image
 
         </div>
         
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Right to left
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Used on pages in languages, such as Arabic, that read right to left</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
     </section>
     
     
@@ -667,26 +499,15 @@ For videos, note that a 60 x 60 px play button appears centered within the image
                 <div class="content__line content__line--wide u-mb20"></div>
                 <p>
                 </p>
-<p>Featured content modules (FCMs) highlight a specific piece of content. They are meant to call attention to a related piece of content that might be new or otherwise relevant to — but not directly a part of — the main content on the page, the primary intended user action, or the user journey.</p>
+<p>An FCM should call attention to a piece of content that might be new or otherwise relevant to— but not directly a part of— the main content on the page. FCM content shouldn’t be seen as integral to the page, meaning it could be changed or removed without taking away vital information the user needs or interrupting the user journey.  </p>
 
-<p>The goal of an FCM is to have the user do one of three things: learn something (usually by navigating to other content), watch something, or download something (a printable tool or resource). FCMs can appear on any page type, though they are best suited for pages third level and below in the site map.</p>
-
-<p>FCM content shouldn’t be seen as integral to the page, meaning it could be changed or removed without taking away vital information the user needs or interrupting the user journey. Therefore, this module is not intended to support the site IA as the primary, permanent location for content. When the content is an integral, long-term part of the intended user journey, then it should have a more permanent home on the page.</p>
-
-<p>Use a featured content module (FCM) when you want to highlight something that’s:</p>
+<p>You may consider using an FCM if your content is one of the following. </p>
 
 <ul>
-  <li>
-<strong>Timely</strong>: Highlights a new tool or development. Keep in mind: When you remove dated content from a FCM, make sure you’re not getting rid of the only way users can navigate to it. Make sure to plan a permanent home for the content.</li>
-  <li>
-<strong>Impactful</strong>: Lets people know immediately how the content will affect them, how they can use it, and how it might enhance their understanding of — or experience with — the primary page content.</li>
-  <li>
-<strong>Localized</strong>: New content that specifically applies to people in a specific geographic area; it may be important for that audience to see their specific content first, and when it’s removed from the page it won’t disrupt the usual user flow.</li>
-  <li>
-<strong>Unique</strong>: Content that is specifically in the Bureau’s “wheelhouse” because of our position as an approachable, trusted, unbiased authority.</li>
+  <li>Timely: You want to highlight a new tool or development that could be impactful to visitors. Keep in mind that, when the content becomes dated and you remove it from the FCM, you must ensure you’re not removing the only way users can navigate to it. Be sure to plan a permanent home for the content. </li>
+  <li>Localized: You want to promote content that applies to people in a specific geographic area. An FCM provides emphasis and placement that will help ensure that specific audience sees the content. When the content is removed, it won’t disrupt the main user flow of the page.  </li>
+  <li>CFPB’s stance: You want to show how a subject fits within the CFPB’s areas of expertise and what the CFPB’s stance is on it.</li>
 </ul>
-
-<p>When there’s no link or video for the user to interact with, and you still want to visually differentiate your content from its surroundings, consider using a well or inline text instead.</p>
 
                 
             
@@ -696,20 +517,65 @@ For videos, note that a 60 x 60 px play button appears centered within the image
                 <div class="content__line content__line--wide u-mb20"></div>
                 <p>
                 </p>
-<h3 id="content-guidelines">Content guidelines</h3>
-
-<p>FCMs contain a headline, descriptive body copy text, an optional call-to-action link, and a graphical element related to the piece of content being featured. They are a “mini story” and never simply a dominant visual.</p>
+<h3 id="placement">Placement </h3>
 
 <ul>
-  <li>Headings should be as succinct as possible and 35 characters or less (including spaces).</li>
-  <li>Descriptions should be action-oriented and let the user know what they will get out of the featured content and how it’s related to the main page content, not just what it is. Descriptions should be 160 characters or less (including spaces).</li>
-  <li>Links serve as a call-to-action, so they should begin with an action verb like “explore,” “read,” “learn,” or “discover.” When using an action verb, be specific and tie the action back to the content and what the user will get from it. As a best practice, only include up to one link in a FCM. Link text should be 35 characters or less (including spaces).</li>
-  <li>Do not include a link with a video FCM. In a FCM that features video, the desired action is for the user to play the video, so the play button serves as a visual call-to-action. This makes it especially important for the description in the FCM to be action-oriented. Encourage users to take the action of watching the video, and relate directly back to the video content and what they’ll get out of it.</li>
+  <li>Can appear on any page type </li>
+  <li>Should sit below a page’s introduction and retain that position on all screen sizes  </li>
 </ul>
 
-<h3 id="stylistic-guidelines">Stylistic guidelines</h3>
+<h3 id="content-guidelines">Content guidelines </h3>
 
-<p>Text is full-width and displayed above the visual in the default/mobile view. When creating a static image for the visual, it should be 1076px × 606px (a 16:9 aspect ratio), which is 2x the rendered width at the maximum size at which the visual will be seen (on a 600px wide display).</p>
+<h4 id="heading">Heading </h4>
+
+<ul>
+  <li>Maximum 35 characters including spaces </li>
+</ul>
+
+<h4 id="description">Description </h4>
+
+<ul>
+  <li>Maximum 160 characters including spaces </li>
+  <li>Should be action-oriented and succinctly state what the item is about and how it relates to the main content of the page </li>
+</ul>
+
+<h4 id="call-to-action">Call to action </h4>
+
+<ul>
+  <li>
+    <p>Include only one call to action. </p>
+
+    <ul>
+      <li>If your FCM doesn’t have a video, present one call-to-action link.  </li>
+      <li>If your FCM does have a video, do not present a call-to action link. The desired action is for the user to play the video, so the play button serves as a visual call-to-action.  </li>
+    </ul>
+  </li>
+  <li>
+    <p>Call-to-action link guidelines </p>
+
+    <ul>
+      <li>Maximum 35 characters including spaces </li>
+      <li>Should clearly tie to the heading and description </li>
+      <li>Should begin with an action verb such as “explore,” “read,” “learn,” or “discover”  </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="image-guidelines">Image guidelines </h3>
+
+<ul>
+  <li>
+    <p>1076px width by 606px height </p>
+
+    <ul>
+      <li>This is a 16:9 aspect ratio and 2x the rendered width.   </li>
+      <li>See the behavior guidelines below regarding how the image will crop as the browser width changes.   </li>
+    </ul>
+  </li>
+  <li>
+    <p>If there is a video, a 60 by 60px play button will appear in the center of the image. Make sure the image’s subject is not obscured by the play button, particularly ensuring that no faces are covered by the button.</p>
+  </li>
+</ul>
 
                 
             
@@ -719,26 +585,18 @@ For videos, note that a 60 x 60 px play button appears centered within the image
                 <div class="content__line content__line--wide u-mb20"></div>
                 <p>
                 </p>
-<table>
-  <thead>
-    <tr>
-      <th>Above 600 px</th>
-      <th>Below 601 px</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img src="/design-system/images/uploads/fcm-desktop02.png" alt=""></td>
-      <td><img src="/design-system/images/uploads/fcm-mobile02.png" alt=""></td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="large-screen">Large screen </h3>
 
-<h3 id="responsive-visual-behavior">Responsive visual behavior</h3>
+<ul>
+  <li>The image appears to the right of the content.  </li>
+  <li>The ratio of text and visual changes with screen size to keep the full height of the image visible. As available width dips below the maximum page width, the text area shrinks in width while the visual maintains a fixed width of 270px. That means that the height and aspect ratio of the visual will change as the screen shrinks, and the image will be cropped between 16% and 29% from each side. </li>
+</ul>
 
-<p>At desktop size, the ratio of text and visual changes with screen size to keep the full height of the image visible. As available width dips below the maximum page width, the text area shrinks in width while the visual maintains a fixed width of 270px. That means that the height and aspect ratio of the visual will change as the screen shrinks, and the image will be cropped between 16% and 29% from each side.</p>
+<h3 id="small-screen">Small screen </h3>
 
-<p>At larger screen sizes, the image moves to the right of the text, occupying a fixed width of 270px (equal to 3 of 12 columns at max page width). By default, the left edge of the image is anchored to the left side of the visual’s 270px-wide area, and the right side is cropped off. The aspect ratio of the visual area increases as screen size increases, resulting in slightly different image cropping at different screen sizes, but the left edge of the image remains anchored in view. The full height of the image is always in view; the top and bottom are never cropped. See above for modifiers that change the image’s horizontal anchoring.</p>
+<ul>
+  <li>The content drops below the image.</li>
+</ul>
 
                 
             
@@ -766,8 +624,8 @@ For videos, note that a 60 x 60 px play button appears centered within the image
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/featured-content-modules.md">
-                            <time datetime="2025-04-17 10:35:41 -0400">
-                                10:35:41 AM Apr 17, 2025
+                            <time datetime="2025-04-17 13:13:41 -0400">
+                                 1:13:41 PM Apr 17, 2025
                             </time>
                         </a>
                     </section>

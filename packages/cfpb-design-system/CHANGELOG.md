@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.7.0](https://github.com/cfpb/design-system/compare/v3.6.3..3.7.0) - April 17, 2025
+## [3.7.1](https://github.com/cfpb/design-system/compare/v3.7.0..3.7.1) - April 18, 2025
+
+### PRs in this release
+
+- PR #[2192](https://github.com/cfpb/design-system/pull/2192): Buttons: Adjust secondary button hover color - Ans
+
+### General
+
+- Adjust secondary button hover color - ([358f328](https://github.com/cfpb/design-system/commit/358f328ce680e42d18679f738adc485dafda8a91)) - Ans
+- Add active state - ([2870e7a](https://github.com/cfpb/design-system/commit/2870e7a57caabf9574c067149ee479cd55ac53c7)) - Ans
+- Rebuild assets - ([a0bbaf7](https://github.com/cfpb/design-system/commit/a0bbaf77dbac5b0ef8878a9683bf579c59b26f23)) - Ans
+
+## [3.7.0](https://github.com/cfpb/design-system/compare/v3.6.3..v3.7.0) - April 17, 2025
 
 ### PRs in this release
 

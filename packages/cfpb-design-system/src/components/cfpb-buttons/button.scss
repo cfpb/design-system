@@ -88,7 +88,7 @@ input.a-btn::-moz-focus-inner {
     &.hover,
     &:focus,
     &.focus {
-      background-color: $btn-secondary-bg;
+      background-color: $btn-secondary-bg-hover;
       color: $btn-secondary-text-hover;
       box-shadow: 0 0 0 1px $btn-secondary-border-hover inset;
     }

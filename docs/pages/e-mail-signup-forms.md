@@ -36,8 +36,7 @@ variation_groups:
                   </div>
               </form>
           </div>
-        variation_description:
-          When implemented into a side bar, the h2 includes CFPB
+        variation_description: When implemented into a side bar, the h2 includes CFPB
           standard top green border.
         variation_name: Sidebar email sign up
         variation_specs: |-
@@ -77,36 +76,7 @@ variation_groups:
                   </form>
               </div>
           </div>
-        variation_implementation: ''
-      - variation_code_snippet: ''
-        variation_description: >-
-          The inset email signup module is a variation on the main email signup
-          that can be used in the body content of
-          [Learn](https://cfpb.github.io/design-system/pages/learn-pages) and
-          [Browse](https://cfpb.github.io/design-system/pages/browse-pages)
-          pages. It should be used when the email CTA is more important to the
-          purpose of the page than the sidebar or prefooter placement reflects.
-
-
-          #### When to use inset email signup
-
-
-          * On [Learn](https://cfpb.github.io/design-system/pages/learn-pages) pages, only use the inset email module when signing up for the email list is a primary user goal for the page, for example job seekers signing up for job announcements.
-
-          * On [Browse](https://cfpb.github.io/design-system/pages/browse-pages) pages, use the inset email module when feedback modules or other prefooter content competes with the prefooter email signup CTA, or when signing up for the email list is a primary user goal.
-
-
-          #### When other options are better
-
-
-          * On [Learn](https://cfpb.github.io/design-system/pages/learn-pages) pages when we want to encourage visitors to sign up for an email list but the list itself is not a primary user goal, use the standard sidebar email signup.
-
-          * On [Browse](https://cfpb.github.io/design-system/pages/browse-pages) pages, when email signups are not a primary user goal, and the prefooter/end of page content has no other CTAs to compete with the email signup, use the standard prefooter email signup.
-        variation_name: Inset email sign up
-        variation_specs: |-
-          * Heading: H3
-          * Body copy: Avenir paragraph
-        variation_code_snippet_rendered: ''
+        variation_implementation: ""
     variation_group_name: Types
     variation_group_description: >-
       The email sign up form is comprised of a slug heading, custom description
@@ -129,23 +99,13 @@ guidelines: >-
   * Use standard helper text within form field: “john@example.com” and standard privacy policy text before the button.
 
   * Use standard button text: “Sign up”
-
-
-  #### Inset email sign up
-
-
-  * The module heading should provide a strong call to action that clearly sets expectations for what a user will receive as a result of signing up. Uncheck "Default heading style" to use H3.
-
-  * The additional body text can further clarify what kind of information will be in the emails, with a focus on the value users will receive from the emails.
-
-  * The placement of the email signup on the page should not interfere with the primary page goal. Users respond better to follow-on requests that happen after their primary goal has been met.
 eyebrow: Forms
 status: Released
 description: Email sign-ups allow users to stay engaged on a specific topic or
   content type produced by the Bureau. They are used to add individual email
   addresses to a specific mailing list that is relevant to the content on the
   page or the section it is contained within.
-use_cases: ''
+use_cases: ""
 behavior: >-
   The mockups below show simultaneously how this pattern works within either a
   sidebar or a prefooter area.
@@ -172,23 +132,7 @@ behavior: >-
   | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 
   | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg) |
-
-
-  ### Inset
-
-
-  When the inset module is wide enough, the Privacy Act statement link is displayed inline with the sign up button, right-aligned.
-
-
-  At breakpoints below 601px, the inset module transitions to a single column and stacks above the full-width text. The signup button extends the full width of the module at the smallest breakpoint, 320px.
-
-
-  | Above 900 px                                                                                 | 601-900 px                                                                         | Below 601 px                                                                       |
-
-  | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-
-  | ![Inset email sign up 900 breakpoint](/design-system/images/uploads/email-sign-up_learn.png) | ![Inset breakpoint 601](/design-system/images/uploads/email-sign-up_learn_601.png) | ![Inset breakpoint 320](/design-system/images/uploads/email-sign-up_learn_320.png) |
-accessibility: ''
+accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

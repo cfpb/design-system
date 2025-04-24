@@ -2,14 +2,17 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 .a-form-alert {
+  display: flex;
+  gap: math.div(5px, $base-font-size-px) + rem;
+
   .cf-icon-svg {
     color: $input-icon;
-    float: left;
+    flex: none;
+    margin-top: math.div(1px, $base-font-size-px) + rem;
   }
 
   &__text {
     display: block;
-    margin-left: math.div(20px, $base-font-size-px) + em;
   }
 
   &--success .cf-icon-svg {

@@ -1,5 +1,5 @@
 ---
-title: E-mail signup forms
+title: Email signup forms
 layout: variation
 section: patterns
 variation_groups:
@@ -36,15 +36,9 @@ variation_groups:
                   </div>
               </form>
           </div>
-        variation_description:
-          When implemented into a side bar, the h2 includes CFPB
-          standard top green border.
-        variation_name: Sidebar email sign up
-        variation_specs: |-
-          * Heading: H5 slug
-          * Body copy: Avenir paragraph
-
-          ![](/design-system/images/uploads/emailsignup_style_mockup.png)
+        variation_description: ""
+        variation_name: Email signup form
+        variation_specs: ""
         variation_code_snippet_rendered: >-
           <div class="o-well" style="max-width: 370px">
               <div class="o-email-signup">
@@ -77,63 +71,54 @@ variation_groups:
                   </form>
               </div>
           </div>
-        variation_implementation: ''
+        variation_implementation: ""
     variation_group_name: Types
-    variation_group_description: >-
-      The email sign up form is comprised of a slug heading, custom description
-      text, form field for the user to enter their email address, standardized
-      link to a privacy policy statement, and standardized sign up button.
-
-
-      Different page types will be connected to the corresponding GovDelivery list based on the page topic (i.e. HMDA) or page type (i.e. blog).
+    variation_group_description: ""
 guidelines: >-
+  ### Design guidelines
+
+
+  Email signup forms can be placed in a page’s sidebar or as an inset in the page’s main content.
+
+
+  #### Sidebar placement
+
+
+  The most common placement for the email signup form is in the sidebar. This placement is possible on Learn and Sublanding pages. Because Browse pages do not have a sidebar, the email signup form can be placed in the prefooter at the bottom of the page.
+
+
+  #### 
+
+  Inset placement
+
+
+  An inset email signup form appears in the main content area of a page and is possible on Learn and Sublanding pages. Consider using an inset email signup form when the email call to action (CTA) is more important to the purpose of the page than the sidebar or prefooter placement reflects. When using an inset email signup form, ensure its placement on the page does not interfere with the primary page goal. Users respond better to follow-on requests that happen after their primary goal has been met.
+
+
   ### Content guidelines
 
 
-  #### Sidebar email sign up
+  The email signup form is comprised of a heading, description, form field for the user to enter their email address, link to a privacy policy statement, and signup button.
 
 
-  * Default slug text: “Email updates”
+  * **Heading:** As a default, use "Email updates" for the heading. If using a custom heading, provide a strong CTA that clearly sets expectations for what a user will receive when signing up. 
 
-  * Description text will be unique to each mailing list and should clearly set expectations for what a user will receive as a result of signing up. Email address field should always be marked required.
+  * **Description:** Briefly clarify what kind of information will be in the emails with a focus on the value users will receive from the emails. 
 
-  * Use standard helper text within form field: “john@example.com” and standard privacy policy text before the button.
+  * **Form field:** Include an "Email address" field label, use "mail@example.com" helper text, and set the form field as required. 
 
-  * Use standard button text: “Sign up”
+  * **Signup button:** Use standard "Sign up" button text. 
+
+  * **Privacy policy link:** Use standard "See Privacy Act statement" text.
 eyebrow: Forms
 status: Released
-description: Email sign-ups allow users to stay engaged on a specific topic or
-  content type produced by the Bureau. They are used to add individual email
-  addresses to a specific mailing list that is relevant to the content on the
-  page or the section it is contained within.
-use_cases: ''
-behavior: >-
-  The mockups below show simultaneously how this pattern works within either a
-  sidebar or a prefooter area.
-
-
-  ### Sidebar email sign up module: Sublanding pages
-
-
-  | Above 900 px                                                                        | 601-900 px                                                                                | Below 601 px                                                                                 |
-
-  | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-
-  | ![Sublanding page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg) | ![Breakpoints 900 - 601](/design-system/images/uploads/emailsignup_behavior_mockup_3.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg) |
-
-
-  ### Sidebar email sign up module: Browse pages
-
-
-  Browse pages do not have a sidebar. The sidebar email sign up module appears in the prefooter at the bottom of the page.
-
-
-  | Above 600 px                                                                    | Below 601 px                                                                                 |
-
-  | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-
-  | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg) |
-accessibility: ''
+description: Email signups forms allow users to stay engaged on a specific topic
+  or content type. They are used to add individual email addresses to a specific
+  mailing list that is relevant to the content on the page or the section it is
+  contained within.
+use_cases: ""
+behavior: ""
+accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

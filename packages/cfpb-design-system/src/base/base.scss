@@ -44,6 +44,12 @@ input[type='date'] {
   }
 }
 
+// Globally remove inset border style from HR elements.
+hr {
+  border: none;
+  border-top: 1px solid var(--gray-40);
+}
+
 strong,
 b {
   font-weight: 600;

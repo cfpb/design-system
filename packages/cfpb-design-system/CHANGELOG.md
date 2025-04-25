@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.7.1](https://github.com/cfpb/design-system/compare/v3.7.0..3.7.1) - April 18, 2025
+## [3.8.0](https://github.com/cfpb/design-system/compare/v3.7.1..3.8.0) - April 25, 2025
+
+### PRs in this release
+
+- PR #[2196](https://github.com/cfpb/design-system/pull/2196): Globally remove inset border style from HR elements - Ans
+- PR #[2194](https://github.com/cfpb/design-system/pull/2194): Convert notifications to use flexbox for layout - Ans
+
+### General
+
+- Globally remove inset border style from HR elements - ([136a5a1](https://github.com/cfpb/design-system/commit/136a5a15837883a7f41569530e7992773794c854)) - Ans
+- Convert notifications to use flexbox for layout - ([9c424e8](https://github.com/cfpb/design-system/commit/9c424e8dd31dcedaeb782a84a8e3e5e77b66da46)) - Ans
+
+## [3.7.1](https://github.com/cfpb/design-system/compare/v3.7.0..v3.7.1) - April 18, 2025
 
 ### PRs in this release
 

@@ -84,15 +84,13 @@ guidelines: >-
   #### Sidebar placement
 
 
-  The most common placement for the email signup form is in the sidebar. This placement is possible on Learn and Sublanding pages. Because Browse pages do not have a sidebar, the email signup form can be placed in the prefooter at the bottom of the page.
+  The most common placement for the email signup form is in the sidebar. This placement is possible on [Learn](https://cfpb.github.io/design-system/pages/learn-pages) and [Sublanding](https://cfpb.github.io/design-system/pages/sublanding-pages) pages. Because [Browse](https://cfpb.github.io/design-system/pages/browse-pages) pages do not have a sidebar, the email signup form can be placed in the prefooter at the bottom of the page.
 
 
-  #### 
-
-  Inset placement
+  #### Inset placement
 
 
-  An inset email signup form appears in the main content area of a page and is possible on Learn and Sublanding pages. Consider using an inset email signup form when the email call to action (CTA) is more important to the purpose of the page than the sidebar or prefooter placement reflects. When using an inset email signup form, ensure its placement on the page does not interfere with the primary page goal. Users respond better to follow-on requests that happen after their primary goal has been met.
+  An inset email signup form appears in the main content area of a page and is possible on [Learn](https://cfpb.github.io/design-system/pages/learn-pages) and [Sublanding](https://cfpb.github.io/design-system/pages/sublanding-pages) pages. Consider using an inset email signup form when the email call to action (CTA) is more important to the purpose of the page than the sidebar or prefooter placement reflects. When using an inset email signup form, ensure its placement on the page does not interfere with the primary page goal. Users respond better to follow-on requests that happen after their primary goal has been met.
 
 
   ### Content guidelines
@@ -105,7 +103,7 @@ guidelines: >-
 
   * **Description:** Briefly clarify what kind of information will be in the emails with a focus on the value users will receive from the emails. 
 
-  * **Form field:** Include an "Email address" field label, use "mail@example.com" helper text, and set the form field as required. 
+  * **Form field:** Include an "Email address" label heading, use "mail@example.com" helper text, and set the form field as required. 
 
   * **Signup button:** Use standard "Sign up" button text. 
 

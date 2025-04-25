@@ -9,13 +9,12 @@
 
 .m-notification {
   display: none;
-  position: relative;
-  padding: $notification-padding-px;
+  padding: math.div(15px, $base-font-size-px) + rem;
   background: $notification-bg;
   border: 1px solid $notification-border;
 
   & > .cf-icon-svg {
-    position: absolute;
+    flex: none;
     fill: $notification-icon;
   }
 
@@ -63,7 +62,8 @@
   }
 
   &--visible {
-    display: block;
+    display: flex;
+    gap: math.div(5px, $base-font-size-px) + rem;
   }
 
   &__content {
@@ -72,7 +72,7 @@
 
   // Only adding left padding if an icon is present.
   .cf-icon-svg + &__content {
-    padding-left: math.div(25px, $base-font-size-px) + rem;
+    flex-grow: 1;
   }
 
   &__message {

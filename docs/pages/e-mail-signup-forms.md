@@ -36,7 +36,8 @@ variation_groups:
                   </div>
               </form>
           </div>
-        variation_description: When implemented into a side bar, the h2 includes CFPB
+        variation_description:
+          When implemented into a side bar, the h2 includes CFPB
           standard top green border.
         variation_name: Sidebar email sign up
         variation_specs: |-
@@ -76,7 +77,7 @@ variation_groups:
                   </form>
               </div>
           </div>
-        variation_implementation: ""
+        variation_implementation: ''
     variation_group_name: Types
     variation_group_description: >-
       The email sign up form is comprised of a slug heading, custom description
@@ -105,7 +106,7 @@ description: Email sign-ups allow users to stay engaged on a specific topic or
   content type produced by the Bureau. They are used to add individual email
   addresses to a specific mailing list that is relevant to the content on the
   page or the section it is contained within.
-use_cases: ""
+use_cases: ''
 behavior: >-
   The mockups below show simultaneously how this pattern works within either a
   sidebar or a prefooter area.
@@ -132,7 +133,7 @@ behavior: >-
   | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 
   | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg) |
-accessibility: ""
+accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

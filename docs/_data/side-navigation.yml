@@ -59,7 +59,7 @@ first-level:
           - heading: Forms
             nav-items:
               - page: Designing forms
-              - page: E-mail signup forms
+              - page: Email signup forms
           - heading: Navigation
             nav-items:
               - page: Filterable list control panels

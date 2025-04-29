@@ -78,7 +78,7 @@
     "postcss-replace": "2.0.1",
     "prettier": "3.5.3",
     "prop-types": "15.8.1",
-    "release-it": "18.1.2",
+    "release-it": "19.0.1",
     "sass": "1.87.0",
     "stylelint": "16.19.1",
     "stylelint-config-standard-scss": "14.0.0",

@@ -24,37 +24,33 @@ variation_groups:
 
 
           <p>Here's the <a href="#">default link style</a>. For reference, here's the <a href="#" class="hover">hover link style</a>. Train your eyes on the <a href="#" class="focus">focused link style</a>. Jump to the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
-        variation_description:
-          Inline links are regular weight and appear within the
+        variation_description: Inline links are regular weight and appear within the
           text flow. They are regular weight and are used within paragraph of
           text.
         variation_name: Inline link
-        variation_implementation:
-          'Links that appear in body text (`p`), link lists
+        variation_implementation: "Links that appear in body text (`p`), link lists
           (`li`), or definitions (`dd`) are automatically underlined. To enable
           underlines elsewhere, e.g. to underline links in a `nav` element,
-          simply add a `border-bottom-width: 1px;` to the link.'
-        variation_specs: ''
+          simply add a `border-bottom-width: 1px;` to the link."
+        variation_specs: ""
       - variation_name: Destructive link
         variation_code_snippet: |-
           <a class="a-btn a-btn--link a-btn--warning" href="#">
                Destructive link
           </a>
-        variation_description:
-          Destructive links provide a visual warning to users that
+        variation_description: Destructive links provide a visual warning to users that
           clicking them will perform a destructive action, such as clearing
           entries in a form.
-        variation_specs: ''
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Link with icon
-        variation_description:
-          When used, an icon should appear after the text it
+        variation_description: When used, an icon should appear after the text it
           represents. Each icon should be used exclusively and consistently for
           one action. The color and font-size of an icon should be the same as
           the text it represents, including state changes. Icons should never be
           underlined.
         variation_implementation: >-
-
+          
 
           * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.a-link__text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link__text`. It is important the text and icon are siblings to correctly handle underlines.
         variation_code_snippet: |-
@@ -74,8 +70,7 @@ variation_groups:
           </p>
       - variation_is_deprecated: false
         variation_name: Jump link
-        variation_description:
-          Jump links are standalone links that respond to small
+        variation_description: Jump links are standalone links that respond to small
           screens by converting to full block links that have a finger-friendly
           touch area. Reduce screen size to see these in action.
         variation_code_snippet: |-
@@ -96,7 +91,7 @@ variation_groups:
               <span class="a-link__text">Jump link with icon on left</span>
           </a></p>
       - variation_name: List link
-        variation_code_snippet: |-
+        variation_code_snippet: >-
           <ul class="m-list m-list--links">
               <li class="m-list__item">
                   <a class="a-link a-link--jump" href="#">
@@ -117,8 +112,7 @@ variation_groups:
               </li>
               <li class="m-list__item">
                   <a class="a-link a-link--jump" href="#">
-                    <span class="a-link__text">Read a report on our post-proposal qualitative testing of the new Spanish and refinance disclosures
-                    </span>
+                    <span class="a-link__text">Read a report on our post-proposal qualitative testing of the new Spanish and refinance disclosures</span>
                     {% include icons/download.svg %}
                   </a>
               </li>
@@ -139,16 +133,16 @@ variation_groups:
                   </a>
               </li>
           </ul>
-        variation_description: List links (or call-to-action links) are links
-          that highlight a users' next steps. They are medium weight and often
-          used in unordered lists.
+        variation_description: List links (or call-to-action links) are links that
+          highlight a users' next steps. They are medium weight and often used
+          in unordered lists.
         variation_implementation: Call-to-action links are used in
           [cards](https://cfpb.github.io/design-system/patterns/cards) and [info
           unit
           groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
           among other places.
-        variation_jinja_code_snippet: ''
-        variation_specs: ''
+        variation_jinja_code_snippet: ""
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Printed links
         variation_description: When a page is printed from
@@ -156,24 +150,24 @@ variation_groups:
           appear in the following style and include both the original link text
           as well as a shortened URL.
         variation_code_snippet: Here's the <a href="#">link style</a> when printed.
-        variation_code_snippet_rendered: '<p>Here''s the <a
-          href="https://consumerfinance.gov/about-us/blog"
-          style="font-weight: 500;">link style<span style="border-bottom: 1px
-          solid #ffffff; font-weight: 300;">
-          (cfpb.gov/about-us/blog)</span></a> when printed.</p>'
+        variation_code_snippet_rendered: "<p>Here's the <a
+          href=\"https://consumerfinance.gov/about-us/blog\"
+          style=\"font-weight: 500;\">link style<span style=\"border-bottom: 1px
+          solid #ffffff; font-weight: 300;\">
+          (cfpb.gov/about-us/blog)</span></a> when printed.</p>"
         variation_implementation: When a page is printed, cf.gov's [print
           stylesheet](https://github.com/cfpb/consumerfinance.gov/blob/c9637160e14da5093b43c78fc2c87fa0ba190887/cfgov/unprocessed/css/print.less)
           appends link URLs in parentheses next to their link text.
-        variation_specs: ''
-    variation_group_description: ''
-guidelines: ''
+        variation_specs: ""
+    variation_group_description: ""
+guidelines: ""
 eyebrow: Components
 title: Links
 description: Links are navigational elements that connect users to other
   locations, either on the current page or to a different page or site. In
   contrast, [buttons](/design-system/components/buttons) are used to signal
   important actions.
-use_cases: ''
+use_cases: ""
 behavior: >-
   ### Opening a link in the current tab (default)
 
@@ -200,12 +194,10 @@ accessibility: >-
   \
 
   Write the link with language clearly describing the link's destination. In situations where that's untenable, you can improve the situation for screen reader users by coding the link with the `aria-label` attribute and adding more descriptive link text, which will be read aloud by screen readers.
-related_items: >-
+related_items: |-
   * [Buttons](https://cfpb.github.io/design-system/components/buttons)
-
   * [Typography](https://cfpb.github.io/design-system/foundation/fonts)
-
   * [Iconography](https://cfpb.github.io/design-system/foundation/iconography)
 last_updated: 2019-09-17T14:52:22.684Z
-research: ''
+research: ""
 ---

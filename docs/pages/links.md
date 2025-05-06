@@ -80,7 +80,13 @@ variation_groups:
                     a-link--jump"
             href="#">
               
-              <span class="a-link__text">Jump link with icon on left</span>
+              <span class="a-link__text">Link with icon on left</span>
+          </a></p>
+          <p><a class="a-link
+                    a-link--jump"
+            href="#">
+              
+              <span class="a-link__text">Link with icon on right</span>
           </a></p>
       - variation_name: List link
         variation_code_snippet: |-

@@ -46,8 +46,7 @@ variation_groups:
           <p><a class="a-link
                     a-link--jump"
             href="#">
-          <span class="a-link__text">Jump link</span>
-              {% include icons/right.svg %}
+          <span class="a-link__text">Standalone link</span>
           </a></p>
       - variation_is_deprecated: false
         variation_name: Link with icon
@@ -76,7 +75,7 @@ variation_groups:
               </a> for further details.
           </p>
       - variation_name: List link
-        variation_code_snippet: >-
+        variation_code_snippet: |-
           <ul class="m-list m-list--links">
               <li class="m-list__item">
                   <a class="a-link a-link--jump" href="#">
@@ -86,35 +85,13 @@ variation_groups:
               <li class="m-list__item">
                   <a class="a-link a-link--jump" href="#">
                       <span class="a-link__text">List item 2</span>
-                      {% include icons/external-link.svg %}
                   </a>
               </li>
               <li class="m-list__item">
                   <a class="a-link a-link--jump" href="#">
-                    <span class="a-link__text">List item 3</span>
-                    {% include icons/right.svg %}
+                      <span class="a-link__text">List item 3</span>
                   </a>
               </li>
-              <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                    <span class="a-link__text">Read a report on our post-proposal qualitative testing of the new Spanish and refinance disclosures</span>
-                    {% include icons/download.svg %}
-                  </a>
-              </li>
-              <li class="m-list__item">
-                  <a class="a-link
-                        a-link--jump"
-                href="#">
-              <span class="a-link__text">External link jump link</span>
-                  {% include icons/external-link.svg %}
-                  {% include icons/right.svg %}
-                </a>
-              </li>
-              <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                    {% include icons/left.svg %}
-                    <span class="a-link__text">External link jump link</span>
-                      {% include icons/external-link.svg %}
                   </a>
               </li>
           </ul>

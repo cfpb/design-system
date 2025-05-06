@@ -60,8 +60,8 @@ variation_groups:
 
           * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.a-link__text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link__text`. It is important the text and icon are siblings to correctly handle underlines.
         variation_code_snippet: |-
-          <p>
-            The document icon should emphasize a link that contains a
+          <h5>Inline link with icon</h5>
+          <p>The document icon should emphasize a link that contains a
               <a class="a-link"
                 href="#">
                   <span class="a-link__text">file or document</span>
@@ -74,6 +74,14 @@ variation_groups:
                   {% include icons/external-link.svg %}
               </a> for further details.
           </p>
+
+          <h5>Standalone link with icon</h5>
+          <p><a class="a-link
+                    a-link--jump"
+            href="#">
+              
+              <span class="a-link__text">Jump link with icon on left</span>
+          </a></p>
       - variation_name: List link
         variation_code_snippet: |-
           <ul class="m-list m-list--links">

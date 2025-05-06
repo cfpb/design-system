@@ -36,11 +36,11 @@ variation_groups:
         variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Standalone link
-        variation_description: Stand-alone links appear on their own line and are often
+        variation_description: Standalone links appear on their own line and are often
           used to highlight a user's next steps. At larger screen widths they
-          are medium weight and have a dotted underline. At smaller screen sizes
-          they convert to full block links with a top and bottom dotted border
-          that have a finger-friendly touch area. Stand-alone links can be
+          are medium weight and have a dotted underline. At smaller screen
+          widths they convert to full block links with a top and bottom dotted
+          border that have a finger-friendly touch area. Standalone links can be
           paired with icons that sit to the left or the right of the link text.
         variation_code_snippet: |-
           <p><a class="a-link

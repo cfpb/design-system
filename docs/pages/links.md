@@ -75,6 +75,7 @@ variation_groups:
               </a> for further details.
           </p>
 
+
           <h5>Standalone</h5>
 
           <p>When paired with standalone links, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents. 
@@ -83,7 +84,8 @@ variation_groups:
 
           <ul class="m-list m-list--links">
               <li class="m-list__item">
-              <li class="m-list__item">
+          </br>
+
           <a class="a-link a-link--jump"
             href="#">
             {% include icons/left.svg %} <span class="a-link__text">Go back</span>       

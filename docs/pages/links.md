@@ -172,7 +172,7 @@ guidelines: ""
 eyebrow: Components
 title: Links
 description: Links are navigational elements that connect users to other
-  locations, either on the current page or to a different page or website. In
+  locations, either on the current page or to a different page or site. In
   contrast, [buttons](/design-system/components/buttons) are used to signal
   important actions.
 use_cases: ""

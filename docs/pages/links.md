@@ -61,7 +61,7 @@ variation_groups:
           <h5>Inline link</h5>
 
           <p>
-            When paired with an inline link, an icon should appear after the text it represents. The document icon should emphasize a link that contains a
+            When paired with an inline link, an icon should be placed after the text it represents. The document icon should emphasize a link that contains a
               <a class="a-link"
                 href="#">
                   <span class="a-link__text">document or file</span> {% include icons/document.svg %}
@@ -76,7 +76,7 @@ variation_groups:
 
           <h5>Standalone link</h5>
 
-          <p>When paired with standalone links, an icon usually appears after the text it represents. In certain scenarios, for example a link that takes the user back to a previous page, the icon will appear to the left of the text it represents. 
+          <p>When paired with standalone links, an icon is usually placed after the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon is placed to the left of the text it represents. 
 
           </p>
 

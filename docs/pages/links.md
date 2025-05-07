@@ -102,6 +102,7 @@ variation_groups:
            <li class="m-list__item">
                <a class="a-link a-link--jump"
             href="#">
+            <span class="a-link__text">Document or file</span> 
            {% include icons/document.svg %}
              </a>
               </li>

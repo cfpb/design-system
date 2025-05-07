@@ -67,12 +67,12 @@ variation_groups:
             When paired with an inline link, an icon should appear after the text it represents. The document icon should emphasize a link that contains a
               <a class="a-link"
                 href="#">
-                  <span class="a-link__text">document or file</span>
+                  <span class="a-link__text">document or file</span> {% include icons/document.svg %}
               </a>.
               Use the external link icon to emphasize
               <a class="a-link"
                 href="#">
-                  <span class="a-link__text">a non-CFPB webpage</span> 
+                  <span class="a-link__text">a non-CFPB webpage</span> {% include icons/external-link.svg %}
               </a> for further details.
           </p>
 

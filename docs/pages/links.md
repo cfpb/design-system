@@ -75,7 +75,6 @@ variation_groups:
               </a>.
           </p>
 
-
           <h4>Standalone</h4>
 
           <ul class="m-list m-list--links">
@@ -100,11 +99,11 @@ variation_groups:
                   </a>
               </li>
            <li class="m-list__item">
-               <a class="a-link a-link--jump"
+                  <a class="a-link a-link--jump"
             href="#">
             <span class="a-link__text">Document or file</span> 
            {% include icons/document.svg %}
-             </a>
+                 </a>
               </li>
           </ul>
       - variation_name: List link

@@ -50,7 +50,7 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: Link with icon
         variation_description: Each icon should be used exclusively and consistently for
-          one action. The color and font-size of an icon should be the same as
+          one action. The color and font size of an icon should be the same as
           the text it represents, including state changes. Icons should never be
           underlined.
         variation_implementation: >-
@@ -88,6 +88,19 @@ variation_groups:
               <li class="m-list__item">
           <a class="a-link a-link--jump"
             href="#">
+            {% include icons/left.svg %} <span class="a-link__text">Go back</span>       
+              </li>
+                  </a>
+              </li>
+           <li class="m-list__item">
+               <a class="a-link a-link--jump"
+            href="#">
+              <span class="a-link__text">Continue</span> {% include icons/right.svg %}
+             </a>
+              </li>
+              <li class="m-list__item">
+          <a class="a-link a-link--jump"
+            href="#">
             <span class="a-link__text">External link</span>        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
               </li>
                   </a>
@@ -99,18 +112,6 @@ variation_groups:
              </a>
               </li>
           </ul>
-
-          <div class="m-btn-group">
-             <button class="a-btn a-btn--link" href="#">
-                          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg><span>Go back</span>
-                
-              </button>
-              <a class="a-btn a-btn--link" href="#">
-                  <span>Continue</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
-              </a>
-          </div>
-              </li>
       - variation_name: List link
         variation_code_snippet: |-
           <ul class="m-list m-list--links">

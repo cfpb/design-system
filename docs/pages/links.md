@@ -58,10 +58,12 @@ variation_groups:
 
           * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.a-link__text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link__text`. It is important the text and icon are siblings to correctly handle underlines.
         variation_code_snippet: >-
-          <h5>Inline link</h5>
+          </br><h5>Inline</h5>
 
           <p>
-            When paired with an inline link, an icon should be placed to the right of the text it represents. The document icon is used to emphasize a link that contains a
+            When paired with an inline link, an icon should be placed to the right of the text it represents. </p>
+
+          <p>The document icon is used to emphasize a link that contains a
               <a class="a-link"
                 href="#">
                   <span class="a-link__text">document or file</span> {% include icons/document.svg %}
@@ -73,8 +75,9 @@ variation_groups:
               </a> for further details.
           </p>
 
+          </br>
 
-          <h5>Standalone link</h5>
+          <h5>Standalone</h5>
 
           <p>When paired with standalone links, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents. 
 

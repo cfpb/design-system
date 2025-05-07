@@ -82,10 +82,10 @@ variation_groups:
 
           </p>
 
-          <ul class="m-list m-list--links">
-              <li class="m-list__item">
           </br>
 
+          <ul class="m-list m-list--links">
+              <li class="m-list__item">
           <a class="a-link a-link--jump"
             href="#">
             {% include icons/left.svg %} <span class="a-link__text">Go back</span>       

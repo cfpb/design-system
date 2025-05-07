@@ -25,9 +25,10 @@ variation_groups:
 
           <p>Here's the <a href="#">default link style</a>. For reference, here's the <a href="#" class="hover">hover link style</a>. Train your eyes on the <a href="#" class="focus">focused link style</a>. Jump to the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
         variation_description: Inline links appear within a line of text or other inline
-          elements. Inline links have a dotted underline in their default state
-          and retain a consistent appearance across all screen sizes. When used
-          with inline links, an icon should appear after the text it represents.
+          elements. Inline links are styled with a dotted underline in their
+          default state and retain a consistent appearance across all screen
+          widths. When paired with inline links, an icon should appear after the
+          text it represents.
         variation_name: Inline link
         variation_implementation: "Links that appear in body text (`p`), link lists
           (`li`), or definitions (`dd`) are automatically underlined. To enable
@@ -36,12 +37,13 @@ variation_groups:
         variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Standalone link
-        variation_description: Standalone links appear on their own line and are often
-          used to highlight a user's next steps. At larger screen widths they
-          are medium weight and have a dotted underline. At smaller screen
-          widths they convert to full block links with a top and bottom dotted
-          border that have a finger-friendly touch area. Standalone links can be
-          paired with icons that sit to the left or the right of the link text.
+        variation_description: Standalone links are often used to highlight a user's
+          next steps and sit on their own line. At larger screen widths
+          standalone links are medium weight and have a dotted underline. At
+          smaller screen widths they convert to full block links with a top and
+          bottom dotted border that have a finger-friendly touch area.
+          Standalone links can be paired with icons that sit to the left or the
+          right of the link text.
         variation_code_snippet: |-
           <p><a class="a-link
                     a-link--jump"
@@ -59,35 +61,53 @@ variation_groups:
           
 
           * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.a-link__text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link__text`. It is important the text and icon are siblings to correctly handle underlines.
-        variation_code_snippet: |-
-          <h5>Inline link with icon</h5>
-          <p>The document icon should emphasize a link that contains a
+        variation_code_snippet: >-
+          <h5>Inline link</h5>
+
+          <p>
+            The document icon should emphasize a link that contains a
               <a class="a-link"
                 href="#">
-                  <span class="a-link__text">file or document</span>
-                  {% include icons/download.svg %}
+                  <span class="a-link__text">document or file</span>
               </a>.
               Use the external link icon to emphasize
               <a class="a-link"
                 href="#">
-                  <span class="a-link__text">a non-CFPB webpage</span>
-                  {% include icons/external-link.svg %}
+                  <span class="a-link__text">a non-CFPB webpage</span> 
               </a> for further details.
           </p>
 
-          <h5>Standalone link with icon</h5>
-          <p><a class="a-link
-                    a-link--jump"
+
+          <h5>Standalone link</h5>
+
+          <ul class="m-list m-list--links">
+              <li class="m-list__item">
+               <a class="a-link a-link--jump"
+            href="#"> {% include icons/arrow-left.svg %}
+              <span class="a-link__text">Go back</span>
+             </a>
+              </li>
+              <li class="m-list__item">
+            <a class="a-link a-link--jump"
             href="#">
-              
-              <span class="a-link__text">Link with icon on left</span>
-          </a></p>
-          <p><a class="a-link
-                    a-link--jump"
+              <span class="a-link__text">Continue</span> {% include icons/arrow-right.svg %}
+          </a>
+              </li>
+              <li class="m-list__item">
+          <a class="a-link a-link--jump"
             href="#">
-              
-              <span class="a-link__text">Link with icon on right</span>
-          </a></p>
+            <span class="a-link__text">External link</span> {% include icons/external-link.svg %}
+          </a>
+              </li>
+                  </a>
+              </li>
+           <li class="m-list__item">
+               <a class="a-link a-link--jump"
+            href="#">{% include icons/document.svg %}
+              <span class="a-link__text">Document or file</span>
+             </a>
+              </li>
+          </ul>
       - variation_name: List link
         variation_code_snippet: |-
           <ul class="m-list m-list--links">
@@ -152,7 +172,7 @@ guidelines: ""
 eyebrow: Components
 title: Links
 description: Links are navigational elements that connect users to other
-  locations, either on the current page or to a different page or site. In
+  locations, either on the current page or to a different page or website. In
   contrast, [buttons](/design-system/components/buttons) are used to signal
   important actions.
 use_cases: ""

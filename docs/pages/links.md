@@ -81,8 +81,6 @@ variation_groups:
 
           </p>
 
-          </br>
-
           <ul class="m-list m-list--links">
               <li class="m-list__item">
               <li class="m-list__item">

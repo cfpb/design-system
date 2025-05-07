@@ -70,11 +70,11 @@ variation_groups:
                 href="#">
                   <span class="a-link__text">document or file</span> {% include icons/document.svg %}
               </a>.
-              Use the external link icon to emphasize
+              The external icon is used to emphasize a link to a
               <a class="a-link"
                 href="#">
                   <span class="a-link__text">a non-CFPB webpage</span> {% include icons/external-link.svg %}
-              </a> for further details.
+              </a>.
           </p>
 
 

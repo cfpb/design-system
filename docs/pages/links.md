@@ -27,8 +27,7 @@ variation_groups:
         variation_description: Inline links appear within a line of text or other inline
           elements. Inline links are styled with a dotted underline in their
           default state and retain a consistent appearance across all screen
-          widths. When paired with inline links, an icon should appear after the
-          text it represents.
+          widths.
         variation_name: Inline link
         variation_implementation: "Links that appear in body text (`p`), link lists
           (`li`), or definitions (`dd`) are automatically underlined. To enable
@@ -78,6 +77,11 @@ variation_groups:
 
 
           <h5>Standalone link</h5>
+
+          <p>When paired with standalone links, an icon usually appears after the text it represents. In certain scenarios, for example a link that takes the user back to a previous page, the icon will appear to the left of the text it represents. 
+
+          </p>
+
 
           <ul class="m-list m-list--links">
               <li class="m-list__item">

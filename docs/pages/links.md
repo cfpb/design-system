@@ -75,6 +75,8 @@ variation_groups:
               </a> for further details.
           </p>
 
+          <br>
+
           </br>
 
           <h5>Standalone</h5>

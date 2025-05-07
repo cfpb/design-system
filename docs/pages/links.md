@@ -41,8 +41,6 @@ variation_groups:
           standalone links are medium weight and have a dotted underline. At
           smaller screen widths they convert to full block links with a top and
           bottom dotted border that have a finger-friendly touch area.
-          Standalone links can be paired with icons that sit to the left or the
-          right of the link text.
         variation_code_snippet: |-
           <p><a class="a-link
                     a-link--jump"

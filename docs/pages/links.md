@@ -134,10 +134,9 @@ variation_groups:
               </li>
           </ul>
         variation_description: A list link is an item in a set of two or more stacked
-          standalone links. Items in a link list are medium weight and have a
-          dotted underline in their default state at larger screen width. At
-          smaller screen sizes they convert to full block links with a top and
-          bottom dotted border.
+          standalone links. Items in a link list are medium weight and are
+          underlined at larger screen widths. At smaller screen widths, they
+          convert to full block links with a top and bottom border.
         variation_implementation: Standalone links are used in
           [cards](https://cfpb.github.io/design-system/patterns/cards) and [info
           unit

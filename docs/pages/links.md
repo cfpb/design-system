@@ -81,7 +81,7 @@ variation_groups:
 
           <p>When paired with standalone links, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents. 
 
-          <br>
+          </p>
 
           </br>
 

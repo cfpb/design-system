@@ -94,7 +94,7 @@ variation_groups:
               <li class="m-list__item">
           <a class="a-link a-link--jump"
             href="#">
-            <span class="a-link__text">External link</span>        {% include icons/external-link.svg %}
+            <span class="a-link__text">External link</span>{% include icons/external-link.svg %}
               </li>
                   </a>
               </li>

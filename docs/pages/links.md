@@ -82,14 +82,14 @@ variation_groups:
           <ul class="m-list m-list--links">
               <li class="m-list__item">
                <a class="a-link a-link--jump"
-            href="#"> {% include icons/arrow-left.svg %}
+            href="#"> {% include icons/left.svg %}
               <span class="a-link__text">Go back</span>
              </a>
               </li>
               <li class="m-list__item">
             <a class="a-link a-link--jump"
             href="#">
-              <span class="a-link__text">Continue</span> {% include icons/arrow-right.svg %}
+              <span class="a-link__text">Continue</span> {% include icons/right.svg %}
           </a>
               </li>
               <li class="m-list__item">

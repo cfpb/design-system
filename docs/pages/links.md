@@ -47,10 +47,27 @@ variation_groups:
           </a></p>
       - variation_is_deprecated: false
         variation_name: Link with icon
-        variation_description: Each icon should be used exclusively and consistently for
-          one action. The color and font size of an icon should be the same as
-          the text it represents, including state changes. Icons should never be
-          underlined.
+        variation_description: >-
+          Each icon should be used exclusively and consistently for one action.
+          The color and font size of an icon should be the same as the text it
+          represents, including state changes. Icons should never be
+          underlined.\
+
+          \
+
+          <h4>Inline</h4>\
+
+          <p>When paired with an inline link, an icon should be placed to the right of the text it represents.\
+
+          </p>\
+
+          \
+
+          <h4>Standalone</h4>\
+
+          <p>When paired with a standalone link, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents.\
+
+          </p>
         variation_implementation: >-
           
 
@@ -76,10 +93,6 @@ variation_groups:
 
 
           <h4>Standalone</h4>
-
-          <p>When paired with a standalone link, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents. 
-
-          </p>
 
           <ul class="m-list m-list--links">
               <li class="m-list__item">

@@ -36,9 +36,9 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: Standalone link
         variation_description: Standalone links sit on their own line. At larger screen
-          widths standalone links are medium weight and underlined. At smaller
-          screen widths they convert to full block links with top and bottom
-          borders that have a finger-friendly touch area.
+          widths, standalone links are medium weight and underlined. At smaller
+          screen widths, standalone links convert to full block links with top
+          and bottom borders that have a finger-friendly touch area.
         variation_code_snippet: |-
           <p><a class="a-link
                     a-link--jump"

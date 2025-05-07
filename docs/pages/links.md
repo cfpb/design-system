@@ -25,9 +25,8 @@ variation_groups:
 
           <p>Here's the <a href="#">default link style</a>. For reference, here's the <a href="#" class="hover">hover link style</a>. Train your eyes on the <a href="#" class="focus">focused link style</a>. Jump to the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
         variation_description: Inline links appear within a line of text or other inline
-          elements. Inline links are styled with a dotted underline in their
-          default state and retain a consistent appearance across all screen
-          widths.
+          elements. Inline links are underlined and retain a consistent
+          appearance across all screen widths.
         variation_name: Inline link
         variation_implementation: "Links that appear in body text (`p`), link lists
           (`li`), or definitions (`dd`) are automatically underlined. To enable
@@ -36,11 +35,10 @@ variation_groups:
         variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Standalone link
-        variation_description: Standalone links are often used to highlight a user's
-          next steps and sit on their own line. At larger screen widths
-          standalone links are medium weight and have a dotted underline. At
-          smaller screen widths they convert to full block links with a top and
-          bottom dotted border that have a finger-friendly touch area.
+        variation_description: Standalone links sit on their own line. At larger screen
+          widths standalone links are medium weight and underlined. At smaller
+          screen widths they convert to full block links with top and bottom
+          borders that have a finger-friendly touch area.
         variation_code_snippet: |-
           <p><a class="a-link
                     a-link--jump"
@@ -80,7 +78,7 @@ variation_groups:
 
           <h5>Standalone</h5>
 
-          <p>When paired with standalone links, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents. 
+          <p>When paired with a standalone link, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents. 
 
           </p>
 

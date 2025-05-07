@@ -64,7 +64,7 @@ variation_groups:
           <h4>Inline</h4>
 
           <p>The document icon is used to emphasize a link that contains a
-              <a class="a-link"
+             <a class="a-link"
                 href="#">
                   <span class="a-link__text">document or file</span> {% include icons/document.svg %}
               </a>.

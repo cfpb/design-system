@@ -58,7 +58,9 @@ variation_groups:
 
           * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.a-link__text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link__text`. It is important the text and icon are siblings to correctly handle underlines.
         variation_code_snippet: >-
-          </br><h5>Inline</h5>
+          </br>
+
+          <h5>Inline</h5>
 
           <p>
             When paired with an inline link, an icon should be placed to the right of the text it represents. </p>

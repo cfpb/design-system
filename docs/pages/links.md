@@ -52,8 +52,7 @@ variation_groups:
           </a></p>
       - variation_is_deprecated: false
         variation_name: Link with icon
-        variation_description: When used, an icon should appear after the text it
-          represents. Each icon should be used exclusively and consistently for
+        variation_description: Each icon should be used exclusively and consistently for
           one action. The color and font-size of an icon should be the same as
           the text it represents, including state changes. Icons should never be
           underlined.
@@ -65,7 +64,7 @@ variation_groups:
           <h5>Inline link</h5>
 
           <p>
-            The document icon should emphasize a link that contains a
+            When paired with an inline link, an icon should appear after the text it represents. The document icon should emphasize a link that contains a
               <a class="a-link"
                 href="#">
                   <span class="a-link__text">document or file</span>

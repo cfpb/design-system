@@ -60,12 +60,10 @@ variation_groups:
 
           <p>
             The document icon is used to emphasize a link that contains a
-                  <a class="a-link" href="#">
-                      <span class="a-link__text">file or document</span> {% include icons/document.svg %}   
+                  <a class="a-link" href="#"><span class="a-link__text">file or document</span> {% include icons/document.svg %}   
                   </a>.
             The external link icon is used to emphasize a link to a
-                  <a class="a-link" href="#">
-                      <span class="a-link__text">a non-CFPB webpage</span> {% include icons/external-link.svg %}
+                  <a class="a-link" href="#"><span class="a-link__text">a non-CFPB webpage</span> {% include icons/external-link.svg %}
                   </a>. 
           </p>
 
@@ -73,23 +71,19 @@ variation_groups:
 
           <ul class="m-list m-list--links">
               <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">{% include icons/left.svg %} 
-                      <span class="a-link__text">Go back</span>
+                  <a class="a-link a-link--jump" href="#">{% include icons/left.svg %} <span class="a-link__text">Go back</span>
                   </a>       
               </li>
               <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                      <span class="a-link__text">Continue</span> {% include icons/right.svg %}
+                  <a class="a-link a-link--jump" href="#"><span class="a-link__text">Continue</span> {% include icons/right.svg %}
                   </a>
               </li>
               <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                      <span class="a-link__text">External link</span> {% include icons/external-link.svg %}
+                  <a class="a-link a-link--jump" href="#"><span class="a-link__text">External link</span> {% include icons/external-link.svg %}
                   </a>
               </li>
               <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                      <span class="a-link__text">Document or file</span> {% include icons/document.svg %}
+                  <a class="a-link a-link--jump" href="#"><span class="a-link__text">Document or file</span> {% include icons/document.svg %}
                   </a>
               </li>
           </ul>

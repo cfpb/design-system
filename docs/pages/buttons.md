@@ -108,13 +108,16 @@ variation_groups:
               <button class="a-btn a-btn--secondary">
                 <span>Next</span>{% include icons/right.svg %}
               </button>
+          </div>
+
+          <br>
               <button class="a-btn">
                   <span>Upload file</span>{% include icons/upload.svg %}
               </button>
+          <br>
               <button class="a-btn a-btn--secondary">
                   <span>Download report</span>{% include icons/download.svg %}
                </button>
-          </div>
 
 
 

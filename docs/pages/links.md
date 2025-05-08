@@ -63,11 +63,11 @@ variation_groups:
           <p>
             The document icon should emphasize a link that contains a
                   <a class="a-link" href="#">
-                      <span class="a-link__text">file or document</span>   
+                      <span class="a-link__text">file or document</span> {% include icons/document.svg %}   
                   </a>.
             Use the external link icon to emphasize
                   <a class="a-link" href="#">
-                      <span class="a-link__text">a non-CFPB webpage</span>
+                      <span class="a-link__text">a non-CFPB webpage</span> {% include icons/external-link.svg %}
                   </a> 
             for further details.
           </p>

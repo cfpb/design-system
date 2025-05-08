@@ -79,7 +79,7 @@ variation_groups:
           was previously uploaded. Although a destructive action can be visually
           styled as a button, as shown here, we recommend using the
           [link](https://cfpb.github.io/design-system/components/links#destructive-link)
-          visual styling on cf.gov products.
+          visual styling on cf.gov products for consistency.
       - variation_is_deprecated: false
         variation_name: Full-width button (on x-small screens)
         variation_description: Reduce screen size to see this button in action.

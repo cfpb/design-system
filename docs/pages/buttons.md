@@ -77,7 +77,7 @@ variation_groups:
         variation_description: A destructive action is an action that will lead to data
           loss, for example, deleting data from a form or removing a file that
           was previously uploaded. Although a destructive action can be visually
-          styled as a button, as shown here, we recommend using the
+          styled as a button, we recommend using the
           [link](https://cfpb.github.io/design-system/components/links#destructive-link)
           visual styling on cf.gov products for consistency.
       - variation_is_deprecated: false

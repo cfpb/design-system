@@ -129,14 +129,14 @@ variation_groups:
         variation_jinja_code_snippet: ""
         variation_specs: ""
       - variation_name: Destructive action
-        variation_code_snippet: >-
-          <div class="m-btn-group">
-              <button class="a-btn">Action</button>
-              <button class="a-btn a-btn--link a-btn--warning">Destructive action</button>
-          </div>
-        variation_description: When paired with a primary action, indicate the
-          destructive action using a destructive action button link to the right
-          of the primary button.
+        variation_code_snippet: |-
+          <a class="a-btn a-btn--link a-btn--warning" href="#">
+               Destructive action link
+          </a>
+        variation_description: "A destructive action is an action that will lead to data
+          loss, for example, deleting data from a form or removing a file that
+          was previously uploaded. A destructive action can be visually styled
+          as a link or a button. "
         variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Printed links

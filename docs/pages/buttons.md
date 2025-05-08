@@ -79,8 +79,8 @@ variation_groups:
           was previously uploaded. Although a destructive action *can* be
           visually styled as
           [link](https://cfpb.github.io/design-system/components/links#destructive-link)
-          or a button, we do not currently have a use case for the destructive
-          button component on our website.
+          or a button, we do not currently use the destructive button component
+          on our website.
       - variation_is_deprecated: false
         variation_name: Full-width button (on x-small screens)
         variation_description: Reduce screen size to see this button in action.

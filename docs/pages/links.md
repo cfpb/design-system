@@ -128,7 +128,9 @@ variation_groups:
           loss, for example, deleting data from a form or removing a file that
           was previously uploaded. A destructive action can be visually styled
           as a link or a
-          [button](https://cfpb.github.io/design-system/components/buttons#destructive-button).
+          [button](https://cfpb.github.io/design-system/components/buttons#destructive-button)
+          but in cf.gov products we do not have a current use case for the
+          destructive button.
         variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Printed links

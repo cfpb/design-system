@@ -128,15 +128,16 @@ variation_groups:
           among other places.
         variation_jinja_code_snippet: ""
         variation_specs: ""
-      - variation_name: Destructive action
+      - variation_name: Destructive link
         variation_code_snippet: |-
           <a class="a-btn a-btn--link a-btn--warning" href="#">
                Destructive action link
           </a>
-        variation_description: "A destructive action is an action that will lead to data
+        variation_description: A destructive action is an action that will lead to data
           loss, for example, deleting data from a form or removing a file that
           was previously uploaded. A destructive action can be visually styled
-          as a link or a button. "
+          as a link or a
+          [button](https://cfpb.github.io/design-system/components/buttons#destructive-button).
         variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Printed links

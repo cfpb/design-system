@@ -48,8 +48,9 @@ variation_groups:
         variation_name: Link with icon
         variation_description: Each icon should be used exclusively and consistently for
           one action. An icon should appear after the text it represents. The
-          only exception is the back button, where the icon should appear before
-          the link's text. Icons should never be underlined.
+          only exception is a link that takes a user to a previous step or page,
+          where the icon should appear before the link's text. Icons should
+          never be underlined.
         variation_implementation: >-
           
 

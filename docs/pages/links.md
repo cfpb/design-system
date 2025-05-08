@@ -64,8 +64,8 @@ variation_groups:
                   </a>.
             The external link icon is used to emphasize a link to a
                   <a class="a-link" href="#">
-                      <span class="a-link__text">a non-CFPB webpage</span>. {% include icons/external-link.svg %}
-                  </a> 
+                      <span class="a-link__text">a non-CFPB webpage</span> {% include icons/external-link.svg %}
+                  </a>. 
           </p>
 
           <h4>Standalone</h4>

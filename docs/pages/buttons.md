@@ -99,7 +99,7 @@ variation_groups:
         variation_description: An icon should appear after the text it represents. The
           only exception is the back button, in which the icon should appear
           before the button’s text. Each icon should be used exclusively and
-          consistently for one action. Icons should never be underlined.
+          consistently for one action.
         variation_code_snippet: >-
           <div class="m-btn-group">
               <button class="a-btn a-btn--secondary">{% include icons/left.svg %}

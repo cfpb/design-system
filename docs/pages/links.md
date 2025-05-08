@@ -46,13 +46,10 @@ variation_groups:
           </p>
       - variation_is_deprecated: false
         variation_name: Link with icon
-        variation_description: >-
-          Each icon should be used exclusively and consistently for one action.
-          The color and font size of an icon should be the same as the text it
-          represents, including state changes. Icons should never be underlined.
-
-
-          When paired with an inline link, an icon should be placed to the right of the text it represents. When paired with a standalone link, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents.
+        variation_description: Each icon should be used exclusively and consistently for
+          one action. An icon should appear after the text it represents. The
+          only exception is the back button, where the icon should appear before
+          the link's text. Icons should never be underlined.
         variation_implementation: >-
           
 

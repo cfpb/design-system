@@ -58,15 +58,14 @@ variation_groups:
           <h4>Inline</h4>
 
           <p>
-            The document icon should emphasize a link that contains a
+            The document icon is used to emphasize a link that contains a
                   <a class="a-link" href="#">
                       <span class="a-link__text">file or document</span> {% include icons/document.svg %}   
                   </a>.
-            Use the external link icon to emphasize
+            The external link icon is used to emphasize a link to a
                   <a class="a-link" href="#">
-                      <span class="a-link__text">a non-CFPB webpage</span> {% include icons/external-link.svg %}
+                      <span class="a-link__text">a non-CFPB webpage</span>. {% include icons/external-link.svg %}
                   </a> 
-            for further details.
           </p>
 
           <h4>Standalone</h4>

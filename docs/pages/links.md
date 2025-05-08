@@ -53,9 +53,7 @@ variation_groups:
           represents, including state changes. Icons should never be underlined.
 
 
-          <p>When paired with an inline link, an icon should be placed to the right of the text it represents. When paired with a standalone link, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents.
-
-          </p>
+          When paired with an inline link, an icon should be placed to the right of the text it represents. When paired with a standalone link, an icon should usually be placed to the right of the text it represents. In certain specific scenarios, for example a link that takes the user back to a previous page, the icon should be placed to the left of the text it represents.
         variation_implementation: >-
           
 
@@ -63,46 +61,34 @@ variation_groups:
         variation_code_snippet: >-
           <h4>Inline</h4>
 
-          <p>The document icon is used to emphasize a link that contains a
-             <a class="a-link"
-                href="#">
-                  <span class="a-link__text">document or file</span> {% include icons/document.svg %}
-              </a>.
-              The external link icon is used to emphasize a link that takes a user to 
-              <a class="a-link"
-                href="#">
-                  <span class="a-link__text">a non-CFPB webpage</span> {% include icons/external-link.svg %}
-              </a>.
+          <p>
+            The document icon should emphasize a link that contains a
+                  <a class="a-link" href="#"><span class="a-link__text">file or document</span>   
+                  </a>.
+            Use the external link icon to emphasize
+                  <a class="a-link" href="#"><span class="a-link__text">a non-CFPB webpage</span>
+                  </a> 
+            for further details.
           </p>
 
           <h4>Standalone</h4>
 
           <ul class="m-list m-list--links">
               <li class="m-list__item">
-          <a class="a-link a-link--jump"
-            href="#">
-            {% include icons/left.svg %} <span class="a-link__text">Go back</span>       
-              </li>
-                  </a>
-              </li>
-           <li class="m-list__item">
-               <a class="a-link a-link--jump"
-            href="#">
-              <span class="a-link__text">Continue</span> {% include icons/right.svg %}
-             </a>
+                  <a class="a-link a-link--jump" href="#">{% include icons/left.svg %} <span class="a-link__text">Go back</span>
+                  </a>       
               </li>
               <li class="m-list__item">
-          <a class="a-link a-link--jump"
-            href="#">
-            <span class="a-link__text">External link</span> {% include icons/external-link.svg %}
-              </li>
+                  <a class="a-link a-link--jump" href="#"><span class="a-link__text">Continue</span> {% include icons/right.svg %}
                   </a>
               </li>
-           <li class="m-list__item">
-                  <a class="a-link a-link--jump"
-            href="#">
-            <span class="a-link__text">Document or file</span> {% include icons/document.svg %}
-                 </a>
+              <li class="m-list__item">
+                  <a class="a-link a-link--jump" href="#"><span class="a-link__text">External link</span> {% include icons/external-link.svg %}
+                  </a>
+              </li>
+              <li class="m-list__item">
+                  <a class="a-link a-link--jump" href="#"><span class="a-link__text">Document or file</span> {% include icons/document.svg %}
+                  </a>
               </li>
           </ul>
       - variation_name: List link

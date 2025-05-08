@@ -131,7 +131,7 @@ variation_groups:
       - variation_name: Destructive link
         variation_code_snippet: |-
           <a class="a-btn a-btn--link a-btn--warning" href="#">
-               Destructive action link
+               Destructive link
           </a>
         variation_description: A destructive action is an action that will lead to data
           loss, for example, deleting data from a form or removing a file that

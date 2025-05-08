@@ -74,10 +74,10 @@ variation_groups:
           </div>
         variation_name: Destructive button
         variation_specs: ""
-        variation_description: Although a destructive action can be visually styled as a
-          button, we recommend using the [destructive
+        variation_description: Although a destructive action can be styled as a button,
+          we recommend using the [destructive
           link](https://cfpb.github.io/design-system/components/links#destructive-link)
-          styling for consistency with other cf.gov products.
+          style for consistency with other cf.gov products.
       - variation_is_deprecated: false
         variation_name: Full-width button (on x-small screens)
         variation_description: Reduce screen size to see this button in action.

@@ -100,7 +100,7 @@ variation_groups:
           only exception is the back button, in which the icon should appear
           before the button’s text. Each icon should be used exclusively and
           consistently for one action. Icons should never be underlined.
-        variation_code_snippet: >+
+        variation_code_snippet: >-
           <div class="m-btn-group">
               <button class="a-btn a-btn--secondary">{% include icons/left.svg %}
                 <span>Previous</span>
@@ -118,9 +118,6 @@ variation_groups:
               <button class="a-btn a-btn--secondary">
                   <span>Download report</span>{% include icons/download.svg %}
                </button>
-
-
-
       - variation_is_deprecated: false
         variation_name: Button with animated icon
         variation_code_snippet: |-

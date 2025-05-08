@@ -39,12 +39,11 @@ variation_groups:
           widths, standalone links are medium weight and underlined. At smaller
           screen widths, standalone links convert to full block links with top
           and bottom borders that have a finger-friendly touch area.
-        variation_code_snippet: |-
-          <p><a class="a-link
-                    a-link--jump"
-            href="#">
-          <span class="a-link__text">Standalone link</span>
-          </a></p>
+        variation_code_snippet: >-
+          <p>
+              <a class="a-link a-link--jump" href="#"><span class="a-link__text">Standalone link</span>
+              </a>
+          </p>
       - variation_is_deprecated: false
         variation_name: Link with icon
         variation_description: >-
@@ -63,10 +62,12 @@ variation_groups:
 
           <p>
             The document icon should emphasize a link that contains a
-                  <a class="a-link" href="#"><span class="a-link__text">file or document</span>   
+                  <a class="a-link" href="#">
+                      <span class="a-link__text">file or document</span>   
                   </a>.
             Use the external link icon to emphasize
-                  <a class="a-link" href="#"><span class="a-link__text">a non-CFPB webpage</span>
+                  <a class="a-link" href="#">
+                      <span class="a-link__text">a non-CFPB webpage</span>
                   </a> 
             for further details.
           </p>
@@ -75,19 +76,23 @@ variation_groups:
 
           <ul class="m-list m-list--links">
               <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">{% include icons/left.svg %} <span class="a-link__text">Go back</span>
+                  <a class="a-link a-link--jump" href="#">{% include icons/left.svg %} 
+                      <span class="a-link__text">Go back</span>
                   </a>       
               </li>
               <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#"><span class="a-link__text">Continue</span> {% include icons/right.svg %}
+                  <a class="a-link a-link--jump" href="#">
+                      <span class="a-link__text">Continue</span> {% include icons/right.svg %}
                   </a>
               </li>
               <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#"><span class="a-link__text">External link</span> {% include icons/external-link.svg %}
+                  <a class="a-link a-link--jump" href="#">
+                      <span class="a-link__text">External link</span> {% include icons/external-link.svg %}
                   </a>
               </li>
               <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#"><span class="a-link__text">Document or file</span> {% include icons/document.svg %}
+                  <a class="a-link a-link--jump" href="#">
+                      <span class="a-link__text">Document or file</span> {% include icons/document.svg %}
                   </a>
               </li>
           </ul>

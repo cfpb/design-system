@@ -100,36 +100,24 @@ variation_groups:
           only exception is the back button, in which the icon should appear
           before the button’s text. Each icon should be used exclusively and
           consistently for one action. Icons should never be underlined.
-        variation_code_snippet: |-
+        variation_code_snippet: >+
           <div class="m-btn-group">
-            <button class="a-btn">
-                {% include icons/left.svg %}
-                <span>Back</span>
-            </button>
+              <button class="a-btn a-btn--secondary">{% include icons/left.svg %}
+                <span>Previous</span>
+              </button>
+              <button class="a-btn a-btn--secondary">
+                <span>Next</span>{% include icons/right.svg %}
+              </button>
+              <button class="a-btn">
+                  <span>Upload file</span>{% include icons/upload.svg %}
+              </button>
+              <button class="a-btn a-btn--secondary">
+                  <span>Download report</span>{% include icons/download.svg %}
+               </button>
+          </div>
 
-            <button class="a-btn">
-                <span>Next</span>
-                {% include icons/right.svg %}
-            </button>
 
-            <button class="a-btn a-btn--secondary">
-                {% include icons/left.svg %}
-                <span>Back</span>
-            </button>
 
-            <button class="a-btn a-btn--secondary">
-                <span>Next</span>
-                {% include icons/right.svg %}
-            </button>
-            <button class="a-btn a-btn--disabled">
-                {% include icons/left.svg %}
-                <span>Back</span>
-            </button>
-
-            <button class="a-btn" disabled>
-                <span>Next</span>
-                {% include icons/right.svg %}
-            </button>
       - variation_is_deprecated: false
         variation_name: Button with animated icon
         variation_code_snippet: |-

@@ -3,14 +3,11 @@ title: Buttons
 layout: variation
 section: components
 status: Released
-description: >-
-  Buttons are UI elements that signal actions. They should be used sparingly;
-  each additional button on a page reduces the visual prominence of a call to
-  action. In contrast,
+description: Buttons are interactive elements that signal actions. They should
+  be used sparingly; each additional button on a page reduces the visual
+  prominence of a call to action. In contrast,
   [links](https://cfpb.github.io/design-system/components/links) should lead
   users to another page or further information.
-
-  Buttons that appear in a group together with other buttons should be wrapped in a container with the `m-btn-group` class to properly space the buttons across screen sizes.
 variation_groups:
   - variation_group_name: Types
     variation_group_description: ""
@@ -80,25 +77,11 @@ variation_groups:
           link](https://cfpb.github.io/design-system/components/links#destructive-link)
           style for consistency across cf.gov products.
       - variation_is_deprecated: false
-        variation_name: Full-width button (on x-small screens)
-        variation_description: Reduce screen size to see this button in action.
-        variation_code_snippet: >-
-          <div class="m-btn-group">
-            <button class="a-btn a-btn--full-on-xs" title="Default state">Default
-            state</button>
-
-            <button class="a-btn a-btn--full-on-xs hover" title="Hover state">Hover state</button>
-
-            <button class="a-btn a-btn--full-on-xs focus" title="Focus state">Focus state</button>
-
-            <button class="a-btn a-btn--full-on-xs active" title="Active state">Active state</button>
-          </div>
-      - variation_is_deprecated: false
         variation_name: Button with icon
         variation_description: An icon should appear after the text it represents. The
-          only exception is the back button, in which the icon should appear
-          before the button’s text. Each icon should be used exclusively and
-          consistently for one action.
+          only exception is the back button, where the icon appears before the
+          button’s text. Each icon should be used exclusively and consistently
+          for one action.
         variation_code_snippet: >-
           <div class="m-btn-group">
               <button class="a-btn a-btn--secondary">{% include icons/left.svg %}
@@ -129,6 +112,42 @@ variation_groups:
           they are attempting to perform is functioning as intended.
 
           The icon can be hidden when the action is complete by adding the `a-btn--hide-icon` class to the button.
+      - variation_is_deprecated: false
+        variation_name: Button group
+        variation_description: A button group is an element that combines multiple
+          buttons into a single unit, often used to represent related actions or
+          options. The `m-btn-group` class wrapped around a group of buttons
+          will properly space the buttons across screen sizes.
+        variation_code_snippet: |-
+          <div class="m-btn-group">
+           <button class="a-btn a-btn--secondary">{% include icons/left.svg %}
+                <span>Go back</span>
+              </button>
+              <button class="a-btn a-btn">
+                <span>Continue</span>{% include icons/right.svg %}
+              </button>
+          </div>
+          <br>
+          <div class="m-btn-group">
+              <a class="a-btn" href="#">Submit</a>
+          <a class="a-btn a-btn--link a-btn--warning" href="#">
+               Clear form
+          </a>
+          </div>
+      - variation_is_deprecated: false
+        variation_name: Full-width button (on x-small screens)
+        variation_description: Reduce screen size to see this button in action.
+        variation_code_snippet: >-
+          <div class="m-btn-group">
+            <button class="a-btn a-btn--full-on-xs" title="Default state">Default
+            state</button>
+
+            <button class="a-btn a-btn--full-on-xs hover" title="Hover state">Hover state</button>
+
+            <button class="a-btn a-btn--full-on-xs focus" title="Focus state">Focus state</button>
+
+            <button class="a-btn a-btn--full-on-xs active" title="Active state">Active state</button>
+          </div>
       - variation_is_deprecated: false
         variation_name: Button link
         variation_code_snippet: >-

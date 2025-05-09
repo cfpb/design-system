@@ -22,7 +22,7 @@
     }
   }
 
-  @include respond-to-print {
+  @media print {
     // Hide the interactive expandable cues when printing
     &__header[aria-expanded='true'] &__cue-close,
     &__header[aria-expanded='false'] &__cue-open {

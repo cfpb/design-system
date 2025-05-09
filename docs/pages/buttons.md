@@ -116,10 +116,10 @@ variation_groups:
         variation_name: Button group
         variation_description: A button group is an element that combines multiple
           buttons into a single unit, often used to represent related actions or
-          options.The `m-btn-group` class wrapped around a group of buttons will
-          properly space the buttons across screen sizes. Sometimes a button
-          group will include both a button styled as a button and a button
-          styled as a link.
+          options. The `m-btn-group` class wrapped around a group of buttons
+          will properly space the buttons across screen sizes. Sometimes a
+          button group will include both a button styled as a button and a
+          button styled as a link.
         variation_code_snippet: |-
           <div class="m-btn-group">
            <button class="a-btn a-btn--secondary">{% include icons/left.svg %}

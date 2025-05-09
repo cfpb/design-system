@@ -660,7 +660,7 @@ description: >-
 
 
   <a class="a-link"
-     href="<https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/font/CFPBIcons-Regular.otf>">
+     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/font/CFPBIcons-Regular.otf">
       <span class="a-link__text">Download font</span>
       {% include icons/download.svg %}
   </a>

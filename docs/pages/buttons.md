@@ -136,6 +136,14 @@ variation_groups:
                Clear form
           </a>
           </div>
+          <br>
+          <div class="m-btn-group">
+           <button class="a-btn a-btn">
+                   <span>Download report</span>{% include icons/download.svg %}
+              </button>
+          <a class="a-btn a-btn--link a-btn" href="#">
+          <span>Upload new file</span>{% include icons/upload.svg %}
+              </button>
       - variation_is_deprecated: false
         variation_name: Full-width button (on x-small screens)
         variation_description: Reduce screen size to see this button in action.

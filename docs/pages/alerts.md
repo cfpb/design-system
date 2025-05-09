@@ -59,8 +59,7 @@ variation_groups:
                       <li class="m-list__item">
                           <a class="a-link a-link--jump" href="/">
                             <span class="a-link__text">
-                              This is an external link
-                            </span>
+                              This is an external link</span>
            {% include icons/external-link.svg %}
                           </a>
                       </li>
@@ -70,7 +69,7 @@ variation_groups:
         variation_implementation: Alerts are hidden by default; you can toggle their
           visibility by adding or removing the `m-notification--visible` class
           to the base element.
-      - variation_code_snippet: >-
+      - variation_code_snippet: |-
           <div class="m-notification
                       m-notification--visible
                       m-notification--success">
@@ -84,8 +83,8 @@ variation_groups:
                       <li class="m-list__item">
                           <a class="a-link a-link--jump" href="/">
                             <span class="a-link__text">
-                              This is an external link {% include icons/external-link.svg %}
-                            </span>
+                                This is an external link</span>
+           {% include icons/external-link.svg %}
                           </a>
                       </li>
                   </ul>
@@ -96,7 +95,7 @@ variation_groups:
         variation_implementation: ""
         variation_name: Success
         variation_specs: ""
-      - variation_code_snippet: >-
+      - variation_code_snippet: |-
           <div class="m-notification
                       m-notification--visible
                       m-notification--warning">
@@ -110,8 +109,8 @@ variation_groups:
                       <li class="m-list__item">
                           <a class="a-link a-link--jump" href="/">
                             <span class="a-link__text">
-                              This is an external link {% include icons/external-link.svg %}
-                            </span>
+                              This is an external link</span>
+           {% include icons/external-link.svg %}
                           </a>
                       </li>
                   </ul>
@@ -126,7 +125,7 @@ variation_groups:
         variation_implementation: ""
         variation_name: Warning
         variation_specs: ""
-      - variation_code_snippet: >-
+      - variation_code_snippet: |-
           <div class="m-notification
                       m-notification--visible
                       m-notification--error">
@@ -140,8 +139,8 @@ variation_groups:
                       <li class="m-list__item">
                           <a class="a-link a-link--jump" href="/">
                             <span class="a-link__text">
-                              This is an external link {% include icons/external-link.svg %}
-                            </span>
+                               This is an external link</span>
+           {% include icons/external-link.svg %}
                           </a>
                       </li>
                   </ul>

@@ -117,9 +117,7 @@ variation_groups:
         variation_description: A button group is an element that combines multiple
           buttons into a single unit, often used to represent related actions or
           options. The `m-btn-group` class wrapped around a group of buttons
-          will properly space the buttons across screen sizes. Sometimes a
-          button group will include both a button styled as a button and a
-          button styled as a link.
+          will properly space the buttons across screen sizes.
         variation_code_snippet: |-
           <div class="m-btn-group">
            <button class="a-btn a-btn--secondary">{% include icons/left.svg %}
@@ -135,15 +133,6 @@ variation_groups:
           <a class="a-btn a-btn--link a-btn--warning" href="#">
                Clear form
           </a>
-          </div>
-          <br>
-          <div class="m-btn-group">
-           <button class="a-btn a-btn">
-                   <span>Download report</span>{% include icons/download.svg %}
-              </button>
-          <a class="a-btn a-btn--link a-btn" href="#">
-          <span>Upload new file</span>{% include icons/upload.svg %}
-              </button>
           </div>
       - variation_is_deprecated: false
         variation_name: Full-width button (on x-small screens)

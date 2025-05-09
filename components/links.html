@@ -353,7 +353,7 @@
 
             
             <div class="m-variation__description">
-                <p>Inline links are regular weight and appear within the text flow. They are regular weight and are used within paragraph of text.</p>
+                <p>Inline links appear within a line of text or other inline elements. Inline links are underlined and retain a consistent appearance across all screen widths.</p>
 
             </div>
             
@@ -385,15 +385,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-inline-link-inline-links-are-reg-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-inline-link-inline-links-are-reg-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-inline-link-inline-links-appear--1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-inline-link-inline-links-appear--1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-inline-link-inline-links-are-reg-1">
+            <div class="m-tabs u-hidden" id="details-inline-link-inline-links-appear--1">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-inline-link-inline-links-are-reg-html-code-snippet-1">
+                        <a class="m-tabs__tab" href="#details-inline-link-inline-links-appear--html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -401,7 +401,7 @@
                     
                     
                     <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#details-inline-link-inline-links-are-reg-implementation-1">
+                        <a class="m-tabs__tab" href="#details-inline-link-inline-links-appear--implementation-1">
                             Implementation
                         </a>
                     </li>
@@ -411,7 +411,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-inline-link-inline-links-are-reg-html-code-snippet-1">
+                <section class="m-tabs__panel" id="details-inline-link-inline-links-appear--html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -438,7 +438,7 @@
 
                 <!-- Implementation details -->
                 
-                <section class="m-tabs__panel" id="details-inline-link-inline-links-are-reg-implementation-1">
+                <section class="m-tabs__panel" id="details-inline-link-inline-links-appear--implementation-1">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
@@ -467,7 +467,7 @@
             
             <div class="m-variation__name">
                 <h3>
-                    Destructive link
+                    Standalone link
                     
                 </h3>
             </div>
@@ -475,7 +475,7 @@
 
             
             <div class="m-variation__description">
-                <p>Destructive links provide a visual warning to users that clicking them will perform a destructive action, such as clearing entries in a form.</p>
+                <p>Standalone links sit on their own line. At larger screen widths, standalone links are medium weight and underlined. At smaller screen widths, standalone links convert to full block links with top and bottom borders that have a finger-friendly touch area.</p>
 
             </div>
             
@@ -483,9 +483,10 @@
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <a class="a-btn a-btn--link a-btn--warning" href="#">
-     Destructive link
-</a>
+                <p>
+    <a class="a-link a-link--jump" href="#"><span class="a-link__text">Standalone link</span>
+    </a>
+</p>
             </div>
             
 
@@ -497,15 +498,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-destructive-link-destructive-lin-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-destructive-link-destructive-lin-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-standalone-link-standalone-links-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-standalone-link-standalone-links-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-destructive-link-destructive-lin-2">
+            <div class="m-tabs u-hidden" id="details-standalone-link-standalone-links-2">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-destructive-link-destructive-lin-html-code-snippet-2">
+                        <a class="m-tabs__tab" href="#details-standalone-link-standalone-links-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -517,13 +518,14 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-destructive-link-destructive-lin-html-code-snippet-2">
+                <section class="m-tabs__panel" id="details-standalone-link-standalone-links-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;a class="a-btn a-btn--link a-btn--warning" href="#"&gt;
-     Destructive link
-&lt;/a&gt;</code></pre>
+                            <pre><code class="language-html">&lt;p&gt;
+    &lt;a class="a-link a-link--jump" href="#"&gt;&lt;span class="a-link__text"&gt;Standalone link&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/p&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -561,7 +563,7 @@
 
             
             <div class="m-variation__description">
-                <p>When used, an icon should appear after the text it represents. Each icon should be used exclusively and consistently for one action. The color and font-size of an icon should be the same as the text it represents, including state changes. Icons should never be underlined.</p>
+                <p>Each icon should be used exclusively and consistently for one action. An icon should appear after the text it represents. The only exception is a link that takes a user to a previous step or page, where the icon should appear before the link’s text. Icons should never be underlined.</p>
 
             </div>
             
@@ -569,18 +571,34 @@
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <p>
-  The document icon should emphasize a link that contains a
-    <a class="a-link" href="#">
-        <span class="a-link__text">file or document</span>
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg>
-    </a>.
-    Use the external link icon to emphasize
-    <a class="a-link" href="#">
-        <span class="a-link__text">a non-CFPB webpage</span>
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
-    </a> for further details.
+                <h4>Inline</h4>
+<p>
+  The document icon is used to emphasize a link that contains a
+        <a class="a-link" href="#"><span class="a-link__text">file or document</span> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--document" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z"></path></svg>   
+        </a>.
+  The external link icon is used to emphasize a link to a
+        <a class="a-link" href="#"><span class="a-link__text">non-CFPB webpage</span> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
+        </a>. 
 </p>
+<h4>Standalone</h4>
+<ul class="m-list m-list--links">
+    <li class="m-list__item">
+        <a class="a-link a-link--jump" href="#"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg> <span class="a-link__text">Go back</span>
+        </a>       
+    </li>
+    <li class="m-list__item">
+        <a class="a-link a-link--jump" href="#"><span class="a-link__text">Continue</span> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
+        </a>
+    </li>
+    <li class="m-list__item">
+        <a class="a-link a-link--jump" href="#"><span class="a-link__text">External link</span> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
+        </a>
+    </li>
+    <li class="m-list__item">
+        <a class="a-link a-link--jump" href="#"><span class="a-link__text">Document or file</span> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--document" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z"></path></svg>
+        </a>
+    </li>
+</ul>
             </div>
             
 
@@ -592,15 +610,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-link-with-icon-when-used-an-icon-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-link-with-icon-when-used-an-icon-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-link-with-icon-each-icon-should--3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-link-with-icon-each-icon-should--3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-link-with-icon-when-used-an-icon-3">
+            <div class="m-tabs u-hidden" id="details-link-with-icon-each-icon-should--3">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-link-with-icon-when-used-an-icon-html-code-snippet-3">
+                        <a class="m-tabs__tab" href="#details-link-with-icon-each-icon-should--html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -608,7 +626,7 @@
                     
                     
                     <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#details-link-with-icon-when-used-an-icon-implementation-3">
+                        <a class="m-tabs__tab" href="#details-link-with-icon-each-icon-should--implementation-3">
                             Implementation
                         </a>
                     </li>
@@ -618,24 +636,38 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-link-with-icon-when-used-an-icon-html-code-snippet-3">
+                <section class="m-tabs__panel" id="details-link-with-icon-each-icon-should--html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;p&gt;
-  The document icon should emphasize a link that contains a
-    &lt;a class="a-link"
-      href="#"&gt;
-        &lt;span class="a-link__text"&gt;file or document&lt;/span&gt;
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg>
-    &lt;/a&gt;.
-    Use the external link icon to emphasize
-    &lt;a class="a-link"
-      href="#"&gt;
-        &lt;span class="a-link__text"&gt;a non-CFPB webpage&lt;/span&gt;
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
-    &lt;/a&gt; for further details.
-&lt;/p&gt;</code></pre>
+                            <pre><code class="language-html">&lt;h4&gt;Inline&lt;/h4&gt;
+&lt;p&gt;
+  The document icon is used to emphasize a link that contains a
+        &lt;a class="a-link" href="#"&gt;&lt;span class="a-link__text"&gt;file or document&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--document" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z"></path></svg>   
+        &lt;/a&gt;.
+  The external link icon is used to emphasize a link to a
+        &lt;a class="a-link" href="#"&gt;&lt;span class="a-link__text"&gt;non-CFPB webpage&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
+        &lt;/a&gt;. 
+&lt;/p&gt;
+&lt;h4&gt;Standalone&lt;/h4&gt;
+&lt;ul class="m-list m-list--links"&gt;
+    &lt;li class="m-list__item"&gt;
+        &lt;a class="a-link a-link--jump" href="#"&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg> &lt;span class="a-link__text"&gt;Go back&lt;/span&gt;
+        &lt;/a&gt;       
+    &lt;/li&gt;
+    &lt;li class="m-list__item"&gt;
+        &lt;a class="a-link a-link--jump" href="#"&gt;&lt;span class="a-link__text"&gt;Continue&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="m-list__item"&gt;
+        &lt;a class="a-link a-link--jump" href="#"&gt;&lt;span class="a-link__text"&gt;External link&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="m-list__item"&gt;
+        &lt;a class="a-link a-link--jump" href="#"&gt;&lt;span class="a-link__text"&gt;Document or file&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--document" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z"></path></svg>
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -646,7 +678,7 @@
 
                 <!-- Implementation details -->
                 
-                <section class="m-tabs__panel" id="details-link-with-icon-when-used-an-icon-implementation-3">
+                <section class="m-tabs__panel" id="details-link-with-icon-each-icon-should--implementation-3">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
@@ -677,188 +709,6 @@
             
             <div class="m-variation__name">
                 <h3>
-                    Jump link
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>Jump links are standalone links that respond to small screens by converting to full block links that have a finger-friendly touch area. Reduce screen size to see these in action.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live__code">
-                <p><a class="a-link
-          a-link--jump" href="#">
-<span class="a-link__text">Jump link</span>
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
-</a></p>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle__code">
-                <button href="#details-jump-link-jump-links-are-standal-4" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-jump-link-jump-links-are-standal-4" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-jump-link-jump-links-are-standal-4">
-                <ul class="m-tabs__list">
-                    
-                    <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-jump-link-jump-links-are-standal-html-code-snippet-4">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs__panel" id="details-jump-link-jump-links-are-standal-html-code-snippet-4">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;p&gt;&lt;a class="a-link
-          a-link--jump"
-  href="#"&gt;
-&lt;span class="a-link__text"&gt;Jump link&lt;/span&gt;
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
-&lt;/a&gt;&lt;/p&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Jump link with icon on left
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>Jump links can also have icons before the text, like icon links.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live__code">
-                <p><a class="a-link
-          a-link--jump" href="#">
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg>
-    <span class="a-link__text">Jump link with icon on left</span>
-</a></p>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle__code">
-                <button href="#details-jump-link-with-icon-on-left-jump-5" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-jump-link-with-icon-on-left-jump-5" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-jump-link-with-icon-on-left-jump-5">
-                <ul class="m-tabs__list">
-                    
-                    <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-jump-link-with-icon-on-left-jump-html-code-snippet-5">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs__panel" id="details-jump-link-with-icon-on-left-jump-html-code-snippet-5">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;p&gt;&lt;a class="a-link
-          a-link--jump"
-  href="#"&gt;
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg>
-    &lt;span class="a-link__text"&gt;Jump link with icon on left&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
                     List link
                     
                 </h3>
@@ -867,7 +717,7 @@
 
             
             <div class="m-variation__description">
-                <p>List links (or call-to-action links) are links that highlight a users’ next steps. They are medium weight and often used in unordered lists.</p>
+                <p>A list link is an item in a set of two or more stacked standalone links. Items in a link list are medium weight and are underlined at larger screen widths. At smaller screen widths, they convert to full block links with a top and bottom border.</p>
 
             </div>
             
@@ -884,36 +734,15 @@
     <li class="m-list__item">
         <a class="a-link a-link--jump" href="#">
             <span class="a-link__text">List item 2</span>
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
         </a>
     </li>
     <li class="m-list__item">
         <a class="a-link a-link--jump" href="#">
-          <span class="a-link__text">List item 3</span>
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
+            <span class="a-link__text">List item 3</span>
         </a>
     </li>
-    <li class="m-list__item">
-        <a class="a-link a-link--jump" href="#">
-          <span class="a-link__text">Read a report on our post-proposal qualitative testing of the new Spanish and refinance disclosures</span>
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg>
-        </a>
-    </li>
-    <li class="m-list__item">
-        <a class="a-link
-              a-link--jump" href="#">
-    <span class="a-link__text">External link jump link</span>
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
-      </a>
-    </li>
-    <li class="m-list__item">
-        <a class="a-link a-link--jump" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg>
-          <span class="a-link__text">External link jump link</span>
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
-        </a>
-    </li>
+        
+    
 </ul>
             </div>
             
@@ -926,15 +755,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-list-link-list-links-or-call-to--6" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-list-link-list-links-or-call-to--6" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-list-link-a-list-link-is-an-item-4" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-list-link-a-list-link-is-an-item-4" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-list-link-list-links-or-call-to--6">
+            <div class="m-tabs u-hidden" id="details-list-link-a-list-link-is-an-item-4">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-list-link-list-links-or-call-to--html-code-snippet-6">
+                        <a class="m-tabs__tab" href="#details-list-link-a-list-link-is-an-item-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
@@ -942,7 +771,7 @@
                     
                     
                     <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#details-list-link-list-links-or-call-to--implementation-6">
+                        <a class="m-tabs__tab" href="#details-list-link-a-list-link-is-an-item-implementation-4">
                             Implementation
                         </a>
                     </li>
@@ -952,7 +781,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-list-link-list-links-or-call-to--html-code-snippet-6">
+                <section class="m-tabs__panel" id="details-list-link-a-list-link-is-an-item-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -965,35 +794,13 @@
     &lt;li class="m-list__item"&gt;
         &lt;a class="a-link a-link--jump" href="#"&gt;
             &lt;span class="a-link__text"&gt;List item 2&lt;/span&gt;
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
         &lt;/a&gt;
     &lt;/li&gt;
     &lt;li class="m-list__item"&gt;
         &lt;a class="a-link a-link--jump" href="#"&gt;
-          &lt;span class="a-link__text"&gt;List item 3&lt;/span&gt;
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
+            &lt;span class="a-link__text"&gt;List item 3&lt;/span&gt;
         &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class="m-list__item"&gt;
-        &lt;a class="a-link a-link--jump" href="#"&gt;
-          &lt;span class="a-link__text"&gt;Read a report on our post-proposal qualitative testing of the new Spanish and refinance disclosures&lt;/span&gt;
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg>
-        &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class="m-list__item"&gt;
-        &lt;a class="a-link
-              a-link--jump"
-      href="#"&gt;
-    &lt;span class="a-link__text"&gt;External link jump link&lt;/span&gt;
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
-      &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class="m-list__item"&gt;
-        &lt;a class="a-link a-link--jump" href="#"&gt;
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg>
-          &lt;span class="a-link__text"&gt;External link jump link&lt;/span&gt;
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewbox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg>
         &lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
@@ -1007,15 +814,101 @@
 
                 <!-- Implementation details -->
                 
-                <section class="m-tabs__panel" id="details-list-link-list-links-or-call-to--implementation-6">
+                <section class="m-tabs__panel" id="details-list-link-a-list-link-is-an-item-implementation-4">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
-                            <p>Call-to-action links are used in <a href="https://cfpb.github.io/design-system/patterns/cards">cards</a> and <a href="https://cfpb.github.io/design-system/patterns/info-unit-groups">info unit groups</a>, among other places.</p>
+                            <p>Standalone links are used in <a href="https://cfpb.github.io/design-system/patterns/cards">cards</a> and <a href="https://cfpb.github.io/design-system/patterns/info-unit-groups">info unit groups</a>, among other places.</p>
 
                         </div>
                     </div>
                 </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Destructive link
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A destructive action is an action that will lead to data loss, for example, deleting data from a form or removing a file that was previously uploaded. Although a destructive action can be styled as a button, we recommend using the destructive link style (shown below) to ensure consistency across cf.gov products.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <a class="a-btn a-btn--link a-btn--warning" href="#">
+     Destructive link
+</a>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-destructive-link-a-destructive-a-5" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-destructive-link-a-destructive-a-5" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-destructive-link-a-destructive-a-5">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-destructive-link-a-destructive-a-html-code-snippet-5">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-destructive-link-a-destructive-a-html-code-snippet-5">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;a class="a-btn a-btn--link a-btn--warning" href="#"&gt;
+     Destructive link
+&lt;/a&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
                 
 
                 <!-- Specs -->
@@ -1064,15 +957,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-printed-links-when-a-page-is-pri-7" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-printed-links-when-a-page-is-pri-7" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-printed-links-when-a-page-is-pri-6" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-printed-links-when-a-page-is-pri-6" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-printed-links-when-a-page-is-pri-7">
+            <div class="m-tabs u-hidden" id="details-printed-links-when-a-page-is-pri-6">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-printed-links-when-a-page-is-pri-html-code-snippet-7">
+                        <a class="m-tabs__tab" href="#details-printed-links-when-a-page-is-pri-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
@@ -1080,7 +973,7 @@
                     
                     
                     <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#details-printed-links-when-a-page-is-pri-implementation-7">
+                        <a class="m-tabs__tab" href="#details-printed-links-when-a-page-is-pri-implementation-6">
                             Implementation
                         </a>
                     </li>
@@ -1090,7 +983,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-printed-links-when-a-page-is-pri-html-code-snippet-7">
+                <section class="m-tabs__panel" id="details-printed-links-when-a-page-is-pri-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1105,7 +998,7 @@
 
                 <!-- Implementation details -->
                 
-                <section class="m-tabs__panel" id="details-printed-links-when-a-page-is-pri-implementation-7">
+                <section class="m-tabs__panel" id="details-printed-links-when-a-page-is-pri-implementation-6">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
@@ -1208,8 +1101,8 @@ Write the link with language clearly describing the link’s destination. In sit
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/links.md">
-                            <time datetime="2025-05-08 17:45:51 -0400">
-                                 5:45:51 PM May 08, 2025
+                            <time datetime="2025-05-08 21:17:32 -0400">
+                                 9:17:32 PM May 08, 2025
                             </time>
                         </a>
                     </section>

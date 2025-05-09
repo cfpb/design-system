@@ -96,10 +96,6 @@ variation_groups:
               <button class="a-btn">
                   <span>Upload file</span>{% include icons/upload.svg %}
               </button>
-          <br>
-              <button class="a-btn a-btn--secondary">
-                  <span>Download report</span>{% include icons/download.svg %}
-               </button>
       - variation_is_deprecated: false
         variation_name: Button with animated icon
         variation_code_snippet: |-

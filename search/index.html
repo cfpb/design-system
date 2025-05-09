@@ -802,22 +802,9 @@
   &lt;button class=&quot;a-btn a-btn--warning active&quot; title=&quot;Active state&quot;&gt;Active state&lt;/button&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name5': 'Full-width button (on x-small screens)',
-                    'variation_description5': "Reduce+screen+size+to+see+this+button+in+action.%0A",
+                    'variation_name5': 'Button with icon',
+                    'variation_description5': "An+icon+should+appear+after+the+text+it+represents.+The+only+exception+is+the+back+button%2C+where+the+icon+appears+before+the+button%E2%80%99s+text.+Each+icon+should+be+used+exclusively+and+consistently+for+one+action.%0A",
                     'variation_code_snippet5': `&lt;div class=&quot;m-btn-group&quot;&gt;
-  &lt;button class=&quot;a-btn a-btn--full-on-xs&quot; title=&quot;Default state&quot;&gt;Default
-  state&lt;/button&gt;
-
-  &lt;button class=&quot;a-btn a-btn--full-on-xs hover&quot; title=&quot;Hover state&quot;&gt;Hover state&lt;/button&gt;
-
-  &lt;button class=&quot;a-btn a-btn--full-on-xs focus&quot; title=&quot;Focus state&quot;&gt;Focus state&lt;/button&gt;
-
-  &lt;button class=&quot;a-btn a-btn--full-on-xs active&quot; title=&quot;Active state&quot;&gt;Active state&lt;/button&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name6': 'Button with icon',
-                    'variation_description6': "An+icon+should+appear+after+the+text+it+represents.+The+only+exception+is+the+back+button%2C+in+which+the+icon+should+appear+before+the+button%E2%80%99s+text.+Each+icon+should+be+used+exclusively+and+consistently+for+one+action.%0A",
-                    'variation_code_snippet6': `&lt;div class=&quot;m-btn-group&quot;&gt;
     &lt;button class=&quot;a-btn a-btn--secondary&quot;&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
       &lt;span&gt;Previous&lt;/span&gt;
     &lt;/button&gt;
@@ -834,16 +821,47 @@
         &lt;span&gt;Download report&lt;/span&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
      &lt;/button&gt;`,
                 
-                    'variation_name7': 'Button with animated icon',
-                    'variation_description7': "Use+an+animated+icon+in+a+button+to+reassure+the+user+that+the+action+they+are+attempting+to+perform+is+functioning+as+intended.%0AThe+icon+can+be+hidden+when+the+action+is+complete+by+adding+the+a-btn--hide-icon+class+to+the+button.%0A",
-                    'variation_code_snippet7': `&lt;button class=&quot;a-btn&quot;&gt;
+                    'variation_name6': 'Button with animated icon',
+                    'variation_description6': "Use+an+animated+icon+in+a+button+to+reassure+the+user+that+the+action+they+are+attempting+to+perform+is+functioning+as+intended.%0AThe+icon+can+be+hidden+when+the+action+is+complete+by+adding+the+a-btn--hide-icon+class+to+the+button.%0A",
+                    'variation_code_snippet6': `&lt;button class=&quot;a-btn&quot;&gt;
     &lt;span&gt;Submit your complaint&lt;/span&gt;
     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--updating" viewBox="0 0 16 19"><path d="M5.857 3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.4 5.4 0 0 0-1.032 2.27 1.03 1.03 0 1 1-2.02-.395A7.46 7.46 0 0 1 2.235 4.91h-.748a1.03 1.03 0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03m-3.25 9.237a1.03 1.03 0 0 1-1.358-.523 7.5 7.5 0 0 1-.37-1.036 1.03 1.03 0 1 1 1.983-.55 5.5 5.5 0 0 0 .269.751 1.03 1.03 0 0 1-.524 1.358m2.905 2.439a1.03 1.03 0 0 1-1.42.322 7.5 7.5 0 0 1-.885-.652 1.03 1.03 0 0 1 1.34-1.563 5.4 5.4 0 0 0 .643.473 1.03 1.03 0 0 1 .322 1.42m3.68.438a1.03 1.03 0 0 1-1.014 1.044h-.106a8 8 0 0 1-.811-.044 1.03 1.03 0 0 1 .224-2.046 5 5 0 0 0 .664.031h.014a1.03 1.03 0 0 1 1.03 1.015zm.034-12.847a1.03 1.03 0 0 1-1.029 1.01h-.033a1.03 1.03 0 0 1 .017-2.06h.017l.019.001a1.03 1.03 0 0 1 1.009 1.05zm3.236 11.25a1.03 1.03 0 0 1-.3 1.425 8 8 0 0 1-.797.453 1.03 1.03 0 1 1-.905-1.849 6 6 0 0 0 .578-.328 1.03 1.03 0 0 1 1.424.3zM10.475 3.504a1.03 1.03 0 0 1 1.41-.359l.018.011a1.03 1.03 0 1 1-1.06 1.764l-.01-.006a1.03 1.03 0 0 1-.358-1.41m4.26 9.445a8 8 0 0 1-.315.56 1.03 1.03 0 1 1-1.749-1.086 5 5 0 0 0 .228-.405 1.03 1.03 0 1 1 1.836.93zm-1.959-6.052a1.03 1.03 0 0 1 1.79-1.016l.008.013a1.03 1.03 0 1 1-1.79 1.017zm2.764 2.487a9 9 0 0 1 0 .366 1.03 1.03 0 0 1-1.029 1.005h-.025A1.03 1.03 0 0 1 13.482 9.7a5 5 0 0 0 0-.266 1.03 1.03 0 0 1 1.003-1.055h.026a1.03 1.03 0 0 1 1.029 1.004z"/></svg>
 &lt;/button&gt;`,
                 
-                    'variation_name8': 'Button link',
-                    'variation_description8': "A+link+can+be+styled+as+a+button%2C+and+vice+versa.%0A",
+                    'variation_name7': 'Button group',
+                    'variation_description7': "A+button+group+is+an+element+that+combines+multiple+buttons+into+a+single+unit%2C+often+used+to+represent+related+actions+or+options.+The+m-btn-group+class+wrapped+around+a+group+of+buttons+will+properly+space+the+buttons+across+screen+sizes.%0A",
+                    'variation_code_snippet7': `&lt;div class=&quot;m-btn-group&quot;&gt;
+ &lt;button class=&quot;a-btn a-btn--secondary&quot;&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
+      &lt;span&gt;Go back&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class=&quot;a-btn a-btn&quot;&gt;
+      &lt;span&gt;Continue&lt;/span&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"/></svg>
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&quot;m-btn-group&quot;&gt;
+    &lt;a class=&quot;a-btn&quot; href=&quot;#&quot;&gt;Submit&lt;/a&gt;
+&lt;a class=&quot;a-btn a-btn--link a-btn--warning&quot; href=&quot;#&quot;&gt;
+     Clear form
+&lt;/a&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name8': 'Full-width button (on x-small screens)',
+                    'variation_description8': "Reduce+screen+size+to+see+this+button+in+action.%0A",
                     'variation_code_snippet8': `&lt;div class=&quot;m-btn-group&quot;&gt;
+  &lt;button class=&quot;a-btn a-btn--full-on-xs&quot; title=&quot;Default state&quot;&gt;Default
+  state&lt;/button&gt;
+
+  &lt;button class=&quot;a-btn a-btn--full-on-xs hover&quot; title=&quot;Hover state&quot;&gt;Hover state&lt;/button&gt;
+
+  &lt;button class=&quot;a-btn a-btn--full-on-xs focus&quot; title=&quot;Focus state&quot;&gt;Focus state&lt;/button&gt;
+
+  &lt;button class=&quot;a-btn a-btn--full-on-xs active&quot; title=&quot;Active state&quot;&gt;Active state&lt;/button&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name9': 'Button link',
+                    'variation_description9': "A+link+can+be+styled+as+a+button%2C+and+vice+versa.%0A",
+                    'variation_code_snippet9': `&lt;div class=&quot;m-btn-group&quot;&gt;
   &lt;a class=&quot;a-btn a-btn--link&quot; title=&quot;Default state&quot; href=&quot;#&quot;&gt;Default state&lt;/button&gt;
 
   &lt;a class=&quot;a-btn a-btn--link hover&quot; title=&quot;Hover state&quot; href=&quot;#&quot;&gt;Hover state&lt;/button&gt;
@@ -875,15 +893,15 @@
     &lt;/a&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name9': 'Printed button',
-                    'variation_description9': "When+a+consumerfinance.gov+page+is+printed%2C%C2%A0buttons%C2%A0are+presented%C2%A0as+links.+See+Printed+links+on+the+Links%C2%A0page+for+specifications.%0A",
-                    'variation_code_snippet9': ``,
+                    'variation_name10': 'Printed button',
+                    'variation_description10': "When+a+consumerfinance.gov+page+is+printed%2C%C2%A0buttons%C2%A0are+presented%C2%A0as+links.+See+Printed+links+on+the+Links%C2%A0page+for+specifications.%0A",
+                    'variation_code_snippet10': ``,
                 
             
 
 
             'title': 'Buttons',
-            'description': "Buttons+are+UI+elements+that+signal+actions.+They+should+be+used+sparingly%3B+each+additional+button+on+a+page+reduces+the+visual+prominence+of+a+call+to+action.+In+contrast%2C+links+should+lead+users+to+another+page+or+further+information.%0AButtons+that+appear+in+a+group+together+with+other+buttons+should+be+wrapped+in+a+container+with+the+m-btn-group+class+to+properly+space+the+buttons+across+screen+sizes.%0A",
+            'description': "Buttons+are+interactive+elements+that+signal+actions.+They+should+be+used+sparingly%3B+each+additional+button+on+a+page+reduces+the+visual+prominence+of+a+call+to+action.+In+contrast%2C+links+should+lead+users+to+another+page+or+further+information.%0A",
             'use_cases': "Buttons+signal+actions.+They+should+be+used+sparingly%3B+each+additional+button+on+a+page+reduces+the+visual+prominence+of+a+call+to+action.+In+contrast%2C+links+should+lead+users+to+another+page+or+further+information.%0A",
             'guidelines': "%0A++Use+generous+white+space+to+bring+focus+to+a+button+and+better+make+it+appear+actionable.%0A++Write+labels+in+sentence+case.%0A++Use+verbs+and+an+active+voice.%0A++Use+clear%2C+succinct%2C+and+informative+language.%0A++Limit+the+copy+length+to+22+characters.%0A%0A",
             'behavior': "%0A",

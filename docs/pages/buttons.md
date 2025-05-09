@@ -85,10 +85,10 @@ variation_groups:
         variation_code_snippet: >-
           <div class="m-btn-group">
               <button class="a-btn a-btn--secondary">{% include icons/left.svg %}
-                <span>Previous</span>
+                <span>Go back</span>
               </button>
               <button class="a-btn a-btn--secondary">
-                <span>Next</span>{% include icons/right.svg %}
+                <span>Continue</span>{% include icons/right.svg %}
               </button>
           </div>
 

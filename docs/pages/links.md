@@ -63,7 +63,7 @@ variation_groups:
                   <a class="a-link" href="#"><span class="a-link__text">file or document</span> {% include icons/document.svg %}   
                   </a>.
             The external link icon is used to emphasize a link to a
-                  <a class="a-link" href="#"><span class="a-link__text">a non-CFPB webpage</span> {% include icons/external-link.svg %}
+                  <a class="a-link" href="#"><span class="a-link__text">non-CFPB webpage</span> {% include icons/external-link.svg %}
                   </a>. 
           </p>
 
@@ -128,7 +128,7 @@ variation_groups:
           loss, for example, deleting data from a form or removing a file that
           was previously uploaded. Although a destructive action can be styled
           as a button, we recommend using the destructive link style (shown
-          below) for consistency with other cf.gov products.
+          below) to ensure consistency across cf.gov products.
         variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Printed links

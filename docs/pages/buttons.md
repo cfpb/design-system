@@ -158,8 +158,8 @@ variation_groups:
               </button>
           </div>
         variation_description: A link can be styled as a button, and a button can be
-          styled as a link. Whenever possible, use buttons for user actions and
-          use anchor links for navigation.
+          styled as a link. Whenever possible, use buttons for actions and links
+          for navigation.
       - variation_is_deprecated: false
         variation_name: Printed button
         variation_description: When a

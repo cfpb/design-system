@@ -97,41 +97,9 @@ variation_groups:
   - variation_group_name: Print
     variation_group_description: >-
 
-      This mixin allows us to easily write styles that target both `@media print` and `.print`.
+      Use the native `@media print` media query and emulate the print type
+      via the browser's dev tools.
 
-
-      The following SCSS…
-
-      ```scss
-
-      .example {
-          color: var(--gray);
-          @include respond-to-print() {
-              color: var(--black);
-          }
-      }
-
-      ```
-
-      …compiles to…
-
-      ```css
-
-      .example {
-          color: #75787B;
-      }
-
-      @media print {
-          .example {
-              color: #101820;
-          }
-      }
-
-      .print .example {
-          color: #101820;
-      }
-
-      ```
 use_cases: ''
 guidelines: ''
 behavior: ''

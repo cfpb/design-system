@@ -11,7 +11,7 @@
   }
 
   // Hide the admin buttons when printing
-  @include respond-to-print {
+  @media print {
     display: none;
   }
 }

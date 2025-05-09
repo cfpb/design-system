@@ -4,7 +4,7 @@ section: foundation
 variation_groups:
   - variation_group_name: Icon library
     variations:
-      - variation_code_snippet: ''
+      - variation_code_snippet: ""
         variation_description: >-
           Use the canonical icon name when referencing the icons in code,
           however, "aliases" are provided in the table below to help you search
@@ -480,19 +480,16 @@ variation_groups:
           | {% include icons/nine-closed.svg %} | | nine-closed | | |
 
           {: class="icon-table"}
-        variation_name: ''
-        variation_implementation:
-          Each icon has a circular variant shown in the second
+        variation_name: ""
+        variation_implementation: Each icon has a circular variant shown in the second
           column (or square, in the case of the social media icons) that can be
           accessed by appending -round (or -square) to the canonical name.
       - variation_is_deprecated: false
         variation_name: Animated icon
-        variation_description:
-          In certain instances, icons can be animated to aid
+        variation_description: In certain instances, icons can be animated to aid
           communication or to reassure the user that an action is functioning as
           intended. Examples include saving or loading content.
-        variation_code_snippet:
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16
+        variation_code_snippet: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16
           19" class="cf-icon-svg cf-icon-svg--updating"><path d="M5.857
           3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.401 5.401 0 0 0-1.032 2.27
           1.03 1.03 0 1 1-2.02-.395A7.462 7.462 0 0 1 2.235 4.91h-.748a1.03 1.03
@@ -526,7 +523,7 @@ variation_groups:
   - variation_group_name: Icons with text
     variations:
       - variation_is_deprecated: false
-        variation_code_snippet: ''
+        variation_code_snippet: ""
         variation_description: "<div class=\"content-50 content-first\"
           markdown=\"1\">\r
 
@@ -663,14 +660,14 @@ description: >-
 
 
   <a class="a-link"
-     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
+     href="<https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/font/CFPBIcons-Regular.otf>">
       <span class="a-link__text">Download font</span>
       {% include icons/download.svg %}
   </a>
 
 
   </div>
-use_cases: ''
+use_cases: ""
 behavior: >-
   ### SVG icon basics
 
@@ -684,8 +681,7 @@ behavior: >-
   #### What the SCSS is doing
 
 
-  If you look in [cfpb-icons.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/src/cfpb-icons.scss) you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the CSS rule gets applied to all of the SVGs on the page,
-  just like any other HTML element.
+  If you look in [cfpb-icons.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/src/cfpb-icons.scss) you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the CSS rule gets applied to all of the SVGs on the page, just like any other HTML element.
 
 
   We start by limiting the size of the SVG to a proportion of the text height, using the `@cf-icon-height` variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set `vertical-align: text-top;`. Finally, setting `fill: currentColor;` tells the SVG to set its path’s fill `color` to match the color value of its parent element.
@@ -693,18 +689,12 @@ behavior: >-
 
   #### Inline SVG background
 
-  In some cases we embed an SVG as a background image.
-  To accomplish this, a custom postcss plugin is used to inject the
-  SVG icon source file inline into the CSS `background-image` property.
-  This is exposed via a custom CSS property,
-  `--cfpb-background-icon-svg: '[name] [color]'`,
-  where `[name]` is the SVG icon canonical name,
-  and the optional `[color]` is the color of the icon in `rgb(r,g,b)` format.
+  In some cases we embed an SVG as a background image. To accomplish this, a custom postcss plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a custom CSS property, `--cfpb-background-icon-svg: '[name] [color]'`, where `[name]` is the SVG icon canonical name, and the optional `[color]` is the color of the icon in `rgb(r,g,b)` format.
 
 
   ### Interaction details
 
 
   Please reference the [Links](https://cfpb.github.io/design-system/components/links#links-with-icons) page for guidance regarding icons paired with links.
-related_items: ''
+related_items: ""
 ---

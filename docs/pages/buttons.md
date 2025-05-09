@@ -116,8 +116,8 @@ variation_groups:
         variation_name: Button group
         variation_description: Buttons that are positioned together should be wrapped in
           a container with the `m-btn-group` class to properly space the buttons
-          across screen sizes. Sometimes a button group will include a button
-          styled as a button and a button styled as a link.
+          across screen sizes. Sometimes a button group will include both a
+          button styled as a button and a button styled as a link.
         variation_code_snippet: |-
           <div class="m-btn-group">
            <button class="a-btn a-btn--secondary">{% include icons/left.svg %}
@@ -129,10 +129,10 @@ variation_groups:
           </div>
           <br>
           <div class="m-btn-group">
-              <a class="a-btn" href="#">Sign up</a>
-              <a class="a-btn a-btn--link" href="#">
-                  See Privacy Act statement
-              </a>
+              <a class="a-btn" href="#">Submit</a>
+          <a class="a-btn a-btn--link a-btn--warning" href="#">
+               Clear form
+          </a>
           </div>
       - variation_is_deprecated: false
         variation_name: Full-width button (on x-small screens)

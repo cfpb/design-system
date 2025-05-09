@@ -19,9 +19,9 @@ variation_groups:
           <div class="m-btn-group">
             <button class="a-btn" title="Default state">Default state</button>
 
-            <button class="a-btn hover" title="Hovered state">Hovered state</button>
+            <button class="a-btn hover" title="Hover state">Hover state</button>
 
-            <button class="a-btn focus" title="Focused state">Focused state</button>
+            <button class="a-btn focus" title="Focus state">Focus state</button>
 
             <button class="a-btn active" title="Active state">Active state</button>
           </div>
@@ -43,9 +43,9 @@ variation_groups:
             <button class="a-btn a-btn--secondary" title="Default state">Default
             state</button>
 
-            <button class="a-btn a-btn--secondary hover" title="Hovered state">Hovered state</button>
+            <button class="a-btn a-btn--secondary hover" title="Hover state">Hover state</button>
 
-            <button class="a-btn a-btn--secondary focus" title="Focused state">Focused state</button>
+            <button class="a-btn a-btn--secondary focus" title="Focus state">Focus state</button>
 
             <button class="a-btn a-btn--secondary active" title="Active state">Active state</button>
           </div>
@@ -57,20 +57,21 @@ variation_groups:
             <button class="a-btn a-btn--disabled" title="Default state"
             disabled>Default state</button>
 
-            <button class="a-btn a-btn--disabled hover" title="Hovered state" disabled>Hovered state</button>
+            <button class="a-btn a-btn--disabled hover" title="Hover state" disabled>Hover state</button>
 
-            <button class="a-btn a-btn--disabled focus" title="Focused state" disabled>Focused state</button>
+            <button class="a-btn a-btn--disabled focus" title="Focus state" disabled>Focus state</button>
           </div>
         variation_name: Disabled button
         variation_specs: ""
       - variation_code_snippet: >-
           <div class="m-btn-group">
-            <button class="a-btn a-btn--warning" title="Default state">Default
-            state</button>
+            <button class="a-btn a-btn--warning" title="Default state">Default state</button>
 
-            <button class="a-btn a-btn--warning hover" title="Hovered state">Hovered state</button>
+            <button class="a-btn a-btn--warning hover" title="Hover state">Hover state</button>
 
-            <button class="a-btn a-btn--warning focus" title="Focused state">Focused state</button>
+            <button class="a-btn a-btn--warning focus" title="Focus state">Focus state</button>
+
+            <button class="a-btn a-btn--warning active" title="Active state">Active state</button>
           </div>
         variation_name: Destructive button
         variation_specs: ""
@@ -86,9 +87,9 @@ variation_groups:
             <button class="a-btn a-btn--full-on-xs" title="Default state">Default
             state</button>
 
-            <button class="a-btn a-btn--full-on-xs hover" title="Hovered state">Hovered state</button>
+            <button class="a-btn a-btn--full-on-xs hover" title="Hover state">Hover state</button>
 
-            <button class="a-btn a-btn--full-on-xs focus" title="Focused state">Focused state</button>
+            <button class="a-btn a-btn--full-on-xs focus" title="Focus state">Focus state</button>
 
             <button class="a-btn a-btn--full-on-xs active" title="Active state">Active state</button>
           </div>
@@ -134,9 +135,9 @@ variation_groups:
           <div class="m-btn-group">
             <a class="a-btn a-btn--link" title="Default state" href="#">Default state</button>
 
-            <a class="a-btn a-btn--link hover" title="Hovered state" href="#">Hovered state</button>
+            <a class="a-btn a-btn--link hover" title="Hover state" href="#">Hover state</button>
 
-            <a class="a-btn a-btn--link focus" title="Focused state" href="#">Focused state</button>
+            <a class="a-btn a-btn--link focus" title="Focus state" href="#">Focus state</button>
 
             <a class="a-btn a-btn--link active" title="Active state" href="#">Active state</button>
           </div>

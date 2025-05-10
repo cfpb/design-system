@@ -18,11 +18,6 @@
   }
 }
 
-#search-form {
-  display: flex;
-  gap: 5px;
-}
-
 // Mobile only.
 @include respond-to-max($bp-xs-max) {
   .site-header {
@@ -44,6 +39,7 @@
     margin-top: 15px;
     margin-bottom: 15px;
     padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

@@ -30,6 +30,29 @@
 }
 
 //
+// Media type utilities.
+//
+@media screen {
+  .u-print-only {
+    display: none;
+  }
+
+  .u-screen-only {
+    display: initial;
+  }
+}
+
+@media print {
+  .u-screen-only {
+    display: none;
+  }
+
+  .u-print-only {
+    display: initial;
+  }
+}
+
+//
 // Clearfix
 //
 

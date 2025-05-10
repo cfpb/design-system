@@ -55,6 +55,17 @@ variation_groups:
           ```
         variation_name: '"JS only" helper class'
       - variation_code_snippet: >-
+          <div class="u-print-only">Print this!</div>
+          <div class="u-screen-only">Don't print this!</div>
+        variation_description: >-
+          Hide an element on screen or in print.
+
+          ```html
+          <div class="u-print-only">Print this!</div>
+          <div class="u-screen-only">Don't print this!</div>
+          ```
+        variation_name: 'Media type utilities'
+      - variation_code_snippet: >-
           <div class="u-clearfix">
               <div style="float:left; width:100%; height:60px; background:black;"></div>
           </div>

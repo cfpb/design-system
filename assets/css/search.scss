@@ -1,6 +1,8 @@
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+
 #search-results {
   list-style: none;
-  padding-left: 0;
+  margin-top: 15px;
 }
 
 #search-results li {
@@ -11,4 +13,11 @@
 
 #search-results li:first-child {
   border-top: none;
+}
+
+// Tablet and above.
+@include respond-to-min($bp-sm-min) {
+  #search-results {
+    padding-left: 0;
+  }
 }

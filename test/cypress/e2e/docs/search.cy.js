@@ -12,7 +12,7 @@ describe('The search feature', () => {
 
   it('should show search results', () => {
     cy.get('#search-box').type('button');
-    cy.get('#search-form button').click();
+    cy.get('#search-form button[type=submit]').click();
     cy.get('#search-results').find('li').its('length').should('be.gte', 1);
   });
 });

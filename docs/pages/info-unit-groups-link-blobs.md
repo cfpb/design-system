@@ -95,6 +95,8 @@ guidelines: >-
 
   - Must be a 1:1 ratio
 
+  - Export at a 2x size of 300px wide to display well on retina displays. The image will appear as 150px wide at a large browser width and will automatically resize to 130px wide at a small browser width. 
+
   - Can be a square or circle crop
 
 
@@ -104,12 +106,18 @@ guidelines: >-
 
   - Can be a 1:1 or 16:9 ratio
 
+  - If 1:1 ratio, export at a 2x size of 300px wide to display well on retina displays. The image will appear as 150px wide at a large browser width and will automatically resize to 130px wide at a small browser width. The 1:1 image can be a square or circle crop.
+
+  - If 16:9 ratio, export at a 2x size of X x X to display well on retina displays. The image will appear as what. 
+
 
   #### 33/33/33 info unit
 
   - Image optional
 
   - Must be a 1:1 ratio
+
+  - Export at a 2x size of 300px wide to display well on retina displays. The image will appear as 150px wide at a large browser width and will automatically resize to 130px wide at a small browser width. 
 
   - Can be a square or circle crop
 

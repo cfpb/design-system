@@ -7,15 +7,7 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: 25/75 info unit
         variation_description: >-
-          The 25/75 image and text component is used to draw the user’s eye to
-          key information and navigation links, and aid comprehension by pairing
-          content with illustration/imagery.
-
-
-          When used in conjunction with 50/50 text components, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
-
-
-          The 25/75 image and text component is the only format where the format name, 25/75, refers to how each individual unit it laid out, not to how multiple units are laid out.
+          An image is required in a 25/75 info unit. 
 
 
           ![Info unit group: example of 25/75](/design-system/images/uploads/2575example_desktop-1-.jpg "Info unit group: example of 25/75")![]()
@@ -23,14 +15,11 @@ variation_groups:
         variation_implementation: ""
         variation_specs: ""
       - variation_code_snippet: ""
-        variation_description: >+
-          The 50/50 info unit is used to call attention to linked content on a
-          page. At larger breakpoints, this component has a two column layout to
-          utilize extra screen real estate. 
+        variation_description: >-
+          An image is optional in a 50/50 info unit. 
 
 
           ![Image showing layout of a 50/50 image and text component](/design-system/images/uploads/50_50_intro_mockup.png)
-
         variation_jinja_code_snippet: >-
           File in https://github.com/cfpb/consumerfinance.gov:
 
@@ -39,8 +28,11 @@ variation_groups:
         variation_name: 50/50 info unit
         variation_specs: ""
       - variation_code_snippet: ""
-        variation_description: "![Image of a 33/33/33 image and text
-          component](/design-system/images/uploads/33-33-33_image_text.jpg)"
+        variation_description: >-
+          An image is optional in a 33/33/33 info unit. 
+
+
+          ![Image of a 33/33/33 image and text component](/design-system/images/uploads/33-33-33_image_text.jpg)
         variation_jinja_code_snippet: >-
           File in https://github.com/cfpb/consumerfinance.gov:
 
@@ -49,20 +41,29 @@ variation_groups:
         variation_name: 33/33/33 info unit
         variation_specs: ""
     variation_group_name: Types
-    variation_group_description: ""
+    variation_group_description: "There are three types of info units: 25/75, 50/50, and 33/33/33. "
 guidelines: ""
 eyebrow: Main content
 title: Info unit groups
-description: "Info unit groups are generally used to provide brief context as
-  they lead users from a parent page ([landing
-  pages](https://cfpb.github.io/design-system/templates/landing-pages),
-  [sublanding
-  pages](https://cfpb.github.io/design-system/templates/sublanding-pages), and
-  [browse pages](https://cfpb.github.io/design-system/templates/browse-pages))
-  to additional content on a child or sibling page. Info units provide the
-  ability to create content with multicolumn layouts. There are two types: image
-  and text, or text only."
-use_cases: ""
+description: "Info unit groups are used to draw a user’s eye to key information
+  on a page. An info unit can contain an image, brief description, and
+  call-to-action link to lead a user to additional content on a child or sibling
+  page. "
+use_cases: >-
+  ### When to use
+
+  - When a call-to-action link, leading users to a deeper page in the section, needs a visual highlight on the page
+
+  - When an image or illustration helps users better understand the purpose of content
+
+  - To help establish a hierarchy of linked content on a page
+
+  - For brief content
+
+
+  ### When other options are better
+
+  - When there are multiple paragraphs of copy
 behavior: ""
 accessibility: ""
 related_items: |-

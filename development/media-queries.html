@@ -395,29 +395,7 @@
         
         <div class="o-variation-group__description">
             
-<p>This mixin allows us to easily write styles that target both <code class="language-plaintext highlighter-rouge">@media print</code> and <code class="language-plaintext highlighter-rouge">.print</code>.</p>
-
-<p>The following SCSS…</p>
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.example</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="no">gray</span><span class="p">);</span>
-    <span class="k">@include</span> <span class="nd">respond-to-print</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="no">black</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<p>…compiles to…</p>
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.example</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="m">#75787B</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">@media</span> <span class="n">print</span> <span class="p">{</span>
-    <span class="nc">.example</span> <span class="p">{</span>
-        <span class="nl">color</span><span class="p">:</span> <span class="m">#101820</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="nc">.print</span> <span class="nc">.example</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="m">#101820</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<p>Use the native <code class="language-plaintext highlighter-rouge">@media print</code> media query and emulate the print type via the browser’s dev tools.</p>
 
         </div>
         
@@ -449,8 +427,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/media-queries.md">
-                            <time datetime="2025-05-13 08:36:24 -0400">
-                                 8:36:24 AM May 13, 2025
+                            <time datetime="2025-05-13 09:06:44 -0400">
+                                 9:06:44 AM May 13, 2025
                             </time>
                         </a>
                     </section>

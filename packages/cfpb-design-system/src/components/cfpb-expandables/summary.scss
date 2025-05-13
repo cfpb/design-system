@@ -50,7 +50,7 @@
       );
       content: '';
 
-      @include respond-to-print {
+      @media print {
         background: none;
       }
     }

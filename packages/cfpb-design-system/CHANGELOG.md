@@ -2,7 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.8.0](https://github.com/cfpb/design-system/compare/v3.7.1..3.8.0) - April 25, 2025
+## [3.9.0](https://github.com/cfpb/design-system/compare/v3.8.0..3.9.0) - May 13, 2025
+
+### PRs in this release
+
+- PR #[2220](https://github.com/cfpb/design-system/pull/2220): Update the a-tag-filter active color to teal-60 from teal - Ans
+- PR #[2219](https://github.com/cfpb/design-system/pull/2219): Remove `respond-to-print` and set media query helpers to `only screen` - Ans
+- PR #[2228](https://github.com/cfpb/design-system/pull/2228): Update deps - Ans
+
+### General
+
+- Update the a-tag-filter active color to teal-60 from teal - ([d20089d](https://github.com/cfpb/design-system/commit/d20089db42b158134cf336a054ca296f5a9c4ebc)) - Ans
+- Remove `respond-to-print` and set media query helpers to `only screen` - ([3ce77bd](https://github.com/cfpb/design-system/commit/3ce77bd9b28eb0ea3ac761b506e48931db2fcd14)) - Ans
+- Linter fixes - ([39e5fbb](https://github.com/cfpb/design-system/commit/39e5fbb8bb62eac48eebe88cb4224e2485a7f9d1)) - Ans
+- Re-build assets - ([5944749](https://github.com/cfpb/design-system/commit/59447498a713b9eb4a6ba8ceb9307244a914cf9b)) - Ans
+
+## [3.8.0](https://github.com/cfpb/design-system/compare/v3.7.1..v3.8.0) - April 25, 2025
 
 ### PRs in this release
 

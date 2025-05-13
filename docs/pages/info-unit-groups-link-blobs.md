@@ -11,10 +11,10 @@ variation_groups:
 
 
           ![Info unit group: example of 25/75](/design-system/images/uploads/2575example_desktop-1-.jpg "Info unit group: example of 25/75")![]()
-        variation_jinja_code_snippet: ""
-        variation_implementation: ""
-        variation_specs: ""
-      - variation_code_snippet: ""
+        variation_jinja_code_snippet: ''
+        variation_implementation: ''
+        variation_specs: ''
+      - variation_code_snippet: ''
         variation_description: >-
           An image is optional in a 50/50 info unit. 
 
@@ -26,8 +26,8 @@ variation_groups:
 
           https://github.com/cfpb/consumerfinance.gov/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html
         variation_name: 50/50 info unit
-        variation_specs: ""
-      - variation_code_snippet: ""
+        variation_specs: ''
+      - variation_code_snippet: ''
         variation_description: >-
           An image is optional in a 33/33/33 info unit. 
 
@@ -39,16 +39,16 @@ variation_groups:
 
           https://github.com/cfpb/consumerfinance.gov/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
         variation_name: 33/33/33 info unit
-        variation_specs: ""
+        variation_specs: ''
     variation_group_name: Types
-    variation_group_description: "There are three types of info units: 25/75, 50/50, and 33/33/33. "
-guidelines: ""
+    variation_group_description: 'There are three types of info units: 25/75, 50/50, and 33/33/33. '
+guidelines: ''
 eyebrow: Main content
 title: Info unit groups
-description: "Info unit groups are used to draw a user’s eye to key information
+description: 'Info unit groups are used to draw a user’s eye to key information
   on a page. An info unit can contain an image, brief description, and
   call-to-action link to lead a user to additional content on a child or sibling
-  page. "
+  page. '
 use_cases: >-
   ### When to use
 
@@ -64,8 +64,8 @@ use_cases: >-
   ### When other options are better
 
   - When there are multiple paragraphs of copy
-behavior: ""
-accessibility: ""
+behavior: ''
+accessibility: ''
 related_items: |-
   * [Links](https://cfpb.github.io/design-system/components/links)
   * [Typography](https://cfpb.github.io/design-system/foundation/typography)

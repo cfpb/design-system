@@ -208,7 +208,11 @@ button,
   html input[type="button"], /* 1 */
   input[type="reset"],
   input[type="submit"] {
+  /* TODO: stylelint wants to convert `appearance: button` to `appearance: auto`
+     Investigate why. */
+  /* stylelint-disable */
   appearance: button; /* 2 */
+  /* stylelint-enable */
   cursor: pointer; /* 3 */
 }
 

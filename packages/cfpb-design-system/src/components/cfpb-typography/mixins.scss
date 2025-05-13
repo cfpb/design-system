@@ -21,7 +21,12 @@
 
       .#{$jump-link-class}__text {
         color: var(--gray);
+
+        /* TODO: `word-break: break-word` is deprecated should be converted to
+           `overflow-wrap: anywhere` combined with `word-break: normal` */
+        /* stylelint-disable declaration-property-value-keyword-no-deprecated */
         word-break: break-word;
+        /* stylelint-enable declaration-property-value-keyword-no-deprecated */
       }
     } @else {
       font-weight: 500;

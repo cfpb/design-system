@@ -24,18 +24,21 @@ variation_groups:
 
 
           <p>Here's the <a href="#">default link style</a>. For reference, here's the <a href="#" class="hover">hover link style</a>. Train your eyes on the <a href="#" class="focus">focused link style</a>. Jump to the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
-        variation_description: Inline links appear within a line of text or other inline
+        variation_description:
+          Inline links appear within a line of text or other inline
           elements. Inline links are underlined and retain a consistent
           appearance across all screen widths.
         variation_name: Inline link
-        variation_implementation: "Links that appear in body text (`p`), link lists
+        variation_implementation:
+          'Links that appear in body text (`p`), link lists
           (`li`), or definitions (`dd`) are automatically underlined. To enable
           underlines elsewhere, e.g. to underline links in a `nav` element,
-          simply add a `border-bottom-width: 1px;` to the link."
-        variation_specs: ""
+          simply add a `border-bottom-width: 1px;` to the link.'
+        variation_specs: ''
       - variation_is_deprecated: false
         variation_name: Standalone link
-        variation_description: Standalone links sit on their own line. At larger screen
+        variation_description:
+          Standalone links sit on their own line. At larger screen
           widths, standalone links are medium weight and underlined. At smaller
           screen widths, standalone links convert to full block links with top
           and bottom borders that have a finger-friendly touch area.
@@ -46,13 +49,14 @@ variation_groups:
           </p>
       - variation_is_deprecated: false
         variation_name: Link with icon
-        variation_description: Each icon should be used exclusively and consistently for
+        variation_description:
+          Each icon should be used exclusively and consistently for
           one action. An icon should appear after the text it represents. The
           only exception is a link that takes a user to a previous step or page,
           where the icon should appear before the link's text. Icons should
           never be underlined.
         variation_implementation: >-
-          
+
 
           * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.a-link__text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link__text`. It is important the text and icon are siblings to correctly handle underlines.
         variation_code_snippet: >-
@@ -108,7 +112,8 @@ variation_groups:
                   </a>
               </li>
           </ul>
-        variation_description: A list link is an item in a set of two or more stacked
+        variation_description:
+          A list link is an item in a set of two or more stacked
           standalone links. Items in a link list are medium weight and are
           underlined at larger screen widths. At smaller screen widths, they
           convert to full block links with a top and bottom border.
@@ -117,19 +122,20 @@ variation_groups:
           unit
           groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
           among other places.
-        variation_jinja_code_snippet: ""
-        variation_specs: ""
+        variation_jinja_code_snippet: ''
+        variation_specs: ''
       - variation_name: Destructive link
         variation_code_snippet: |-
           <a class="a-btn a-btn--link a-btn--warning" href="#">
                Destructive link
           </a>
-        variation_description: A destructive action is an action that will lead to data
+        variation_description:
+          A destructive action is an action that will lead to data
           loss, for example, deleting data from a form or removing a file that
           was previously uploaded. Although a destructive action can be styled
           as a button, we recommend using the destructive link style (shown
           below) to ensure consistency across cf.gov products.
-        variation_specs: ""
+        variation_specs: ''
       - variation_is_deprecated: false
         variation_name: Printed links
         variation_description: When a page is printed from
@@ -137,24 +143,24 @@ variation_groups:
           appear in the following style and include both the original link text
           as well as a shortened URL.
         variation_code_snippet: Here's the <a href="#">link style</a> when printed.
-        variation_code_snippet_rendered: "<p>Here's the <a
-          href=\"https://consumerfinance.gov/about-us/blog\"
-          style=\"font-weight: 500;\">link style<span style=\"border-bottom: 1px
-          solid #ffffff; font-weight: 300;\">
-          (cfpb.gov/about-us/blog)</span></a> when printed.</p>"
+        variation_code_snippet_rendered: '<p>Here''s the <a
+          href="https://consumerfinance.gov/about-us/blog"
+          style="font-weight: 500;">link style<span style="border-bottom: 1px
+          solid #ffffff; font-weight: 300;">
+          (cfpb.gov/about-us/blog)</span></a> when printed.</p>'
         variation_implementation: When a page is printed, cf.gov's [print
           stylesheet](https://github.com/cfpb/consumerfinance.gov/blob/c9637160e14da5093b43c78fc2c87fa0ba190887/cfgov/unprocessed/css/print.less)
           appends link URLs in parentheses next to their link text.
-        variation_specs: ""
-    variation_group_description: ""
-guidelines: ""
+        variation_specs: ''
+    variation_group_description: ''
+guidelines: ''
 eyebrow: Components
 title: Links
 description: Links are navigational elements that connect users to other
   locations, either on the current page or to a different page or site. In
   contrast, [buttons](/design-system/components/buttons) are used to signal
   important actions.
-use_cases: ""
+use_cases: ''
 behavior: >-
   ### Opening a link in the current tab (default)
 
@@ -186,5 +192,5 @@ related_items: |-
   * [Typography](https://cfpb.github.io/design-system/foundation/fonts)
   * [Iconography](https://cfpb.github.io/design-system/foundation/iconography)
 last_updated: 2019-09-17T14:52:22.684Z
-research: ""
+research: ''
 ---

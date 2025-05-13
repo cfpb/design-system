@@ -36,9 +36,9 @@ variation_groups:
                   </div>
               </form>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Email signup form
-        variation_specs: ""
+        variation_specs: ''
         variation_code_snippet_rendered: >-
           <div class="o-well" style="max-width: 370px">
               <div class="o-email-signup">
@@ -71,9 +71,9 @@ variation_groups:
                   </form>
               </div>
           </div>
-        variation_implementation: ""
+        variation_implementation: ''
     variation_group_name: Types
-    variation_group_description: ""
+    variation_group_description: ''
 guidelines: >-
   ### Design guidelines
 
@@ -114,9 +114,9 @@ description: Email signups forms allow users to stay engaged on a specific topic
   or content type. They are used to add individual email addresses to a specific
   mailing list that is relevant to the content on the page or the section it is
   contained within.
-use_cases: ""
-behavior: ""
-accessibility: ""
+use_cases: ''
+behavior: ''
+accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

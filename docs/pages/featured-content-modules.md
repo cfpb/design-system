@@ -24,23 +24,14 @@ variation_groups:
                       alt="">
               </div>
           </section>
-        variation_description:
-          There is only one type of FCM layout. When the pattern
+        variation_description: There is only one type of FCM layout. When the pattern
           appears on a page in a language that reads right to left, such as
           Arabic, the layout remains the same, but the text is aligned right
           rather than left.
         variation_name: Standard
     variation_group_name: Types
-    variation_group_description: ''
+    variation_group_description: ""
 guidelines: >-
-  ### Placement 
-
-
-  * Can appear on any [page type](https://cfpb.github.io/design-system/pages/) 
-
-  * Should sit below a page’s introduction and retain that position on all screen sizes  
-
-
   ### Content guidelines 
 
 
@@ -79,6 +70,14 @@ guidelines: >-
     * This is a 16:9 aspect ratio and 2x the rendered width.   
     * See the [behavior guidelines](https://cfpb.github.io/design-system/patterns/featured-content-module#behavior) below regarding how the image will crop as the browser width changes.   
   * If there is a video, a 60 by 60px play button will appear in the center of the image. Make sure the image’s subject is not obscured by the play button, particularly ensuring that no faces are covered by the button.
+
+
+  ### Stylistic guidelines
+
+
+  * Can appear on any [page type](https://cfpb.github.io/design-system/pages/) 
+
+  * Should sit below a page’s introduction and retain that position on all screen sizes  
 eyebrow: Featured content
 title: Featured content module
 description: A featured content module (FCM) is a “mini story” used to highlight
@@ -113,8 +112,8 @@ behavior: >-
 
 
   * The content drops below the image.
-accessibility: ''
-related_items: ''
+accessibility: ""
+related_items: ""
 last_updated: 2019-10-17T14:52:11.082Z
-research: ''
+research: ""
 ---

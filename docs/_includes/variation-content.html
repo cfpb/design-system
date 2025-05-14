@@ -62,6 +62,25 @@
     </section>
     {% endif %}
 
+    {% if page.code_examples and page.code_examples.size > 0 %}
+
+        {% for code_example in page.code_examples %}
+            {% if code_example.code_title and code_example.code_title != '' %}
+            <h2>
+                {{ code_example.code_title }}
+            </h2>
+            {% endif %}
+
+            {% if code_example.code_snippet_url and code_example.code_snippet_url != '' %}
+                {% include {{ code_example.code_snippet_url }} %}
+            {% endif %}
+
+            <br>
+            <hr>
+            <br>
+        {% endfor %}
+    {% endif %}
+
     {% if page.variation_groups and page.variation_groups.size > 0 %}
     {% for variation_group in page.variation_groups %}
     <section class="o-variation-group" id="{{ variation_group.variation_group_name | slugify }}">

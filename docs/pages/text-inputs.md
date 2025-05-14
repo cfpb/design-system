@@ -6,35 +6,12 @@ variation_groups:
   - variation_group_name: Types
     variations:
       - variation_code_snippet: >-
-          <!--States are shown for demonstration purposes only-->
-
-
-          <h4>
-
-          States
-
-          </h4>
-
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
                 placeholder="Placeholder text"
           value="Enabled">
 
-          <br><br>
-
-          <input class="a-text-input hover"
-                 type="text"
-                 id="textinput-example-hover"
-                 placeholder="Placeholder text"
-                 value="Hover">
-          <br><br>
-
-          <input class="a-text-input focus"
-                 type="text"
-                 id="textinput-example-focus"
-                 placeholder="Placeholder text"
-                 value="Focus">
           <br><br>
 
           <input class="a-text-input"

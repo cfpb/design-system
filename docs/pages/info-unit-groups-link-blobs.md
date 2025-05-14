@@ -6,15 +6,14 @@ variation_groups:
   - variations:
       - variation_is_deprecated: false
         variation_name: 25/75 info unit
-        variation_description: '![Info unit group: example of
-          25/75](/design-system/images/uploads/2575example_desktop-1-.jpg "Info
-          unit group: example of 25/75")![]()'
+        variation_description: "![Info unit group as a 25/75
+          layout](/design-system/images/uploads/25-75.png)"
         variation_jinja_code_snippet: ""
         variation_implementation: ""
         variation_specs: ""
       - variation_code_snippet: ""
-        variation_description: "![Image showing layout of a 50/50 image and text
-          component](/design-system/images/uploads/50_50_intro_mockup.png)"
+        variation_description: "![Info unit group as a 50/50
+          layout](/design-system/images/uploads/50-50.png)"
         variation_jinja_code_snippet: >-
           File in https://github.com/cfpb/consumerfinance.gov:
 
@@ -23,8 +22,8 @@ variation_groups:
         variation_name: 50/50 info unit
         variation_specs: ""
       - variation_code_snippet: ""
-        variation_description: "![Image of a 33/33/33 image and text
-          component](/design-system/images/uploads/33-33-33_image_text.jpg)"
+        variation_description: "![Info unit group as a 33/33/33
+          layout](/design-system/images/uploads/33-33-33.png)"
         variation_jinja_code_snippet: >-
           File in https://github.com/cfpb/consumerfinance.gov:
 

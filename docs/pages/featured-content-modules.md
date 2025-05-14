@@ -24,13 +24,14 @@ variation_groups:
                       alt="">
               </div>
           </section>
-        variation_description: There is only one type of FCM layout. When the pattern
+        variation_description:
+          There is only one type of FCM layout. When the pattern
           appears on a page in a language that reads right to left, such as
           Arabic, the layout remains the same, but the text is aligned right
           rather than left.
         variation_name: Standard
     variation_group_name: Types
-    variation_group_description: ""
+    variation_group_description: ''
 guidelines: >-
   ### Content guidelines 
 
@@ -112,8 +113,8 @@ behavior: >-
 
 
   * The content drops below the image.
-accessibility: ""
-related_items: ""
+accessibility: ''
+related_items: ''
 last_updated: 2019-10-17T14:52:11.082Z
-research: ""
+research: ''
 ---

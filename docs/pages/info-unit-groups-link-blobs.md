@@ -6,31 +6,31 @@ variation_groups:
   - variations:
       - variation_is_deprecated: false
         variation_name: 25/75 info unit
-        variation_description: "![25/75 info unit group](/design-system/images/uploads/25-75.png)"
-        variation_jinja_code_snippet: ""
-        variation_implementation: ""
-        variation_specs: ""
-      - variation_code_snippet: ""
-        variation_description: "![50/50 info unit group](/design-system/images/uploads/50-50.png)"
+        variation_description: '![25/75 info unit group](/design-system/images/uploads/25-75.png)'
+        variation_jinja_code_snippet: ''
+        variation_implementation: ''
+        variation_specs: ''
+      - variation_code_snippet: ''
+        variation_description: '![50/50 info unit group](/design-system/images/uploads/50-50.png)'
         variation_jinja_code_snippet: >-
           File in https://github.com/cfpb/consumerfinance.gov:
 
 
           https://github.com/cfpb/consumerfinance.gov/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html
         variation_name: 50/50 info unit
-        variation_specs: ""
-      - variation_code_snippet: ""
-        variation_description: "![33/33/33 info unit
-          group](/design-system/images/uploads/33-33-33.png)"
+        variation_specs: ''
+      - variation_code_snippet: ''
+        variation_description: '![33/33/33 info unit
+          group](/design-system/images/uploads/33-33-33.png)'
         variation_jinja_code_snippet: >-
           File in https://github.com/cfpb/consumerfinance.gov:
 
 
           https://github.com/cfpb/consumerfinance.gov/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
         variation_name: 33/33/33 info unit
-        variation_specs: ""
+        variation_specs: ''
     variation_group_name: Types
-    variation_group_description: "There are three types of info units: 25/75, 50/50, and 33/33/33. "
+    variation_group_description: 'There are three types of info units: 25/75, 50/50, and 33/33/33. '
 guidelines: >-
   ### Content guidelines
 
@@ -128,10 +128,10 @@ guidelines: >-
   * If an info unit group contains both an image and a call-to-action link, option to make the image link to the call-to-action URL. If there are multiple call-to-action links, the image will link to the first link.
 eyebrow: Main content
 title: Info unit groups
-description: "Info unit groups are used to draw a user’s eye to key information
+description: 'Info unit groups are used to draw a user’s eye to key information
   on a page. An info unit can contain an image, brief description, and
   call-to-action link to lead a user to additional content on a child or sibling
-  page. "
+  page. '
 use_cases: >-
   ### When to use
 
@@ -143,8 +143,8 @@ use_cases: >-
   ### When other options are better
 
   - When presenting multiple paragraphs of content
-behavior: "All info units stack to one column at small screen size. "
-accessibility: ""
+behavior: 'All info units stack to one column at small screen size. '
+accessibility: ''
 related_items: "[](https://cfpb.github.io/design-system/components/links)[](htt\
   ps://cfpb.github.io/design-system/foundation/typography)"
 last_updated: 2019-08-30T16:07:00.000Z

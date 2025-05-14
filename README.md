@@ -25,8 +25,9 @@ The project has a dependency on Ruby because it uses Jekyll. If you do not have 
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 brew install openssl
 brew link openssl --force
-rvm install ruby-3.2.3 -C --with-openssl-dir=$(brew --prefix openssl@3)
-rvm --default use 3.2.3
+rvm get master
+rvm install ruby-3.4.3 -C --with-openssl-dir=$(brew --prefix openssl@3)
+rvm --default use 3.4.3
 gem install eventmachine -- --with-openssl-dir=$(brew --prefix openssl@3)
 bundle install
 ```

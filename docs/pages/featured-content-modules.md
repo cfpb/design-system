@@ -38,13 +38,13 @@ guidelines: >-
   #### Heading 
 
 
-  * Maximum 35 characters including spaces 
+  * Maximum 35 characters
 
 
   #### Description 
 
 
-  * Maximum 160 characters including spaces 
+  * Maximum 160 characters
 
   * Should be action-oriented and succinctly state what the item is about and how it relates to the main content of the page 
 
@@ -58,7 +58,7 @@ guidelines: >-
     * If your FCM does have a video, do not present a call-to action link. The desired action is for the user to play the video, so the play button serves as a visual call-to-action.  
   * Call-to-action link guidelines 
 
-    * Maximum 35 characters including spaces 
+    * Maximum 35 characters
     * Should clearly tie to the heading and description 
     * Should begin with an action verb such as “explore,” “read,” “learn,” or “discover”  
 

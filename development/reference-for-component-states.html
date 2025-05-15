@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Google Tag Manager code -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
+  <title>Reference for component states - CFPB Design System</title>
+  <meta name="description" content="CFPB's design system">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/design-system/dist/main.css">
+  <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+  </script>
+</head>
+<body class="t-variation">
+  <!-- Google Tag Manager code -->
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <div class="skip-nav">
+    <a class="skip-nav__link" href="#main">
+        Skip to main content
+    </a>
+  </div>
+  <header role="banner" class="site-header-wrapper">
+
+  <div class="m-global-eyebrow">
+    <div class="a-tagline">
+        <span class="u-usa-flag"></span>
+        <div>
+            An official website of the
+            <span class="u-nowrap">United States government</span>
+        </div>
+    </div>
+</div>
+
+
+  <div class="site-header">
+
+    <form id="search-form" action="/design-system/search" method="get">
+    <div class="o-search-input">
+        <div class="o-search-input__input">
+            <label for="search-box" class="o-search-input__input-label" aria-label="Search for a term">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--search" viewbox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"></path></svg>
+            </label>
+            <input type="search" id="search-box" name="searchQuery" value="" class="a-text-input a-text-input__full" title="Enter your query" autocomplete="off" maxlength="75">
+            <button type="reset" onclick="document.getElementById('search-box').setAttribute('value','')" aria-label="Clear search" title="Clear search">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewbox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
+            </button>
+        </div>
+        <button class="a-btn" type="submit" aria-label="Search for term(s)">
+            Search
+        </button>
+    </div>
+</form>
+
+
+    <h1 class="title">
+      <a class="title-link" href="/design-system/">
+        <span class="demi">CFPB</span> Design System
+      </a>
+    </h1>
+  </div> <!-- /.wrapper -->
+</header>
+
+
+  <div id="redirect-banner" class="block block--flush-top block--flush-bottom block--padded-top u-hidden">
+  <div class="m-global-banner">
+    <div class="wrapper wrapper--match-content">
+      <div class="m-notification m-notification--warning m-notification--visible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--warning-round" viewbox="0 0 17 20.4"><path d="M16.406 10.283a7.917 7.917 0 1 1-7.917-7.917 7.916 7.916 0 0 1 7.917 7.917zM9.48 14.367a1.003 1.003 0 1 0-1.004 1.003 1.003 1.003 0 0 0 1.004-1.003zM7.697 11.53a.792.792 0 0 0 1.583 0V5.262a.792.792 0 0 0-1.583 0z"></path></svg>
+        <div class="m-notification__content">
+          <div class="m-notification__message">
+            You’ve been redirected to this website from
+            <span data-redirect="source-name"></span>.
+          </div>
+          <p class="m-notification__explanation">
+            The website you were trying to visit has been deprecated.
+            Future updates will happen here.
+          </p>
+          <p>
+            A permanent snapshot of
+            <span data-redirect="source-name"></span>
+            is available at
+            <a data-redirect="archive-website"></a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <main id="main" role="main">
+  <aside class="ds-sidebar">
+
+<details open class="ds-nav-container">
+
+    <summary class="h4">Navigation</summary>
+
+    <ul class="m-list m-list--links">
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/foundation">Foundation</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/components">Components</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/patterns">Patterns</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pages">Pages</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/development">Development</a>
+                </div>
+
+            
+                
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">General principles</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/atomic-components">Atomic components</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/variables">Variables</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Getting started</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/getting-started">Getting Started</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/integrating-the-design-system-into-your-project">Integrating the Design System into your project</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/reference-for-component-states">Reference for component states</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Layout</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/blocks">Blocks</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/main-content-and-sidebars">Main content and sidebars</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Utilities</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/helper-classes-and-mixins">Helper classes and mixins</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/media-queries">Media queries</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/guidelines">Guidelines</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+    </ul>
+
+</details>
+
+</aside>
+
+
+  <div class="ds-content">
+    <section>
+
+    <h1 class="component-header u-mb30">
+        Reference for component states
+    </h1>
+
+    
+
+    
+
+    
+
+    
+    
+    <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
+        
+    </ul>
+    
+
+    
+    <section id="description" class="u-mb30">
+        <p>This is a reference page for various states of the <a href="/design-system/components/">components found within the
+design system</a>. Refer to the individual component pages for their usage
+guidance.</p>
+
+    </section>
+    
+
+    
+
+        
+            
+            <h2>
+                Buttons
+            </h2>
+            
+
+            
+                <div class="m-btn-group">
+  <button class="a-btn" title="Default state">Default state</button>
+
+  <button class="a-btn hover" title="Hover state">Hover state</button>
+
+  <button class="a-btn focus" title="Focus state">Focus state</button>
+
+  <button class="a-btn active" title="Active state">Active state</button>
+</div>
+
+<br>
+
+<div class="m-btn-group">
+  <button class="a-btn a-btn--secondary" title="Default state">
+    Default state
+  </button>
+
+  <button class="a-btn a-btn--secondary hover" title="Hover state">
+    Hover state
+  </button>
+
+  <button class="a-btn a-btn--secondary focus" title="Focus state">
+    Focus state
+  </button>
+
+  <button class="a-btn a-btn--secondary active" title="Active state">
+    Active state
+  </button>
+</div>
+
+<br>
+
+<div class="m-btn-group">
+  <button class="a-btn a-btn--disabled" title="Default state" disabled>
+    Default state
+  </button>
+
+  <button class="a-btn a-btn--disabled hover" title="Hover state" disabled>
+    Hover state
+  </button>
+
+  <button class="a-btn a-btn--disabled focus" title="Focus state" disabled>
+    Focus state
+  </button>
+</div>
+
+<br>
+
+<div class="m-btn-group">
+  <button class="a-btn a-btn--warning" title="Default state">
+    Default state
+  </button>
+
+  <button class="a-btn a-btn--warning hover" title="Hover state">
+    Hover state
+  </button>
+
+  <button class="a-btn a-btn--warning focus" title="Focus state">
+    Focus state
+  </button>
+
+  <button class="a-btn a-btn--warning active" title="Active state">
+    Active state
+  </button>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h4>Full-width button (on x-small screens)</h4>
+
+<div class="m-btn-group">
+  <button class="a-btn a-btn--full-on-xs" title="Default state">
+    Default state
+  </button>
+
+  <button class="a-btn a-btn--full-on-xs hover" title="Hover state">
+    Hover state
+  </button>
+
+  <button class="a-btn a-btn--full-on-xs focus" title="Focus state">
+    Focus state
+  </button>
+
+  <button class="a-btn a-btn--full-on-xs active" title="Active state">
+    Active state
+  </button>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h4>Button with icon</h4>
+
+<div class="m-btn-group">
+  <button class="a-btn a-btn--secondary">
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewbox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"></path></svg>
+    <span>Go back</span>
+  </button>
+  <button class="a-btn">
+    <span>Continue</span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewbox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"></path></svg>
+  </button>
+</div>
+
+<br>
+
+<button class="a-btn">
+  <span>Upload file</span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--upload" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zm-1.234 4a.554.554 0 0 1-.784 0L6.55 8.747v5.121a.554.554 0 0 1-1.108 0V8.747l-1.483 1.482a.554.554 0 0 1-.783-.784l2.428-2.428a.554.554 0 0 1 .783 0l2.429 2.428a.554.554 0 0 1 0 .784"></path></svg>
+</button>
+
+<br>
+
+<button class="a-btn">
+  <span>Submit your complaint</span>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--updating" viewbox="0 0 16 19"><path d="M5.857 3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.4 5.4 0 0 0-1.032 2.27 1.03 1.03 0 1 1-2.02-.395A7.46 7.46 0 0 1 2.235 4.91h-.748a1.03 1.03 0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03m-3.25 9.237a1.03 1.03 0 0 1-1.358-.523 7.5 7.5 0 0 1-.37-1.036 1.03 1.03 0 1 1 1.983-.55 5.5 5.5 0 0 0 .269.751 1.03 1.03 0 0 1-.524 1.358m2.905 2.439a1.03 1.03 0 0 1-1.42.322 7.5 7.5 0 0 1-.885-.652 1.03 1.03 0 0 1 1.34-1.563 5.4 5.4 0 0 0 .643.473 1.03 1.03 0 0 1 .322 1.42m3.68.438a1.03 1.03 0 0 1-1.014 1.044h-.106a8 8 0 0 1-.811-.044 1.03 1.03 0 0 1 .224-2.046 5 5 0 0 0 .664.031h.014a1.03 1.03 0 0 1 1.03 1.015zm.034-12.847a1.03 1.03 0 0 1-1.029 1.01h-.033a1.03 1.03 0 0 1 .017-2.06h.017l.019.001a1.03 1.03 0 0 1 1.009 1.05zm3.236 11.25a1.03 1.03 0 0 1-.3 1.425 8 8 0 0 1-.797.453 1.03 1.03 0 1 1-.905-1.849 6 6 0 0 0 .578-.328 1.03 1.03 0 0 1 1.424.3zM10.475 3.504a1.03 1.03 0 0 1 1.41-.359l.018.011a1.03 1.03 0 1 1-1.06 1.764l-.01-.006a1.03 1.03 0 0 1-.358-1.41m4.26 9.445a8 8 0 0 1-.315.56 1.03 1.03 0 1 1-1.749-1.086 5 5 0 0 0 .228-.405 1.03 1.03 0 1 1 1.836.93zm-1.959-6.052a1.03 1.03 0 0 1 1.79-1.016l.008.013a1.03 1.03 0 1 1-1.79 1.017zm2.764 2.487a9 9 0 0 1 0 .366 1.03 1.03 0 0 1-1.029 1.005h-.025A1.03 1.03 0 0 1 13.482 9.7a5 5 0 0 0 0-.266 1.03 1.03 0 0 1 1.003-1.055h.026a1.03 1.03 0 0 1 1.029 1.004z"></path></svg>
+</button>
+
+<br>
+<hr>
+<br>
+
+<h4>Button link</h4>
+
+<div class="m-btn-group">
+  <a class="a-btn">
+    <span>Link styled as a button</span>
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg>
+  </a>
+  <button class="a-btn a-btn--link" href="#">
+    <span>Button styled as a link</span>
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg>
+  </button>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Checkboxes
+            </h2>
+            
+
+            
+                <h4>States</h4>
+
+<div class="m-form-field m-form-field--checkbox">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox">
+  <label class="a-label" for="test_checkbox">Enabled</label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--checkbox">
+  <input class="a-checkbox hover" type="checkbox" id="test_checkbox_basic_hover">
+  <label class="a-label" for="test_checkbox_basic_hover">Hover</label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--checkbox">
+  <input class="a-checkbox focus" type="checkbox" id="test_checkbox_basic_focus">
+  <label class="a-label" for="test_checkbox_basic_focus">Focus</label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--checkbox">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_checked" checked>
+  <label class="a-label" for="test_checkbox_basic_checked">Selected</label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--checkbox">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled>
+  <label class="a-label" for="test_checkbox_basic_disabled">Disabled</label>
+</div>
+
+<br>
+
+<!--Disabled/selected-->
+
+<div class="m-form-field m-form-field--checkbox">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
+  <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h4>Validation status - success</h4>
+
+<!--Success-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-success">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_success">
+  <label class="a-label" for="test_checkbox_success">Success</label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-success">
+  <input class="a-checkbox hover" type="checkbox" id="test_checkbox_success_hover">
+  <label class="a-label" for="test_checkbox_success_hover">Success - Hover</label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-success">
+  <input class="a-checkbox focus" type="checkbox" id="test_checkbox_success_focus">
+  <label class="a-label" for="test_checkbox_success_focus">Success - Focus</label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-success">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_success_checked" checked>
+  <label class="a-label" for="test_checkbox_success_checked">Success - Selected</label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-success">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_success_disabled" disabled>
+  <label class="a-label" for="test_checkbox_success_disabled">Success - Disabled</label>
+</div>
+
+<br>
+
+<!--Disabled/selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-success">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_success_disabled_selected" disabled checked>
+  <label class="a-label" for="test_checkbox_success_disabled_selected">Success - Disabled/selected</label>
+</div>
+
+<br>
+
+<h4>Validation status - warning</h4>
+
+<!--Warning-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-warning">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_warning">
+  <label class="a-label" for="test_checkbox_warning">Warning</label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-warning">
+  <input class="a-checkbox hover" type="checkbox" id="test_checkbox_warning_hover">
+  <label class="a-label" for="test_checkbox_warning_hover">Warning - Hover</label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-warning">
+  <input class="a-checkbox focus" type="checkbox" id="test_checkbox_warning_focus">
+  <label class="a-label" for="test_checkbox_warning_focus">Warning - Focus</label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-warning">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_warning_checked" checked>
+  <label class="a-label" for="test_checkbox_warning_checked">Warning - Selected</label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-warning">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_warning_disabled" disabled>
+  <label class="a-label" for="test_checkbox_warning_disabled">Warning - Disabled</label>
+</div>
+
+<br>
+
+<!--Disabled/selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-warning">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_warning_disabled_selected" disabled checked>
+  <label class="a-label" for="test_checkbox_warning_disabled_selected">Warning - Disabled/selected</label>
+</div>
+
+<br>
+
+<h4>Validation status - error</h4>
+
+<!--Warning-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-error">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_error">
+  <label class="a-label" for="test_checkbox_error">Warning</label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-error">
+  <input class="a-checkbox hover" type="checkbox" id="test_checkbox_error_hover">
+  <label class="a-label" for="test_checkbox_error_hover">Warning - Hover</label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-error">
+  <input class="a-checkbox focus" type="checkbox" id="test_checkbox_error_focus">
+  <label class="a-label" for="test_checkbox_error_focus">Warning - Focus</label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-error">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_error_checked" checked>
+  <label class="a-label" for="test_checkbox_error_checked">Warning - Selected</label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-error">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_error_disabled" disabled>
+  <label class="a-label" for="test_checkbox_error_disabled">Warning - Disabled</label>
+</div>
+
+<br>
+
+<!--Disabled/selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-error">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_error_disabled_selected" disabled checked>
+  <label class="a-label" for="test_checkbox_error_disabled_selected">Warning - Disabled/selected</label>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Large target area checkbox
+            </h2>
+            
+
+            
+                <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default">
+  <label class="a-label" for="test_checkbox_lg_default">Default</label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover">
+  <label class="a-label" for="test_checkbox_lg_hover">Hover</label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus">
+  <label class="a-label" for="test_checkbox_lg_focus">Focus</label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_checked" checked>
+  <label class="a-label" for="test_checkbox_lg_checked">Selected</label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled" disabled>
+  <label class="a-label" for="test_checkbox_lg_disabled">Disabled</label>
+</div>
+
+<br>
+
+<!--Disabled/Selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled_selected" disabled checked>
+  <label class="a-label" for="test_checkbox_lg_disabled_selected">Disabled/Selected</label>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Large target area checkbox (with helper text)
+            </h2>
+            
+
+            
+                <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox" type="radio" id="test_checkbox_lg_helper">
+  <label class="a-label" for="test_checkbox_lg_helper">
+    Label
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover">
+  <label class="a-label" for="test_checkbox_lg_hover">
+    Hover
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus">
+  <label class="a-label" for="test_checkbox_lg_focus">
+    Focus
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_checked" checked>
+  <label class="a-label" for="test_checkbox_lg_checked">
+    Selected
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled" disabled>
+  <label class="a-label" for="test_checkbox_lg_disabled">
+    Disabled
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Disabled/Selected-->
+
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+  <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled_selected" disabled checked>
+  <label class="a-label" for="test_checkbox_lg_disabled_selected">
+    Disabled/Selected
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Radio buttons
+            </h2>
+            
+
+            
+                <h4>States</h4>
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio" type="radio" id="test_radio_basic_default">
+  <label class="a-label" for="test_radio_basic_default">Enabled</label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio hover" type="radio" id="test_radio_basic_hover">
+  <label class="a-label" for="test_radio_basic_hover">Hover</label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio focus" type="radio" id="test_radio_basic_focus">
+  <label class="a-label" for="test_radio_basic_focus">Focus</label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio" type="radio" id="test_radio_basic_checked" checked>
+  <label class="a-label" for="test_radio_basic_checked">Selected</label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio" type="radio" id="test_radio_basic_disabled" disabled>
+  <label class="a-label" for="test_radio_basic_disabled">Disabled</label>
+</div>
+
+<br>
+
+<!--Disabled/selected-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio" type="radio" id="test_radio_basic_disabled_selected" disabled checked>
+  <label class="a-label" for="test_radio_basic_disabled_selected">Disabled/selected</label>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Radio buttons (with helper text)
+            </h2>
+            
+
+            
+                <h4>States</h4>
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio" type="radio" id="test_radio_basic_helper">
+  <label class="a-label" for="test_radio_basic_helper">
+    Default
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio hover" type="radio" id="test_radio_hover_helper">
+  <label class="a-label" for="test_radio_hover_helper">
+    Hover
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio focus" type="radio" id="test_radio_focus_helper">
+  <label class="a-label" for="test_radio_focus_helper">
+    Focus
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio" type="radio" id="test_radio_checked_helper" checked>
+  <label class="a-label" for="test_radio_checked_helper">
+    Selected
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio" type="radio" id="test_radio_disabled_helper" disabled>
+  <label class="a-label" for="test_radio_disabled_helper">
+    Disabled
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Disabled/selected-->
+
+<div class="m-form-field m-form-field--radio">
+  <input class="a-radio" type="radio" id="test_radio_disabled_checked_helper" checked disabled>
+  <label class="a-label" for="test_radio_disabled_checked_helper">
+    Disabled/Selected
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Large target area radio button
+            </h2>
+            
+
+            
+                <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio" type="radio" id="test_radio_lg_default">
+  <label class="a-label" for="test_radio_lg_default">Enabled</label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio hover" type="radio" id="test_radio_lg_hover">
+  <label class="a-label" for="test_radio_lg_hover">Hover</label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio focus" type="radio" id="test_radio_lg_focus">
+  <label class="a-label" for="test_radio_lg_focus">Focus</label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio" type="radio" id="test_radio_lg_checked" checked>
+  <label class="a-label" for="test_radio_lg_checked">Selected</label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled>
+  <label class="a-label" for="test_radio_lg_disabled">Disabled</label>
+</div>
+
+<br>
+
+<!--Disabled/selected-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio" type="radio" id="test_radio_lg_disabled_selected" disabled checked>
+  <label class="a-label" for="test_radio_lg_disabled_selected">Disabled/selected</label>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Large target area radio button (with helper text)
+            </h2>
+            
+
+            
+                <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio" type="radio" id="test_radio_lg_helper">
+  <label class="a-label" for="test_radio_lg_helper">
+    Default
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Hover-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio hover" type="radio" id="test_radio_hover_lg_helper">
+  <label class="a-label" for="test_radio_hover_lg_helper">
+    Hover
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Focus-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio focus" type="radio" id="test_radio_focus_lg_helper">
+  <label class="a-label" for="test_radio_focus_lg_helper">
+    Focus
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio" type="radio" id="test_radio_selected_lg_helper" checked>
+  <label class="a-label" for="test_radio_selected_lg_helper">
+    Selected
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Disabled-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio" type="radio" id="test_radio_disabled_lg_helper" disabled>
+  <label class="a-label" for="test_radio_disabled_lg_helper">
+    Disabled
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+<br>
+
+<!--Disabled/selected-->
+
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+  <input class="a-radio" type="radio" id="test_radio_disabled_selected_lg_helper" checked disabled>
+  <label class="a-label" for="test_radio_disabled_selected_lg_helper">
+    Disabled/selected
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Text inputs
+            </h2>
+            
+
+            
+                <h4>States</h4>
+
+<input class="a-text-input" type="text" id="textinput-example-default" placeholder="Placeholder text" value="Enabled">
+
+<br><br>
+
+<input class="a-text-input hover" type="text" id="textinput-example-hover" placeholder="Placeholder text" value="Hover">
+<br><br>
+
+<input class="a-text-input focus" type="text" id="textinput-example-focus" placeholder="Placeholder text" value="Focus">
+<br><br>
+
+<input class="a-text-input" type="text" id="textinput-example-disabled" placeholder="Disabled" disabled>
+
+<br><br>
+<hr>
+<br>
+
+<h4>Validation status</h4>
+
+<input class="a-text-input a-text-input--success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
+
+<br><br>
+
+<input class="a-text-input a-text-input--warning" type="text" placeholder="Warning" id="form-input-warning" aria-describedby="form-input-warning_message">
+
+<br><br>
+
+<input class="a-text-input a-text-input--error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
+
+<br>
+<hr>
+<br>
+
+<h4>Text input (full width)</h4>
+
+<div class="m-form-field">
+  <input class="a-text-input a-text-input--full" type="text" id="full-textinput-example" placeholder="Placeholder text" value="Input text">
+</div>
+
+<br>
+<hr>
+<br>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Selects
+            </h2>
+            
+
+            
+                <!--Default state-->
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test_select_enabled">
+    Default
+  </label>
+  <div class="a-select">
+    <select id="test_select_enabled">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+</div>
+
+<br>
+
+<!--Hover state-->
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test_select__hover">
+    Hover
+  </label>
+  <div class="a-select">
+    <select id="test_select__hover" class="hover">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+</div>
+
+<br>
+
+<!--Focus state-->
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test_select__focus">
+    Focus
+  </label>
+  <div class="a-select">
+    <select id="test_select__focus" class="focus">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+</div>
+
+<br>
+
+<!--Disabled state-->
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test_select__disabled">Disabled</label>
+  <div class="a-select a-select--disabled">
+    <select id="test_select__disabled" disabled>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+            
+            <h2>
+                Multiselects
+            </h2>
+            
+
+            
+                <div class="m-form-field">
+  <label class="a-label a-label--heading" for="test_select__multiple">
+    Example label
+  </label>
+  <select class="o-multiselect" id="test_select__multiple" multiple>
+    <option value="option1" selected>Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <option value="option4" selected>Option 4</option>
+    <option value="option5">Option 5</option>
+    <option value="option6">Option 6</option>
+    <option value="option7">Option 7</option>
+    <option value="option8">
+      Multiselect options can also contain long words like
+      supercalifragilisticexpialidocious
+    </option>
+  </select>
+</div>
+
+            
+
+            <br>
+            <hr>
+            <br>
+        
+    
+
+    
+
+    
+    
+        <section class="sticky-header u-mb45">
+
+            
+
+            
+
+            
+
+            
+        </section>
+    
+
+    
+
+    
+
+    
+
+    
+        <section class="content-l u-mb45">
+            <div class="content-l__col content-l__col-1">
+                <div>
+                    <section>
+                        <h2 id="latest-updates">Latest Updates</h2>
+                        <div class="content__line--wide content__line u-mb20"></div>
+                        <strong>Page last edited:</strong>
+                        
+                        
+                        
+                        
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/reference-for-component-states.md">
+                            <time datetime="2025-05-15 13:58:15 -0400">
+                                 1:58:15 PM May 15, 2025
+                            </time>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+
+    </section>
+</div>
+
+<!-- .content__main --> 
+
+    <div class="o-editor" id="edit-page">
+      <a class="a-btn" href="/design-system/updating-this-website?page=Reference+for+component+states" title="Edit this page in Decap CMS">
+        <span>Edit page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--edit" viewbox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg>
+      </a>
+    </div>
+  
+</main>
+
+
+  
+  <footer class="ds-footer" role="contentinfo">
+
+    <hr>
+
+    <div class="block block--sub ds-footer__content">
+        <p>
+            <small>
+                We need your help keeping the Design System accurate and up-to-date!
+                If you see something wrong or missing,
+                <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
+                If you can’t make those changes yourself,
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Reference%20for%20component%20states%3A+Add+issue+description">file an issue</a>.
+                If you have a substantial change to an existing page, or a new standard you want to add,
+                <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
+            </small>
+        </p>
+    </div>
+
+</footer>
+
+  
+  <script src="/design-system/dist/main.js" charset="utf-8"></script>
+
+  
+
+</body>
+</html>

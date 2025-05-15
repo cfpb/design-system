@@ -10,75 +10,12 @@ description: Selects allow users to make a single selection or multiple
 variation_groups:
   - variations:
       - variation_code_snippet: >-
-          <!--Enabled state-->
-
-
           <div class="m-form-field">
               <label class="a-label a-label--heading" for="test_select_enabled">
-                  Enabled
+                  Example label
               </label>
               <div class="a-select">
                   <select id="test_select_enabled">
-                      <option value="option1">Option 1</option>
-                      <option value="option2">Option 2</option>
-                      <option value="option3">Option 3</option>
-                      <option value="option4">Option 4</option>
-                  </select>
-              </div>
-          </div>
-
-
-          <br>
-
-
-          <!--Hover state-->
-
-          <div class="m-form-field">
-              <label class="a-label a-label--heading" for="test_select__hover">
-                 Hover
-              </label>
-              <div class="a-select">
-                  <select id="test_select__hover" class="hover">
-                      <option value="option1">Option 1</option>
-                      <option value="option2">Option 2</option>
-                      <option value="option3">Option 3</option>
-                      <option value="option4">Option 4</option>
-                  </select>
-              </div>
-          </div>
-
-
-          <br>
-
-
-          <!--Focus state-->
-
-
-          <div class="m-form-field">
-              <label class="a-label a-label--heading" for="test_select__focus">
-                  Focus
-              </label>
-              <div class="a-select">
-                  <select id="test_select__focus" class="focus">
-                      <option value="option1">Option 1</option>
-                      <option value="option2">Option 2</option>
-                      <option value="option3">Option 3</option>
-                      <option value="option4">Option 4</option>
-                  </select>
-              </div>
-          </div>
-
-
-          <br>
-
-
-          <!--Disabled state-->
-
-
-          <div class="m-form-field">
-              <label class="a-label a-label--heading" for="test_select__disabled">Disabled</label>
-              <div class="a-select a-select--disabled">
-                  <select id="test_select__disabled" disabled>
                       <option value="option1">Option 1</option>
                       <option value="option2">Option 2</option>
                       <option value="option3">Option 3</option>
@@ -99,7 +36,7 @@ variation_groups:
         variation_code_snippet: >-
           <div class="m-form-field">
               <label class="a-label a-label--heading" for="test_select__multiple">
-                  Label
+                  Example label
               </label>
               <select class="o-multiselect" id="test_select__multiple" multiple>
                   <option value="option1" selected>Option 1</option>

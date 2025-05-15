@@ -5,13 +5,7 @@ section: components
 variation_groups:
   - variations:
       - variation_code_snippet: >-
-          <!--States are shown for demonstration purposes only-->
-
-          <h4>
-
-          States
-
-          </h4>
+          <h4>Example checkbox</h4>
 
           <div class="m-form-field m-form-field--checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox">
@@ -20,56 +14,17 @@ variation_groups:
 
           <br>
 
-          <!--Hover-->
-
-          <div class="m-form-field m-form-field--checkbox">
-              <input class="a-checkbox hover" type="checkbox" id="test_checkbox_basic_hover">
-              <label class="a-label" for="test_checkbox_basic_hover">Hover</label>
-          </div>
-
-          <br>
-
-          <!--Focus-->
-
-          <div class="m-form-field m-form-field--checkbox">
-              <input class="a-checkbox focus" type="checkbox" id="test_checkbox_basic_focus">
-              <label class="a-label" for="test_checkbox_basic_focus">Focus</label>
-          </div>
-
-          <br>
-
-          <!--Selected-->
-
-          <div class="m-form-field m-form-field--checkbox">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_checked" checked>
-              <label class="a-label" for="test_checkbox_basic_checked">Selected</label>
-          </div>
-
-          <br>
-
           <!--Disabled-->
 
           <div class="m-form-field m-form-field--checkbox">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled>
-              <label class="a-label" for="test_checkbox_basic_disabled">Disabled</label>
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled>
+              <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled</label>
           </div>
 
           <br>
+          <br>
 
-          <!--Disabled/selected-->
-
-          <div class="m-form-field m-form-field--checkbox">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
-              <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
-          </div>
-
-          <br><br>
-
-          <h4>
-
-          Validation status
-
-          </h4>
+          <h4>Validation status</h4>
 
           <!--Success-->
 
@@ -137,43 +92,6 @@ variation_groups:
           <br>
 
 
-          <!--Hover-->
-
-          <div class="m-form-field
-                      m-form-field--checkbox
-                      m-form-field--lg-target">
-              <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover">
-              <label class="a-label" for="test_checkbox_lg_hover">Hover</label>
-          </div>
-
-          <br>
-
-
-          <!--Focus-->
-
-          <div class="m-form-field
-                      m-form-field--checkbox
-                      m-form-field--lg-target">
-              <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus">
-              <label class="a-label" for="test_checkbox_lg_focus">Focus</label>
-          </div>
-
-
-          <br>
-
-
-          <!--Selected-->
-
-          <div class="m-form-field
-                      m-form-field--checkbox
-                      m-form-field--lg-target">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_checked" checked>
-              <label class="a-label" for="test_checkbox_lg_checked">Selected</label>
-          </div>
-
-          <br>
-
-
           <!--Disabled-->
 
           <div class="m-form-field
@@ -182,26 +100,6 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled" disabled>
               <label class="a-label" for="test_checkbox_lg_disabled">Disabled</label>
           </div>
-
-          <br>
-
-
-          <!--Disabled/Selected-->
-
-          <!--
-
-          <div class="m-form-field
-                      m-form-field--checkbox
-                      m-form-field--lg-target">
-              <input class="a-checkbox"
-                     type="checkbox"
-                     id="test_checkbox_lg_disabled"
-                     disabled
-                     checked>
-              <label class="a-label" for="test_checkbox_lg_disabled">Disabled/Selected</label>
-          </div>
-
-          -->
         variation_specs: ''
       - variation_is_deprecated: false
         variation_name: Large target area checkbox (with helper text)
@@ -215,7 +113,7 @@ variation_groups:
                   <small class="a-label__helper">
                       (This is optional helper text)
                   </small>
-                </label>
+              </label>
           </div>
     variation_group_name: Types
 guidelines: >-

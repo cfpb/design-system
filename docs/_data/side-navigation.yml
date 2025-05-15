@@ -102,6 +102,7 @@ first-level:
         nav-items:
           - page: Getting Started
           - page: Integrating the Design System into your project
+          - page: Reference for component states
       - heading: Layout
         nav-items:
           - page: Blocks

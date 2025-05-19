@@ -145,7 +145,9 @@ use_cases: >-
   - When presenting multiple paragraphs of content
 behavior: 'All info units stack to one column at small screen size. '
 accessibility: ''
-related_items: "[](https://cfpb.github.io/design-system/components/links)[](htt\
-  ps://cfpb.github.io/design-system/foundation/typography)"
+related_items: >-
+  * [Links](https://cfpb.github.io/design-system/components/links)
+
+  * [Typography](https://cfpb.github.io/design-system/foundation/typography)
 last_updated: 2019-08-30T16:07:00.000Z
 ---

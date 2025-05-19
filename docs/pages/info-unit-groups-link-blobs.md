@@ -148,6 +148,6 @@ accessibility: ''
 related_items: >-
   * [Links](https://cfpb.github.io/design-system/components/links)
 
-  * [Typography](https://cfpb.github.io/design-system/foundation/typography)
+  * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
 last_updated: 2019-08-30T16:07:00.000Z
 ---

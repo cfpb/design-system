@@ -80,11 +80,9 @@
 }
 
 .u-show-on-mobile {
-  display: none;
-
-  // Mobile only.
-  @include respond-to-max($bp-xs-max) {
-    display: block;
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    display: none;
   }
 }
 

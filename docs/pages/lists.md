@@ -100,14 +100,6 @@ variation_groups:
           smaller screens. See example on the <a
           href="/design-system/components/links#list-link">links page</a>. '
         variation_name: Link list
-      - variation_code_snippet: |-
-          <ul class="m-list m-list--spaced">
-              <li class="m-list__item">List item 1</li>
-              <li class="m-list__item">List item 2</li>
-              <li class="m-list__item">List item 3</li>
-          </ul>
-        variation_description: Spaced list adds extra padding to every element in a list.
-        variation_name: Spaced list
     variation_group_name: Variations
 guidelines: >-
   ### Content guidelines

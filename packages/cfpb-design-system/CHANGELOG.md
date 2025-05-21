@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.9.0](https://github.com/cfpb/design-system/compare/v3.8.0..3.9.0) - May 13, 2025
+## [3.10.0](https://github.com/cfpb/design-system/compare/v3.9.0..3.10.0) - May 21, 2025
+
+### PRs in this release
+
+- PR #[2237](https://github.com/cfpb/design-system/pull/2237): Remove `m-list--spaced` - Ans
+- PR #[2246](https://github.com/cfpb/design-system/pull/2246): Fix full width button with icon example - Ans
+
+### General
+
+- Remove `m-list--spaced` - ([be7a408](https://github.com/cfpb/design-system/commit/be7a4081a69e2b3c2dd710a8a7b53de67e02ded2)) - Ans
+- Fix full width button with icon example - ([605340e](https://github.com/cfpb/design-system/commit/605340e635fdd00e23dd50fb683aa6142e9ad92f)) - Ans
+
+## [3.9.0](https://github.com/cfpb/design-system/compare/v3.8.0..v3.9.0) - May 13, 2025
 
 ### PRs in this release
 

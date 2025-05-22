@@ -91,6 +91,7 @@
           &::before {
             background: $input-bg-disabled;
             border-color: $form-field-input-border-disabled;
+            outline: none;
           }
         }
       }

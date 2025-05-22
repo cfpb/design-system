@@ -266,11 +266,6 @@
         box-shadow: inset 0 0 0 2px $form-field-inset;
       }
 
-      &:checked:disabled + .a-label::before {
-        background-color: $input-bg-disabled-selected;
-        box-shadow: inset 0 0 0 2px $input-bg-disabled;
-      }
-
       &:focus:checked + .a-label::before,
       &.focus:checked + .a-label::before {
         border-color: $input-border-focused;
@@ -285,6 +280,14 @@
         box-shadow:
           0 0 0 1px $input-border-hover,
           inset 0 0 0 2px $form-field-inset;
+      }
+
+      &:checked:disabled + .a-label::before,
+      &:hover:checked:disabled + .a-label::before,
+      &.hover:checked:disabled + .a-label::before {
+        background-color: $input-bg-disabled-selected;
+        box-shadow: inset 0 0 0 2px $input-bg-disabled;
+        border-color: $form-field-input-border-disabled;
       }
     }
   }

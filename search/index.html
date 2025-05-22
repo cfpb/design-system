@@ -4135,19 +4135,7 @@ Label heading
                 
                     'variation_name1': 'Inline link',
                     'variation_description1': "Inline+links+appear+within+a+line+of+text+or+other+inline+elements.+Inline+links+are+underlined+and+retain+a+consistent+appearance+across+all+screen+widths.%0A",
-                    'variation_code_snippet1': `&lt;!--Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.--&gt;
-
-&lt;!--
-&lt;p&gt;
-    &lt;a href=&quot;#&quot;&gt;Default&lt;/a&gt;,
-    &lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;Visited&lt;/a&gt;,
-    &lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;Hovered&lt;/a&gt;,
-    &lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;Focused&lt;/a&gt;,
-    &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Active&lt;/a&gt;
-&lt;/p&gt;
---&gt;
-
-&lt;p&gt;Here&#39;s the &lt;a href=&quot;#&quot;&gt;default link style&lt;/a&gt;. For reference, here&#39;s the &lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;hover link style&lt;/a&gt;. Train your eyes on the &lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;focused link style&lt;/a&gt;. Jump to the &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;active link style&lt;/a&gt;. We’ve all been to the &lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;visited link style&lt;/a&gt;.&lt;/p&gt;`,
+                    'variation_code_snippet1': `&lt;a href=&quot;#&quot;&gt;Inline link&lt;/a&gt;`,
                 
                     'variation_name2': 'Standalone link',
                     'variation_description2': "Standalone+links+sit+on+their+own+line.+At+larger+screen+widths%2C+standalone+links+are+medium+weight+and+underlined.+At+smaller+screen+widths%2C+standalone+links+convert+to+full+block+links+with+top+and+bottom+borders+that+have+a+finger-friendly+touch+area.%0A",
@@ -4158,34 +4146,14 @@ Label heading
                 
                     'variation_name3': 'Link with icon',
                     'variation_description3': "Each+icon+should+be+used+exclusively+and+consistently+for+one+action.+An+icon+should+appear+after+the+text+it+represents.+The+only+exception+is+a+link+that+takes+a+user+to+a+previous+step+or+page%2C+where+the+icon+should+appear+before+the+link%E2%80%99s+text.+Icons+should+never+be+underlined.%0A",
-                    'variation_code_snippet3': `&lt;h4&gt;Inline&lt;/h4&gt;
-&lt;p&gt;
-  The document icon is used to emphasize a link that contains a
-        &lt;a class=&quot;a-link&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;a-link__text&quot;&gt;file or document&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--document" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z"/></svg>   
-        &lt;/a&gt;.
-  The external link icon is used to emphasize a link to a
-        &lt;a class=&quot;a-link&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;a-link__text&quot;&gt;non-CFPB webpage&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"/></svg>
-        &lt;/a&gt;. 
-&lt;/p&gt;
-&lt;h4&gt;Standalone&lt;/h4&gt;
-&lt;ul class=&quot;m-list m-list--links&quot;&gt;
-    &lt;li class=&quot;m-list__item&quot;&gt;
-        &lt;a class=&quot;a-link a-link--jump&quot; href=&quot;#&quot;&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg> &lt;span class=&quot;a-link__text&quot;&gt;Go back&lt;/span&gt;
-        &lt;/a&gt;       
-    &lt;/li&gt;
-    &lt;li class=&quot;m-list__item&quot;&gt;
-        &lt;a class=&quot;a-link a-link--jump&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;a-link__text&quot;&gt;Continue&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"/></svg>
-        &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;m-list__item&quot;&gt;
-        &lt;a class=&quot;a-link a-link--jump&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;a-link__text&quot;&gt;External link&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"/></svg>
-        &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;m-list__item&quot;&gt;
-        &lt;a class=&quot;a-link a-link--jump&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;a-link__text&quot;&gt;Document or file&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--document" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z"/></svg>
-        &lt;/a&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;`,
+                    'variation_code_snippet3': `&lt;!-- Inline --&gt;
+&lt;a class=&quot;a-link&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;a-link__text&quot;&gt;file or document&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--document" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z"/></svg>   
+&lt;/a&gt;
+
+&lt;!-- Standalone --&gt;
+&lt;a class=&quot;a-link a-link--jump&quot; href=&quot;#&quot;&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg> &lt;span class=&quot;a-link__text&quot;&gt;Go back&lt;/span&gt;
+&lt;/a&gt;       
+`,
                 
                     'variation_name4': 'List link',
                     'variation_description4': "A+list+link+is+an+item+in+a+set+of+two+or+more+stacked+standalone+links.+Items+in+a+link+list+are+medium+weight+and+are+underlined+at+larger+screen+widths.+At+smaller+screen+widths%2C+they+convert+to+full+block+links+with+a+top+and+bottom+border.%0A",

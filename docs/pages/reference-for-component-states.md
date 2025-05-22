@@ -8,6 +8,8 @@ description: |-
   guidance.
 
 code_examples:
+  - code_title: Links
+    code_snippet_url: examples/links.html
   - code_title: Buttons
     code_snippet_url: examples/buttons.html
   - code_title: Checkboxes

@@ -313,31 +313,34 @@ description: >-
   ### Examine your biases in the context of the project
 
 
-  During team formation, you should have spent time uncovering your biases and lived experiences. Take time to do the [frames of reference activity](#frames-of-reference) again as a team, taking into consideration the context of the project you’re beginning. Couple the activity with a review of [what you’ve learned about the audience](#learn-how-power-structures-can-affect-the-people-you-serve) for whom you’ll be designing.
+  During team formation, you should have spent time uncovering your biases and personal experiences. Take time to do the  [frames of reference activity](#frames-of-reference) again as a team, taking into consideration the context of the project you’re beginning. Pair the activity with a review of [what you’ve learned about the audience](#learn-how-power-structures-can-affect-the-people-you-serve) for whom you’ll be designing.
 
 
   ### Apply trauma-informed principles
 
 
-  Trauma is an event, a series of events, or a set of circumstances experienced by an individual or group as emotionally or physically harmful, and that has lasting effects on their sense of well-being. The trauma-informed approach aims to avoid re-traumatization of a person during the course of your work.
+  Trauma is an event, a series of events, or a set of circumstances experienced by an individual or group as emotionally or physically harmful. This can have lasting effects on their sense of well-being.  
 
 
-  People are not defined by their demographics or behaviors alone. Consider what events and circumstances may be impacting someone, especially when you know you need to work with vulnerable individuals or communities.
+  A trauma-informed approach aims to avoid re-traumatizing a person during the course of your work. 
+
+
+  People are not defined by their demographics or behaviors alone. Consider the events and circumstances that may be impacting someone, especially when you know you need to work with vulnerable individuals or communities. 
 
 
   {% include icons/favorite.svg %} <b>Ready to conduct research for your project?</b> Learn how to recognize and respond to trauma during a research session.
 
 
-  #### Create a safe space for your team.
+  #### Create a safe space for your team
 
 
-  It is possible that you and your team may experience second-hand trauma during a project. Sometimes called vicarious trauma, it’s when people have prolonged exposure to victims of trauma or sensitive topics related to traumatic experiences. [Learn about the signs for vicarious trauma](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#what-are-some-common-negative-reactions-to-vicarious-trauma) and make space to talk about how the work may be affecting the team. If you see someone on your team exhibiting signs of vicarious trauma, [there are several steps you can take](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#suggestions-for-coworkers).
+  It is possible that you and your team may experience second-hand trauma during a project. Sometimes called vicarious trauma, it’s when people have prolonged exposure to trauma victims or sensitive topics related to traumatic experiences. [Learn about the signs for vicarious trauma](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#what-are-some-common-negative-reactions-to-vicarious-trauma) and make space to talk about how the project work may be affecting the team. If you see someone on your team exhibiting signs of vicarious trauma, [there are several steps you can take](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#suggestions-for-coworkers).
 
 
   <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
-  Much of this guidance regarding trauma is based off well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
+  Much of this guidance regarding trauma is based on well-established research and experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
 
 
   ## Related pages

@@ -5,12 +5,12 @@ layout: variation
 section: guidelines
 jumplinks: Working together, Beginning a project
 variation_groups: []
-eyebrow: Community-centered design
+eyebrow: Equity-centered design
 status: Proposed
 description: >-
-  <p class="lead-paragraph">Before we’re able to design equitable and inclusive
-  products for the people and communities we serve, we must first <b>turn our
-  attention to the ways in which we work.</b></p>
+  <p class="lead-paragraph">Before we’re able to design useful products for the
+  people and communities we serve, we must first <b>turn our attention to the
+  ways in which we work.</b> </p>
 
 
   ![Illustration of people working together](/design-system/images/uploads/equity_design_setting_the_foundation.png)
@@ -22,7 +22,7 @@ description: >-
   [Identify lived experiences and biases](#identify-lived-experiences-and-biases)
 
 
-  [Investigate internalized oppression](#investigate-internalized-oppression)
+  [Investigate biases](#investigate-biases)
 
 
   [Use bias-free, person-centered language](#use-bias-free-person-centered-language)
@@ -31,7 +31,7 @@ description: >-
   [Establish team values](#establish-team-values)
 
 
-  [Assemble diverse teams](#assemble-diverse-teams)
+  [Assemble multifaceted teams](#assemble-multifaceted-teams)
 
 
   ### Identify lived experiences and biases
@@ -55,13 +55,14 @@ description: >-
 
   <h4 class="h3" id="frames-of-reference">Frames of reference</h4>
 
-  *Adapted from 18F’s [presentation on equity-centered design and research](https://www.youtube.com/watch?v=j1ZJO8maV7s)*
+  \*Adapted from 18F’s \[presentation on equity-centered design and research](https://www.youtube.com/watch?v=j1ZJO8maV7s)\*
 
 
   As a team, run through this activity to identify your individual and collective biases before beginning research or design activities. If possible, couple the exercise with a review of what you have learned about the audience.
 
 
   Everyone should choose how they want to participate, but ideally this can be a group activity.
+
 
   <h5 class="h4">Template</h5>
 
@@ -122,7 +123,7 @@ description: >-
   * Nielsen Norman Group has several resources pertaining to bias in UX. Watch their video, [Decision Biases Affecting UX Practitioners](https://www.nngroup.com/videos/decision-biases-ux-practitioners/), to learn how to mitigate your own biases.
 
 
-  ### Investigate internalized oppression
+  ### Investigate biases
 
 
   We encourage everyone to read widely to examine their own identity and internalized oppression—the false narratives or stereotypes that they may have internalized about themselves, and how they might perpetuate systemic oppression.
@@ -211,7 +212,7 @@ description: >-
   <br>
 
 
-  ### Assemble diverse teams
+  ### Assemble multifaceted teams
 
 
   Organizational leaders and managers should prioritize assembling teams with a diversity of lived experiences. Diversity is broad; it is the practice or quality of including or involving people from a range of different social and ethnic backgrounds.
@@ -343,10 +344,11 @@ description: >-
 
   ## Related pages
 
+
   * [Overview](https://cfpb.github.io/design-system/guidelines/overview)
 
   * [Conducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
 
   * [Design and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
-related_items: ''
+related_items: ""
 ---

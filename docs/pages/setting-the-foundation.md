@@ -273,7 +273,7 @@ description: >-
 
   * Investigate any injustices the community has faced at the hands of the government and any historic mistrust that has resulted. 
 
-  * Take time to learn about the regulations and/or policies currently in place that might affect the people and communities for who you are designing. Dig in to learn about how those policies evolved to be what they are today. 
+  * Take time to learn about the regulations and/or policies currently in place that might affect the people and communities for whom you are designing. Dig in to learn about how those policies evolved to be what they are today. 
 
   * Explore any tension that might impact how you are perceived as a representative of the federal government when engaging with these communities. 
 
@@ -328,7 +328,7 @@ description: >-
   People are not defined by their demographics or behaviors alone. Consider the events and circumstances that may be impacting someone, especially when you know you need to work with vulnerable individuals or communities. 
 
 
-  {% include icons/favorite.svg %} <b>Ready to conduct research for your project?</b> Learn how to recognize and respond to trauma during a research session.
+  {% include icons/favorite.svg %} <b>Ready to conduct research for your project?</b> [Learn how to recognize and respond to trauma during a research session.](https://cfpb.github.io/design-system/guidelines/conducting-research#recognize-and-respond-to-trauma-in-participants)
 
 
   #### Create a safe space for your team

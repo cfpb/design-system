@@ -149,12 +149,12 @@ description: >-
 
   <b>Use people-first language.</b><br>
 
-  [People-first language](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language/disability) is a way to respectfully acknowledge the humanity of an individual or group first, rather than the identity or condition they may experience. Examples of people-first language include “people with a mental disorder”, rather than calling someone “mentally ill”, or referring to someone as a “person without housing”, rather than as a “homeless person”. The specific terms preferred by an individual or group can vary, and do not always include people-first syntax; additionally, language is always changing. Refer to the resources in the “Further Reading” section below to better understand how to use people-first language, and always ask people directly how they wish to define themselves.
+  [People-first language](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language/disability) is a way to respectfully acknowledge the humanity of an individual or group first, rather than the identity or condition they may experience. Examples of people-first language include “people with a mental disorder,” rather than calling someone “mentally ill,” or referring to someone as a “person without housing,” rather than as a “homeless person.” The specific terms preferred by an individual or group can vary, and do not always include people-first syntax; additionally, language is always changing. Refer to the resources in the “Further Reading” section below to better understand how to use people-first language, and always ask people directly how they wish to define themselves. 
 
 
   <b>Consider avoiding the word “user” when referring to the people we serve.</b><br>
 
-  In line with using people-first language, consider using the word “people” instead of “user” when referring to those we’re trying to help. “User” can depersonalize our intended audience, potentially reducing them to a one-dimensional data point. “People”, in contrast, acknowledges the many distinct individuals who are interacting with the services we create for them, and helps us think collectively about the multiplicity of their viewpoints and lived experiences.
+  In line with using people-first language, consider using the word “people” instead of “user” when referring to those we’re trying to help. “User” can depersonalize our intended audience, potentially reducing them to a one-dimensional data point. “People,” in contrast, acknowledges the many distinct individuals who are interacting with the services we create for them, and helps us think collectively about the multiplicity of their viewpoints and lived experiences.
 
 
   <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
@@ -176,7 +176,7 @@ description: >-
   <h4 class="h3">﻿Set intentional language</h4>
 
 
-  Take time during your team formation and when beginning a new project to review the guidelines and references above. [APA’s Bias Free Language Guide](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language) and [Language, Please](https://languageplease.org/) are both excellent guides to inclusive language, and contain robust lists of appropriate person- and identity- first terms. Discuss this guidance as a team and come to a shared understanding of language to use.
+  Take time during your team formation and when beginning a new project to review the guidelines and references above. [APA’s Bias Free Language Guide](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language) and [Language, Please](https://languageplease.org/) are both excellent guides to welcoming language, and contain robust lists of appropriate person- and identity- first terms. Discuss this guidance as a team and come to a shared understanding of language to use. 
 
 
   </div>

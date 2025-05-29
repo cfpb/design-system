@@ -7,7 +7,7 @@ jumplinks: 'Practice inclusive recruitment, Compensate fairly, Obtain informed
   consent, Check your biases, Handle data and stories with care, Recognize and
   respond to trauma in participants '
 variation_groups: []
-eyebrow: Equity-centered design
+eyebrow: Community-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph"><b>Build a greater understanding of who you’re

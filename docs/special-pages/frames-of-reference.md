@@ -3,7 +3,7 @@ title: Frames of reference mural template
 layout: variation
 section: guidelines
 collection_name: special-pages
-eyebrow: Equity-centered design
+eyebrow: Community-centered design
 description: >-
   Teams that use Mural for digital collaboration can use this template to do
   their frames of reference activity. You can create a mural from the template

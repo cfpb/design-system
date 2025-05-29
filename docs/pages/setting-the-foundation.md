@@ -237,7 +237,7 @@ description: >-
   ### Understand the project’s value
 
 
-  Before a project begins, come to a shared understanding of its value—that is, a clear sense of the intended outcomes and value that key decision-makers envision creating. This is necessary to truly understand how the project might impact the audience.
+  Before a project begins, come to a shared understanding of its value—which is to say, a clear sense of the intended outcomes that key decision-makers envision creating. This is necessary to truly evaluate how the project might impact the audience. 
 
 
   <br>
@@ -251,7 +251,7 @@ description: >-
   <h4 class="h3">Write a problem statement</h4>
 
 
-  Before engaging in any work, stakeholders and the project team should work together to create a problem statement identifying and framing the problem to explore through research or solve through design. Nielsen Norman has more about [how to form a problem statement](https://www.nngroup.com/articles/problem-statements/). 18F also has a [design hypothesis exercise](https://methods.18f.gov/decide/design-hypothesis/) that considers the value and impact of work on the intended audience.
+  Before engaging in any work, stakeholders and the project team should work together to create a problem statement identifying and framing the problem to explore through research or solve through design. Nielsen Norman has more about  [how to form a problem statement](https://www.nngroup.com/articles/problem-statements/). 18F also has a [design hypothesis exercise](https://methods.18f.gov/decide/design-hypothesis/) that considers the value and impact of work on the intended audience.
 
 
   The team should also engage in [activities to validate the problem statement](https://methods.18f.gov/discover/stakeholder-and-user-interviews/) once it’s been formed.
@@ -269,22 +269,22 @@ description: >-
   <b>If your product is for an underserved or underrepresented community, do some research.</b>
 
 
-  * Research from a reliable source the community’s current and historical relationship with the government, along with an awareness of their history.
+  * Research from a reliable source the community’s history, including its current and historical relationship with the government. 
 
-  * Investigate any injustices the community has faced at the hands of the government and any historic mistrust that has resulted.
+  * Investigate any injustices the community has faced at the hands of the government and any historic mistrust that has resulted. 
 
-  * Take time to learn about the regulations and/or policies currently in place which might affect the people and communities for who you are designing. Dig in to learn about how those policies evolved to be what they are today.
+  * Take time to learn about the regulations and/or policies currently in place that might affect the people and communities for who you are designing. Dig in to learn about how those policies evolved to be what they are today. 
 
-  * Explore any tension that might impact how you are perceived as a representative of the Federal government when engaging with these communities.
-
-
-  As 18F points out in their [presentation on equity-centered design and research](https://www.youtube.com/watch?v=j1ZJO8maV7s), people often access government services in their most vulnerable moments. Recognize the power imbalance between being a representative of the Federal government and the people we serve.
+  * Explore any tension that might impact how you are perceived as a representative of the federal government when engaging with these communities. 
 
 
-  Engage with the broader community (other government agencies, nonprofits, grassroots organizations, or other groups working on a community level) to seek out knowledge and additional perspectives.
+  As 18F points out in their [presentation on community-centered design and research](https://www.youtube.com/watch?v=j1ZJO8maV7s), people often access government services in their most vulnerable moments. Recognize the power imbalance between the federal government you’re representing and the people we serve. 
 
 
-  {% include icons/favorite.svg %} <b>Outside of your project work,</b> make efforts to educate yourself, your team, and your leadership. Start up a book club and develop a reading list for people to read at their own pace.
+  Engage with the broader community (other government agencies, nonprofits, grassroots organizations, or other groups working on a community level) to seek out knowledge and additional perspectives. 
+
+
+  {% include icons/favorite.svg %} <b>Outside of your project work,</b> make efforts to educate yourself, your team, and your leadership. Start a book club or develop a reading list for people to read at their own pace. 
 
 
   <br>
@@ -298,10 +298,10 @@ description: >-
   <h4 class="h3">Conduct research as a team</h4>
 
 
-  As a team, divide up avenues to learn about the power structures, systems, and policymaking impacting the community for whom you’re designing.
+  As a team, divide up avenues to learn about the power structures, systems, and policymaking impacting the community for whom you’re designing. 
 
 
-  Plan a time to discuss what you learned and which sources you found valuable.
+  Plan a time to discuss what you learned and which sources you found valuable. 
 
 
   </div>

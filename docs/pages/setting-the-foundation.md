@@ -37,10 +37,10 @@ description: >-
   ### Identify lived experiences and biases
 
 
-  Bias is the tendency to allow personal opinions and past experiences to influence one’s judgment. Many of these biases may be unconscious, but they are nonetheless damaging to others. They are often based on false stereotypes about a particular group. It’s part of the human condition to rely on these cognitive shortcuts and to assume others think like us or have similar values, opinions, and beliefs.
+  Bias is the tendency to allow personal opinions and past experiences to influence one’s judgment. Many of these biases may be unconscious, but they are nonetheless damaging to others. They are often based on false stereotypes about a particular group. It’s part of the huBias is the tendency to allow personal opinions and past experiences to influence one’s judgment. Many of these biases may be unconscious, but they are nonetheless damaging to others. They are often based on false stereotypes about a particular group. It’s part of the human condition to rely on these cognitive shortcuts and to assume others think like us or have similar values, opinions, and beliefs. 
 
 
-  Bias can skew our research and design activities, whether in our choice of who participates, what information is collected, or how information is interpreted. Awareness of our biases is key to mitigating against them, and that’s where the frames of reference exercise can be particularly valuable.
+  Bias can skew our research and design activities, whether in our choice of who participates, what information we collect, or how that information is interpreted. Awareness of our biases is key to mitigating them, and that’s where the frames of reference exercise can be particularly valuable. 
 
 
   {% include icons/favorite.svg %} <b>Ready to conduct research for your project?</b> Learn how to [check your biases when moderating a research session](https://cfpb.github.io/design-system/guidelines/conducting-research#check-your-biases).
@@ -55,18 +55,16 @@ description: >-
 
   <h4 class="h3" id="frames-of-reference">Frames of reference</h4>
 
-  \*Adapted from 18F’s \[presentation on equity-centered design and research](https://www.youtube.com/watch?v=j1ZJO8maV7s)\*
+
+  As a team, run through this activity to identify your individual and collective biases before beginning research or design activities. If possible, couple the exercise with a review of what you have learned about the audience. Remember, the primary goal of this activity developing an awareness you can carry forward into the work. 
 
 
-  As a team, run through this activity to identify your individual and collective biases before beginning research or design activities. If possible, couple the exercise with a review of what you have learned about the audience.
-
-
-  Everyone should choose how they want to participate, but ideally this can be a group activity.
+  Everyone should choose how they want to participate, but ideally this can be a group activity. 
 
 
   <h5 class="h4">Template</h5>
 
-  We've created a template that teams can use to run the activity, available in several formats, including as a template for teams that use Mural as a digital collaboration tool:
+  We’ve created a template that teams can use to run the activity, available in several formats, including as a template for teams that use Mural as a digital collaboration tool: 
 
   <ul class="m-list">
     <li class="m-list__item">
@@ -82,14 +80,14 @@ description: >-
 
   <h5 class="h4">Instructions</h5>
 
-  The template guides teams through the three main phases of the activity.
+  The template guides teams through the three main phases of the activity. 
 
   <ol>
     <li>
-      To begin, brainstorm as a team what frames of reference are most important for your team to reflect on. The template contains a number of common frames of reference. More examples can be found in 18F’s <a href="https://docs.google.com/forms/d/e/1FAIpQLScI0iTQEstjECMzFVuyMt0Giku69YggEkAlybQPlH4y7Ik9Vg/viewform">frames of reference form</a>.
+      To begin, brainstorm as a team what frames of reference are most important for your team to reflect on. The template contains several common frames of reference. More examples can be found in 18F’s <a href="https://docs.google.com/forms/d/e/1FAIpQLScI0iTQEstjECMzFVuyMt0Giku69YggEkAlybQPlH4y7Ik9Vg/viewform">frames of reference form</a>.
     </li>
     <li>
-      Next, add your experiences with each frame of reference. The template gives a number of options for doing that in a way that's safe and comfortable for everyone, including:
+      Next, add your experiences with each frame of reference. The template provides options for doing that in a way that's safe and comfortable for everyone, including:
         <ul class="m-list">
           <li class="m-list__item">
             Asking participants to add their findings anonymously to the team's collaboration tool, emphasizing that everyone should choose how they wish to participate in this activity

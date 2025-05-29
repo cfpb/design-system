@@ -188,7 +188,7 @@ description: >-
   ### Establish team values
 
 
-  Discussing and documenting your team values will enable your group to create a shared understanding of how you want to work together and why you’re making those choices. Revisit your team values throughout your work to stay grounded in your intentions.
+  Discussing and documenting your team values will enable your group to create a shared understanding of how you want to work together and why you’re making those choices. Revisit your team values throughout your work to stay grounded in your intentions. 
 
 
   <div class="o-well" markdown="1">
@@ -196,13 +196,13 @@ description: >-
 
   <p class="h5">{% include icons/edit.svg %} ACTIVITY</p>
 
-  <h4 class="h3">Create a set of equity-centered team values</h4>
+  <h4 class="h3">Create a set of community-centered team values</h4>
 
 
-  For newly established teams, create team values that incorporate the results of both the frames of reference and intentional language exercises above. An example of team values could include, embracing discomfort, vulnerability, the awareness that we do not know everything, and understanding that just because we have not experienced something does not make it untrue.
+  For newly established teams, create team values that incorporate the results of both the frames of reference and intentional language exercises above. For example, a set of team values could include: embracing discomfort, vulnerability, the awareness that we do not know everything, and understanding that just because we have not experienced something does not make it untrue. 
 
 
-  Once you’ve created your team values, find opportunities to regularly review your values as a team. For example, read these values during your sprint planning ceremonies.
+  Once you’ve created your team values, find opportunities to regularly review your values as a team. For example, read these values during your sprint planning ceremonies if using Agile project management methodology. 
 
 
   </div>
@@ -213,10 +213,10 @@ description: >-
   ### Assemble multifaceted teams
 
 
-  Organizational leaders and managers should prioritize assembling teams with a diversity of lived experiences. Diversity is broad; it is the practice or quality of including or involving people from a range of different social and ethnic backgrounds.
+  Organizational leaders and managers should prioritize assembling teams with members that have a variety of lived experiences. It is a best practice to include and involve people from a range of different social and ethnic backgrounds. 
 
 
-  While this includes individuals of different races, genders, religions, sexual orientations, etc., it also includes individuals of different economic, geographic, or other backgrounds. In a diverse environment, every person has different knowledge, perspectives, and points of view that help us make better informed decisions. Assembling a diverse team can be informed by individual teams running the [frames of reference](#frames-of-reference) activity and giving input to their leaders.
+  While this includes individuals of different races, genders, religions, sexual orientations, ages, and national origins, it also includes individuals of different economic, geographic, or educational backgrounds, for example. In a heterogeneous environment, each team member has different knowledge, perspectives, and points of view that help the group make better-informed decisions. Once a hetergenous team has been assembled, the [frames of reference](#frames-of-reference) activity will be useful in identifying the individual and collective biases on the team. 
 
 
   ## Beginning a project

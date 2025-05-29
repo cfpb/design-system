@@ -120,7 +120,7 @@ first-level:
       - heading: Data visualization
         nav-items:
           - page: Data visualization guidelines
-      - heading: Equity-centered design
+      - heading: Community-centered design
         nav-items:
           - page: Overview
           - page: Setting the foundation

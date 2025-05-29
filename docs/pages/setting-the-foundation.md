@@ -37,7 +37,7 @@ description: >-
   ### Identify lived experiences and biases
 
 
-  Bias is the tendency to allow personal opinions and past experiences to influence one’s judgment. Many of these biases may be unconscious, but they are nonetheless damaging to others. They are often based on false stereotypes about a particular group. It’s part of the huBias is the tendency to allow personal opinions and past experiences to influence one’s judgment. Many of these biases may be unconscious, but they are nonetheless damaging to others. They are often based on false stereotypes about a particular group. It’s part of the human condition to rely on these cognitive shortcuts and to assume others think like us or have similar values, opinions, and beliefs. 
+  Bias is the tendency to allow personal opinions and past experiences to influence one’s judgment. Many of these biases may be unconscious, but they are nonetheless damaging to others. They are often based on false stereotypes about a particular group. It’s part of the human condition to rely on these cognitive shortcuts and to assume others think like us or have similar values, opinions, and beliefs. 
 
 
   Bias can skew our research and design activities, whether in our choice of who participates, what information we collect, or how that information is interpreted. Awareness of our biases is key to mitigating them, and that’s where the frames of reference exercise can be particularly valuable. 
@@ -56,7 +56,7 @@ description: >-
   <h4 class="h3" id="frames-of-reference">Frames of reference</h4>
 
 
-  As a team, run through this activity to identify your individual and collective biases before beginning research or design activities. If possible, couple the exercise with a review of what you have learned about the audience. Remember, the primary goal of this activity developing an awareness you can carry forward into the work. 
+  As a team, run through this activity to identify your individual and collective biases before beginning research or design activities. If possible, couple the exercise with a review of what you have learned about the audience. Remember, the primary goal of this activity is developing an awareness you can carry forward into the work. 
 
 
   Everyone should choose how they want to participate, but ideally this can be a group activity. 

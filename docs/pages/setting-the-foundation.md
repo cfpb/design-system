@@ -124,19 +124,19 @@ description: >-
   ### Investigate biases
 
 
-  We encourage everyone to read widely to examine their own identity and internalized oppression—the false narratives or stereotypes that they may have internalized about themselves, and how they might perpetuate systemic oppression.
+  We encourage everyone to read widely to examine their own identity and internalized bias—the narratives or stereotypes that they may have internalized about themselves, and how they might perpetuate bias. 
 
 
   <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
-  For more information, Intentional Futures has a useful explanation of systemic oppression and how it manifests in their [Introduction to Equity-Centered Design](https://www.intentionalfutures.com/public/ecd-booklet.pdf). Additionally, consider using the [implicit bias test put together by Harvard](https://implicit.harvard.edu/implicit/user/agg/blindspot/indexrk.htm), which is designed to identify unconscious positive and negative associations based on race.
+  For more information, Intentional Futures has a useful explanation of institutional barriers and how it manifests in their [design methodologies guide](https://www.intentionalfutures.com/public/ecd-booklet.pdf). Additionally, consider using the [implicit bias test put together by Harvard](https://implicit.harvard.edu/implicit/user/agg/blindspot/indexrk.htm), which is designed to identify unconscious positive and negative associations based on race.
 
 
   ### Use bias-free, person-centered language
 
 
-  It’s important to use clear, respectful, inclusive language that’s free of stereotypes and generalizations. Our words matter, whether we’re addressing the general public or a fellow team member. Follow the guidelines below:
+  It’s important to use clear and respectful language that’s free of stereotypes and generalizations. Our words matter, whether we’re addressing the public or a fellow team member. Follow the guidelines below: 
 
 
   <b>Ensure the terms and references you use to refer to a group are both respectful and accurate.</b><br>
@@ -144,7 +144,7 @@ description: >-
   Some terms may not be accurate to describe a group, while other terms can have negative connotations. For example, as [18F points out, the term “American Indians and Alaskan Natives” is not an all-encompassing term for Indigenous Americans](https://github.com/18F/Equity-centered-design-with-American-Indians-and-Alaska-Natives-10x/wiki/Intro-Why-Equity-Centered-Design#words-that-carry-weight), as it does not include members of non-federally-recognized tribes, or Indigenous Americans who are not members of a tribe.
 
 
-  Use the terminology that groups and individuals use for themselves. This includes the gender pronouns of any individuals you work with directly. Do your research, read the resources listed in the “Further Reading” section below, and ask members of the group in question directly if you’re in doubt.
+  Use the terminology that groups and individuals use for themselves. This includes the preferred terminology of any individuals you work with directly. Do your research, read the resources listed in the “Further Reading” section below, and ask members of the group in question directly if you’re in doubt. 
 
 
   <b>Use people-first language.</b><br>

@@ -3,10 +3,10 @@ title: Conducting research
 collection_name: pages
 layout: variation
 section: guidelines
-jumplinks: "Practice comprehensive and exhaustive recruitment , Compensate
+jumplinks: 'Practice comprehensive and exhaustive recruitment , Compensate
   fairly, Obtain informed consent, Check your biases before starting research,
   Handle data and stories with care, Recognize and respond to trauma in
-  participants "
+  participants '
 variation_groups: []
 eyebrow: Community-centered design
 status: Proposed
@@ -307,5 +307,5 @@ description: >-
   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
 
   * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
-related_items: ""
+related_items: ''
 ---

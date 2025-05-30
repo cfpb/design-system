@@ -1,0 +1,15 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/vars' as *;
+
+:host {
+  // This prevents the child button from having an empty gap after the button.
+  display: flex;
+  width: fit-content;
+
+  flex-direction: column;
+}
+
+:host::part(upload-details)[hidden='true'] {
+  display: none;
+}

@@ -5,7 +5,7 @@ layout: variation
 section: guidelines
 jumplinks: Accessibility, Access, Inclusive imagery, Hazards and harms
 variation_groups: []
-eyebrow: Equity-centered design
+eyebrow: Community-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph">Designing and developing for more equitable access

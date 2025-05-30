@@ -5,7 +5,7 @@ layout: variation
 section: guidelines
 jumplinks: Working together, Beginning a project
 variation_groups: []
-eyebrow: Equity-centered design
+eyebrow: Community-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph">Before we’re able to design equitable and inclusive

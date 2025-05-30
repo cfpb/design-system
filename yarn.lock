@@ -4142,6 +4142,7 @@ __metadata:
     lunr: "npm:2.3.9"
     marked: "npm:12.0.2"
     postcss: "npm:8.5.5"
+    postcss-minify: "npm:1.2.0"
     postcss-replace: "npm:2.0.1"
     prettier: "npm:3.5.3"
     prop-types: "npm:15.8.1"
@@ -12370,6 +12371,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-minify@npm:1.2.0":
+  version: 1.2.0
+  resolution: "postcss-minify@npm:1.2.0"
+  dependencies:
+    postcss-selector-parser: "npm:^6.0 || ^7.0"
+    postcss-value-parser: "npm:^4.1"
+  peerDependencies:
+    postcss: ^8.0
+  checksum: 10c0/24fe428f6f78a1381697d009e454aae721f02430a3af3da13037cffd88b04a724c8346348b36e6735a1be76fdab6c4bce3a10d36e29f0b46b8d0f291448ff31d
+  languageName: node
+  linkType: hard
+
 "postcss-replace@npm:2.0.1":
   version: 2.0.1
   resolution: "postcss-replace@npm:2.0.1"
@@ -12407,7 +12420,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^7.1.0":
+"postcss-selector-parser@npm:^6.0 || ^7.0, postcss-selector-parser@npm:^7.1.0":
   version: 7.1.0
   resolution: "postcss-selector-parser@npm:7.1.0"
   dependencies:
@@ -12417,7 +12430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-value-parser@npm:^4.2.0":
+"postcss-value-parser@npm:^4.1, postcss-value-parser@npm:^4.2.0":
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
   checksum: 10c0/f4142a4f56565f77c1831168e04e3effd9ffcc5aebaf0f538eee4b2d465adfd4b85a44257bb48418202a63806a7da7fe9f56c330aebb3cac898e46b4cbf49161

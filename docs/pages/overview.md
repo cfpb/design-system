@@ -3,7 +3,7 @@ title: Overview
 collection_name: pages
 layout: variation
 section: guidelines
-jumplinks: About equity-centered design,About these guidelines,Acknowledgements
+jumplinks: About community-centered design,About these guidelines,Acknowledgements
 variation_groups: []
 eyebrow: Equity-centered design
 status: Proposed

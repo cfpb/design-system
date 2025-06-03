@@ -8,6 +8,8 @@ description: |-
   guidance.
 
 code_examples:
+  - code_title: Alerts
+    code_snippet_url: examples/alerts.html
   - code_title: Links
     code_snippet_url: examples/links.html
   - code_title: Buttons
@@ -28,6 +30,8 @@ code_examples:
     code_snippet_url: examples/radio-buttons-large-with-helper.html
   - code_title: Text inputs
     code_snippet_url: examples/text-inputs.html
+  - code_title: Search input
+    code_snippet_url: examples/search-input.html
   - code_title: Selects
     code_snippet_url: examples/selects.html
   - code_title: Multiselects

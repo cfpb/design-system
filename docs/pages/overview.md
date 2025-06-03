@@ -46,8 +46,8 @@ description: >-
   * Ben Peterson and Julie Strothman’s [presentation](https://s3.amazonaws.com/digitalgov/static/equity-centered-design-revised.pptx) from their work with GSA’s 18F organization is the primary source of information and inspiration for these guidelines. Other important sources of information include: 
 
     * [Code for America’s Qualitative Research Practice Guide](https://info.codeforamerica.org/qualitative-research)
-    * [18F’s User Experience Design Guide](https://ux-guide.18f.gov/) 
-    * [Substance Abuse and Mental Health Services Administration's Trauma-informed Guidelines](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
+    * [18F’s User Experience Design Guide](https://guides.18f.org/ux-guide/) 
+    * [Substance Abuse and Mental Health Services Administration's Trauma-informed Guidelines](https://library.samhsa.gov/sites/default/files/sma14-4884.pdf)
 
   ## Related pages
 

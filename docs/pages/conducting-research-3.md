@@ -3,10 +3,10 @@ title: Conducting research
 collection_name: pages
 layout: variation
 section: guidelines
-jumplinks: 'Practice comprehensive and exhaustive recruitment , Compensate
+jumplinks: "Practice comprehensive and exhaustive recruitment , Compensate
   fairly, Obtain informed consent, Check your biases before starting research,
   Handle data and stories with care, Recognize and respond to trauma in
-  participants '
+  participants "
 variation_groups: []
 eyebrow: Community-centered design
 status: Proposed
@@ -293,12 +293,6 @@ description: >-
   </div> 
 
 
-  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
-
-
-  Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf). 
-
-
   ## Related pages
 
 
@@ -307,5 +301,5 @@ description: >-
   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
 
   * [Design and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
-related_items: ''
+related_items: ""
 ---

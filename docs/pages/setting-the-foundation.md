@@ -130,7 +130,7 @@ description: >-
   <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
-  For more information, Intentional Futures has a useful explanation of institutional barriers and how it manifests in their [design methodologies guide](https://www.intentionalfutures.com/public/ecd-booklet.pdf). Additionally, consider using the [implicit bias test put together by Harvard](https://implicit.harvard.edu/implicit/user/agg/blindspot/indexrk.htm), which is designed to identify unconscious positive and negative associations based on race.
+  For more information, Intentional Futures has a useful explanation of institutional barriers and how it manifests in their [design methodologies guide](https://intentionalfutures.com/work/equity-review-tool). Additionally, consider using the [implicit bias test put together by Harvard](https://implicit.harvard.edu/implicit/user/agg/blindspot/indexrk.htm), which is designed to identify unconscious positive and negative associations based on race.
 
 
   ### Use bias-free, person-centered language
@@ -251,10 +251,10 @@ description: >-
   <h4 class="h3">Write a problem statement</h4>
 
 
-  Before engaging in any work, stakeholders and the project team should work together to create a problem statement identifying and framing the problem to explore through research or solve through design. Nielsen Norman has more about  [how to form a problem statement](https://www.nngroup.com/articles/problem-statements/). 18F also has a [design hypothesis exercise](https://methods.18f.gov/decide/design-hypothesis/) that considers the value and impact of work on the intended audience.
+  Before engaging in any work, stakeholders and the project team should work together to create a problem statement identifying and framing the problem to explore through research or solve through design. Nielsen Norman has more about  [how to form a problem statement](https://www.nngroup.com/articles/problem-statements/). 18F also has a [design hypothesis exercise](https://guides.18f.org/methods/decide/design-hypothesis/) that considers the value and impact of work on the intended audience.
 
 
-  The team should also engage in [activities to validate the problem statement](https://methods.18f.gov/discover/stakeholder-and-user-interviews/) once it’s been formed.
+  The team should also engage in [activities to validate the problem statement](https://guides.18f.org/methods/discover/stakeholder-and-user-interviews/) once it’s been formed.
 
 
   </div>
@@ -278,7 +278,7 @@ description: >-
   * Explore any tension that might impact how you are perceived as a representative of the federal government when engaging with these communities. 
 
 
-  As 18F points out in their [presentation on community-centered design and research](https://www.youtube.com/watch?v=j1ZJO8maV7s), people often access government services in their most vulnerable moments. Recognize the power imbalance between the federal government you’re representing and the people we serve. 
+  As 18F points out in their [presentation on community-centered design and research](https://web.archive.org/web/20241208180041/https://www.youtube.com/watch?v=j1ZJO8maV7s), people often access government services in their most vulnerable moments. Recognize the power imbalance between the federal government you’re representing and the people we serve. 
 
 
   Engage with the broader community (other government agencies, nonprofits, grassroots organizations, or other groups working on a community level) to seek out knowledge and additional perspectives. 
@@ -340,7 +340,7 @@ description: >-
   <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
-  Much of this guidance regarding trauma is based on well-established research and experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
+  Much of this guidance regarding trauma is based on well-established research and experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://library.samhsa.gov/sites/default/files/pep23-06-05-005.pdf)
 
 
   ## Related pages

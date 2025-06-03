@@ -5,7 +5,7 @@ layout: variation
 section: guidelines
 jumplinks: About community-centered design,About these guidelines,Acknowledgements
 variation_groups: []
-eyebrow: Equity-centered design
+eyebrow: Community-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph"> This guide contains initial steps for designers,

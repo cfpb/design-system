@@ -114,7 +114,7 @@ description: >-
   <h3>Hazard mapping</h3>
 
 
-  The activity below is adapted from [an 18F presentation](https://digital.gov/files/equity-centered-design-revised.pptx).
+  The activity below is adapted from an 18F presentation.[](https://digital.gov/files/equity-centered-design-revised.pptx)
 
 
   As you create your designs, try this mapping activity to identify potential hazards and harms that could result from the work you and your team are planning to do. Plan for how you’ll mitigate them.  
@@ -278,5 +278,5 @@ description: >-
   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
 
   * [Conducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
-related_items: ''
+related_items: ""
 ---

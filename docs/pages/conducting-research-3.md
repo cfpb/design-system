@@ -3,10 +3,10 @@ title: Conducting research
 collection_name: pages
 layout: variation
 section: guidelines
-jumplinks: 'Practice comprehensive and exhaustive recruitment , Compensate
+jumplinks: "Practice comprehensive and exhaustive recruitment , Compensate
   fairly, Obtain informed consent, Check your biases before starting research,
   Handle data and stories with care, Recognize and respond to trauma in
-  participants '
+  participants "
 variation_groups: []
 eyebrow: Community-centered design
 status: Proposed
@@ -26,7 +26,7 @@ description: >-
   Once you’ve established the goals and objectives of a research initiative, it’s important to carefully define the audience for the product or service you’re developing and then to take the time needed to recruit from that audience.    
 
 
-  To quote 18F, [“you must do research with people who will actually use your services."](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting) It’s counterproductive and potentially harmful to draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand. 
+  To quote 18F, "You must do research with people who will actually use your services."[](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting) It’s counterproductive and potentially harmful to draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand. 
 
 
   Consider the unintended consequences of your recruitment approach. For example, recruiting via personal networks can lead to hearing only from people who share similar characteristics, experiences, or beliefs as yourself. Ask yourself whether these people are authentic representatives of the people who will ultimately use your product. Similarly, recruiting via social media can omit people who don’t have internet access at all. These issues are known as [sampling bias](https://cfpb.github.io/design-system/guidelines/conducting-research#be-aware-of-how-bias-can-show-up-during-research).      
@@ -293,12 +293,6 @@ description: >-
   </div> 
 
 
-  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
-
-
-  Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf). 
-
-
   ## Related pages
 
 
@@ -307,5 +301,5 @@ description: >-
   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
 
   * [Design and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
-related_items: ''
+related_items: ""
 ---

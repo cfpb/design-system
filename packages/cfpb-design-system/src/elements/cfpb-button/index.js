@@ -1,5 +1,4 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
-import { property } from 'lit/decorators.js';
 import styles from './cfpb-button.component.scss';
 
 /**
@@ -14,11 +13,12 @@ export class CfpbButton extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
-  @property()
-  accessor disabled = false;
-
-  @property()
-  accessor type;
+  static get properties() {
+    return {
+      isDisabled: false,
+      type: '',
+    };
+  }
 
   get _btnClass() {
     let btnClass = 'a-btn';
@@ -39,7 +39,7 @@ export class CfpbButton extends LitElement {
 
   render() {
     return html`
-      <button class="${this._btnClass}" ?disabled=${this.disabled}>
+      <button class="${this._btnClass}" ?disabled=${this.isDisabled}>
         <slot></slot>
       </button>
     `;

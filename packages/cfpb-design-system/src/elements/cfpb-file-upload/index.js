@@ -1,6 +1,5 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import { property } from 'lit/decorators.js';
 import styles from './cfpb-file-upload.component.scss';
 
 /**
@@ -14,11 +13,12 @@ export class CfpbFileUpload extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
-  @property()
-  accessor areDetailHidden = true;
-
-  @property()
-  accessor fileName = '';
+  static get properties() {
+    return {
+      isDetailHidden: true,
+      fileName: '',
+    };
+  }
 
   fileInput = createRef();
   fileDetails = createRef();
@@ -35,7 +35,7 @@ export class CfpbFileUpload extends LitElement {
 
   #showDetails() {
     this.fileName = this.#getUploadName(this.fileInput.value.value);
-    this.areDetailHidden = false;
+    this.isDetailHidden = false;
   }
 
   render() {
@@ -58,7 +58,7 @@ export class CfpbFileUpload extends LitElement {
       />
       <div
         part="upload-details"
-        ?hidden=${this.areDetailHidden}
+        ?hidden=${this.isDetailHidden}
         ${ref(this.fileDetails)}
       >
         <h4>File added</h4>

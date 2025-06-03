@@ -15,9 +15,15 @@ export class CfpbButton extends LitElement {
 
   static get properties() {
     return {
-      isDisabled: false,
-      type: '',
+      isDisabled: { type: Boolean },
+      type: { type: String },
     };
+  }
+
+  constructor() {
+    super();
+    this.isDisabled = false;
+    this.type = '';
   }
 
   get _btnClass() {

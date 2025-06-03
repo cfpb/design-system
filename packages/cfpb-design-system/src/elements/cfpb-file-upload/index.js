@@ -15,9 +15,15 @@ export class CfpbFileUpload extends LitElement {
 
   static get properties() {
     return {
-      isDetailHidden: true,
-      fileName: '',
+      isDetailHidden: { type: Boolean },
+      fileName: { type: String },
     };
+  }
+
+  constructor() {
+    super();
+    this.isDetailHidden = true;
+    this.fileName = '';
   }
 
   fileInput = createRef();
@@ -63,7 +69,7 @@ export class CfpbFileUpload extends LitElement {
       >
         <h4>File added</h4>
         <ul>
-          <li>${this.fileName}</li>
+          <li>${this.fileName} ${this.isDetailHidden}</li>
         </ul>
         <p>
           To remove or replace your file, select a new file and upload again.

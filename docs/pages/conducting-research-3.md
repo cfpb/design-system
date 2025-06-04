@@ -26,7 +26,7 @@ description: >-
   Once you’ve established the goals and objectives of a research initiative, it’s important to carefully define the audience for the product or service you’re developing and then to take the time needed to recruit from that audience.    
 
 
-  To quote 18F, "You must do research with people who will actually use your services."[](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting) It’s counterproductive and potentially harmful to draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand. 
+  The key is to do research with people who will actually use your services. It’s counterproductive and potentially harmful to draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand. 
 
 
   Consider the unintended consequences of your recruitment approach. For example, recruiting via personal networks can lead to hearing only from people who share similar characteristics, experiences, or beliefs as yourself. Ask yourself whether these people are authentic representatives of the people who will ultimately use your product. Similarly, recruiting via social media can omit people who don’t have internet access at all. These issues are known as [sampling bias](https://cfpb.github.io/design-system/guidelines/conducting-research#be-aware-of-how-bias-can-show-up-during-research).      
@@ -176,7 +176,7 @@ description: >-
   Handle the data and information gathered from participants carefully. Many underserved and underrepresented communities have historically had difficult experiences with the federal government. Safeguarding their PII and complying with your organizational data management, privacy, and security standards are important to ensure participants are not vulnerable to further harm from mishandling of their data, such as a privacy breach.   
 
 
-  18F defines PII as “information that can be used to distinguish or trace an individual’s identity, either alone or when combined with other information that is linked or linkable to a specific individual.”
+  PII is information that can be used to distinguish or trace an individual’s identity, either alone or when combined with other information that is linked or linkable to a specific individual.
 
 
   When it comes to collecting PII from participants, best practices are as follows:    
@@ -291,6 +291,12 @@ description: >-
 
 
   </div> 
+
+
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p> 
+
+
+  Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, read this [comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://library.samhsa.gov/product/samhsas-concept-trauma-and-guidance-trauma-informed-approach/sma14-4884). 
 
 
   ## Related pages

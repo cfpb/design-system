@@ -42,10 +42,10 @@
     <form id="search-form" action="/design-system/search" method="get">
     <div class="o-search-input">
         <div class="o-search-input__input">
-            <label for="search-box" class="o-search-input__input-label" aria-label="Search for a term">
+            <label for="search-box" class="o-search-input__input-label">
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--search" viewbox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"></path></svg>
             </label>
-            <input type="search" id="search-box" name="searchQuery" value="" class="a-text-input a-text-input__full" title="Enter your query" autocomplete="off" maxlength="75">
+            <input aria-label="Search for a term" type="search" id="search-box" name="searchQuery" value="" class="a-text-input a-text-input__full" title="Enter your query" autocomplete="off" maxlength="75">
             <button type="reset" onclick="document.getElementById('search-box').setAttribute('value','')" aria-label="Clear search" title="Clear search">
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewbox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
             </button>
@@ -410,9 +410,14 @@ guidance.</p>
 
 <h3 class="h4">Field-level alert</h3>
 
+<br>
+
 <div class="m-form-field">
-  <input class="a-text-input a-text-input--success" type="text" placeholder="Input text" id="form-input-success" aria-describedby="form-input-success_message">
-  <div class="a-form-alert a-form-alert--success" id="form-input-success_message" role="alert">
+  <label class="a-label a-label--heading" for="form-input-field-success">
+    Label
+  </label>
+  <input class="a-text-input a-text-input--success" type="text" placeholder="Input text" id="form-input-field-success" aria-describedby="form-input-field-success-message">
+  <div class="a-form-alert a-form-alert--success" id="form-input-field-success-message" role="alert">
     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--approved-round" viewbox="0 0 17 19"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0m-4.105-4.498a.79.79 0 0 0-1.082.29l-3.828 6.63-1.733-2.08a.792.792 0 1 0-1.216 1.014l2.459 2.952a.792.792 0 0 0 1.294-.111L12.6 6.166a.79.79 0 0 0-.29-1.081z"></path></svg>
     <span class="a-form-alert__text">
       This is a field-level alert with a success status.
@@ -428,8 +433,8 @@ guidance.</p>
   <label class="a-label a-label--heading" for="form-input-field-warning">
     Label <small class="a-label__helper">(optional)</small>
   </label>
-  <input class="a-text-input a-text-input--warning" type="text" placeholder="Input text" id="form-input-field-warning" aria-describedby="form-input-warning_message">
-  <div class="a-form-alert a-form-alert--warning" id="form-input-warning_message" role="alert">
+  <input class="a-text-input a-text-input--warning" type="text" placeholder="Input text" id="form-input-field-warning" aria-describedby="form-input-field-warning-message">
+  <div class="a-form-alert a-form-alert--warning" id="form-input-field-warning-message" role="alert">
     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--warning-round" viewbox="0 0 17 19"><path d="M16.406 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0M9.48 13.667a1.003 1.003 0 1 0-2.007 0 1.003 1.003 0 0 0 2.007 0M7.697 10.83a.792.792 0 0 0 1.583 0V4.562a.792.792 0 0 0-1.583 0z"></path></svg>
     <span class="a-form-alert__text">
       This is a field-level alert with a warning status.
@@ -446,8 +451,8 @@ guidance.</p>
     Label
     <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
   </label>
-  <input class="a-text-input a-text-input--error" type="text" placeholder="Input text" id="form-input-field-error" aria-describedby="form-input-error_message">
-  <div class="a-form-alert a-form-alert--error" id="form-input-error_message" role="alert">
+  <input class="a-text-input a-text-input--error" type="text" placeholder="Input text" id="form-input-field-error" aria-describedby="form-input-field-error-message">
+  <div class="a-form-alert a-form-alert--error" id="form-input-field-error-message" role="alert">
     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error-round" viewbox="0 0 17 19"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0m-6.804.01 3.032-3.033a.792.792 0 1 0-1.12-1.12L8.494 8.473 5.46 5.44a.792.792 0 0 0-1.12 1.12l3.033 3.033-3.032 3.033a.791.791 0 1 0 1.12 1.119l3.032-3.033 3.033 3.033a.79.79 0 0 0 1.12 0 .79.79 0 0 0 0-1.12z"></path></svg>
     <span class="a-form-alert__text">
       This is a field-level alert with an error status.
@@ -460,8 +465,8 @@ guidance.</p>
 <br>
 
 <div class="m-form-field m-form-field--checkbox m-form-field--checkbox-error">
-  <input class="a-checkbox" type="checkbox" id="test_checkbox_field_error">
-  <label class="a-label" for="test_checkbox_field_error">Error</label>
+  <input class="a-checkbox" type="checkbox" id="test-checkbox-field-error">
+  <label class="a-label" for="test-checkbox-field-error">Error</label>
   <div class="a-form-alert a-form-alert--error" id="form-input-error_message" role="alert">
     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error-round" viewbox="0 0 17 19"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0m-6.804.01 3.032-3.033a.792.792 0 1 0-1.12-1.12L8.494 8.473 5.46 5.44a.792.792 0 0 0-1.12 1.12l3.033 3.033-3.032 3.033a.791.791 0 1 0 1.12 1.119l3.032-3.033 3.033 3.033a.79.79 0 0 0 1.12 0 .79.79 0 0 0 0-1.12z"></path></svg>
     <span class="a-form-alert__text">
@@ -475,8 +480,8 @@ guidance.</p>
 <br>
 
 <div class="m-form-field m-form-field--radio m-form-field--radio-error">
-  <input class="a-radio" type="radio" id="test_radio_basic_helper">
-  <label class="a-label" for="test_radio_basic_helper">
+  <input class="a-radio" type="radio" id="test-radio-basic-helper-field">
+  <label class="a-label" for="test-radio-basic-helper-field">
     Label
     <small class="a-label__helper"> (This is optional helper text) </small>
   </label>
@@ -1511,10 +1516,10 @@ guidance.</p>
                 <form>
   <div class="o-search-input">
     <div class="o-search-input__input">
-      <label for="example-search-text" class="o-search-input__input-label" aria-label="Search for a term">
+      <label for="example-search-text" class="o-search-input__input-label">
         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--search" viewbox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"></path></svg>
       </label>
-      <input type="search" id="example-search-text" name="example-search-text" value="" class="a-text-input a-text-input__full" placeholder="Enter your search term(s)" title="Enter your search term(s)" autocomplete="off" maxlength="75">
+      <input type="search" id="example-search-text" name="example-search-text" value="" class="a-text-input a-text-input__full" placeholder="Enter your search term(s)" title="Enter your search term(s)" autocomplete="off" maxlength="75" aria-label="Search for a term">
       <button type="reset" onclick="document.getElementById('example-search-text').setAttribute('value','')" aria-label="Clear search" title="Clear search">
         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewbox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
       </button>
@@ -1681,8 +1686,8 @@ guidance.</p>
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/reference-for-component-states.md">
-                            <time datetime="2025-06-04 10:30:04 -0400">
-                                10:30:04 AM Jun 04, 2025
+                            <time datetime="2025-06-04 15:41:37 -0400">
+                                 3:41:37 PM Jun 04, 2025
                             </time>
                         </a>
                     </section>

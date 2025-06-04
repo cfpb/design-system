@@ -31,19 +31,18 @@ select.o-multiselect {
       // Arrow box width must be odd size to properly center the bg image
       width: math.div($select-height, $base-font-size-px) + em;
       box-sizing: border-box;
-      border-left: 1px solid var(--select-border-default);
+      border: 1px solid var(--select-border-default);
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
-      background-color: var(--select-icon-bg);
+      background-color: var(--select-icon-bg-default);
 
       --cfpb-background-icon-svg: 'down';
 
       background-size: auto $cf-icon-height;
       background-repeat: no-repeat;
       background-position: center center;
-      border: 1px solid $input-border;
       content: '';
       pointer-events: none;
     }

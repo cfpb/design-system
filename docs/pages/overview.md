@@ -43,10 +43,9 @@ description: >-
   These guidelines are based upon the great work of others. Acknowledgments are in order: 
 
 
-  * Ben Peterson and Julie Strothman’s [presentation](https://s3.amazonaws.com/digitalgov/static/equity-centered-design-revised.pptx) from their work with GSA’s 18F organization is the primary source of information and inspiration for these guidelines. Other important sources of information include: 
+  * Ben Peterson and Julie Strothman’s [presentation](https://s3.amazonaws.com/digitalgov/static/equity-centered-design-revised.pptx) from their work with GSA’s 18F organization is the primary source of information and inspiration for these guidelines. 18F was disbanded in 2025, but the quality of their work lives on. Other important sources of information include: 
 
     * [Code for America’s Qualitative Research Practice Guide](https://info.codeforamerica.org/qualitative-research)
-    * [18F’s User Experience Design Guide](https://guides.18f.org/ux-guide/) 
     * [Substance Abuse and Mental Health Services Administration's Trauma-informed Guidelines](https://library.samhsa.gov/sites/default/files/sma14-4884.pdf)
 
   ## Related pages

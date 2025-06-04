@@ -60,7 +60,7 @@ description: >-
   <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
-  Read the [Pew Research Center's fact sheet on internet and broadband usage (April 2021)](https://www.pewresearch.org/internet/fact-sheet/internet-broadband/)
+  [Pew Research Center's fact sheet on internet and broadband usage (April 2021)](https://www.pewresearch.org/internet/fact-sheet/internet-broadband/)
 
 
   ## Representative imagery 
@@ -114,7 +114,7 @@ description: >-
   <h3>Hazard mapping</h3>
 
 
-  The activity below is adapted from an 18F presentation.[](https://digital.gov/files/equity-centered-design-revised.pptx)
+  The activity below is adapted from work developed by the now-disbanded 18F group at GSA.[](https://digital.gov/files/equity-centered-design-revised.pptx)
 
 
   As you create your designs, try this mapping activity to identify potential hazards and harms that could result from the work you and your team are planning to do. Plan for how you’ll mitigate them.  

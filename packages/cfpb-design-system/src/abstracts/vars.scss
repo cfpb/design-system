@@ -113,9 +113,17 @@ $input-icon-warning: var(--gold);
 $input-icon-error: var(--red);
 
 // .a-select
-$select-border: $input-border;
-$select-icon-bg: var(--gray-10);
-$select-text-disabled: $input-text-disabled;
+:root {
+  --select-border-default: var(--gray-60); // $input-text
+  --select-border-width-default: 1px;
+  --select-border-error: var(--red);
+  --select-border-width-error: 2px;
+  --select-border-hover-default: var(--pacific); // $input-border-hover
+  --select-border-focus-default: var(--pacific); // $input-border-focused
+  --select-bg-disabled-default: var(--gray-10); // $input-bg-disabled
+  --select-icon-bg-default: var(--gray-10);
+  --select-text-disabled-default: var(--gray-dark); // $input-text-disabled
+}
 
 // .m-form-field
 $form-field-input-border: $input-border;

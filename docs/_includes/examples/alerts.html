@@ -110,17 +110,22 @@
 
 <h3 class="h4">Field-level alert</h3>
 
+<br />
+
 <div class="m-form-field">
+  <label class="a-label a-label--heading" for="form-input-field-success">
+    Label
+  </label>
   <input
     class="a-text-input a-text-input--success"
     type="text"
     placeholder="Input text"
-    id="form-input-success"
-    aria-describedby="form-input-success_message"
+    id="form-input-field-success"
+    aria-describedby="form-input-field-success-message"
   />
   <div
     class="a-form-alert a-form-alert--success"
-    id="form-input-success_message"
+    id="form-input-field-success-message"
     role="alert"
   >
     {% include icons/approved-round.svg %}
@@ -143,11 +148,11 @@
     type="text"
     placeholder="Input text"
     id="form-input-field-warning"
-    aria-describedby="form-input-warning_message"
+    aria-describedby="form-input-field-warning-message"
   />
   <div
     class="a-form-alert a-form-alert--warning"
-    id="form-input-warning_message"
+    id="form-input-field-warning-message"
     role="alert"
   >
     {% include icons/warning-round.svg %}
@@ -173,11 +178,11 @@
     type="text"
     placeholder="Input text"
     id="form-input-field-error"
-    aria-describedby="form-input-error_message"
+    aria-describedby="form-input-field-error-message"
   />
   <div
     class="a-form-alert a-form-alert--error"
-    id="form-input-error_message"
+    id="form-input-field-error-message"
     role="alert"
   >
     {% include icons/error-round.svg %}
@@ -192,8 +197,8 @@
 <br />
 
 <div class="m-form-field m-form-field--checkbox m-form-field--checkbox-error">
-  <input class="a-checkbox" type="checkbox" id="test_checkbox_field_error" />
-  <label class="a-label" for="test_checkbox_field_error">Error</label>
+  <input class="a-checkbox" type="checkbox" id="test-checkbox-field-error" />
+  <label class="a-label" for="test-checkbox-field-error">Error</label>
   <div
     class="a-form-alert a-form-alert--error"
     id="form-input-error_message"
@@ -211,8 +216,8 @@
 <br />
 
 <div class="m-form-field m-form-field--radio m-form-field--radio-error">
-  <input class="a-radio" type="radio" id="test_radio_basic_helper" />
-  <label class="a-label" for="test_radio_basic_helper">
+  <input class="a-radio" type="radio" id="test-radio-basic-helper-field" />
+  <label class="a-label" for="test-radio-basic-helper-field">
     Label
     <small class="a-label__helper"> (This is optional helper text) </small>
   </label>

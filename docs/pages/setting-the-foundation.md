@@ -84,7 +84,7 @@ description: >-
 
   <ol>
     <li>
-      To begin, brainstorm as a team what frames of reference are most important for your team to reflect on. The template contains several common frames of reference. More examples can be found in 18F’s <a href="https://docs.google.com/forms/d/e/1FAIpQLScI0iTQEstjECMzFVuyMt0Giku69YggEkAlybQPlH4y7Ik9Vg/viewform">frames of reference form</a>.
+      To begin, brainstorm as a team what frames of reference are most important for your team to reflect on. The template contains several common frames of reference. 
     </li>
     <li>
       Next, add your experiences with each frame of reference. The template provides options for doing that in a way that's safe and comfortable for everyone, including:
@@ -141,7 +141,7 @@ description: >-
 
   <b>Ensure the terms and references you use to refer to a group are both respectful and accurate.</b><br>
 
-  Some terms may not be accurate to describe a group, while other terms can have negative connotations. For example, as [18F points out, the term “American Indians and Alaskan Natives” is not an all-encompassing term for Indigenous Americans](https://github.com/18F/Equity-centered-design-with-American-Indians-and-Alaska-Natives-10x/wiki/Intro-Why-Equity-Centered-Design#words-that-carry-weight), as it does not include members of non-federally-recognized tribes, or Indigenous Americans who are not members of a tribe.
+  Some terms may not be accurate to describe a group, while other terms can have negative connotations. For example, the term “American Indians and Alaskan Natives” is not an all-encompassing term for Indigenous Americans, as it does not include members of non-federally-recognized tribes, or Indigenous Americans who are not members of a tribe.
 
 
   Use the terminology that groups and individuals use for themselves. This includes the preferred terminology of any individuals you work with directly. Do your research, read the resources listed in the “Further Reading” section below, and ask members of the group in question directly if you’re in doubt. 
@@ -216,7 +216,7 @@ description: >-
   Organizational leaders and managers should prioritize assembling teams with members that have a variety of lived experiences. It is a best practice to include and involve people from a range of different social and ethnic backgrounds. 
 
 
-  While this includes individuals of different races, genders, religions, sexual orientations, ages, and national origins, it also includes individuals of different economic, geographic, or educational backgrounds, for example. In a heterogeneous environment, each team member has different knowledge, perspectives, and points of view that help the group make better-informed decisions. Once a hetergenous team has been assembled, the [frames of reference](#frames-of-reference) activity will be useful in identifying the individual and collective biases on the team. 
+  While this includes individuals of different races, genders, religions, sexual orientations, ages, and national origins, it also includes individuals of different economic, geographic, or educational backgrounds, for example. In a heterogeneous environment, each team member has different knowledge, perspectives, and points of view that help the group make better-informed decisions. Once a heterogenous team has been assembled, the [frames of reference](#frames-of-reference) activity will be useful in identifying the individual and collective biases on the team. 
 
 
   ## Beginning a project
@@ -251,7 +251,7 @@ description: >-
   <h4 class="h3">Write a problem statement</h4>
 
 
-  Before engaging in any work, stakeholders and the project team should work together to create a problem statement identifying and framing the problem to explore through research or solve through design. Nielsen Norman has more about  [how to form a problem statement](https://www.nngroup.com/articles/problem-statements/). 18F also has a [design hypothesis exercise](https://guides.18f.org/methods/decide/design-hypothesis/) that considers the value and impact of work on the intended audience.
+  Before engaging in any work, stakeholders and the project team should work together to create a problem statement identifying and framing the problem to explore through research or solve through design. Nielsen Norman has more about  [how to form a problem statement](https://www.nngroup.com/articles/problem-statements/).
 
 
   The team should also engage in [activities to validate the problem statement](https://guides.18f.org/methods/discover/stakeholder-and-user-interviews/) once it’s been formed.
@@ -278,7 +278,7 @@ description: >-
   * Explore any tension that might impact how you are perceived as a representative of the federal government when engaging with these communities. 
 
 
-  As 18F points out in their [presentation on community-centered design and research](https://web.archive.org/web/20241208180041/https://www.youtube.com/watch?v=j1ZJO8maV7s), people often access government services in their most vulnerable moments. Recognize the power imbalance between the federal government you’re representing and the people we serve. 
+  People often access government services in their most vulnerable moments. Recognize the power imbalance between the federal government you’re representing and the people we serve. 
 
 
   Engage with the broader community (other government agencies, nonprofits, grassroots organizations, or other groups working on a community level) to seek out knowledge and additional perspectives. 

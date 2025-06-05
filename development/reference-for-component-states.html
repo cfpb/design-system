@@ -493,6 +493,28 @@ guidance.</p>
   </div>
 </div>
 
+<br>
+<hr>
+<br>
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test-select-field-error">Error</label>
+  <div class="a-select a-select--error">
+    <select id="test-select-field-error">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+  <div class="a-form-alert a-form-alert--error" id="form-input-error_message" role="alert">
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error-round" viewbox="0 0 17 19"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0m-6.804.01 3.032-3.033a.792.792 0 1 0-1.12-1.12L8.494 8.473 5.46 5.44a.792.792 0 0 0-1.12 1.12l3.033 3.033-3.032 3.033a.791.791 0 1 0 1.12 1.119l3.032-3.033 3.033 3.033a.79.79 0 0 0 1.12 0 .79.79 0 0 0 0-1.12z"></path></svg>
+    <span class="a-form-alert__text">
+      This is a field-level alert with an error status.
+    </span>
+  </div>
+</div>
+
             
 
             <br>
@@ -1546,11 +1568,11 @@ guidance.</p>
                 <!--Default state-->
 
 <div class="m-form-field">
-  <label class="a-label a-label--heading" for="test_select_enabled">
+  <label class="a-label a-label--heading" for="test-select-enabled">
     Default
   </label>
   <div class="a-select">
-    <select id="test_select_enabled">
+    <select id="test-select-enabled">
       <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>
       <option value="option3">Option 3</option>
@@ -1564,11 +1586,11 @@ guidance.</p>
 <!--Hover state-->
 
 <div class="m-form-field">
-  <label class="a-label a-label--heading" for="test_select__hover">
+  <label class="a-label a-label--heading" for="test-select-hover">
     Hover
   </label>
   <div class="a-select">
-    <select id="test_select__hover" class="hover">
+    <select id="test-select-hover" class="hover">
       <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>
       <option value="option3">Option 3</option>
@@ -1582,11 +1604,11 @@ guidance.</p>
 <!--Focus state-->
 
 <div class="m-form-field">
-  <label class="a-label a-label--heading" for="test_select__focus">
+  <label class="a-label a-label--heading" for="test-select-focus">
     Focus
   </label>
   <div class="a-select">
-    <select id="test_select__focus" class="focus">
+    <select id="test-select-focus" class="focus">
       <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>
       <option value="option3">Option 3</option>
@@ -1600,9 +1622,68 @@ guidance.</p>
 <!--Disabled state-->
 
 <div class="m-form-field">
-  <label class="a-label a-label--heading" for="test_select__disabled">Disabled</label>
+  <label class="a-label a-label--heading" for="test-select-disabled">Disabled</label>
   <div class="a-select a-select--disabled">
-    <select id="test_select__disabled" disabled>
+    <select id="test-select-disabled" disabled>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+</div>
+
+<br>
+<br>
+
+<h3 class="h4">Validation status - error</h3>
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test-select-error">Error</label>
+  <div class="a-select a-select--error">
+    <select id="test-select-error">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+</div>
+
+<br>
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test-select-error-hover">Error - hover</label>
+  <div class="a-select a-select--error">
+    <select id="test-select-error-hover" class="hover">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+</div>
+
+<br>
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test-select-error-focus">Error - focus</label>
+  <div class="a-select a-select--error">
+    <select id="test-select-error-focus" class="focus">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+</div>
+
+<br>
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test-select-error-disabled">Error - disabled</label>
+  <div class="a-select a-select--error">
+    <select id="test-select-error-disabled" disabled>
       <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>
       <option value="option3">Option 3</option>
@@ -1686,8 +1767,8 @@ guidance.</p>
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/reference-for-component-states.md">
-                            <time datetime="2025-06-05 09:21:18 -0400">
-                                 9:21:18 AM Jun 05, 2025
+                            <time datetime="2025-06-05 12:58:13 -0400">
+                                12:58:13 PM Jun 05, 2025
                             </time>
                         </a>
                     </section>

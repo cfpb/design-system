@@ -2,7 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.10.0](https://github.com/cfpb/design-system/compare/v3.9.0..3.10.0) - May 21, 2025
+## [3.11.0](https://github.com/cfpb/design-system/compare/v3.10.0..3.11.0) - June  5, 2025
+
+### PRs in this release
+
+- PR #[2248](https://github.com/cfpb/design-system/pull/2248): Refactor `u-show-on-mobile` to not force display state when visible - Ans
+- PR #[2250](https://github.com/cfpb/design-system/pull/2250): Move links over to reference page - Ans
+- PR #[2252](https://github.com/cfpb/design-system/pull/2252): Tweaks to the reference page - Ans
+- PR #[2255](https://github.com/cfpb/design-system/pull/2255): Fix the hover states on selected/disabled radio buttons - Ans
+- PR #[2276](https://github.com/cfpb/design-system/pull/2276): Add error state for select component - Ans
+
+### General
+
+- Refactor `u-show-on-mobile` to not force display state when visible - ([7ac51d9](https://github.com/cfpb/design-system/commit/7ac51d96e54526554d1c5c8aab0e96e40f556da2)) - Ans
+- Move links over to reference page - ([f509860](https://github.com/cfpb/design-system/commit/f5098606bd0efed07ae457c4e6dbaf32e131c37a)) - Ans
+- Tweaks to the reference page - ([6e31f7d](https://github.com/cfpb/design-system/commit/6e31f7df9b6af78f4763b10c3df61f6b57761078)) - Ans
+- Fix the hover states on selected/disabled radio buttons - ([a8ec6c3](https://github.com/cfpb/design-system/commit/a8ec6c3afa29c9bbc6d535affca06dc28e935cc4)) - Ans
+- Add error state for select component - ([c7e86d6](https://github.com/cfpb/design-system/commit/c7e86d6972c1cf212ed0b75d8e29af0ad68e4ee9)) - Ans
+- Update multiselect - ([316e953](https://github.com/cfpb/design-system/commit/316e9538649ee0aad3bc94efcca1374b71b4ee26)) - Ans
+- Re-build assets - ([c75ce77](https://github.com/cfpb/design-system/commit/c75ce778ca08e2b8add9d1bbe69b07cdde157ce5)) - Ans
+
+## [3.10.0](https://github.com/cfpb/design-system/compare/v3.9.0..v3.10.0) - May 21, 2025
 
 ### PRs in this release
 

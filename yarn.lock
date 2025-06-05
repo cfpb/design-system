@@ -770,7 +770,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@es-joy/jsdoccomment@npm:~0.50.1":
+"@es-joy/jsdoccomment@npm:~0.50.2":
   version: 0.50.2
   resolution: "@es-joy/jsdoccomment@npm:0.50.2"
   dependencies:
@@ -4044,12 +4044,12 @@ __metadata:
     eslint: "npm:9.28.0"
     eslint-config-prettier: "npm:10.1.5"
     eslint-import-resolver-typescript: "npm:4.4.2"
-    eslint-plugin-cypress: "npm:5.0.1"
+    eslint-plugin-cypress: "npm:5.1.0"
     eslint-plugin-import: "npm:2.31.0"
-    eslint-plugin-jsdoc: "npm:50.6.17"
+    eslint-plugin-jsdoc: "npm:50.7.1"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-react: "npm:7.37.5"
-    git-cliff: "npm:2.8.0"
+    git-cliff: "npm:2.9.1"
     glob: "npm:11.0.2"
     globals: "npm:16.2.0"
     html-entities: "npm:2.5.3"
@@ -4067,7 +4067,7 @@ __metadata:
     react-is: "npm:18.3.1"
     react-liquid: "npm:2.0.1"
     release-it: "npm:19.0.3"
-    sass: "npm:1.89.0"
+    sass: "npm:1.89.1"
     slugify: "npm:1.6.6"
     stylelint: "npm:16.20.0"
     stylelint-config-standard-scss: "npm:15.0.1"
@@ -6619,14 +6619,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:5.0.1":
-  version: 5.0.1
-  resolution: "eslint-plugin-cypress@npm:5.0.1"
+"eslint-plugin-cypress@npm:5.1.0":
+  version: 5.1.0
+  resolution: "eslint-plugin-cypress@npm:5.1.0"
   dependencies:
     globals: "npm:^16.2.0"
   peerDependencies:
     eslint: ">=9"
-  checksum: 10c0/cce5cc34b5df1238d73f296387a825ecdd414f2b80cf272ed9ac39c6a268a351bb75585673a43f162e76c347df2d8b06a36d49cab1dd3a80e897ba867f7eca76
+  checksum: 10c0/a1616d29c29dd4188e6f4f2ada8a6c3d217e37d8ac79fcef93978be664054853548d230aeef485702dc1ac4075d521911dce4732e1871278a649b9189594861b
   languageName: node
   linkType: hard
 
@@ -6659,23 +6659,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:50.6.17":
-  version: 50.6.17
-  resolution: "eslint-plugin-jsdoc@npm:50.6.17"
+"eslint-plugin-jsdoc@npm:50.7.1":
+  version: 50.7.1
+  resolution: "eslint-plugin-jsdoc@npm:50.7.1"
   dependencies:
-    "@es-joy/jsdoccomment": "npm:~0.50.1"
+    "@es-joy/jsdoccomment": "npm:~0.50.2"
     are-docs-informative: "npm:^0.0.2"
     comment-parser: "npm:1.4.1"
-    debug: "npm:^4.3.6"
+    debug: "npm:^4.4.1"
     escape-string-regexp: "npm:^4.0.0"
-    espree: "npm:^10.1.0"
+    espree: "npm:^10.3.0"
     esquery: "npm:^1.6.0"
     parse-imports-exports: "npm:^0.2.4"
-    semver: "npm:^7.6.3"
+    semver: "npm:^7.7.2"
     spdx-expression-parse: "npm:^4.0.0"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10c0/b39cdb46f5727e9ce006d41245ab4de95b0a99ceb8aea4477a9fc247b15b7e728be54d765cd28620d9cf62d720f999d4db60699a803925e476f67746bbb62d2d
+  checksum: 10c0/8ec6295ce789534c1ff47f2988e56c05dc5afb6c1ae54d7036196522aa32de0dee47affe1526697f4ad63ca41124f45175e175ac1f0efe60592f15d1501b57bb
   languageName: node
   linkType: hard
 
@@ -6806,7 +6806,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"espree@npm:^10.0.1, espree@npm:^10.1.0, espree@npm:^10.3.0":
+"espree@npm:^10.0.1, espree@npm:^10.3.0":
   version: 10.3.0
   resolution: "espree@npm:10.3.0"
   dependencies:
@@ -7712,59 +7712,59 @@ __metadata:
   languageName: node
   linkType: hard
 
-"git-cliff-darwin-arm64@npm:2.8.0":
-  version: 2.8.0
-  resolution: "git-cliff-darwin-arm64@npm:2.8.0"
+"git-cliff-darwin-arm64@npm:2.9.1":
+  version: 2.9.1
+  resolution: "git-cliff-darwin-arm64@npm:2.9.1"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"git-cliff-darwin-x64@npm:2.8.0":
-  version: 2.8.0
-  resolution: "git-cliff-darwin-x64@npm:2.8.0"
+"git-cliff-darwin-x64@npm:2.9.1":
+  version: 2.9.1
+  resolution: "git-cliff-darwin-x64@npm:2.9.1"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"git-cliff-linux-arm64@npm:2.8.0":
-  version: 2.8.0
-  resolution: "git-cliff-linux-arm64@npm:2.8.0"
+"git-cliff-linux-arm64@npm:2.9.1":
+  version: 2.9.1
+  resolution: "git-cliff-linux-arm64@npm:2.9.1"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"git-cliff-linux-x64@npm:2.8.0":
-  version: 2.8.0
-  resolution: "git-cliff-linux-x64@npm:2.8.0"
+"git-cliff-linux-x64@npm:2.9.1":
+  version: 2.9.1
+  resolution: "git-cliff-linux-x64@npm:2.9.1"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"git-cliff-windows-arm64@npm:2.8.0":
-  version: 2.8.0
-  resolution: "git-cliff-windows-arm64@npm:2.8.0"
+"git-cliff-windows-arm64@npm:2.9.1":
+  version: 2.9.1
+  resolution: "git-cliff-windows-arm64@npm:2.9.1"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"git-cliff-windows-x64@npm:2.8.0":
-  version: 2.8.0
-  resolution: "git-cliff-windows-x64@npm:2.8.0"
+"git-cliff-windows-x64@npm:2.9.1":
+  version: 2.9.1
+  resolution: "git-cliff-windows-x64@npm:2.9.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"git-cliff@npm:2.8.0":
-  version: 2.8.0
-  resolution: "git-cliff@npm:2.8.0"
+"git-cliff@npm:2.9.1":
+  version: 2.9.1
+  resolution: "git-cliff@npm:2.9.1"
   dependencies:
     execa: "npm:^8.0.1"
-    git-cliff-darwin-arm64: "npm:2.8.0"
-    git-cliff-darwin-x64: "npm:2.8.0"
-    git-cliff-linux-arm64: "npm:2.8.0"
-    git-cliff-linux-x64: "npm:2.8.0"
-    git-cliff-windows-arm64: "npm:2.8.0"
-    git-cliff-windows-x64: "npm:2.8.0"
+    git-cliff-darwin-arm64: "npm:2.9.1"
+    git-cliff-darwin-x64: "npm:2.9.1"
+    git-cliff-linux-arm64: "npm:2.9.1"
+    git-cliff-linux-x64: "npm:2.9.1"
+    git-cliff-windows-arm64: "npm:2.9.1"
+    git-cliff-windows-x64: "npm:2.9.1"
   dependenciesMeta:
     git-cliff-darwin-arm64:
       optional: true
@@ -7780,7 +7780,7 @@ __metadata:
       optional: true
   bin:
     git-cliff: lib/cli/cli.js
-  checksum: 10c0/b78cae3ce3e58e2762a09ae14c9a761409b510cbace3830e8f9dd95ef91517f67a017c3453ff40df184e3ff6058b16dcb217256aa8fdb3b76770d250f9303193
+  checksum: 10c0/6f6652eb0b7e289bd10d4391998e3c94de570b7f022e701201c0f1ed6609ac5fdaf9cdd326ad468dd35cbaa40f9524c22145818966c20e84561fbbac663ddf52
   languageName: node
   linkType: hard
 
@@ -13901,9 +13901,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.89.0":
-  version: 1.89.0
-  resolution: "sass@npm:1.89.0"
+"sass@npm:1.89.1":
+  version: 1.89.1
+  resolution: "sass@npm:1.89.1"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -13914,7 +13914,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10c0/8e31b48c5e0abd9d437edb201919a82863f605ace1c1536ccdc6b3133937a70fe29b92ad536af632ecae2f140733931e4ec971e1bfbf8b835c54d392b28331df
+  checksum: 10c0/4406c441f71f5e0ec056345e6091cef51fd1786dac6e5b3eb1e87df464c40b3278219cc51df98309c36794503787ab0fe88fd45f2b0464f22000b68e755883ee
   languageName: node
   linkType: hard
 
@@ -13983,7 +13983,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.7.2":
+"semver@npm:7.7.2, semver@npm:^7.7.2":
   version: 7.7.2
   resolution: "semver@npm:7.7.2"
   bin:

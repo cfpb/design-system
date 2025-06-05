@@ -3,10 +3,10 @@ title: Conducting research
 collection_name: pages
 layout: variation
 section: guidelines
-jumplinks: "<br>Practice comprehensive and exhaustive recruitment <br>Compensate
-  fairly<br>Obtain informed consent<br>Check your biases before starting
-  research<br>Handle data and stories with care<br>Recognize and respond to
-  trauma in participants "
+jumplinks: "<br>Practice comprehensive and exhaustive
+  recruitment<br><br>Compensate fairly<br><br>Obtain informed
+  consent<br><br>Check your biases before starting research<br><br>Handle data
+  and stories with care<br><br>Recognize and respond to trauma in participants "
 variation_groups: []
 eyebrow: Community-centered design
 status: Proposed

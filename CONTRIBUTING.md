@@ -112,6 +112,8 @@ Then, do a release:
 1. Follow the prompts to decide what version (major, minor, or patch)
    you will be releasing.
 
+**Note:** You can preview the generated changelog with `yarn changelog`.
+
 ### Adhere to any linting errors or warnings
 
 The `yarn lint` command can be used to lint the CSS and JS. Linting tasks that are set up within the pre-release processes are there to promote consistency.

@@ -3,7 +3,7 @@ title: Conducting research
 collection_name: pages
 layout: variation
 section: guidelines
-jumplinks: ""
+jumplinks: ''
 variation_groups: []
 eyebrow: Community-centered design
 status: Proposed
@@ -304,5 +304,5 @@ description: >-
   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
 
   * [Design and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
-related_items: ""
+related_items: ''
 ---

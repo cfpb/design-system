@@ -2,8 +2,16 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 .a-select {
+  --select-border: var(--select-border-default);
+  --select-border-width: var(--select-border-width-default);
+
   position: relative;
-  border: 1px solid $select-border;
+  border: var(--select-border-width) solid var(--select-border);
+
+  &:has(select[disabled]) {
+    border: var(--select-border-width-default) solid
+      var(--select-border-default);
+  }
 
   select {
     width: 100%;
@@ -13,21 +21,22 @@
       em;
     border: 0;
     appearance: none;
-    background-color: $input-bg;
+    background-color: var(--white);
     border-radius: 0;
-    color: $text;
+    color: var(--black);
 
     &:hover,
     &.hover {
-      outline: 2px solid $input-border-hover;
+      outline: 2px solid var(--select-border-hover-default);
       outline-offset: 0;
+      cursor: pointer;
     }
 
     &:active,
     &:focus,
     &.focus {
-      box-shadow: 0 0 0 2px $input-border-focused;
-      outline: 1px dotted $input-border-focused;
+      box-shadow: 0 0 0 2px var(--select-border-focus-default);
+      outline: 1px dotted var(--select-border-focus-default);
 
       // The outline-offset property is not supported everywhere (e.g. IE)
       // but it adds a nice touch in browsers where it is.
@@ -36,8 +45,7 @@
   }
 
   select[disabled] {
-    color: $select-text-disabled;
-    background-color: $input-bg-disabled;
+    background-color: var(--select-bg-disabled-default);
     cursor: not-allowed;
 
     &:hover,
@@ -48,22 +56,23 @@
     }
   }
 
+  select[disabled],
   select[disabled] option,
   select[disabled] option:disabled,
   select option:disabled {
-    color: $select-text-disabled;
+    color: var(--select-text-disabled-default);
   }
 
   &::after {
     // Arrow box width must be odd size to properly center the bg image
     width: math.div($select-height, $base-font-size-px) + em;
     box-sizing: border-box;
-    border-left: 1px solid $select-border;
+    border-left: 1px solid var(--select-border-default);
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: $select-icon-bg;
+    background-color: var(--select-icon-bg-default);
 
     --cfpb-background-icon-svg: 'down';
 
@@ -79,5 +88,10 @@
   // the select[disabled] is present and need the additional class.
   &--disabled::after {
     --cfpb-background-icon-svg: 'down rgb(90,93,97)';
+  }
+
+  &--error {
+    --select-border: var(--select-border-error);
+    --select-border-width: var(--select-border-width-error);
   }
 }

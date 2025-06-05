@@ -232,3 +232,31 @@
     </span>
   </div>
 </div>
+
+<br />
+<hr />
+<br />
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test-select-field-error"
+    >Error</label
+  >
+  <div class="a-select a-select--error">
+    <select id="test-select-field-error">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+  <div
+    class="a-form-alert a-form-alert--error"
+    id="form-input-error_message"
+    role="alert"
+  >
+    {% include icons/error-round.svg %}
+    <span class="a-form-alert__text">
+      This is a field-level alert with an error status.
+    </span>
+  </div>
+</div>

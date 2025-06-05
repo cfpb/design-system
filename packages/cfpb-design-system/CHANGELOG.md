@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.11.0](https://github.com/cfpb/design-system/compare/v3.10.0..3.11.0) - June  5, 2025
+## [3.11.0](https://github.com/cfpb/design-system/compare/v3.10.0..v3.11.0) - June  5, 2025
 
 ### PRs in this release
 

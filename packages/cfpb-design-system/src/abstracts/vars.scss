@@ -106,14 +106,14 @@ $input-text: var(--black);
 $input-text-disabled: var(--gray-dark);
 $input-text-placeholder: var(--gray-dark);
 
-// .a-text-input icons
-$input-icon: var(--gray);
-$input-icon-success: var(--green);
-$input-icon-warning: var(--gold);
-$input-icon-error: var(--red);
-
-// .a-select
 :root {
+  // .a-form-alert icons
+  --form-alert-icon-color-default: var(--gray);
+  --form-alert-icon-color-success: var(--green);
+  --form-alert-icon-color-warning: var(--gold);
+  --form-alert-icon-color-error: var(--red);
+
+  // .a-select
   --select-border-default: var(--gray-60); // $input-text
   --select-border-width-default: 1px;
   --select-border-error: var(--red);

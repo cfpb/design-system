@@ -2,11 +2,13 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 .a-form-alert {
+  --form-alert-icon-color: var(--form-alert-icon-color-default);
+
   display: flex;
   gap: math.div(5px, $base-font-size-px) + rem;
 
   .cf-icon-svg {
-    color: $input-icon;
+    color: var(--form-alert-icon-color);
     flex: none;
     margin-top: math.div(1px, $base-font-size-px) + rem;
   }
@@ -16,14 +18,14 @@
   }
 
   &--success .cf-icon-svg {
-    color: $input-icon-success;
-  }
-
-  &--error .cf-icon-svg {
-    color: $input-icon-error;
+    --form-alert-icon-color: var(--form-alert-icon-color-success);
   }
 
   &--warning .cf-icon-svg {
-    color: $input-icon-warning;
+    --form-alert-icon-color: var(--form-alert-icon-color-warning);
+  }
+
+  &--error .cf-icon-svg {
+    --form-alert-icon-color: var(--form-alert-icon-color-error);
   }
 }

@@ -11,6 +11,7 @@
   --choice-bg: var(--choice-bg-default);
   --choice-bg-selected: var(--choice-bg-selected-default);
   --choice-bg-selected-focus: var(--choice-bg-selected-focus-default);
+  --choice-label-disabled: var(--choice-label-disabled-default);
 
   // Private variables.
   --choice-border-width-addendum: 0;
@@ -84,11 +85,9 @@
 
         & + .a-label {
           cursor: not-allowed;
-          color: $input-text-disabled;
+          color: var(--choice-label-disabled);
 
           &::before {
-            // background: var(--choice-bg);
-            // border-color: var(--choice-border);
             outline: none;
           }
         }
@@ -246,7 +245,7 @@
       &:disabled + .a-label,
       &:checked:disabled + .a-label,
       &:hover:disabled + .a-label {
-        color: $input-text-disabled;
+        color: var(--choice-label-disabled);
         box-shadow: none;
         background-color: $form-field-input-lg-target-bg-disabled;
       }

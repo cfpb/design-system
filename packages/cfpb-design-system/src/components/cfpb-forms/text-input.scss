@@ -1,138 +1,74 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
-// Border and  Outline Status styling.
-@mixin u-border-outline-error {
-  border-color: $input-border-error;
-  outline: 1px solid $input-border-error;
-  &:hover,
-  &.hover {
-    border-color: $input-border-error-hover;
-    outline: 1px solid $input-border-error-hover;
-    outline-offset: 0;
-  }
-  &:focus,
-  &.focus {
-    border-color: $input-border-error;
-    box-shadow: 0 0 0 1px $input-border-error;
-    outline: 1px dotted $input-border-error;
-
-    // Both hover and focus simultaenously
-    &:hover,
-    &.hover {
-      border-color: $input-border-error;
-      box-shadow: 0 0 0 1px $input-border-error;
-      outline: 1px dotted $input-border-error;
-      outline-offset: 2px;
-    }
-  }
-}
-
-@mixin u-border-outline-warning {
-  border-color: $input-border-warning;
-  outline: 1px solid $input-border-warning;
-  &:hover,
-  &.hover {
-    border-color: $input-border-warning-hover;
-    outline: 1px solid $input-border-warning-hover;
-    outline-offset: 0;
-  }
-  &:focus,
-  &.focus {
-    border-color: $input-border-warning;
-    box-shadow: 0 0 0 1px $input-border-warning;
-    outline: 1px dotted $input-border-warning;
-
-    // Both hover and focus simultaenously
-    &:hover,
-    &.hover {
-      border-color: $input-border-warning;
-      box-shadow: 0 0 0 1px $input-border-warning;
-      outline: 1px dotted $input-border-warning;
-      outline-offset: 2px;
-    }
-  }
-}
-
-@mixin u-border-outline-success {
-  border-color: $input-border-success;
-  outline: 1px solid $input-border-success;
-  &:hover,
-  &.hover {
-    border-color: $input-border-success-hover;
-    outline: 1px solid $input-border-success-hover;
-    outline-offset: 0;
-  }
-  &:focus,
-  &.focus {
-    border-color: $input-border-success;
-    box-shadow: 0 0 0 1px $input-border-success;
-    outline: 1px dotted $input-border-success;
-
-    // Both hover and focus simultaenously
-    &:hover,
-    &.hover {
-      border-color: $input-border-success;
-      box-shadow: 0 0 0 1px $input-border-success;
-      outline: 1px dotted $input-border-success;
-      outline-offset: 2px;
-    }
-  }
-}
-
 .a-text-input {
+  // Theme variables.
+  --input-text: var(--input-text-default);
+  --input-text-disabled: var(--input-text-disabled-default);
+  --input-text-placeholder: var(--input-text-placeholder-default);
+  --input-border: var(--input-border-default);
+  --input-border-hover: var(--input-border-hover-default);
+  --input-border-focus: var(--input-border-focus-default);
+  --input-bg: var(--input-bg-default);
+  --input-bg-disabled: var(--input-bg-disabled-default);
+
   // Reset the browser's default styling.
   appearance: none;
   display: inline-block;
   padding: math.div(7px, $base-font-size-px) + em;
-  border: 1px solid $input-border;
-  background: $input-bg;
-  color: $input-text;
+  border: 1px solid var(--input-border);
+  outline: 0 solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
   box-sizing: border-box;
 
   &:hover,
   &.hover {
-    border-color: $input-border-hover;
-    outline: 1px solid $input-border-hover;
+    border-color: var(--input-border-hover);
+    outline: 1px solid var(--input-border-hover);
   }
 
   &:focus,
   &.focus {
-    border-color: $input-border-focused;
-    box-shadow: 0 0 0 1px $input-border-focused;
-    outline: 1px dotted $input-border-focused;
-
-    // The outline-offset property is not supported everywhere (e.g. IE)
-    // but it adds a nice touch in browsers where it is.
+    border-color: var(--input-border-focus);
+    box-shadow: 0 0 0 1px var(--input-border-focus);
+    outline: 1px dotted var(--input-border-focus);
     outline-offset: 2px;
   }
 
   &:disabled {
+    --input-border: var(--input-border-disabled);
     &,
     &:hover,
     &.hover,
     &:focus,
     &.focus {
-      color: $input-text-disabled;
-      background-color: $input-bg-disabled;
+      color: var(--input-text-disabled);
+      background-color: var(--input-bg-disabled);
       cursor: not-allowed;
 
       // Cancel the hover and focus states.
-      border-color: $input-border;
+      border-color: var(--input-border);
       outline: none;
     }
   }
 
+  &--error,
+  &--warning,
+  &--success {
+    outline-width: 1px;
+  }
+
   &--error {
-    @include u-border-outline-error;
+    --input-border: var(--input-border-error);
   }
 
   &--warning {
-    @include u-border-outline-warning;
+    --input-border: var(--input-border-warning);
   }
 
   &--success {
-    @include u-border-outline-success;
+    --input-border: var(--input-border-success);
   }
 }
 
@@ -144,10 +80,10 @@
 
 // Change place holder text to dark gray (#43484e).
 ::placeholder {
-  color: $input-text-placeholder;
+  color: var(--input-text-placeholder);
 }
 
 // Force placeholder text color change for "date" field type.
 input[type='date']::-webkit-datetime-edit {
-  color: $input-text-placeholder;
+  color: var(--input-text-placeholder);
 }

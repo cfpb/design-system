@@ -82,31 +82,23 @@ $block-border-left: $block-border;
 // .content__main
 $content-main-border: var(--gray-40);
 
-// Form variables
-
-// .a-text-input borders
-$input-border: var(--gray-60);
-$input-border-hover: var(--pacific);
-$input-border-focused: var(--pacific);
-$input-border-error: var(--red);
-$input-border-error-hover: var(--red-dark);
-$input-border-warning: var(--gold);
-$input-border-warning-hover: var(--gold-dark);
-$input-border-success: var(--green);
-$input-border-success-hover: var(--green-dark);
-
-// .a-text-input backgrounds
-$input-bg: var(--white);
-$input-bg-selected: var(--pacific);
-$input-bg-disabled: var(--gray-10);
-$input-bg-disabled-selected: var(--gray-40);
-
-// .a-text-input text
-$input-text: var(--black);
-$input-text-disabled: var(--gray-dark);
-$input-text-placeholder: var(--gray-dark);
-
 :root {
+  // Form variables
+
+  // .a-text-input
+  --input-text-default: var(--black);
+  --input-text-disabled-default: var(--gray-dark);
+  --input-text-placeholder-default: var(--gray-dark);
+  --input-border-default: var(--gray-60); // $input-border
+  --input-border-disabled: var(--gray-60);
+  --input-border-success: var(--green);
+  --input-border-warning: var(--gold);
+  --input-border-error: var(--red);
+  --input-border-hover-default: var(--pacific); // $input-border-hover
+  --input-border-focus-default: var(--pacific); // $input-border-focused
+  --input-bg-default: var(--white);
+  --input-bg-disabled-default: var(--gray-10);
+
   // .a-form-alert icons
   --form-alert-icon-color-default: var(--gray);
   --form-alert-icon-color-success: var(--green);
@@ -114,7 +106,7 @@ $input-text-placeholder: var(--gray-dark);
   --form-alert-icon-color-error: var(--red);
 
   // .a-select
-  --select-border-default: var(--gray-60); // $input-text
+  --select-border-default: var(--gray-60); // $input-border
   --select-border-width-default: 1px;
   --select-border-error: var(--red);
   --select-border-width-error: 2px;
@@ -141,6 +133,7 @@ $input-text-placeholder: var(--gray-dark);
   --choice-bg-selected-warning: var(--gold);
   --choice-bg-selected-error: var(--red);
   --choice-bg-selected-focus-default: var(--pacific);
+  --choice-label-disabled-default: var(--gray-dark);
 }
 
 // .m-form-field--lg-target

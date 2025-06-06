@@ -57,7 +57,7 @@ select.o-multiselect {
 
   &__fieldset {
     // Resets
-    border-color: $input-border;
+    border-color: var(--select-border-default);
     border-top: none;
     margin: 0;
     padding: 0;

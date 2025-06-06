@@ -14,14 +14,6 @@
   &--checkbox,
   &--radio {
     .a-label {
-      // We need to turn off autoprefixing for the inline-grid because
-      // IE does not handle an inline-grid like other browsers,
-      // leading to an extremely narrow column of text for the label
-      // and the checkbox or radio widget covering the first part of it.
-      // The Autoprefixer control comment below ensures that the following
-      // property is only picked up by browsers with standard support.
-
-      /* autoprefixer: ignore next */
       display: inline-grid;
 
       // 30px is width of checkbox/radio button plus the needed padding.
@@ -54,11 +46,6 @@
       &.hover::before {
         border-color: $input-border-hover;
       }
-    }
-
-    // Ensure the helper text appears on its own line below the label.
-    .a-label__helper {
-      display: block;
     }
 
     .a-checkbox,

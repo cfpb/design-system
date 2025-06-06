@@ -1,2 +1,2 @@
-(()=>{var t=Object.defineProperty;var e=(n,r)=>{for(var l in r)t(n,l,{get:r[l],enumerable:!0})};var a={};e(a,{default:()=>s});var s={};})();
+(()=>{var t=Object.defineProperty;var e=(n,a)=>{for(var l in a)t(n,l,{get:a[l],enumerable:!0})};var r={};e(r,{default:()=>c});var c={};})();
 //# sourceMappingURL=index.js.map

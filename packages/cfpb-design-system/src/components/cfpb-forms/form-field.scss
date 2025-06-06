@@ -3,6 +3,18 @@
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
 
 .m-form-field {
+  // Theme variables.
+  --choice-border: var(--choice-border-default);
+  --choice-border-hover: var(--choice-border-hover-default);
+  --choice-border-focus: var(--choice-border-focus-default);
+  --choice-outline-focus: var(--choice-outline-focus-default);
+  --choice-bg: var(--choice-bg-default);
+  --choice-bg-selected: var(--choice-bg-selected-default);
+  --choice-bg-selected-focus: var(--choice-bg-selected-focus-default);
+
+  // Private variables.
+  --choice-border-width-addendum: 0;
+
   .a-text-input--full {
     width: 100%;
   }
@@ -28,11 +40,12 @@
         display: inline-block;
         grid-row-start: 1;
         grid-row-end: 3;
-        border: 1px solid $form-field-input-border;
+        border: 1px solid var(--choice-border);
+        outline: var(--choice-border-width-addendum) solid var(--choice-border);
         height: math.div(18px, $base-font-size-px) + em;
         width: math.div(18px, $base-font-size-px) + em;
         margin-right: 10px;
-        background-color: $input-bg;
+        background-color: var(--choice-bg);
         content: '';
         vertical-align: top;
 
@@ -44,7 +57,7 @@
 
       &:hover::before,
       &.hover::before {
-        border-color: $input-border-hover;
+        border-color: var(--choice-border-hover);
       }
     }
 
@@ -54,9 +67,7 @@
 
       &:focus + .a-label,
       &.focus + .a-label {
-        outline: 1px dotted $input-border-focused;
-
-        // The outline-offset property is not supported in IE.
+        outline: 1px dotted var(--choice-outline-focus);
         outline-offset: 1px;
       }
 
@@ -66,7 +77,7 @@
         &.focus + .a-label::before,
         &:hover + .a-label::before,
         &.hover + .a-label::before {
-          border-color: $input-border;
+          border-color: var(--choice-border);
           outline: none;
           box-shadow: none; // Applies only to radio buttons.
         }
@@ -76,12 +87,40 @@
           color: $input-text-disabled;
 
           &::before {
-            background: $input-bg-disabled;
-            border-color: $form-field-input-border-disabled;
+            // background: var(--choice-bg);
+            // border-color: var(--choice-border);
             outline: none;
           }
         }
       }
+    }
+
+    &:has(.a-checkbox:disabled),
+    &:has(.a-radio:disabled) {
+      --choice-border: var(--choice-border-disabled);
+      --choice-bg: var(--choice-bg-disabled);
+      --choice-bg-selected: var(--choice-bg-selected-disabled);
+    }
+
+    &-success,
+    &-warning,
+    &-error {
+      --choice-border-width-addendum: 1px;
+    }
+
+    &-success {
+      --choice-border: var(--choice-border-success);
+      --choice-bg-selected: var(--choice-bg-selected-success);
+    }
+
+    &-warning {
+      --choice-border: var(--choice-border-warning);
+      --choice-bg-selected: var(--choice-bg-selected-warning);
+    }
+
+    &-error {
+      --choice-border: var(--choice-border-error);
+      --choice-bg-selected: var(--choice-bg-selected-error);
     }
   }
 
@@ -89,14 +128,16 @@
     .a-checkbox {
       &:focus + .a-label::before,
       &.focus + .a-label::before {
-        border-color: $input-border-focused;
-        box-shadow: 0 0 0 1px $input-border-focused;
+        border-color: var(--choice-border-focus);
+        box-shadow: 0 0 0 1px var(--choice-border-focus);
+        outline-color: var(--choice-border-focus);
       }
 
       &:hover + .a-label::before,
       &.hover + .a-label::before {
-        border-color: $input-border-hover;
-        box-shadow: 0 0 0 1px $input-border-hover;
+        border-color: var(--choice-border-hover);
+        box-shadow: 0 0 0 1px var(--choice-border-hover);
+        outline-color: var(--choice-border-hover);
       }
 
       &:checked + .a-label::before {
@@ -112,114 +153,6 @@
         --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
       }
     }
-
-    &-error {
-      .a-label {
-        &::before {
-          border-color: $input-border-error;
-          outline: 1px solid $input-border-error;
-        }
-
-        &:hover::before,
-        &.hover::before {
-          border-color: $input-border-hover;
-          outline-color: $input-border-hover;
-        }
-      }
-
-      .a-checkbox {
-        &:hover + .a-label::before,
-        &.hover + .a-label::before {
-          border-color: $input-border-hover;
-          outline-color: $input-border-hover;
-        }
-
-        &:focus + .a-label::before,
-        &.focus + .a-label::before {
-          border-color: $input-border-error;
-          box-shadow: 0 0 0 1px $input-border-error;
-          outline-color: $input-border-error;
-        }
-
-        &:focus + .a-label,
-        &.focus + .a-label {
-          outline: 1px dotted $input-border-error;
-          outline-offset: 1px;
-        }
-      }
-    }
-
-    &-warning {
-      .a-label {
-        &::before {
-          border-color: $input-border-warning;
-          outline: 1px solid $input-border-warning;
-        }
-
-        &:hover::before,
-        &.hover::before {
-          border-color: $input-border-hover;
-          outline-color: $input-border-hover;
-        }
-      }
-
-      .a-checkbox {
-        &:hover + .a-label::before,
-        &.hover + .a-label::before {
-          border-color: $input-border-hover;
-          outline-color: $input-border-hover;
-        }
-
-        &:focus + .a-label::before,
-        &.focus + .a-label::before {
-          border-color: $input-border-warning;
-          box-shadow: 0 0 0 1px $input-border-warning;
-          outline-color: $input-border-warning;
-        }
-
-        &:focus + .a-label,
-        &.focus + .a-label {
-          outline: 1px dotted $input-border-warning;
-          outline-offset: 1px;
-        }
-      }
-    }
-
-    &-success {
-      .a-label {
-        &::before {
-          border-color: $input-border-success;
-          outline: 1px solid $input-border-success;
-        }
-
-        &:hover::before,
-        &.hover::before {
-          border-color: $input-border-hover;
-          outline-color: $input-border-hover;
-        }
-      }
-
-      .a-checkbox {
-        &:hover + .a-label::before,
-        &.hover + .a-label::before {
-          border-color: $input-border-hover;
-          outline-color: $input-border-hover;
-        }
-
-        &:focus + .a-label::before,
-        &.focus + .a-label::before {
-          border-color: $input-border-success;
-          box-shadow: 0 0 0 1px $input-border-success;
-          outline-color: $input-border-success;
-        }
-
-        &:focus + .a-label,
-        &.focus + .a-label {
-          outline: 1px dotted $input-border-success;
-          outline-offset: 1px;
-        }
-      }
-    }
   }
 
   &--radio {
@@ -228,7 +161,7 @@
         border-radius: 50%;
 
         /* The rotate is needed to fix a bug in Firefox where radio
-                   button was not centered. */
+           button was not centered. */
         transform: rotate(0deg);
       }
     }
@@ -237,44 +170,45 @@
       &:focus + .a-label::before,
       &.focus + .a-label::before {
         outline: none;
-        border-color: $input-border-focused;
-        box-shadow: 0 0 0 1px $input-border-focused;
+        border-color: var(--choice-border-focus);
+        box-shadow: 0 0 0 1px var(--choice-border-focus);
       }
 
       &:hover + .a-label::before,
       &.hover + .a-label::before {
         outline: none;
-        border-color: $input-border-hover;
-        box-shadow: 0 0 0 1px $input-border-hover;
+        border-color: var(--choice-border-hover);
+        box-shadow: 0 0 0 1px var(--choice-border-hover);
       }
 
       &:checked + .a-label::before {
-        background-color: $input-bg-selected;
-        box-shadow: inset 0 0 0 2px $form-field-inset;
+        background-color: var(--choice-bg-selected);
+        box-shadow: inset 0 0 0 2px var(--white); // The radio button ring.
       }
 
       &:focus:checked + .a-label::before,
       &.focus:checked + .a-label::before {
-        border-color: $input-border-focused;
+        background-color: var(--choice-bg-selected-focus);
+        border-color: var(--choice-border-focus);
         box-shadow:
-          0 0 0 1px $input-border-focused,
-          inset 0 0 0 2px $form-field-inset;
+          0 0 0 1px var(--choice-border-focus),
+          inset 0 0 0 2px var(--white); // The radio button ring.
       }
 
       &:hover:checked + .a-label::before,
       &.hover:checked + .a-label::before {
-        border-color: $input-border-hover;
+        border-color: var(--choice-border-hover);
         box-shadow:
-          0 0 0 1px $input-border-hover,
-          inset 0 0 0 2px $form-field-inset;
+          0 0 0 1px var(--choice-border-hover),
+          inset 0 0 0 2px var(--white); // The radio button ring.
       }
 
       &:checked:disabled + .a-label::before,
       &:hover:checked:disabled + .a-label::before,
       &.hover:checked:disabled + .a-label::before {
-        background-color: $input-bg-disabled-selected;
-        box-shadow: inset 0 0 0 2px $input-bg-disabled;
-        border-color: $form-field-input-border-disabled;
+        background-color: var(--choice-bg-selected);
+        box-shadow: inset 0 0 0 2px var(--gray-10); // The radio button ring.
+        border-color: var(--choice-border-disabled);
       }
     }
   }
@@ -306,7 +240,6 @@
       &:focus + .a-label,
       &.focus + .a-label,
       &:checked + .a-label {
-        // The outline-offset property is not supported in IE.
         outline-offset: 1px;
       }
 
@@ -321,7 +254,7 @@
       &:checked:disabled + .a-label {
         &,
         &::before {
-          border: 1px solid $form-field-input-border-disabled;
+          border: 1px solid var(--form-field-border-disabled);
         }
       }
     }

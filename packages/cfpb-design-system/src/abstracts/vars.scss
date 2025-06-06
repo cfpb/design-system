@@ -123,12 +123,25 @@ $input-text-placeholder: var(--gray-dark);
   --select-bg-disabled-default: var(--gray-10); // $input-bg-disabled
   --select-icon-bg-default: var(--gray-10);
   --select-text-disabled-default: var(--gray-dark); // $input-text-disabled
-}
 
-// .m-form-field
-$form-field-input-border: $input-border;
-$form-field-input-border-disabled: var(--gray-60);
-$form-field-inset: var(--white);
+  // .m-form-field--checkbox .m-form-field--radio
+  --choice-border-default: var(--gray-60); // $input-border
+  --choice-border-disabled: var(--gray-60);
+  --choice-border-success: var(--green); // $input-border-success
+  --choice-border-warning: var(--gold); // $input-border-warning
+  --choice-border-error: var(--red); // $input-border-error
+  --choice-border-hover-default: var(--pacific); // $input-border-hover
+  --choice-border-focus-default: var(--pacific); // $input-border-focused
+  --choice-outline-focus-default: var(--pacific); // $input-border-focused
+  --choice-bg-default: var(--white); // $input-bg
+  --choice-bg-disabled: var(--gray-10); // $input-bg-disabled
+  --choice-bg-selected-default: var(--pacific); // $input-bg-selected
+  --choice-bg-selected-disabled: var(--gray-40);
+  --choice-bg-selected-success: var(--green);
+  --choice-bg-selected-warning: var(--gold);
+  --choice-bg-selected-error: var(--red);
+  --choice-bg-selected-focus-default: var(--pacific);
+}
 
 // .m-form-field--lg-target
 $form-field-input-lg-target-bg: var(--gray-10);

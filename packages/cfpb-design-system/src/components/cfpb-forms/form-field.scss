@@ -109,17 +109,14 @@
 
     &-success {
       --choice-border: var(--choice-border-success);
-      --choice-bg-selected: var(--choice-bg-selected-success);
     }
 
     &-warning {
       --choice-border: var(--choice-border-warning);
-      --choice-bg-selected: var(--choice-bg-selected-warning);
     }
 
     &-error {
       --choice-border: var(--choice-border-error);
-      --choice-bg-selected: var(--choice-bg-selected-error);
     }
   }
 

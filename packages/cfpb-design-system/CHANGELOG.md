@@ -2,7 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.11.0](https://github.com/cfpb/design-system/compare/v3.10.0..v3.11.0) - June  5, 2025
+## [3.12.0](https://github.com/cfpb/design-system/compare/v3.11.0..v3.12.0) - June  6, 2025
+
+### PRs in this release
+
+- PR #[2284](https://github.com/cfpb/design-system/pull/2284): Fix version link in changelog - Ans
+- PR #[2286](https://github.com/cfpb/design-system/pull/2286): Migrate form alert variables to CSS custom properties - Ans
+- PR #[2285](https://github.com/cfpb/design-system/pull/2285): Remove legacy form input CSS - Ans
+- PR #[2287](https://github.com/cfpb/design-system/pull/2287): Migrate checkbox/radio button variables to CSS custom props - Ans
+- PR #[2288](https://github.com/cfpb/design-system/pull/2288): Update text inputs to use CSS properties - Ans
+- PR #[2289](https://github.com/cfpb/design-system/pull/2289): Tweak radio buttons to have consistent dot color - Ans
+- PR #[2226](https://github.com/cfpb/design-system/pull/2226): Add `u-print-only` and `u-screen-only` utilities - Ans
+
+### General
+
+- Fix version link in changelog - ([51cbbab](https://github.com/cfpb/design-system/commit/51cbbab41692f5261463a2a2238ea8b97b0bb9a8)) - Ans
+- Migrate form alert variables to CSS custom properties - ([2f8e6a0](https://github.com/cfpb/design-system/commit/2f8e6a0ce18f011355c3f064faedacd26f90f0de)) - Ans
+- Remove legacy form input CSS - ([9d9e14d](https://github.com/cfpb/design-system/commit/9d9e14d88365668dcbefc0823b7553664cb6c567)) - Ans
+- Migrate checkbox/radio button variables to CSS custom props - ([e90486e](https://github.com/cfpb/design-system/commit/e90486e307d931b720ce9e3843d08691ffb18a94)) - Ans
+- Update text inputs to use CSS properties - ([80bf7fe](https://github.com/cfpb/design-system/commit/80bf7fe6b3e458f8ad0d1d7537f6ee36f72c421b)) - Ans
+- Tweak radio buttons to have consistent dot color - ([0f7442b](https://github.com/cfpb/design-system/commit/0f7442bf169199604d6d8ee55277d34accf1537b)) - Ans
+- Add `u-print-only` and `u-screen-only` utilities - ([586f276](https://github.com/cfpb/design-system/commit/586f27613bec9896ce1810b139df0ee34e1f1d4a)) - Ans
+- Refactor utilities - ([8177aa9](https://github.com/cfpb/design-system/commit/8177aa99043b96e171ed1b1671e9ffc03bef2c8c)) - Ans
+
+## [3.11.0](https://github.com/cfpb/design-system/compare/v3.10.0..vv3.11.0) - June  5, 2025
 
 ### PRs in this release
 
@@ -22,7 +45,7 @@ All notable changes to this project will be documented in this file.
 - Update multiselect - ([316e953](https://github.com/cfpb/design-system/commit/316e9538649ee0aad3bc94efcca1374b71b4ee26)) - Ans
 - Re-build assets - ([c75ce77](https://github.com/cfpb/design-system/commit/c75ce778ca08e2b8add9d1bbe69b07cdde157ce5)) - Ans
 
-## [3.10.0](https://github.com/cfpb/design-system/compare/v3.9.0..v3.10.0) - May 21, 2025
+## [3.10.0](https://github.com/cfpb/design-system/compare/v3.9.0..vv3.10.0) - May 21, 2025
 
 ### PRs in this release
 
@@ -34,7 +57,7 @@ All notable changes to this project will be documented in this file.
 - Remove `m-list--spaced` - ([be7a408](https://github.com/cfpb/design-system/commit/be7a4081a69e2b3c2dd710a8a7b53de67e02ded2)) - Ans
 - Fix full width button with icon example - ([605340e](https://github.com/cfpb/design-system/commit/605340e635fdd00e23dd50fb683aa6142e9ad92f)) - Ans
 
-## [3.9.0](https://github.com/cfpb/design-system/compare/v3.8.0..v3.9.0) - May 13, 2025
+## [3.9.0](https://github.com/cfpb/design-system/compare/v3.8.0..vv3.9.0) - May 13, 2025
 
 ### PRs in this release
 
@@ -49,7 +72,7 @@ All notable changes to this project will be documented in this file.
 - Linter fixes - ([39e5fbb](https://github.com/cfpb/design-system/commit/39e5fbb8bb62eac48eebe88cb4224e2485a7f9d1)) - Ans
 - Re-build assets - ([5944749](https://github.com/cfpb/design-system/commit/59447498a713b9eb4a6ba8ceb9307244a914cf9b)) - Ans
 
-## [3.8.0](https://github.com/cfpb/design-system/compare/v3.7.1..v3.8.0) - April 25, 2025
+## [3.8.0](https://github.com/cfpb/design-system/compare/v3.7.1..vv3.8.0) - April 25, 2025
 
 ### PRs in this release
 
@@ -61,7 +84,7 @@ All notable changes to this project will be documented in this file.
 - Globally remove inset border style from HR elements - ([136a5a1](https://github.com/cfpb/design-system/commit/136a5a15837883a7f41569530e7992773794c854)) - Ans
 - Convert notifications to use flexbox for layout - ([9c424e8](https://github.com/cfpb/design-system/commit/9c424e8dd31dcedaeb782a84a8e3e5e77b66da46)) - Ans
 
-## [3.7.1](https://github.com/cfpb/design-system/compare/v3.7.0..v3.7.1) - April 18, 2025
+## [3.7.1](https://github.com/cfpb/design-system/compare/v3.7.0..vv3.7.1) - April 18, 2025
 
 ### PRs in this release
 
@@ -73,7 +96,7 @@ All notable changes to this project will be documented in this file.
 - Add active state - ([2870e7a](https://github.com/cfpb/design-system/commit/2870e7a57caabf9574c067149ee479cd55ac53c7)) - Ans
 - Rebuild assets - ([a0bbaf7](https://github.com/cfpb/design-system/commit/a0bbaf77dbac5b0ef8878a9683bf579c59b26f23)) - Ans
 
-## [3.7.0](https://github.com/cfpb/design-system/compare/v3.6.3..v3.7.0) - April 17, 2025
+## [3.7.0](https://github.com/cfpb/design-system/compare/v3.6.3..vv3.7.0) - April 17, 2025
 
 ### PRs in this release
 
@@ -93,7 +116,7 @@ All notable changes to this project will be documented in this file.
 - Set max-width of notification content - ([05121be](https://github.com/cfpb/design-system/commit/05121be6bb953e63da5ae64f4b1066e0aff10b4c)) - Ans
 - Re-build assets - ([dbeb169](https://github.com/cfpb/design-system/commit/dbeb16934dced1e50137664fff270fb48c1066b6)) - Ans
 
-## [3.6.3](https://github.com/cfpb/design-system/compare/v3.6.2..v3.6.3) - January  8, 2025
+## [3.6.3](https://github.com/cfpb/design-system/compare/v3.6.2..vv3.6.3) - January  8, 2025
 
 ### PRs in this release
 
@@ -105,7 +128,7 @@ All notable changes to this project will be documented in this file.
 - Update jsdoc - ([72163a3](https://github.com/cfpb/design-system/commit/72163a3ac16e801179f32a5c8fbaa07cdba2dea1)) - Wyatt Pearsall
 - Add tooltip update dist - ([4a3916b](https://github.com/cfpb/design-system/commit/4a3916bc13d5076153e6e3008f4bf18aa1c27a36)) - Wyatt Pearsall
 
-## [3.6.2](https://github.com/cfpb/design-system/compare/v3.6.1..v3.6.2) - December 18, 2024
+## [3.6.2](https://github.com/cfpb/design-system/compare/v3.6.1..vv3.6.2) - December 18, 2024
 
 ### PRs in this release
 
@@ -116,7 +139,7 @@ All notable changes to this project will be documented in this file.
 - Update CHANGELOG.md - ([bfd91e3](https://github.com/cfpb/design-system/commit/bfd91e39d31d829ea8a2dcb296bea0fd9c36cbbd)) - Chris Contolini
 - Provide icon exports - ([9eccdc4](https://github.com/cfpb/design-system/commit/9eccdc415730d3f0e3b42c28ba51fda00d3aa7f6)) - Wyatt Pearsall
 
-## [3.6.1](https://github.com/cfpb/design-system/compare/v3.5.0..v3.6.1) - December  4, 2024
+## [3.6.1](https://github.com/cfpb/design-system/compare/v3.5.0..vv3.6.1) - December  4, 2024
 
 ### PRs in this release
 
@@ -148,7 +171,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Remove erroneous auto-changelog dependency and config - ([980d9eb](https://github.com/cfpb/design-system/commit/980d9eb65147732323ce42f56014e17ffc638d5a)) - Chris Contolini
 - Return Tooltip instance to match JSDoc description - ([290b87e](https://github.com/cfpb/design-system/commit/290b87e4889c16c5e846e3039a7266ebb7c09e99)) - Chris Contolini
 
-## [3.5.0](https://github.com/cfpb/design-system/compare/v3.4.14..v3.5.0) - November 26, 2024
+## [3.5.0](https://github.com/cfpb/design-system/compare/v3.4.14..vv3.5.0) - November 26, 2024
 
 ### PRs in this release
 
@@ -160,7 +183,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Update hero text margin to `auto 0` - ([a731483](https://github.com/cfpb/design-system/commit/a73148309e7d36ce20ed786f0b57b47d1acfa0d0)) - Ans
 - Remove `o-featured-content-module--left` - ([c12548f](https://github.com/cfpb/design-system/commit/c12548feea774c37c781a7f1268551be3703094b)) - Ans
 
-## [3.4.14](https://github.com/cfpb/design-system/compare/v3.4.13..v3.4.14) - November 21, 2024
+## [3.4.14](https://github.com/cfpb/design-system/compare/v3.4.13..vv3.4.14) - November 21, 2024
 
 ### PRs in this release
 
@@ -170,7 +193,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Add non-clickable filter tag - ([b0b50c1](https://github.com/cfpb/design-system/commit/b0b50c1fe0b980273ee2f9b79e322b781f850ee8)) - Ans
 
-## [3.4.13](https://github.com/cfpb/design-system/compare/v3.4.12..v3.4.13) - November 21, 2024
+## [3.4.13](https://github.com/cfpb/design-system/compare/v3.4.12..vv3.4.13) - November 21, 2024
 
 ### PRs in this release
 
@@ -184,7 +207,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Date picker: Reduce height by 1px - ([ef7a039](https://github.com/cfpb/design-system/commit/ef7a03962b400fcd0eca1a2308048ad16c876fee)) - Ans
 - Regenerate assets - ([56ca4fd](https://github.com/cfpb/design-system/commit/56ca4fd28bd026feb140f4308dd2e47b441e2c2a)) - Ans
 
-## [3.4.12](https://github.com/cfpb/design-system/compare/v3.4.11..v3.4.12) - November 21, 2024
+## [3.4.12](https://github.com/cfpb/design-system/compare/v3.4.11..vv3.4.12) - November 21, 2024
 
 ### PRs in this release
 
@@ -199,7 +222,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Update date-picker.md - ([62cc483](https://github.com/cfpb/design-system/commit/62cc483290cc3e6fb1ebb9e8806ab4c29366450c)) - Ans
 - More tweaks to wrangle aligning iOS with everyone else - ([c41101f](https://github.com/cfpb/design-system/commit/c41101f6be4994c8532b884191525df269529a9d)) - Ans
 
-## [3.4.11](https://github.com/cfpb/design-system/compare/v3.4.10..v3.4.11) - November 19, 2024
+## [3.4.11](https://github.com/cfpb/design-system/compare/v3.4.10..vv3.4.11) - November 19, 2024
 
 ### PRs in this release
 
@@ -214,7 +237,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Adds date input example and adjusts baseline appearance - ([0cd1019](https://github.com/cfpb/design-system/commit/0cd1019a10ecb2a35776d26778cfe60b15511c04)) - Ans
 - Rebuild assets - ([869583a](https://github.com/cfpb/design-system/commit/869583add82cf0c4b6000ce28078aa88e8ff1e91)) - Ans
 
-## [3.4.10](https://github.com/cfpb/design-system/compare/v3.4.9..v3.4.10) - November 19, 2024
+## [3.4.10](https://github.com/cfpb/design-system/compare/v3.4.9..vv3.4.10) - November 19, 2024
 
 ### PRs in this release
 
@@ -224,7 +247,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Add filter tag link example - ([195cf5c](https://github.com/cfpb/design-system/commit/195cf5c3c16d6a755c4b482d227a75d229726790)) - Ans
 
-## [3.4.9](https://github.com/cfpb/design-system/compare/v3.4.8..v3.4.9) - November 13, 2024
+## [3.4.9](https://github.com/cfpb/design-system/compare/v3.4.8..vv3.4.9) - November 13, 2024
 
 ### PRs in this release
 
@@ -234,7 +257,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Move z-index to buttons - ([48e4c68](https://github.com/cfpb/design-system/commit/48e4c68cda895e8b7103b4091627e6d31e859a88)) - Ans
 
-## [3.4.8](https://github.com/cfpb/design-system/compare/v3.4.7..v3.4.8) - November 13, 2024
+## [3.4.8](https://github.com/cfpb/design-system/compare/v3.4.7..vv3.4.8) - November 13, 2024
 
 ### PRs in this release
 
@@ -244,7 +267,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Fix z-index on pagination - ([1b26267](https://github.com/cfpb/design-system/commit/1b2626760824f74c333b7ea4d24bbfc0f5760cdb)) - Ans
 
-## [3.4.7](https://github.com/cfpb/design-system/compare/v3.4.6..v3.4.7) - November 13, 2024
+## [3.4.7](https://github.com/cfpb/design-system/compare/v3.4.6..vv3.4.7) - November 13, 2024
 
 ### PRs in this release
 
@@ -257,7 +280,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Tweak button dimensions - ([8595c33](https://github.com/cfpb/design-system/commit/8595c33afd3b92557c02d4494200e3d08729c053)) - Ans
 - Rebuild assets - ([a27795f](https://github.com/cfpb/design-system/commit/a27795fe7fe0072e42b217f5e331a2736e1bcb5a)) - Ans
 
-## [3.4.6](https://github.com/cfpb/design-system/compare/v3.4.5..v3.4.6) - November 13, 2024
+## [3.4.6](https://github.com/cfpb/design-system/compare/v3.4.5..vv3.4.6) - November 13, 2024
 
 ### PRs in this release
 
@@ -267,7 +290,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Refine button with link - ([5edc8e5](https://github.com/cfpb/design-system/commit/5edc8e5cc7124e4654a86f065b28d94e70bd45f7)) - Ans
 
-## [3.4.5](https://github.com/cfpb/design-system/compare/v3.4.4..v3.4.5) - November 12, 2024
+## [3.4.5](https://github.com/cfpb/design-system/compare/v3.4.4..vv3.4.5) - November 12, 2024
 
 ### PRs in this release
 
@@ -278,7 +301,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Add `justify-content: center` - ([c7993b5](https://github.com/cfpb/design-system/commit/c7993b5281ed84dd301c3640f9ce9ef0cce14c68)) - Ans
 - Rebuild assets - ([2f1ab96](https://github.com/cfpb/design-system/commit/2f1ab964c1cfab0d4ad6b914baaac68382073d41)) - Ans
 
-## [3.4.4](https://github.com/cfpb/design-system/compare/v3.4.3..v3.4.4) - November 12, 2024
+## [3.4.4](https://github.com/cfpb/design-system/compare/v3.4.3..vv3.4.4) - November 12, 2024
 
 ### PRs in this release
 
@@ -288,7 +311,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Add `a-btn--hide-icon` class - ([d4bf92c](https://github.com/cfpb/design-system/commit/d4bf92c4a6583b3a5b852ca67eb63c86c31a611c)) - Ans
 
-## [3.4.3](https://github.com/cfpb/design-system/compare/v3.4.2..v3.4.3) - November  7, 2024
+## [3.4.3](https://github.com/cfpb/design-system/compare/v3.4.2..vv3.4.3) - November  7, 2024
 
 ### PRs in this release
 
@@ -298,7 +321,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Fix badge URL - ([ce2a58a](https://github.com/cfpb/design-system/commit/ce2a58a6b4b82b6dee28725e502462bd8ed67e47)) - Ans
 
-## [3.4.2](https://github.com/cfpb/design-system/compare/v3.4.1..v3.4.2) - November  7, 2024
+## [3.4.2](https://github.com/cfpb/design-system/compare/v3.4.1..vv3.4.2) - November  7, 2024
 
 ### PRs in this release
 
@@ -308,7 +331,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Remove button-with-icon reference - ([ee36f36](https://github.com/cfpb/design-system/commit/ee36f3676c2160415c8e75cf0c8affffad9a7f22)) - Ans
 
-## [3.4.1](https://github.com/cfpb/design-system/compare/v3.4.0..v3.4.1) - November  6, 2024
+## [3.4.1](https://github.com/cfpb/design-system/compare/v3.4.0..vv3.4.1) - November  6, 2024
 
 ### PRs in this release
 
@@ -318,7 +341,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Add behavior specs - ([dd956be](https://github.com/cfpb/design-system/commit/dd956be595a500b2fd654faa9c88700851057eb1)) - Ans
 
-## [3.4.0](https://github.com/cfpb/design-system/compare/v3.3.1..v3.4.0) - November  6, 2024
+## [3.4.0](https://github.com/cfpb/design-system/compare/v3.3.1..vv3.4.0) - November  6, 2024
 
 ### PRs in this release
 
@@ -329,7 +352,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Update behavior method names - ([8ae891d](https://github.com/cfpb/design-system/commit/8ae891de2b6d0f3f3f6fd5744f174302ac3b0465)) - Ans
 - Adjust release-it process - ([222f302](https://github.com/cfpb/design-system/commit/222f30216e47e36ca3f01d2835fe53280af8ba4e)) - Ans
 
-## [3.3.1](https://github.com/cfpb/design-system/compare/v3.3.0..v3.3.1) - November  6, 2024
+## [3.3.1](https://github.com/cfpb/design-system/compare/v3.3.0..vv3.3.1) - November  6, 2024
 
 ### PRs in this release
 
@@ -339,7 +362,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Point to the right npm repo in the DS - ([f61ef71](https://github.com/cfpb/design-system/commit/f61ef71e4bdd0e7df503d6d8afade621ca561a75)) - Ans
 
-## [3.3.0](https://github.com/cfpb/design-system/compare/v3.2.11..v3.3.0) - November  6, 2024
+## [3.3.0](https://github.com/cfpb/design-system/compare/v3.2.11..vv3.3.0) - November  6, 2024
 
 ### PRs in this release
 
@@ -349,7 +372,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Remove `u-break-word` - ([e9df86d](https://github.com/cfpb/design-system/commit/e9df86d6ae6e0c5c800222a738da905e4ad86e83)) - Ans
 
-## [3.2.11](https://github.com/cfpb/design-system/compare/v3.2.10..v3.2.11) - November  6, 2024
+## [3.2.11](https://github.com/cfpb/design-system/compare/v3.2.10..vv3.2.11) - November  6, 2024
 
 ### PRs in this release
 
@@ -362,7 +385,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Add `row-gap` - ([d6ea4c1](https://github.com/cfpb/design-system/commit/d6ea4c1480dfbf043a4dd0f37d59e73bbb9ed94f)) - Ans
 - Linter fixes - ([6f84a1b](https://github.com/cfpb/design-system/commit/6f84a1b12fbd32720cd5f109d8d5ac0da683e51a)) - Ans
 
-## [3.2.10](https://github.com/cfpb/design-system/compare/v3.2.9..v3.2.10) - November  6, 2024
+## [3.2.10](https://github.com/cfpb/design-system/compare/v3.2.9..vv3.2.10) - November  6, 2024
 
 ### PRs in this release
 
@@ -373,7 +396,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Bump changelog - ([ad0f6dc](https://github.com/cfpb/design-system/commit/ad0f6dc23d18cad72f3ff953e857a30261bebc60)) - Ans
 - Remove `u-inline-block` - ([ad8824d](https://github.com/cfpb/design-system/commit/ad8824d097d77ce5291170b5ac8752e9c0499d3a)) - Ans
 
-## [3.2.9](https://github.com/cfpb/design-system/compare/v3.2.8..v3.2.9) - November  6, 2024
+## [3.2.9](https://github.com/cfpb/design-system/compare/v3.2.8..vv3.2.9) - November  6, 2024
 
 ### PRs in this release
 
@@ -385,7 +408,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Add `u-small-text--subtle` - ([3108763](https://github.com/cfpb/design-system/commit/31087639e456f52370dfcaea57f0d14d48572e79)) - Ans
 - Rebuild assets - ([6a6f917](https://github.com/cfpb/design-system/commit/6a6f91724677614eda3e2d0d474ec9912e450192)) - Ans
 
-## [3.2.8](https://github.com/cfpb/design-system/compare/v3.2.7..v3.2.8) - November  1, 2024
+## [3.2.8](https://github.com/cfpb/design-system/compare/v3.2.7..vv3.2.8) - November  1, 2024
 
 ### PRs in this release
 
@@ -401,7 +424,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Switch to git-cliff from auto-changelog - ([2488161](https://github.com/cfpb/design-system/commit/2488161f3a13019778cec325c22870a0a7841933)) - Ans
 - Rebuild assets - ([a6ff4d9](https://github.com/cfpb/design-system/commit/a6ff4d9740c7606a2740e30be6d27a28c6e5c4f8)) - Ans
 
-## [3.2.7](https://github.com/cfpb/design-system/compare/v3.2.6..v3.2.7) - October 30, 2024
+## [3.2.7](https://github.com/cfpb/design-system/compare/v3.2.6..vv3.2.7) - October 30, 2024
 
 ### PRs in this release
 
@@ -414,7 +437,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Correctly process icons - ([181bea2](https://github.com/cfpb/design-system/commit/181bea2a44d02c2dd66f22c4f1d461e985d8d6ee)) - Ans
 - Re-build dist files - ([228c0ac](https://github.com/cfpb/design-system/commit/228c0ac5b0f1ea1962c7ceedfbcf37e65c077ac1)) - Ans
 
-## [3.2.6](https://github.com/cfpb/design-system/compare/v3.2.5..v3.2.6) - October 25, 2024
+## [3.2.6](https://github.com/cfpb/design-system/compare/v3.2.5..vv3.2.6) - October 25, 2024
 
 ### PRs in this release
 
@@ -425,7 +448,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Update button groups to use flexbox - ([fe857d0](https://github.com/cfpb/design-system/commit/fe857d02fe08a6f3f60d262ebf9ef9c4ed9a0a52)) - Ans
 - Move auto-changelog dep to root - ([a2acba5](https://github.com/cfpb/design-system/commit/a2acba58b6bf636d3999e5fcdb9ac6be3b3dc0f8)) - Ans
 
-## [3.2.5](https://github.com/cfpb/design-system/compare/v3.2.4..v3.2.5) - October 23, 2024
+## [3.2.5](https://github.com/cfpb/design-system/compare/v3.2.4..vv3.2.5) - October 23, 2024
 
 ### PRs in this release
 
@@ -436,13 +459,13 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Remove - ([e839bde](https://github.com/cfpb/design-system/commit/e839bde972624c90c36bc58526df71a4e6d0c04a)) - Ans
 - Add more `publishConfig` - ([b54c1c1](https://github.com/cfpb/design-system/commit/b54c1c19f8d2d559f428281b8ed1e64a57e41dac)) - Ans
 
-## [3.2.4](https://github.com/cfpb/design-system/compare/v3.2.3..v3.2.4) - October 23, 2024
+## [3.2.4](https://github.com/cfpb/design-system/compare/v3.2.3..vv3.2.4) - October 23, 2024
 
 ### General
 
 - Move auto-changelog to package - ([2eb43f2](https://github.com/cfpb/design-system/commit/2eb43f23cc3a8ebaa08da2c01f41fb273c50716e)) - Ans
 
-## [3.2.3](https://github.com/cfpb/design-system/compare/v3.2.2..v3.2.3) - October 16, 2024
+## [3.2.3](https://github.com/cfpb/design-system/compare/v3.2.2..vv3.2.3) - October 16, 2024
 
 ### PRs in this release
 
@@ -452,7 +475,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 
 - Rename `o-table-wrapper--scrolling` to `o-table--scrolling` - ([acded96](https://github.com/cfpb/design-system/commit/acded9655df851d2971b0b8f8da7a5221c065e43)) - Ans
 
-## [3.2.2](https://github.com/cfpb/design-system/compare/v3.2.1..v3.2.2) - September 27, 2024
+## [3.2.2](https://github.com/cfpb/design-system/compare/v3.2.1..vv3.2.2) - September 27, 2024
 
 ### PRs in this release
 
@@ -463,7 +486,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Adjust code comments - ([c31cf40](https://github.com/cfpb/design-system/commit/c31cf40a990abb6e38e96e5a2112f875d4311282)) - Ans
 - Build assets - ([35eb3af](https://github.com/cfpb/design-system/commit/35eb3af2e3cd0c7f2a14bd111ed8e0b1392a9238)) - Ans
 
-## [3.2.1](https://github.com/cfpb/design-system/compare/v3.2.0..v3.2.1) - September 27, 2024
+## [3.2.1](https://github.com/cfpb/design-system/compare/v3.2.0..vv3.2.1) - September 27, 2024
 
 ### PRs in this release
 
@@ -482,7 +505,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Revert to v3.2.0 - ([a42322d](https://github.com/cfpb/design-system/commit/a42322d39fb6c7372b2ffc00e0bd025c481e1c6b)) - Ans
 - Revert to v3.2.0 - ([9eb2d8c](https://github.com/cfpb/design-system/commit/9eb2d8c3fde5da7e12a9ec5f23a3d958a08eac13)) - Ans
 
-## [3.2.0](https://github.com/cfpb/design-system/compare/v3.1.9..v3.2.0) - September 25, 2024
+## [3.2.0](https://github.com/cfpb/design-system/compare/v3.1.9..vv3.2.0) - September 25, 2024
 
 ### PRs in this release
 
@@ -497,7 +520,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Refactor heading mixins - ([6f421a6](https://github.com/cfpb/design-system/commit/6f421a6ef6ea17c076fe34db23bdfe855ee71cc4)) - Ans
 - V3.2.0 - ([1b92196](https://github.com/cfpb/design-system/commit/1b92196c49399125ce790a1c43e47e02659e3e3e)) - Ans
 
-## [3.1.9](https://github.com/cfpb/design-system/compare/v3.1.8..v3.1.9) - September 12, 2024
+## [3.1.9](https://github.com/cfpb/design-system/compare/v3.1.8..vv3.1.9) - September 12, 2024
 
 ### PRs in this release
 
@@ -510,7 +533,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Bump version - ([8af1437](https://github.com/cfpb/design-system/commit/8af143793243ce4b08e7be32219a4cb3f6e86ee9)) - Ans
 - V3.1.9 - ([b6b39a3](https://github.com/cfpb/design-system/commit/b6b39a3000a8fd8f75f237db1a86d3f3725780f8)) - Ans
 
-## [3.1.8](https://github.com/cfpb/design-system/compare/v3.1.7..v3.1.8) - September 11, 2024
+## [3.1.8](https://github.com/cfpb/design-system/compare/v3.1.7..vv3.1.8) - September 11, 2024
 
 ### PRs in this release
 
@@ -523,7 +546,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Bump version - ([caa9f2f](https://github.com/cfpb/design-system/commit/caa9f2ffb1f452b547dcfc8410e9aef876ea3ae2)) - Ans
 - V3.1.8 - ([ce63bfc](https://github.com/cfpb/design-system/commit/ce63bfcdecf687e9b96ab2420db225649b65db4b)) - Ans
 
-## [3.1.7](https://github.com/cfpb/design-system/compare/v3.1.6..v3.1.7) - September 10, 2024
+## [3.1.7](https://github.com/cfpb/design-system/compare/v3.1.6..vv3.1.7) - September 10, 2024
 
 ### PRs in this release
 
@@ -535,7 +558,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Bump version - ([8f68113](https://github.com/cfpb/design-system/commit/8f68113c89ae1e24550d23c76a1765daac3a1a63)) - Ans
 - V3.1.7 - ([4154531](https://github.com/cfpb/design-system/commit/415453147d44ab32977359f985c50a66799818c1)) - Ans
 
-## [3.1.6](https://github.com/cfpb/design-system/compare/v3.1.5..v3.1.6) - September 10, 2024
+## [3.1.6](https://github.com/cfpb/design-system/compare/v3.1.5..vv3.1.6) - September 10, 2024
 
 ### PRs in this release
 
@@ -546,7 +569,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Add non-link topic tags - ([f1c3158](https://github.com/cfpb/design-system/commit/f1c3158e739b114d92f83daeb79763af5c781b92)) - Ans
 - V3.1.6 - ([59f8344](https://github.com/cfpb/design-system/commit/59f83442c41d4ca6803d22971964dab26efb0ef0)) - Ans
 
-## [3.1.5](https://github.com/cfpb/design-system/compare/v3.1.4..v3.1.5) - September 10, 2024
+## [3.1.5](https://github.com/cfpb/design-system/compare/v3.1.4..vv3.1.5) - September 10, 2024
 
 ### PRs in this release
 
@@ -560,7 +583,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Add stacked topic tag group modifier - ([b89b032](https://github.com/cfpb/design-system/commit/b89b032b0bd5593ceb496e5449d20ed5dc396178)) - Ans
 - V3.1.5 - ([37c1b91](https://github.com/cfpb/design-system/commit/37c1b91a345ebaf7098509a05ec1e972cbcd91c3)) - Ans
 
-## [3.1.4](https://github.com/cfpb/design-system/compare/v3.1.3..v3.1.4) - September  5, 2024
+## [3.1.4](https://github.com/cfpb/design-system/compare/v3.1.3..vv3.1.4) - September  5, 2024
 
 ### PRs in this release
 
@@ -571,7 +594,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Update index.scss - ([f6ba359](https://github.com/cfpb/design-system/commit/f6ba3598acd1d58c5dff277218055d9ed74b6bd6)) - Ans
 - V3.1.4 - ([62179e8](https://github.com/cfpb/design-system/commit/62179e890fdeafb650900377678bde853f0f7a9d)) - Ans
 
-## [3.1.3](https://github.com/cfpb/design-system/compare/v3.1.2..v3.1.3) - September  5, 2024
+## [3.1.3](https://github.com/cfpb/design-system/compare/v3.1.2..vv3.1.3) - September  5, 2024
 
 ### PRs in this release
 
@@ -582,7 +605,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Add tag RTL code - ([6239902](https://github.com/cfpb/design-system/commit/62399029913e444a8809dd65fff6f1a98e580098)) - Ans
 - V3.1.3 - ([072112e](https://github.com/cfpb/design-system/commit/072112ea27fe26d283d6b230de22582c3be09370)) - Ans
 
-## [3.1.2](https://github.com/cfpb/design-system/compare/v3.1.1..v3.1.2) - September  5, 2024
+## [3.1.2](https://github.com/cfpb/design-system/compare/v3.1.1..vv3.1.2) - September  5, 2024
 
 ### PRs in this release
 
@@ -596,7 +619,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Bump version - ([647e344](https://github.com/cfpb/design-system/commit/647e34496e3958aacef027ba35c3e3069e59772f)) - Ans
 - V3.1.2 - ([def4f44](https://github.com/cfpb/design-system/commit/def4f440c6e4df31e9c9001a3630e14011c2c840)) - Ans
 
-## [3.1.1](https://github.com/cfpb/design-system/compare/v3.1.0..v3.1.1) - September  4, 2024
+## [3.1.1](https://github.com/cfpb/design-system/compare/v3.1.0..vv3.1.1) - September  4, 2024
 
 ### PRs in this release
 
@@ -611,7 +634,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Bump version - ([5faa23f](https://github.com/cfpb/design-system/commit/5faa23fcf2f8b3e49bfc8ae88d9a3326073ba08a)) - Ans
 - V3.1.1 - ([6d08f67](https://github.com/cfpb/design-system/commit/6d08f674140b371f4c5eb6cfa1837320f5350fb9)) - Ans
 
-## [3.1.0](https://github.com/cfpb/design-system/compare/v3.0.3..v3.1.0) - September  4, 2024
+## [3.1.0](https://github.com/cfpb/design-system/compare/v3.0.3..vv3.1.0) - September  4, 2024
 
 ### PRs in this release
 
@@ -626,7 +649,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Bump version - ([a5d1c70](https://github.com/cfpb/design-system/commit/a5d1c709bc5f79e229859729fe085e8730264a61)) - Ans
 - V3.1.0 - ([95e0718](https://github.com/cfpb/design-system/commit/95e07185441126cf0376f28f49180a77168ee413)) - Ans
 
-## [3.0.3](https://github.com/cfpb/design-system/compare/v3.0.2..v3.0.3) - August 22, 2024
+## [3.0.3](https://github.com/cfpb/design-system/compare/v3.0.2..vv3.0.3) - August 22, 2024
 
 ### PRs in this release
 
@@ -643,7 +666,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Bump version - ([8822087](https://github.com/cfpb/design-system/commit/8822087c8b24f8d2edfd9ae56064a893122983d9)) - Ans
 - V3.0.3 - ([85b594f](https://github.com/cfpb/design-system/commit/85b594f98ad76a7bfcfd8576b9fcb82f89dd1c56)) - Ans
 
-## [3.0.2](https://github.com/cfpb/design-system/compare/v3.0.1..v3.0.2) - August 21, 2024
+## [3.0.2](https://github.com/cfpb/design-system/compare/v3.0.1..vv3.0.2) - August 21, 2024
 
 ### PRs in this release
 
@@ -654,7 +677,7 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Unquote padding-bottom value in video-playing class - ([0972a29](https://github.com/cfpb/design-system/commit/0972a292720d5edb04c2c17e1ca5ad5ca38a5e74)) - Ans
 - V3.0.2 - ([f01daeb](https://github.com/cfpb/design-system/commit/f01daeba6c0204356ed86358d51a0f25e4af9159)) - Ans
 
-## [3.0.1](https://github.com/cfpb/design-system/compare/v3.0.0..v3.0.1) - August 16, 2024
+## [3.0.1](https://github.com/cfpb/design-system/compare/v3.0.0..vv3.0.1) - August 16, 2024
 
 ### PRs in this release
 

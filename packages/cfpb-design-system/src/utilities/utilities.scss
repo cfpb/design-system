@@ -32,23 +32,15 @@
 //
 // Media type utilities.
 //
-@media screen {
-  .u-print-only {
+.u-print-only {
+  @media screen {
     display: none;
-  }
-
-  .u-screen-only {
-    display: initial;
   }
 }
 
-@media print {
-  .u-screen-only {
+.u-screen-only {
+  @media print {
     display: none;
-  }
-
-  .u-print-only {
-    display: initial;
   }
 }
 

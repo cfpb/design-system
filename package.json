@@ -54,7 +54,7 @@
   "devDependencies": {
     "@cfpb/browserslist-config": "0.0.4",
     "@csstools/postcss-sass": "5.1.1",
-    "@lhci/cli": "0.14.0",
+    "@lhci/cli": "0.15.0",
     "autoprefixer": "10.4.21",
     "concurrently": "9.1.2",
     "cypress": "14.0.0",

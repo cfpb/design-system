@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.12.0](https://github.com/cfpb/design-system/compare/v3.11.0..v3.12.0) - June  6, 2025
+## [3.12.1](https://github.com/cfpb/design-system/compare/v3.12.0..v3.12.1) - June 12, 2025
+
+### PRs in this release
+
+- PR #[2296](https://github.com/cfpb/design-system/pull/2296): Move tags to reference page - Ans
+
+### General
+
+- Fix filter tag as link hover state - ([3ff21a7](https://github.com/cfpb/design-system/commit/3ff21a7efb0cad117edb9e95a9db3e5a6aacb6bf)) - Ans
+
+## [3.12.0](https://github.com/cfpb/design-system/compare/v3.11.0..vv3.12.0) - June  6, 2025
 
 ### PRs in this release
 

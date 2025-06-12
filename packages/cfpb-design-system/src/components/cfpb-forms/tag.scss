@@ -30,7 +30,8 @@
   }
 }
 
-button.a-tag-filter {
+button.a-tag-filter,
+a.a-tag-filter {
   &:hover {
     background-color: var(--teal-40);
     cursor: pointer;

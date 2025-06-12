@@ -36,6 +36,8 @@ code_examples:
     code_snippet_url: examples/selects.html
   - code_title: Multiselects
     code_snippet_url: examples/multiselects.html
+  - code_title: Tags
+    code_snippet_url: examples/tags.html
 
 last_updated: 2019-09-13T13:48:42.692Z
 ---

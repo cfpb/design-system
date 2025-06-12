@@ -31,7 +31,6 @@ variation_groups:
 
           * Single column content only.
 
-            ![]()
     variation_group_name: Types
 guidelines: >-
   Wells should generally be text-based. If content must include imagery or

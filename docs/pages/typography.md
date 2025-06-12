@@ -114,8 +114,6 @@ guidelines: >-
 
   For multiple paragraphs within the same section set the space between paragraphs to 15px.
 
-
-  ![]()
 eyebrow: Typography
 status: Released
 description: A clear typographic hierarchy is critical to the effective
@@ -127,9 +125,6 @@ description: A clear typographic hierarchy is critical to the effective
 use_cases: ''
 behavior: ''
 accessibility: >-
-  ![]()
-
-
   Web Content Accessibility (WCAG) standards ensure that content is accessible by everyone, regardless of any disability or user device. To learn more, refer to the [http://www.section508.gov](https://www.section508.gov/).
 
 

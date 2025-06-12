@@ -11,8 +11,7 @@ variation_groups:
   - variations:
       - variation_is_deprecated: false
         variation_name: Topic tag
-        variation_description:
-          Topic tags appear with content such as blog posts and
+        variation_description: Topic tags appear with content such as blog posts and
           press releases to display associated topics. When clicked, a topic tag
           takes a user to a filtered view of other items tagged with the same
           topic tag. In this filtered view, a topic tag appears as a filter tag.
@@ -34,8 +33,7 @@ variation_groups:
           </ul>
       - variation_is_deprecated: false
         variation_name: Topic tag (stacked)
-        variation_description:
-          A topic tags group can be stacked at all screen sizes by
+        variation_description: A topic tags group can be stacked at all screen sizes by
           adding the \`m-tag-group--stacked\` modifier to the tag group.
         variation_code_snippet: |-
           <ul class="m-tag-group m-tag-group--stacked">
@@ -93,7 +91,8 @@ variation_groups:
                 9.716z"></path>
                 </svg>
               </button>
-            </li><li>
+            </li>
+          <li>
               <button class="a-tag-filter">
                 Option 4
                 <svg
@@ -120,7 +119,7 @@ variation_groups:
               </button>
             </li>
             <li>
-              <a href="#" class="a-tag-filter">
+              <button class="a-tag-filter">
                 A filter tag using an anchor element
                 <svg
                 xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg
@@ -130,13 +129,16 @@ variation_groups:
                 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455
                 9.716z"></path>
                 </svg>
-              </a>
+
+              </button>
             </li>
           </ul>
       - variation_is_deprecated: false
         variation_name: Non-clickable filter tag
-        variation_description: There can be elements that have the appearance of a filter tag, but are not clickable. This is used like an inline notification.
-        variation_code_snippet: >-
+        variation_description: There can be elements that have the appearance of a
+          filter tag, but are not clickable. This is used like an inline
+          notification.
+        variation_code_snippet: |-
           <div class="a-tag-filter">
             Note
           </div>

@@ -51,6 +51,9 @@ first-level:
           - page: Text inputs
           - page: Tooltips
         third-level: []
+      - heading: Web Components
+        nav-items:
+          - page: Elements
     nav-items: []
   - heading: Patterns
     second-level:

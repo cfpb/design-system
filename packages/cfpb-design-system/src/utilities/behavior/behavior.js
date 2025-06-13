@@ -21,7 +21,8 @@
    </div>
    ========================================================================== */
 
-import { BEHAVIOR_PREFIX, JS_HOOK, contains } from '@cfpb/cfpb-design-system';
+import { BEHAVIOR_PREFIX, JS_HOOK } from '../standard-type.js';
+import { contains } from '../data-hook.js';
 
 /**
  * @param {string} behaviorSelector - Behavior type used to find the element

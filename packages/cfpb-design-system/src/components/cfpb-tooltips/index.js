@@ -3,7 +3,7 @@
    ========================================================================== */
 
 import tippy from 'tippy.js';
-import { instantiateAll } from '@cfpb/cfpb-design-system';
+import { instantiateAll } from '../../utilities/atomic-helpers.js';
 
 import * as TooltipStyles from './tooltip.scss';
 

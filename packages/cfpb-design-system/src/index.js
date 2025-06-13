@@ -17,3 +17,6 @@ export * from './components/cfpb-tables';
 export * from './components/cfpb-typography';
 
 export * from './utilities';
+
+export * from './elements/cfpb-button';
+export * from './elements/cfpb-file-upload';

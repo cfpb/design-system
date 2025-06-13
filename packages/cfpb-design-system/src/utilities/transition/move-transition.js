@@ -1,4 +1,5 @@
-import { BaseTransition, EventObserver } from '@cfpb/cfpb-design-system';
+import { BaseTransition } from '../transition/base-transition.js';
+import { EventObserver } from '../event-observer.js';
 
 // Exported constants.
 const CLASSES = {

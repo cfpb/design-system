@@ -4,7 +4,7 @@ import styles from './cfpb-file-upload.component.scss';
 
 /**
  *
- * @tag cfpb-file-upload.
+ * @element cfpb-file-upload.
  * @slot - The main content for the upload button.
  */
 export class CfpbFileUpload extends LitElement {

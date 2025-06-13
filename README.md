@@ -17,6 +17,17 @@ click the edit button at the bottom right of the page.
 You'll need to be added as a contributor to this repository in order to
 authenticate with Decap CMS.
 
+## Web Components
+
+The Design System's components have traditionally been written largely without
+the use of external frameworks (`cfpb-tooltips` is a notable exception).
+We are gradually transitioning some components to web components.
+The properties of these components can be analyzed with the command:
+
+```sh
+npx web-component-analyzer packages/cfpb-design-system/src/elements
+```
+
 ### Running the documentation website locally
 
 The project has a dependency on Ruby because it uses Jekyll. If you do not have Ruby installed, you will need to install it. We recommend using [RVM](https://rvm.io/rvm/install). If you don't have admin access to your machine, try these steps:

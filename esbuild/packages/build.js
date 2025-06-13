@@ -2,6 +2,7 @@ import esbuild from 'esbuild';
 
 import { copy } from './copy.js';
 import { scripts } from './scripts.js';
+import { minifyHTMLLiteralsPlugin } from 'esbuild-plugin-minify-html-literals';
 
 const baseConfig = {
   logLevel: 'info',
@@ -14,7 +15,7 @@ const baseConfig = {
   },
   outdir: './tmp/',
   outbase: './packages/',
-  plugins: [],
+  plugins: [minifyHTMLLiteralsPlugin()],
 };
 
 (async function () {

@@ -1,10 +1,7 @@
-import {
-  BEHAVIOR_PREFIX,
-  JS_HOOK,
-  BaseTransition,
-  EventObserver,
-  checkBehaviorDom,
-} from '@cfpb/cfpb-design-system';
+import { BaseTransition } from '../transition/base-transition.js';
+import { EventObserver } from '../event-observer.js';
+import { checkBehaviorDom } from '../behavior/behavior.js';
+import { BEHAVIOR_PREFIX, JS_HOOK } from '../standard-type.js';
 
 const BASE_CLASS = BEHAVIOR_PREFIX + 'flyout-menu';
 const SEL_PREFIX = '[' + JS_HOOK + '=' + BASE_CLASS;

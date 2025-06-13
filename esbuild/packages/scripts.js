@@ -1,5 +1,4 @@
 import { pluginPostCssSass } from '../plugins/plugin-postcss-sass.js';
-import autoprefixer from 'autoprefixer';
 import { glob } from 'glob';
 
 const jsPaths = [];
@@ -20,11 +19,7 @@ function scripts(baseConfig) {
     ...baseConfig,
     entryPoints: jsPaths,
     target: 'es6',
-    plugins: baseConfig.plugins.concat([
-      pluginPostCssSass({
-        plugins: [autoprefixer],
-      }),
-    ]),
+    plugins: baseConfig.plugins.concat([pluginPostCssSass()]),
   };
 }
 

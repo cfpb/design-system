@@ -2,7 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.12.1](https://github.com/cfpb/design-system/compare/v3.12.0..v3.12.1) - June 12, 2025
+## [3.13.0](https://github.com/cfpb/design-system/compare/v3.12.1..v3.13.0) - June 13, 2025
+
+### PRs in this release
+
+- PR #[2264](https://github.com/cfpb/design-system/pull/2264): Add `lit` and initial web components - Ans
+- PR #[2302](https://github.com/cfpb/design-system/pull/2302): Add linter plugins for web components - Ans
+- PR #[2301](https://github.com/cfpb/design-system/pull/2301): Optimize web component code - Ans
+
+### General
+
+- Add cfpb-button and cfpb-file-upload web components - ([454eac3](https://github.com/cfpb/design-system/commit/454eac3004574bfaac6788c7d5f9e98d86a5e088)) - Ans
+- Add postcss-minify - ([d9ad251](https://github.com/cfpb/design-system/commit/d9ad251b4d10fa0e4478adc7a051ff5e9dc240bc)) - Ans
+- Update internal imports - ([09f0434](https://github.com/cfpb/design-system/commit/09f043437ec290990d690571fa971dd6ddfc7223)) - Ans
+- Autolint files - ([c271f67](https://github.com/cfpb/design-system/commit/c271f671661810862511f17779df88cfab9567d9)) - Ans
+- Update documentation - ([5fab397](https://github.com/cfpb/design-system/commit/5fab3973d25b9bf39c9be9847e28e3a10250cd31)) - Ans
+- Replace postcss-minify with cssnano - ([d3bdd83](https://github.com/cfpb/design-system/commit/d3bdd83f2b06d29427804ddbbe1897530cfa66bb)) - Ans
+- Add minifyHTMLLiteralsPlugin - ([44c6618](https://github.com/cfpb/design-system/commit/44c6618b8200229133501f52196656842ebcc874)) - Ans
+
+## [3.12.1](https://github.com/cfpb/design-system/compare/v3.12.0..vv3.12.1) - June 12, 2025
 
 ### PRs in this release
 

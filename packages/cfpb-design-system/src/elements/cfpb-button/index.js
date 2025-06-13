@@ -48,6 +48,9 @@ export class CfpbButton extends LitElement {
       </button>
     `;
   }
-}
 
-window.customElements.define('cfpb-button', CfpbButton);
+  static init() {
+    window.customElements.get('cfpb-button') ||
+      window.customElements.define('cfpb-button', CfpbButton);
+  }
+}

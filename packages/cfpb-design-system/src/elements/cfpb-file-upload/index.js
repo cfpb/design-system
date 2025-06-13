@@ -76,6 +76,9 @@ export class CfpbFileUpload extends LitElement {
       </div>
     `;
   }
-}
 
-window.customElements.define('cfpb-file-upload', CfpbFileUpload);
+  static init() {
+    window.customElements.get('cfpb-file-upload') ||
+      window.customElements.define('cfpb-file-upload', CfpbFileUpload);
+  }
+}

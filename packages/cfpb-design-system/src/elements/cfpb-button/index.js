@@ -3,10 +3,8 @@ import styles from './cfpb-button.component.scss';
 
 /**
  *
- * @tag cfpb-button
- *
+ * @element cfpb-button
  * @slot - The main content for the button.
- *
  */
 export class CfpbButton extends LitElement {
   static styles = css`

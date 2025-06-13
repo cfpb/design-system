@@ -8,6 +8,8 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactPlugin from 'eslint-plugin-react';
 import pluginCypress from 'eslint-plugin-cypress';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import { configs as eslintPluginLit } from 'eslint-plugin-lit';
+import { configs as eslintPluginWc } from 'eslint-plugin-wc';
 
 export default [
   {
@@ -26,6 +28,8 @@ export default [
   reactPlugin.configs.flat.recommended,
   pluginCypress.configs.recommended,
   eslintConfigPrettier,
+  eslintPluginLit['flat/recommended'],
+  eslintPluginWc['flat/recommended'],
   {
     languageOptions: {
       ecmaVersion: 2023,

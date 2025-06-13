@@ -19,11 +19,7 @@ function scripts(baseConfig) {
     ...baseConfig,
     entryPoints: jsPaths,
     target: 'es6',
-    plugins: baseConfig.plugins.concat([
-      pluginPostCssSass({
-        plugins: [],
-      }),
-    ]),
+    plugins: baseConfig.plugins.concat([pluginPostCssSass()]),
   };
 }
 

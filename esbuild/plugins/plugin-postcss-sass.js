@@ -5,7 +5,7 @@ import autoprefixer from 'autoprefixer';
 import * as sass from 'sass';
 import { pluginProcessIcons } from './postcss-process-icons.js';
 
-const pluginPostCssSass = ({ plugins = [] }) => ({
+const pluginPostCssSass = () => ({
   name: 'postcss-sass',
   setup(build) {
     build.onLoad({ filter: /.\.scss$/ }, async (args) => {
@@ -19,7 +19,6 @@ const pluginPostCssSass = ({ plugins = [] }) => ({
       });
 
       const result = await postcss([
-        ...plugins,
         autoprefixer,
         pluginProcessIcons,
         cssnano,

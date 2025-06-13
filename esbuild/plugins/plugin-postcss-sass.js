@@ -1,6 +1,7 @@
 import { readdirSync } from 'node:fs';
 import postcss from 'postcss';
-import postcssMinify from 'postcss-minify';
+import cssnano from 'cssnano';
+import autoprefixer from 'autoprefixer';
 import * as sass from 'sass';
 import { pluginProcessIcons } from './postcss-process-icons.js';
 
@@ -19,8 +20,9 @@ const pluginPostCssSass = ({ plugins = [] }) => ({
 
       const result = await postcss([
         ...plugins,
+        autoprefixer,
         pluginProcessIcons,
-        postcssMinify,
+        cssnano,
       ]).process(sassResult.css, {
         from: args.path,
       });

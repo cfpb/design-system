@@ -15,14 +15,16 @@ export class CfpbFileUpload extends LitElement {
   static get properties() {
     return {
       isDetailHidden: { type: Boolean },
-      fileName: { type: String },
+      fileName: { type: String }, // The file name.
+      accept: { type: String }, // The accepted file types.
+      value: { type: String }, // The raw file name.
+      files: { type: FileList }, // A FileList object.
     };
   }
 
   constructor() {
     super();
-    this.isDetailHidden = true;
-    this.fileName = '';
+    this.#hideDetails();
   }
 
   fileInput = createRef();
@@ -40,7 +42,24 @@ export class CfpbFileUpload extends LitElement {
 
   #showDetails() {
     this.fileName = this.#getUploadName(this.fileInput.value.value);
+    this.value = this.fileInput.value.value;
+    this.files = this.fileInput.value.files;
     this.isDetailHidden = false;
+  }
+
+  #hideDetails() {
+    this.fileName = '';
+    this.value = '';
+    this.files = {};
+    this.isDetailHidden = true;
+  }
+
+  #checkStatus() {
+    if (this.fileInput.value.value == '') {
+      this.#hideDetails();
+    } else {
+      this.#showDetails();
+    }
   }
 
   render() {
@@ -54,11 +73,12 @@ export class CfpbFileUpload extends LitElement {
         <slot></slot>
       </cfpb-button>
       <input
-        id="file-upload"
         class="a-btn a-btn--secondary"
         type="file"
         hidden
-        @input="${() => this.#showDetails()}"
+        accept="${this.accept}"
+        @input="${() => this.#checkStatus()}"
+        @cancel="${() => this.#checkStatus()}"
         ${ref(this.fileInput)}
       />
       <div
@@ -68,7 +88,7 @@ export class CfpbFileUpload extends LitElement {
       >
         <h4>File added</h4>
         <ul>
-          <li>${this.fileName} ${this.isDetailHidden}</li>
+          <li>${this.fileName}</li>
         </ul>
         <p>
           To remove or replace your file, select a new file and upload again.
@@ -78,4 +98,5 @@ export class CfpbFileUpload extends LitElement {
   }
 }
 
-window.customElements.define('cfpb-file-upload', CfpbFileUpload);
+window.customElements.get('cfpb-file-upload') ||
+  window.customElements.define('cfpb-file-upload', CfpbFileUpload);

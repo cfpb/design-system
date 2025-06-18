@@ -16,6 +16,7 @@ export class CfpbFileUpload extends LitElement {
     return {
       isDetailHidden: { type: Boolean },
       fileName: { type: String }, // The file name.
+      accept: { type: String }, // The accepted file types.
       value: { type: String }, // The raw file name.
       files: { type: FileList }, // A FileList object.
     };
@@ -75,6 +76,7 @@ export class CfpbFileUpload extends LitElement {
         class="a-btn a-btn--secondary"
         type="file"
         hidden
+        accept="${this.accept}"
         @input="${() => this.#checkStatus()}"
         @cancel="${() => this.#checkStatus()}"
         ${ref(this.fileInput)}

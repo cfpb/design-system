@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.13.0](https://github.com/cfpb/design-system/compare/v3.12.1..v3.13.0) - June 13, 2025
+## [3.13.1](https://github.com/cfpb/design-system/compare/v3.13.0..v3.13.1) - June 18, 2025
+
+### PRs in this release
+
+- PR #[2304](https://github.com/cfpb/design-system/pull/2304): Additional polish to the file upload web component - Ans
+
+### General
+
+- Additional polish to the file upload web component - ([6fc24e6](https://github.com/cfpb/design-system/commit/6fc24e68cfc5b3dd0ce04c2d7494dac0b19ea5bd)) - Ans
+- Add accept attribute - ([e53f469](https://github.com/cfpb/design-system/commit/e53f4695f80a1766740edf330c23b12c32d78e60)) - Ans
+- Re-build dist assets - ([8ad0ed9](https://github.com/cfpb/design-system/commit/8ad0ed9bdb85796f496dfc628dd4c3b6113aa2f7)) - Ans
+
+## [3.13.0](https://github.com/cfpb/design-system/compare/v3.12.1..vv3.13.0) - June 13, 2025
 
 ### PRs in this release
 

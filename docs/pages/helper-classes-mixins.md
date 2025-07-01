@@ -294,7 +294,7 @@ variation_groups:
                     controls>
               </video>
           </div>
-      - variation_name: '"Link color" SASS mixin'
+      - variation_name: '"Link color" mixin'
         variation_description: >-
           Calling the mixin without arguments will set the following states:
           default - `#0071bc`, `:hover` - `#205493`, `:focus` - `#0071bc`,
@@ -330,7 +330,7 @@ variation_groups:
 
           **A base mixin of `@include u-link-colors-base` exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use `@include u-link-colors(@c, @v, @h, @f, @a)`.**
         variation_code_snippet: ''
-      - variation_name: '"Link border" SASS mixins'
+      - variation_name: '"Link border" mixins'
         variation_description: >-
           Turn off the default bottom `border` on the default and `:hover` states.
 
@@ -356,7 +356,7 @@ variation_groups:
           To use on text set to another size, use the mixin below.*
 
 
-          `.u-small-text`
+          `@include u-small-text`
 
 
           There is also a modifier, `u-small-text--subtle`, which sets the color
@@ -368,7 +368,7 @@ variation_groups:
           Sets the element to `14px` (in `em`s) based on the text size passed as `@context`.
 
 
-          `.u-small-text(@context)`
+          ` @include u-small-text(@context)`
 
 
           ```scss
@@ -379,7 +379,7 @@ variation_groups:
             font-size: math.div(20px, @base-font-size-px) + em;
 
             small {
-              .u-small-text(20px);
+              @include u-small-text(20px);
             }
           }
 

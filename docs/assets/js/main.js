@@ -1,6 +1,8 @@
 import { toggleAllDetails, toggleDetails } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
 import {
+  CfpbButton,
+  CfpbFileUpload,
   Expandable,
   ExpandableGroup,
   Summary,
@@ -33,6 +35,8 @@ anchors.remove(`
   #search-results h3
 `);
 
+CfpbButton.init();
+CfpbFileUpload.init();
 Summary.init();
 SummaryMinimal.init();
 ExpandableGroup.init();

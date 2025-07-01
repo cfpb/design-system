@@ -273,14 +273,13 @@ $ba: Link underline active color.
 }
 /* stylelint-enable */
 
-@mixin u-link-border() {
-  border-bottom-width: 1px;
-}
-
+// Turn off the default bottom `border` on the default and `:hover` states.
 @mixin u-link-no-border() {
   border-bottom-width: 0 !important;
 }
 
+// Turn off the default bottom `border` on the default state,
+// but force a bottom border on the `:hover` state.
 @mixin u-link-hover-border() {
   border-bottom-width: 0 !important;
 

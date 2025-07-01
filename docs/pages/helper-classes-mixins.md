@@ -294,75 +294,54 @@ variation_groups:
                     controls>
               </video>
           </div>
-      - variation_name: '"Link color" mixin'
+      - variation_name: '"Link color" SASS mixin'
         variation_description: >-
           Calling the mixin without arguments will set the following states:
           default - `#0071bc`, `:hover` - `#205493`, `:focus` - `#0071bc`,
           `:visited` - `#4c2c92`, `:active` - `#046b99`.
 
 
-          `u-link-colors()`
+          `@include u-link-colors()`
 
 
           Passing a single argument into the mixin will set the color for the default, `:visited`, `:hover`, `:focus`, and `:active` states.
 
 
-          `u-link-colors(@c)`
+          `@include u-link-colors(@c)`
 
 
           Passing two arguments into the mixin will set the color for the default, `:visited`, and `:active` states as the first argument, and `:hover` and `:focus` as the second argument.
 
 
-          `u-link-colors(@c, @h)`
+          `@include u-link-colors(@c, @h)`
 
 
           Passing five arguments will set the color for the default, `:visited`, `:hover`, `:focus`, and `:active` states respectively.
 
 
-          `u-link-colors(@c, @v, @h, @f, @a)`
+          `@include u-link-colors(@c, @v, @h, @f, @a)`
 
 
           Passing ten arguments will set the text (default, `:visited`, `:hover`, `:focus`, and `:active` states in the first five arguments) and border colors (default, `:visited`, `:hover`, `:focus`, and `:active` states in the following five arguments) separately.
 
 
-          `u-link-colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
+          `@include u-link-colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
 
 
-          **A base mixin of `u-link-colors-base()` exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use `.u-link-colors(@c, @v, @h, @f, @a)`.**
+          **A base mixin of `@include u-link-colors-base` exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use `@include u-link-colors(@c, @v, @h, @f, @a)`.**
         variation_code_snippet: ''
-      - variation_name: '"Link border" mixin'
+      - variation_name: '"Link border" SASS mixins'
         variation_description: >-
-          Force the default bottom `border` on the default and `:hover` states.
-
-
-          `.u-link__border()`
-
-
           Turn off the default bottom `border` on the default and `:hover` states.
 
 
-          `.u-link__no-border()`
+          `@include u-link-no-border`
 
 
           Turn off the default bottom `border` on the default state but force a bottom border on the `:hover` state.
 
 
-          `.u-link__hover-border()`
-        variation_code_snippet: ''
-      - variation_name: '"Link children" mixin'
-        variation_description: >-
-          Calling this mixin without arguments will set the default color for
-          the `:hover` state of a child within a link, without affecting the
-          link itself.
-
-
-          `.u-link__hover-child()`
-
-
-          Passing a single argument into the mixin will set a custom color for the `:hover` state of a child within a link, without affecting the link itself.
-
-
-          `.u-link__hover-child(@c)`
+          `@include u-link-hover-border`
         variation_code_snippet: ''
       - variation_name: '"Small text utility" mixin'
         variation_code_snippet: ''

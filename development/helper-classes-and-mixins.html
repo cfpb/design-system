@@ -1373,25 +1373,25 @@
             <div class="m-variation__description">
                 <p>Calling the mixin without arguments will set the following states: default - <code class="language-plaintext highlighter-rouge">#0071bc</code>, <code class="language-plaintext highlighter-rouge">:hover</code> - <code class="language-plaintext highlighter-rouge">#205493</code>, <code class="language-plaintext highlighter-rouge">:focus</code> - <code class="language-plaintext highlighter-rouge">#0071bc</code>, <code class="language-plaintext highlighter-rouge">:visited</code> - <code class="language-plaintext highlighter-rouge">#4c2c92</code>, <code class="language-plaintext highlighter-rouge">:active</code> - <code class="language-plaintext highlighter-rouge">#046b99</code>.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link-colors()</code></p>
+<p><code class="language-plaintext highlighter-rouge">@include u-link-colors()</code></p>
 
 <p>Passing a single argument into the mixin will set the color for the default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link-colors(@c)</code></p>
+<p><code class="language-plaintext highlighter-rouge">@include u-link-colors(@c)</code></p>
 
 <p>Passing two arguments into the mixin will set the color for the default, <code class="language-plaintext highlighter-rouge">:visited</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states as the first argument, and <code class="language-plaintext highlighter-rouge">:hover</code> and <code class="language-plaintext highlighter-rouge">:focus</code> as the second argument.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link-colors(@c, @h)</code></p>
+<p><code class="language-plaintext highlighter-rouge">@include u-link-colors(@c, @h)</code></p>
 
 <p>Passing five arguments will set the color for the default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states respectively.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link-colors(@c, @v, @h, @f, @a)</code></p>
+<p><code class="language-plaintext highlighter-rouge">@include u-link-colors(@c, @v, @h, @f, @a)</code></p>
 
 <p>Passing ten arguments will set the text (default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states in the first five arguments) and border colors (default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states in the following five arguments) separately.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link-colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)</code></p>
+<p><code class="language-plaintext highlighter-rouge">@include u-link-colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)</code></p>
 
-<p><strong>A base mixin of <code class="language-plaintext highlighter-rouge">u-link-colors-base()</code> exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use <code class="language-plaintext highlighter-rouge">.u-link-colors(@c, @v, @h, @f, @a)</code>.</strong></p>
+<p><strong>A base mixin of <code class="language-plaintext highlighter-rouge">@include u-link-colors-base</code> exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use <code class="language-plaintext highlighter-rouge">@include u-link-colors(@c, @v, @h, @f, @a)</code>.</strong></p>
 
             </div>
             
@@ -1418,7 +1418,7 @@
             
             <div class="m-variation__name">
                 <h3>
-                    "Link border" mixin
+                    "Link border" mixins
                     
                 </h3>
             </div>
@@ -1426,58 +1426,13 @@
 
             
             <div class="m-variation__description">
-                <p>Force the default bottom <code class="language-plaintext highlighter-rouge">border</code> on the default and <code class="language-plaintext highlighter-rouge">:hover</code> states.</p>
+                <p>Turn off the default bottom <code class="language-plaintext highlighter-rouge">border</code> on the default and <code class="language-plaintext highlighter-rouge">:hover</code> states.</p>
 
-<p><code class="language-plaintext highlighter-rouge">.u-link__border()</code></p>
-
-<p>Turn off the default bottom <code class="language-plaintext highlighter-rouge">border</code> on the default and <code class="language-plaintext highlighter-rouge">:hover</code> states.</p>
-
-<p><code class="language-plaintext highlighter-rouge">.u-link__no-border()</code></p>
+<p><code class="language-plaintext highlighter-rouge">@include u-link-no-border</code></p>
 
 <p>Turn off the default bottom <code class="language-plaintext highlighter-rouge">border</code> on the default state but force a bottom border on the <code class="language-plaintext highlighter-rouge">:hover</code> state.</p>
 
-<p><code class="language-plaintext highlighter-rouge">.u-link__hover-border()</code></p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    "Link children" mixin
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>Calling this mixin without arguments will set the default color for the <code class="language-plaintext highlighter-rouge">:hover</code> state of a child within a link, without affecting the link itself.</p>
-
-<p><code class="language-plaintext highlighter-rouge">.u-link__hover-child()</code></p>
-
-<p>Passing a single argument into the mixin will set a custom color for the <code class="language-plaintext highlighter-rouge">:hover</code> state of a child within a link, without affecting the link itself.</p>
-
-<p><code class="language-plaintext highlighter-rouge">.u-link__hover-child(@c)</code></p>
+<p><code class="language-plaintext highlighter-rouge">@include u-link-hover-border</code></p>
 
             </div>
             
@@ -1518,21 +1473,21 @@
 
 <p><em>To be used on default <code class="language-plaintext highlighter-rouge">16px</code> text only. To use on text set to another size, use the mixin below.</em></p>
 
-<p><code class="language-plaintext highlighter-rouge">.u-small-text</code></p>
+<p><code class="language-plaintext highlighter-rouge">@include u-small-text</code></p>
 
 <p>There is also a modifier, <code class="language-plaintext highlighter-rouge">u-small-text--subtle</code>, which sets the color to be gray.</p>
 <h4 id="mixin"><strong>Mixin</strong></h4>
 
 <p>Sets the element to <code class="language-plaintext highlighter-rouge">14px</code> (in <code class="language-plaintext highlighter-rouge">em</code>s) based on the text size passed as <code class="language-plaintext highlighter-rouge">@context</code>.</p>
 
-<p><code class="language-plaintext highlighter-rouge">.u-small-text(@context)</code></p>
+<p>` @include u-small-text(@context)`</p>
 
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Ex.</span>
 <span class="nc">.example</span> <span class="p">{</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="n">math</span><span class="o">.</span><span class="nf">div</span><span class="p">(</span><span class="m">20px</span><span class="o">,</span> <span class="o">@</span><span class="n">base-font-size-px</span><span class="p">)</span> <span class="o">+</span> <span class="n">em</span><span class="p">;</span>
 
   <span class="nt">small</span> <span class="p">{</span>
-    <span class="nc">.u-small-text</span><span class="o">(</span><span class="nt">20px</span><span class="o">)</span><span class="p">;</span>
+    <span class="k">@include</span> <span class="nd">u-small-text</span><span class="p">(</span><span class="m">20px</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 <span class="c1">// Compiles to</span>
@@ -1585,8 +1540,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/helper-classes-mixins.md">
-                            <time datetime="2025-06-18 11:55:09 -0400">
-                                11:55:09 AM Jun 18, 2025
+                            <time datetime="2025-07-01 14:11:24 -0400">
+                                 2:11:24 PM Jul 01, 2025
                             </time>
                         </a>
                     </section>

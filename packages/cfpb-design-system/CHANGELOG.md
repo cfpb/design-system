@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.14.0](https://github.com/cfpb/design-system/compare/v3.13.1..v3.14.0) - July  1, 2025
+## [3.14.1](https://github.com/cfpb/design-system/compare/v3.14.0..v3.14.1) - July  1, 2025
+
+### PRs in this release
+
+- PR #[2308](https://github.com/cfpb/design-system/pull/2308): Add sideEffects: false to package.json and add init to web components - Ans
+
+### General
+
+- Add sideEffects: false to package.json and add init to web components - ([561eac0](https://github.com/cfpb/design-system/commit/561eac03b2ab566e06dece1162e4aade971a9250)) - Ans
+- Re-build assets - ([51f04d4](https://github.com/cfpb/design-system/commit/51f04d40c118b9a73edd31373a44a9315dcbc14d)) - Ans
+
+## [3.14.0](https://github.com/cfpb/design-system/compare/v3.13.1..vv3.14.0) - July  1, 2025
 
 ### PRs in this release
 

@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.13.1](https://github.com/cfpb/design-system/compare/v3.13.0..v3.13.1) - June 18, 2025
+## [3.14.0](https://github.com/cfpb/design-system/compare/v3.13.1..v3.14.0) - July  1, 2025
+
+### PRs in this release
+
+- PR #[2307](https://github.com/cfpb/design-system/pull/2307): Update outdated SASS utility syntax in docs | remove unused mixins - Ans
+
+### General
+
+- Update u-link utility syntax in docs | remove unused `u-link-border` - ([f812998](https://github.com/cfpb/design-system/commit/f81299826b532b02efc874eb0c78eaa0a1306494)) - Ans
+
+## [3.13.1](https://github.com/cfpb/design-system/compare/v3.13.0..vv3.13.1) - June 18, 2025
 
 ### PRs in this release
 

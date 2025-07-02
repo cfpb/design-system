@@ -1134,6 +1134,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/source-sans-3@npm:5.2.8":
+  version: 5.2.8
+  resolution: "@fontsource/source-sans-3@npm:5.2.8"
+  checksum: 10c0/af91c5119aa8b4bddfc130ebef5454a9559bdeadb2b5b48ae0b419bda99f92e80e37498e48be18d69949831c7333bd83d3672e16b05fe9a5ecb6f06d7cfb4ae5
+  languageName: node
+  linkType: hard
+
 "@formatjs/ecma402-abstract@npm:2.2.0":
   version: 2.2.0
   resolution: "@formatjs/ecma402-abstract@npm:2.2.0"
@@ -4247,6 +4254,7 @@ __metadata:
   dependencies:
     "@cfpb/browserslist-config": "npm:0.0.4"
     "@csstools/postcss-sass": "npm:5.1.1"
+    "@fontsource/source-sans-3": "npm:5.2.8"
     "@lhci/cli": "npm:0.15.1"
     "@types/react": "npm:18.3.12"
     anchor-js: "npm:5.0.0"

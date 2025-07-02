@@ -25,7 +25,7 @@
     "a11y": "lhci autorun",
     "build": "node ./esbuild/packages/build.js && node ./esbuild/docs/build.js",
     "build-decap": "yarn install && yarn after-install && yarn build && bundle exec jekyll build",
-    "copy-assets": "./scripts/fonts.sh && cp -r packages/cfpb-design-system/src/components/cfpb-icons/icons docs/_includes/",
+    "copy-assets": "yarn install && ./scripts/fonts.sh && cp -r packages/cfpb-design-system/src/components/cfpb-icons/icons docs/_includes/",
     "after-install": "yarn copy-assets && bundle install",
     "lint": "scripts/lint.sh",
     "process-icon-svgs": "svgo -f packages/cfpb-design-system/src/components/cfpb-icons/icons --config=svgo.config.js",
@@ -40,6 +40,7 @@
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
+    "@fontsource/source-sans-3": "5.2.8",
     "@types/react": "18.3.12",
     "anchor-js": "5.0.0",
     "decap-cms-app": "3.4.0",

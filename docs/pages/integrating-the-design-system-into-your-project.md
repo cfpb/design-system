@@ -89,12 +89,12 @@ description: |-
 
   ### Set official font stack
 
-  If the project has access to Avenir Next `.woff` files, you'll include a mixin
-  to point to those woff files and create the Avenir Next `@font-face` rules.
+  If the project has access to Source Sans 3 `.woff2` files, you'll include a mixin
+  to point to those woff2 files and create the Source Sans 3 `@font-face` rules.
 
   ```scss
   // This is the path for self-hosted fonts.
-  @include licensed-font('/path/to/the/font/woff/files');
+  @include licensed-font('/path/to/the/font/woff2/files');
   ```
 
 

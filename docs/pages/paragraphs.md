@@ -5,7 +5,7 @@ status: Released
 variation_groups:
   - variations:
       - variation_code_snippet: >-
-          <p>Avenir Next Regular, 16px / 22px at all browser widths. Lorem ipsum
+          <p>Source Sans 3 Regular, 16px / 22px at all browser widths. Lorem ipsum
           dolor sit amet, <em>consectetur adipisicing elit</em>, sed do
 
           eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
@@ -31,18 +31,18 @@ variation_groups:
           #### Italicizing
 
 
-          We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.
+          We don’t serve the font file for Source Sans 3 Italic because we found Source Sans 3 Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.
 
 
           #### Bolding
 
 
-          We’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.
+          We’re trying out Source Sans 3 Medium with faux bolding in place of Source Sans 3 Semi-Bold, though the results of that experiment have been less predictable, so we may yet revert that decision.
         variation_specs: |-
-          * Avenir Next Regular
+          * Source Sans 3 Regular
           * 16px / 22px at all browser widths
       - variation_code_snippet: >-
-          <p class="lead-paragraph">Avenir Next Regular, 22px / 28px on large
+          <p class="lead-paragraph">Source Sans 3 Regular, 22px / 28px on large
           screens and 18px / 22px on small screens. Ut enim ad minim veniam,
           quis nostrud exercitation
 
@@ -52,7 +52,7 @@ variation_groups:
         variation_specs: >-
           * Also referred to as a subheading
 
-          * Avenir Next Regular
+          * Source Sans 3 Regular
 
           * Text is responsive. Displays as a Heading 3 (22px / 28px) on large screens (>601px wide). Displays at Heading 4 (18px / 22px but still Regular weight) on small screens (<601px wide).
     variation_group_name: Web paragraphs
@@ -60,12 +60,11 @@ variation_groups:
     variations:
       - variation_name: Body text
         variation_specs: |-
-          * Avenir Next Regular
+          * Source Sans 3 Regular
           * 11pt / 16pt
         variation_code_snippet: ''
         variation_description: >-
-          <p style="font-size: 11pt; font-weight: 400; line-height:16pt">Avenir
-          Next Regular, 11pt / 16pt. Lorem ipsum dolor sit amet, ut labore et
+          <p style="font-size: 11pt; font-weight: 400; line-height:16pt">Source Sans 3 Regular, 11pt / 16pt. Lorem ipsum dolor sit amet, ut labore et
           dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat.</p>
@@ -74,13 +73,13 @@ variation_groups:
           <br>
       - variation_name: Subheading
         variation_specs: |-
-          * Avenir Next Regular
+          * Source Sans 3 Regular
           * 16pt / 20pt
         variation_code_snippet: ''
         variation_description: >-
 
 
-          <p style="font-size: 16pt; font-weight: 400; line-height:20pt">Avenir Next Regular, 16pt / 20pt. Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p style="font-size: 16pt; font-weight: 400; line-height:20pt">Source Sans 3 Regular, 16pt / 20pt. Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
 
           <br>

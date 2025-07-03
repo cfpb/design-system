@@ -37,7 +37,7 @@ variation_groups:
           #### Bolding
 
 
-          We’re trying out Source Sans 3 Medium with faux bolding in place of Source Sans 3 Semi-Bold, though the results of that experiment have been less predictable, so we may yet revert that decision.
+          We’re trying out Source Sans 3 Medium with faux bolding in place of Source Sans 3 Semi Bold, though the results of that experiment have been less predictable, so we may yet revert that decision.
         variation_specs: |-
           * Source Sans 3 Regular
           * 16px / 22px at all browser widths

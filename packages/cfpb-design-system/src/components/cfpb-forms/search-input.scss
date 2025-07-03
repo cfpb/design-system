@@ -17,7 +17,10 @@
       left: 10px;
       align-self: center;
       cursor: pointer;
-      line-height: math.div(19px, $base-font-size-px);
+      line-height: math.div(
+        14.4px,
+        $base-font-size-px
+      ); // 9px vertically centers icon.
     }
 
     input[type='search'] {

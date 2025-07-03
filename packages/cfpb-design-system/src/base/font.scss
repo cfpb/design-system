@@ -5,40 +5,15 @@
    ========================================================================== */
 
   @if $path {
-    // These two @font-face rules are the same as those delivered
-    // in @fontsource/source-sans-3, without the WOFF fallback font file.
     // Refer to https://fontsource.org/fonts/source-sans-3/install for
     // generating @font-face rules.
     @font-face {
-      font-family: 'Source Sans 3';
+      font-family: 'Source Sans 3 Variable';
       font-style: normal;
       font-display: swap;
-      font-weight: 400;
-      src: url('#{$path}/source-sans-3-latin-400-normal.woff2') format('woff2');
-      unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    @font-face {
-      font-family: 'Source Sans 3';
-      font-style: normal;
-      font-display: swap;
-      font-weight: 600;
-      src: url('#{$path}/source-sans-3-latin-600-normal.woff2') format('woff2');
-      unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    @font-face {
-      font-family: 'Source Sans 3';
-      font-style: normal;
-      font-display: swap;
-      font-weight: 700;
-      src: url('#{$path}/source-sans-3-latin-700-normal.woff2') format('woff2');
+      font-weight: 200 900;
+      src: url('#{$path}/source-sans-3-latin-wght-normal.woff2')
+        format('woff2-variations');
       unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
         U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
@@ -46,7 +21,7 @@
     }
 
     :root {
-      --font-stack: 'Source Sans 3', arial, sans-serif;
+      --font-stack: 'Source Sans 3 Variable', arial, sans-serif;
     }
   }
 }

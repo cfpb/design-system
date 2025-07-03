@@ -17,6 +17,7 @@
       left: 10px;
       align-self: center;
       cursor: pointer;
+      line-height: math.div(19px, $base-font-size-px);
     }
 
     input[type='search'] {

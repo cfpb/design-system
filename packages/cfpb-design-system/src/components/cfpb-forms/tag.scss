@@ -5,6 +5,8 @@
 
 // Filter tags appear in filtered contexts, often as part of multiselects.
 .a-tag-filter {
+  line-height: math.div(19px, $base-font-size-px);
+
   display: flex;
   gap: math.div(10px, $btn-font-size) + rem;
 
@@ -48,8 +50,6 @@ a.a-tag-filter {
 }
 
 a.a-tag-filter {
-  line-height: normal;
-
   // Colors for :link, :visited, :hover, :focus, :active.
   @include u-link-colors(
     var(--black),

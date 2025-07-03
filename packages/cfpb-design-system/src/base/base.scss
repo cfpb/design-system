@@ -25,6 +25,11 @@ textarea {
   // Must set these explicitly to override Normalize.css's provided default
   // of `font-family: sans-serif;`
   font-family: var(--font-stack);
+
+  // Characters in some languages, like Chinese, have a larger x-height,
+  // which will make the button taller than the input.
+  // Fix that by setting the line height on the button and the input.
+  line-height: math.div(19px, $base-font-size-px);
 }
 
 /*

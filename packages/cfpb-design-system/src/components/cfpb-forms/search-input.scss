@@ -97,13 +97,6 @@
     display: block;
   }
 
-  button[type='submit'] {
-    // Characters in some languages, like Chinese, have a larger x-height,
-    // which will make the button taller than the input.
-    // Fix that by setting the line height on the button.
-    line-height: math.div(19px, $base-font-size-px);
-  }
-
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {
     flex-direction: row;

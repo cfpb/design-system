@@ -34,13 +34,13 @@ input.a-btn::-moz-focus-inner {
   cursor: pointer;
   font-size: math.div($btn-font-size, $base-font-size-px) + em;
   font-weight: 500;
-  line-height: normal;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.1s;
   width: fit-content;
   height: fit-content;
   justify-content: center;
+  align-items: center;
 
   &,
   &:link,

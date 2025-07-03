@@ -35,16 +35,16 @@ variation_groups:
 
           ```css
           :root {
-            --font-stack: 'Avenir Next', Arial, sans-serif;
+            --font-stack: 'Source Sans 3 Variable', Arial, sans-serif;
           }
           ```
       - variation_name: Font source
         variation_description: |-
-          There is a Sass mixin for specifying the path to the woff and woff2 font files for the CFPB default brand font, Avenir Next.
+          There is a Sass mixin for specifying the path to the woff2 font files for the CFPB default brand font, Source Sans 3.
           Pass in the path to the files. The path can be either a relative or absolute path.
 
 
           ```scss
-          @include licensed-font('/path/to/fonts/woff/files');
+          @include licensed-font('/path/to/fonts/woff2/files');
           ```
 ---

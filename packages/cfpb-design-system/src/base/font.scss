@@ -10,7 +10,7 @@
     @font-face {
       font-family: 'Source Sans 3 Variable';
       font-style: normal;
-      font-display: swap;
+      font-display: fallback;
       font-weight: 200 900;
       src: url('#{$path}/source-sans-3-latin-wght-normal.woff2')
         format('woff2-variations');

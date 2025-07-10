@@ -20,7 +20,7 @@ variation_groups:
       - variation_code_snippet: |+
           <h3 style="font-weight: 500;">Avenir Next Medium</h3>
 
-          <h4 style="font-weight: 500;">
+          <h4>
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>
@@ -30,7 +30,7 @@ variation_groups:
       - variation_code_snippet: |-
           <h3>Avenir Next Regular</h3>
 
-          <h4>
+          <h4 style="font-weight: 400;">
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>

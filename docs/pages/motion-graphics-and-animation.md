@@ -20,7 +20,7 @@ description: >-
 
   Animations should be at a minimum of 1920x1080 with a frame rate of 29.97 FPS unless otherwise specified.
 variation_groups:
-  - variation_group_name: Animation Style
+  - variation_group_name: Animation style
     variation_group_description: >-
       The CFPB uses a 2.5D style of animation. Illustrations are flat with an
       illusion of depth and can move on the X, Y, and Z axis. All animation is
@@ -34,7 +34,7 @@ variation_groups:
       Depth is created by layering elements, offsetting the animation of elements, depth of field, and shadow built into the illustration. Drop shadow should be used sparingly and should not be used on text.
     variations:
       - variation_is_deprecated: false
-        variation_name: Video Examples of Animation Style
+        variation_name: Video examples of animation style
         variation_description: >-
           **Elements building on:**
 
@@ -66,7 +66,7 @@ variation_groups:
       ![Animated car with blur](/design-system/images/uploads/motionblur9.png)
 
 
-      **Character Animation** is used when an illustrated character needs to move within a video. The illustrated characters should be built and separated into clearly labeled layers in Illustrator. The Illustrator file is then imported into After Effects using Import->Import as Composition.
+      **Character animation** is used when an illustrated character needs to move within a video. The illustrated characters should be built and separated into clearly labeled layers in Illustrator. The Illustrator file is then imported into After Effects using Import->Import as Composition.
 
 
       ![Animated mouse](/design-system/images/uploads/scene-2.png)
@@ -124,7 +124,7 @@ variation_groups:
 
 
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/B3LhSpxEW-o?controls=0&amp;start=41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  - variation_group_name: Sound Design
+  - variation_group_name: Sound design
     variation_group_description: >-
       Sound is an important part of motion graphics. There are three key
       components of sound in most of the CFPB’s motion graphics videos:

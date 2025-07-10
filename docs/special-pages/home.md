@@ -173,9 +173,9 @@ description: >-
 
   <h3 class="h4">License</h3>
 
-   All content, apart from CFPB trademarked properties, has been released as open source under the CC0 1.0 Universal Public Domain Dedication, and we’d love for other agencies, developers, or groups to adapt it for their own use. 
+   All content, apart from CFPB trademarked properties, has been released as open source under the CC0 1.0 Universal Public Domain Dedication, and we’d love for other agencies, developers, or groups to adapt it for their own use.
 
-  <h4 class="h5">Trademark Notice</h4> 
+  <h4 class="h5">Trademark notice</h4>
 
-  <small>The CFPB’s logo and the standard characters Consumer Financial Protection Bureau, CFPB, Know Before You Owe, and Money as You Grow are registered trademarks owned by the CFPB. Nothing on this website shall be construed as granting any license to use any trademark displayed on the website without the express written permission of the CFPB. Your use of these registered trademarks must comply with intellectual property laws. You may not use the CFPB trademarks to state or imply an association with or endorsement of your goods, services, or activities, nor in any manner that infringes upon the CFPB trademarks. Requests to use the CFPB trademarks should be made to the Office of the General Counsel, <a href="mailto:cfpb_ip@cfpb.gov">cfpb_ip@cfpb.gov</a>.</small>
+  <p>The CFPB’s logo and the standard characters Consumer Financial Protection Bureau, CFPB, Know Before You Owe, and Money as You Grow are registered trademarks owned by the CFPB. Nothing on this website shall be construed as granting any license to use any trademark displayed on the website without the express written permission of the CFPB. Your use of these registered trademarks must comply with intellectual property laws. You may not use the CFPB trademarks to state or imply an association with or endorsement of your goods, services, or activities, nor in any manner that infringes upon the CFPB trademarks. Requests to use the CFPB trademarks should be made to the Office of the General Counsel, <a href="mailto:cfpb_ip@cfpb.gov">cfpb_ip@cfpb.gov</a>.</p>
 ---

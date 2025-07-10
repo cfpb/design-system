@@ -34,7 +34,7 @@ variation_groups:
           editing should be limited to adjusting levels, contrast, and natural
           color balance. An edited selection of our latest event photography is
           available
-          at [flickr.com/photos/cfpbphotos](http://flickr.com/photos/cfpbphotos). 
+          at [flickr.com/photos/cfpbphotos](http://flickr.com/photos/cfpbphotos). 
 
 
           ![CFPB employee speaking at event](/design-system/images/uploads/photography_event_example_1.jpg)

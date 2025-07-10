@@ -16,7 +16,7 @@ variation_groups:
         variation_code_snippet: >-
           <cfpb-button>This is a button</cfpb-button>
       - variation_is_deprecated: false
-        variation_name: File Upload
+        variation_name: File upload
         variation_description: >-
           Allows files to be selected for upload.
         variation_code_snippet_rendered: >-

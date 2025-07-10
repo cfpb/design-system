@@ -42,7 +42,7 @@
       right: 0;
 
       // 4px is needed because the 2px movement of the content's bounding box.
-      top: calc(-100% + 2px);
+      top: calc(-100% + 4px);
 
       /* TODO: stylelint wants to convert rgba to rgb. Investigate why. */
       /* stylelint-disable */

@@ -13,7 +13,7 @@
 ) {
   .#{$jump-link-class} {
     @if $is-gold {
-      font-size: math.div(12px, $base-font-size-px) + rem;
+      font-size: math.div(14px, $base-font-size-px) + rem;
       font-weight: 600;
       text-transform: uppercase;
       color: var(--gold-80);

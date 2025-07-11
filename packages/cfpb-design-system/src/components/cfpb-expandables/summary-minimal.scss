@@ -37,6 +37,11 @@
     &[aria-expanded='true'] .o-summary-minimal__cue-close {
       display: block;
     }
+
+    svg {
+      // Shift icon for better alignment.
+      margin-top: 1px;
+    }
   }
 
   // Hide button in no-js state.

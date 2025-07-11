@@ -16,7 +16,10 @@
   &__btn {
     position: relative;
     z-index: 2;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: math.div(5px, $base-font-size-px) + rem;
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -25,6 +28,11 @@
     text-align: center;
     color: var(--pacific);
     background: #fff;
+
+    svg {
+      // Prevent icon from shrinking when button wraps.
+      flex: none;
+    }
 
     &:focus {
       outline: 1px dotted var(--pacific);

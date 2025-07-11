@@ -6,7 +6,7 @@ variation_groups:
   - variation_group_name: Typefaces
     variations:
       - variation_code_snippet: >+
-          <h3 style="font-weight: 600;letter-spacing: 1px;">Avenir Next Demi
+          <h3 style="font-weight: 600;letter-spacing: 1px;">Source Sans 3 Semi
           Bold</h3>
 
 
@@ -18,7 +18,7 @@ variation_groups:
 
         variation_name: ''
       - variation_code_snippet: |+
-          <h3 style="font-weight: 500;">Avenir Next Medium</h3>
+          <h3 style="font-weight: 500;">Source Sans 3 Medium</h3>
 
           <h4>
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
@@ -28,7 +28,7 @@ variation_groups:
 
         variation_name: ''
       - variation_code_snippet: |-
-          <h3>Avenir Next Regular</h3>
+          <h3>Source Sans 3 Regular</h3>
 
           <h4 style="font-weight: 400;">
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
@@ -36,7 +36,7 @@ variation_groups:
           0123456789</h4>
         variation_name: ''
     variation_group_description:
-      Avenir Next is the primary brand typeface and can
+      Source Sans 3 is the primary brand typeface and can
       be used across all formats from print to digital. Its round and geometric
       letterforms are approachable and modern.
 guidelines: >-

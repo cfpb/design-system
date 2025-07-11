@@ -45,7 +45,7 @@ variation_groups:
 
           * Subheader: Lead paragraph style
 
-          * Optional descriptive paragraph and call-to-action link: Avenir Next paragraph
+          * Optional descriptive paragraph and call-to-action link: Source Sans 3 paragraph
 
           * Text spans seven columns
 

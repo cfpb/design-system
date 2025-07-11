@@ -27,26 +27,26 @@ variation_groups:
           ---------------------------------------------------------------- |
           ------------------------------ |
 
-          | Display   | Avenir Next Regular, 48px /
+          | Display   | Source Sans 3 Regular, 48px /
           60px\x03                                | Drops to Heading
           1             |
 
-          | Heading 1 | Avenir Next Demi Bold, 34px /
+          | Heading 1 | Source Sans 3 Semi Bold, 34px /
           42px\x03                              | Drops to Heading
           2             |
 
-          | Heading 2 | Avenir Next Demi Bold, 26px /
+          | Heading 2 | Source Sans 3 Semi Bold, 26px /
           32px                               | Drops to Heading 3             |
 
-          | Heading 3 | Avenir Next Regular, 22px /
+          | Heading 3 | Source Sans 3 Regular, 22px /
           28px                                 | Drops to Heading
           4             |
 
-          | Heading 4 | Avenir Next Medium, 18px /
+          | Heading 4 | Source Sans 3 Medium, 18px /
           22px                                  | Drops to 16px /
           18px           |
 
-          | Heading 5 | Avenir Next Demi Bold, 14px / 18px, All caps,
+          | Heading 5 | Source Sans 3 Semi Bold, 14px / 18px, All caps,
           1px letter spacing | No change                      |"
     variation_group_name: Web headings
     variation_group_description:
@@ -75,14 +75,14 @@ variation_groups:
         variation_specs: |-
           | Heading   | Specs                                        |
           | --------- | -------------------------------------------- |
-          | Display   | Avenir Next Medium, 60pt / 66pt              |
-          | Heading 1 | Avenir Next Regular, 38pt / 40pt             |
-          | Heading 2 | Avenir Next Regular, 26pt / 28pt
+          | Display   | Source Sans 3 Medium, 60pt / 66pt              |
+          | Heading 1 | Source Sans 3 Regular, 38pt / 40pt             |
+          | Heading 2 | Source Sans 3 Regular, 26pt / 28pt
           |
-          | Heading 3 | Avenir Next Demi Bold, 16pt / 18pt           |
-          | Heading 4 | Avenir Next Medium, 14pt / 16pt              |
-          | Heading 5 | Avenir Next Demi Bold, 10pt / 12pt, all caps |
-          | Heading 6 | Avenir Next Medium, 12pt /14 pt              |
+          | Heading 3 | Source Sans 3 Semi Bold, 16pt / 18pt           |
+          | Heading 4 | Source Sans 3 Medium, 14pt / 16pt              |
+          | Heading 5 | Source Sans 3 Semi Bold, 10pt / 12pt, all caps |
+          | Heading 6 | Source Sans 3 Medium, 12pt /14 pt              |
     variation_group_description: >+
       This hierarchy should serve as a basis for 8.5 x 11” documents, but
       appropriate scaling should be explored for content of larger or smaller
@@ -118,7 +118,7 @@ variation_groups:
           </div>
         variation_implementation: null
         variation_specs: >-
-          * Avenir Next Medium, 18px
+          * Source Sans 3 Medium, 18px
 
           * View a [list of icons](https://cfpb.github.io/design-system/foundation/iconography). Icon height is constrained to 19px.
       - variation_name: Eyebrow heading
@@ -137,7 +137,7 @@ variation_groups:
         variation_code_snippet: |
           <div class="h5">eyebrow heading</div> <div class="h1">Heading 1</div>
         variation_specs: |-
-          * Avenir Next Demi Bold
+          * Source Sans 3 Semi Bold
           * 14px / 18px, 1px letter spacing
           * All caps
           * <601px wide: No change

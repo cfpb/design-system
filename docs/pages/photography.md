@@ -11,7 +11,7 @@ description: Photography is an important tool for communicating the subject
 variation_groups:
   - variation_group_name: Types
     variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           Editorial photos are used as a visual storytelling device across CFPB
           materials. When deciding what a photo should depict,

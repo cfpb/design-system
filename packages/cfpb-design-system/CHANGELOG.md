@@ -2,7 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.14.1](https://github.com/cfpb/design-system/compare/v3.14.0..v3.14.1) - July  1, 2025
+## [4.0.0](https://github.com/cfpb/design-system/compare/v3.14.1..v4.0.0) - July 15, 2025
+
+### PRs in this release
+
+- PR #[2316](https://github.com/cfpb/design-system/pull/2316): Add flexbox to summary buttons - Ans
+- PR #[2309](https://github.com/cfpb/design-system/pull/2309): Replace Avenir Next with Source Sans 3 - Ans
+
+### General
+
+- Add flexbox to summary buttons - ([6ad127f](https://github.com/cfpb/design-system/commit/6ad127fc848fa811d5886f51b9c55377ece1411c)) - Ans
+- Update font.scss - ([ed2b12c](https://github.com/cfpb/design-system/commit/ed2b12ceb9490001a109d17f8e94c1e8e0a7ece5)) - Ans
+- Add `@fontsource/source-sans-3` - ([3c6a5e9](https://github.com/cfpb/design-system/commit/3c6a5e9cefa86821f117dafa652ef5f92333e42d)) - Ans
+- Add additional font weight of 700 - ([55028fc](https://github.com/cfpb/design-system/commit/55028fc876c1c8e155fe111807344ad783f496ad)) - Ans
+- Switch to Source Sans Variable - ([da47dc7](https://github.com/cfpb/design-system/commit/da47dc7dc2220b18181c57d5b456091ee38c13c2)) - Ans
+- Swap Avenir with Source Sans 3 - ([607f872](https://github.com/cfpb/design-system/commit/607f8726355ba5d899caa61a4e4e19fcc3296693)) - Ans
+- Switch font-display to fallback, from swap - ([ac18f86](https://github.com/cfpb/design-system/commit/ac18f868340ca0351d1aa470ea4dcea8d8cdbb06)) - Ans
+- Adjust CSS line height defaults - ([facb436](https://github.com/cfpb/design-system/commit/facb436481f0cc0fea8c8ce762586d26cc584866)) - Ans
+- Adjust line-height - ([15abd3f](https://github.com/cfpb/design-system/commit/15abd3fe7bd8f0fa056dfad626897ca191afde3c)) - Ans
+- Adjust line-height - ([93a3d8a](https://github.com/cfpb/design-system/commit/93a3d8aecb41ed83f0945adaadbd3019e2d4f1c7)) - Ans
+- Adjust gradient for summary | Adjust tag size - ([7447419](https://github.com/cfpb/design-system/commit/7447419278919db9a2bb3f5988ca1a06027a1ef3)) - Ans
+- Merge branch 'main' into ans_source_sans_3 - Ans
+- Re-build /dist/ - ([5b5e3e6](https://github.com/cfpb/design-system/commit/5b5e3e6c82f939c84d95b06f4075244e6af5337c)) - Ans
+
+## [3.14.1](https://github.com/cfpb/design-system/compare/v3.14.0..vv3.14.1) - July  1, 2025
 
 ### PRs in this release
 

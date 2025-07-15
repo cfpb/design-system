@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.0.0](https://github.com/cfpb/design-system/compare/v3.14.1..v4.0.0) - July 15, 2025
+## [4.0.1](https://github.com/cfpb/design-system/compare/v4.0.0..v4.0.1) - July 15, 2025
+
+### PRs in this release
+
+- PR #[2320](https://github.com/cfpb/design-system/pull/2320): Update lit, cssnano, eslint, eslint-plugin-jsdoc | Move @fontsource-variable/source-sans-3 to published project - Ans
+
+### General
+
+- Update lit, cssnano, eslint, eslint-plugin-jsdoc | Move @fontsource-variable/source-sans-3 to published project - ([3427ba9](https://github.com/cfpb/design-system/commit/3427ba96b1ee5a106573361a3c4fed28e72759be)) - Ans
+
+## [4.0.0](https://github.com/cfpb/design-system/compare/v3.14.1..vv4.0.0) - July 15, 2025
 
 ### PRs in this release
 

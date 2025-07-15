@@ -88,9 +88,9 @@ guidelines: >-
 
   6. Sub-heading - H6
 
-  7. Description - Avenir paragraph **(required)**
+  7. Description - Source Sans 3 paragraph **(required)**
 
-  8. Author label - Avenir paragraph
+  8. Author label - Source Sans 3 paragraph
 
   9. Secondary link - Standard hyperlink
 
@@ -130,7 +130,7 @@ related_items: >-
   * [Filterable list page](https://cfpb.github.io/design-system/pages/filterable-list-pages)
 
 
-  ### Page introductions 
+  ### Page introductions
 
 
   * [Item introduction](https://cfpb.github.io/design-system/patterns/item-introductions)

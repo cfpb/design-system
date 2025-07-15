@@ -21,7 +21,7 @@ variation_groups:
       *First, add a variation group.*
 
 
-      *1) In the "Variation group name" field,*  
+      *1) In the "Variation group name" field,*
 
 
       * *Use the label "Standard \[component]" if there is **one** standard default component. See [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) and [tables](https://cfpb-sandbox.github.io/design-system/components/tables) as examples.*
@@ -30,9 +30,9 @@ variation_groups:
       * *Use the label "Types" if there is **more than one** standard component with different use cases. See [buttons](https://cfpb.github.io/design-system/components/buttons) as an example.*
 
 
-      *2) Click on the "Add variations" button below.* 
+      *2) Click on the "Add variations" button below.*
 
-      * *If there's one standard component, leave the "Variation name" field blank.* 
+      * *If there's one standard component, leave the "Variation name" field blank.*
 
       * *If there are types, add as many variations as needed. Add the name of each type to the "Variation name" field.*
 
@@ -107,7 +107,7 @@ variation_groups:
           - Margin right: 10 px
           - Border: 1 px, Gray 60 (#919395)
           - Background: White (#ffffff)
-          - Avenir Next Regular, 16 px, Black (#101820)
+          - Source Sans 3 Regular, 16 px, Black (#101820)
 
           #### Hover
           - Border: 2 px, Pacific (#0072ce)
@@ -124,7 +124,7 @@ variation_groups:
           #### Disabled
           - Border: 1 px, Gray 60 (#919395)
           - Background: Gray 10 (#e7e8e9)
-          - Avenir Next Regular, 16 px, Dark Gray (#43484e)
+          - Source Sans 3 Regular, 16 px, Dark Gray (#43484e)
   - variation_group_name: Variations
     variation_group_description: >
       Optional descriptive text. 1-3 sentences, 200-350 characters.
@@ -135,13 +135,13 @@ variation_groups:
 
       *The name of this group may vary depending on use case. For example:*
 
-      * *Use the label "Groups" if you're showing component groupings. See [expandables](https://cfpb.github.io/design-system/components/expandables#groups) for an example.* 
+      * *Use the label "Groups" if you're showing component groupings. See [expandables](https://cfpb.github.io/design-system/components/expandables#groups) for an example.*
 
       * *Use the label "Sizes" if you're showing alternate component sizes. See [checkboxes](https://cfpb.github.io/design-system/components/checkboxes#sizes) for an example.*
 
-      * *One-off labels may also be appropriate (for example, "[Responsive tables](https://cfpb.github.io/design-system/components/tables#responsive-tables)", "[Links with icons](https://cfpb.github.io/design-system/components/links#links-with-icons))* 
+      * *One-off labels may also be appropriate (for example, "[Responsive tables](https://cfpb.github.io/design-system/components/tables#responsive-tables)", "[Links with icons](https://cfpb.github.io/design-system/components/links#links-with-icons))*
 
-      * *If in doubt, use the label "Variations"* 
+      * *If in doubt, use the label "Variations"*
 
 
       *Once you've done that, click on the "Add variations" button, label each variation, and add implementation and specs details as needed.*

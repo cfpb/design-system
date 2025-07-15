@@ -565,7 +565,7 @@ guidelines: >-
   ### Icon artboard
 
 
-  Because our icons typically appear beside text we designed our icon artboards (in Illustrator) to match the vertical footprint of Avenir Next. Avenir Next text set to a font size of 16px has a rendered height of 19px. To account for the additional white space, we set the icon artboards to 19px (h).
+  Because our icons typically appear beside text we designed our icon artboards (in Illustrator) to match the vertical footprint of Source Sans 3. Source Sans 3 text set to a font size of 16px has a rendered height of 19px. To account for the additional white space, we set the icon artboards to 19px (h).
 
 
   ![Diagram of illustrator artboard icon grid](/design-system/images/uploads/icon_artboard.png)
@@ -574,7 +574,7 @@ guidelines: >-
   ### Relative sizing
 
 
-  When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. Refer to our guidelines on [how type should scale relative to neighboring text](https://cfpb.github.io/design-system/foundation/iconography#scale).
+  When typing or placing an icon next to Source Sans 3 in print or web, all icons should have a similar size. Refer to our guidelines on [how type should scale relative to neighboring text](https://cfpb.github.io/design-system/foundation/iconography#scale).
 
 
   When designing these icons, we used two sizing grids: a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.
@@ -586,13 +586,13 @@ guidelines: >-
   ### Alignment
 
 
-  The overall position of a circle icon is centered on the cap height of Avenir Next. Within the circle, the icon is centered optically.
+  The overall position of a circle icon is centered on the cap height of Source Sans 3. Within the circle, the icon is centered optically.
 
 
-  The alignment of non-circle icons depends on the icon height in relation to the footprint of Avenir Next. For more horizontal icons, vertically centering the icon on the cap height of Avenir Next often leaves it floating. To solve this, we start the grid on the baseline for more horizontal icons. For more vertical icons that exceed the cap height of Avenir Next, we center the icon on the cap height.
+  The alignment of non-circle icons depends on the icon height in relation to the footprint of Source Sans 3. For more horizontal icons, vertically centering the icon on the cap height of Source Sans 3 often leaves it floating. To solve this, we start the grid on the baseline for more horizontal icons. For more vertical icons that exceed the cap height of Source Sans 3, we center the icon on the cap height.
 
 
-  ![Vertical alignment of icon with Avenir Next text](/design-system/images/uploads/icon_artboard_alignment.png)
+  ![Vertical alignment of icon with Source Sans 3 text](/design-system/images/uploads/icon_artboard_alignment.png)
 
 
   ### Color

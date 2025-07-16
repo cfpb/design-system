@@ -36,7 +36,8 @@
     "start": "yarn build && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "cy": "./scripts/cypress.sh",
-    "changelog": "./scripts/changelog.sh"
+    "changelog": "./scripts/changelog.sh",
+    "tokens": "node ./node_modules/style-dictionary/bin/style-dictionary.js build --verbose --config ./style-dictionary.config.js"
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {

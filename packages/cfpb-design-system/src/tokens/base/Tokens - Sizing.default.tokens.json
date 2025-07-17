@@ -1,0 +1,112 @@
+{
+  "btn-font-size": {
+    "$type": "dimension",
+    "$value": "{base.base-font-size-px}"
+  },
+  "btn-border-radius-size": {
+    "$type": "dimension",
+    "$value": "4px"
+  },
+  "btn-v-padding": {
+    "$type": "dimension",
+    "$value": "8px"
+  },
+  "btn-h-padding": {
+    "$type": "dimension",
+    "$value": "14px"
+  },
+  "btn-v-padding-modifier-ie": {
+    "$type": "dimension",
+    "$value": "0.8px"
+  },
+  "btn--super-font-size": {
+    "$type": "dimension",
+    "$value": "18px"
+  },
+  "select-height": {
+    "$type": "dimension",
+    "$value": "30px"
+  },
+  "base": {
+    "base-font-size-px": {
+      "$type": "dimension",
+      "$value": "16px"
+    }
+  },
+  "grid__wrapper-width": {
+    "$type": "dimension",
+    "$value": "1230px"
+  },
+  "grid__gutter-width": {
+    "$type": "dimension",
+    "$value": "30px"
+  },
+  "grid__total-columns": {
+    "$type": "dimension",
+    "$value": "12px"
+  },
+  "hero-desckop-height": {
+    "$type": "dimension",
+    "$value": "285px"
+  },
+  "cf-icon-height": {
+    "$type": "dimension",
+    "$value": "19px"
+  },
+  "notification-padding--px": {
+    "$type": "dimension",
+    "$value": "15px"
+  },
+  "pagination-btn-min-width-px": {
+    "$type": "dimension",
+    "$value": "130px"
+  },
+  "base-font-size-px": {
+    "$type": "dimension",
+    "$value": "16px"
+  },
+  "base-line-height-px": {
+    "$type": "dimension",
+    "$value": "22px"
+  },
+  "size-xl": {
+    "$type": "dimension",
+    "$value": "48px"
+  },
+  "size-i": {
+    "$type": "dimension",
+    "$value": "34px"
+  },
+  "size-ii": {
+    "$type": "dimension",
+    "$value": "26px"
+  },
+  "size-iii": {
+    "$type": "dimension",
+    "$value": "22px"
+  },
+  "size-iv": {
+    "$type": "dimension",
+    "$value": "18px"
+  },
+  "size-v": {
+    "$type": "dimension",
+    "$value": "14px"
+  },
+  "size-vi": {
+    "$type": "dimension",
+    "$value": "12px"
+  },
+  "size-code": {
+    "$type": "dimension",
+    "$value": "13px"
+  },
+  "line-length": {
+    "$type": "dimension",
+    "$value": "{max-width}"
+  },
+  "max-width": {
+    "$type": "dimension",
+    "$value": "670px"
+  }
+}

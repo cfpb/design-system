@@ -16,7 +16,7 @@ variation_groups:
 
           0123456789</h4>
 
-        variation_name: ''
+        variation_name: ""
       - variation_code_snippet: |+
           <h3 style="font-weight: 500;">Source Sans 3 Medium</h3>
 
@@ -26,7 +26,7 @@ variation_groups:
           0123456789</h4>
 
 
-        variation_name: ''
+        variation_name: ""
       - variation_code_snippet: |-
           <h3>Source Sans 3 Regular</h3>
 
@@ -34,11 +34,12 @@ variation_groups:
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>
-        variation_name: ''
-    variation_group_description:
-      Source Sans 3 is the primary brand typeface and can
-      be used across all formats from print to digital. Its round and geometric
-      letterforms are approachable and modern.
+        variation_name: ""
+    variation_group_description: We recently updated our primary brand typeface to
+      Source Sans 3, a typeface included in the [U.S. Web Design
+      System](https://designsystem.digital.gov/components/typography/). With
+      letters that are slender but open, Source Sans 3 has a simple and
+      approachable look.
 guidelines: >-
   Readable text allows users to efficiently read and take in textual
   information. Text that is not readable turns off readers or makes it
@@ -113,7 +114,6 @@ guidelines: >-
 
 
   For multiple paragraphs within the same section set the space between paragraphs to 15px.
-
 eyebrow: Typography
 status: Released
 description: A clear typographic hierarchy is critical to the effective
@@ -122,10 +122,12 @@ description: A clear typographic hierarchy is critical to the effective
   scale, and capitalization to convey the relative importance of each heading
   within a document. Readability, accessibility, and font smoothing to allow all
   users to efficiently read and absorb textual information.
-use_cases: ''
-behavior: ''
+use_cases: ""
+behavior: ""
 accessibility: >-
-  Web Content Accessibility (WCAG) standards ensure that content is accessible by everyone, regardless of any disability or user device. To learn more, refer to the [http://www.section508.gov](https://www.section508.gov/).
+  Web Content Accessibility (WCAG) standards ensure that content is accessible
+  by everyone, regardless of any disability or user device. To learn more, refer
+  to the [http://www.section508.gov](https://www.section508.gov/).
 
 
   ### Don't use type in illustrations or graphics
@@ -176,8 +178,7 @@ accessibility: >-
 
 
   ![Chart showing accessible combinations of white type on brand colors at 100% saturation](/design-system/images/uploads/white_type_revised.png)
-related_items: >-
+related_items: |-
   * [Headings](https://cfpb.github.io/design-system/foundation/headings)
-
   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
 ---

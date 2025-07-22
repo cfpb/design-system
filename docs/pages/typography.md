@@ -53,16 +53,13 @@ guidelines: >-
   Typography should be set flush left. This provides the eye a constant starting point for each line, making text easier to read.
 
 
-  ![Alignment](/design-system/images/uploads/type_alignment.png)
+  ![Alignment](/design-system/images/uploads/fonts_alignment.png)
 
 
   ### Line height
 
 
   Ample space between lines of type promotes an open feeling and lends flow to body copy. When setting body copy, the leading should be 1.375 times the type size, or 37.5% larger.
-
-
-  ![Line height](/design-system/images/uploads/type_line_height.png)
 
 
   ### Line length
@@ -72,9 +69,6 @@ guidelines: >-
 
 
   In digital materials, readers are afforded some level of control over line length by narrowing their browser window or changing the type size display on their devices. In printed materials, readers do not have this control. For this reason, special effort should be made to use a line length as close as possible to 66 characters in printed materials. This can be achieved by using a multi-column layout or larger margins.
-
-
-  ![Line length](/design-system/images/uploads/line_length_040121.png)
 
 
   ### Spacing
@@ -89,7 +83,7 @@ guidelines: >-
   When a heading is followed by paragraph text, include 30px of space below Display and 15px below Headings 1–6.
 
 
-  ![](/design-system/images/uploads/fonts_heading_body.png)
+  ![](/design-system/images/uploads/fonts_heading_followed_by_body_copy.png)
 
 
   #### Body copy followed by a heading
@@ -98,7 +92,7 @@ guidelines: >-
   When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
 
 
-  ![Body copy followed by heading](/design-system/images/uploads/fonts_body_heading.png)
+  ![Body copy followed by heading](/design-system/images/uploads/fonts_body_copy_followed_by_heading.png)
 
 
   #### Heading followed by a heading
@@ -107,13 +101,16 @@ guidelines: >-
   For stacked headings, include 30 px of space after the primary heading.
 
 
-  ![Heading followed by heading](/design-system/images/uploads/type_heading_heading.png)
+  ![Heading followed by heading](/design-system/images/uploads/fonts_heading_followed_by_heading.png)
 
 
   #### Body copy spacing
 
 
   For multiple paragraphs within the same section set the space between paragraphs to 15px.
+
+
+  ![Body copy spacing](/design-system/images/uploads/fonts_body_copy_spacing.png)
 eyebrow: Typography
 status: Released
 description: A clear typographic hierarchy is critical to the effective

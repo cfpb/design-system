@@ -151,13 +151,13 @@ accessibility: >-
   #### Black type on colored backgrounds
 
 
-  Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. Hex values for those colors are shown in parentheses in the image below; for their RGB equivalents, [visit our Color page](https://cfpb.github.io/design-system/foundation/color#tints).
+  Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. [Visit our Color page](https://cfpb.github.io/design-system/foundation/color#tints) for hex and RGB values. 
 
 
   A few colors allow for slightly darker saturations while still maintaining accessibility. If you're looking to use a combination not listed here, check [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)  to verify accessibility.
 
 
-  ![Chart showing accessible combinations of black type on brand colors with 20% saturation](/design-system/images/uploads/black_type_revised.png)
+  ![Chart showing accessible combinations of black type on brand colors with 20% saturation](/design-system/images/uploads/black_type.png)
 
 
   #### White type on colored backgrounds
@@ -171,10 +171,10 @@ accessibility: >-
   * White type is not accessible on any CFPB shade of gold.
 
 
-  The graphic below shows accessible combinations of white type on CFPB brand colors at 100% saturation. Hex values for those colors are shown in parentheses; for their RGB equivalents, [visit our Color page](https://cfpb.github.io/design-system/foundation/color#tints).
+  The graphic below shows accessible combinations of white type on CFPB brand colors at 100% saturation. [Visit our Color page](<>) for hex and RGB values. 
 
 
-  ![Chart showing accessible combinations of white type on brand colors at 100% saturation](/design-system/images/uploads/white_type_revised.png)
+  ![Chart showing accessible combinations of white type on brand colors at 100% saturation](/design-system/images/uploads/white_type.png)
 related_items: |-
   * [Headings](https://cfpb.github.io/design-system/foundation/headings)
   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)

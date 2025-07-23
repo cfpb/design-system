@@ -62,6 +62,9 @@ guidelines: >-
   Ample space between lines of type promotes an open feeling and lends flow to body copy. When setting body copy, the leading should be 1.375 times the type size, or 37.5% larger.
 
 
+  ![Line height](/design-system/images/uploads/fonts_line_height.png)
+
+
   ### Line length
 
 
@@ -69,6 +72,9 @@ guidelines: >-
 
 
   In digital materials, readers are afforded some level of control over line length by narrowing their browser window or changing the type size display on their devices. In printed materials, readers do not have this control. For this reason, special effort should be made to use a line length as close as possible to 66 characters in printed materials. This can be achieved by using a multi-column layout or larger margins.
+
+
+  ![Line length](/design-system/images/uploads/fonts_line_length.png)
 
 
   ### Spacing

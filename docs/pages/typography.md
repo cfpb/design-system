@@ -36,9 +36,11 @@ variation_groups:
           0123456789</h4>
         variation_name: ''
     variation_group_description:
-      Source Sans 3 is the primary brand typeface and can
-      be used across all formats from print to digital. Its round and geometric
-      letterforms are approachable and modern.
+      We recently updated our primary brand typeface to
+      Source Sans 3, a typeface included in the [U.S. Web Design
+      System](https://designsystem.digital.gov/components/typography/). With
+      letters that are slender but open, Source Sans 3 has a simple and
+      approachable look.
 guidelines: >-
   Readable text allows users to efficiently read and take in textual
   information. Text that is not readable turns off readers or makes it
@@ -52,7 +54,7 @@ guidelines: >-
   Typography should be set flush left. This provides the eye a constant starting point for each line, making text easier to read.
 
 
-  ![Alignment](/design-system/images/uploads/type_alignment.png)
+  ![Alignment](/design-system/images/uploads/fonts_alignment.png)
 
 
   ### Line height
@@ -61,7 +63,7 @@ guidelines: >-
   Ample space between lines of type promotes an open feeling and lends flow to body copy. When setting body copy, the leading should be 1.375 times the type size, or 37.5% larger.
 
 
-  ![Line height](/design-system/images/uploads/type_line_height.png)
+  ![Line height](/design-system/images/uploads/fonts_line_height.png)
 
 
   ### Line length
@@ -73,7 +75,7 @@ guidelines: >-
   In digital materials, readers are afforded some level of control over line length by narrowing their browser window or changing the type size display on their devices. In printed materials, readers do not have this control. For this reason, special effort should be made to use a line length as close as possible to 66 characters in printed materials. This can be achieved by using a multi-column layout or larger margins.
 
 
-  ![Line length](/design-system/images/uploads/line_length_040121.png)
+  ![Line length](/design-system/images/uploads/fonts_line_length.png)
 
 
   ### Spacing
@@ -88,7 +90,7 @@ guidelines: >-
   When a heading is followed by paragraph text, include 30px of space below Display and 15px below Headings 1–6.
 
 
-  ![](/design-system/images/uploads/fonts_heading_body.png)
+  ![](/design-system/images/uploads/fonts_heading_followed_by_body_copy.png)
 
 
   #### Body copy followed by a heading
@@ -97,7 +99,7 @@ guidelines: >-
   When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
 
 
-  ![Body copy followed by heading](/design-system/images/uploads/fonts_body_heading.png)
+  ![Body copy followed by heading](/design-system/images/uploads/fonts_body_copy_followed_by_heading.png)
 
 
   #### Heading followed by a heading
@@ -106,7 +108,7 @@ guidelines: >-
   For stacked headings, include 30 px of space after the primary heading.
 
 
-  ![Heading followed by heading](/design-system/images/uploads/type_heading_heading.png)
+  ![Heading followed by heading](/design-system/images/uploads/fonts_heading_followed_by_heading.png)
 
 
   #### Body copy spacing
@@ -114,6 +116,8 @@ guidelines: >-
 
   For multiple paragraphs within the same section set the space between paragraphs to 15px.
 
+
+  ![Body copy spacing](/design-system/images/uploads/fonts_body_copy_spacing.png)
 eyebrow: Typography
 status: Released
 description: A clear typographic hierarchy is critical to the effective
@@ -125,7 +129,9 @@ description: A clear typographic hierarchy is critical to the effective
 use_cases: ''
 behavior: ''
 accessibility: >-
-  Web Content Accessibility (WCAG) standards ensure that content is accessible by everyone, regardless of any disability or user device. To learn more, refer to the [http://www.section508.gov](https://www.section508.gov/).
+  Web Content Accessibility (WCAG) standards ensure that content is accessible
+  by everyone, regardless of any disability or user device. To learn more, refer
+  to the [http://www.section508.gov](https://www.section508.gov/).
 
 
   ### Don't use type in illustrations or graphics
@@ -152,13 +158,13 @@ accessibility: >-
   #### Black type on colored backgrounds
 
 
-  Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. Hex values for those colors are shown in parentheses in the image below; for their RGB equivalents, [visit our Color page](https://cfpb.github.io/design-system/foundation/color#tints).
+  Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. [Visit our Color page](https://cfpb.github.io/design-system/foundation/color#tints) for hex and RGB values. 
 
 
   A few colors allow for slightly darker saturations while still maintaining accessibility. If you're looking to use a combination not listed here, check [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)  to verify accessibility.
 
 
-  ![Chart showing accessible combinations of black type on brand colors with 20% saturation](/design-system/images/uploads/black_type_revised.png)
+  ![Chart showing accessible combinations of black type on brand colors with 20% saturation](/design-system/images/uploads/black_type.png)
 
 
   #### White type on colored backgrounds
@@ -172,12 +178,11 @@ accessibility: >-
   * White type is not accessible on any CFPB shade of gold.
 
 
-  The graphic below shows accessible combinations of white type on CFPB brand colors at 100% saturation. Hex values for those colors are shown in parentheses; for their RGB equivalents, [visit our Color page](https://cfpb.github.io/design-system/foundation/color#tints).
+  The graphic below shows accessible combinations of white type on CFPB brand colors at 100% saturation. [Visit our Color page](<>) for hex and RGB values. 
 
 
-  ![Chart showing accessible combinations of white type on brand colors at 100% saturation](/design-system/images/uploads/white_type_revised.png)
-related_items: >-
+  ![Chart showing accessible combinations of white type on brand colors at 100% saturation](/design-system/images/uploads/white_type.png)
+related_items: |-
   * [Headings](https://cfpb.github.io/design-system/foundation/headings)
-
   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
 ---

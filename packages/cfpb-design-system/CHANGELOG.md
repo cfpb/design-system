@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.0.1](https://github.com/cfpb/design-system/compare/v4.0.0..v4.0.1) - July 15, 2025
+## [4.0.2](https://github.com/cfpb/design-system/compare/v4.0.1..v4.0.2) - August  5, 2025
+
+### General
+
+- Delete packages/cfpb-design-system/src/components/cfpb-icons/font directory
+
+delete icon font folder and file - ([5bd827b](https://github.com/cfpb/design-system/commit/5bd827b849e9d933d64a755ca6f4637c845d6d0c)) - jenn-franklin
+
+## [4.0.1](https://github.com/cfpb/design-system/compare/v4.0.0..vv4.0.1) - July 15, 2025
 
 ### PRs in this release
 

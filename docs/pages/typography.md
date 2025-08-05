@@ -16,7 +16,7 @@ variation_groups:
 
           0123456789</h4>
 
-        variation_name: ""
+        variation_name: ''
       - variation_code_snippet: |+
           <h3 style="font-weight: 500;">Source Sans 3 Medium</h3>
 
@@ -26,7 +26,7 @@ variation_groups:
           0123456789</h4>
 
 
-        variation_name: ""
+        variation_name: ''
       - variation_code_snippet: |-
           <h3>Source Sans 3 Regular</h3>
 
@@ -34,8 +34,9 @@ variation_groups:
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>
-        variation_name: ""
-    variation_group_description: We recently updated our primary brand typeface to
+        variation_name: ''
+    variation_group_description:
+      We recently updated our primary brand typeface to
       Source Sans 3, a typeface included in the [U.S. Web Design
       System](https://designsystem.digital.gov/components/typography/). With
       letters that are slender but open, Source Sans 3 has a simple and
@@ -125,8 +126,8 @@ description: A clear typographic hierarchy is critical to the effective
   scale, and capitalization to convey the relative importance of each heading
   within a document. Readability, accessibility, and font smoothing to allow all
   users to efficiently read and absorb textual information.
-use_cases: ""
-behavior: ""
+use_cases: ''
+behavior: ''
 accessibility: >-
   Web Content Accessibility (WCAG) standards ensure that content is accessible
   by everyone, regardless of any disability or user device. To learn more, refer

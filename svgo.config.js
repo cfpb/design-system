@@ -7,7 +7,6 @@ export default {
       params: {
         overrides: {
           cleanupIds: { force: 'true' },
-          removeViewBox: false,
         },
       },
     },

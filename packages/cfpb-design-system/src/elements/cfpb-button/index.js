@@ -13,14 +13,14 @@ export class CfpbButton extends LitElement {
 
   static get properties() {
     return {
-      isDisabled: { type: Boolean },
+      disabled: { type: Boolean },
       type: { type: String },
     };
   }
 
   constructor() {
     super();
-    this.isDisabled = false;
+    this.disabled = false;
     this.type = '';
   }
 
@@ -43,7 +43,7 @@ export class CfpbButton extends LitElement {
 
   render() {
     return html`
-      <button class="${this._btnClass}" ?disabled=${this.isDisabled}>
+      <button class="${this._btnClass}" ?disabled=${this.disabled}>
         <slot></slot>
       </button>
     `;

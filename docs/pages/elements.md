@@ -222,6 +222,77 @@ variation_groups:
             Gold
           </cfpb-form-choice>
 
+        variation_name: Topic tag
+        variation_description: >-
+          Tag element for topics.
+        variation_code_snippet_rendered: >-
+          <div>
+          <cfpb-tag-group stacked>
+            <cfpb-tag-topic>
+              Option 1
+            </cfpb-tag-topic>
+            <cfpb-tag-topic href="#">
+              Option 2
+            </cfpb-tag-topic>
+            <cfpb-tag-topic href="#">
+              Option 3
+            </cfpb-tag-topic>
+          </cfpb-tag-group>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-tag-topic stacked>
+            Option 1
+          </cfpb-tag-topic>
+          <cfpb-tag-topic href="#">
+            Option 2
+          </cfpb-tag-topic>
+          <cfpb-tag-topic href="#">
+            Option 3
+          </cfpb-tag-topic>
+      - variation_is_deprecated: false
+        variation_name: Filter tag
+        variation_description: >-
+          Tag element for filters.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-tag-filter>
+              Option 1
+            </cfpb-tag-filter>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-tag-filter>
+            Option 1
+          </cfpb-tag-filter>
+      - variation_is_deprecated: false
+        variation_name: Filter tag group
+        variation_description: >-
+          A group of filter Tag elements.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-tag-group>
+              <cfpb-tag-filter>
+                Option 1
+              </cfpb-tag-filter>
+              <cfpb-tag-filter>
+                Option 2
+              </cfpb-tag-filter>
+              <cfpb-tag-filter>
+                Option 3
+              </cfpb-tag-filter>
+            </cfpb-tag-group>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-tag-group>
+            <cfpb-tag-filter>
+              Option 1
+            </cfpb-tag-filter>
+            <cfpb-tag-filter>
+              Option 2
+            </cfpb-tag-filter>
+            <cfpb-tag-filter>
+              Option 3
+            </cfpb-tag-filter>
+          </cfpb-tag-group>
     variation_group_name: Types
 guidelines: ''
 eyebrow: Web Components

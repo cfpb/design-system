@@ -4,6 +4,9 @@ import {
   CfpbButton,
   CfpbFileUpload,
   CfpbFormChoice,
+  CfpbTagFilter,
+  CfpbTagTopic,
+  CfpbTagGroup,
   Expandable,
   ExpandableGroup,
   Summary,
@@ -39,6 +42,9 @@ anchors.remove(`
 CfpbButton.init();
 CfpbFileUpload.init();
 CfpbFormChoice.init();
+CfpbTagFilter.init();
+CfpbTagTopic.init();
+CfpbTagGroup.init();
 Summary.init();
 SummaryMinimal.init();
 ExpandableGroup.init();

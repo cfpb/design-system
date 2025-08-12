@@ -7,7 +7,7 @@ const { css } = transformGroups;
 const baseDir = 'packages/cfpb-design-system/src';
 const tokenBase = path.resolve(baseDir, 'tokens');
 
-/**
+/*
  * Recursively get all subdirectories that:
  * - are not hidden (don't start with '.')
  * - contain JSON files or more subdirectories

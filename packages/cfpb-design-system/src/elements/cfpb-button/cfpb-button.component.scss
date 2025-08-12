@@ -1,8 +1,230 @@
+@use 'sass:math';
+// @use './btn-default-tokens.css' as *;
+// @use '../base/cfpb-color-palettes-default-tokens.css' as *;
 @use '@cfpb/cfpb-design-system/src/base' as *;
-@use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/button' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/grid-mixins.scss' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/heading-mixins.scss' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/media-queries.scss' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/vars-breakpoints.scss' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/vars.scss' as *;
 
 :host {
+
   // This prevents the child button from having an empty gap after the button.
   display: flex;
   width: fit-content;
+
+  // Remove Firefox focus inner border on .a-btn (was button.a-btn/input.a-btn)
+  .a-btn::-moz-focus-inner {
+    border: 0;
+  }
+
+  // Mixin for button divider
+  @mixin u-btn-divider() {
+    content: '';
+    border-left: 1px solid var(--btn-divider);
+    order: 2;
+    place-self: normal;
+  }
+
+  // Main button styles mixin
+  @mixin a-btn() {
+    appearance: none;
+    display: flex;
+    gap: math.div(10px, $base-font-size-px) + rem;
+
+    box-sizing: border-box;
+    padding: math.div($btn-v-padding, $btn-font-size) + em
+      math.div($btn-h-padding, $btn-font-size) + em;
+    border: 0;
+    margin: 0;
+    border-radius: math.div($btn-border-radius-size, $btn-font-size) + em;
+    cursor: pointer;
+    font-size: math.div($btn-font-size, $base-font-size-px) + em;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.1s;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+
+    &,
+    &:link,
+    &:visited {
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+    }
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      background-color: var(--btn-bg-hover);
+      color: var(--btn-text);
+    }
+
+    &:focus,
+    &.focus {
+      outline: 1px dotted var(--btn-bg);
+
+      // The outline-offset property is not supported everywhere (e.g. IE)
+      // but it adds a nice touch in browsers where it is.
+      outline-offset: 1px;
+    }
+
+    &:active,
+    &.active {
+      background-color: var(--btn-bg-active);
+    }
+
+    //
+    // Secondary button
+    //
+    &--secondary {
+      &,
+      &:link,
+      &:visited {
+        background-color: var(--btn-secondary-bg);
+        color: var(--btn-secondary-text);
+        box-shadow: 0 0 0 1px var(--btn-secondary-border) inset;
+      }
+
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background-color: var(--btn-secondary-bg-hover);
+        color: var(--btn-secondary-text-hover);
+        box-shadow: 0 0 0 1px var(--btn-secondary-border-hover) inset;
+      }
+
+      &:focus,
+      &.focus {
+        outline-color: var(--btn-secondary-border);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--btn-secondary-bg-active);
+        color: var(--btn-secondary-text-active);
+        box-shadow: 0 0 0 1px var(--btn-secondary-border-active) inset;
+      }
+    }
+
+    //
+    // Destructive action button
+    //
+    &--warning {
+      &,
+      &:link,
+      &:visited {
+        background-color: var(--btn-warning-bg);
+        color: var(--btn-warning-text);
+      }
+
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background-color: var(--btn-warning-bg-hover);
+      }
+
+      &:focus,
+      &.focus {
+        outline-color: var(--btn-warning-bg);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--btn-warning-bg-active);
+      }
+    }
+
+    //
+    // Disabled button
+    //
+    &--disabled,
+    &[disabled] {
+      &,
+      &:link,
+      &:visited,
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active {
+        background-color: var(--btn-disabled-bg);
+        color: var(--btn-disabled-text);
+        cursor: default; // Fallback for IE/Opera
+        cursor: not-allowed;
+      }
+
+      &:focus,
+      &.focus {
+        outline-color: var(--btn-disabled-outline);
+      }
+    }
+
+    //
+    // Full width button on x-small screens
+    //
+    &--full-on-xs {
+      // Mobile only.
+      @include respond-to-max($bp-xs-max) {
+        width: 100%;
+      }
+    }
+
+    // Set either the text or icon as the last item in the button.
+    &:has(svg + span) {
+      span {
+        order: 3;
+      }
+    }
+
+    &:has(span + svg) {
+      svg {
+        order: 3;
+
+        // Prevent icon from shrinking when button wraps.
+        flex: none;
+      }
+    }
+
+    // Handle button with icon divider logic.
+    &:not(.a-btn--hide-icon):has(svg + span)::before,
+    &:not(.a-btn--hide-icon):has(span + svg)::before {
+      @include u-btn-divider;
+    }
+
+    // Handle different coloring in divider.
+    &--secondary:has(svg)::before {
+      border-color: var(--btn-secondary-divider) !important;
+    }
+
+    &--warning:has(svg)::before {
+      border-color: var(--btn-warning-divider) !important;
+    }
+
+    &--disabled:has(svg)::before,
+    &[disabled]:has(svg)::before {
+      border-color: var(--btn-disabled-divider) !important;
+    }
+
+    // Hide the icon if the a-btn--hide-icon modifier is set.
+    // Useful for showing and hiding a loading icon, for example.
+    &--hide-icon {
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  // Apply main button styles to .a-btn inside shadow root
+  .a-btn {
+    @include a-btn;
+  }
 }

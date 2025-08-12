@@ -1,4 +1,6 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
+import tokenCss from './btn-default-tokens.css';
+import tokenColor from '../base/cfpb-color-palettes-default-tokens.css';
 import styles from './cfpb-button.component.scss';
 
 /**
@@ -7,9 +9,11 @@ import styles from './cfpb-button.component.scss';
  * @slot - The main content for the button.
  */
 export class CfpbButton extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = [
+    css`${unsafeCSS(tokenCss)}`,
+    css`${unsafeCSS(tokenColor)}`,
+    css`${unsafeCSS(styles)}`
+  ];
 
   static get properties() {
     return {

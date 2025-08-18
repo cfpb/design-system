@@ -2,11 +2,7 @@
 // @use './btn-default-tokens.css' as *;
 // @use '../base/cfpb-color-palettes-default-tokens.css' as *;
 @use '@cfpb/cfpb-design-system/src/base' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts/grid-mixins.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts/heading-mixins.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts/media-queries.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts/vars-breakpoints.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts/vars.scss' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 :host {
 
@@ -28,7 +24,7 @@
   }
 
   // Main button styles mixin
-  @mixin a-btn() {
+  .a-btn {
     appearance: none;
     display: flex;
     gap: math.div(10px, $base-font-size-px) + rem;
@@ -224,7 +220,7 @@
   }
 
   // Apply main button styles to .a-btn inside shadow root
-  .a-btn {
-    @include a-btn;
-  }
+  // .a-btn {
+  //   @include a-btn;
+  // }
 }

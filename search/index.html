@@ -2843,51 +2843,21 @@ Label
                 
 
                 
-                    'variation_name1': 'Option 1: Single page',
-                    'variation_description1': "All+sections+are+positioned+on+a+single+page.%0A%0A%0A%0AThe+good%0A%0A%0A++There%E2%80%99s+only+one+submit+button+to+press%0A++A+single+URL+gives+access+to+all+form+fields%0A++It+doesn%E2%80%99t+force+a+fixed+order+of+completion%0A++You+benefit+from+context+of+neighboring+sections%0A++Progress+is+self-evident%0A%0A%0AThe+bad%0A%0A%0A++Long+forms+can+be+overwhelming+and+off-putting%0A++It%E2%80%99s+less+well+suited+to+branching+or+non-linear+flow%0A++How+do+you+save+partial+progress%3F%0A++Can+be+harder+to+track+analytics+like+drop-off+rates%0A%0A",
+                    'variation_name1': 'Single page',
+                    'variation_description1': "All+sections+are+positioned+on+a+single+page.%0A%0A%0A%0AThe+good%0A%0A%0A++Only+one+submit+button+to+press%0A++Single+URL+gives+access+to+all+form+fields%0A++Doesn%E2%80%99t+force+a+fixed+order+of+completion%0A++Offers+context+of+neighboring+sections%0A++Progress+is+self-evident%0A%0A%0AThe+bad%0A%0A%0A++Long+forms+can+be+overwhelming+and+off-putting%0A++Less+well+suited+to+branching+or+non-linear+flow%0A++How+do+you+save+partial+progress%3F%0A++Can+be+harder+to+track+analytics+like+drop-off+rates%0A%0A",
                     'variation_code_snippet1': ``,
                 
-                    'variation_name2': 'Option 2: Wizard',
-                    'variation_description2': "Each+section+goes+on+its+own+page.%0A%0A%0A%0AThe+good%0A%0A%0A++It%E2%80%99s+easier+to+handle+branching+and+dependencies+between+sections%0A++It%E2%80%99s+easier+to+let+the+user+save+progress%0A++A+long+form+can+feel+more+manageable%0A++Easier+to+guide+a+user+through+an+unfamiliar+process%0A++Easier+to+capture+analytics+like+drop-off+rates+for+each+section%0A%0A%0AThe+bad%0A%0A%0A++Can+be+harder+for+users+to+see+where+they+are+within+the+form%0A++It+can+slow+users+down+as+they+have+to+click+and+load+each+section%0A++You+lose+the+contextual+information+from+neighboring+sections%0A++Harder+for+users+to+review+and+edit+previous+sections%0A++There%E2%80%99s+no+single+place+for+users+to+go+back+and+edit+their+data%0A++Not+a+natural+fit+for+non-linear+processes+like+looping%2C+adding+and+removing%0A%0A",
+                    'variation_name2': 'Wizard',
+                    'variation_description2': "Each+section+goes+on+its+own+page.%0A%0A%0A%0AThe+good%0A%0A%0A++Easier+to+handle+branching+and+dependencies+between+sections%0A++Easier+to+let+the+user+save+progress%0A++A+way+to+make+a+long+form+feel+more+manageable%0A++Easier+to+guide+a+user+through+an+unfamiliar+process%0A++Easier+to+capture+analytics+like+drop-off+rates+for+each+section%0A%0A%0AThe+bad%0A%0A%0A++Can+be+harder+for+users+to+see+where+they+are+within+the+form%0A++Can+slow+users+down+as+they+have+to+click+and+load+each+section%0A++Loses+the+contextual+information+from+neighboring+sections%0A++Harder+for+users+to+review+and+edit+previous+sections%0A++No+single+place+for+users+to+go+back+and+edit+their+data%0A++Not+a+natural+fit+for+non-linear+processes+like+looping%2C+adding+and+removing%0A%0A",
                     'variation_code_snippet2': ``,
                 
-                    'variation_name3': 'Option 3: Accordion',
-                    'variation_description3': "All+sections+on+a+single+page%2C+but+each+new+section+only+appears+once+the+previous+section+has+been+completed.+Done+well%2C+option+3+is+a+hybrid+of+the+other+two+that+has+benefits+of+both+the+other+options.%0A%0AWithin+this+hybrid+option+there+are+still+some+important+design+decisions+to+make%2C+for+example%3A%0A%0A%0A++Will+future+questions+be+shown+in+any+way+or+will+you+only+see+the+questions+you%E2%80%99ve+answered%3F%0A++What+happens+if+you+go+back+and+edit+a+previous+question%3F%0A++Does+the+current+question+stay+open+or+closed%3F%0A++How+do+you+get+back+to+the+current+question+once+you%E2%80%99ve+edited+a+previous+one%3F%0A++Do+you+lose+all+your+answers+to+questions+that+follow+the+one+you+go+back+to+edit%3F%0A%0A%0A%0A%0AThe+good%0A%0A%0A++Can+handle+branching+and+dependencies+between+sections%0A++Can+easily+review+and+edit+previous+questions%0A++Can+help+guide+a+user+through+an+unfamiliar+process%0A++User+still+benefits+from+some+surrounding+context%0A++Progress+is+clear%0A%0A%0AThe+bad%0A%0A%0A++Implementation+and+interface+is+more+complex%0A%0A",
+                    'variation_name3': 'Accordion',
+                    'variation_description3': "All+sections+are+on+a+single+page%2C+but+each+new+section+only+appears+once+the+previous+section+has+been+completed.+Done+well%2C+option+3+is+a+hybrid+of+the+other+two+that+has+benefits+of+both.%0A%0AWithin+this+hybrid+option+there+are+still+some+important+design+decisions+to+make%2C+for+example%3A%0A%0A%0A++Will+future+questions+be+shown+in+any+way+or+will+you+only+see+the+questions+you%E2%80%99ve+answered%3F%0A++What+happens+if+you+go+back+and+edit+a+previous+question%3F%0A++Does+the+current+question+stay+open+or+closed%3F%0A++How+do+you+get+back+to+the+current+question+once+you%E2%80%99ve+edited+a+previous+one%3F%0A++Do+you+lose+all+your+answers+to+questions+that+follow+the+one+you+go+back+to+edit%3F%0A%0A%0A%0A%0AThe+good%0A%0A%0A++Can+handle+branching+and+dependencies+between+sections%0A++Can+easily+review+and+edit+previous+questions%0A++Can+help+guide+a+user+through+an+unfamiliar+process%0A++User+still+benefits+from+some+surrounding+context%0A++Progress+is+clear%0A%0A%0AThe+bad%0A%0A%0A++Implementation+and+interface+is+more+complex%0A%0A",
                     'variation_code_snippet3': ``,
                 
-                    'variation_name4': 'Option 4: Hybrid',
-                    'variation_description4': "%0AFor+more+complicated+forms%2C+some+combination+of+the+other+options+might+be+your+best+bet.+Done+well%2C+this+can+give+you+the+benefits+of+both+the+single+page+and+wizard+approaches.+It+also+allows+you+to+create+a+sense+of+rhythm+to+the+overall+flow%2C+which+can+help+users+understand+when+they+have+moved+into+a+different+part+of+the+form%2C+and+break+up+the+monotony+of+filling+in+forms.%0A%0AAs+always%2C+these+design+decisions+must+have+a+strong%2C+user-centred+rationale+behind+them.%0A%0A%0A",
+                    'variation_name4': 'Hybrid',
+                    'variation_description4': "For+more+complicated+forms%2C+some+combination+of+the+other+options+might+be+your+best+bet.+Done+well%2C+this+can+give+you+the+benefits+of+both+the+single+page+and+wizard+approaches.+It+also+allows+you+to+create+a+sense+of+rhythm+to+the+overall+flow%2C+which+can+help+users+understand+when+they+have+moved+into+a+different+part+of+the+form%2C+and+break+up+the+monotony+of+filling+in+forms.%0A%0AAs+always%2C+these+design+decisions+must+have+a+strong%2C+user-centered+rationale+behind+them.%0A%0A%0A",
                     'variation_code_snippet4': ``,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
                 
             
 
@@ -2895,10 +2865,10 @@ Label
             'title': 'Designing forms',
             'description': "Web+forms+provide+an+incredible+advantage+over+paper+forms+in+their+potential+for+accessibility%2C+usability%2C+and+operational+efficiency%2C+but+when+designed+without+users+in+mind%2C+they+can+lose+many+of+these+benefits.+In+this+guide%2C+we%E2%80%99ve+outlined+several+ways+to+ensure+the+best+possible+user+experience.%0A",
             'use_cases': "%0A",
-            'guidelines': "%0A",
+            'guidelines': "Setting+expectations%0A%0ABe+honest+about+what+you%E2%80%99re+offering+and+not+offering+to+someone+who+completes+a+form.+In+particular%2C+people+need+to+know+up+front+about+any%3A%0A%0A%0A++Costs+involved%0A++Waiting+periods+or+delays%0A++Uncommon+or+hard-to-find+information+they%E2%80%99ll+need+to+provide%0A++Constraints+on+who+can+complete+the+form+%28age%2C+nationality%2C+etc%29%0A++Equipment+that+will+be+required+%28e.g.%2C+a+printer%29%0A++Non-digital+parts+of+the+form%0A%0A%0AIt%E2%80%99s+important+to+communicate+clearly%2C+but+avoid+making+someone+read+a+page+of+terms+and+conditions+before+they+start.+The+best+approach+is+to+meet%E2%80%94or+exceed%E2%80%94people%E2%80%99s+expectations.+For+example%2C+if+your+delivery+times+are+typical+and+you+accept+all+the+usual+payment+methods%2C+you+won%E2%80%99t+need+to+warn+someone+about+them+up+front.%0A%0AThe+further+into+a+form+someone+gets%2C+the+more+time+they+have+invested+and+the+greater+their+annoyance+will+be+if+they+need+to+abandon+it+for+some+reason.%0A%0AKeeping+it+simple%0A%0AEvery+request+for+information+from+a+person%3A%0A%0A%0A++Requires+additional+physical+and+cognitive+effort%0A++Creates+another+opportunity+for+them+to+get+something+%E2%80%9Cwrong%E2%80%9D%0A++Increases+the+time+it+takes+to+complete+the+form%0A++Increases+the+perception+that+the+service+is+invasive%0A++Increases+the+risk+that+they+will+give+up+or+fail+to+submit+your+form%0A%0A%0AAsking+for+information+because+%E2%80%9Cit+might+be+useful%E2%80%9D+or+%E2%80%9Cit+helps+with+our+record+keeping%E2%80%9D+should+be+considered+against+all+of+these+factors.%0A%0ASaving+progress%0A%0AIf+the+average+time+to+complete+a+form+is+more+than+you+can+reasonably+expect+someone+to+spend+in+a+single+session%2C+you+need+to+provide+a+way+for+them+to+save+their+progress.%0A%0AThe+same+goes+if+the+session+is+likely+to+be+interrupted+for+some+reason%2C+for+example%2C+if+the+person+is+suddenly+asked+for+information+which+they+might+not+have+immediately+on+hand.+Another+example+is+that+a+person+might+start+a+form+on+their+mobile+device+and+want+to+continue+filling+it+out+on+their+desktop+computer.%0A%0AProviding+extra+help%0A%0AYou+should+be+aiming+for+a+service+that%E2%80%99s+so+intuitive+people+don%E2%80%99t+need+help+using+it.+If+you+find+yourself+explaining+the+interface+within+the+interface%2C+it%E2%80%99s+a+sign+that+something+has+gone+wrong.%0A%0ASometimes+though%2C+people+are+going+to+need+extra+help.+Many+government+forms+involve+concepts+and+terminology+that+people+will+be+unfamiliar+with.+Some+of+this+stuff+takes+a+lot+of+explaining%2C+so+we+need+a+way+of+providing+contextual+help+of+varying+degrees+of+detail+throughout+a+form.%0A%0A%0A++Inline+help%3A+Short%2C+snappy+text+positioned+near+the+part+of+the+interface+it+refers+to.+If+it%E2%80%99s+something+that+everyone+needs+to+know%2C+make+it+permanently+visible.%0A++Progressive+disclosure%3A+A+fancy+phrase+for+hiding+stuff+until+it%E2%80%99s+clicked.+Used+carefully%2C+this+is+a+good+way+to+keep+the+interface+free+from+potentially+confusing+clutter.+Only+use+this+for+help+that%E2%80%99s+intended+for+a+small+subset+of+your+audience+%28say%2C+less+than+10%25%29.%0A++Field+masking%3A+When+a+specific+data+entry+format+is+required%E2%80%94such+as+phone+numbers%2C+dates%2C+and+social+security+numbers%E2%80%94provide+an+example+of+the+required+format+%28e.g.%2C+XXX-XX-XXXX%29.%0A++Rich+contextual+help%3A+Sometimes+you+need+to+give+someone+access+to+supporting+content+in+case+they%E2%80%99re+unfamiliar+with+the+terminology+or+concepts+involved+in+the+form.+This+kind+of+content+should+probably+exist+as+a+page+outside+of+the+form+and+then+be+repurposed+in+some+way+within+the+form.%0A%0A%0ACommunicating+errors%0A%0ADespite+providing+the+best+possible+helper+text+and+contextual+help%2C+you+should+still+plan+for+when+someone+make+errors+when+filling+out+your+forms.%0A%0A%0A++Indicate+optional+and%2For+required+fields.+If+most+of+the+fields+are+required%2C+leave+them+alone+and+just+mark+the+optional+fields+as+optional.+If+most+of+the+fields+are+optional%2C+leave+them+alone+and+just+mark+the+required+fields+as+required.+If+it%E2%80%99s+close+to+a+tie%2C+go+with+whichever+choice+might+be+better+for+your+users.%0A++Combine+field-level+error+text+with+a+page-level+error+message.+This+is+particularly+important+for+accessibility.+If+someone+is+using+a+screenreader+to+navigate+the+page%2C+a+digest+of+errors+at+the+top+of+the+page+will+help+them+understand+which+fields+need+fixing.+Including+anchor+links+to+the+invalid+fields+will+allow+them+to+find+and+fix+the+error+without+re-navigating+the+entire+form.%0A++Be+descriptive+with+error+text.+Tell+the+user+what+caused+the+error+and+how+to+correct+it.%0A++Validate+fields+before+the+user+submits.+Check+for+errors+as+someone+fills+out+the+form+%28e.g.%2C+using+javascript%29+and+provide+inline+messaging+with+instructions+for+how+to+correct+the+error.+Also+consider+including+affirmative+inline+validation+%28such+as+green+checkmarks%29+for+required+text+fields%2C+especially+those+that+require+specific+formats+or+character+counts%2C+such+as+Zip+Codes+and+passwords.%0A%0A",
             'behavior': "%0A",
             'accessibility': "%0A",
-            'research': "%0A",
+            'research': "This+guide+on+effective+forms+has+been+adapted+from+the+guide+Designing+transactions+in+the+GOV.UK+Government+Service+Design+Manual%2C+which+is+licensed+under+the+Open+Government+License+v2.0.%0A",
             'related_items': "%0A",
             'url': 'patterns/designing-forms'
         }

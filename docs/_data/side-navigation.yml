@@ -128,6 +128,9 @@ first-level:
           - page: Setting the foundation
           - page: Conducting research
           - page: Design and development
+      - heading: Forms
+        nav-items:
+          - page: Designing forms
       - heading: Print
         nav-items:
           - page: Print styles

@@ -1,8 +1,8 @@
 ---
 title: Designing forms
 layout: variation
-section: patterns
-status: Legacy
+section: guidelines
+status: Released
 description: Web forms provide an incredible advantage over paper forms in their
   potential for accessibility, usability, and operational efficiency, but when
   designed without users in mind, they can lose many of these benefits. In this

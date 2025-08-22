@@ -28,7 +28,7 @@ export class CfpbButton extends LitElement {
     this.type = '';
   }
 
-  get _btnClass() {
+  get #btnClass() {
     let btnClass = 'a-btn';
     switch (this.type) {
       case 'secondary':
@@ -47,7 +47,7 @@ export class CfpbButton extends LitElement {
 
   render() {
     return html`
-      <button class="${this._btnClass}" ?disabled=${this.disabled}>
+      <button class="${this.#btnClass}" ?disabled=${this.disabled}>
         <slot></slot>
       </button>
     `;

@@ -15,7 +15,11 @@ export class CfpbFileUpload extends LitElement {
 
   static get properties() {
     return {
-      isDetailHidden: { type: Boolean },
+      isDetailHidden: {
+        type: Boolean,
+        attribute: 'hidden', // Maps 'hidden' to 'isDetailHidden' property.
+        reflect: true, // Reflects the property change back to the attribute.
+      },
       fileName: { type: String }, // The file name.
       accept: { type: String }, // The accepted file types.
       value: { type: String }, // The raw file name.

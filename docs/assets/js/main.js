@@ -3,6 +3,7 @@ import AnchorJS from 'anchor-js';
 import {
   CfpbButton,
   CfpbFileUpload,
+  CfpbFormChoice,
   Expandable,
   ExpandableGroup,
   Summary,
@@ -37,6 +38,7 @@ anchors.remove(`
 
 CfpbButton.init();
 CfpbFileUpload.init();
+CfpbFormChoice.init();
 Summary.init();
 SummaryMinimal.init();
 ExpandableGroup.init();

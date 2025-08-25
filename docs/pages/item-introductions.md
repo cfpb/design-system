@@ -12,11 +12,11 @@ variation_groups:
           ![Example of an item introduction](/design-system/images/uploads/item_introduction.png)
         variation_specs: ""
 guidelines: >-
-  * Headings should be as succinct as possible, ideally 80 characters or less.
+  * Heading should be as succinct as possible, 80 characters max.
 
-  * Option to include an author, publish date, and social share/print icons.
+  * Subheading is optional and 250 characters max. It should expand on the heading and help explain why the reader should care. 
 
-  * Option to include a subheading paragraph, which should expand on the heading, help explain why the reader should care, and be 250 characters or less. Note: most pages currently using this pattern do not use the subheading paragraph.
+  * Option to include a category, publish date, author, and social share/print icons.
 eyebrow: Introductions
 title: Item introductions
 description: The item introduction is used on

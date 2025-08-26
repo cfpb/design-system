@@ -131,10 +131,10 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: ""
-        variation_name: ""
-        variation_specs: ""
-        variation_code_snippet_rendered: ""
+        variation_description: ''
+        variation_name: ''
+        variation_specs: ''
+        variation_code_snippet_rendered: ''
     variation_group_name: Standard filterable list
     variation_group_description: Use filters in conjunction with search to help
       users narrow down large amounts of data or content. Follow form patterns
@@ -183,12 +183,12 @@ behavior: >-
   * Lives within in an [expandable](https://cfpb.github.io/design-system/components/expandables) allowing controls to be hidden when not in use or needed. The filterable list is expanded on page load. 
 
   * When a filter setting is applied, a notification appears below the panel indicating number of results or errors.
-accessibility: ""
+accessibility: ''
 related_items: >-
   *
   [Notifications](https://cfpb.github.io/design-system/components/notifications)
 
   * [Filterable list pages](https://cfpb.github.io/design-system/pages/filterable-list-pages)
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

@@ -57,13 +57,13 @@
     "@csstools/postcss-sass": "5.1.1",
     "@lhci/cli": "0.15.1",
     "autoprefixer": "10.4.21",
-    "concurrently": "9.2.0",
-    "cssnano": "7.1.0",
-    "cypress": "14.5.4",
+    "concurrently": "9.2.1",
+    "cssnano": "7.1.1",
+    "cypress": "15.0.0",
     "esbuild": "0.25.9",
     "esbuild-plugin-liquid": "0.2.0",
     "esbuild-plugin-minify-html-literals": "3.0.0",
-    "eslint": "9.33.0",
+    "eslint": "9.34.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-cypress": "5.1.1",
@@ -85,7 +85,7 @@
     "prettier": "3.6.2",
     "prop-types": "15.8.1",
     "release-it": "19.0.4",
-    "sass": "1.90.0",
+    "sass": "1.91.0",
     "stylelint": "16.23.1",
     "stylelint-config-standard-scss": "15.0.1",
     "svgo": "4.0.0"
@@ -116,5 +116,5 @@
     }
   },
   "type": "module",
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "yarn@4.9.4"
 }

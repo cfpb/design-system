@@ -4,7 +4,7 @@ section: foundation
 variation_groups:
   - variation_group_name: Types
     variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           These illustrations should feature flat elements and avoid showing
           things in three dimensions. Elements should not appear to be outlined.
@@ -12,7 +12,7 @@ variation_groups:
 
           ![Paying for College illustration](/design-system/images/uploads/illustration5_-2.png)
         variation_name: Front-facing
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           Top-facing illustrations are object-based. Illustrations should be
           arranged in a way that it appears the viewer is immersed in a real
@@ -118,8 +118,8 @@ description: Illustrations are an important tool for introducing the subject
   illustration style with detail and clarity. Illustration is universally
   relatable and accessible to all audiences. The content of an illustration
   should always be politically and socially neutral.
-use_cases: ""
-behavior: ""
+use_cases: ''
+behavior: ''
 accessibility: >-
   ### Include text alternatives for non-text content
 

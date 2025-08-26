@@ -13,7 +13,7 @@ description: >-
 variation_groups:
   - variation_group_name: Standard learn page
     variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           | Learn page
           wireframe                                                   |
@@ -22,7 +22,7 @@ variation_groups:
           | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 
           | ![Learn page example](/design-system/images/uploads/learn_example.jpg) | Example: [What is a personal line of credit?](https://www.consumerfinance.gov/ask-cfpb/what-is-a-personal-line-of-credit-en-901/) |
-        variation_name: ""
+        variation_name: ''
 use_cases: >-
   ### When to use
 

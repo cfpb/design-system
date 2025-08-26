@@ -18,9 +18,9 @@ variation_groups:
           </ul>
 
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Well
-        variation_specs: ""
+        variation_specs: ''
     variation_group_name: Types
 guidelines: >-
   Wells should generally be text-based. If content must include imagery or
@@ -51,8 +51,8 @@ use_cases: Wells should be used to feature content or specific call to actions.
   page content.
 behavior: Wells are full width. At breakpoints 600px and under there are slight
   padding adjustments to maximize real estate on smaller displays.
-accessibility: ""
-related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
+accessibility: ''
+related_items: '* [Featured content module](/design-system/patterns/featured-content-module)'
 last_updated: 2019-10-21T20:38:39.851Z
-research: ""
+research: ''
 ---

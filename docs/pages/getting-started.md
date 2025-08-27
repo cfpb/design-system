@@ -9,7 +9,7 @@ description: >-
   Setting up the framework for your project and creating new components should be quick and easy. [Learn how to integrate CFPB Design System into your project](/design-system/development/integrating-the-design-system-into-your-project).
 
 
-  ## For designing wireframes or prototypes with the CFPB Design System[](https://cfpb.github.io/design-system/#for-designers)
+  ## For designing wireframes or prototypes with the CFPB Design System
 
 
   Check out [CFPB Design System](https://www.figma.com/community/file/1487539003249310850) in the Figma Community.

@@ -240,15 +240,17 @@ variation_groups:
           </cfpb-tag-group>
           </div>
         variation_code_snippet: >-
-          <cfpb-tag-topic stacked>
-            Option 1
-          </cfpb-tag-topic>
-          <cfpb-tag-topic href="#">
-            Option 2
-          </cfpb-tag-topic>
-          <cfpb-tag-topic href="#">
-            Option 3
-          </cfpb-tag-topic>
+          <cfpb-tag-group stacked>
+            <cfpb-tag-topic>
+              Option 1
+            </cfpb-tag-topic>
+            <cfpb-tag-topic href="#">
+              Option 2
+            </cfpb-tag-topic>
+            <cfpb-tag-topic href="#">
+              Option 3
+            </cfpb-tag-topic>
+          </cfpb-tag-group>
       - variation_is_deprecated: false
         variation_name: Filter tag
         variation_description: >-
@@ -269,7 +271,7 @@ variation_groups:
           A group of filter Tag elements.
         variation_code_snippet_rendered: >-
           <div>
-            <cfpb-tag-group>
+            <cfpb-tag-group id="tag-group-example">
               <cfpb-tag-filter>
                 Option 1
               </cfpb-tag-filter>
@@ -280,6 +282,64 @@ variation_groups:
                 Option 3
               </cfpb-tag-filter>
             </cfpb-tag-group>
+
+            <br>
+            <hr>
+            <br>
+            <p>
+            The following section allows interacting with the tag group API.
+            </p>
+            <input id="add-tag-name" placeholder="Tag name">
+            <select id="tag-type">
+              <option>cfpb-tag-filter</option>
+              <option>cfpb-tag-topic (no link)</option>
+              <option>cfpb-tag-topic (link)</option>
+            </select>
+            <button id="add-tag">Add tag</button>
+            <button id="remove-tag">Remove tag</button>
+            <br>
+            <br>
+            <p>Events dispatched:<br>
+            <textarea id="tag-group-events"></textarea>
+            </p>
+            <script>
+            const tagGroup = document.querySelector('#tag-group-example')
+            const textArea = document.querySelector('#tag-group-events');
+            tagGroup.addEventListener('tagadded', ()=> textArea.value += 'tagadded\n');
+            tagGroup.addEventListener('tagremoved', ()=> textArea.value += 'tagremoved\n');
+
+            const btnAdd = document.querySelector('#add-tag');
+            const btnRemove = document.querySelector('#remove-tag');
+            const tagName = document.querySelector('#add-tag-name');
+            const tagType = document.querySelector('#tag-type');
+
+            btnAdd.addEventListener('click',()=>{
+              let tag;
+              switch (tagType.value) {
+                case 'cfpb-tag-filter' :
+                  tag = document.createElement('cfpb-tag-filter');
+                break;
+                case 'cfpb-tag-topic (no link)' :
+                  tag = document.createElement('cfpb-tag-topic');
+                break;
+                case 'cfpb-tag-topic (link)' :
+                  tag = document.createElement('cfpb-tag-topic');
+                  tag.setAttribute('href', '#');
+                break;
+              }
+              tag.innerHTML = tagName.value;
+              tagGroup.addTag(tag);
+            });
+
+            btnRemove.addEventListener('click',()=>{
+              const tags = tagGroup.querySelectorAll('*')
+              let tag;
+              tags.forEach((item) => {
+                if (item.textContent.trim() === tagName.value) tag = item;
+              });
+              tagGroup.removeTag(tag);
+            });
+            </script>
           </div>
         variation_code_snippet: >-
           <cfpb-tag-group>

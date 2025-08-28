@@ -18,10 +18,10 @@
     // Tablet and above.
     @include respond-to-min($bp-sm-min) {
       display: flex;
-      gap: math.div(15px, $btn-font-size) + em;
+      gap: math.div(15px, $btn-font-size) + rem;
       flex-wrap: wrap;
 
-      &.stacked {
+      &[stacked] {
         flex-direction: column;
         width: fit-content;
       }
@@ -29,7 +29,7 @@
 
     &:has(cfpb-tag-filter) {
       display: flex;
-      gap: math.div(15px, $btn-font-size) + em;
+      gap: math.div(15px, $btn-font-size) + rem;
       flex-wrap: wrap;
     }
   }

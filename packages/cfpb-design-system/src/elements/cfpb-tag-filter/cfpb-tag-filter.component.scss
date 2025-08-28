@@ -7,6 +7,7 @@
   button {
     // Filter tags appear in filtered contexts, often as part of multiselects.
     line-height: math.div(19px, $base-font-size-px);
+    font-size: math.div(16px, $btn-font-size) + rem;
 
     display: flex;
     gap: math.div(10px, $btn-font-size) + rem;
@@ -40,7 +41,7 @@
     // Prevent flexbox from squishing icon when tag text is long.
     flex: none;
 
-    height: 1rem;
+    height: math.div(19px, $btn-font-size) + rem;
   }
 
   // If the contents are wrapped in a label, negate the label's display.

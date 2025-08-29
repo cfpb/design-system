@@ -1,0 +1,88 @@
+@use 'sass:math';
+
+@use '@cfpb/cfpb-design-system/src/base' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-typography/mixins' as *;
+
+:host {
+  // Topic tags
+  .a-tag-topic {
+    text-decoration: none;
+    display: flex;
+    gap: math.div(5px, $btn-font-size) + rem;
+  }
+
+  @include u-jump-link(
+    $jump-link-class: 'a-tag-topic',
+    $jump-link-text-class: 'a-tag-topic__text',
+    $is-gold: true
+  );
+  //@include u-jump-link-group($jump-link-class: 'a-tag-topic');
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    // Handle the borders of jump links that are adjacent in a list.
+    a.a-tag-topic--no-top-border {
+      position: relative;
+      border-top: none;
+    }
+
+    a.a-tag-topic:hover::before,
+    a.a-tag-topic:focus::before {
+      position: absolute;
+      top: -1px;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      border-top: 1px solid currentcolor;
+    }
+  }
+
+  .a-tag-topic__bullet {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    a.a-tag-topic__text {
+      // Colors for :link, :visited, :hover, :focus, :active
+      @include u-link-colors(
+        var(--gray),
+        var(--gray),
+        var(--gray),
+        var(--gray),
+        var(--gray)
+      );
+    }
+
+    a.a-tag-topic,
+    a.a-tag-topic:visited,
+    a.a-tag-topic:hover,
+    a.a-tag-topic:focus,
+    a.a-tag-topic:active {
+      border-bottom: none;
+      outline-offset: 1px;
+
+      .a-tag-topic__text {
+        // Move the underline down 1px.
+        padding-bottom: 1px;
+        border-bottom: 1px dotted var(--gold-80);
+      }
+    }
+
+    a.a-tag-topic:hover .a-tag-topic__text {
+      border-bottom: 1px solid var(--gold-80);
+    }
+
+    a.a-tag-topic:focus {
+      outline-color: var(--gray);
+
+      .a-tag-topic__text {
+        border-bottom-style: solid !important;
+      }
+    }
+  }
+}

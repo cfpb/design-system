@@ -24,12 +24,24 @@ export class CfpbTagFilter extends LitElement {
     this.for = '';
   }
 
+  #onClick() {
+    this.dispatchEvent(
+      new CustomEvent('click-tag', {
+        detail: { tag: this },
+        bubbles: true,
+        composed: true,
+      }),
+    );
+  }
+
   render() {
     let slot =
       this.for === ''
         ? html`<slot></slot>`
         : html`<label for="${this.for}"><slot></slot></label>`;
-    return html`<button>${slot} ${unsafeHTML(icon)}</button>`;
+    return html`<button @click=${this.#onClick}>
+      ${slot} ${unsafeHTML(icon)}
+    </button>`;
   }
 
   static init() {

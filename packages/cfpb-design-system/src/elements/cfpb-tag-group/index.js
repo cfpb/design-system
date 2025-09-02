@@ -157,7 +157,10 @@ export class CfpbTagGroup extends LitElement {
     li.appendChild(clone);
     this.#ulDom.insertBefore(li, this.#ulDom.children[pos]);
 
-    clone.addEventListener('click', (evt) => {
+    // Listen for a custom click event on the tag, so that only tags that can
+    // be removed issue the event. The generic 'click' event would dispatch
+    // from all tags, regardless of removability.
+    clone.addEventListener('click-tag', (evt) => {
       tag.remove();
     });
 

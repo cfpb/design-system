@@ -61,7 +61,7 @@
     }
   }
 
-  // We need to separate out the jump link
+  // We need to separate out the jump link.
   a.#{$jump-link-class} {
     @if $is-gold {
       border-color: var(--gold-80);

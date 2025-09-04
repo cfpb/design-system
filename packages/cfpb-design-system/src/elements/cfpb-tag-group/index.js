@@ -168,7 +168,7 @@ export class CfpbTagGroup extends LitElement {
 
     this.dispatchEvent(
       new CustomEvent('tagadded', {
-        detail: { tag: clone },
+        detail: { target: clone },
         bubbles: true,
         composed: true,
       }),
@@ -218,7 +218,7 @@ export class CfpbTagGroup extends LitElement {
 
     this.dispatchEvent(
       new CustomEvent('tagremoved', {
-        detail: { tag: matchingLi.firstElementChild },
+        detail: { target: matchingLi.firstElementChild },
         bubbles: true,
         composed: true,
       }),

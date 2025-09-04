@@ -27,7 +27,7 @@ export class CfpbTagFilter extends LitElement {
   #onClick() {
     this.dispatchEvent(
       new CustomEvent('click-tag', {
-        detail: { tag: this },
+        detail: { target: this },
         bubbles: true,
         composed: true,
       }),

@@ -35,7 +35,7 @@ export class CfpbTagFilter extends LitElement {
   }
 
   render() {
-    let slot =
+    const slot =
       this.for === ''
         ? html`<slot></slot>`
         : html`<label for="${this.for}"><slot></slot></label>`;

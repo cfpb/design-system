@@ -11,9 +11,7 @@ const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
  *   The tag group has a list of tags in the lightDOM that gets re-written
  *   inside an unordered list in the shadowDOM so that it is read out
  *   as a list of items in VoiceOver.
- *
  * @attribute {string} lang - The element's language.
- *
  * @slot default - A list of tags.
  * @fires addtag - A tag was added to the group.
  * @fires removetag - A tag was removed from the group.
@@ -73,8 +71,8 @@ export class CfpbTagGroup extends LitElement {
 
   /**
    * Whether a particular node tagName is supported as a tag of this tag group.
-   * @param {String} tagName - The name of a supported custom element tag.
-   * @returns {Boolean} true if the tagName is supported, false otherwise.
+   * @param {string} tagName - The name of a supported custom element tag.
+   * @returns {boolean} true if the tagName is supported, false otherwise.
    */
   #supportedTag(tagName) {
     return SUPPORTED_TAG_LIST.includes(tagName);
@@ -117,7 +115,6 @@ export class CfpbTagGroup extends LitElement {
    * Refresh the tagList property from the DOM list.
    */
   #refreshTagList() {
-    const ul = this.renderRoot.querySelector('ul');
     this.tagList = [...this.renderRoot.querySelectorAll('ul li > *')];
 
     // Iterate over the list, and if there are topic tag links adjacent to each
@@ -160,7 +157,7 @@ export class CfpbTagGroup extends LitElement {
     // Listen for a custom click event on the tag, so that only tags that can
     // be removed issue the event. The generic 'click' event would dispatch
     // from all tags, regardless of removability.
-    clone.addEventListener('click-tag', (evt) => {
+    clone.addEventListener('click-tag', () => {
       tag.remove();
     });
 

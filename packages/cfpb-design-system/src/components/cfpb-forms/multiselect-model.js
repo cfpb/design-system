@@ -26,7 +26,7 @@ function stringMatch(x, y) {
 /**
  * @class
  * MultiselectModel
- * @param {HTMLOptionsCollection} options -
+ * @param {HTMLOptionsCollection} options
  *   Set of options from a <select> element.
  * @param {string} name - a unique name for this multiselect.
  * @param {object} config - Customization of Multiselect behavior

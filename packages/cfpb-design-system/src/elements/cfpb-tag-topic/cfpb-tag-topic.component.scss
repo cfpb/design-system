@@ -1,5 +1,4 @@
 @use 'sass:math';
-
 @use '@cfpb/cfpb-design-system/src/base' as *;
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
@@ -18,7 +17,8 @@
     $jump-link-text-class: 'a-tag-topic__text',
     $is-gold: true
   );
-  //@include u-jump-link-group($jump-link-class: 'a-tag-topic');
+
+  // @include u-jump-link-group($jump-link-class: 'a-tag-topic');
 
   // Mobile only.
   @include respond-to-max($bp-xs-max) {

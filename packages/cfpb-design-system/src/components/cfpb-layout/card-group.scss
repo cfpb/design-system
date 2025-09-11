@@ -22,8 +22,8 @@
 
   &__cards {
     display: grid;
-    grid-column-gap: math.div(20px, $base-font-size-px) + em;
-    grid-row-gap: math.div(20px, $base-font-size-px) + em;
+    column-gap: math.div(20px, $base-font-size-px) + em;
+    row-gap: math.div(20px, $base-font-size-px) + em;
 
     // Mobile only.
     @include respond-to-max($bp-xs-max) {

@@ -6,7 +6,7 @@
 
   display: grid;
   grid-template-columns: 22px 1fr;
-  grid-column-gap: 10px;
+  column-gap: 10px;
 
   &__text {
     // Needed for browsers with legacy/no grid support (e.g. IE11).

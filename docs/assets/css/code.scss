@@ -15,7 +15,7 @@ pre[class*='language-'] {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  word-wrap: normal;
+  overflow-wrap: normal;
   line-height: 1.5;
 
   tab-size: 4;
@@ -480,7 +480,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   background-color: #f7f8f9;
 
   code {

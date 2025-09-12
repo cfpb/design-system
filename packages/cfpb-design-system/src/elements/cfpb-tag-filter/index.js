@@ -6,13 +6,16 @@ import icon from '../../components/cfpb-icons/icons/error.svg';
 /**
  *
  * @element cfpb-tag-filter.
- * @slot - The main content for the upload button.
+ * @slot - The content for the filter tag.
  */
 export class CfpbTagFilter extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
+  /**
+   * @property {string} for - Whether to stack the tags vertically.
+   */
   static get properties() {
     return {
       for: { type: String },
@@ -26,10 +29,10 @@ export class CfpbTagFilter extends LitElement {
 
   #onClick() {
     this.dispatchEvent(
-      new CustomEvent('click-tag', {
+      new CustomEvent('tag-click', {
         detail: { target: this },
-        bubbles: true,
-        composed: true,
+        bubbles: false,
+        composed: false,
       }),
     );
   }

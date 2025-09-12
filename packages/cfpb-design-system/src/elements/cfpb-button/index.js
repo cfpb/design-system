@@ -11,6 +11,10 @@ export class CfpbButton extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
+  /**
+   * @property {boolean} disabled - Whether to stack the tags vertically.
+   * @property {string} type - The button type: secondary, warning, disabled.
+   */
   static get properties() {
     return {
       disabled: { type: Boolean },

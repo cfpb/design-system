@@ -12,7 +12,6 @@ const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
  *   inside an unordered list in the shadowDOM so that it is read out
  *   as a list of items in VoiceOver.
  * @attribute {string} lang - The element's language.
- * @slot default - A list of tags.
  * @fires addtag - A tag was added to the group.
  * @fires removetag - A tag was removed from the group.
  */
@@ -35,18 +34,18 @@ export class CfpbTagGroup extends LitElement {
   // Private properties.
   #observer;
   #initialized = false;
-  #ulDom;
+  #tagMap;
 
   constructor() {
     super();
     this.stacked = false;
     this.tagList = [];
-    this.#observer = new MutationObserver(this.#handleMutation.bind(this));
+    this.#observer = new MutationObserver(this.#onMutation.bind(this));
   }
 
   connectedCallback() {
     super.connectedCallback();
-    this.#observer.observe(this, { childList: true, subtree: false });
+    this.#observeLightDom();
   }
 
   disconnectedCallback() {
@@ -55,17 +54,25 @@ export class CfpbTagGroup extends LitElement {
   }
 
   firstUpdated() {
-    this.#ulDom = this.renderRoot.querySelector('ul');
-
     // Wait for the browser to complete its render cycle.
     requestAnimationFrame(() => {
-      // Add the tags from the lightDOM.
+      // Add the tags from the light DOM.
       SUPPORTED_TAG_LIST.forEach((tagName) => {
         const tags = this.querySelectorAll(`${tagName.toLowerCase()}`);
         tags.forEach((tag) => this.addTag(tag));
       });
 
       this.#initialized = true;
+    });
+  }
+
+  /**
+   * Set up a MutationObserver to watch changes in the light DOM.
+   */
+  #observeLightDom() {
+    this.#observer.observe(this, {
+      childList: true,
+      subtree: false,
     });
   }
 
@@ -79,35 +86,36 @@ export class CfpbTagGroup extends LitElement {
   }
 
   /**
-   * Handle the change of the DOM.
+   * Handle a change of the light DOM.
    * @param {MutationRecord} mutationList
    */
-  #handleMutation(mutationList) {
+  #onMutation(mutationList) {
+    if (!this.#initialized) return;
     for (const mutation of mutationList) {
       // Ignore mutations that occur within the shadow DOM.
       if (mutation.type === 'childList') {
-        // Only trigger re-update when new tag elements are added.
-        const addedNodes = mutation.addedNodes;
-        const removedNodes = mutation.removedNodes;
-
-        if (this.#initialized) {
-          if (addedNodes.length) {
-            addedNodes.forEach((node) => {
-              if (this.#supportedTag(node.tagName)) {
-                this.addTag(node);
-              }
-            });
-          }
-
-          if (removedNodes.length) {
-            removedNodes.forEach((node) => {
-              if (this.#supportedTag(node.tagName)) {
-                this.#removeTag(node);
-              }
-            });
-          }
-        }
+        mutation.addedNodes.forEach((node) => this.#handleNodeAdded(node));
+        mutation.removedNodes.forEach((node) => this.#handleNodeRemoved(node));
       }
+    }
+  }
+
+  /**
+   * @param {Node} node - The node that was added to the light DOM.
+   */
+  #handleNodeAdded(node) {
+    if (this.#supportedTag(node.tagName)) {
+      const index = Array.from(this.children).indexOf(node);
+      this.addTag(node, index);
+    }
+  }
+
+  /**
+   * @param {Node} node - The node that was removed from the light DOM.
+   */
+  #handleNodeRemoved(node) {
+    if (this.#supportedTag(node.tagName)) {
+      this.#removeTagNode(node);
     }
   }
 
@@ -137,89 +145,159 @@ export class CfpbTagGroup extends LitElement {
   /**
    * Add a tag to the light and dark DOM.
    * @param {*} tag - The tag to add.
+   * @param {number} index - The position at which to add the tag.
+   * @returns {boolean} false if the tag is already in the light DOM.
    */
-  addTag(tag) {
-    // Temporarily stop observing while we move the node.
-    this.#observer.disconnect();
+  addTag(tag, index = -1) {
+    const alreadyInDom = Array.from(this.children).includes(tag);
 
-    // Add the tag to the light DOM, if it isn't alread appended.
-    if (this.contains(tag) === false) {
-      this.appendChild(tag);
+    if (!alreadyInDom) {
+      this.#insertIntoLightDom(tag, index);
+      return false;
     }
 
-    // Deep clone from the light DOM.
-    const clone = tag.cloneNode(true);
-    const li = document.createElement('li');
-    const pos = Array.prototype.indexOf.call(this.children, tag);
-    li.appendChild(clone);
-    this.#ulDom.insertBefore(li, this.#ulDom.children[pos]);
-
-    // Listen for a custom click event on the tag, so that only tags that can
-    // be removed issue the event. The generic 'click' event would dispatch
-    // from all tags, regardless of removability.
-    clone.addEventListener('click-tag', () => {
-      tag.remove();
-    });
+    this.#insertIntoShadowDom(tag, index);
 
     this.#refreshTagList();
+  }
+
+  /**
+   * Add a tag to the light DOM.
+   * @param {*} tag - The tag to add.
+   * @param {number} index - The position at which to add the tag.
+   */
+  #insertIntoLightDom(tag, index) {
+    if (index === -1 || index >= this.children.length) {
+      this.appendChild(tag);
+    } else {
+      this.insertBefore(tag, this.children[index]);
+    }
+  }
+
+  /**
+   * Add a tag to the shadow DOM.
+   * @param {*} tag - The tag to add.
+   * @param {number} index - The position at which to add the tag.
+   */
+  #insertIntoShadowDom(tag, index) {
+    const cloned = tag.cloneNode(true);
+    const wrapped = document.createElement('li');
+    wrapped.appendChild(cloned);
+
+    const ul = this.shadowRoot.querySelector('ul');
+
+    let actualIndex = index;
+    if (index === -1 || index >= ul.children.length) {
+      ul.appendChild(wrapped);
+      actualIndex = ul.children.length - 1;
+    } else {
+      ul.insertBefore(wrapped, ul.children[index]);
+    }
+
+    cloned.addEventListener('tag-click', () => {
+      this.dispatchEvent(
+        new CustomEvent('tag-click', {
+          detail: { target: cloned, index: actualIndex },
+          bubbles: true,
+          composed: true,
+        }),
+      );
+      this.#removeTagNode(cloned);
+    });
+
+    this.#tagMap ??= new Map();
+    const id = this.#tagIdentifier(tag);
+    this.#tagMap.set(id, wrapped);
 
     this.dispatchEvent(
-      new CustomEvent('tagadded', {
-        detail: { target: clone },
+      new CustomEvent('tag-added', {
+        detail: { target: tag, index: actualIndex },
         bubbles: true,
         composed: true,
       }),
     );
+  }
 
-    // Reconnect after internal DOM move.
-    this.#observer.observe(this, {
-      childList: true,
-      subtree: false,
-    });
+  /**
+   * @param {*} tag - The tag to add.
+   * @returns {string} A unique ID.
+   */
+  #tagIdentifier(tag) {
+    return `${tag.tagName}::${tag.textContent.trim()}`;
   }
 
   /**
    * Remove a filter tag from the light DOM.
-   * @param {*} tag - The tag to Remove.
-   */
-  removeTag(tag) {
-    tag.remove();
-  }
-
-  /**
-   * Remove a filter tag from the light and dark DOM.
    * This is private because it's called by the mutation observer.
-   * @param {*} tag - The tag to Remove.
+   * @param {*} tag - The tag to remove.
+   * @return {boolean} false if the wrapped tag was not found.
    */
-  #removeTag(tag) {
-    // Remove from the light DOM.
-    if (this.contains(tag)) {
+  #removeTagNode(tag) {
+    const id = this.#tagIdentifier(tag);
+    const wrapped = this.#tagMap.get(id);
+
+    if (!wrapped) return false;
+
+    // Try getting the index from the light DOM.
+    let index = Array.from(this.children).indexOf(tag);
+
+    // If not found (e.g. manually removed via DevTools), fallback to shadow DOM.
+    if (index === -1 && wrapped.parentElement) {
+      const shadowChildren = Array.from(wrapped.parentElement.children);
+      index = shadowChildren.indexOf(wrapped);
+    }
+
+    // Remove from light DOM and shadow DOM.
+    if (tag.parentElement === this) {
       tag.remove();
     }
 
-    // Remove from the shadow DOM.
-    const matchingLi = [...this.#ulDom.children].find((li) => {
-      const child = li.firstElementChild;
-      return (
-        child &&
-        this.#supportedTag(child.tagName) &&
-        child.textContent === tag.textContent
-      );
-    });
-
-    if (matchingLi) {
-      matchingLi.remove();
+    if (wrapped.parentElement) {
+      wrapped.remove();
     }
 
-    this.#refreshTagList();
+    this.#tagMap.delete(id);
 
     this.dispatchEvent(
-      new CustomEvent('tagremoved', {
-        detail: { target: matchingLi.firstElementChild },
+      new CustomEvent('tag-removed', {
+        detail: { target: tag, index: index },
         bubbles: true,
         composed: true,
       }),
     );
+
+    this.#refreshTagList();
+  }
+
+  /**
+   * Remove a filter tag from the light and dark DOM.
+   * @param {*} tag - The tag to remove.
+   */
+  removeTag(tag) {
+    // Support passing in either light DOM <tag> or shadow DOM <li> if needed
+    // Normalize to the light DOM tag element:
+
+    const lightDomTag = this.#getLightDomTag(tag);
+
+    this.#removeTagNode(lightDomTag);
+  }
+
+  /**
+   * Get light and dark DOM.
+   * @param {Node} node - The tag to remove.
+   * @returns {Node|null} The tag node.
+   */
+  #getLightDomTag(node) {
+    // If node is a wrapped shadow DOM <li>, get the orignal tag inside it.
+    if (node.tagName === 'LI' && node.shadowRoot) {
+      // unlikely scenario if you don't expose shadow nodes externally.
+      return node.querySelector('cfpb-tag-filter');
+    }
+
+    // If node is already a light DOM tag or child <cfpb-tag-group>, return it.
+    if (this.contains(node)) return node;
+
+    return null;
   }
 
   render() {

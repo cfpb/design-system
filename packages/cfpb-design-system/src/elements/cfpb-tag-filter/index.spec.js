@@ -33,7 +33,7 @@ describe('<cfpb-tag-filter>', () => {
 
   xit('dispatches the correct event', async () => {
     const mockHandler = jest.fn();
-    elm.addEventListener('click-tag', mockHandler);
+    elm.addEventListener('tag-click', mockHandler);
 
     elm.shadowRoot.querySelector('button').click();
 

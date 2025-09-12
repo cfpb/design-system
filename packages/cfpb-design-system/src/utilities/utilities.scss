@@ -76,7 +76,7 @@
   // utility works as expected for screenreaders. Comma-separated syntax is
   // not used because space-separated is more backward-compatible,
   // per https://developer.mozilla.org/en-US/docs/Web/CSS/clip
-  clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0); /* stylelint-disable-line property-no-deprecated */
 }
 
 .u-visually-hidden {

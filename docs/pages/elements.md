@@ -88,6 +88,134 @@ variation_groups:
             <cfpb-form-choice large validation="error">
               Gold
             </cfpb-form-choice>
+
+            <br>
+            <hr>
+            <br>
+
+            <cfpb-form-choice type="radio">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice type="radio" disabled>
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice type="radio" validation="success">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice type="radio" validation="warning">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice type="radio" validation="error">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice type="radio" large>
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice type="radio" large disabled>
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice type="radio" large validation="success">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice type="radio" large validation="warning">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice type="radio" large validation="error">
+              Gold
+            </cfpb-form-choice>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-file-upload>Select file</cfpb-file-upload>
+      - variation_is_deprecated: false
+        variation_name: Checkbox
+        variation_description: >-
+          A checkbox component.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-form-choice>
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice disabled>
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice validation="success">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice validation="warning">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice validation="error">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice large>
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice large disabled>
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice large validation="success">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice large validation="warning">
+              Gold
+            </cfpb-form-choice>
+
+            <br>
+
+            <cfpb-form-choice large validation="error">
+              Gold
+            </cfpb-form-choice>
           </div>
         variation_code_snippet: >-
           <cfpb-form-choice>
@@ -289,28 +417,45 @@ variation_groups:
             <p>
             The following section allows interacting with the tag group API.
             </p>
-            <input id="add-tag-name" placeholder="Tag name">
-            <select id="tag-type">
-              <option>cfpb-tag-filter</option>
-              <option>cfpb-tag-topic (no link)</option>
-              <option>cfpb-tag-topic (link)</option>
-            </select>
+            <p>
+            <label>
+              Name:
+              <input id="add-tag-name">
+            </label>
+            </p><p>
+            <label>
+              Index:
+              <input id="add-tag-index" type="number">
+            </label>
+            </p><p>
+            <label>
+              Type:
+              <select id="tag-type">
+                <option>cfpb-tag-filter</option>
+                <option>cfpb-tag-topic (no link)</option>
+                <option>cfpb-tag-topic (link)</option>
+              </select>
+            </label>
+            </p><p>
             <button id="add-tag">Add tag</button>
             <button id="remove-tag">Remove tag</button>
+            </p>
             <br>
-            <br>
+            <label>
             <p>Events dispatched:<br>
-            <textarea id="tag-group-events"></textarea>
+            <textarea id="tag-group-events" style="width:100%"></textarea>
+            </label>
             </p>
             <script>
             const tagGroup = document.querySelector('#tag-group-example')
             const textArea = document.querySelector('#tag-group-events');
-            tagGroup.addEventListener('tagadded', ()=> textArea.value += 'tagadded\n');
-            tagGroup.addEventListener('tagremoved', ()=> textArea.value += 'tagremoved\n');
+            tagGroup.addEventListener('tag-added', (evt)=> textArea.value += 'tag-added: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
+            tagGroup.addEventListener('tag-removed', (evt)=> textArea.value +=  'tag-removed: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
 
             const btnAdd = document.querySelector('#add-tag');
             const btnRemove = document.querySelector('#remove-tag');
             const tagName = document.querySelector('#add-tag-name');
+            const tagIndex = document.querySelector('#add-tag-index');
             const tagType = document.querySelector('#tag-type');
 
             btnAdd.addEventListener('click',()=>{
@@ -328,7 +473,8 @@ variation_groups:
                 break;
               }
               tag.innerHTML = tagName.value;
-              tagGroup.addTag(tag);
+              const index = tagIndex.value === '' ? -1 : Number(tagIndex.value);
+              tagGroup.addTag(tag, index);
             });
 
             btnRemove.addEventListener('click',()=>{

@@ -4,16 +4,21 @@ import styles from './cfpb-tag-topic.component.scss';
 /**
  *
  * @element cfpb-tag-topic.
- * @slot - The main content for the upload button.
+ * @slot - The content for the topic tag.
  */
 export class CfpbTagTopic extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
+  /**
+   * @property {string} href - href attribute, if this is a topic link.
+   * @property {boolean} siblingOfJumpLink
+   *   Whether the preceding sibling is a jump link or not.
+   */
   static get properties() {
     return {
-      href: { type: String },
+      href: { type: String, reflect: true },
       siblingOfJumpLink: { type: Boolean },
     };
   }

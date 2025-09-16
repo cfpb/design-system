@@ -17,7 +17,12 @@
     // Private variables.
     --choice-border-width-addendum: 0;
 
-    .a-text-input--full {
+    &--in-list label {
+      box-sizing: border-box;
+      padding-top: math.div(5px, $base-font-size-px) + em;
+      padding-right: 0;
+      padding-bottom: math.div(5px, $base-font-size-px) + em;
+      padding-left: math.div(10px, $base-font-size-px) + em;
       width: 100%;
     }
 

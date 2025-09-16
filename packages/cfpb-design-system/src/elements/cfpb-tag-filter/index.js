@@ -14,7 +14,7 @@ export class CfpbTagFilter extends LitElement {
   `;
 
   /**
-   * @property {string} for - Whether to stack the tags vertically.
+   * @property {string} for - Associate the label with an ID elsewhere.
    */
   static get properties() {
     return {

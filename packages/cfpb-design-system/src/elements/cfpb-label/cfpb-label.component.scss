@@ -1,0 +1,36 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+
+:host {
+  .a-label {
+    slot {
+      display: inline-block;
+    }
+
+    &__helper {
+      color: $label-helper;
+      font-size: math.div(16px, $base-font-size-px) + rem;
+      font-weight: normal;
+
+      &--block {
+        display: block;
+
+        // Add a gap between the label helper and label.
+        margin-top: math.div(10px, $size-vi) + em;
+      }
+    }
+
+    &--heading {
+      display: block;
+
+      margin-bottom: math.div(10px, $size-iv) + em;
+
+      @include heading-4($has-margin-bottom: false);
+
+      // Add a gap between the label helper and label heading
+      .a-label__helper--block {
+        margin-top: math.div(10px, $base-font-size-px) + rem;
+      }
+    }
+  }
+}

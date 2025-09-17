@@ -14,7 +14,8 @@ export class CfpbButton extends LitElement {
   /**
    * @property {string} href - The URL to link to (makes the button a link).
    * @property {boolean} disabled - Whether to stack the tags vertically.
-   * @property {string} type - The button type: secondary, warning, disabled.
+   * @property {string} variant - The button type: secondary and warning.
+   * @property {boolean} full-on-mobile - Whether to be width 100% on mobile.
    */
   static get properties() {
     return {

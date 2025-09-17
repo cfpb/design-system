@@ -116,6 +116,8 @@ select.o-multiselect {
 
     &.u-no-results,
     &.u-max-selections {
+      padding: math.div(10px, $base-font-size-px) + em;
+
       li {
         display: none;
       }
@@ -130,7 +132,6 @@ select.o-multiselect {
     }
 
     &.u-max-selections {
-      padding: math.div(10px, $base-font-size-px) + em;
       pointer-events: none;
 
       &::after {

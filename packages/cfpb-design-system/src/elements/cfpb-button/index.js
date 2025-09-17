@@ -23,7 +23,7 @@ export class CfpbButton extends LitElement {
    * @property {boolean} disabled - Whether to stack the tags vertically.
    * @property {string} variant - The button variant: secondary and warning.
    * @property {boolean} fullOnMobile - Whether to be width 100% on mobile.
-   * @property {boolean} type - The button type: button, submit, or reset.
+   * @property {string} type - The button type: button, submit, or reset.
    */
   static get properties() {
     return {

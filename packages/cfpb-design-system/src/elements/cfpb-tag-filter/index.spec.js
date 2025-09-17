@@ -31,7 +31,7 @@ describe('<cfpb-tag-filter>', () => {
     expect(assignedNodes[0].textContent).toBe('Earth');
   });
 
-  xit('dispatches the correct event', async () => {
+  it('dispatches the correct event', async () => {
     const mockHandler = jest.fn();
     elm.addEventListener('tag-click', mockHandler);
 

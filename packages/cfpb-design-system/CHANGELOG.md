@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.0.3](https://github.com/cfpb/design-system/compare/v4.0.2..v4.0.3) - September 17, 2025
+## [4.0.4](https://github.com/cfpb/design-system/compare/v4.0.3..v4.0.4) - September 17, 2025
+
+### PRs in this release
+
+- PR #[2357](https://github.com/cfpb/design-system/pull/2357): cfpb-button/cfpb-file-upload: Adjust lit syntax - Ans
+
+### General
+
+- Adjustments to lit syntax - ([6a0982e](https://github.com/cfpb/design-system/commit/6a0982e130f25046da9aa14ee91bf2fdd20adcd7)) - Ans
+
+## [4.0.3](https://github.com/cfpb/design-system/compare/v4.0.2..vv4.0.3) - September 17, 2025
 
 ### PRs in this release
 

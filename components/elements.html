@@ -373,6 +373,39 @@
             <div class="a-live__code">
                 <div>
   <cfpb-button>This is a button</cfpb-button>
+
+  <br>
+
+  <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
+
+  <br>
+
+  <cfpb-button disabled>This is a disabled button link</cfpb-button>
+
+  <br>
+  <hr>
+  <br>
+  <p>
+  The following section allows interacting with the button API.
+  </p>
+  <p><cfpb-button id="btn-example"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--updating" viewbox="0 0 16 19"><path d="M5.857 3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.4 5.4 0 0 0-1.032 2.27 1.03 1.03 0 1 1-2.02-.395A7.46 7.46 0 0 1 2.235 4.91h-.748a1.03 1.03 0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03m-3.25 9.237a1.03 1.03 0 0 1-1.358-.523 7.5 7.5 0 0 1-.37-1.036 1.03 1.03 0 1 1 1.983-.55 5.5 5.5 0 0 0 .269.751 1.03 1.03 0 0 1-.524 1.358m2.905 2.439a1.03 1.03 0 0 1-1.42.322 7.5 7.5 0 0 1-.885-.652 1.03 1.03 0 0 1 1.34-1.563 5.4 5.4 0 0 0 .643.473 1.03 1.03 0 0 1 .322 1.42m3.68.438a1.03 1.03 0 0 1-1.014 1.044h-.106a8 8 0 0 1-.811-.044 1.03 1.03 0 0 1 .224-2.046 5 5 0 0 0 .664.031h.014a1.03 1.03 0 0 1 1.03 1.015zm.034-12.847a1.03 1.03 0 0 1-1.029 1.01h-.033a1.03 1.03 0 0 1 .017-2.06h.017l.019.001a1.03 1.03 0 0 1 1.009 1.05zm3.236 11.25a1.03 1.03 0 0 1-.3 1.425 8 8 0 0 1-.797.453 1.03 1.03 0 1 1-.905-1.849 6 6 0 0 0 .578-.328 1.03 1.03 0 0 1 1.424.3zM10.475 3.504a1.03 1.03 0 0 1 1.41-.359l.018.011a1.03 1.03 0 1 1-1.06 1.764l-.01-.006a1.03 1.03 0 0 1-.358-1.41m4.26 9.445a8 8 0 0 1-.315.56 1.03 1.03 0 1 1-1.749-1.086 5 5 0 0 0 .228-.405 1.03 1.03 0 1 1 1.836.93zm-1.959-6.052a1.03 1.03 0 0 1 1.79-1.016l.008.013a1.03 1.03 0 1 1-1.79 1.017zm2.764 2.487a9 9 0 0 1 0 .366 1.03 1.03 0 0 1-1.029 1.005h-.025A1.03 1.03 0 0 1 13.482 9.7a5 5 0 0 0 0-.266 1.03 1.03 0 0 1 1.003-1.055h.026a1.03 1.03 0 0 1 1.029 1.004z"></path></svg> Example button</cfpb-button></p>
+  <p>
+  <button id="show-icon">Show icon</button>
+  <button id="hide-icon">Hide icon</button>
+  </p>
+  <script>
+  const btn = document.querySelector('#btn-example');
+
+  const btnShowIcon = document.querySelector('#show-icon');
+  const btnHideIcon = document.querySelector('#hide-icon');
+
+  btnShowIcon.addEventListener('click',()=>{
+    btn.showIcon();
+  });
+  btnHideIcon.addEventListener('click',()=>{
+    btn.hideIcon();
+  });
+  </script>
 </div>
             </div>
             
@@ -409,7 +442,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;cfpb-button&gt;This is a button&lt;/cfpb-button&gt;</code></pre>
+                            <pre><code class="language-html">&lt;cfpb-button&gt;This is a button&lt;/cfpb-button&gt; &lt;cfpb-button href="#" full-on-mobile&gt;This is a button link&lt;/cfpb-button&gt; &lt;cfpb-button disabled&gt;This is a disabled button link&lt;/cfpb-button&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1149,7 +1182,7 @@
   </p></label>
   
   <script>
-  const tagGroup = document.querySelector('#tag-group-example')
+  const tagGroup = document.querySelector('#tag-group-example');
   const textArea = document.querySelector('#tag-group-events');
   tagGroup.addEventListener('tag-added', (evt)=> textArea.value += 'tag-added: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
   tagGroup.addEventListener('tag-removed', (evt)=> textArea.value +=  'tag-removed: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
@@ -1280,8 +1313,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/elements.md">
-                            <time datetime="2025-09-17 11:13:48 -0400">
-                                11:13:48 AM Sep 17, 2025
+                            <time datetime="2025-09-17 15:36:57 -0400">
+                                 3:36:57 PM Sep 17, 2025
                             </time>
                         </a>
                     </section>

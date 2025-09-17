@@ -2,7 +2,41 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.0.2](https://github.com/cfpb/design-system/compare/v4.0.1..v4.0.2) - August  5, 2025
+## [4.0.3](https://github.com/cfpb/design-system/compare/v4.0.2..v4.0.3) - September 17, 2025
+
+### PRs in this release
+
+- PR #[2339](https://github.com/cfpb/design-system/pull/2339): Update dependencies: esbuild and eslint - Ans
+- PR #[2335](https://github.com/cfpb/design-system/pull/2335): Button WC: Update `isDisabled` property to `disabled` - Ans
+- PR #[2359](https://github.com/cfpb/design-system/pull/2359): Update Cypress to v15 | Update concurrently, cssnano, eslint, sass - Ans
+- PR #[2356](https://github.com/cfpb/design-system/pull/2356): Add checkbox/radio web components - Ans
+- PR #[2337](https://github.com/cfpb/design-system/pull/2337): Add tag web components - Ans
+- PR #[2362](https://github.com/cfpb/design-system/pull/2362): Add Jest unit tests for web components - Ans
+- PR #[2363](https://github.com/cfpb/design-system/pull/2363): Update dependencies: eslint, eslint-plugin-jsdoc, sass, stylelint - Ans
+- PR #[2366](https://github.com/cfpb/design-system/pull/2366): Refactor cfpb-tag-group - Ans
+- PR #[2365](https://github.com/cfpb/design-system/pull/2365): Update eslint-plugin-jsdoc, stylelint-config-standard-scss - Ans
+- PR #[2368](https://github.com/cfpb/design-system/pull/2368): Multiselect: Add padding to no results found state - Ans
+
+### General
+
+- Merge branch 'main' into dependabot/npm_and_yarn/form-data-4.0.4 - Ans
+- Re-built assets - ([eac70a1](https://github.com/cfpb/design-system/commit/eac70a10e87ea98db86b527349c637a840993c74)) - Ans
+- Update `isDisabled` property to `disabled` - ([4aa6e47](https://github.com/cfpb/design-system/commit/4aa6e4792b5d58da06dca427404760cd729facdd)) - Ans
+- Lint and build project - ([97e4e99](https://github.com/cfpb/design-system/commit/97e4e998870c613b8965a1ac202ef0537a645438)) - Ans
+- Add checkbox/radio web components - ([35f6f83](https://github.com/cfpb/design-system/commit/35f6f83668deebd4b05cdedac5bf0e9d55345aff)) - Ans
+- Add tag web components - ([eea7eb7](https://github.com/cfpb/design-system/commit/eea7eb71cea53390a461a56a2ebeeddeeb04ccb4)) - Ans
+- Update tag group to add API to add and remove tags - ([9bbc3fc](https://github.com/cfpb/design-system/commit/9bbc3fcff6c73c3221027807143255e33b17b401)) - Ans
+- Add custom click event for filter tag - ([25dbb22](https://github.com/cfpb/design-system/commit/25dbb22288fe9b769eb6f73482a4b3ee88f5fb40)) - Ans
+- Add tag web components - ([b7549b4](https://github.com/cfpb/design-system/commit/b7549b41e0a04d98a566b8428f9a108896967330)) - Ans
+- Add tests - ([1f200a9](https://github.com/cfpb/design-system/commit/1f200a902389d94f4ba776ddd28106963b9522fb)) - Ans
+- Autolint files - ([fb354e6](https://github.com/cfpb/design-system/commit/fb354e6cca6b43a1de29bd56d82907a719cf9401)) - Ans
+- Refactor cfpb-tag-group - ([d0437db](https://github.com/cfpb/design-system/commit/d0437db13a127f27f2ed427659f78905a79ce2c9)) - Ans
+- Lint files - ([f540aaa](https://github.com/cfpb/design-system/commit/f540aaa80985413f2f8f027e21ee9045ba57654c)) - Ans
+- Rebuilt dist files - ([6a06cb6](https://github.com/cfpb/design-system/commit/6a06cb6703bb05deb534b110e53750ec49298de3)) - Ans
+- Add padding to no results found state - ([ae74ae5](https://github.com/cfpb/design-system/commit/ae74ae5b61d112868d1616e1df79e5401fd33b3a)) - Ans
+- Fix linting error - ([dbcbc94](https://github.com/cfpb/design-system/commit/dbcbc942042c91d7e86e4c0c3f2eaba642e45206)) - Ans
+
+## [4.0.2](https://github.com/cfpb/design-system/compare/v4.0.1..vv4.0.2) - August  5, 2025
 
 ### General
 

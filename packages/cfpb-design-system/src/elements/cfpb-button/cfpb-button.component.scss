@@ -1,8 +1,20 @@
 @use '@cfpb/cfpb-design-system/src/base' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/button' as *;
 
 :host {
   // This prevents the child button from having an empty gap after the button.
   display: flex;
   width: fit-content;
+
+  ::slotted(.hidden) {
+    display: none;
+  }
+}
+
+:host([full-on-mobile]) {
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    width: 100%;
+  }
 }

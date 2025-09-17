@@ -70,7 +70,7 @@ export class CfpbFileUpload extends LitElement {
   render() {
     return html`
       <cfpb-button
-        type="secondary"
+        variant="secondary"
         @click="${() => {
           this.fileInput.value.click();
         }}"

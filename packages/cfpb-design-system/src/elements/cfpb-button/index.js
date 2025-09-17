@@ -65,10 +65,6 @@ export class CfpbButton extends LitElement {
         break;
     }
 
-    if (this['full-on-mobile']) {
-      btnClass += ' a-btn--full-on-xs';
-    }
-
     return btnClass;
   }
 

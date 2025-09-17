@@ -230,7 +230,7 @@ export class CfpbTagGroup extends LitElement {
    * Remove a filter tag from the light DOM.
    * This is private because it's called by the mutation observer.
    * @param {*} tag - The tag to remove.
-   * @return {boolean} false if the wrapped tag was not found.
+   * @returns {boolean} false if the wrapped tag was not found.
    */
   #removeTagNode(tag) {
     const id = this.#tagIdentifier(tag);

@@ -23,6 +23,12 @@ export class CfpbTagTopic extends LitElement {
     };
   }
 
+  /*
+   * @property {string} href - The URL to link to (makes the tag a link).
+   * @property {boolean} siblingOfJumpLink
+   *   Whether the preceding sibling is a link or not. This is used to stack the
+   *   divider lines between the links at mobile.
+   */
   constructor() {
     super();
     this.href = '';

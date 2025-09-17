@@ -12,9 +12,44 @@ variation_groups:
         variation_code_snippet_rendered: >-
           <div>
             <cfpb-button>This is a button</cfpb-button>
+
+            <br>
+
+            <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
+
+            <br>
+
+            <cfpb-button disabled>This is a disabled button link</cfpb-button>
+
+            <br>
+            <hr>
+            <br>
+            <p>
+            The following section allows interacting with the button API.
+            </p>
+            <p><cfpb-button id="btn-example">{% include icons/updating.svg %} Example button</cfpb-button></p>
+            <p>
+            <button id="show-icon">Show icon</button>
+            <button id="hide-icon">Hide icon</button>
+            </p>
+            <script>
+            const btn = document.querySelector('#btn-example');
+
+            const btnShowIcon = document.querySelector('#show-icon');
+            const btnHideIcon = document.querySelector('#hide-icon');
+
+            btnShowIcon.addEventListener('click',()=>{
+              btn.showIcon();
+            });
+            btnHideIcon.addEventListener('click',()=>{
+              btn.hideIcon();
+            });
+            </script>
           </div>
         variation_code_snippet: >-
           <cfpb-button>This is a button</cfpb-button>
+          <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
+          <cfpb-button disabled>This is a disabled button link</cfpb-button>
       - variation_is_deprecated: false
         variation_name: File upload
         variation_description: >-
@@ -447,7 +482,7 @@ variation_groups:
             </label>
             </p>
             <script>
-            const tagGroup = document.querySelector('#tag-group-example')
+            const tagGroup = document.querySelector('#tag-group-example');
             const textArea = document.querySelector('#tag-group-events');
             tagGroup.addEventListener('tag-added', (evt)=> textArea.value += 'tag-added: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
             tagGroup.addEventListener('tag-removed', (evt)=> textArea.value +=  'tag-removed: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');

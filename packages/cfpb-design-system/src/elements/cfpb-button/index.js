@@ -12,33 +12,57 @@ export class CfpbButton extends LitElement {
   `;
 
   /**
+   * @property {string} href - The URL to link to (makes the button a link).
    * @property {boolean} disabled - Whether to stack the tags vertically.
-   * @property {string} type - The button type: secondary, warning, disabled.
+   * @property {string} variant - The button type: secondary and warning.
+   * @property {boolean} full-on-mobile - Whether to be width 100% on mobile.
    */
   static get properties() {
     return {
-      disabled: { type: Boolean },
-      type: { type: String },
+      href: { type: String, reflect: true },
+      disabled: { type: Boolean, reflect: true },
+      variant: { type: String, reflect: true },
+      'full-on-mobile': { type: Boolean, reflect: true },
     };
   }
 
   constructor() {
     super();
+    this.href = '';
     this.disabled = false;
-    this.type = '';
+    this.variant = '';
+    this['full-on-mobile'] = false;
+  }
+
+  hideIcon() {
+    const icon = this.#findIconInSlot();
+    if (icon) icon.style.display = 'none';
+  }
+
+  showIcon() {
+    const icon = this.#findIconInSlot();
+    if (icon) icon.style.display = '';
+  }
+
+  #findIconInSlot() {
+    const slot = this.shadowRoot.querySelector('slot');
+    const nodes = slot.assignedNodes({ flatten: true });
+
+    for (const node of nodes) {
+      if (node.tagName.toLowerCase() === 'svg') {
+        return node;
+      }
+    }
   }
 
   get #btnClass() {
     let btnClass = 'a-btn';
-    switch (this.type) {
+    switch (this.variant) {
       case 'secondary':
         btnClass += ' a-btn--secondary';
         break;
       case 'warning':
         btnClass += ' a-btn--warning';
-        break;
-      case 'disabled':
-        btnClass += ' a-btn--disabled';
         break;
     }
 
@@ -46,11 +70,25 @@ export class CfpbButton extends LitElement {
   }
 
   render() {
-    return html`
-      <button class="${this.#btnClass}" ?disabled=${this.disabled}>
-        <slot></slot>
-      </button>
-    `;
+    const slot =
+      this.href === ''
+        ? html`<button
+            class="${this.#btnClass}"
+            ?variant=${this.variant}
+            ?disabled=${this.disabled}
+          >
+            <slot></slot>
+          </button>`
+        : html`<a
+            class="${this.#btnClass}"
+            ?href="${this.href}"
+            ?variant=${this.variant}
+            ?disabled=${this.disabled}
+          >
+            <slot></slot>
+          </a>`;
+
+    return html`${slot}`;
   }
 
   static init() {

@@ -17,6 +17,7 @@ export class CfpbFormChoice extends LitElement {
    * @property {boolean} large - Whether the choice has a large target area.
    * @property {string} validation - Validation style: error, warning, success.
    * @property {string} type - Choice type: checkbox or radio.
+   * @property {string} inlist - Whether the choice appears in a <li> list.
    */
   static get properties() {
     return {
@@ -25,6 +26,7 @@ export class CfpbFormChoice extends LitElement {
       large: { type: Boolean },
       validation: { type: String },
       type: { type: String },
+      inlist: { type: Boolean, attribute: true },
     };
   }
 
@@ -55,6 +57,10 @@ export class CfpbFormChoice extends LitElement {
       baseClass += ' m-form-field--lg-target';
     }
 
+    if (this.inlist) {
+      baseClass += ' m-form-field--in-list';
+    }
+
     return baseClass;
   }
 
@@ -75,6 +81,10 @@ export class CfpbFormChoice extends LitElement {
         composed: true,
       }),
     );
+  }
+
+  focus() {
+    this.shadowRoot.querySelector('input').focus();
   }
 
   render() {

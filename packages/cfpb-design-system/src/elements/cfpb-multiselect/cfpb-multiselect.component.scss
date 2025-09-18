@@ -1,0 +1,225 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/base' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/vars' as *;
+
+:host {
+  // Theme variables.
+  --select-input-border: var(--gray-60);
+  --select-input-border-hover: var(--pacific);
+  --select-input-border-focus: var(--pacific);
+  --select-input-bg: var(--white);
+  --select-input-text: var(--black);
+
+  // Initial and no-js state.
+  select.o-multiselect {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: math.div(7px, $base-font-size-px) + em;
+
+    // Fixed height breaks the bottom border
+    // mid-character to indicate there's more content.
+    height: 5.5em;
+    padding-top: math.div(4px, $base-font-size-px) + em;
+    padding-bottom: math.div(4px, $base-font-size-px) + em;
+    border: 1px solid var(--select-border-default);
+
+    option {
+      padding: math.div(2px, $base-font-size-px) + em
+        math.div(6px, $base-font-size-px) + em;
+    }
+  }
+
+  .o-multiselect {
+    position: relative;
+
+    & header {
+      position: relative;
+
+      &::after {
+        // Arrow box width must be odd size to properly center the bg image
+        width: math.div($select-height, $base-font-size-px) + em;
+        box-sizing: border-box;
+        border: 1px solid var(--select-border-default);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--select-icon-bg-default);
+
+        --cfpb-background-icon-svg: 'down';
+
+        background-size: auto $cf-icon-height;
+        background-repeat: no-repeat;
+        background-position: center center;
+        content: '';
+        pointer-events: none;
+      }
+    }
+
+    & input[type='text'] {
+      width: 100%;
+      min-height: 35px;
+
+      // Reset the browser's default styling.
+      appearance: none;
+      display: inline-block;
+      padding: math.div(7px, $base-font-size-px) + em;
+      border: 1px solid var(--select-input-border);
+      outline: 0 solid var(--select-input-border);
+      background: var(--select-input-bg);
+      color: var(--select-input-text);
+      box-sizing: border-box;
+
+      &:hover,
+      &.hover {
+        border-color: var(--select-input-border-hover);
+        outline: 1px solid var(--select-input-border-hover);
+      }
+
+      &:focus,
+      &.focus {
+        border-color: var(--select-input-border-focus);
+        box-shadow: 0 0 0 1px var(--select-input-border-focus);
+        outline: 1px dotted var(--select-input-border-focus);
+        outline-offset: 2px;
+      }
+    }
+
+    & fieldset {
+      // Resets
+      border-color: var(--select-border-default);
+      border-top: none;
+      margin: 0;
+      padding: 0;
+
+      // Styles
+      box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: absolute;
+      z-index: 10;
+
+      max-height: 0;
+      margin-top: -1px;
+      width: 100%;
+
+      transition: max-height 0.25s ease-out;
+    }
+
+    &.u-active {
+      fieldset {
+        margin-top: 0;
+
+        // This needs to match the value set in _bindEvents in Multiselect.js.
+        // See https://github.com/cfpb/design-system/blob/4d26d5af04317bcc00b4677aa866fe8d526e82e0/packages/cfpb-forms/src/organisms/Multiselect.js#L340
+        max-height: 140px;
+
+        border-color: var(--pacific);
+        border-width: 2px;
+        border-top: 0;
+      }
+
+      // Reverse arrow when search drop-down is open.
+      header::after {
+        --cfpb-background-icon-svg: 'up';
+      }
+    }
+
+    & ul {
+      list-style-type: none;
+      background-color: var(--white);
+      padding: 0;
+      padding-top: math.div(5px, $base-font-size-px) + em;
+      padding-bottom: math.div(5px, $base-font-size-px) + em;
+
+      li {
+        margin: 0;
+      }
+
+      li:first-child {
+        .a-label {
+          padding-top: math.div(10px, $base-font-size-px) + em;
+        }
+      }
+
+      &.u-filtered li:not(.u-filter-match) {
+        display: none;
+      }
+
+      &.u-no-results,
+      &.u-max-selections {
+        padding: math.div(10px, $base-font-size-px) + em;
+        li {
+          display: none;
+        }
+
+        &::after {
+          display: list-item;
+        }
+      }
+
+      &.u-no-results::after {
+        content: 'No results found';
+      }
+
+      &.u-max-selections {
+        pointer-events: none;
+
+        &::after {
+          content: 'Reached maximum number of selections';
+        }
+      }
+    }
+  }
+
+  .u-invisible {
+    visibility: hidden;
+  }
+
+  /* button {
+    // Filter tags appear in filtered contexts, often as part of multiselects.
+    line-height: math.div(19px, $base-font-size-px);
+
+    display: flex;
+    gap: math.div(10px, $btn-font-size) + rem;
+
+    border: 1px solid var(--teal);
+    padding: 4px 6px;
+    background-color: var(--teal-20);
+    border-radius: math.div(3px, $base-font-size-px) + rem;
+    color: var(--black);
+    text-align: left;
+    min-width: fit-content;
+
+    &:hover {
+      background-color: var(--teal-40);
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 1px dotted var(--teal);
+      outline-offset: 1px;
+    }
+
+    &:active {
+      background-color: var(--teal-60);
+    }
+  }
+
+  svg {
+    pointer-events: none;
+
+    // Prevent flexbox from squishing icon when tag text is long.
+    flex: none;
+
+    height: 1rem;
+  }
+
+  // If the contents are wrapped in a label, negate the label's display.
+  label {
+    display: contents;
+    pointer-events: none;
+  } */
+}

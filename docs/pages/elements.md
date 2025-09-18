@@ -123,163 +123,35 @@ variation_groups:
             <cfpb-form-choice large validation="error">
               Gold
             </cfpb-form-choice>
-
-            <br>
-            <hr>
-            <br>
-
-            <cfpb-form-choice type="radio">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice type="radio" disabled>
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice type="radio" validation="success">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice type="radio" validation="warning">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice type="radio" validation="error">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice type="radio" large>
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice type="radio" large disabled>
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice type="radio" large validation="success">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice type="radio" large validation="warning">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice type="radio" large validation="error">
-              Gold
-            </cfpb-form-choice>
-          </div>
-        variation_code_snippet: >-
-          <cfpb-file-upload>Select file</cfpb-file-upload>
-      - variation_is_deprecated: false
-        variation_name: Checkbox
-        variation_description: >-
-          A checkbox component.
-        variation_code_snippet_rendered: >-
-          <div>
-            <cfpb-form-choice>
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice disabled>
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice validation="success">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice validation="warning">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice validation="error">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice large>
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice large disabled>
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice large validation="success">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice large validation="warning">
-              Gold
-            </cfpb-form-choice>
-
-            <br>
-
-            <cfpb-form-choice large validation="error">
-              Gold
-            </cfpb-form-choice>
           </div>
         variation_code_snippet: >-
           <cfpb-form-choice>
-              Gold
-            </cfpb-form-choice>
+            Gold
+          </cfpb-form-choice>
 
-            <cfpb-form-choice disabled>
-              Gold
-            </cfpb-form-choice>
+          <cfpb-form-choice disabled>
+            Gold
+          </cfpb-form-choice>
 
-            <cfpb-form-choice validation="success">
-              Gold
-            </cfpb-form-choice>
+          <cfpb-form-choice validation="success">
+            Gold
+          </cfpb-form-choice>
 
-            <cfpb-form-choice validation="warning">
-              Gold
-            </cfpb-form-choice>
+          <cfpb-form-choice validation="warning">
+            Gold
+          </cfpb-form-choice>
 
-            <cfpb-form-choice validation="error">
-              Gold
-            </cfpb-form-choice>
+          <cfpb-form-choice validation="error">
+            Gold
+          </cfpb-form-choice>
 
-            <cfpb-form-choice large>
-              Gold
-            </cfpb-form-choice>
+          <cfpb-form-choice large>
+            Gold
+          </cfpb-form-choice>
 
-            <cfpb-form-choice large disabled>
-              Gold
-            </cfpb-form-choice>
+          <cfpb-form-choice large disabled>
+            Gold
+          </cfpb-form-choice>
       - variation_is_deprecated: false
         variation_name: Radio button
         variation_description: >-
@@ -385,6 +257,7 @@ variation_groups:
             Gold
           </cfpb-form-choice>
 
+      - variation_is_deprecated: false
         variation_name: Topic tag
         variation_description: >-
           Tag element for topics.
@@ -534,6 +407,112 @@ variation_groups:
               Option 3
             </cfpb-tag-filter>
           </cfpb-tag-group>
+      - variation_is_deprecated: false
+        variation_name: Label
+        variation_description: >-
+          A label component.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-label>
+              <div slot="label">This is a label</div>
+            </cfpb-label>
+
+            <br>
+            <br>
+            <br>
+
+            <cfpb-label>
+              <div slot="label">This is a label</div>
+              <div slot="helper">With helper text</div>
+            </cfpb-label>
+
+            <br>
+            <br>
+            <br>
+
+            <cfpb-label block>
+              <div slot="label">This is a label</div>
+              <div slot="helper">With a block-level helper text</div>
+            </cfpb-label>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-label>
+            <div slot="label">This is a label</div>
+          </cfpb-label>
+
+          <cfpb-label>
+            <div slot="label">This is a label</div>
+            <div slot="helper">With helper text</div>
+          </cfpb-label>
+
+          <cfpb-label block>
+            <div slot="label">This is a label</div>
+            <div slot="helper">With a block-level helper text</div>
+          </cfpb-label>
+      - variation_is_deprecated: false
+        variation_name: Multiselect
+        variation_description: >-
+          A select component that can have multiple selections.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-multiselect label="Select a planet">
+              <select multiple>
+                <option>
+                  Mercury
+                </option>
+                <option>
+                  Venus
+                </option>
+                <option>
+                  Earth
+                </option>
+                <option>
+                  Mars
+                </option>
+                <option>
+                  Jupiter
+                </option>
+                <option>
+                  Saturn
+                </option>
+                <option>
+                  Uranus
+                </option>
+                <option>
+                  Neptune
+                </option>
+              </select>
+            </cfpb-multiselect>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-multiselect>
+            <select multiple>
+              <option>
+                Mercury
+              </option>
+              <option>
+                Venus
+              </option>
+              <option>
+                Earth
+              </option>
+              <option>
+                Mars
+              </option>
+              <option>
+                Jupiter
+              </option>
+              <option>
+                Saturn
+              </option>
+              <option>
+                Uranus
+              </option>
+              <option>
+                Neptune
+              </option>
+            </select>
+          </cfpb-multiselect>
     variation_group_name: Types
 guidelines: ''
 eyebrow: Web Components

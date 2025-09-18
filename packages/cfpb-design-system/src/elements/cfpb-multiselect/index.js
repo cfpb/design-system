@@ -404,8 +404,6 @@ export class CfpbMultiselect extends LitElement {
             ${renderChoices}
           </ul>
         </fieldset>
-
-        ${this.options.map((item) => this.#updateHiddenFields(item))}
       </div>
     `;
   }
@@ -435,19 +433,6 @@ export class CfpbMultiselect extends LitElement {
         </cfpb-form-choice>
       </li>
     `;
-  }
-
-  #updateHiddenFields(item) {
-    let htmlSnippet = '';
-    if (item.checked === true) {
-      htmlSnippet = html`<input
-        type="hidden"
-        name=${this.name}
-        value=${item.value}
-      />`;
-    }
-
-    return htmlSnippet;
   }
 
   static init() {

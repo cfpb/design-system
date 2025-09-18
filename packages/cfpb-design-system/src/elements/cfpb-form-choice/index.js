@@ -1,8 +1,14 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
+import { classMap } from 'lit/directives/class-map.js';
 import styles from './cfpb-form-choice.component.scss';
 
+// The validation states are error, warning, or success.
+const VALID_VALIDATION = ['error', 'warning', 'success'];
+
+// The types are a checkbox or radio button.
+const VALID_TYPES = ['checkbox', 'radio'];
+
 /**
- *
  * @element cfpb-form-choice
  * @slot - The label for the form input.
  */
@@ -18,6 +24,8 @@ export class CfpbFormChoice extends LitElement {
    * @property {string} validation - Validation style: error, warning, success.
    * @property {string} type - Choice type: checkbox or radio.
    * @property {string} inlist - Whether the choice appears in a <li> list.
+   * @property {string} name - The name within a form.
+   * @property {string} value - The value to submit within a form.
    */
   static get properties() {
     return {
@@ -27,45 +35,24 @@ export class CfpbFormChoice extends LitElement {
       validation: { type: String },
       type: { type: String },
       inlist: { type: Boolean, attribute: true },
+      name: { type: String },
+      value: { type: String },
     };
   }
 
   constructor() {
     super();
+    this.checked = false;
     this.disabled = false;
     this.large = false;
     this.validation = '';
     this.type = 'checkbox';
-  }
-
-  get #baseClass() {
-    let baseClass = `m-form-field m-form-field--${this.type}`;
-
-    switch (this.validation) {
-      case 'success':
-        baseClass += ` m-form-field--${this.type}-success`;
-        break;
-      case 'warning':
-        baseClass += ` m-form-field--${this.type}-warning`;
-        break;
-      case 'error':
-        baseClass += ` m-form-field--${this.type}-error`;
-        break;
-    }
-
-    if (this.large) {
-      baseClass += ' m-form-field--lg-target';
-    }
-
-    if (this.inlist) {
-      baseClass += ' m-form-field--in-list';
-    }
-
-    return baseClass;
+    this.inlist = false;
+    this.name = '';
+    this.value = '';
   }
 
   #onChange(evt) {
-    evt.target.checked = this.checked;
     this.dispatchEvent(
       new Event('change', {
         bubbles: true,
@@ -87,19 +74,52 @@ export class CfpbFormChoice extends LitElement {
     this.shadowRoot.querySelector('input').focus();
   }
 
+  /**
+   * Ensure the variant value is valid, and fall back to a default if not.
+   */
+  get #validValidation() {
+    return VALID_VALIDATION.includes(this.validation)
+      ? this.validation
+      : undefined;
+  }
+
+  /**
+   * Ensure the type value is valid, and fall back to a default if not.
+   */
+  get #validType() {
+    return VALID_TYPES.includes(this.type) ? this.type : 'checkbox';
+  }
+
+  get #baseClass() {
+    const classes = {
+      'm-form-field': true,
+      [`m-form-field--${this.type}`]: true,
+      'm-form-field--lg-target': this.large,
+      'm-form-field--in-list': this.inlist,
+    };
+
+    if (this.#validValidation)
+      classes[[`m-form-field--${this.type}-${this.validation}`]] =
+        this.validation;
+    return classes;
+  }
+
   render() {
+    const classes = classMap(this.#baseClass);
+
     return html`
-      <div class="${this.#baseClass}" ?large=${this.large}>
+      <div class="${classes}" ?large=${this.large}>
         <input
           class="a-${this.type}"
-          type="${this.type}"
-          id="${this.type}"
+          type="${this.#validType}"
+          id="choice-input"
           ?disabled=${this.disabled}
           .checked=${this.checked}
           @change=${this.#onChange}
           @input=${this.#onInput}
+          aria-invalid=${this.#validValidation === 'error' ? 'true' : 'false'}
         />
-        <label class="a-label" for="${this.type}">
+        <label class="a-label" for="choice-input">
           <slot></slot>
         </label>
       </div>

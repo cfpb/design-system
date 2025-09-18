@@ -2104,37 +2104,60 @@ Label
                 
                     'variation_name3': 'Checkbox',
                     'variation_description3': "A+checkbox+component.%0A",
-                    'variation_code_snippet3': `&lt;cfpb-file-upload&gt;Select file&lt;/cfpb-file-upload&gt;`,
+                    'variation_code_snippet3': `&lt;cfpb-form-choice&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice disabled&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice validation=&quot;success&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice validation=&quot;warning&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice validation=&quot;error&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice large&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice large disabled&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;`,
                 
-                    'variation_name4': 'Checkbox',
-                    'variation_description4': "A+checkbox+component.%0A",
-                    'variation_code_snippet4': `&lt;cfpb-form-choice&gt;
-    Gold
-  &lt;/cfpb-form-choice&gt;
-
-  &lt;cfpb-form-choice disabled&gt;
-    Gold
-  &lt;/cfpb-form-choice&gt;
-
-  &lt;cfpb-form-choice validation=&quot;success&quot;&gt;
-    Gold
-  &lt;/cfpb-form-choice&gt;
-
-  &lt;cfpb-form-choice validation=&quot;warning&quot;&gt;
-    Gold
-  &lt;/cfpb-form-choice&gt;
-
-  &lt;cfpb-form-choice validation=&quot;error&quot;&gt;
-    Gold
-  &lt;/cfpb-form-choice&gt;
-
-  &lt;cfpb-form-choice large&gt;
-    Gold
-  &lt;/cfpb-form-choice&gt;
-
-  &lt;cfpb-form-choice large disabled&gt;
-    Gold
-  &lt;/cfpb-form-choice&gt;`,
+                    'variation_name4': 'Radio button',
+                    'variation_description4': "A+radio+button+component.%0A",
+                    'variation_code_snippet4': `&lt;cfpb-form-choice type=&quot;radio&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type=&quot;radio&quot; disabled&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type=&quot;radio&quot; validation=&quot;success&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type=&quot;radio&quot; validation=&quot;warning&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type=&quot;radio&quot; validation=&quot;error&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type=&quot;radio&quot; large&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type=&quot;radio&quot; large disabled&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type=&quot;radio&quot; large validation=&quot;success&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type=&quot;radio&quot; large validation=&quot;warning&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type=&quot;radio&quot; large validation=&quot;error&quot;&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;`,
                 
                     'variation_name5': 'Topic tag',
                     'variation_description5': "Tag+element+for+topics.%0A",
@@ -2169,6 +2192,51 @@ Label
     Option 3
   &lt;/cfpb-tag-filter&gt;
 &lt;/cfpb-tag-group&gt;`,
+                
+                    'variation_name8': 'Label',
+                    'variation_description8': "A+label+component.%0A",
+                    'variation_code_snippet8': `&lt;cfpb-label&gt;
+  &lt;div slot=&quot;label&quot;&gt;This is a label&lt;/div&gt;
+&lt;/cfpb-label&gt;
+&lt;cfpb-label&gt;
+  &lt;div slot=&quot;label&quot;&gt;This is a label&lt;/div&gt;
+  &lt;div slot=&quot;helper&quot;&gt;With helper text&lt;/div&gt;
+&lt;/cfpb-label&gt;
+&lt;cfpb-label block&gt;
+  &lt;div slot=&quot;label&quot;&gt;This is a label&lt;/div&gt;
+  &lt;div slot=&quot;helper&quot;&gt;With a block-level helper text&lt;/div&gt;
+&lt;/cfpb-label&gt;`,
+                
+                    'variation_name9': 'Multiselect',
+                    'variation_description9': "A+select+component+that+can+have+multiple+selections.%0A",
+                    'variation_code_snippet9': `&lt;cfpb-multiselect&gt;
+  &lt;select multiple&gt;
+    &lt;option&gt;
+      Mercury
+    &lt;/option&gt;
+    &lt;option&gt;
+      Venus
+    &lt;/option&gt;
+    &lt;option&gt;
+      Earth
+    &lt;/option&gt;
+    &lt;option&gt;
+      Mars
+    &lt;/option&gt;
+    &lt;option&gt;
+      Jupiter
+    &lt;/option&gt;
+    &lt;option&gt;
+      Saturn
+    &lt;/option&gt;
+    &lt;option&gt;
+      Uranus
+    &lt;/option&gt;
+    &lt;option&gt;
+      Neptune
+    &lt;/option&gt;
+  &lt;/select&gt;
+&lt;/cfpb-multiselect&gt;`,
                 
             
 

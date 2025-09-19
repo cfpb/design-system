@@ -23,6 +23,7 @@ export class CfpbTagGroup extends LitElement {
   /**
    * @property {boolean} stacked - Whether to stack the tags vertically.
    * @property {Array} tagList - List of the tags in the tag group.
+   * @returns {object} The map of properties.
    */
   static get properties() {
     return {
@@ -87,7 +88,7 @@ export class CfpbTagGroup extends LitElement {
 
   /**
    * Handle a change of the light DOM.
-   * @param {MutationRecord} mutationList
+   * @param {MutationRecord} mutationList - The record of observed DOM changes.
    */
   #onMutation(mutationList) {
     if (!this.#initialized) return;

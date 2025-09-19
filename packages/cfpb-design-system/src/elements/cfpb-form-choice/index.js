@@ -26,6 +26,7 @@ export class CfpbFormChoice extends LitElement {
    * @property {string} inlist - Whether the choice appears in a <li> list.
    * @property {string} name - The name within a form.
    * @property {string} value - The value to submit within a form.
+   * @returns {object} The map of properties.
    */
   static get properties() {
     return {
@@ -52,7 +53,7 @@ export class CfpbFormChoice extends LitElement {
     this.value = '';
   }
 
-  #onChange(evt) {
+  #onChange() {
     this.dispatchEvent(
       new Event('change', {
         bubbles: true,
@@ -75,7 +76,8 @@ export class CfpbFormChoice extends LitElement {
   }
 
   /**
-   * Ensure the variant value is valid, and fall back to a default if not.
+   * Ensure the validation value is valid, and fall back to a default if not.
+   * @returns {string|undefined} A valid validation value string, or undefined.
    */
   get #validValidation() {
     return VALID_VALIDATION.includes(this.validation)
@@ -85,6 +87,7 @@ export class CfpbFormChoice extends LitElement {
 
   /**
    * Ensure the type value is valid, and fall back to a default if not.
+   * @returns {string} A type value string.
    */
   get #validType() {
     return VALID_TYPES.includes(this.type) ? this.type : 'checkbox';

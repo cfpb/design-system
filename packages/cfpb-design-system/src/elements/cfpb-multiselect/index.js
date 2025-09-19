@@ -171,7 +171,6 @@ export class CfpbMultiselect extends LitElement {
 
   /**
    * Expand the multiselect drop down.
-   * @returns {Multiselect} An instance.
    */
   expand() {
     this.#containerDom.classList.add('u-active');
@@ -184,7 +183,6 @@ export class CfpbMultiselect extends LitElement {
 
   /**
    * Collapse the multiselect drop down.
-   * @returns {Multiselect} An instance.
    */
   collapse() {
     this.#containerDom.classList.remove('u-active');
@@ -202,7 +200,6 @@ export class CfpbMultiselect extends LitElement {
    *   Direction to highlight compared to the current focus.
    */
   #highlight(direction) {
-    console.log('highlight', direction);
     if (direction === DIR_NEXT) {
       this.#model.index = this.#model.index + 1;
     } else if (direction === DIR_PREV) {
@@ -320,9 +317,8 @@ export class CfpbMultiselect extends LitElement {
   }
 
   /**
-   * Handles the functions to trigger on the checkbox change.
-   * @param {Event} event - The checkbox change event.
-   * @param index
+   * Handles checkbox change event.
+   * @param {number} index - The index position of the checkbox within the list.
    */
   #onChangeCheckbox(index) {
     //opt.checked = !opt.checked;
@@ -330,6 +326,9 @@ export class CfpbMultiselect extends LitElement {
     this.#updateSelections(index);
   }
 
+  /**
+   * @param {MouseEvent} event - The key down event.
+   */
   #onKeyDownList(event) {
     const key = event.key;
     const target = event.target;

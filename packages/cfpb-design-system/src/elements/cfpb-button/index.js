@@ -24,6 +24,7 @@ export class CfpbButton extends LitElement {
    * @property {string} variant - The button variant: secondary and warning.
    * @property {boolean} fullOnMobile - Whether to be width 100% on mobile.
    * @property {string} type - The button type: button, submit, or reset.
+   * @returns {object} The map of properties.
    */
   static get properties() {
     return {
@@ -80,6 +81,7 @@ export class CfpbButton extends LitElement {
 
   /**
    * Ensure the variant value is valid, and fall back to a default if not.
+   * @returns {string} A valid variant value string.
    */
   get #validVariant() {
     return VALID_VARIANTS.includes(this.variant) ? this.variant : 'primary';
@@ -87,6 +89,7 @@ export class CfpbButton extends LitElement {
 
   /**
    * Ensure the type value is valid, and fall back to a default if not.
+   * @returns {string} A valid type value string.
    */
   get #validType() {
     return VALID_TYPES.includes(this.type) ? this.type : 'button';
@@ -94,6 +97,7 @@ export class CfpbButton extends LitElement {
 
   /**
    * The classes added to the button.
+   * @returns {object} A classmap of CSS class names.
    */
   get #btnClass() {
     return {

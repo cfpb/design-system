@@ -2,7 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.0.4](https://github.com/cfpb/design-system/compare/v4.0.3..v4.0.4) - September 17, 2025
+## [4.1.0](https://github.com/cfpb/design-system/compare/v4.0.4..v4.1.0) - September 23, 2025
+
+### PRs in this release
+
+- PR #[2369](https://github.com/cfpb/design-system/pull/2369): Add more options to cfpb-buttons - Ans
+- PR #[2370](https://github.com/cfpb/design-system/pull/2370): Refactor cfpb-button - Ans
+- PR #[2367](https://github.com/cfpb/design-system/pull/2367): Add multiselect and label web component - Ans
+- PR #[2372](https://github.com/cfpb/design-system/pull/2372): Refactor cfpb-choice and cfpb-multiselect - Ans
+- PR #[2373](https://github.com/cfpb/design-system/pull/2373): Update eslint, eslint-plugin-jsdoc - Ans
+- PR #[2374](https://github.com/cfpb/design-system/pull/2374): Implement font-size-adjust calculation - Ans
+
+### General
+
+- Add more options to cfpb-buttons - ([2e1bde4](https://github.com/cfpb/design-system/commit/2e1bde4bef284f5627a3d1c986a76e83619bbc83)) - Ans
+- Remove unused class modifier - ([052ad99](https://github.com/cfpb/design-system/commit/052ad99fae57bfb5d11c50a875c3a5873b074c8f)) - Ans
+- Remove unused class - ([ac7f765](https://github.com/cfpb/design-system/commit/ac7f7658b87f0741de7954ad5512ef8a468993d6)) - Ans
+- Add missing jsdoc - ([3afa670](https://github.com/cfpb/design-system/commit/3afa670eac815013bc4876006254a029940e7669)) - Ans
+- Refactor cfpb-button - ([a2fb1ae](https://github.com/cfpb/design-system/commit/a2fb1ae8206c3dd13a7110f3d28978ac363fe996)) - Ans
+- Enable test - ([a518170](https://github.com/cfpb/design-system/commit/a5181709e92a784b039789e3161624cc0aa25a3b)) - Ans
+- Add multiselect web component - ([77cdbe0](https://github.com/cfpb/design-system/commit/77cdbe0e8c564b109ee0c1ce6c39950caa4e9036)) - Ans
+- Refactor cfpb-choice and cfpb-multiselect - ([7cbe534](https://github.com/cfpb/design-system/commit/7cbe534bc9791761a330c9f90cd6a54d664617eb)) - Ans
+- Linter fixes - ([fdd3941](https://github.com/cfpb/design-system/commit/fdd3941e00476586458eadc4288fcf1b1a4d0ac2)) - Ans
+- Implement font-size-adjust calculation - ([7056cd8](https://github.com/cfpb/design-system/commit/7056cd833a73ff436b68204917ec7d6a4fc582aa)) - Ans
+
+## [4.0.4](https://github.com/cfpb/design-system/compare/v4.0.3..vv4.0.4) - September 17, 2025
 
 ### PRs in this release
 

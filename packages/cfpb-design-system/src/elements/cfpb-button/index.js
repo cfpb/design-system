@@ -1,6 +1,8 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
+import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-button.component.scss';
+import { CfpbIconText } from '../cfpb-icon-text';
 
 // The variants are different color themes of the button.
 const VALID_VARIANTS = ['primary', 'secondary', 'warning'];
@@ -40,6 +42,9 @@ export class CfpbButton extends LitElement {
     };
   }
 
+  // DOM references.
+  #iconTextDom = createRef();
+
   constructor() {
     super();
     this.disabled = false;
@@ -49,34 +54,24 @@ export class CfpbButton extends LitElement {
   }
 
   /**
+   * @returns {boolean} True if it has an icon, false otherwise.
+   */
+  hasIcon() {
+    return this.#iconTextDom.value?.hasIcon();
+  }
+
+  /**
    * Hide any icon in the slot.
    */
   hideIcon() {
-    const icon = this.#findIconInSlot();
-    if (icon) icon.style.display = 'none';
+    this.#iconTextDom.value?.hideIcon();
   }
 
   /**
    * Show any icon in the slot, if it was hidden.
    */
   showIcon() {
-    const icon = this.#findIconInSlot();
-    if (icon) icon.style.display = '';
-  }
-
-  /**
-   * Find the icon SVG in the slot.
-   * @returns {Node} The icon SVG node.
-   */
-  #findIconInSlot() {
-    const slot = this.shadowRoot.querySelector('slot');
-    const nodes = slot.assignedNodes({ flatten: true });
-
-    for (const node of nodes) {
-      if (node.tagName.toLowerCase() === 'svg') {
-        return node;
-      }
-    }
+    this.#iconTextDom.value?.showIcon();
   }
 
   /**
@@ -119,8 +114,10 @@ export class CfpbButton extends LitElement {
           aria-disabled=${String(this.disabled)}
           tabindex=${this.disabled ? -1 : 0}
         >
-          <slot></slot
-        ></a>
+          <cfpb-icon-text ${ref(this.#iconTextDom)}>
+            <slot></slot>
+          </cfpb-icon-text>
+        </a>
       `;
     }
 
@@ -131,12 +128,16 @@ export class CfpbButton extends LitElement {
         ?disabled=${this.disabled}
         type=${this.#validType}
       >
-        <slot></slot>
+        <cfpb-icon-text ${ref(this.#iconTextDom)}>
+          <slot></slot>
+        </cfpb-icon-text>
       </button>
     `;
   }
 
   static init() {
+    CfpbIconText.init();
+
     window.customElements.get('cfpb-button') ||
       window.customElements.define('cfpb-button', CfpbButton);
   }

@@ -9,11 +9,11 @@
 //
 // Type hierarchy
 //
-
 body {
   color: $text;
   font-family: var(--font-stack);
   font-size: math.div($base-font-size, 16) * 100%;
+  font-size-adjust: var(--font-adjust-body);
   line-height: $base-line-height;
   -webkit-font-smoothing: antialiased;
 }

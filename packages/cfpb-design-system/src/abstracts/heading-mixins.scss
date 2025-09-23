@@ -14,6 +14,7 @@
   $is-responsive: true
 ) {
   font-size: math.div($size-i, $base-font-size-px) + em;
+  font-size-adjust: var(--font-adjust-h1);
   font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
@@ -83,6 +84,7 @@
   $font-weight: 600
 ) {
   font-size: math.div($size-ii, $base-font-size-px) + em;
+  font-size-adjust: var(--font-adjust-h2);
   font-weight: $font-weight;
   letter-spacing: inherit;
   line-height: 1.25;
@@ -154,6 +156,7 @@
   $font-weight: normal
 ) {
   font-size: math.div($size-iii, $base-font-size-px) + em;
+  font-size-adjust: var(--font-adjust-h3);
   font-weight: $font-weight;
   letter-spacing: inherit;
   line-height: 1.25;
@@ -206,6 +209,7 @@
   $font-weight: 500
 ) {
   font-size: math.div($size-iv, $base-font-size-px) + em;
+  font-size-adjust: var(--font-adjust-h4);
   font-weight: $font-weight;
   letter-spacing: inherit;
   line-height: 1.25;
@@ -250,6 +254,7 @@
 
 @mixin heading-5($has-margin-bottom: true, $has-margin-top: true) {
   font-size: math.div($size-v, $base-font-size-px) + em;
+  font-size-adjust: var(--font-adjust-h5);
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 1.25;
@@ -285,6 +290,7 @@
 
 @mixin heading-6($has-margin-bottom: true, $has-margin-top: true) {
   font-size: math.div($size-vi, $base-font-size-px) + em;
+  font-size-adjust: var(--font-adjust-h6);
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 1.25;

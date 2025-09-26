@@ -38,8 +38,8 @@ describe('MediaQueryService', () => {
   });
 
   /**
-   * @param key {string} - A media query string.
-   * @param newMedia {boolean} - True if it's a new media query.
+   * @param {string} key - A media query string.
+   * @param {boolean} newMedia - True if it's a new media query.
    */
   function simulateResize(key, newMedia) {
     mediaQueryState[key] = newMedia;

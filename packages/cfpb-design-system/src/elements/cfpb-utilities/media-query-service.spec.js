@@ -37,6 +37,10 @@ describe('MediaQueryService', () => {
     window.matchMedia = originalMatchMedia;
   });
 
+  /**
+   * @param key {string} - A media query string.
+   * @param newMedia {boolean} - True if it's a new media query.
+   */
   function simulateResize(key, newMedia) {
     mediaQueryState[key] = newMedia;
     if (listeners[key]) {
@@ -101,8 +105,6 @@ describe('MediaQueryService', () => {
 
   it('destroy removes all listeners', () => {
     const removeListenerMock = jest.fn();
-
-    const testQuery = '(min-width: 500px)';
 
     window.matchMedia = jest.fn().mockImplementation((query) => {
       return {

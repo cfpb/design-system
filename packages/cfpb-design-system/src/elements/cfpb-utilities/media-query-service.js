@@ -1,89 +1,106 @@
+/**
+ * A service for observing named breakpoints via matchMedia.
+ * Emits a `change` event (CustomEvent) whenever any breakpoint match status changes.
+ * Consumers can also call `matches` or `is(breakpointName)` to get current state.
+ */
 export class MediaQueryService extends EventTarget {
-  static breakpoints = {
-    xs: {
-      min: 0,
-      max: 600,
-    },
-    sm: {
-      min: 601,
-      max: 900,
-    },
-    med: {
-      min: 901,
-      max: 1020,
-    },
-    lg: {
-      min: 1021,
-      max: 1200,
-    },
-    xl: {
-      min: 1201,
-    },
-  };
-
-  #handlers;
-  #queries;
-  #matches;
   #breakpoints;
+  #mqls = new Map(); // Map<key, MediaQueryList>
+  #handlers = new Map(); // Map<key, listener>
+  #matches = new Map(); // Map<key, boolean>
+  #pendingUpdate = false;
 
   /**
    *
-   * @param {Object} breakpoints - Map of breakpoint names to media queries.
+   * @param {Record<string, {min: number, max?: number}} [breakpoints]
+   *   A map of breakpoint name -> { min: px, optional max: px }.
+   *   If not provided, default breakpoints are used.
    */
   constructor(breakpoints) {
     super();
-    this.#breakpoints =
-      typeof breakpoints === 'undefined'
-        ? MediaQueryService.breakpoints
-        : breakpoints;
-    this.#queries = {};
-    this.#matches = { xs: false, sm: false, med: false, lg: false, xl: false };
-    this.#handlers = {};
 
-    Object.entries(this.#breakpoints).forEach(([key, query]) => {
-      let mediaQuery = `(${query.min}px <= width`;
-      if (query.max) mediaQuery += ` <= ${query.max}px`;
-      mediaQuery += ')';
-      const mql = window.matchMedia(mediaQuery);
-      this.#queries[key] = mql;
-      this.matches[key] = mql.matches;
+    this.#breakpoints = breakpoints ?? {
+      xs: { min: 0, max: 600 },
+      sm: { min: 601, max: 900 },
+      med: { min: 901, max: 1020 },
+      lg: { min: 1021, max: 1200 },
+      xl: { min: 1201 },
+    };
 
-      const handler = (event) => {
-        this.#matches[key] = event.matches;
-        this.#dispatch();
+    // Setup each media query.
+    for (const [key, range] of Object.entries(this.#breakpoints)) {
+      const mqString = this.#rangeToMediaQuery(range);
+      const mql = window.matchMedia(mqString);
+
+      this.#mqls.set(key, mql);
+      this.#matches.set(key, mql.matches);
+
+      const listener = (evt) => {
+        this.#matches.set(key, evt.matches);
+
+        if (!this.#pendingUpdate) {
+          this.#pendingUpdate = true;
+
+          requestAnimationFrame(() => {
+            this.#pendingUpdate = false;
+            this.#dispatchChange(); // Dispatch only once per frame.
+          });
+        }
+
+        /*
+        const prev = this.#matches.get(key);
+        if (prev !== evt.matches) {
+          this.#matches.set(key, evt.matches);
+          this.#dispatchChange();
+        }
+        */
       };
 
-      mql.addEventListener('change', handler);
-      this.#handlers[key] = handler;
-    });
+      mql.addEventListener('change', listener);
 
-    this.#dispatch();
+      this.#handlers.set(key, listener);
+    }
+
+    // Emit initial state.
+    this.#dispatchChange();
   }
 
-  /**
-   * Dispatch a change event with all current matches.
-   */
-  #dispatch() {
-    this.dispatchEvent(
-      new CustomEvent('change', {
-        detail: { matches: { ...this.#matches } },
-      }),
-    );
+  #rangeToMediaQuery(range) {
+    const parts = [];
+    if (range.min != null) {
+      parts.push(`(min-width: ${range.min}px)`);
+    }
+    if (range.max != null) {
+      parts.push(`(max-width: ${range.max}px)`);
+    }
+    return parts.join(' and ');
   }
 
-  /**
-   * Get current matches.
-   */
+  #dispatchChange() {
+    const detail = {
+      matches: Object.fromEntries(this.#matches),
+    };
+
+    this.dispatchEvent(new CustomEvent('change', { detail }));
+  }
+
   get matches() {
-    return { ...this.#matches };
+    return Object.fromEntries(this.#matches);
   }
 
-  /**
-   * Clean up listeners.
-   */
+  if(key) {
+    return this.#matches.get(key) ?? false;
+  }
+
   destroy() {
-    Object.entries(this.#queries).forEach(([key, value]) => {
-      mql.removeEventListener('change', this.#handlers[key]);
-    });
+    for (const [key, mql] of this.#mqls.entries()) {
+      const listener = this.#handlers.get(key);
+      if (!listener) continue;
+      mql.removeEventListener('change', listener);
+    }
+
+    this.#mqls.clear();
+    this.#handlers.clear();
+    this.#matches.clear();
   }
 }

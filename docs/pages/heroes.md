@@ -180,8 +180,7 @@ variation_groups:
 
 
       - variation_name: Hero with photograph
-        variation_description:
-          Note hero text overlays the photograph at larger screen
+        variation_description: Note hero text overlays the photograph at larger screen
           sizes. See an example of a [hero with
           photograph](https://www.consumerfinance.gov/consumer-tools/auto-loans/).
           For implementation details and production specs, click on the "Show
@@ -317,14 +316,12 @@ variation_groups:
 
 
           ![Image of smaller photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_small.png "Image of smaller photographic hero graphic with dimensions")
-        variation_implementation:
-          'It’s best to avoid a non-button call to action in
+        variation_implementation: "It’s best to avoid a non-button call to action in
           these, as it’s unlikely that the Pacific Blue will have accessible
-          contrast with a non-white (or light gray) background. '
+          contrast with a non-white (or light gray) background. "
       - variation_is_deprecated: false
         variation_name: Jumbo hero
-        variation_description:
-          Jumbo heroes have supersized headings on large screens
+        variation_description: Jumbo heroes have supersized headings on large screens
           and standard-sized headings on smaller screens. The image visibly
           fills the right-most third of the element while using a gradient to
           seamlessly fade behind the text.
@@ -449,8 +446,7 @@ variation_groups:
 
           * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
       - variation_is_deprecated: false
-        variation_description:
-          For more visually-driven layouts, 50/50 heroes have
+        variation_description: For more visually-driven layouts, 50/50 heroes have
           supersized headings while also dedicating half their space to the
           image. The image takes up the full right half of the hero and bleeds
           to the top and bottom edges on larger screens. On smaller screens and
@@ -569,9 +565,8 @@ variation_groups:
                   }
               </style>
           </section>
-        variation_implementation:
-          50/50 heroes have a 1px `var(--gray-40)` border on the sides
-          because, unlike standard heroes, their background does not
+        variation_implementation: 50/50 heroes have a 1px `var(--gray-40)` border on the
+          sides because, unlike standard heroes, their background does not
           horizontally bleed to the edges of the screen.
         variation_specs: >-
           * Two images may be created, one for large and one for small screens,
@@ -587,8 +582,7 @@ variation_groups:
         variation_name: 50/50 hero
       - variation_is_deprecated: false
         variation_name: Hero with knockout text
-        variation_description:
-          When using a dark background, add the `__knockout`
+        variation_description: When using a dark background, add the `__knockout`
           modifier to the hero to switch the text to white. For reference, see
           this [example of a hero with knockout
           text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
@@ -781,19 +775,8 @@ use_cases: >-
 
 
   * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
-behavior: >-
-  For style at different breakpoints, see [specs for standard
-  heroes](#standard-heroes).
-
-
-  | Above 600 px | Below 601 px |
-
-  | -- | ----- |
-
-  | Text and hero image appear side-by-side  | Text and hero image stack vertically |
-
-  | ![Mockup of hero graphic at desktop size](/design-system/images/uploads/hero_behavior_large.png "Mockup of hero graphic at desktop size") | ![Mockup of hero graphic at small size](/design-system/images/uploads/hero_behavior_small.png "Mockup of hero graphic at small size") |
-accessibility: ''
+behavior: ""
+accessibility: ""
 related_items: >-
   - [Landing pages](https://cfpb.github.io/design-system/pages/landing-pages)
 
@@ -803,5 +786,5 @@ related_items: >-
 
   - [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

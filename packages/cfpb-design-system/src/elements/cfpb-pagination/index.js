@@ -4,6 +4,7 @@ import styles from './cfpb-pagination.component.scss';
 import leftIcon from '../../components/cfpb-icons/icons/left.svg';
 import rightIcon from '../../components/cfpb-icons/icons/right.svg';
 import { MediaQueryService } from '../cfpb-utilities/media-query-service';
+import { I18nService } from '../cfpb-utilities/i18n-service';
 
 /**
  *
@@ -13,6 +14,7 @@ import { MediaQueryService } from '../cfpb-utilities/media-query-service';
 export class CfpbPagination extends LitElement {
   #mediaService;
   #isMobile;
+  #i18n;
 
   static styles = css`
     ${unsafeCSS(styles)}
@@ -26,6 +28,7 @@ export class CfpbPagination extends LitElement {
     return {
       currentPage: { type: Number, attribute: 'value', reflect: true },
       maxPage: { type: Number, attribute: 'max', reflect: true },
+      lang: { type: String, reflect: true },
     };
   }
 
@@ -35,6 +38,18 @@ export class CfpbPagination extends LitElement {
     this.maxPage = 1;
     this.#mediaService = new MediaQueryService();
     this.#isMobile = false;
+    this.lang = 'en';
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.#i18n = this.querySelector('i18n-service');
+    this.addEventListener('i18n-error', (event) => {
+      console.log(event.detail);
+    });
+    this.addEventListener('i18n-change', (event) => {
+      console.log(event.detail);
+    });
   }
 
   firstUpdated() {
@@ -60,6 +75,10 @@ export class CfpbPagination extends LitElement {
     if (changed.has('currentPage') || changed.has('maxPage')) {
       if (this.currentPage < 1) this.currentPage = 1;
       else if (this.currentPage > this.maxPage) this.currentPage = this.maxPage;
+    }
+
+    if (changed.has('lang')) {
+      this.#i18n.language = this.lang;
     }
   }
 
@@ -97,8 +116,13 @@ export class CfpbPagination extends LitElement {
     }
   }
 
+  #translate(key) {
+    return this.#i18n.translate(key);
+  }
+
   render() {
     return html`
+      <slot></slot>
       <nav
         class="m-pagination"
         role="navigation"
@@ -110,7 +134,7 @@ export class CfpbPagination extends LitElement {
           ?disabled=${this.isAtMin}
           @click=${() => this.#goto(this.currentPage - 1)}
         >
-          ${unsafeSVG(leftIcon)} Newer
+          ${unsafeSVG(leftIcon)} ${this.#translate('next')}
         </cfpb-button>
 
         <form
@@ -119,9 +143,10 @@ export class CfpbPagination extends LitElement {
           @submit=${this.#handleSubmit}
         >
           <label class="m-pagination__label">
-            Page
+            ${this.#translate('page')}
             <span class="u-visually-hidden">
-              number ${this.currentPage} out
+              ${this.#translate('number')} ${this.currentPage}
+              ${this.#translate('out')}
             </span>
             <input
               class="m-pagination__current-page"
@@ -134,9 +159,11 @@ export class CfpbPagination extends LitElement {
               .value=${this.currentPage}
               @input=${this.#onInput}
             />
-            of ${this.maxPage}
+            ${this.#translate('of')} ${this.maxPage}
           </label>
-          <cfpb-button type="submit" style-as-link> Go </cfpb-button>
+          <cfpb-button type="submit" style-as-link>
+            ${this.#translate('go')}
+          </cfpb-button>
         </form>
 
         <cfpb-button
@@ -145,13 +172,15 @@ export class CfpbPagination extends LitElement {
           ?disabled=${this.isAtMax}
           @click=${() => this.#goto(this.currentPage + 1)}
         >
-          Older ${unsafeSVG(rightIcon)}
+          ${this.#translate('previous')} ${unsafeSVG(rightIcon)}
         </cfpb-button>
       </nav>
     `;
   }
 
   static init() {
+    I18nService.init();
+
     window.customElements.get('cfpb-pagination') ||
       window.customElements.define('cfpb-pagination', CfpbPagination);
   }

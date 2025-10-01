@@ -524,10 +524,60 @@ variation_groups:
           A pagination component.
         variation_code_snippet_rendered: >-
           <div>
-            <cfpb-pagination value="4" max="10"></cfpb-pagination>
+            <cfpb-pagination value="4" max="10">
+              <i18n-service>
+                <template>
+                  {
+                    "en": {
+                      "previous": "Older",
+                      "next": "Newer",
+                      "page": "Page",
+                      "number": "number",
+                      "out": "out",
+                      "of": "of",
+                      "go": "Go"
+                    },
+                    "es": {
+                      "previous": "Más viejo",
+                      "next": "Más nuevo",
+                      "page": "Página",
+                      "number": "número",
+                      "out": "afuera",
+                      "of": "de",
+                      "go": "Ir"
+                    }
+                  }
+                </template>
+              </i18n-service>
+            </cfpb-pagination>
           </div>
         variation_code_snippet: >-
-          <cfpb-pagination value="4" max="10"></cfpb-pagination>
+          <cfpb-pagination value="4" max="10">
+            <i18n-service>
+              <template>
+                {
+                  "en": {
+                    "previous": "Older",
+                    "next": "Newer",
+                    "page": "Page",
+                    "number": "number",
+                    "out": "out",
+                    "of": "of",
+                    "go": "Go"
+                  },
+                  "es": {
+                    "previous": "Más viejo",
+                    "next": "Más nuevo",
+                    "page": "Página",
+                    "number": "número",
+                    "out": "afuera",
+                    "of": "de",
+                    "go": "Ir"
+                  }
+                }
+              </template>
+            </i18n-service>
+          </cfpb-pagination>
     variation_group_name: Types
 guidelines: ''
 eyebrow: Web Components

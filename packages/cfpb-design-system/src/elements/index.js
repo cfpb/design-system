@@ -11,3 +11,4 @@ export * from './cfpb-tag-filter';
 export * from './cfpb-tag-topic';
 export * from './cfpb-tag-group';
 export * from './cfpb-multiselect';
+export * from './cfpb-pagination';

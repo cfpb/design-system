@@ -12,10 +12,13 @@ export class CfpbIconText extends LitElement {
   `;
 
   /**
+   * @property {boolean} disabled - Apply disabled styles or not.
    * @returns {object} The map of properties.
    */
   static get properties() {
-    return {};
+    return {
+      disabled: { type: Boolean, reflect: true },
+    };
   }
 
   // DOM references.
@@ -49,6 +52,7 @@ export class CfpbIconText extends LitElement {
   }
 
   #processLightDom() {
+    const div = this.shadowRoot.querySelector('div');
     const slot = this.shadowRoot.querySelector('slot');
     const nodes = slot.assignedNodes({ flatten: true });
 
@@ -75,13 +79,13 @@ export class CfpbIconText extends LitElement {
     }
 
     if (svgEl && spanEl) {
-      this.classList.add('u-has-icon');
+      div.classList.add('u-has-icon');
       if (
         svgEl.compareDocumentPosition(spanEl) & Node.DOCUMENT_POSITION_FOLLOWING
       ) {
-        this.classList.add('u-has-icon--left');
+        div.classList.add('u-has-icon--left');
       } else {
-        this.classList.add('u-has-icon--right');
+        div.classList.add('u-has-icon--right');
       }
     }
   }
@@ -95,9 +99,10 @@ export class CfpbIconText extends LitElement {
    */
   hideIcon() {
     const icon = this.#findIconInSlot();
+    const div = this.shadowRoot.querySelector('div');
     if (icon) {
-      this.#iconClasses = this.className;
-      this.className = '';
+      this.#iconClasses = div.className;
+      div.className = '';
     }
   }
 
@@ -106,7 +111,8 @@ export class CfpbIconText extends LitElement {
    */
   showIcon() {
     const icon = this.#findIconInSlot();
-    if (icon) this.className = this.#iconClasses;
+    const div = this.shadowRoot.querySelector('div');
+    if (icon) div.className = this.#iconClasses;
   }
 
   /**
@@ -134,7 +140,7 @@ export class CfpbIconText extends LitElement {
   }
 
   render() {
-    return html`<slot></slot>`;
+    return html`<div><slot></slot></div>`;
   }
 
   static init() {

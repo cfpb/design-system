@@ -12,42 +12,48 @@
   // Theme variables.
   --icon-text-divider: var(--pacific-60);
 
-  // This prevents the child button from having an empty gap after the button.
-  display: flex;
-  width: fit-content;
+  div {
+    // This prevents the child button from having an empty gap after the button.
+    display: flex;
+    width: fit-content;
 
-  // Hide SVG by default.
-  & ::slotted(svg) {
-    display: none;
+    // Hide SVG by default.
+    & ::slotted(svg) {
+      display: none;
+    }
+
+    &.u-has-icon {
+      gap: math.div(10px, $btn-font-size) + rem;
+      & slot::before {
+        @include u-btn-divider;
+      }
+
+      // Show SVG.
+      & ::slotted(svg) {
+        display: initial;
+      }
+    }
+
+    &.u-has-icon--left {
+      & ::slotted(svg) {
+        order: 1;
+      }
+      & ::slotted(span) {
+        order: 3;
+      }
+    }
+
+    &.u-has-icon--right {
+      & ::slotted(svg) {
+        order: 3;
+      }
+      & ::slotted(span) {
+        order: 1;
+      }
+    }
   }
 }
 
-:host(.u-has-icon) {
-  gap: math.div(10px, $btn-font-size) + rem;
-  & slot::before {
-    @include u-btn-divider;
-  }
-
-  // Show SVG.
-  & ::slotted(svg) {
-    display: initial;
-  }
-}
-
-:host(.u-has-icon--left) {
-  & ::slotted(svg) {
-    order: 1;
-  }
-  & ::slotted(span) {
-    order: 3;
-  }
-}
-
-:host(.u-has-icon--right) {
-  & ::slotted(svg) {
-    order: 3;
-  }
-  & ::slotted(span) {
-    order: 1;
-  }
+:host([disabled]) {
+  --icon-text-divider: var(--gray-60);
 }

@@ -1,6 +1,7 @@
 @use '@cfpb/cfpb-design-system/src/base' as *;
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/button' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/button-link' as *;
 
 :host {
   // This prevents the child button from having an empty gap after the button.
@@ -12,5 +13,19 @@
   // Mobile only.
   @include respond-to-max($bp-xs-max) {
     width: 100%;
+  }
+}
+
+:host([flush-left]) {
+  [role='button'] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+:host([flush-right]) {
+  [role='button'] {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }

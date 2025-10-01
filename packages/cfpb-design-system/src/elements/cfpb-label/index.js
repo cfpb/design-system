@@ -4,8 +4,9 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 
 /**
  *
- * @element cfpb-multiselect.
- * @slot - The main content for the upload button.
+ * @element cfpb-label.
+ * @slot label - The content for the label text.
+ * @slot helper - The content for the label helper text.
  */
 export class CfpbLabel extends LitElement {
   static styles = css`
@@ -14,7 +15,7 @@ export class CfpbLabel extends LitElement {
 
   /**
    * @property {string} for - Associate the label with an ID elsewhere.
-   * @property {string} type - Associate the label with an ID elsewhere.
+   * @property {boolean} block - Whether this has block or inline helper text.
    * @returns {object} The map of properties.
    */
   static get properties() {

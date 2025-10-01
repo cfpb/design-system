@@ -88,10 +88,6 @@ export class MediaQueryService extends EventTarget {
     return Object.fromEntries(this.#matches);
   }
 
-  if(key) {
-    return this.#matches.get(key) ?? false;
-  }
-
   destroy() {
     for (const [key, mql] of this.#mqls.entries()) {
       const listener = this.#handlers.get(key);

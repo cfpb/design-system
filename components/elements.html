@@ -1531,7 +1531,32 @@
             
             <div class="a-live__code">
                 <div>
-  <cfpb-pagination value="4" max="10"></cfpb-pagination>
+  <cfpb-pagination value="4" max="10">
+    <i18n-service>
+      <template>
+        {
+          "en": {
+            "previous": "Older",
+            "next": "Newer",
+            "page": "Page",
+            "number": "number",
+            "out": "out",
+            "of": "of",
+            "go": "Go"
+          },
+          "es": {
+            "previous": "Más viejo",
+            "next": "Más nuevo",
+            "page": "Página",
+            "number": "número",
+            "out": "afuera",
+            "of": "de",
+            "go": "Ir"
+          }
+        }
+      </template>
+    </i18n-service>
+  </cfpb-pagination>
 </div>
             </div>
             
@@ -1568,7 +1593,32 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;cfpb-pagination value="4" max="10"&gt;&lt;/cfpb-pagination&gt;</code></pre>
+                            <pre><code class="language-html">&lt;cfpb-pagination value="4" max="10"&gt;
+  &lt;i18n-service&gt;
+    &lt;template&gt;
+      {
+        "en": {
+          "previous": "Older",
+          "next": "Newer",
+          "page": "Page",
+          "number": "number",
+          "out": "out",
+          "of": "of",
+          "go": "Go"
+        },
+        "es": {
+          "previous": "Más viejo",
+          "next": "Más nuevo",
+          "page": "Página",
+          "number": "número",
+          "out": "afuera",
+          "of": "de",
+          "go": "Ir"
+        }
+      }
+    &lt;/template&gt;
+  &lt;/i18n-service&gt;
+&lt;/cfpb-pagination&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1614,8 +1664,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/elements.md">
-                            <time datetime="2025-10-01 12:13:09 -0400">
-                                12:13:09 PM Oct 01, 2025
+                            <time datetime="2025-10-01 17:28:23 -0400">
+                                 5:28:23 PM Oct 01, 2025
                             </time>
                         </a>
                     </section>

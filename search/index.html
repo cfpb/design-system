@@ -2240,7 +2240,32 @@ Label
                 
                     'variation_name10': 'Pagination',
                     'variation_description10': "A+pagination+component.%0A",
-                    'variation_code_snippet10': `&lt;cfpb-pagination value=&quot;4&quot; max=&quot;10&quot;&gt;&lt;/cfpb-pagination&gt;`,
+                    'variation_code_snippet10': `&lt;cfpb-pagination value=&quot;4&quot; max=&quot;10&quot;&gt;
+  &lt;i18n-service&gt;
+    &lt;template&gt;
+      {
+        &quot;en&quot;: {
+          &quot;previous&quot;: &quot;Older&quot;,
+          &quot;next&quot;: &quot;Newer&quot;,
+          &quot;page&quot;: &quot;Page&quot;,
+          &quot;number&quot;: &quot;number&quot;,
+          &quot;out&quot;: &quot;out&quot;,
+          &quot;of&quot;: &quot;of&quot;,
+          &quot;go&quot;: &quot;Go&quot;
+        },
+        &quot;es&quot;: {
+          &quot;previous&quot;: &quot;Más viejo&quot;,
+          &quot;next&quot;: &quot;Más nuevo&quot;,
+          &quot;page&quot;: &quot;Página&quot;,
+          &quot;number&quot;: &quot;número&quot;,
+          &quot;out&quot;: &quot;afuera&quot;,
+          &quot;of&quot;: &quot;de&quot;,
+          &quot;go&quot;: &quot;Ir&quot;
+        }
+      }
+    &lt;/template&gt;
+  &lt;/i18n-service&gt;
+&lt;/cfpb-pagination&gt;`,
                 
             
 

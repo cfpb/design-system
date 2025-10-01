@@ -22,6 +22,10 @@ variation_groups:
             <cfpb-button disabled>This is a disabled button link</cfpb-button>
 
             <br>
+
+            <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
+
+            <br>
             <hr>
             <br>
             <p>
@@ -50,6 +54,7 @@ variation_groups:
           <cfpb-button>This is a button</cfpb-button>
           <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
           <cfpb-button disabled>This is a disabled button link</cfpb-button>
+          <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
       - variation_is_deprecated: false
         variation_name: File upload
         variation_description: >-
@@ -513,6 +518,16 @@ variation_groups:
               </option>
             </select>
           </cfpb-multiselect>
+      - variation_is_deprecated: false
+        variation_name: Pagination
+        variation_description: >-
+          A pagination component.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-pagination value="4" max="10"></cfpb-pagination>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-pagination value="4" max="10"></cfpb-pagination>
     variation_group_name: Types
 guidelines: ''
 eyebrow: Web Components

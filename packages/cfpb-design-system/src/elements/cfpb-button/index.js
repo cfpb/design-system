@@ -21,15 +21,19 @@ export class CfpbButton extends LitElement {
   `;
 
   /**
+   * @property {string} type - The button type: button, submit, or reset.
    * @property {string} href - The URL to link to (makes the button a link).
-   * @property {boolean} disabled - Whether to stack the tags vertically.
+   * @property {boolean} disabled - Whether the button is disabled or not.
    * @property {string} variant - The button variant: secondary and warning.
    * @property {boolean} fullOnMobile - Whether to be width 100% on mobile.
-   * @property {string} type - The button type: button, submit, or reset.
+   * @property {boolean} flushLeft - Whether button is not rounded on left.
+   * @property {boolean} flushRight - Whether button is not rounded on right.
+   * @property {boolean} styleAsLink - Style the button as a link.
    * @returns {object} The map of properties.
    */
   static get properties() {
     return {
+      type: { type: String },
       href: { type: String },
       disabled: { type: Boolean, reflect: true },
       variant: { type: String },
@@ -38,7 +42,21 @@ export class CfpbButton extends LitElement {
         attribute: 'full-on-mobile',
         reflect: true,
       },
-      type: { type: String },
+      flushLeft: {
+        type: Boolean,
+        attribute: 'flush-left',
+        reflect: true,
+      },
+      flushRight: {
+        type: Boolean,
+        attribute: 'flush-right',
+        reflect: true,
+      },
+      styleAsLink: {
+        type: Boolean,
+        attribute: 'style-as-link',
+        reflect: true,
+      },
     };
   }
 
@@ -47,10 +65,11 @@ export class CfpbButton extends LitElement {
 
   constructor() {
     super();
-    this.disabled = false;
-    this.variant = 'primary';
-    this.fullOnMobile = false;
     this.type = 'button';
+    this.variant = 'primary';
+    this.disabled = false;
+    this.fullOnMobile = false;
+    this.styleAsLink = false;
   }
 
   /**
@@ -98,7 +117,16 @@ export class CfpbButton extends LitElement {
     return {
       'a-btn': true,
       [`a-btn--${this.#validVariant}`]: this.#validVariant !== 'primary',
+      [`a-btn--link`]: this.styleAsLink === true,
     };
+  }
+
+  #renderTextAndIcon() {
+    return html`
+      <cfpb-icon-text ${ref(this.#iconTextDom)} ?disabled=${this.disabled}>
+        <slot></slot>
+      </cfpb-icon-text>
+    `;
   }
 
   render() {
@@ -114,9 +142,7 @@ export class CfpbButton extends LitElement {
           aria-disabled=${String(this.disabled)}
           tabindex=${this.disabled ? -1 : 0}
         >
-          <cfpb-icon-text ${ref(this.#iconTextDom)}>
-            <slot></slot>
-          </cfpb-icon-text>
+          ${this.#renderTextAndIcon()}
         </a>
       `;
     }
@@ -128,9 +154,7 @@ export class CfpbButton extends LitElement {
         ?disabled=${this.disabled}
         type=${this.#validType}
       >
-        <cfpb-icon-text ${ref(this.#iconTextDom)}>
-          <slot></slot>
-        </cfpb-icon-text>
+        ${this.#renderTextAndIcon()}
       </button>
     `;
   }

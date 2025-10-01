@@ -1,0 +1,72 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities' as *;
+
+:host {
+  width: 100%;
+
+  .cf-icon-svg {
+    height: $cf-icon-height;
+    vertical-align: text-top;
+    fill: currentcolor;
+  }
+
+  .m-pagination {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      'pag-btn-prev . pag-btn-next'
+      'pag-form pag-form pag-form';
+    row-gap: math.div(15px, $base-font-size-px) + rem;
+
+    &__form {
+      grid-area: pag-form;
+      display: flex;
+      flex-flow: wrap;
+      place-content: center;
+      gap: math.div(10px, $base-font-size-px) + rem;
+
+      padding: math.div(5px, $base-font-size-px) + rem;
+      border-radius: math.div(4px, $base-font-size-px) + rem;
+      background: var(--gray-5);
+      color: var(--gray);
+    }
+
+    &__current-page {
+      // 45px is a magic number to provide enough room for three digits
+      // and the number spinners for type="number" inputs on desktop
+      width: math.div(45px, $base-font-size-px) + rem;
+
+      font-weight: 500;
+      text-align: right;
+    }
+
+    &__label {
+      display: contents;
+      white-space: nowrap;
+    }
+
+    &__btn-prev {
+      grid-area: pag-btn-prev;
+      z-index: 1;
+    }
+    &__btn-next {
+      grid-area: pag-btn-next;
+      z-index: 1;
+    }
+
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      grid-template-areas: 'pag-btn-prev pag-form pag-btn-next';
+
+      &__btn-prev {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &__btn-next {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+}

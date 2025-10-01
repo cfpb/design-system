@@ -34,10 +34,10 @@ export class CfpbPagination extends LitElement {
     this.currentPage = 1;
     this.maxPage = 1;
     this.#mediaService = new MediaQueryService();
+    this.#isMobile = false;
   }
 
-  connectedCallback() {
-    super.connectedCallback();
+  firstUpdated() {
     this.#mediaService.addEventListener('change', this.#onMediaChange);
     this.#isMobile = this.#mediaService.matches.xs;
   }
@@ -49,42 +49,52 @@ export class CfpbPagination extends LitElement {
   }
 
   #onMediaChange = (event) => {
-    this.#isMobile = event.detail.matches.xs;
-    this.requestUpdate();
+    const newIsMobile = event.detail.matches.xs;
+    if (newIsMobile !== this.#isMobile) {
+      this.#isMobile = newIsMobile;
+      this.requestUpdate();
+    }
   };
 
-  #handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    let page = parseInt(formData.get('page'), 10);
-
-    // Exit silently on invalid input.
-    if (Number.isNaN(page)) return;
-
-    // Clamp to valid range.
-    page = Math.max(1, Math.min(page, this.maxPage));
-
-    this.currentPage = page;
-
-    this.dispatchEvent(
-      new CustomEvent('page-change', {
-        detail: { page },
-        bubbles: true,
-        composed: true,
-      }),
-    );
+  updated(changed) {
+    if (changed.has('currentPage') || changed.has('maxPage')) {
+      if (this.currentPage < 1) this.currentPage = 1;
+      else if (this.currentPage > this.maxPage) this.currentPage = this.maxPage;
+    }
   }
 
   get isAtMin() {
-    return this.currentPage === 1;
+    return this.currentPage <= 1;
   }
 
   get isAtMax() {
-    return this.currentPage === this.maxPage;
+    return this.currentPage >= this.maxPage;
   }
 
   #onInput(event) {
-    this.currentPage = Number(event.target.value);
+    this.currentPage = event.target.value;
+  }
+
+  #handleSubmit(event) {
+    event.preventDefault();
+    const page = parseInt(this.currentPage, 10);
+    if (!Number.isNaN(page)) {
+      this.#goto(page);
+    }
+  }
+
+  #goto(page) {
+    const clamped = Math.max(1, Math.min(page, this.maxPage));
+    if (clamped !== this.currentPage) {
+      this.currentPage = clamped;
+      this.dispatchEvent(
+        new CustomEvent('page-change', {
+          detail: { page: clamped },
+          bubbles: true,
+          composed: true,
+        }),
+      );
+    }
   }
 
   render() {
@@ -98,6 +108,7 @@ export class CfpbPagination extends LitElement {
           href="#"
           ?flush-right=${!this.#isMobile}
           ?disabled=${this.isAtMin}
+          @click=${() => this.#goto(this.currentPage - 1)}
         >
           ${unsafeSVG(leftIcon)} Newer
         </cfpb-button>
@@ -132,6 +143,7 @@ export class CfpbPagination extends LitElement {
           href="#"
           ?flush-left=${!this.#isMobile}
           ?disabled=${this.isAtMax}
+          @click=${() => this.#goto(this.currentPage + 1)}
         >
           Older ${unsafeSVG(rightIcon)}
         </cfpb-button>

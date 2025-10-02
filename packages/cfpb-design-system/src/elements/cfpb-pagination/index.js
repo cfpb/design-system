@@ -3,8 +3,7 @@ import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './cfpb-pagination.component.scss';
 import leftIcon from '../../components/cfpb-icons/icons/left.svg';
 import rightIcon from '../../components/cfpb-icons/icons/right.svg';
-import { MediaQueryService } from '../cfpb-utilities/media-query-service';
-import { I18nService } from '../cfpb-utilities/i18n-service';
+import { I18nService, MediaQueryService } from '../cfpb-utilities/';
 
 /**
  *

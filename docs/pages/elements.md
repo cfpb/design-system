@@ -529,21 +529,23 @@ variation_groups:
                 <template>
                   {
                     "en": {
+                      "page number": "Page number",
                       "previous": "Older",
                       "next": "Newer",
                       "page": "Page",
-                      "number": "number",
-                      "out": "out",
+                      "out of": "out of",
                       "of": "of",
+                      "total pages": "total pages",
                       "go": "Go"
                     },
                     "es": {
-                      "previous": "Más viejo",
-                      "next": "Más nuevo",
+                      "page number": "Número de página",
+                      "previous": "Anterior",
+                      "next": "Siguiente",
                       "page": "Página",
-                      "number": "número",
-                      "out": "afuera",
+                      "out of": "de",
                       "of": "de",
+                      "total pages": "páginas en total",
                       "go": "Ir"
                     }
                   }
@@ -557,21 +559,23 @@ variation_groups:
               <template>
                 {
                   "en": {
+                    "page number": "Page number",
                     "previous": "Older",
                     "next": "Newer",
                     "page": "Page",
-                    "number": "number",
-                    "out": "out",
+                    "out of": "out of",
                     "of": "of",
+                    "total pages": "total pages",
                     "go": "Go"
                   },
                   "es": {
-                    "previous": "Más viejo",
-                    "next": "Más nuevo",
+                    "page number": "Número de página",
+                    "previous": "Anterior",
+                    "next": "Siguiente",
                     "page": "Página",
-                    "number": "número",
-                    "out": "afuera",
+                    "out of": "de",
                     "of": "de",
+                    "total pages": "páginas en total",
                     "go": "Ir"
                   }
                 }

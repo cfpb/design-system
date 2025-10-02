@@ -1,5 +1,15 @@
 /**
- * A service for adding string translations via page's markup.
+ * A service for embedding and using translations via markup.
+ *
+ * Expect markup like:
+ * <i18n-service>
+ *   <template>
+ *     {
+ *       "en": { "hello": "Hello", "good afternoon": "Good afternoon" },
+ *       "es": { "hello": "Hola", "good afternoon": "Buenas tardes" }
+ *     }
+ *   </template>
+ * </i18n-service>
  */
 export class I18nService extends HTMLElement {
   #translations;

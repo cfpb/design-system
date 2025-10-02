@@ -15,6 +15,7 @@ export class CfpbTagTopic extends LitElement {
    * @property {string} href - href attribute, if this is a topic link.
    * @property {boolean} siblingOfJumpLink
    *   Whether the preceding sibling is a jump link or not.
+   * @returns {object} The map of properties.
    */
   static get properties() {
     return {

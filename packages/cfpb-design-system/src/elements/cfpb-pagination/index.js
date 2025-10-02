@@ -22,6 +22,7 @@ export class CfpbPagination extends LitElement {
   /**
    * @property {number} currentPage - The currently selected page.
    * @property {number} maxPage - The maximum page count.
+   * @returns {object} The map of properties.
    */
   static get properties() {
     return {

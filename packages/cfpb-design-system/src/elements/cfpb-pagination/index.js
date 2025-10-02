@@ -44,12 +44,28 @@ export class CfpbPagination extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.#i18n = this.querySelector('i18n-service');
-    this.addEventListener('i18n-error', (event) => {
-      console.log(event.detail);
-    });
-    this.addEventListener('i18n-change', (event) => {
-      console.log(event.detail);
-    });
+    if (this.#i18n) {
+      this.addEventListener('i18n-change', this.#onI18nChange);
+      this.#i18n.language = this.lang;
+    }
+  }
+
+  #onI18nChange() {
+    const updateLabel = (selector, key) => {
+      const btn = this.renderRoot.querySelector(selector);
+      const span = btn.querySelector('span');
+      if (btn) {
+        const newText = this.#i18n.translate(key);
+        span.innerHTML = newText;
+        btn.requestUpdate();
+      }
+    };
+
+    updateLabel('#previous', 'previous');
+    updateLabel('#next', 'next');
+    updateLabel('#go', 'go');
+
+    this.requestUpdate();
   }
 
   firstUpdated() {
@@ -79,6 +95,8 @@ export class CfpbPagination extends LitElement {
 
     if (changed.has('lang')) {
       this.#i18n.language = this.lang;
+
+      this.requestUpdate();
     }
   }
 
@@ -116,25 +134,28 @@ export class CfpbPagination extends LitElement {
     }
   }
 
-  #translate(key) {
-    return this.#i18n.translate(key);
-  }
-
   render() {
+    // Get a translator function.
+    const trans =
+      this.#i18n && this.#i18n.translate
+        ? this.#i18n.translate.bind(this.#i18n)
+        : (key) => key;
+
     return html`
       <slot></slot>
       <nav
         class="m-pagination"
         role="navigation"
-        aria-label="${this.label || 'Pagination'}"
+        aria-label="${trans('page number')}"
       >
         <cfpb-button
+          id="next"
           href="#"
           ?flush-right=${!this.#isMobile}
           ?disabled=${this.isAtMin}
           @click=${() => this.#goto(this.currentPage - 1)}
         >
-          ${unsafeSVG(leftIcon)} ${this.#translate('next')}
+          ${unsafeSVG(leftIcon)} ${trans('next')}
         </cfpb-button>
 
         <form
@@ -143,10 +164,10 @@ export class CfpbPagination extends LitElement {
           @submit=${this.#handleSubmit}
         >
           <label class="m-pagination__label">
-            ${this.#translate('page')}
+            ${trans('page')}
             <span class="u-visually-hidden">
-              ${this.#translate('number')} ${this.currentPage}
-              ${this.#translate('out')}
+              ${this.currentPage} ${trans('out of')} ${this.maxPage}
+              ${trans('total pages')}
             </span>
             <input
               class="m-pagination__current-page"
@@ -159,20 +180,21 @@ export class CfpbPagination extends LitElement {
               .value=${this.currentPage}
               @input=${this.#onInput}
             />
-            ${this.#translate('of')} ${this.maxPage}
+            ${trans('of')} ${this.maxPage}
           </label>
-          <cfpb-button type="submit" style-as-link>
-            ${this.#translate('go')}
+          <cfpb-button id="go" type="submit" style-as-link>
+            ${trans('go')}
           </cfpb-button>
         </form>
 
         <cfpb-button
+          id="previous"
           href="#"
           ?flush-left=${!this.#isMobile}
           ?disabled=${this.isAtMax}
           @click=${() => this.#goto(this.currentPage + 1)}
         >
-          ${this.#translate('previous')} ${unsafeSVG(rightIcon)}
+          ${trans('previous')} ${unsafeSVG(rightIcon)}
         </cfpb-button>
       </nav>
     `;

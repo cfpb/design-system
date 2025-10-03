@@ -49,7 +49,7 @@ variation_groups:
         variation_code_snippet: >
           <!-- Inline -->
 
-          <a class="a-link" href="#"><span class="a-link__text">file or document</span> {% include icons/document.svg %}   
+          <a class="a-link" href="#"><span class="a-link__text">file or document</span> {% include icons/document.svg %}
 
           </a>
 
@@ -68,17 +68,13 @@ variation_groups:
 
           \        <a class=\"a-link\" href=\"#\"><span
           class=\"a-link__text\">file or document</span> {% include
-          icons/document.svg %}  \
-
-          \        </a>.
+          icons/document.svg %}</a>.
 
           \  The external link icon is used to emphasize a link to a
 
           \        <a class=\"a-link\" href=\"#\"><span
           class=\"a-link__text\">non-CFPB webpage</span> {% include
-          icons/external-link.svg %}
-
-          \        </a>.\
+          icons/external-link.svg %}</a>.\
 
           </p>
 

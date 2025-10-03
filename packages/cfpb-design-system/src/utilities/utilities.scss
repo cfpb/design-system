@@ -245,29 +245,29 @@ $ba: Link underline active color.
   $ba: $link-underline-active
 ) {
   color: $c;
-  border-color: $bc;
+  text-decoration-color: $bc;
 
   &:visited,
   &.visited {
-    border-color: $bv;
+    text-decoration-color: $bv;
     color: $v;
   }
 
   &:hover,
   &.hover {
-    border-color: $bh;
+    text-decoration-color: $bh;
     color: $h;
   }
 
   &:focus,
   &.focus {
-    border-color: $bf;
+    text-decoration-color: $bf;
     color: $f;
   }
 
   &:active,
   &.active {
-    border-color: $ba;
+    text-decoration-color: $ba;
     color: $a;
   }
 }
@@ -275,19 +275,19 @@ $ba: Link underline active color.
 
 // Turn off the default bottom `border` on the default and `:hover` states.
 @mixin u-link-no-border() {
-  border-bottom-width: 0 !important;
+  text-decoration-line: none !important;
 }
 
 // Turn off the default bottom `border` on the default state,
 // but force a bottom border on the `:hover` state.
 @mixin u-link-hover-border() {
-  border-bottom-width: 0 !important;
+  text-decoration-line: none !important;
 
   &:hover,
   &.hover,
   &:focus,
   &.focus {
-    border-bottom-width: 1px !important;
+    text-decoration-line: underline !important;
   }
 }
 

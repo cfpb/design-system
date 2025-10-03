@@ -149,6 +149,7 @@ export class CfpbPagination extends LitElement {
         aria-label="${trans('page number')}"
       >
         <cfpb-button
+          class="m-pagination__btn-prev"
           id="next"
           href="#"
           ?flush-right=${!this.#isMobile}
@@ -188,6 +189,7 @@ export class CfpbPagination extends LitElement {
         </form>
 
         <cfpb-button
+          class="m-pagination__btn-next"
           id="previous"
           href="#"
           ?flush-left=${!this.#isMobile}

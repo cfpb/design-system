@@ -52,7 +52,7 @@
       }
 
       .#{$jump-link-text-class} {
-        border-bottom-width: 0;
+        text-decoration: none;
 
         // Arbitrary high value for flex-shrink to prevent squeezing of the icon
         // when the link text is very long.
@@ -71,8 +71,6 @@
       .#{$jump-link-class}__text {
         border-bottom-color: var(--gold-80);
       }
-    } @else {
-      font-weight: 500;
     }
 
     // Mobile only.

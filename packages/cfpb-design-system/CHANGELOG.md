@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.2.1](https://github.com/cfpb/design-system/compare/v4.2.0..v4.2.1) - October  8, 2025
+## [4.2.2](https://github.com/cfpb/design-system/compare/v4.2.1..v4.2.2) - October  8, 2025
+
+### PRs in this release
+
+- PR #[2394](https://github.com/cfpb/design-system/pull/2394): Fix hover on a-link class - Ans
+
+### General
+
+- Fix hover on a-link class - ([a87497b](https://github.com/cfpb/design-system/commit/a87497b986ebb16e6edaba1c54bae437233a9739)) - Ans
+
+## [4.2.1](https://github.com/cfpb/design-system/compare/v4.2.0..vv4.2.1) - October  8, 2025
 
 ### PRs in this release
 

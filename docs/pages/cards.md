@@ -13,28 +13,24 @@ variation_groups:
         variation_code_snippet: >-
           <article class="m-card">
               <h2 class="m-card__heading">
-                  <a href="#">
-                      <div class="m-card__icon">{% include icons/lightbulb.svg %}</div>
-                      <span>Bank accounts</span>
-                  </a>
+                  <div class="m-card__icon">{% include icons/lightbulb.svg %}</div>
+                  <span>Bank accounts</span>
               </h2>
 
               <ul class="m-list">
 
                   <li class="m-list__item">
+                      <a href="#">
                       How quickly can I get money after I deposit a check into my
                       checking account? What is a deposit hold?
-                      <a href="#" class="a_link">
-                          Read answer
                       </a>
                   </li>
 
                   <li class="m-list__item">
+                      <a href="#">
                       I would like to be able to have my friend or family member
                       help with my bill-paying and banking.
                       What are my options?
-                      <a href="#" class="a_link">
-                          Read answer
                       </a>
                   </li>
 
@@ -218,28 +214,24 @@ variation_groups:
               <div class="o-card-group__cards">
                   <article class="m-card">
                       <h2 class="m-card__heading">
-                          <a href="#">
-                              <div class="m-card__icon">{% include icons/lightbulb.svg %}</div>
-                              <span>Bank accounts</span>
-                          </a>
+                          <div class="m-card__icon">{% include icons/lightbulb.svg %}</div>
+                          <span>Bank accounts</span>
                       </h2>
 
                       <ul class="m-list">
 
                           <li class="m-list__item">
+                              <a href="#">
                               How quickly can I get money after I deposit a check
                               into my checking account? What is a deposit hold?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
                           <li class="m-list__item">
+                              <a href="#">
                               I would like to be able to have my friend or family
                               member help with my bill-paying and banking.
                               What are my options?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
@@ -254,28 +246,24 @@ variation_groups:
 
                   <article class="m-card">
                       <h2 class="m-card__heading">
-                          <a href="#">
-                              <div class="m-card__icon">{% include icons/car.svg %}</div>
-                              <span>Auto loans</span>
-                          </a>
+                          <div class="m-card__icon">{% include icons/car.svg %}</div>
+                          <span>Auto loans</span>
                       </h2>
 
                       <ul class="m-list">
 
                           <li class="m-list__item">
+                              <a href="#">
                               What effect will shopping for
                               an auto loan have on my credit?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
                           <li class="m-list__item">
+                              <a href="#">
                               I owe more on my current loan than my current
                               vehicle is worth. What do I need to know
                               if I buy a new vehicle?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
@@ -290,25 +278,21 @@ variation_groups:
 
                   <article class="m-card">
                       <h2 class="m-card__heading">
-                          <a href="#">
-                              <div class="m-card__icon">{% include icons/credit-card.svg %}</div>
-                              <span>Credit cards</span>
-                          </a>
+                          <div class="m-card__icon">{% include icons/credit-card.svg %}</div>
+                          <span>Credit cards</span>
                       </h2>
 
                       <ul class="m-list">
 
                           <li class="m-list__item">
+                              <a href="#">
                               What is a credit card interest rate? What does APR mean?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
                           <li class="m-list__item">
+                              <a href="#">
                               How do I dispute a charge on my credit card bill?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
@@ -331,28 +315,24 @@ variation_groups:
               <div class="o-card-group__cards">
                   <article class="m-card">
                       <h2 class="m-card__heading">
-                          <a href="#">
-                              <div class="m-card__icon">{% include icons/lightbulb.svg %}</div>
-                              <span>Bank accounts</span>
-                          </a>
+                          <div class="m-card__icon">{% include icons/lightbulb.svg %}</div>
+                          <span>Bank accounts</span>
                       </h2>
 
                       <ul class="m-list">
 
                           <li class="m-list__item">
+                              <a href="#">
                               How quickly can I get money after I deposit a check
                               into my checking account? What is a deposit hold?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
                           <li class="m-list__item">
+                              <a href="#">
                               I would like to be able to have my friend or family
                               member help with my bill-paying and banking.
                               What are my options?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
@@ -367,28 +347,24 @@ variation_groups:
 
                   <article class="m-card">
                       <h2 class="m-card__heading">
-                          <a href="#">
-                              <div class="m-card__icon">{% include icons/car.svg %}</div>
-                              <span>Auto loans</span>
-                          </a>
+                          <div class="m-card__icon">{% include icons/car.svg %}</div>
+                          <span>Auto loans</span>
                       </h2>
 
                       <ul class="m-list">
 
                           <li class="m-list__item">
+                              <a href="#">
                               What effect will shopping for
                               an auto loan have on my credit?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
                           <li class="m-list__item">
+                              <a href="#">
                               I owe more on my current loan than my current
                               vehicle is worth. What do I need to know
                               if I buy a new vehicle?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
@@ -403,25 +379,21 @@ variation_groups:
 
                   <article class="m-card">
                       <h2 class="m-card__heading">
-                          <a href="#">
-                              <div class="m-card__icon">{% include icons/credit-card.svg %}</div>
-                              <span>Credit cards</span>
-                          </a>
+                          <div class="m-card__icon">{% include icons/credit-card.svg %}</div>
+                          <span>Credit cards</span>
                       </h2>
 
                       <ul class="m-list">
 
                           <li class="m-list__item">
+                              <a href="#">
                               What is a credit card interest rate? What does APR mean?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
                           <li class="m-list__item">
+                              <a href="#">
                               How do I dispute a charge on my credit card bill?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
@@ -444,28 +416,24 @@ variation_groups:
               <div class="o-card-group__cards">
                   <article class="m-card">
                       <h2 class="m-card__heading">
-                          <a href="#">
-                              <div class="m-card__icon">{% include icons/lightbulb.svg %}</div>
-                              <span>Bank accounts</span>
-                          </a>
+                          <div class="m-card__icon">{% include icons/lightbulb.svg %}</div>
+                          <span>Bank accounts</span>
                       </h2>
 
                       <ul class="m-list">
 
                           <li class="m-list__item">
+                              <a href="#">
                               How quickly can I get money after I deposit a check
                               into my checking account? What is a deposit hold?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
                           <li class="m-list__item">
+                              <a href="#">
                               I would like to be able to have my friend or family
                               member help with my bill-paying and banking.
                               What are my options?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
@@ -480,28 +448,24 @@ variation_groups:
 
                   <article class="m-card">
                       <h2 class="m-card__heading">
-                          <a href="#">
-                              <div class="m-card__icon">{% include icons/car.svg %}</div>
-                              <span>Auto loans</span>
-                          </a>
+                          <div class="m-card__icon">{% include icons/car.svg %}</div>
+                          <span>Auto loans</span>
                       </h2>
 
                       <ul class="m-list">
 
                           <li class="m-list__item">
+                              <a href="#">
                               What effect will shopping for
                               an auto loan have on my credit?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
                           <li class="m-list__item">
+                              <a href="#">
                               I owe more on my current loan than my current
                               vehicle is worth. What do I need to know
                               if I buy a new vehicle?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
@@ -516,25 +480,21 @@ variation_groups:
 
                   <article class="m-card">
                       <h2 class="m-card__heading">
-                          <a href="#">
-                              <div class="m-card__icon">{% include icons/credit-card.svg %}</div>
-                              <span>Credit cards</span>
-                          </a>
+                          <div class="m-card__icon">{% include icons/credit-card.svg %}</div>
+                          <span>Credit cards</span>
                       </h2>
 
                       <ul class="m-list">
 
                           <li class="m-list__item">
+                              <a href="#">
                               What is a credit card interest rate? What does APR mean?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
                           <li class="m-list__item">
+                              <a href="#">
                               How do I dispute a charge on my credit card bill?
-                              <a href="#" class="a_link">
-                                  Read answer
                               </a>
                           </li>
 
@@ -557,9 +517,7 @@ variation_groups:
               <div class="o-card-group__cards">
                   <article class="m-card">
                     <h3 class="m-card__heading">
-                        <a href="#">
-                            Protecting your finances during the coronavirus emergency
-                        </a>
+                        Protecting your finances during the coronavirus emergency
                     </h3>
                     <p>
                         We are committed to providing up-to-date information and resources.
@@ -574,9 +532,7 @@ variation_groups:
 
                  <article class="m-card">
                     <h3 class="m-card__heading">
-                        <a href="#">
-                            Striving for equity
-                        </a>
+                        Striving for equity
                     </h3>
                     <p>
                         We’re working to build a stronger nation by advancing racial and economic equality for all.
@@ -598,9 +554,7 @@ variation_groups:
               <div class="o-card-group__cards">
                   <article class="m-card">
                     <h3 class="m-card__heading">
-                        <a href="#">
-                            Protecting your finances during the coronavirus emergency
-                        </a>
+                        Protecting your finances during the coronavirus emergency
                     </h3>
                     <p>
                         We are committed to providing up-to-date information and resources.
@@ -615,9 +569,7 @@ variation_groups:
 
                  <article class="m-card">
                     <h3 class="m-card__heading">
-                        <a href="#">
-                            Striving for equity
-                        </a>
+                        Striving for equity
                     </h3>
                     <p>
                         We’re working to build a stronger nation by advancing racial and economic equality for all.
@@ -631,9 +583,7 @@ variation_groups:
 
                  <article class="m-card">
                     <h3 class="m-card__heading">
-                        <a href="#">
-                            Rental assistance helps renters and landlords make ends meet
-                        </a>
+                        Rental assistance helps renters and landlords make ends meet
                     </h3>
                     <p>
                         State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
@@ -655,9 +605,7 @@ variation_groups:
               <div class="o-card-group__cards">
                 <article class="m-card">
                     <h3 class="m-card__heading">
-                        <a href="#">
-                            Protecting your finances during the coronavirus emergency
-                        </a>
+                        Protecting your finances during the coronavirus emergency
                     </h3>
                     <p>
                         We are committed to providing up-to-date information and resources.
@@ -672,9 +620,7 @@ variation_groups:
 
                  <article class="m-card">
                     <h3 class="m-card__heading">
-                        <a href="#">
-                            Striving for equity
-                        </a>
+                        Striving for equity
                     </h3>
                     <p>
                         We’re working to build a stronger nation by advancing racial and economic equality for all.
@@ -688,9 +634,7 @@ variation_groups:
 
                  <article class="m-card">
                     <h3 class="m-card__heading">
-                        <a href="#">
-                           Rental assistance helps renters and landlords make ends meet
-                        </a>
+                        Rental assistance helps renters and landlords make ends meet
                     </h3>
                     <p>
                         State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
@@ -704,9 +648,7 @@ variation_groups:
 
                 <article class="m-card">
                     <h3 class="m-card__heading">
-                        <a href="#">
-                            Protecting your finances during the coronavirus emergency
-                        </a>
+                        Protecting your finances during the coronavirus emergency
                     </h3>
                     <p>
                         We are committed to providing up-to-date information and resources.

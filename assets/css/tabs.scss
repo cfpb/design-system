@@ -19,6 +19,10 @@
 
     @include heading-5($has-margin-bottom: false);
 
+    a {
+      text-decoration-line: none;
+    }
+
     &:first-child {
       .m-tabs__tab {
         padding-left: 2rem;

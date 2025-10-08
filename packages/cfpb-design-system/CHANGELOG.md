@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.2.0](https://github.com/cfpb/design-system/compare/v4.1.0..v4.2.0) - October  8, 2025
+## [4.2.1](https://github.com/cfpb/design-system/compare/v4.2.0..v4.2.1) - October  8, 2025
+
+### PRs in this release
+
+- PR #[2392](https://github.com/cfpb/design-system/pull/2392): Cards: Migrate border to text-decoration - Ans
+- PR #[2393](https://github.com/cfpb/design-system/pull/2393): Fix alignment and underline bugs - Ans
+
+### General
+
+- Migrate border to text-decoration - ([b2fd4aa](https://github.com/cfpb/design-system/commit/b2fd4aab629bc7b279ae46705417c52e717f5906)) - Ans
+- Fix alignment and underline bugs - ([7acdece](https://github.com/cfpb/design-system/commit/7acdece0f6d692e83bbff654dc30b7386f84176e)) - Ans
+
+## [4.2.0](https://github.com/cfpb/design-system/compare/v4.1.0..vv4.2.0) - October  8, 2025
 
 ### PRs in this release
 

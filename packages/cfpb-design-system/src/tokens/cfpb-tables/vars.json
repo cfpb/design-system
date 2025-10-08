@@ -1,0 +1,46 @@
+{
+  "cfpb-tables": {
+    "table-cell-bg": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.white}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-tables",
+          "collectionID": "VariableCollectionId:8202:7283",
+          "modeName": "default",
+          "modeID": "8202:5",
+          "variableName": "table-cell-bg",
+          "variableID": "VariableID:8202:7294"
+        }
+      }
+    },
+    "table-cell-bg-alt": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray-5}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-tables",
+          "collectionID": "VariableCollectionId:8202:7283",
+          "modeName": "default",
+          "modeID": "8202:5",
+          "variableName": "table-cell-bg-alt",
+          "variableID": "VariableID:8202:7293"
+        }
+      }
+    },
+    "table-scrolling-border": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray-40}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-tables",
+          "collectionID": "VariableCollectionId:8202:7283",
+          "modeName": "default",
+          "modeID": "8202:5",
+          "variableName": "table-scrolling-border",
+          "variableID": "VariableID:8202:7292"
+        }
+      }
+    }
+  }
+}

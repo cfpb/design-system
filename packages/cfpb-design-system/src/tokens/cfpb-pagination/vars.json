@@ -1,0 +1,32 @@
+{
+  "cfpb-pagination": {
+    "pagination-bg": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray-5}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-pagination",
+          "collectionID": "VariableCollectionId:8202:7274",
+          "modeName": "default",
+          "modeID": "8202:4",
+          "variableName": "pagination-bg",
+          "variableID": "VariableID:8202:7281"
+        }
+      }
+    },
+    "pagination-text": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-pagination",
+          "collectionID": "VariableCollectionId:8202:7274",
+          "modeName": "default",
+          "modeID": "8202:4",
+          "variableName": "pagination-text",
+          "variableID": "VariableID:8202:7282"
+        }
+      }
+    }
+  }
+}

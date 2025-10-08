@@ -2,7 +2,42 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.1.0](https://github.com/cfpb/design-system/compare/v4.0.4..v4.1.0) - September 23, 2025
+## [4.2.0](https://github.com/cfpb/design-system/compare/v4.1.0..v4.2.0) - October  8, 2025
+
+### PRs in this release
+
+- PR #[2375](https://github.com/cfpb/design-system/pull/2375): Add cfpb-text-icon component - Ans
+- PR #[2376](https://github.com/cfpb/design-system/pull/2376): Remove unused `$pagination-btn-min-width-px` - Ans
+- PR #[2378](https://github.com/cfpb/design-system/pull/2378): Create media-query-service.js - Ans
+- PR #[2379](https://github.com/cfpb/design-system/pull/2379): Refactor media-query-service and add tests - Ans
+- PR #[2381](https://github.com/cfpb/design-system/pull/2381): Update browserslist-config, cypress, eslint-plugin-jsdoc, git-cliff, sass - Ans
+- PR #[2383](https://github.com/cfpb/design-system/pull/2383): Add pagination component | Update eslint-plugin-cypress, eslint-plugin-jsdoc - Ans
+- PR #[2384](https://github.com/cfpb/design-system/pull/2384): cfpb-pagination refactor | Add i18n-service component - Ans
+- PR #[2385](https://github.com/cfpb/design-system/pull/2385): cfpb-pagination refactor - Ans
+- PR #[2386](https://github.com/cfpb/design-system/pull/2386): Add i18n-service jest tests - Ans
+- PR #[2387](https://github.com/cfpb/design-system/pull/2387): Update eslint-plugin-jsdoc, eslint-plugin-wc - Ans
+- PR #[2388](https://github.com/cfpb/design-system/pull/2388): Add classes to pagination buttons - Ans
+- PR #[2389](https://github.com/cfpb/design-system/pull/2389): Move link underlines to text-decoration instead of borders - Ans
+
+### General
+
+- Add cfpb-text-icon component - ([35c67a3](https://github.com/cfpb/design-system/commit/35c67a304ae3bdbc5e0721ee497c6d767e583e37)) - Ans
+- Remove unused $pagination-btn-min-width-px - ([0bf9fc7](https://github.com/cfpb/design-system/commit/0bf9fc723473973160948024ccd085040615279c)) - Ans
+- Create media-query-service.js - ([03be1ec](https://github.com/cfpb/design-system/commit/03be1ec30a17fdc92c6521230093a3166d0985b2)) - Ans
+- Refactor media-query-service and add tests - ([191c521](https://github.com/cfpb/design-system/commit/191c521328711d817f9596d4d0aced61c370f46b)) - Ans
+- Update media-query-service.spec.js - ([b627150](https://github.com/cfpb/design-system/commit/b62715081947ed8010f4e3581baa45ced3076beb)) - Ans
+- Update media-query-service.spec.js - ([77184bc](https://github.com/cfpb/design-system/commit/77184bc0d5534771d08fe4bd939d722c67eb7bd3)) - Ans
+- Update browserslist-config, cypress, eslint-plugin-jsdoc, git-cliff, sass - ([58b74ff](https://github.com/cfpb/design-system/commit/58b74ffa89d14cc3f1a6e6a5ff1506610bdd0e5f)) - Ans
+- Add pagination component | Update eslint-plugin-cypress, eslint-plugin-jsdoc - ([e4db118](https://github.com/cfpb/design-system/commit/e4db1186f11105c81eb760095794e65d0db28481)) - Ans
+- Refactor pagination - ([dc99494](https://github.com/cfpb/design-system/commit/dc99494d9beb264464474d4860b4942d594a0fbf)) - Ans
+- Add i18n service - ([28476cc](https://github.com/cfpb/design-system/commit/28476ccc9094e9a303fa021c034294e3a5d61fcf)) - Ans
+- Refactor pagination - ([26c922f](https://github.com/cfpb/design-system/commit/26c922f286f93ea6892d8198535b55013db8819d)) - Ans
+- Add i18n-service jest tests - ([61a43ef](https://github.com/cfpb/design-system/commit/61a43ef528ad5ceb1f950e659003a86302916cdc)) - Ans
+- Lint files - ([8c290be](https://github.com/cfpb/design-system/commit/8c290bed57ecc2335f5c6c03b6070ca467067873)) - Ans
+- Add classes to pagination buttons - ([037e380](https://github.com/cfpb/design-system/commit/037e380c774b033b9de034d7429911d4160b81ca)) - Ans
+- Move link underlines to text-decoration instead of borders - ([c7f0ae9](https://github.com/cfpb/design-system/commit/c7f0ae93a69ba3b3b18e41bb47584dc11b58bbf5)) - Ans
+
+## [4.1.0](https://github.com/cfpb/design-system/compare/v4.0.4..vv4.1.0) - September 23, 2025
 
 ### PRs in this release
 

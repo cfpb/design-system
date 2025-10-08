@@ -3,10 +3,12 @@
 
 .a-link {
   border-bottom-width: 0;
+  text-decoration-line: none;
 
   .a-link__text {
-    border-bottom-width: 1px;
-    border-bottom-style: inherit;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
 
     // See https://github.com/cfpb/consumerfinance.gov/pull/8252
     overflow-wrap: break-word;

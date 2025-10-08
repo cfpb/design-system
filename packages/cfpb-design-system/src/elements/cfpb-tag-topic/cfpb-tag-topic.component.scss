@@ -26,6 +26,7 @@
     a.a-tag-topic--no-top-border {
       position: relative;
       border-top: none;
+      border-top-style: none !important;
     }
 
     a.a-tag-topic:hover::before,
@@ -63,6 +64,7 @@
     a.a-tag-topic:hover,
     a.a-tag-topic:focus,
     a.a-tag-topic:active {
+      text-decoration: none;
       border-bottom: none;
       outline-offset: 1px;
 

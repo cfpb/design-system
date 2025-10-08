@@ -13,6 +13,12 @@
     // See https://github.com/cfpb/consumerfinance.gov/pull/8252
     overflow-wrap: break-word;
   }
+
+  &:hover {
+    .a-link__text {
+      text-decoration-style: solid;
+    }
+  }
 }
 
 //

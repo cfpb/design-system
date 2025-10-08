@@ -102,17 +102,12 @@
   }
 
   // Regular cards.
-  &__heading > a {
-    color: var(--black);
-
-    &:hover {
-      color: var(--pacific);
-    }
-
+  &__heading {
     & .m-card__icon {
       font-size: 1em;
       margin-bottom: 0;
       padding-right: math.div(7.5px, $base-font-size-px) + em;
+      vertical-align: bottom;
     }
 
     & .m-card__icon,

@@ -16,6 +16,7 @@
     // This prevents the child button from having an empty gap after the button.
     display: flex;
     width: fit-content;
+    align-items: center;
 
     // Hide SVG by default.
     & ::slotted(svg) {

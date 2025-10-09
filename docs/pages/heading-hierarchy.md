@@ -20,30 +20,26 @@ variation_groups:
         variation_jinja_code_snippet: ""
         variation_name: ""
         variation_specs: >-
-          \| **Heading** | **Font-weight** | **Font-size** |
+          | **Heading** | **Font-weight** | **Font-size** |
           **Font-size-adjust*** | **Line-height** | **Responsive behavior at <
-          601px** | 
+          601px** |
+
+          | ------- | ------- | ------- | ------- | ------- | ------- |
+
+          | Display | 400 (Regular) | 48px | 0.517 | 60px | Drops to H1 |
+
+          | H1 | 600 (Semi Bold) | 34px | 0.517 | 60px | Drops to H2 |
+
+          | H2 | 600 (Semi Bold) | 26px | 0.517 | 42.5px | Drops to H3 |
+
+          | H3 | 400 (Regular) | 22px | 0.517 | 32.5px | Drops to H4 |
+
+          | H4 | 500 (Medium) | 18px | 0.517 | 22.5px | Drops to 16px |
+
+          | H5 | 600 (Semi Bold) | 14px all caps | 0.517 | 17.5px, 1px letter spacing | No change |
 
 
-          \| --------- | --------- | --------- | --------- | --------- | --------- | 
-
-
-          \| Display | 400 (Regular) | 48px | 0.517 | 60px | Drops to Heading 1 | 
-
-
-          \| Heading 1 | 600 (Semi Bold) | 34px | 0.517 | 60px | Drops to Heading 2 | 
-
-
-          \| Heading 2 | 600 (Semi Bold) | 26px | 0.517 | 42.5px | Drops to Heading 3 | 
-
-
-          \| Heading 3 | 400 (Regular) | 22px | 0.517 | 32.5px | Drops to Heading 4 | 
-
-
-          \| Heading 4 | 500 (Medium) | 18px | 0.517 | 22.5px | Drops to 16px / 18px | 
-
-
-          \| Heading 5 | 600 (Semi Bold) | 14px all caps | 0.517 | 17.5px, 1px letter spacing | No change |
+          *See [Normalization](https://cfpb.github.io/design-system/foundation/fonts#normalization) to learn why we use font-size-adjust. 
     variation_group_name: Web headings
     variation_group_description: At screen widths of 600px and below, the Display
       heading and Headings 1-4 drop in size. Heading 5 remains consistent at all

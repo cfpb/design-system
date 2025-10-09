@@ -20,26 +20,26 @@ variation_groups:
         variation_jinja_code_snippet: ""
         variation_name: ""
         variation_specs: >-
-          | **Heading** | **Font-weight** | **Font-size** |
-          **Font-size-adjust*** | **Line-height** | **Responsive behavior at <
-          601px** |
+          | **Heading** | **Font-weight**   | **Font-size** |
+          **Font-size-adjust*** | **Line-height**             |  **Responsive
+          behavior at < 601px** |
 
-          | ------- | ------- | ------- | ------- | ------- | ------- |
+          | ----- | ----- | ----- | ----- | ----- | ----- |
 
-          | Display | 400 (Regular) | 48px | 0.517 | 60px | Drops to H1 |
+          | **Display** | 400 (Regular)     | 48px          | 0.517                 | 60px                        | Drops to H1                         |
 
-          | H1 | 600 (Semi Bold) | 34px | 0.517 | 60px | Drops to H2 |
+          | **H1**      |  600 (Semi Bold)  |  34px         |  0.517                |  60px                       | Drops to H2                         |
 
-          | H2 | 600 (Semi Bold) | 26px | 0.517 | 42.5px | Drops to H3 |
+          | **H2**      |  600 (Semi Bold)  | 26px          |  0.517                |  42.5px                     | Drops to H3                         |
 
-          | H3 | 400 (Regular) | 22px | 0.517 | 32.5px | Drops to H4 |
+          | **H3**      |  400 (Regular)    | 22px          |  0.517                | 32.5px                      | Drops to H4                         |
 
-          | H4 | 500 (Medium) | 18px | 0.517 | 22.5px | Drops to 16px |
+          | **H4**      |  500 (Medium)     | 18px          |  0.517                | 22.5px                      | Drops to 16px                       |
 
-          | H5 | 600 (Semi Bold) | 14px all caps | 0.517 | 17.5px, 1px letter spacing | No change |
+          | **H5**      |  600 (Semi Bold)  | 14px all caps |  0.517                | 17.5px, 1px letter spacing  | No change                           |
 
 
-          *See [Normalization](https://cfpb.github.io/design-system/foundation/fonts#normalization) to learn why we use font-size-adjust. 
+          \*See [Normalization](https://cfpb.github.io/design-system/foundation/fonts#normalization) to learn why we use font-size-adjust.
     variation_group_name: Web headings
     variation_group_description: At screen widths of 600px and below, the Display
       heading and Headings 1-4 drop in size. Heading 5 remains consistent at all
@@ -66,13 +66,13 @@ variation_groups:
         variation_specs: |-
           | **Heading** | **Font weight** | **Font size** | **Line height** |
           | ----------- | --------------- | ------------- | --------------- |
-          | Display     | Medium          | 60pt          | 66pt            |
-          | H1          | Regular         | 38pt          | 40pt            |
-          | H2          | Regular         | 26pt          | 28pt            |
-          | H3          | Semi Bold       | 16pt          | 18pt            |
-          | H4          | Medium          | 14pt          | 16pt            |
-          | H5   | Semi Bold       | 10pt all caps | 12pt            |
-          | H6   | Medium          | 12pt          | 14pt            |
+          | **Display** | Medium          | 60pt          | 66pt            |
+          | **H1**      | Regular         | 38pt          | 40pt            |
+          | **H2**      | Regular         | 26pt          | 28pt            |
+          | **H3**      | Semi Bold       | 16pt          | 18pt            |
+          | **H4**      | Medium          | 14pt          | 16pt            |
+          | **H5**      | Semi Bold       | 10pt all caps | 12pt            |
+          | **H6**      | Medium          | 12pt          | 14pt            |
     variation_group_description: >+
       This hierarchy should serve as a basis for 8.5 x 11” documents, but
       appropriate scaling should be explored for content of larger or smaller

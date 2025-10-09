@@ -64,16 +64,15 @@ variation_groups:
         variation_name: ""
         variation_description: ""
         variation_specs: |-
-          | Heading   | Specs                                        |
-          | --------- | -------------------------------------------- |
-          | Display   | Source Sans 3 Medium, 60pt / 66pt              |
-          | Heading 1 | Source Sans 3 Regular, 38pt / 40pt             |
-          | Heading 2 | Source Sans 3 Regular, 26pt / 28pt
-          |
-          | Heading 3 | Source Sans 3 Semi Bold, 16pt / 18pt           |
-          | Heading 4 | Source Sans 3 Medium, 14pt / 16pt              |
-          | Heading 5 | Source Sans 3 Semi Bold, 10pt / 12pt, all caps |
-          | Heading 6 | Source Sans 3 Medium, 12pt /14 pt              |
+          | **Heading** | **Font weight** | **Font size** | **Line height** |
+          | ----------- | --------------- | ------------- | --------------- |
+          | Display     | Medium          | 60pt          | 66pt            |
+          | H1          | Regular         | 38pt          | 40pt            |
+          | H2          | Regular         | 26pt          | 28pt            |
+          | H3          | Semi Bold       | 16pt          | 18pt            |
+          | H4          | Medium          | 14pt          | 16pt            |
+          | H5   | Semi Bold       | 10pt all caps | 12pt            |
+          | H6   | Medium          | 12pt          | 14pt            |
     variation_group_description: >+
       This hierarchy should serve as a basis for 8.5 x 11” documents, but
       appropriate scaling should be explored for content of larger or smaller

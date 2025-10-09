@@ -64,16 +64,15 @@ variation_groups:
         variation_name: ""
         variation_description: ""
         variation_specs: |-
-          | Heading   | Specs                                        |
-          | --------- | -------------------------------------------- |
-          | Display   | Source Sans 3 Medium, 60pt / 66pt              |
-          | Heading 1 | Source Sans 3 Regular, 38pt / 40pt             |
-          | Heading 2 | Source Sans 3 Regular, 26pt / 28pt
-          |
-          | Heading 3 | Source Sans 3 Semi Bold, 16pt / 18pt           |
-          | Heading 4 | Source Sans 3 Medium, 14pt / 16pt              |
-          | Heading 5 | Source Sans 3 Semi Bold, 10pt / 12pt, all caps |
-          | Heading 6 | Source Sans 3 Medium, 12pt /14 pt              |
+          | **Heading** | **Font weight** | **Font size** | **Line height** |
+          | ----------- | --------------- | ------------- | --------------- |
+          | Display     | Medium          | 60pt          | 66pt            |
+          | H1          | Regular         | 38pt          | 40pt            |
+          | H2          | Regular         | 26pt          | 28pt            |
+          | H3          | Semi Bold       | 16pt          | 18pt            |
+          | H4          | Medium          | 14pt          | 16pt            |
+          | H5   | Semi Bold       | 10pt all caps | 12pt            |
+          | H6   | Medium          | 12pt          | 14pt            |
     variation_group_description: >+
       This hierarchy should serve as a basis for 8.5 x 11” documents, but
       appropriate scaling should be explored for content of larger or smaller
@@ -108,9 +107,19 @@ variation_groups:
           </div>
         variation_implementation: null
         variation_specs: >-
-          * Source Sans 3 Medium, 18px
+          View a [list of
+          icons](https://cfpb.github.io/design-system/foundation/iconography).
+          Icon height is constrained to 19px.
 
-          * View a [list of icons](https://cfpb.github.io/design-system/foundation/iconography). Icon height is constrained to 19px.
+
+          | **Heading** | **Font-weight** | **Font-size** | **Font-size-adjust*** | **Line-height** | **Responsive behavior at <601px** |
+
+          | ----------- | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
+
+          | Meta header | 500 (Medium)    | 18px          | 0.517                 | 22.5px          | Drops to 16px                     |
+
+
+          \*See [Normalization](<>) to learn why we use font-size-adjust. 
       - variation_name: Eyebrow heading
         variation_description: >-
           The eyebrow heading is an additional label that can be used to support
@@ -126,11 +135,17 @@ variation_groups:
           An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/).
         variation_code_snippet: |
           <div class="h5">eyebrow heading</div> <div class="h1">Heading 1</div>
-        variation_specs: |-
-          * Source Sans 3 Semi Bold
-          * 14px / 18px, 1px letter spacing
-          * All caps
-          * <601px wide: No change
+        variation_specs: >-
+          | **Heading**     | **Font-weight** | **Font-size** |
+          **Font-size-adjust*** | **Line-height**            | **Responsive
+          behavior at <601px** |
+
+          | --------------- | --------------- | ------------- | --------------------- | -------------------------- | --------------------------------- |
+
+          | Eyebrow heading | 600 (Semi Bold) | 14px all caps | 0.517                 | 17.5px, 1px letter spacing | No change                         |
+
+
+          \*See [Normalization](<>) to learn why we use font-size-adjust.
       - variation_name: Slug heading
         variation_description: Slug headings are used to call attention to and lead
           content on sidebars and prefooters, inset modules, and inset email
@@ -142,13 +157,19 @@ variation_groups:
               </h2>
           </header>
         variation_specs: >-
-          * Slug title: H5
+          * 5px thick CFPB Green top border that spans the length of the title 
+
+          * 1px thick Gray 50 top border that spans the width of the module or column 
 
 
-          * 5px thick CFPB Green top border that spans the length of the title
+          | **Heading** | **Font-weight** | **Font-size**      | **Font-size-adjust*** | **Line-height**            | **Responsive behavior at <601px** |
+
+          | ----------- | --------------- | ------------------ | --------------------- | -------------------------- | --------------------------------- |
+
+          | Slug title  | 600 (Semi Bold) | H5 (14px all caps) | 0.517                 | 17.5px, 1px letter spacing | No change                         |
 
 
-          * 1px thick Gray 50 top border that spans the width of the module or column
+          \*See [Normalization](<>) to learn why we use font-size-adjust.
     variation_group_description: The heading variations below have specific use cases.
 guidelines: >-
   ### Content

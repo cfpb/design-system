@@ -20,8 +20,9 @@ variation_groups:
         variation_jinja_code_snippet: ""
         variation_name: ""
         variation_specs: >-
-          \| Heading | Font-weight | Font-size | Font-size-adjust* | Line-height
-          | Responsive behavior at < 601px | 
+          \| **Heading** | **Font-weight** | **Font-size** |
+          **Font-size-adjust*** | **Line-height** | **Responsive behavior at <
+          601px** | 
 
 
           \| --------- | --------- | --------- | --------- | --------- | --------- | 

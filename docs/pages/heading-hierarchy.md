@@ -107,9 +107,19 @@ variation_groups:
           </div>
         variation_implementation: null
         variation_specs: >-
-          * Source Sans 3 Medium, 18px
+          View a [list of
+          icons](https://cfpb.github.io/design-system/foundation/iconography).
+          Icon height is constrained to 19px.
 
-          * View a [list of icons](https://cfpb.github.io/design-system/foundation/iconography). Icon height is constrained to 19px.
+
+          | **Heading** | **Font-weight** | **Font-size** | **Font-size-adjust*** | **Line-height** | **Responsive behavior at <601px** |
+
+          | ----------- | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
+
+          | Meta header | 500 (Medium)    | 18px          | 0.517                 | 22.5px          | Drops to 16px                     |
+
+
+          \*See [Normalization](<>) to learn why we use font-size-adjust. 
       - variation_name: Eyebrow heading
         variation_description: >-
           The eyebrow heading is an additional label that can be used to support
@@ -125,11 +135,17 @@ variation_groups:
           An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/).
         variation_code_snippet: |
           <div class="h5">eyebrow heading</div> <div class="h1">Heading 1</div>
-        variation_specs: |-
-          * Source Sans 3 Semi Bold
-          * 14px / 18px, 1px letter spacing
-          * All caps
-          * <601px wide: No change
+        variation_specs: >-
+          | **Heading**     | **Font-weight** | **Font-size** |
+          **Font-size-adjust*** | **Line-height**            | **Responsive
+          behavior at <601px** |
+
+          | --------------- | --------------- | ------------- | --------------------- | -------------------------- | --------------------------------- |
+
+          | Eyebrow heading | 600 (Semi Bold) | 14px all caps | 0.517                 | 17.5px, 1px letter spacing | No change                         |
+
+
+          \*See [Normalization](<>) to learn why we use font-size-adjust.
       - variation_name: Slug heading
         variation_description: Slug headings are used to call attention to and lead
           content on sidebars and prefooters, inset modules, and inset email

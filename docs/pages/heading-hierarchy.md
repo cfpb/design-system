@@ -157,13 +157,19 @@ variation_groups:
               </h2>
           </header>
         variation_specs: >-
-          * Slug title: H5
+          * 5px thick CFPB Green top border that spans the length of the title 
+
+          * 1px thick Gray 50 top border that spans the width of the module or column 
 
 
-          * 5px thick CFPB Green top border that spans the length of the title
+          | **Heading** | **Font-weight** | **Font-size**      | **Font-size-adjust*** | **Line-height**            | **Responsive behavior at <601px** |
+
+          | ----------- | --------------- | ------------------ | --------------------- | -------------------------- | --------------------------------- |
+
+          | Slug title  | 600 (Semi Bold) | H5 (14px all caps) | 0.517                 | 17.5px, 1px letter spacing | No change                         |
 
 
-          * 1px thick Gray 50 top border that spans the width of the module or column
+          \*See [Normalization](<>) to learn why we use font-size-adjust.
     variation_group_description: The heading variations below have specific use cases.
 guidelines: >-
   ### Content

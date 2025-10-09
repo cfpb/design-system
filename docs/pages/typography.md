@@ -16,7 +16,7 @@ variation_groups:
 
           0123456789</h4>
 
-        variation_name: ''
+        variation_name: ""
       - variation_code_snippet: |+
           <h3 style="font-weight: 500;">Source Sans 3 Medium</h3>
 
@@ -26,7 +26,7 @@ variation_groups:
           0123456789</h4>
 
 
-        variation_name: ''
+        variation_name: ""
       - variation_code_snippet: |-
           <h3>Source Sans 3 Regular</h3>
 
@@ -34,10 +34,9 @@ variation_groups:
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>
-        variation_name: ''
-    variation_group_description:
-      We recently updated our primary brand typeface to
-      Source Sans 3, a typeface included in the [U.S. Web Design
+        variation_name: ""
+    variation_group_description: In July 2025, we updated our typeface from Avenir
+      Next to Source Sans 3, a typeface included in the [U.S. Web Design
       System](https://designsystem.digital.gov/components/typography/). With
       letters that are slender but open, Source Sans 3 has a simple and
       approachable look.
@@ -46,6 +45,12 @@ guidelines: >-
   information. Text that is not readable turns off readers or makes it
   challenging for them to stay focused. The following guidelines promote good
   readability.
+
+
+  ### Normalization 
+
+
+  As the U.S. Web Design System states, [typefaces vary in optical size](https://designsystem.digital.gov/design-tokens/typesetting/overview/). Source Sans 3 is more condensed and has a smaller optical appearance than our previous typeface, Avenir Next. To address this difference and ensure our site’s components and readability remain intact, we adjusted Source Sans 3’s x-height to be optically closer to Avenir Next’s x-height. To accomplish this, we used a [font-size-adjust CSS property](https://www.w3.org/TR/css-fonts-3/#font-size-adjust-prop).
 
 
   ### Alignment
@@ -126,8 +131,8 @@ description: A clear typographic hierarchy is critical to the effective
   scale, and capitalization to convey the relative importance of each heading
   within a document. Readability, accessibility, and font smoothing to allow all
   users to efficiently read and absorb textual information.
-use_cases: ''
-behavior: ''
+use_cases: ""
+behavior: ""
 accessibility: >-
   Web Content Accessibility (WCAG) standards ensure that content is accessible
   by everyone, regardless of any disability or user device. To learn more, refer

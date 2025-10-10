@@ -38,9 +38,14 @@ variation_groups:
 
 
           We’re trying out Source Sans 3 Medium with faux bolding in place of Source Sans 3 Semi Bold, though the results of that experiment have been less predictable, so we may yet revert that decision.
-        variation_specs: |-
-          * Source Sans 3 Regular
-          * 16px / 22px at all browser widths
+        variation_specs: >-
+          | **Paragraph text style** | **Font-weight** | **Font-size** |
+          **Font-size-adjust*** | **Line-height** | **Responsive behavior at
+          <601px** |
+
+          | ------------------------ | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
+
+          | Body text                | 400 (Regular)   | 16px          | 0.517                 | 22px            | No change                         |
       - variation_code_snippet: >-
           <p class="lead-paragraph">Source Sans 3 Regular, 22px / 28px on large
           screens and 18px / 22px on small screens. Ut enim ad minim veniam,
@@ -50,11 +55,13 @@ variation_groups:
         variation_description: ""
         variation_name: Lead paragraph
         variation_specs: >-
-          * Also referred to as a subheading
+          | **Paragraph text style**                      | **Font-weight** |
+          **Font-size** | **Font-size-adjust*** | **Line-height** | **Responsive
+          behavior at <601px** |
 
-          * Source Sans 3 Regular
+          | --------------------------------------------- | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
 
-          * Text is responsive. Displays as a Heading 3 (22px / 28px) on large screens (>601px wide). Displays at Heading 4 (18px / 22px but still Regular weight) on small screens (<601px wide).
+          | Lead style (also referred to as a subheading) | 400 (Regular)   | H3 (22px)     | 0.517                 | 27.5px          | Drops to H4                       |
     variation_group_name: Web paragraphs
   - variation_group_name: Print paragraphs
     variations:

@@ -15,11 +15,13 @@ variation_groups:
     variations:
       - variation_code_snippet: ''
         variation_description: >-
-          | Learn page wireframe | Example |
+          | Learn page
+          wireframe                                                   |
+          Example                                                                                                                           |
 
-          | -- | -- |
+          | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 
-          | ![Learn page example](/design-system/images/uploads/learn_example.jpg) | Example: |
+          | ![Learn page example](/design-system/images/uploads/learn_example.jpg) | Example: [What is a personal line of credit?](https://www.consumerfinance.gov/ask-cfpb/what-is-a-personal-line-of-credit-en-901/) |
         variation_name: ''
 use_cases: >-
   ### When to use

@@ -651,25 +651,6 @@ description: >-
 
 
   </div>
-
-
-  <div class="content-50 content-first" markdown="1">
-
-
-  <h2 class="h3">Download the icon font</h2>
-
-
-  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. The icon font should not be used for placing icons on a website.
-
-
-  <a class="a-link"
-     href="https://github.com/cfpb/design-system/raw/refs/heads/main/packages/cfpb-design-system/src/components/cfpb-icons/font/CFPBIcons-Regular.otf">
-      <span class="a-link__text">Download font</span>
-      {% include icons/download.svg %}
-  </a>
-
-
-  </div>
 use_cases: ''
 behavior: >-
   ### SVG icon basics

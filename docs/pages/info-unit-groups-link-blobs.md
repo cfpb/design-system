@@ -30,7 +30,7 @@ variation_groups:
         variation_name: 33/33/33 info unit
         variation_specs: ''
     variation_group_name: Types
-    variation_group_description: 'There are three types of info units: 25/75, 50/50, and 33/33/33. '
+    variation_group_description: ''
 guidelines: >-
   ### Content guidelines
 
@@ -135,19 +135,20 @@ description: 'Info unit groups are used to draw a user’s eye to key informatio
 use_cases: >-
   ### When to use
 
-  - To visually call out succinct information and a call-to-action link that leads users to a deeper dive into content
 
-  - To help establish a hierarchy of linked content on a page
+  * To visually call out succinct information and a call-to-action link that leads users to a deeper dive into content
+
+  * To help establish a hierarchy of linked content on a page
 
 
   ### When other options are better
 
-  - When presenting multiple paragraphs of content
+
+  * When presenting multiple paragraphs of content
 behavior: 'All info units stack to one column at small screen size. '
 accessibility: ''
-related_items: >-
+related_items: |-
   * [Links](https://cfpb.github.io/design-system/components/links)
-
   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
 last_updated: 2019-08-30T16:07:00.000Z
 ---

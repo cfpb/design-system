@@ -4,16 +4,10 @@ export default {
   setupFiles: ['<rootDir>/test/util/simulate-event.js'],
   transform: {},
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/packages/**/*.js'],
-  coveragePathIgnorePatterns: [
-    '<rootDir>/.*.config.js',
-    '<rootDir>/node_modules/',
-    '<rootDir>/config/',
-    '<rootDir>/dist/',
-    '<rootDir>/packages/.?/node_modules/',
-    '<rootDir>/test/',
-    '<rootDir>/tmp/',
-    '<rootDir>/scripts/',
+  collectCoverageFrom: [
+    '<rootDir>/packages/**/*.js',
+    '!<rootDir>/packages/**/dist/**/*.js',
+    '!<rootDir>/packages/**/node_modules/**/*.js',
   ],
   coverageDirectory: '<rootDir>/test/unit-test-coverage',
   moduleNameMapper: {

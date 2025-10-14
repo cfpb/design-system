@@ -1,0 +1,43 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/vars' as *;
+
+:host {
+  // Tag group sets the spacing between tags.
+  ul {
+    // Remove list ul bullets styles.
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 0;
+      display: contents;
+    }
+
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      display: flex;
+      gap: math.div(15px, $btn-font-size) + rem;
+      flex-wrap: wrap;
+
+      &[stacked] {
+        flex-direction: column;
+        width: fit-content;
+      }
+    }
+
+    &:has(cfpb-tag-filter) {
+      display: flex;
+      gap: math.div(15px, $btn-font-size) + rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  // Right-to-left (RTL) adjustments for arabic pages.
+  html[lang='ar'] {
+    direction: rtl;
+
+    // This is needed for right-to-left (RTL) lists.
+    padding-right: 0;
+  }
+}

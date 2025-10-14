@@ -16,41 +16,32 @@ variation_groups:
           Example of a non heading element:
           <p class="h1">A non-heading element</p>
           -->
-        variation_description: ''
-        variation_jinja_code_snippet: ''
-        variation_name: ''
-        variation_specs: "| Heading   |
-          Specs                                                            |
-          Responsive behavior at < 601px |
+        variation_description: ""
+        variation_jinja_code_snippet: ""
+        variation_name: ""
+        variation_specs: >-
+          | **Heading** | **Font-weight**   | **Font-size** |
+          **Font-size-adjust*** | **Line-height**             |  **Responsive
+          behavior at < 601px** |
 
-          | --------- |
-          ---------------------------------------------------------------- |
-          ------------------------------ |
+          | ----- | ----- | ----- | ----- | ----- | ----- |
 
-          | Display   | Source Sans 3 Regular, 48px /
-          60px\x03                                | Drops to Heading
-          1             |
+          | **Display** | 400 (Regular)     | 48px          | 0.517                 | 60px                        | Drops to H1                         |
 
-          | Heading 1 | Source Sans 3 Semi Bold, 34px /
-          42px\x03                              | Drops to Heading
-          2             |
+          | **H1**      |  600 (Semi Bold)  |  34px         |  0.517                |  60px                       | Drops to H2                         |
 
-          | Heading 2 | Source Sans 3 Semi Bold, 26px /
-          32px                               | Drops to Heading 3             |
+          | **H2**      |  600 (Semi Bold)  | 26px          |  0.517                |  42.5px                     | Drops to H3                         |
 
-          | Heading 3 | Source Sans 3 Regular, 22px /
-          28px                                 | Drops to Heading
-          4             |
+          | **H3**      |  400 (Regular)    | 22px          |  0.517                | 32.5px                      | Drops to H4                         |
 
-          | Heading 4 | Source Sans 3 Medium, 18px /
-          22px                                  | Drops to 16px /
-          18px           |
+          | **H4**      |  500 (Medium)     | 18px          |  0.517                | 22.5px                      | Drops to 16px                       |
 
-          | Heading 5 | Source Sans 3 Semi Bold, 14px / 18px, All caps,
-          1px letter spacing | No change                      |"
+          | **H5**      |  600 (Semi Bold)  | 14px all caps |  0.517                | 17.5px, 1px letter spacing  | No change                           |
+
+
+          \*See [Normalization](https://cfpb.github.io/design-system/foundation/fonts#normalization) to learn why we use font-size-adjust.
     variation_group_name: Web headings
-    variation_group_description:
-      At screen widths of 600px and below, the Display
+    variation_group_description: At screen widths of 600px and below, the Display
       heading and Headings 1-4 drop in size. Heading 5 remains consistent at all
       screen widths.
   - variation_group_name: Print headings
@@ -70,19 +61,18 @@ variation_groups:
           <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading 5</h5>
 
           <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading 6</p>
-        variation_name: ''
-        variation_description: ''
+        variation_name: ""
+        variation_description: ""
         variation_specs: |-
-          | Heading   | Specs                                        |
-          | --------- | -------------------------------------------- |
-          | Display   | Source Sans 3 Medium, 60pt / 66pt              |
-          | Heading 1 | Source Sans 3 Regular, 38pt / 40pt             |
-          | Heading 2 | Source Sans 3 Regular, 26pt / 28pt
-          |
-          | Heading 3 | Source Sans 3 Semi Bold, 16pt / 18pt           |
-          | Heading 4 | Source Sans 3 Medium, 14pt / 16pt              |
-          | Heading 5 | Source Sans 3 Semi Bold, 10pt / 12pt, all caps |
-          | Heading 6 | Source Sans 3 Medium, 12pt /14 pt              |
+          | **Heading** | **Font weight** | **Font size** | **Line height** |
+          | ----------- | --------------- | ------------- | --------------- |
+          | **Display** | Medium          | 60pt          | 66pt            |
+          | **H1**      | Regular         | 38pt          | 40pt            |
+          | **H2**      | Regular         | 26pt          | 28pt            |
+          | **H3**      | Semi Bold       | 16pt          | 18pt            |
+          | **H4**      | Medium          | 14pt          | 16pt            |
+          | **H5**      | Semi Bold       | 10pt all caps | 12pt            |
+          | **H6**      | Medium          | 12pt          | 14pt            |
     variation_group_description: >+
       This hierarchy should serve as a basis for 8.5 x 11” documents, but
       appropriate scaling should be explored for content of larger or smaller
@@ -91,11 +81,10 @@ variation_groups:
   - variation_group_name: Variations
     variations:
       - variation_name: Meta header
-        variation_description:
-          The meta header is typically used for listing categories
+        variation_description: The meta header is typically used for listing categories
           on pages like the [blog
           page](https://www.consumerfinance.gov/about-us/blog/).
-        variation_code_snippet: >-
+        variation_code_snippet: |-
           <div class="m-meta-header">
               <div class="m-meta-header__item-group">
                 <div class="m-meta-header__item">
@@ -118,9 +107,19 @@ variation_groups:
           </div>
         variation_implementation: null
         variation_specs: >-
-          * Source Sans 3 Medium, 18px
+          View a [list of
+          icons](https://cfpb.github.io/design-system/foundation/iconography).
+          Icon height is constrained to 19px.
 
-          * View a [list of icons](https://cfpb.github.io/design-system/foundation/iconography). Icon height is constrained to 19px.
+
+          | **Heading** | **Font-weight** | **Font-size** | **Font-size-adjust*** | **Line-height** | **Responsive behavior at <601px** |
+
+          | ----------- | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
+
+          | Meta header | 500 (Medium)    | 18px          | 0.517                 | 22.5px          | Drops to 16px                     |
+
+
+          \*See [Normalization](<>) to learn why we use font-size-adjust. 
       - variation_name: Eyebrow heading
         variation_description: >-
           The eyebrow heading is an additional label that can be used to support
@@ -133,17 +132,22 @@ variation_groups:
           The eyebrow heading is secondary to and serves to support the main page heading. So it should be concise and shorter than the main page heading.
 
 
-          An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/process/prepare/).
+          An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/).
         variation_code_snippet: |
           <div class="h5">eyebrow heading</div> <div class="h1">Heading 1</div>
-        variation_specs: |-
-          * Source Sans 3 Semi Bold
-          * 14px / 18px, 1px letter spacing
-          * All caps
-          * <601px wide: No change
+        variation_specs: >-
+          | **Heading**     | **Font-weight** | **Font-size** |
+          **Font-size-adjust*** | **Line-height**            | **Responsive
+          behavior at <601px** |
+
+          | --------------- | --------------- | ------------- | --------------------- | -------------------------- | --------------------------------- |
+
+          | Eyebrow heading | 600 (Semi Bold) | 14px all caps | 0.517                 | 17.5px, 1px letter spacing | No change                         |
+
+
+          \*See [Normalization](<>) to learn why we use font-size-adjust.
       - variation_name: Slug heading
-        variation_description:
-          Slug headings are used to call attention to and lead
+        variation_description: Slug headings are used to call attention to and lead
           content on sidebars and prefooters, inset modules, and inset email
           modules.
         variation_code_snippet: |-
@@ -153,13 +157,19 @@ variation_groups:
               </h2>
           </header>
         variation_specs: >-
-          * Slug title: H5
+          * 5px thick CFPB Green top border that spans the length of the title 
+
+          * 1px thick Gray 50 top border that spans the width of the module or column 
 
 
-          * 5px thick CFPB Green top border that spans the length of the title
+          | **Heading** | **Font-weight** | **Font-size**      | **Font-size-adjust*** | **Line-height**            | **Responsive behavior at <601px** |
+
+          | ----------- | --------------- | ------------------ | --------------------- | -------------------------- | --------------------------------- |
+
+          | Slug title  | 600 (Semi Bold) | H5 (14px all caps) | 0.517                 | 17.5px, 1px letter spacing | No change                         |
 
 
-          * 1px thick Gray 50 top border that spans the width of the module or column
+          \*See [Normalization](<>) to learn why we use font-size-adjust.
     variation_group_description: The heading variations below have specific use cases.
 guidelines: >-
   ### Content
@@ -182,15 +192,14 @@ description: A successful type hierarchy establishes the order of importance of
   elements on a page. Consistent scaling, weights, and capitalization are used
   to create distinction between heading levels and provide users with  familiar
   focus points when scanning text.
-use_cases: ''
-behavior: ''
+use_cases: ""
+behavior: ""
 accessibility: Since categories can be repetitive, we suggest placing a label
-  with `@include u-visually-hidden` prior to the headings with icons to add more context
-  for screen readers.
-related_items: >-
+  with `@include u-visually-hidden` prior to the headings with icons to add more
+  context for screen readers.
+related_items: |-
   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
-
   * [Fonts](https://cfpb.github.io/design-system/foundation/fonts)
 last_updated: 2019-10-21T21:54:52.744Z
-research: ''
+research: ""
 ---

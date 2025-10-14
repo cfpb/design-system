@@ -2,7 +2,150 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.0.0](https://github.com/cfpb/design-system/compare/v3.14.1..v4.0.0) - July 15, 2025
+## [4.2.2](https://github.com/cfpb/design-system/compare/v4.2.1..v4.2.2) - October  8, 2025
+
+### PRs in this release
+
+- PR #[2394](https://github.com/cfpb/design-system/pull/2394): Fix hover on a-link class - Ans
+
+### General
+
+- Fix hover on a-link class - ([a87497b](https://github.com/cfpb/design-system/commit/a87497b986ebb16e6edaba1c54bae437233a9739)) - Ans
+
+## [4.2.1](https://github.com/cfpb/design-system/compare/v4.2.0..vv4.2.1) - October  8, 2025
+
+### PRs in this release
+
+- PR #[2392](https://github.com/cfpb/design-system/pull/2392): Cards: Migrate border to text-decoration - Ans
+- PR #[2393](https://github.com/cfpb/design-system/pull/2393): Fix alignment and underline bugs - Ans
+
+### General
+
+- Migrate border to text-decoration - ([b2fd4aa](https://github.com/cfpb/design-system/commit/b2fd4aab629bc7b279ae46705417c52e717f5906)) - Ans
+- Fix alignment and underline bugs - ([7acdece](https://github.com/cfpb/design-system/commit/7acdece0f6d692e83bbff654dc30b7386f84176e)) - Ans
+
+## [4.2.0](https://github.com/cfpb/design-system/compare/v4.1.0..vv4.2.0) - October  8, 2025
+
+### PRs in this release
+
+- PR #[2375](https://github.com/cfpb/design-system/pull/2375): Add cfpb-text-icon component - Ans
+- PR #[2376](https://github.com/cfpb/design-system/pull/2376): Remove unused `$pagination-btn-min-width-px` - Ans
+- PR #[2378](https://github.com/cfpb/design-system/pull/2378): Create media-query-service.js - Ans
+- PR #[2379](https://github.com/cfpb/design-system/pull/2379): Refactor media-query-service and add tests - Ans
+- PR #[2381](https://github.com/cfpb/design-system/pull/2381): Update browserslist-config, cypress, eslint-plugin-jsdoc, git-cliff, sass - Ans
+- PR #[2383](https://github.com/cfpb/design-system/pull/2383): Add pagination component | Update eslint-plugin-cypress, eslint-plugin-jsdoc - Ans
+- PR #[2384](https://github.com/cfpb/design-system/pull/2384): cfpb-pagination refactor | Add i18n-service component - Ans
+- PR #[2385](https://github.com/cfpb/design-system/pull/2385): cfpb-pagination refactor - Ans
+- PR #[2386](https://github.com/cfpb/design-system/pull/2386): Add i18n-service jest tests - Ans
+- PR #[2387](https://github.com/cfpb/design-system/pull/2387): Update eslint-plugin-jsdoc, eslint-plugin-wc - Ans
+- PR #[2388](https://github.com/cfpb/design-system/pull/2388): Add classes to pagination buttons - Ans
+- PR #[2389](https://github.com/cfpb/design-system/pull/2389): Move link underlines to text-decoration instead of borders - Ans
+
+### General
+
+- Add cfpb-text-icon component - ([35c67a3](https://github.com/cfpb/design-system/commit/35c67a304ae3bdbc5e0721ee497c6d767e583e37)) - Ans
+- Remove unused $pagination-btn-min-width-px - ([0bf9fc7](https://github.com/cfpb/design-system/commit/0bf9fc723473973160948024ccd085040615279c)) - Ans
+- Create media-query-service.js - ([03be1ec](https://github.com/cfpb/design-system/commit/03be1ec30a17fdc92c6521230093a3166d0985b2)) - Ans
+- Refactor media-query-service and add tests - ([191c521](https://github.com/cfpb/design-system/commit/191c521328711d817f9596d4d0aced61c370f46b)) - Ans
+- Update media-query-service.spec.js - ([b627150](https://github.com/cfpb/design-system/commit/b62715081947ed8010f4e3581baa45ced3076beb)) - Ans
+- Update media-query-service.spec.js - ([77184bc](https://github.com/cfpb/design-system/commit/77184bc0d5534771d08fe4bd939d722c67eb7bd3)) - Ans
+- Update browserslist-config, cypress, eslint-plugin-jsdoc, git-cliff, sass - ([58b74ff](https://github.com/cfpb/design-system/commit/58b74ffa89d14cc3f1a6e6a5ff1506610bdd0e5f)) - Ans
+- Add pagination component | Update eslint-plugin-cypress, eslint-plugin-jsdoc - ([e4db118](https://github.com/cfpb/design-system/commit/e4db1186f11105c81eb760095794e65d0db28481)) - Ans
+- Refactor pagination - ([dc99494](https://github.com/cfpb/design-system/commit/dc99494d9beb264464474d4860b4942d594a0fbf)) - Ans
+- Add i18n service - ([28476cc](https://github.com/cfpb/design-system/commit/28476ccc9094e9a303fa021c034294e3a5d61fcf)) - Ans
+- Refactor pagination - ([26c922f](https://github.com/cfpb/design-system/commit/26c922f286f93ea6892d8198535b55013db8819d)) - Ans
+- Add i18n-service jest tests - ([61a43ef](https://github.com/cfpb/design-system/commit/61a43ef528ad5ceb1f950e659003a86302916cdc)) - Ans
+- Lint files - ([8c290be](https://github.com/cfpb/design-system/commit/8c290bed57ecc2335f5c6c03b6070ca467067873)) - Ans
+- Add classes to pagination buttons - ([037e380](https://github.com/cfpb/design-system/commit/037e380c774b033b9de034d7429911d4160b81ca)) - Ans
+- Move link underlines to text-decoration instead of borders - ([c7f0ae9](https://github.com/cfpb/design-system/commit/c7f0ae93a69ba3b3b18e41bb47584dc11b58bbf5)) - Ans
+
+## [4.1.0](https://github.com/cfpb/design-system/compare/v4.0.4..vv4.1.0) - September 23, 2025
+
+### PRs in this release
+
+- PR #[2369](https://github.com/cfpb/design-system/pull/2369): Add more options to cfpb-buttons - Ans
+- PR #[2370](https://github.com/cfpb/design-system/pull/2370): Refactor cfpb-button - Ans
+- PR #[2367](https://github.com/cfpb/design-system/pull/2367): Add multiselect and label web component - Ans
+- PR #[2372](https://github.com/cfpb/design-system/pull/2372): Refactor cfpb-choice and cfpb-multiselect - Ans
+- PR #[2373](https://github.com/cfpb/design-system/pull/2373): Update eslint, eslint-plugin-jsdoc - Ans
+- PR #[2374](https://github.com/cfpb/design-system/pull/2374): Implement font-size-adjust calculation - Ans
+
+### General
+
+- Add more options to cfpb-buttons - ([2e1bde4](https://github.com/cfpb/design-system/commit/2e1bde4bef284f5627a3d1c986a76e83619bbc83)) - Ans
+- Remove unused class modifier - ([052ad99](https://github.com/cfpb/design-system/commit/052ad99fae57bfb5d11c50a875c3a5873b074c8f)) - Ans
+- Remove unused class - ([ac7f765](https://github.com/cfpb/design-system/commit/ac7f7658b87f0741de7954ad5512ef8a468993d6)) - Ans
+- Add missing jsdoc - ([3afa670](https://github.com/cfpb/design-system/commit/3afa670eac815013bc4876006254a029940e7669)) - Ans
+- Refactor cfpb-button - ([a2fb1ae](https://github.com/cfpb/design-system/commit/a2fb1ae8206c3dd13a7110f3d28978ac363fe996)) - Ans
+- Enable test - ([a518170](https://github.com/cfpb/design-system/commit/a5181709e92a784b039789e3161624cc0aa25a3b)) - Ans
+- Add multiselect web component - ([77cdbe0](https://github.com/cfpb/design-system/commit/77cdbe0e8c564b109ee0c1ce6c39950caa4e9036)) - Ans
+- Refactor cfpb-choice and cfpb-multiselect - ([7cbe534](https://github.com/cfpb/design-system/commit/7cbe534bc9791761a330c9f90cd6a54d664617eb)) - Ans
+- Linter fixes - ([fdd3941](https://github.com/cfpb/design-system/commit/fdd3941e00476586458eadc4288fcf1b1a4d0ac2)) - Ans
+- Implement font-size-adjust calculation - ([7056cd8](https://github.com/cfpb/design-system/commit/7056cd833a73ff436b68204917ec7d6a4fc582aa)) - Ans
+
+## [4.0.4](https://github.com/cfpb/design-system/compare/v4.0.3..vv4.0.4) - September 17, 2025
+
+### PRs in this release
+
+- PR #[2357](https://github.com/cfpb/design-system/pull/2357): cfpb-button/cfpb-file-upload: Adjust lit syntax - Ans
+
+### General
+
+- Adjustments to lit syntax - ([6a0982e](https://github.com/cfpb/design-system/commit/6a0982e130f25046da9aa14ee91bf2fdd20adcd7)) - Ans
+
+## [4.0.3](https://github.com/cfpb/design-system/compare/v4.0.2..vv4.0.3) - September 17, 2025
+
+### PRs in this release
+
+- PR #[2339](https://github.com/cfpb/design-system/pull/2339): Update dependencies: esbuild and eslint - Ans
+- PR #[2335](https://github.com/cfpb/design-system/pull/2335): Button WC: Update `isDisabled` property to `disabled` - Ans
+- PR #[2359](https://github.com/cfpb/design-system/pull/2359): Update Cypress to v15 | Update concurrently, cssnano, eslint, sass - Ans
+- PR #[2356](https://github.com/cfpb/design-system/pull/2356): Add checkbox/radio web components - Ans
+- PR #[2337](https://github.com/cfpb/design-system/pull/2337): Add tag web components - Ans
+- PR #[2362](https://github.com/cfpb/design-system/pull/2362): Add Jest unit tests for web components - Ans
+- PR #[2363](https://github.com/cfpb/design-system/pull/2363): Update dependencies: eslint, eslint-plugin-jsdoc, sass, stylelint - Ans
+- PR #[2366](https://github.com/cfpb/design-system/pull/2366): Refactor cfpb-tag-group - Ans
+- PR #[2365](https://github.com/cfpb/design-system/pull/2365): Update eslint-plugin-jsdoc, stylelint-config-standard-scss - Ans
+- PR #[2368](https://github.com/cfpb/design-system/pull/2368): Multiselect: Add padding to no results found state - Ans
+
+### General
+
+- Merge branch 'main' into dependabot/npm_and_yarn/form-data-4.0.4 - Ans
+- Re-built assets - ([eac70a1](https://github.com/cfpb/design-system/commit/eac70a10e87ea98db86b527349c637a840993c74)) - Ans
+- Update `isDisabled` property to `disabled` - ([4aa6e47](https://github.com/cfpb/design-system/commit/4aa6e4792b5d58da06dca427404760cd729facdd)) - Ans
+- Lint and build project - ([97e4e99](https://github.com/cfpb/design-system/commit/97e4e998870c613b8965a1ac202ef0537a645438)) - Ans
+- Add checkbox/radio web components - ([35f6f83](https://github.com/cfpb/design-system/commit/35f6f83668deebd4b05cdedac5bf0e9d55345aff)) - Ans
+- Add tag web components - ([eea7eb7](https://github.com/cfpb/design-system/commit/eea7eb71cea53390a461a56a2ebeeddeeb04ccb4)) - Ans
+- Update tag group to add API to add and remove tags - ([9bbc3fc](https://github.com/cfpb/design-system/commit/9bbc3fcff6c73c3221027807143255e33b17b401)) - Ans
+- Add custom click event for filter tag - ([25dbb22](https://github.com/cfpb/design-system/commit/25dbb22288fe9b769eb6f73482a4b3ee88f5fb40)) - Ans
+- Add tag web components - ([b7549b4](https://github.com/cfpb/design-system/commit/b7549b41e0a04d98a566b8428f9a108896967330)) - Ans
+- Add tests - ([1f200a9](https://github.com/cfpb/design-system/commit/1f200a902389d94f4ba776ddd28106963b9522fb)) - Ans
+- Autolint files - ([fb354e6](https://github.com/cfpb/design-system/commit/fb354e6cca6b43a1de29bd56d82907a719cf9401)) - Ans
+- Refactor cfpb-tag-group - ([d0437db](https://github.com/cfpb/design-system/commit/d0437db13a127f27f2ed427659f78905a79ce2c9)) - Ans
+- Lint files - ([f540aaa](https://github.com/cfpb/design-system/commit/f540aaa80985413f2f8f027e21ee9045ba57654c)) - Ans
+- Rebuilt dist files - ([6a06cb6](https://github.com/cfpb/design-system/commit/6a06cb6703bb05deb534b110e53750ec49298de3)) - Ans
+- Add padding to no results found state - ([ae74ae5](https://github.com/cfpb/design-system/commit/ae74ae5b61d112868d1616e1df79e5401fd33b3a)) - Ans
+- Fix linting error - ([dbcbc94](https://github.com/cfpb/design-system/commit/dbcbc942042c91d7e86e4c0c3f2eaba642e45206)) - Ans
+
+## [4.0.2](https://github.com/cfpb/design-system/compare/v4.0.1..vv4.0.2) - August  5, 2025
+
+### General
+
+- Delete packages/cfpb-design-system/src/components/cfpb-icons/font directory
+
+delete icon font folder and file - ([5bd827b](https://github.com/cfpb/design-system/commit/5bd827b849e9d933d64a755ca6f4637c845d6d0c)) - jenn-franklin
+
+## [4.0.1](https://github.com/cfpb/design-system/compare/v4.0.0..vv4.0.1) - July 15, 2025
+
+### PRs in this release
+
+- PR #[2320](https://github.com/cfpb/design-system/pull/2320): Update lit, cssnano, eslint, eslint-plugin-jsdoc | Move @fontsource-variable/source-sans-3 to published project - Ans
+
+### General
+
+- Update lit, cssnano, eslint, eslint-plugin-jsdoc | Move @fontsource-variable/source-sans-3 to published project - ([3427ba9](https://github.com/cfpb/design-system/commit/3427ba96b1ee5a106573361a3c4fed28e72759be)) - Ans
+
+## [4.0.0](https://github.com/cfpb/design-system/compare/v3.14.1..vv4.0.0) - July 15, 2025
 
 ### PRs in this release
 

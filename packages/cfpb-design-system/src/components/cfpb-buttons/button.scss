@@ -141,7 +141,8 @@ input.a-btn::-moz-focus-inner {
   //
 
   &--disabled,
-  &[disabled] {
+  &[disabled],
+  &[aria-disabled='true'] {
     &,
     &:link,
     &:visited,
@@ -205,7 +206,8 @@ input.a-btn::-moz-focus-inner {
   }
 
   &--disabled:has(svg)::before,
-  &[disabled]:has(svg)::before {
+  &[disabled]:has(svg)::before,
+  &[aria-disabled='true']:has(svg)::before {
     border-color: $btn-disabled-divider !important;
   }
 

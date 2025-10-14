@@ -52,7 +52,7 @@
       }
 
       .#{$jump-link-text-class} {
-        border-bottom-width: 0;
+        text-decoration: none;
 
         // Arbitrary high value for flex-shrink to prevent squeezing of the icon
         // when the link text is very long.
@@ -61,7 +61,7 @@
     }
   }
 
-  // We need to separate out the jump link
+  // We need to separate out the jump link.
   a.#{$jump-link-class} {
     @if $is-gold {
       border-color: var(--gold-80);
@@ -71,14 +71,20 @@
       .#{$jump-link-class}__text {
         border-bottom-color: var(--gold-80);
       }
-    } @else {
-      font-weight: 500;
     }
 
     // Mobile only.
     @include respond-to-max($bp-xs-max) {
+      text-decoration: none;
+      border-top-style: dotted;
+      border-bottom-style: dotted;
       border-top-width: 1px;
       border-bottom-width: 1px;
+
+      &:hover {
+        border-top-style: solid;
+        border-bottom-style: solid;
+      }
 
       // We create a faux focus rectangle in the ::after pseudoelement to better
       // control the positioning of the focus rectangle, which would overwise

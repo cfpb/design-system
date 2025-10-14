@@ -1,0 +1,266 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities' as *;
+
+:host {
+  .m-form-field {
+    // Theme variables.
+    --choice-border: var(--choice-border-default);
+    --choice-border-hover: var(--choice-border-hover-default);
+    --choice-border-focus: var(--choice-border-focus-default);
+    --choice-outline-focus: var(--choice-outline-focus-default);
+    --choice-bg: var(--choice-bg-default);
+    --choice-bg-selected: var(--choice-bg-selected-default);
+    --choice-bg-selected-focus: var(--choice-bg-selected-focus-default);
+    --choice-label-disabled: var(--choice-label-disabled-default);
+
+    // Private variables.
+    --choice-border-width-addendum: 0;
+
+    &--in-list label {
+      box-sizing: border-box;
+      padding-top: math.div(5px, $base-font-size-px) + em;
+      padding-right: 0;
+      padding-bottom: math.div(5px, $base-font-size-px) + em;
+      padding-left: math.div(10px, $base-font-size-px) + em;
+      width: 100%;
+    }
+
+    .a-label + .a-text-input {
+      margin-top: math.div(5px, $base-font-size-px) + em;
+    }
+
+    &--checkbox,
+    &--radio {
+      .a-label {
+        display: inline-grid;
+
+        // 30px is width of checkbox/radio button plus the needed padding.
+        grid-template-columns: math.div(30px, $base-font-size-px) + em auto;
+        vertical-align: top;
+        cursor: pointer;
+
+        // Wrap long words in narrow form fields to prevent clipping
+        overflow-wrap: anywhere;
+
+        &::before {
+          display: inline-block;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          border: 1px solid var(--choice-border);
+          outline: var(--choice-border-width-addendum) solid
+            var(--choice-border);
+          height: math.div(18px, $base-font-size-px) + em;
+          width: math.div(18px, $base-font-size-px) + em;
+          margin-right: 10px;
+          background-color: var(--choice-bg);
+          content: '';
+          vertical-align: top;
+
+          // Offset so that the checkbox/radio fits within focused area.
+          position: relative;
+          top: 1px;
+          left: 1px;
+        }
+
+        &:hover::before,
+        &.hover::before {
+          border-color: var(--choice-border-hover);
+        }
+      }
+
+      .a-checkbox,
+      .a-radio {
+        @include u-visually-hidden;
+
+        &:focus + .a-label,
+        &.focus + .a-label {
+          outline: 1px dotted var(--choice-outline-focus);
+          outline-offset: 1px;
+        }
+
+        &:disabled {
+          &:checked + .a-label::before,
+          &:focus + .a-label::before,
+          &.focus + .a-label::before,
+          &:hover + .a-label::before,
+          &.hover + .a-label::before {
+            border-color: var(--choice-border);
+            outline: none;
+            box-shadow: none; // Applies only to radio buttons.
+          }
+
+          & + .a-label {
+            cursor: not-allowed;
+            color: var(--choice-label-disabled);
+
+            &::before {
+              outline: none;
+            }
+          }
+        }
+      }
+
+      &:has(.a-checkbox:disabled),
+      &:has(.a-radio:disabled) {
+        --choice-border: var(--choice-border-disabled);
+        --choice-bg: var(--choice-bg-disabled);
+        --choice-bg-selected: var(--choice-bg-selected-disabled);
+      }
+
+      &-success,
+      &-warning,
+      &-error {
+        --choice-border-width-addendum: 1px;
+      }
+
+      &-success {
+        --choice-border: var(--choice-border-success);
+      }
+
+      &-warning {
+        --choice-border: var(--choice-border-warning);
+      }
+
+      &-error {
+        --choice-border: var(--choice-border-error);
+      }
+    }
+
+    &--checkbox {
+      .a-checkbox {
+        &:focus + .a-label::before,
+        &.focus + .a-label::before {
+          border-color: var(--choice-border-focus);
+          box-shadow: 0 0 0 1px var(--choice-border-focus);
+          outline-color: var(--choice-border-focus);
+        }
+
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
+          border-color: var(--choice-border-hover);
+          box-shadow: 0 0 0 1px var(--choice-border-hover);
+          outline-color: var(--choice-border-hover);
+        }
+
+        &:checked + .a-label::before {
+          --cfpb-background-icon-svg: 'approved';
+
+          background-size: auto $cf-icon-height;
+          background-repeat: no-repeat;
+          background-position: center 0;
+        }
+        &:disabled:checked + .a-label::before {
+          // RGB values are CFPB gray (#5a5d61).
+          // For some reason SVG isn't accepting hex values for the fill.
+          --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
+        }
+      }
+    }
+
+    &--radio {
+      .a-label {
+        &::before {
+          border-radius: 50%;
+
+          /* The rotate is needed to fix a bug in Firefox where radio
+           button was not centered. */
+          transform: rotate(0deg);
+        }
+      }
+
+      .a-radio {
+        &:focus + .a-label::before,
+        &.focus + .a-label::before {
+          outline: none;
+          border-color: var(--choice-border-focus);
+          box-shadow: 0 0 0 1px var(--choice-border-focus);
+        }
+
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
+          outline: none;
+          border-color: var(--choice-border-hover);
+          box-shadow: 0 0 0 1px var(--choice-border-hover);
+        }
+
+        &:checked + .a-label::before {
+          background-color: var(--choice-bg-selected);
+          box-shadow: inset 0 0 0 2px var(--white); // The radio button ring.
+        }
+
+        &:focus:checked + .a-label::before,
+        &.focus:checked + .a-label::before {
+          background-color: var(--choice-bg-selected-focus);
+          border-color: var(--choice-border-focus);
+          box-shadow:
+            0 0 0 1px var(--choice-border-focus),
+            inset 0 0 0 2px var(--white); // The radio button ring.
+        }
+
+        &:hover:checked + .a-label::before,
+        &.hover:checked + .a-label::before {
+          border-color: var(--choice-border-hover);
+          box-shadow:
+            0 0 0 1px var(--choice-border-hover),
+            inset 0 0 0 2px var(--white); // The radio button ring.
+        }
+
+        &:checked:disabled + .a-label::before,
+        &:hover:checked:disabled + .a-label::before,
+        &.hover:checked:disabled + .a-label::before {
+          background-color: var(--choice-bg-selected);
+          box-shadow: inset 0 0 0 2px var(--gray-10); // The radio button ring.
+          border-color: var(--choice-border-disabled);
+        }
+      }
+    }
+
+    &--lg-target {
+      display: block;
+
+      .a-label {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+        background-color: $form-field-input-lg-target-bg;
+      }
+
+      .a-checkbox,
+      .a-radio {
+        &:checked + .a-label {
+          background-color: $form-field-input-lg-target-bg-selected;
+          box-shadow: inset 0 0 0 1px $form-field-input-lg-target-border;
+        }
+
+        &:hover + .a-label,
+        &.hover + .a-label,
+        &:focus + .a-label,
+        &.focus + .a-label {
+          box-shadow: inset 0 0 0 2px $form-field-input-lg-target-border;
+        }
+
+        &:focus + .a-label,
+        &.focus + .a-label,
+        &:checked + .a-label {
+          outline-offset: 1px;
+        }
+
+        &:disabled + .a-label,
+        &:checked:disabled + .a-label,
+        &:hover:disabled + .a-label {
+          color: var(--choice-label-disabled);
+          box-shadow: none;
+          background-color: $form-field-input-lg-target-bg-disabled;
+        }
+
+        &:checked:disabled + .a-label {
+          &,
+          &::before {
+            border: 1px solid var(--form-field-border-disabled);
+          }
+        }
+      }
+    }
+  }
+}

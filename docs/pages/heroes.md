@@ -570,8 +570,8 @@ variation_groups:
               </style>
           </section>
         variation_implementation:
-          50/50 heroes have a 1px `var(--gray-40)` border on the sides
-          because, unlike standard heroes, their background does not
+          50/50 heroes have a 1px `var(--gray-40)` border on the
+          sides because, unlike standard heroes, their background does not
           horizontally bleed to the edges of the screen.
         variation_specs: >-
           * Two images may be created, one for large and one for small screens,
@@ -781,18 +781,7 @@ use_cases: >-
 
 
   * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
-behavior: >-
-  For style at different breakpoints, see [specs for standard
-  heroes](#standard-heroes).
-
-
-  | Above 600 px | Below 601 px |
-
-  | -- | ----- |
-
-  | Text and hero image appear side-by-side  | Text and hero image stack vertically |
-
-  | ![Mockup of hero graphic at desktop size](/design-system/images/uploads/hero_behavior_large.png "Mockup of hero graphic at desktop size") | ![Mockup of hero graphic at small size](/design-system/images/uploads/hero_behavior_small.png "Mockup of hero graphic at small size") |
+behavior: ''
 accessibility: ''
 related_items: >-
   - [Landing pages](https://cfpb.github.io/design-system/pages/landing-pages)

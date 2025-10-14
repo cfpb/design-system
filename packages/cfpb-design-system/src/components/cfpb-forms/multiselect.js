@@ -172,7 +172,7 @@ function Multiselect(element) {
 
   /**
    * Highlights an option in the list.
-   * @param {string} direction -
+   * @param {string} direction
    *   Direction to highlight compared to the current focus.
    */
   function _highlight(direction) {

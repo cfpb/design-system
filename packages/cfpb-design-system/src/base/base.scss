@@ -9,11 +9,11 @@
 //
 // Type hierarchy
 //
-
 body {
   color: $text;
   font-family: var(--font-stack);
   font-size: math.div($base-font-size, 16) * 100%;
+  font-size-adjust: var(--font-adjust-body);
   line-height: $base-line-height;
   -webkit-font-smoothing: antialiased;
 }
@@ -153,60 +153,48 @@ li {
 //
 
 a {
-  border-width: 0;
-  border-style: dotted;
-  border-color: $link-underline;
   color: $link-text;
-  text-decoration: none;
+
+  text-decoration-color: $link-underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-style: dotted;
+  text-underline-offset: 4.5px;
 
   // Note: The class definitions below are only for use in
   // demonstrating link states. Do not use in production.
 
   &:visited,
   &.visited {
-    border-color: $link-underline-visited;
+    text-decoration-color: $link-underline-visited;
     color: $link-text-visited;
   }
 
   &:hover,
   &.hover {
-    border-style: solid;
-    border-color: $link-underline-hover;
+    text-decoration-style: solid;
+    text-decoration-color: $link-underline-hover;
     color: $link-text-hover;
   }
 
   &:focus,
   &.focus {
-    border-style: solid;
+    text-decoration-style: solid;
     outline: thin dotted;
     outline-offset: 1px;
   }
 
   &:active,
   &.active {
-    border-style: solid;
-    border-color: $link-underline-active;
+    text-decoration-style: solid;
+    text-decoration-color: $link-underline-active;
     color: $link-text-active;
   }
 }
 
-//
-// Underlined links
-//
-
-p,
-li,
-dd {
-  // Restrict bottom borders to inline text links ...
-
-  a {
-    border-bottom-width: 1px;
-  }
-}
-
 nav a {
-  // ... unless they're part of a nav list
-  border-bottom-width: 0;
+  // Don't show underlines if they're part of a nav list.
+  text-decoration-line: none;
 }
 
 //

@@ -12,7 +12,7 @@ description: >-
   ## For designing wireframes or prototypes with the CFPB Design System
 
 
-  [Browse our components](/design-system/components/) for specifications or [go to the Foundation section](/design-system/components/) for more general information on using our logo, color palette, icons and fonts.
+  Check out [CFPB Design System](https://www.figma.com/community/file/1487539003249310850) in the Figma Community.
 
 
   ## Help us make improvements

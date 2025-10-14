@@ -5,15 +5,15 @@ status: Released
 variation_groups:
   - variations:
       - variation_code_snippet: >-
-          <p>Source Sans 3 Regular, 16px / 22px at all browser widths. Lorem ipsum
-          dolor sit amet, <em>consectetur adipisicing elit</em>, sed do
+          <p>Source Sans 3 Regular, 16px / 22px at all browser widths. Lorem
+          ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed do
 
           eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 
           aliquip ex ea commodo consequat.</p>
-        variation_description: ''
+        variation_description: ""
         variation_name: Body text
         variation_implementation: >-
           #### Vertical spacing
@@ -38,46 +38,57 @@ variation_groups:
 
 
           We’re trying out Source Sans 3 Medium with faux bolding in place of Source Sans 3 Semi Bold, though the results of that experiment have been less predictable, so we may yet revert that decision.
-        variation_specs: |-
-          * Source Sans 3 Regular
-          * 16px / 22px at all browser widths
+        variation_specs: >-
+          | **Paragraph text style** | **Font-weight** | **Font-size** |
+          **Font-size-adjust*** | **Line-height** | **Responsive behavior at
+          <601px** |
+
+          | ------------------------ | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
+
+          | Body text                | 400 (Regular)   | 16px          | 0.517                 | 22px            | No change                         |
       - variation_code_snippet: >-
           <p class="lead-paragraph">Source Sans 3 Regular, 22px / 28px on large
           screens and 18px / 22px on small screens. Ut enim ad minim veniam,
           quis nostrud exercitation
 
           ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        variation_description: ''
+        variation_description: ""
         variation_name: Lead paragraph
         variation_specs: >-
-          * Also referred to as a subheading
+          | **Paragraph text style**                      | **Font-weight** |
+          **Font-size** | **Font-size-adjust*** | **Line-height** | **Responsive
+          behavior at <601px** |
 
-          * Source Sans 3 Regular
+          | --------------------------------------------- | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
 
-          * Text is responsive. Displays as a Heading 3 (22px / 28px) on large screens (>601px wide). Displays at Heading 4 (18px / 22px but still Regular weight) on small screens (<601px wide).
+          | Lead style (also referred to as a subheading) | 400 (Regular)   | H3 (22px)     | 0.517                 | 27.5px          | Drops to H4                       |
     variation_group_name: Web paragraphs
   - variation_group_name: Print paragraphs
     variations:
       - variation_name: Body text
-        variation_specs: |-
-          * Source Sans 3 Regular
-          * 11pt / 16pt
-        variation_code_snippet: ''
-        variation_description: >-
-          <p style="font-size: 11pt; font-weight: 400; line-height:16pt">Source Sans 3 Regular, 11pt / 16pt. Lorem ipsum dolor sit amet, ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
+        variation_specs: >-
+          | **Paragraph text style** | **Font weight** | **Font size** | **Line
+          height** |
 
+          | ------------------------ | --------------- | ------------- | --------------- |
 
-          <br>
+          | Body text                | Regular         | 11pt          | 16pt            |
+        variation_code_snippet: ""
+        variation_description: Source Sans 3 Regular, 11pt / 16pt. Lorem ipsum dolor sit
+          amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
       - variation_name: Subheading
-        variation_specs: |-
-          * Source Sans 3 Regular
-          * 16pt / 20pt
-        variation_code_snippet: ''
-        variation_description: >-
+        variation_specs: >-
+          | **Paragraph text style** | **Font weight** | **Font size** | **Line
+          height** |
 
+          | ------------------------ | --------------- | ------------- | --------------- |
+
+          | Subheading               | Regular         | 16pt          | 20pt            |
+        variation_code_snippet: ""
+        variation_description: >-
+          
 
           <p style="font-size: 16pt; font-weight: 400; line-height:20pt">Source Sans 3 Regular, 16pt / 20pt. Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
@@ -91,14 +102,12 @@ title: Paragraphs
 description: Paragraph text should provide an efficient and pleasant experience
   on every viewport size. Readable text makes good use of alignment, spacing,
   line length and height, and contrast.
-use_cases: ''
-behavior: ''
-accessibility: ''
-related_items: >-
+use_cases: ""
+behavior: ""
+accessibility: ""
+related_items: |-
   * [Headings](https://cfpb.github.io/design-system/foundation/headings)
-
   * [Fonts](https://cfpb.github.io/design-system/foundation/fonts)
-
 last_updated: 2020-01-06T20:28:04.952Z
-research: ''
+research: ""
 ---

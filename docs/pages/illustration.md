@@ -1,14 +1,6 @@
 ---
-title: Illustration
 layout: variation
 section: foundation
-status: Released
-description: Illustrations are an important tool for introducing the subject
-  matter of a page, event, or topic. Illustrations are vector-based graphics
-  that support primary headers and text. They function as the brand’s top-level
-  illustration style with detail and clarity. Illustration is universally
-  relatable and accessible to all audiences. The content of an illustration
-  should always be politically and socially neutral.
 variation_groups:
   - variation_group_name: Types
     variations:
@@ -33,19 +25,18 @@ variation_groups:
 
           ![Paying for College illustration](/design-system/images/uploads/illustration6_-2.png)
         variation_name: Top-facing
-use_cases: ''
 guidelines: >-
   Illustrations are universally relatable and set a friendly tone when
   communicating complex topics.
 
 
-  The color palette should use the full range of primary and secondary colors, but selectively use a maximum of 3-4 colors, using midtones and tints to differentiate components. Illustrations should also make use of 100% white and black. Visit the [color page](https://cfpb.github.io/design-system/foundation/color) for color values. 
+  The color palette should use the full range of primary and secondary colors, but selectively use a maximum of three to four colors, using midtones and tints to differentiate components. Illustrations should also make use of 100% white and black. Visit the [color page](https://cfpb.github.io/design-system/foundation/color) for color values. 
 
 
   ### Composition
 
 
-  All illustrations should have relative sizing when more than one object is included. Illustrations should appear natural, but stylized. Do not scale-up or collage minicons or isocons for use in illustrations. Minicons can be used as graphic details when scaled appropriately.
+  All illustrations should have relative sizing when more than one object is included. Illustrations should appear natural, but stylized. Icons should not be used as visual graphics in place of illustrations. However, icons may be used within illustrations. 
 
 
   Illustrations should be compositionally balanced with related headers and text. Reduce “floating” by bleeding illustrations off the edges of the graphic. Make use of layering and subtle, vector-based background patterns to help ground the illustration. Shadows are appropriate when objects overlap but should not extend outside of objects.
@@ -118,6 +109,16 @@ guidelines: >-
 
 
   </div>
+eyebrow: Graphics
+title: Illustration
+status: Released
+description: Illustrations are an important tool for introducing the subject
+  matter of a page, event, or topic. Illustrations are vector-based graphics
+  that support primary headers and text. They function as the brand’s top-level
+  illustration style with detail and clarity. Illustration is universally
+  relatable and accessible to all audiences. The content of an illustration
+  should always be politically and socially neutral.
+use_cases: ''
 behavior: ''
 accessibility: >-
   ### Include text alternatives for non-text content
@@ -131,5 +132,4 @@ accessibility: >-
   * Use the `<title>` and `<desc>` elements in SVG drawings.
 
   * Include descriptive text near images (for example, a pie chart legend with percentages of each item).
-eyebrow: Graphics
 ---

@@ -4,12 +4,10 @@ section: components
 status: Released
 variation_groups:
   - variations:
-      - variation_code_snippet: >-
+      - variation_code_snippet: |-
           <div id="pagination_content"></div>
 
-
           <!-- Paginated content here -->
-
 
           <nav class="m-pagination" role="navigation" aria-label="Pagination">
               <a class="a-btn
@@ -105,16 +103,8 @@ title: Pagination
 description: Pagination is used for splitting up content or data into several
   pages, so as to make it easier for users to consume information.
 use_cases: ''
-behavior: >-
-  On small screens, the buttons display next to each other, stacked on top of
-  the form (`@bp-xs-max`).
-
-
-  | Above 600 px | Below 601 px |
-
-  | ------------ | ------------ |
-
-  | ![Pagination at breakpoints above 600 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.03-pm.png) | ![Pagination at breakpoints below 601 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.30-pm.png) |
+behavior: On small screens, the buttons display next to each other, stacked on
+  top of the form (`@bp-xs-max`).
 accessibility: ''
 related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z

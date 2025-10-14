@@ -83,6 +83,29 @@ $block-border-left: $block-border;
 $content-main-border: var(--gray-40);
 
 :root {
+  // Typography normalization
+  --font-adjust-base: 0.517;
+  --font-adjust-step: 0.0054;
+
+  /* Derived font-size-adjust-values */
+  --font-adjust-h1: calc(
+    var(--font-size-adjust-base) + (5 * var(--font-adjust-step))
+  );
+  --font-adjust-h2: calc(
+    var(--font-size-adjust-base) + (4 * var(--font-adjust-step))
+  );
+  --font-adjust-h3: calc(
+    var(--font-size-adjust-base) + (3 * var(--font-adjust-step))
+  );
+  --font-adjust-h4: calc(
+    var(--font-size-adjust-base) + (2 * var(--font-adjust-step))
+  );
+  --font-adjust-h5: calc(
+    var(--font-size-adjust-base) + (1 * var(--font-adjust-step))
+  );
+  --font-adjust-h6: var(--font-adjust-base);
+  --font-adjust-body: var(--font-adjust-base);
+
   // Form variables
 
   // .a-text-input

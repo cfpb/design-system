@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.2.2](https://github.com/cfpb/design-system/compare/v4.2.1..v4.2.2) - October  8, 2025
+## [4.2.3](https://github.com/cfpb/design-system/compare/v4.2.2..v4.2.3) - October 15, 2025
+
+### PRs in this release
+
+- PR #[2391](https://github.com/cfpb/design-system/pull/2391): Remove "read more" links from card pattern - Ans
+
+### General
+
+- Remove links from card headings - ([7fc4db4](https://github.com/cfpb/design-system/commit/7fc4db490acebe060be1cb311546481a05077521)) - Ans
+- Revert card heading links - ([f53fa8f](https://github.com/cfpb/design-system/commit/f53fa8fe36285f73e16f65de3323336d34cf21f3)) - Ans
+
+## [4.2.2](https://github.com/cfpb/design-system/compare/v4.2.1..vv4.2.2) - October  8, 2025
 
 ### PRs in this release
 

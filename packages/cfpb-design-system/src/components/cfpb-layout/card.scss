@@ -102,7 +102,13 @@
   }
 
   // Regular cards.
-  &__heading {
+  &__heading > a {
+    color: var(--black);
+
+    &:hover {
+      color: var(--pacific);
+    }
+
     & .m-card__icon {
       font-size: 1em;
       margin-bottom: 0;

@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.2.3](https://github.com/cfpb/design-system/compare/v4.2.2..v4.2.3) - October 15, 2025
+## [4.2.4](https://github.com/cfpb/design-system/compare/v4.2.3..v4.2.4) - October 16, 2025
+
+### PRs in this release
+
+- PR #[2402](https://github.com/cfpb/design-system/pull/2402): Update yarn, cypress, esbuild, eslint-plugin-jsdoc - Ans
+- PR #[2403](https://github.com/cfpb/design-system/pull/2403): Fix link consistency issues - Ans
+
+### General
+
+- Build assets - ([5c62585](https://github.com/cfpb/design-system/commit/5c62585effaa9b796b06d4709d07394c30fae486)) - Ans
+- Fix link consistency issues - ([5c175cf](https://github.com/cfpb/design-system/commit/5c175cf56e67df55745dafecd45c31de8c467383)) - Ans
+
+## [4.2.3](https://github.com/cfpb/design-system/compare/v4.2.2..vv4.2.3) - October 15, 2025
 
 ### PRs in this release
 

@@ -33,7 +33,6 @@ $a: Link active color.
 
     &:focus,
     &.focus {
-      text-decoration-style: solid;
       background-color: transparent;
       outline: 1px dotted $f;
       color: $f;

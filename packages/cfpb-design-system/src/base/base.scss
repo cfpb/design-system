@@ -30,6 +30,7 @@ textarea {
   // which will make the button taller than the input.
   // Fix that by setting the line height on the button and the input.
   line-height: math.div(19px, $base-font-size-px);
+  font-size-adjust: var(--font-adjust-body);
 }
 
 /*
@@ -179,7 +180,6 @@ a {
 
   &:focus,
   &.focus {
-    text-decoration-style: solid;
     outline: thin dotted;
     outline-offset: 1px;
   }

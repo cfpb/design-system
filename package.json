@@ -59,8 +59,8 @@
     "autoprefixer": "10.4.21",
     "concurrently": "9.2.1",
     "cssnano": "7.1.1",
-    "cypress": "15.3.0",
-    "esbuild": "0.25.10",
+    "cypress": "15.4.0",
+    "esbuild": "0.25.11",
     "esbuild-plugin-liquid": "0.2.0",
     "esbuild-plugin-minify-html-literals": "3.0.0",
     "eslint": "9.37.0",
@@ -68,7 +68,7 @@
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-cypress": "5.2.0",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jsdoc": "61.0.0",
+    "eslint-plugin-jsdoc": "61.1.4",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-lit": "2.1.1",
     "eslint-plugin-react": "7.37.5",
@@ -116,5 +116,5 @@
     }
   },
   "type": "module",
-  "packageManager": "yarn@4.9.4"
+  "packageManager": "yarn@4.10.3"
 }

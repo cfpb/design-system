@@ -63,7 +63,7 @@ variation_groups:
         variation_name: Checkbox (with helper text)
         variation_code_snippet: >-
           <div class="m-form-field m-form-field--checkbox">
-              <input class="a-radio" type="checkbox" id="test_checkbox_basic_helper">
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_helper">
               <label class="a-label" for="test_checkbox_basic_helper">
           Label
                   <small class="a-label__helper">

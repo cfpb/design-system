@@ -126,6 +126,9 @@
         width: 100%;
         border-top: 1px solid currentcolor;
       }
+      a.#{$jump-link-class}:focus::before {
+        border-top-style: dotted;
+      }
     }
   }
 }

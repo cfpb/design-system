@@ -4326,6 +4326,7 @@ __metadata:
     jest: "npm:29.7.0"
     jest-cli: "npm:29.7.0"
     jest-environment-jsdom: "npm:29.7.0"
+    liquidjs: "npm:10.22.0"
     lit: "npm:3.3.1"
     lunr: "npm:2.3.9"
     marked: "npm:12.0.2"
@@ -4335,7 +4336,6 @@ __metadata:
     prop-types: "npm:15.8.1"
     react: "npm:18.3.1"
     react-is: "npm:18.3.1"
-    react-liquid: "npm:2.0.1"
     release-it: "npm:19.0.5"
     sass: "npm:1.93.2"
     slugify: "npm:1.6.6"
@@ -4748,6 +4748,13 @@ __metadata:
   version: 1.0.8
   resolution: "comma-separated-tokens@npm:1.0.8"
   checksum: 10c0/c3bcfeaa6d50313528a006a40bcc0f9576086665c9b48d4b3a76ddd63e7d6174734386c98be1881cbf6ecfc25e1db61cd775a7b896d2ea7a65de28f83a0f9b17
+  languageName: node
+  linkType: hard
+
+"commander@npm:^10.0.0":
+  version: 10.0.1
+  resolution: "commander@npm:10.0.1"
+  checksum: 10c0/53f33d8927758a911094adadda4b2cbac111a5b377d8706700587650fd8f45b0bbe336de4b5c3fe47fd61f420a3d9bd452b6e0e6e5600a7e74d7bf0174f6efe3
   languageName: node
   linkType: hard
 
@@ -10922,10 +10929,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liquidjs@npm:^6.0.0":
-  version: 6.4.3
-  resolution: "liquidjs@npm:6.4.3"
-  checksum: 10c0/0dd7fbde69e14709b175860eb917a5868db52a67ffc09893d78420ab8e921b6b81e000205e874743ef3f144172f249103b07a965cc028ae813358568b0812a05
+"liquidjs@npm:10.22.0":
+  version: 10.22.0
+  resolution: "liquidjs@npm:10.22.0"
+  dependencies:
+    commander: "npm:^10.0.0"
+  bin:
+    liquid: bin/liquid.js
+    liquidjs: bin/liquid.js
+  checksum: 10c0/9f6d1ee79371b29798b59e3288beb1a413cb7c85dc6cb6e2937cf591b91af1a49f27ac95c4231c14e20c7e70c6d72f0a2b3c1ebda8cc0077d56cb70c0a5e5dbc
   languageName: node
   linkType: hard
 
@@ -13894,19 +13906,6 @@ __metadata:
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
   checksum: 10c0/1d0df3c85af79df720524780f00c064d53a9dd1899d785eddb7264b378026979acbddb58a4b7e06e7d0d12aa1494fd5754562ee55d32907b15601068dae82c27
-  languageName: node
-  linkType: hard
-
-"react-liquid@npm:2.0.1":
-  version: 2.0.1
-  resolution: "react-liquid@npm:2.0.1"
-  dependencies:
-    liquidjs: "npm:^6.0.0"
-  peerDependencies:
-    prop-types: ^15.5.4
-    react: ^16.8.0
-    react-dom: ^16.8.0
-  checksum: 10c0/063bd037e68a9b636a77c824956395d0b265131dd6db9bf405c5455bceff74a4302549688cb29aa4fe6864d98d321dd9c20a01fff016119a83290e683e7dd754
   languageName: node
   linkType: hard
 

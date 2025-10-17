@@ -1,0 +1,74 @@
+{
+  "cfpb-typography": {
+    "date": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-typography",
+          "collectionID": "VariableCollectionId:8202:7295",
+          "modeName": "default",
+          "modeID": "8202:6",
+          "variableName": "date",
+          "variableID": "VariableID:8202:7300"
+        }
+      }
+    },
+    "pull-quote-body": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.black}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-typography",
+          "collectionID": "VariableCollectionId:8202:7295",
+          "modeName": "default",
+          "modeID": "8202:6",
+          "variableName": "pull-quote-body",
+          "variableID": "VariableID:8202:7307"
+        }
+      }
+    },
+    "pull-quote-citation": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-typography",
+          "collectionID": "VariableCollectionId:8202:7295",
+          "modeName": "default",
+          "modeID": "8202:6",
+          "variableName": "pull-quote-citation",
+          "variableID": "VariableID:8202:7306"
+        }
+      }
+    },
+    "slug-header-border-thick": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.green}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-typography",
+          "collectionID": "VariableCollectionId:8202:7295",
+          "modeName": "default",
+          "modeID": "8202:6",
+          "variableName": "slug-header-border-thick",
+          "variableID": "VariableID:8202:7313"
+        }
+      }
+    },
+    "slug-header-border-thin": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray-40}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-typography",
+          "collectionID": "VariableCollectionId:8202:7295",
+          "modeName": "default",
+          "modeID": "8202:6",
+          "variableName": "slug-header-border-thin",
+          "variableID": "VariableID:8202:7314"
+        }
+      }
+    }
+  }
+}

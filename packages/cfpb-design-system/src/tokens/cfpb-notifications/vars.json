@@ -1,0 +1,172 @@
+{
+  "cfpb-notifications": {
+    "notification-bg": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray-5}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-bg",
+          "variableID": "VariableID:8202:7271"
+        }
+      }
+    },
+    "notification-bg-success": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.green-10}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-bg-success",
+          "variableID": "VariableID:8202:7266"
+        }
+      }
+    },
+    "notification-bg-warning": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gold-10}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-bg-warning",
+          "variableID": "VariableID:8202:7264"
+        }
+      }
+    },
+    "notification-border": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray-40}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-border",
+          "variableID": "VariableID:8202:7262"
+        }
+      }
+    },
+    "notification-border-error": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.red}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-border-error",
+          "variableID": "VariableID:8202:7273"
+        }
+      }
+    },
+    "notification-border-success": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.green}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-border-success",
+          "variableID": "VariableID:8202:7269"
+        }
+      }
+    },
+    "notification-border-warning": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gold}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-border-warning",
+          "variableID": "VariableID:8202:7265"
+        }
+      }
+    },
+    "notification-icon": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gray}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-icon",
+          "variableID": "VariableID:8202:7270"
+        }
+      }
+    },
+    "notification-icon-error": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.red}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-icon-error",
+          "variableID": "VariableID:8202:7272"
+        }
+      }
+    },
+    "notification-icon-success": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.green}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-icon-success",
+          "variableID": "VariableID:8202:7263"
+        }
+      }
+    },
+    "notification-icon-warning": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.gold}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notification-icon-warning",
+          "variableID": "VariableID:8202:7267"
+        }
+      }
+    },
+    "notrification-bg--error": {
+      "$type": "color",
+      "$value": "{abstracts/custom-props.red-10}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-notifications",
+          "collectionID": "VariableCollectionId:8202:7235",
+          "modeName": "default",
+          "modeID": "8202:3",
+          "variableName": "notrification-bg--error",
+          "variableID": "VariableID:8202:7268"
+        }
+      }
+    }
+  }
+}

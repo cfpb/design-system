@@ -1,0 +1,36 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --btn-font-size: 16px;
+  --btn-border-radius-size: 4px;
+  --btn-v-padding: 8px;
+  --btn-h-padding: 14px;
+  --btn-v-padding-modifier-ie: 0.8px;
+  --btn-super-font-size: 18px;
+  --btn-text: #ffffff;
+  --btn-bg: #0072ce;
+  --btn-divider: #7eb7e8;
+  --btn-bg-hover: #0050b4;
+  --btn-bg-active: #254b87;
+  --btn-disabled-text: #43484e;
+  --btn-disabled-bg: #d2d3d5;
+  --btn-disabled-outline: #d2d3d5;
+  --btn-disabled-divider: #919395;
+  --btn-secondary-text: #0072ce;
+  --btn-secondary-text-hover: #0050b4;
+  --btn-secondary-text-active: #254b87;
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-bg-hover: #eff8fd;
+  --btn-secondary-bg-active: #d6e8fa;
+  --btn-secondary-border: #0072ce;
+  --btn-secondary-border-hover: #0050b4;
+  --btn-secondary-border-active: #254b87;
+  --btn-secondary-divider: #7eb7e8;
+  --btn-warning-text: #ffffff;
+  --btn-warning-bg: #c3381c;
+  --btn-warning-bg-hover: #b63014;
+  --btn-warning-bg-active: #43484e;
+  --btn-warning-divider: #e79e8e;
+}

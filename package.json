@@ -40,16 +40,15 @@
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
-    "@types/react": "18.3.12",
+    "@types/react": "19.2.2",
     "anchor-js": "5.0.0",
-    "decap-cms-app": "3.4.0",
-    "html-entities": "2.5.3",
+    "decap-cms-app": "3.8.4",
+    "html-entities": "2.6.0",
     "liquidjs": "10.22.0",
     "lit": "3.3.1",
     "lunr": "2.3.9",
-    "marked": "12.0.2",
-    "react": "18.3.1",
-    "react-is": "18.3.1",
+    "marked": "16.4.1",
+    "react": "19.1.0",
     "slugify": "1.6.6"
   },
   "devDependencies": {

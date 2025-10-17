@@ -1,16 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { ReactLiquid, liquidEngine } from 'react-liquid';
+import ReactLiquid from './ReactLiquid';
 import {
   TOGGLE_ATTRIBUTE,
   toggleDetails,
 } from '../../../../assets/js/toggle-details.js';
 import Tabs from '../../../../assets/js/tabs.js';
-import { encode } from 'html-entities';
-import slugify from 'slugify';
 import template from '../../../../_includes/variation-content.html';
-
-import { marked } from '../../../../../node_modules/marked/lib/marked.esm.js';
 
 // react-liquid (https://github.com/aquibm/react-liquid/) isn't able to `include` other files so we
 // replace instances of {% include icons/XXXXX.svg %} with the inlined SVG
@@ -27,18 +23,6 @@ export default class Preview extends Component {
     const script = document.createElement('script');
     script.src = '../dist/admin/main-preview.js';
     document.head.appendChild(script);
-
-    liquidEngine.registerFilter('slugify', (initial) =>
-      slugify(initial || '', { lower: true }),
-    );
-    liquidEngine.registerFilter('xml_escape', (initial) => encode(initial));
-    liquidEngine.registerFilter('markdownify', (initial) =>
-      marked.parse(initial || ''),
-    );
-    liquidEngine.registerFilter(
-      'strip',
-      (initial) => initial && initial.trim(),
-    );
 
     this.containerRef = React.createRef();
   }

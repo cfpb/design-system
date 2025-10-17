@@ -18,7 +18,9 @@ export const StringTrimmedControl = ({
       onChange={(e) => onChange(e.target.value)}
       onFocus={setActiveStyle}
       onBlur={(e) => {
-        e.target.value.trim();
+        const trimmed = e.target.value.trim();
+        e.target.value = trimmed;
+        onChange(trimmed);
         setInactiveStyle();
       }}
     />

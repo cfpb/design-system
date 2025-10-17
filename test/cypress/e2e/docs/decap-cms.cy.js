@@ -13,20 +13,19 @@ const getIframeBody = () => {
   );
 };
 
+function setupCmsVisit(path) {
+  cy.reload(true);
+  cy.visit(path);
+  cy.get('button').contains('Login').should('be.visible');
+  cy.get('button').contains('Login').click();
+  cy.get('div').contains('Loading entry...');
+  cy.get('label').contains('Page title').should('be.visible');
+}
+
 describe('Decap CMS', () => {
   describe('Editing the homepage', () => {
     beforeEach(() => {
-      cy.reload();
-      cy.visit('/admin/#/collections/special-pages/entries/home');
-      cy.intercept('http://localhost:8081/api/v1').as('getApi');
-      cy.get('button').contains('Login').should('be.visible');
-      cy.get('button').contains('Login').click();
-      cy.get('div').contains('Loading entry...');
-      cy.wait(['@getApi', '@getApi'], {
-        timeout: 100000,
-      }).then(() => {
-        cy.get('label').contains('Page title').should('be.visible');
-      });
+      setupCmsVisit('/admin/#/collections/special-pages/entries/home');
     });
 
     it('should properly render a preview of a page', () => {
@@ -44,16 +43,7 @@ describe('Decap CMS', () => {
 
   describe('Editing a component page', () => {
     beforeEach(() => {
-      cy.reload();
-      cy.visit('/admin/#/collections/pages/entries/buttons');
-      cy.intercept('http://localhost:8081/api/v1').as('getApi');
-      cy.get('button').contains('Login').should('be.visible');
-      cy.get('button').contains('Login').click();
-      cy.get('div').contains('Loading entry...');
-      cy.wait(['@getApi', '@getApi'], {
-        timeout: 100000,
-      });
-      cy.get('label').contains('Page title').should('be.visible');
+      setupCmsVisit('/admin/#/collections/pages/entries/buttons');
     });
 
     it('should properly render a preview of a component page', () => {

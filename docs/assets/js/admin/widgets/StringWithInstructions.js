@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
 
 const instructionsContainerStyle = {
@@ -21,10 +22,6 @@ export const StringWithInstructionsControl = ({
   setActiveStyle,
   setInactiveStyle,
 }) => {
-  const handleChange = (event) => {
-    onChange(event.target.value.trim());
-  };
-
   return (
     <div>
       <input
@@ -32,9 +29,14 @@ export const StringWithInstructionsControl = ({
         id={forID}
         className={classNameWrapper}
         value={value}
-        onChange={handleChange}
+        onChange={(e) => onChange(e.target.value)}
         onFocus={setActiveStyle}
-        onBlur={setInactiveStyle}
+        onBlur={(e) => {
+          const trimmed = e.target.value.trim();
+          e.target.value = trimmed;
+          onChange(trimmed);
+          setInactiveStyle();
+        }}
       />
       <div style={instructionsContainerStyle}>
         Need help? Check out our guide on&nbsp;

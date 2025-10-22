@@ -1,13 +1,13 @@
 {
-  "abstracts/vars": {
+  "abstracts-vars": {
     "block-bg": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-5}",
+      "$value": "{abstracts-custom-props.gray-5}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "block-bg",
           "variableID": "VariableID:8198:7076"
@@ -16,12 +16,12 @@
     },
     "block-border": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-40}",
+      "$value": "{abstracts-custom-props.gray-40}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "block-border",
           "variableID": "VariableID:8198:7075"
@@ -30,12 +30,12 @@
     },
     "block-border-bottom": {
       "$type": "color",
-      "$value": "{UI colors.block-border}",
+      "$value": "{abstracts-vars.block-border}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "block-border-bottom",
           "variableID": "VariableID:8198:7074"
@@ -44,12 +44,12 @@
     },
     "block-border-left": {
       "$type": "color",
-      "$value": "{UI colors.block-border}",
+      "$value": "{abstracts-vars.block-border}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "block-border-left",
           "variableID": "VariableID:8198:7071"
@@ -58,12 +58,12 @@
     },
     "block-border-right": {
       "$type": "color",
-      "$value": "{UI colors.block-border}",
+      "$value": "{abstracts-vars.block-border}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "block-border-right",
           "variableID": "VariableID:8198:7072"
@@ -72,12 +72,12 @@
     },
     "block-border-top": {
       "$type": "color",
-      "$value": "{UI colors.block-border}",
+      "$value": "{abstracts-vars.block-border}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "block-border-top",
           "variableID": "VariableID:8198:7073"
@@ -86,12 +86,12 @@
     },
     "choice-bg-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.white}",
+      "$value": "{abstracts-custom-props.white}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-bg-default",
           "variableID": "VariableID:8202:7189"
@@ -100,12 +100,12 @@
     },
     "choice-bg-disabled": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-10}",
+      "$value": "{abstracts-custom-props.gray-10}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-bg-disabled",
           "variableID": "VariableID:8202:7188"
@@ -114,12 +114,12 @@
     },
     "choice-bg-selected-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-bg-selected-default",
           "variableID": "VariableID:8202:7198"
@@ -128,12 +128,12 @@
     },
     "choice-bg-selected-disabled": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-40}",
+      "$value": "{abstracts-custom-props.gray-40}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-bg-selected-disabled",
           "variableID": "VariableID:8202:7201"
@@ -142,12 +142,12 @@
     },
     "choice-bg-selected-focus-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-bg-selected-focus-default",
           "variableID": "VariableID:8202:7197"
@@ -156,12 +156,12 @@
     },
     "choice-border-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-60}",
+      "$value": "{abstracts-custom-props.gray-60}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-border-default",
           "variableID": "VariableID:8202:7194"
@@ -170,12 +170,12 @@
     },
     "choice-border-disabled": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-60}",
+      "$value": "{abstracts-custom-props.gray-60}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-border-disabled",
           "variableID": "VariableID:8202:7200"
@@ -184,12 +184,12 @@
     },
     "choice-border-error": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.red}",
+      "$value": "{abstracts-custom-props.red}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-border-error",
           "variableID": "VariableID:8202:7192"
@@ -198,12 +198,12 @@
     },
     "choice-border-focus-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-border-focus-default",
           "variableID": "VariableID:8202:7199"
@@ -212,12 +212,12 @@
     },
     "choice-border-hover-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-border-hover-default",
           "variableID": "VariableID:8202:7191"
@@ -226,12 +226,12 @@
     },
     "choice-border-success": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.green}",
+      "$value": "{abstracts-custom-props.green}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-border-success",
           "variableID": "VariableID:8202:7193"
@@ -240,12 +240,12 @@
     },
     "choice-border-warning": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gold}",
+      "$value": "{abstracts-custom-props.gold}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-border-warning",
           "variableID": "VariableID:8202:7195"
@@ -254,12 +254,12 @@
     },
     "choice-label-disabled-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-dark}",
+      "$value": "{abstracts-custom-props.gray-dark}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-label-disabled-default",
           "variableID": "VariableID:8202:7196"
@@ -268,12 +268,12 @@
     },
     "choice-outline-focus-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "choice-outline-focus-default",
           "variableID": "VariableID:8202:7190"
@@ -282,12 +282,12 @@
     },
     "code-bg": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-5}",
+      "$value": "{abstracts-custom-props.gray-5}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "code-bg",
           "variableID": "VariableID:8198:7056"
@@ -296,12 +296,12 @@
     },
     "code-text": {
       "$type": "color",
-      "$value": "{UI colors.text}",
+      "$value": "{abstracts-vars.text}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "code-text",
           "variableID": "VariableID:8198:7057"
@@ -310,12 +310,12 @@
     },
     "content-main-border": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-40}",
+      "$value": "{abstracts-custom-props.gray-40}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "content-main-border",
           "variableID": "VariableID:8198:7080"
@@ -324,12 +324,12 @@
     },
     "form-alert-icon-color-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray}",
+      "$value": "{abstracts-custom-props.gray}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "form-alert-icon-color-default",
           "variableID": "VariableID:8202:7132"
@@ -338,12 +338,12 @@
     },
     "form-alert-icon-color-error": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.red}",
+      "$value": "{abstracts-custom-props.red}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "form-alert-icon-color-error",
           "variableID": "VariableID:8202:7129"
@@ -352,12 +352,12 @@
     },
     "form-alert-icon-color-success": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.green}",
+      "$value": "{abstracts-custom-props.green}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "form-alert-icon-color-success",
           "variableID": "VariableID:8202:7131"
@@ -366,12 +366,12 @@
     },
     "form-alert-icon-color-warning": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gold}",
+      "$value": "{abstracts-custom-props.gold}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "form-alert-icon-color-warning",
           "variableID": "VariableID:8202:7130"
@@ -380,12 +380,12 @@
     },
     "form-field-input-lg-target-bg": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-10}",
+      "$value": "{abstracts-custom-props.gray-10}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "form-field-input-lg-target-bg",
           "variableID": "VariableID:8202:7214"
@@ -394,12 +394,12 @@
     },
     "form-field-input-lg-target-bg-disabled": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-20}",
+      "$value": "{abstracts-custom-props.gray-20}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "form-field-input-lg-target-bg-disabled",
           "variableID": "VariableID:8202:7212"
@@ -408,12 +408,12 @@
     },
     "form-field-input-lg-target-bg-selected": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific-20}",
+      "$value": "{abstracts-custom-props.pacific-20}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "form-field-input-lg-target-bg-selected",
           "variableID": "VariableID:8202:7213"
@@ -422,12 +422,12 @@
     },
     "form-field-input-lg-target-border": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "form-field-input-lg-target-border",
           "variableID": "VariableID:8202:7211"
@@ -436,12 +436,12 @@
     },
     "input-bg-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.white}",
+      "$value": "{abstracts-custom-props.white}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-bg-default",
           "variableID": "VariableID:8198:7119"
@@ -450,12 +450,12 @@
     },
     "input-bg-disabled-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-10}",
+      "$value": "{abstracts-custom-props.gray-10}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-bg-disabled-default",
           "variableID": "VariableID:8198:7118"
@@ -464,12 +464,12 @@
     },
     "input-border-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-60}",
+      "$value": "{abstracts-custom-props.gray-60}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-border-default",
           "variableID": "VariableID:8198:7109"
@@ -478,12 +478,12 @@
     },
     "input-border-disabled": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-60}",
+      "$value": "{abstracts-custom-props.gray-60}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-border-disabled",
           "variableID": "VariableID:8198:7112"
@@ -492,12 +492,12 @@
     },
     "input-border-error": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.red}",
+      "$value": "{abstracts-custom-props.red}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-border-error",
           "variableID": "VariableID:8198:7106"
@@ -506,12 +506,12 @@
     },
     "input-border-focus-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-border-focus-default",
           "variableID": "VariableID:8198:7110"
@@ -520,12 +520,12 @@
     },
     "input-border-hover-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-border-hover-default",
           "variableID": "VariableID:8198:7108"
@@ -534,12 +534,12 @@
     },
     "input-border-success": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.green}",
+      "$value": "{abstracts-custom-props.green}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-border-success",
           "variableID": "VariableID:8198:7107"
@@ -548,12 +548,12 @@
     },
     "input-border-warning": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gold}",
+      "$value": "{abstracts-custom-props.gold}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-border-warning",
           "variableID": "VariableID:8198:7111"
@@ -562,12 +562,12 @@
     },
     "input-text-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.black}",
+      "$value": "{abstracts-custom-props.black}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-text-default",
           "variableID": "VariableID:8198:7090"
@@ -576,12 +576,12 @@
     },
     "input-text-disabled-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-dark}",
+      "$value": "{abstracts-custom-props.gray-dark}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-text-disabled-default",
           "variableID": "VariableID:8198:7088"
@@ -590,12 +590,12 @@
     },
     "input-text-placeholder-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-dark}",
+      "$value": "{abstracts-custom-props.gray-dark}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "input-text-placeholder-default",
           "variableID": "VariableID:8198:7089"
@@ -604,12 +604,12 @@
     },
     "label-helper": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-dark}",
+      "$value": "{abstracts-custom-props.gray-dark}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "label-helper",
           "variableID": "VariableID:8202:7218"
@@ -618,13 +618,13 @@
     },
     "link-text": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$description": "a",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "link-text",
           "variableID": "VariableID:8198:7040"
@@ -633,13 +633,13 @@
     },
     "link-text-active": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.navy}",
+      "$value": "{abstracts-custom-props.navy}",
       "$description": "a",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "link-text-active",
           "variableID": "VariableID:8198:7033"
@@ -648,13 +648,13 @@
     },
     "link-text-hover": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific-dark}",
+      "$value": "{abstracts-custom-props.pacific-dark}",
       "$description": "a",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "link-text-hover",
           "variableID": "VariableID:8198:7036"
@@ -663,13 +663,13 @@
     },
     "link-text-visited": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.teal}",
+      "$value": "{abstracts-custom-props.teal}",
       "$description": "a",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "link-text-visited",
           "variableID": "VariableID:8198:7038"
@@ -678,13 +678,13 @@
     },
     "link-underline": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$description": "a",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "link-underline",
           "variableID": "VariableID:8198:7039"
@@ -693,13 +693,13 @@
     },
     "link-underline-active": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.navy}",
+      "$value": "{abstracts-custom-props.navy}",
       "$description": "a",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "link-underline-active",
           "variableID": "VariableID:8198:7034"
@@ -708,13 +708,13 @@
     },
     "link-underline-hover": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific-dark}",
+      "$value": "{abstracts-custom-props.pacific-dark}",
       "$description": "a",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "link-underline-hover",
           "variableID": "VariableID:8198:7035"
@@ -723,13 +723,13 @@
     },
     "link-underline-visited": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.teal}",
+      "$value": "{abstracts-custom-props.teal}",
       "$description": "a",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "link-underline-visited",
           "variableID": "VariableID:8198:7037"
@@ -738,12 +738,12 @@
     },
     "range-bg": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-10}",
+      "$value": "{abstracts-custom-props.gray-10}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "range-bg",
           "variableID": "VariableID:8202:7233"
@@ -752,12 +752,12 @@
     },
     "range-bg-focused": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific-20}",
+      "$value": "{abstracts-custom-props.pacific-20}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "range-bg-focused",
           "variableID": "VariableID:8202:7230"
@@ -766,12 +766,12 @@
     },
     "range-bg-track": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-80}",
+      "$value": "{abstracts-custom-props.gray-80}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "range-bg-track",
           "variableID": "VariableID:8202:7231"
@@ -780,12 +780,12 @@
     },
     "range-border": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-40}",
+      "$value": "{abstracts-custom-props.gray-40}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "range-border",
           "variableID": "VariableID:8202:7234"
@@ -794,12 +794,12 @@
     },
     "range-border-focused": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "range-border-focused",
           "variableID": "VariableID:8202:7232"
@@ -808,40 +808,26 @@
     },
     "select-bg-disabled-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-10}",
+      "$value": "{abstracts-custom-props.gray-10}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "select-bg-disabled-default",
           "variableID": "VariableID:8202:7157"
         }
       }
     },
-    "select-border": {
-      "$type": "color",
-      "$value": "{UI colors.select-border-default}",
-      "$extensions": {
-        "com.figma": {
-          "collectionName": "abstracts/vars",
-          "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
-          "modeID": "8191:2",
-          "variableName": "select-border",
-          "variableID": "VariableID:8202:7144"
-        }
-      }
-    },
     "select-border-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-60}",
+      "$value": "{abstracts-custom-props.gray-60}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "select-border-default",
           "variableID": "VariableID:8202:7146"
@@ -850,12 +836,12 @@
     },
     "select-border-error": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.red}",
+      "$value": "{abstracts-custom-props.red}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "select-border-error",
           "variableID": "VariableID:8202:7145"
@@ -864,12 +850,12 @@
     },
     "select-border-focus-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "select-border-focus-default",
           "variableID": "VariableID:8202:7147"
@@ -878,12 +864,12 @@
     },
     "select-border-hover-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.pacific}",
+      "$value": "{abstracts-custom-props.pacific}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "select-border-hover-default",
           "variableID": "VariableID:8202:7148"
@@ -892,12 +878,12 @@
     },
     "select-icon-bg-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-10}",
+      "$value": "{abstracts-custom-props.gray-10}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "select-icon-bg-default",
           "variableID": "VariableID:8202:7158"
@@ -906,12 +892,12 @@
     },
     "select-text-disabled-default": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-dark}",
+      "$value": "{abstracts-custom-props.gray-dark}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "select-text-disabled-default",
           "variableID": "VariableID:8202:7156"
@@ -920,12 +906,12 @@
     },
     "table-border": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray}",
+      "$value": "{abstracts-custom-props.gray}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "table-border",
           "variableID": "VariableID:8198:7049"
@@ -934,12 +920,12 @@
     },
     "table-head-bg": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.gray-5}",
+      "$value": "{abstracts-custom-props.gray-5}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "table-head-bg",
           "variableID": "VariableID:8198:7048"
@@ -948,12 +934,12 @@
     },
     "table-head-text": {
       "$type": "color",
-      "$value": "{UI colors.text}",
+      "$value": "{abstracts-vars.text}",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "table-head-text",
           "variableID": "VariableID:8198:7050"
@@ -962,13 +948,13 @@
     },
     "text": {
       "$type": "color",
-      "$value": "{abstracts/custom-props.black}",
+      "$value": "{abstracts-custom-props.black}",
       "$description": "body",
       "$extensions": {
         "com.figma": {
-          "collectionName": "abstracts/vars",
+          "collectionName": "abstracts-vars",
           "collectionID": "VariableCollectionId:8191:7010",
-          "modeName": "Mode 1",
+          "modeName": "default",
           "modeID": "8191:2",
           "variableName": "text",
           "variableID": "VariableID:8191:7015"

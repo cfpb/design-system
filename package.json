@@ -86,6 +86,7 @@
     "prop-types": "15.8.1",
     "release-it": "19.0.5",
     "sass": "1.93.2",
+    "style-dictionary": "5.1.1",
     "stylelint": "16.25.0",
     "stylelint-config-standard-scss": "16.0.0",
     "svgo": "4.0.0"

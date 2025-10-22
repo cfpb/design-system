@@ -1,16 +1,18 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '../abstracts/sizing-vars' as *;
+@use '../cfpb-button/vars.css' as *;
+// @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 @mixin u-btn-divider() {
   content: '';
-  border-left: 1px solid var(--icon-text-divider);
+  border-left: 1px solid var(--btn-divider);
   order: 2;
   place-self: normal;
 }
 
 :host {
   // Theme variables.
-  --icon-text-divider: var(--pacific-60);
+  // --btn-divider: var(--pacific-60);
 
   div {
     // This prevents the child button from having an empty gap after the button.
@@ -56,5 +58,5 @@
 }
 
 :host([disabled]) {
-  --icon-text-divider: var(--gray-60);
+  --btn-disabled-divider: var(--gray-60);
 }

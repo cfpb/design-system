@@ -1,15 +1,23 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/base' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/vars' as *;
+@use '../../abstracts/vars-breakpoints.scss' as *;
+@use '../../abstracts/grid-mixins.scss' as *;
+@use '../../abstracts/heading-mixins.scss' as *;
+@use '../../abstracts/media-queries.scss' as *;
+// @use '@cfpb/cfpb-design-system/src/abstracts' as *;
+// @use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/vars' as *;
+@use '../abstracts/sizing-vars' as *;
+@use '../abstracts/custom-props.css' as *;
+@use '../abstracts/vars.css' as *;
+@use './vars.css' as *;
 
 :host {
   // Theme variables.
-  --select-input-border: var(--gray-60);
-  --select-input-border-hover: var(--pacific);
-  --select-input-border-focus: var(--pacific);
-  --select-input-bg: var(--white);
-  --select-input-text: var(--black);
+  // --select-input-border: var(--gray-60);
+  // --select-input-border-hover: var(--pacific);
+  // --select-input-border-focus: var(--pacific);
+  // --select-input-bg: var(--white);
+  // --select-input-text: var(--black);
 
   // Initial and no-js state.
   select.o-multiselect {

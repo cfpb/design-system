@@ -1,0 +1,74 @@
+{
+  "cfpb-multiselect": {
+    "select-input-bg": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.white}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-multiselect",
+          "collectionID": "VariableCollectionId:8269:3849",
+          "modeName": "deafult",
+          "modeID": "8269:0",
+          "variableName": "select-input-bg",
+          "variableID": "VariableID:8269:3853"
+        }
+      }
+    },
+    "select-input-border": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-60}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-multiselect",
+          "collectionID": "VariableCollectionId:8269:3849",
+          "modeName": "deafult",
+          "modeID": "8269:0",
+          "variableName": "select-input-border",
+          "variableID": "VariableID:8269:3850"
+        }
+      }
+    },
+    "select-input-border-focus": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-multiselect",
+          "collectionID": "VariableCollectionId:8269:3849",
+          "modeName": "deafult",
+          "modeID": "8269:0",
+          "variableName": "select-input-border-focus",
+          "variableID": "VariableID:8269:3852"
+        }
+      }
+    },
+    "select-input-border-hover": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-multiselect",
+          "collectionID": "VariableCollectionId:8269:3849",
+          "modeName": "deafult",
+          "modeID": "8269:0",
+          "variableName": "select-input-border-hover",
+          "variableID": "VariableID:8269:3851"
+        }
+      }
+    },
+    "select-input-text": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.black}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-multiselect",
+          "collectionID": "VariableCollectionId:8269:3849",
+          "modeName": "deafult",
+          "modeID": "8269:0",
+          "variableName": "select-input-text",
+          "variableID": "VariableID:8269:3854"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:host {
+  --select-input-bg: var(--white);
+  --select-input-border: var(--gray-60);
+  --select-input-border-focus: var(--pacific);
+  --select-input-border-hover: var(--pacific);
+  --select-input-text: var(--black);
+}

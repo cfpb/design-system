@@ -1,0 +1,101 @@
+@use 'sass:math';
+@use './vars.css' as *;
+@use '../../abstracts/vars-breakpoints.scss' as *;
+@use '../../abstracts/grid-mixins.scss' as *;
+@use '../../abstracts/heading-mixins.scss' as *;
+@use '../../abstracts/media-queries.scss' as *;
+@use '../abstracts/sizing-vars' as *;
+
+//
+// Button link
+//
+
+/*
+Link text and underline.
+$v: Link link and visited color.
+$h: Link hover color.
+$f: Link focus color.
+$a: Link active color.
+*/
+@mixin u-btn-link-states($selector, $v, $h, $f, $a) {
+  #{$selector} {
+    &,
+    &:link,
+    &:visited {
+      text-decoration-color: $v;
+      background-color: transparent;
+      color: $v;
+    }
+
+    &:hover,
+    &.hover {
+      text-decoration-color: $h;
+      text-decoration-style: solid;
+      background-color: transparent;
+      color: $h;
+    }
+
+    &:focus,
+    &.focus {
+      text-decoration-style: solid;
+      background-color: transparent;
+      outline: 1px dotted $f;
+      color: $f;
+    }
+
+    &:active,
+    &.active {
+      text-decoration-color: $a;
+      text-decoration-style: solid;
+      background-color: transparent;
+      color: $a;
+    }
+  }
+}
+
+.a-btn--link {
+  // Padding added so the focus rectangle falls below the underline.
+  padding: 1.5px 0;
+  border-radius: 0;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-style: dotted;
+  text-underline-offset: 4.5px;
+
+  &:has(svg) {
+    // Button links should be closer to their icon.
+    gap: math.div(5px, $base-font-size-px) + rem;
+
+    // Button links shouldn't have a divider.
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@include u-btn-link-states(
+  '.a-btn--link',
+  var(--link-text),
+  var(--link-text-hover),
+  var(--link-text),
+  var(--link-text-active)
+);
+
+//
+// Secondary button link
+//
+
+// The .a-btn--link.a-btn--secondary combo shouldn't be used,
+// so we provide no styles.
+
+//
+// Destructive action button link
+//
+
+@include u-btn-link-states(
+  '.a-btn--link.a-btn--warning',
+  var(--btn-warning-bg),
+  var(--btn-warning-bg-hover),
+  var(--btn-warning-bg),
+  var(--btn-warning-bg-active)
+);

@@ -1,7 +1,13 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
+import cfpbColorTokens from '../abstracts/custom-props.css';
+import cfpbButtonTokens from './vars.css';
+import cfpbPlainButtonTokens from './cfpb-button.scss';
+import cfpbButtonLinksTokens from './cfpb-button-link.scss';
 import styles from './cfpb-button.component.scss';
+// import styles from './button.scss';
+
 import { CfpbIconText } from '../cfpb-icon-text';
 
 // The variants are different color themes of the button.
@@ -16,9 +22,13 @@ const VALID_TYPES = ['button', 'submit', 'reset'];
  * @slot - The main content for the button.
  */
 export class CfpbButton extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = [
+    css`${unsafeCSS(cfpbColorTokens)}`,
+    css`${unsafeCSS(cfpbButtonTokens)}`,
+    css`${unsafeCSS(cfpbPlainButtonTokens)}`,
+    css`${unsafeCSS(cfpbButtonLinksTokens)}`,
+    css`${unsafeCSS(styles)}
+  `];
 
   /**
    * @property {string} type - The button type: button, submit, or reset.

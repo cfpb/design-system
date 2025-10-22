@@ -1,6 +1,10 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/vars' as *;
+@use '../../abstracts/vars-breakpoints.scss' as *;
+@use '../../abstracts/grid-mixins.scss' as *;
+@use '../../abstracts/heading-mixins.scss' as *;
+@use '../../abstracts/media-queries.scss' as *;
+@use '../abstracts/sizing-vars' as *;
+@use '../cfpb-button/vars.css' as *;
 
 :host {
   // Tag group sets the spacing between tags.

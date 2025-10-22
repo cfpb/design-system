@@ -1,346 +1,338 @@
 {
   "cfpb-buttons": {
-    "btn": {
-      "btn-bg": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn/btn-bg",
-            "variableID": "VariableID:8191:6981"
-          }
-        }
-      },
-      "btn-bg-active": {
-        "$type": "color",
-        "$value": "{Color pallets.navy}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn/btn-bg-active",
-            "variableID": "VariableID:8191:6995"
-          }
-        }
-      },
-      "btn-bg-hover": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific-dark}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn/btn-bg-hover",
-            "variableID": "VariableID:8191:6976"
-          }
-        }
-      },
-      "btn-divider": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific-60}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn/btn-divider",
-            "variableID": "VariableID:8191:6991"
-          }
-        }
-      },
-      "btn-text": {
-        "$type": "color",
-        "$value": "{Color pallets.white}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn/btn-text",
-            "variableID": "VariableID:8191:6977"
-          }
+    "btn-bg": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-bg",
+          "variableID": "VariableID:8191:6981"
         }
       }
     },
-    "btn__disabled": {
-      "btn-disabled-bg": {
-        "$type": "color",
-        "$value": "{Color pallets.gray-20}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__disabled/btn-disabled-bg",
-            "variableID": "VariableID:8191:6974"
-          }
-        }
-      },
-      "btn-disabled-divider": {
-        "$type": "color",
-        "$value": "{Color pallets.gray-60}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__disabled/btn-disabled-divider",
-            "variableID": "VariableID:8191:6996"
-          }
-        }
-      },
-      "btn-disabled-outline": {
-        "$type": "color",
-        "$value": "{Color pallets.gray-20}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__disabled/btn-disabled-outline",
-            "variableID": "VariableID:8191:6984"
-          }
-        }
-      },
-      "btn-disabled-text": {
-        "$type": "color",
-        "$value": "{Color pallets.gray-dark}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__disabled/btn-disabled-text",
-            "variableID": "VariableID:8191:6994"
-          }
+    "btn-bg-active": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.navy}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-bg-active",
+          "variableID": "VariableID:8191:6995"
         }
       }
     },
-    "btn__secondary": {
-      "btn-secondary-bg": {
-        "$type": "color",
-        "$value": "{Color pallets.white}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-bg",
-            "variableID": "VariableID:8191:6993"
-          }
-        }
-      },
-      "btn-secondary-bg-active": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific-20}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-bg-active",
-            "variableID": "VariableID:8191:6986"
-          }
-        }
-      },
-      "btn-secondary-bg-hover": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific-10}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-bg-hover",
-            "variableID": "VariableID:8191:6990"
-          }
-        }
-      },
-      "btn-secondary-border": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-border",
-            "variableID": "VariableID:8191:6985"
-          }
-        }
-      },
-      "btn-secondary-border-active": {
-        "$type": "color",
-        "$value": "{Color pallets.navy}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-border-active",
-            "variableID": "VariableID:8191:6982"
-          }
-        }
-      },
-      "btn-secondary-border-hover": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific-dark}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-border-hover",
-            "variableID": "VariableID:8191:6989"
-          }
-        }
-      },
-      "btn-secondary-divider": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific-60}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-divider",
-            "variableID": "VariableID:8191:6975"
-          }
-        }
-      },
-      "btn-secondary-text": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-text",
-            "variableID": "VariableID:8191:6997"
-          }
-        }
-      },
-      "btn-secondary-text-active": {
-        "$type": "color",
-        "$value": "{Color pallets.navy}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-text-active",
-            "variableID": "VariableID:8191:6988"
-          }
-        }
-      },
-      "btn-secondary-text-hover": {
-        "$type": "color",
-        "$value": "{Color pallets.pacific-dark}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__secondary/btn-secondary-text-hover",
-            "variableID": "VariableID:8191:6987"
-          }
+    "btn-bg-hover": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific-dark}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-bg-hover",
+          "variableID": "VariableID:8191:6976"
         }
       }
     },
-    "btn__warning": {
-      "btn-warning-bg": {
-        "$type": "color",
-        "$value": "{Color pallets.red-mid-dark}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__warning/btn-warning-bg",
-            "variableID": "VariableID:8191:6980"
-          }
+    "btn-disabled-bg": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-20}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-disabled-bg",
+          "variableID": "VariableID:8191:6974"
         }
-      },
-      "btn-warning-bg-active": {
-        "$type": "color",
-        "$value": "{Color pallets.gray-dark}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__warning/btn-warning-bg-active",
-            "variableID": "VariableID:8191:6979"
-          }
+      }
+    },
+    "btn-disabled-divider": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-60}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-disabled-divider",
+          "variableID": "VariableID:8191:6996"
         }
-      },
-      "btn-warning-bg-hover": {
-        "$type": "color",
-        "$value": "{Color pallets.red-dark}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__warning/btn-warning-bg-hover",
-            "variableID": "VariableID:8191:6983"
-          }
+      }
+    },
+    "btn-disabled-outline": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-20}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-disabled-outline",
+          "variableID": "VariableID:8191:6984"
         }
-      },
-      "btn-warning-divider": {
-        "$type": "color",
-        "$value": "{Color pallets.red-60}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__warning/btn-warning-divider",
-            "variableID": "VariableID:8191:6992"
-          }
+      }
+    },
+    "btn-disabled-text": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-dark}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-disabled-text",
+          "variableID": "VariableID:8191:6994"
         }
-      },
-      "btn-warning-text": {
-        "$type": "color",
-        "$value": "{Color pallets.white}",
-        "$extensions": {
-          "com.figma": {
-            "collectionName": "cfpb-buttons",
-            "collectionID": "VariableCollectionId:8188:6906",
-            "modeName": "default",
-            "modeID": "8188:0",
-            "variableName": "btn__warning/btn-warning-text",
-            "variableID": "VariableID:8191:6978"
-          }
+      }
+    },
+    "btn-divider": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific-60}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-divider",
+          "variableID": "VariableID:8191:6991"
+        }
+      }
+    },
+    "btn-secondary-bg": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.white}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-bg",
+          "variableID": "VariableID:8191:6993"
+        }
+      }
+    },
+    "btn-secondary-bg-active": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific-20}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-bg-active",
+          "variableID": "VariableID:8191:6986"
+        }
+      }
+    },
+    "btn-secondary-bg-hover": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific-10}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-bg-hover",
+          "variableID": "VariableID:8191:6990"
+        }
+      }
+    },
+    "btn-secondary-border": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-border",
+          "variableID": "VariableID:8191:6985"
+        }
+      }
+    },
+    "btn-secondary-border-active": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.navy}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-border-active",
+          "variableID": "VariableID:8191:6982"
+        }
+      }
+    },
+    "btn-secondary-border-hover": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific-dark}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-border-hover",
+          "variableID": "VariableID:8191:6989"
+        }
+      }
+    },
+    "btn-secondary-divider": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific-60}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-divider",
+          "variableID": "VariableID:8191:6975"
+        }
+      }
+    },
+    "btn-secondary-text": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-text",
+          "variableID": "VariableID:8191:6997"
+        }
+      }
+    },
+    "btn-secondary-text-active": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.navy}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-text-active",
+          "variableID": "VariableID:8191:6988"
+        }
+      }
+    },
+    "btn-secondary-text-hover": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific-dark}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-secondary-text-hover",
+          "variableID": "VariableID:8191:6987"
+        }
+      }
+    },
+    "btn-text": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.white}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-text",
+          "variableID": "VariableID:8191:6977"
+        }
+      }
+    },
+    "btn-warning-bg": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.red-mid-dark}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-warning-bg",
+          "variableID": "VariableID:8191:6980"
+        }
+      }
+    },
+    "btn-warning-bg-active": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-dark}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-warning-bg-active",
+          "variableID": "VariableID:8191:6979"
+        }
+      }
+    },
+    "btn-warning-bg-hover": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.red-dark}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-warning-bg-hover",
+          "variableID": "VariableID:8191:6983"
+        }
+      }
+    },
+    "btn-warning-divider": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.red-60}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-warning-divider",
+          "variableID": "VariableID:8191:6992"
+        }
+      }
+    },
+    "btn-warning-text": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.white}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-buttons",
+          "collectionID": "VariableCollectionId:8188:6906",
+          "modeName": "default",
+          "modeID": "8188:0",
+          "variableName": "btn-warning-text",
+          "variableID": "VariableID:8191:6978"
         }
       }
     }

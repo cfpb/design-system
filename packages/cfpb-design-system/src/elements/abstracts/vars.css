@@ -1,0 +1,74 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:host {
+  --block-bg: var(--gray-5);
+  --block-border: var(--gray-40);
+  --choice-bg-default: var(--white);
+  --choice-bg-disabled: var(--gray-10);
+  --choice-bg-selected-default: var(--pacific);
+  --choice-bg-selected-disabled: var(--gray-40);
+  --choice-bg-selected-focus-default: var(--pacific);
+  --choice-border-default: var(--gray-60);
+  --choice-border-disabled: var(--gray-60);
+  --choice-border-error: var(--red);
+  --choice-border-focus-default: var(--pacific);
+  --choice-border-hover-default: var(--pacific);
+  --choice-border-success: var(--green);
+  --choice-border-warning: var(--gold);
+  --choice-label-disabled-default: var(--gray-dark);
+  --choice-outline-focus-default: var(--pacific);
+  --code-bg: var(--gray-5);
+  --content-main-border: var(--gray-40);
+  --form-alert-icon-color-default: var(--gray);
+  --form-alert-icon-color-error: var(--red);
+  --form-alert-icon-color-success: var(--green);
+  --form-alert-icon-color-warning: var(--gold);
+  --form-field-input-lg-target-bg: var(--gray-10);
+  --form-field-input-lg-target-bg-disabled: var(--gray-20);
+  --form-field-input-lg-target-bg-selected: var(--pacific-20);
+  --form-field-input-lg-target-border: var(--pacific);
+  --input-bg-default: var(--white);
+  --input-bg-disabled-default: var(--gray-10);
+  --input-border-default: var(--gray-60);
+  --input-border-disabled: var(--gray-60);
+  --input-border-error: var(--red);
+  --input-border-focus-default: var(--pacific);
+  --input-border-hover-default: var(--pacific);
+  --input-border-success: var(--green);
+  --input-border-warning: var(--gold);
+  --input-text-default: var(--black);
+  --input-text-disabled-default: var(--gray-dark);
+  --input-text-placeholder-default: var(--gray-dark);
+  --label-helper: var(--gray-dark);
+  --link-text: var(--pacific); /** a */
+  --link-text-active: var(--navy); /** a */
+  --link-text-hover: var(--pacific-dark); /** a */
+  --link-text-visited: var(--teal); /** a */
+  --link-underline: var(--pacific); /** a */
+  --link-underline-active: var(--navy); /** a */
+  --link-underline-hover: var(--pacific-dark); /** a */
+  --link-underline-visited: var(--teal); /** a */
+  --range-bg: var(--gray-10);
+  --range-bg-focused: var(--pacific-20);
+  --range-bg-track: var(--gray-80);
+  --range-border: var(--gray-40);
+  --range-border-focused: var(--pacific);
+  --select-bg-disabled-default: var(--gray-10);
+  --select-border-default: var(--gray-60);
+  --select-border-error: var(--red);
+  --select-border-focus-default: var(--pacific);
+  --select-border-hover-default: var(--pacific);
+  --select-icon-bg-default: var(--gray-10);
+  --select-text-disabled-default: var(--gray-dark);
+  --table-border: var(--gray);
+  --table-head-bg: var(--gray-5);
+  --text: var(--black); /** body */
+  --block-border-bottom: var(--block-border);
+  --block-border-left: var(--block-border);
+  --block-border-right: var(--block-border);
+  --block-border-top: var(--block-border);
+  --code-text: var(--text);
+  --table-head-text: var(--text);
+}

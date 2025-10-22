@@ -1,0 +1,14 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:host {
+  --choice-bg: var(--choice-bg-default);
+  --choice-bg-selected: var(--choice-bg-selected-default);
+  --choice-bg-selected-focus: var(--choice-bg-selected-focus-default);
+  --choice-border: var(--choice-border-default);
+  --choice-border-focus: var(--choice-border-focus-default);
+  --choice-border-hover: var(--choice-border-hover-default);
+  --choice-label-disabled: var(--choice-label-disabled-default);
+  --choice-outline-focus: var(--choice-outline-focus-default);
+}

@@ -1,33 +1,27 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '../abstracts/custom-props.css' as *;
+@use '../abstracts/vars.css' as *;
+@use './vars.css' as *;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '../abstracts/sizing-vars' as *;
 
 :host {
   .m-form-field {
-    // Theme variables.
-    --choice-border: var(--choice-border-default);
-    --choice-border-hover: var(--choice-border-hover-default);
-    --choice-border-focus: var(--choice-border-focus-default);
-    --choice-outline-focus: var(--choice-outline-focus-default);
-    --choice-bg: var(--choice-bg-default);
-    --choice-bg-selected: var(--choice-bg-selected-default);
-    --choice-bg-selected-focus: var(--choice-bg-selected-focus-default);
-    --choice-label-disabled: var(--choice-label-disabled-default);
-
+  
     // Private variables.
     --choice-border-width-addendum: 0;
 
     &--in-list label {
       box-sizing: border-box;
-      padding-top: math.div(5px, $base-font-size-px) + em;
+      padding-top: math.div(5px, $base-font-size-px) + em; 
       padding-right: 0;
-      padding-bottom: math.div(5px, $base-font-size-px) + em;
-      padding-left: math.div(10px, $base-font-size-px) + em;
+      padding-bottom: math.div(5px, $base-font-size-px) + em; 
+      padding-left: math.div(10px, $base-font-size-px) + em; 
       width: 100%;
     }
 
     .a-label + .a-text-input {
-      margin-top: math.div(5px, $base-font-size-px) + em;
+      margin-top: math.div(5px, $base-font-size-px) + em; 
     }
 
     &--checkbox,
@@ -50,8 +44,8 @@
           border: 1px solid var(--choice-border);
           outline: var(--choice-border-width-addendum) solid
             var(--choice-border);
-          height: math.div(18px, $base-font-size-px) + em;
-          width: math.div(18px, $base-font-size-px) + em;
+          height: math.div(18px, $base-font-size-px) + em; 
+          width: math.div(18px, $base-font-size-px) + em; 
           margin-right: 10px;
           background-color: var(--choice-bg);
           content: '';
@@ -223,21 +217,21 @@
         box-sizing: border-box;
         width: 100%;
         padding: 15px;
-        background-color: $form-field-input-lg-target-bg;
+        background-color: var(--form-field-input-lg-target-bg);
       }
 
       .a-checkbox,
       .a-radio {
         &:checked + .a-label {
-          background-color: $form-field-input-lg-target-bg-selected;
-          box-shadow: inset 0 0 0 1px $form-field-input-lg-target-border;
+          background-color: var(--form-field-input-lg-target-bg-selected);
+          box-shadow: inset 0 0 0 1px var(--form-field-input-lg-target-border);
         }
 
         &:hover + .a-label,
         &.hover + .a-label,
         &:focus + .a-label,
         &.focus + .a-label {
-          box-shadow: inset 0 0 0 2px $form-field-input-lg-target-border;
+          box-shadow: inset 0 0 0 2px var(--form-field-input-lg-target-border);
         }
 
         &:focus + .a-label,
@@ -251,7 +245,7 @@
         &:hover:disabled + .a-label {
           color: var(--choice-label-disabled);
           box-shadow: none;
-          background-color: $form-field-input-lg-target-bg-disabled;
+          background-color: var(--form-field-input-lg-target-bg-disabled);
         }
 
         &:checked:disabled + .a-label {

@@ -3,7 +3,7 @@ name: Build Design Tokens
 on: 
   push:
     paths:
-      - '../packages/cfpb-design-system/src/tokens/**'
+      - 'packages/cfpb-design-system/src/tokens/**'
 
 jobs:
   build_tokens:

@@ -15,7 +15,7 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        run: npm install style-dictionary # Add other dependencies if needed
+        run: npm install style-dictionary --legacy-peer-deps # Add other dependencies if needed
 
       - name: Build tokens
         run: yarn style-dictionary build --config ./style-dictionary.config.js

@@ -33,7 +33,7 @@
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-decap": "npx decap-server",
-    "prestart": "yarn tokens",
+    "prebuild": "yarn tokens",
     "start": "yarn tokens && yarn build && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "cy": "./scripts/cypress.sh",

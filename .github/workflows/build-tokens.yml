@@ -9,8 +9,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install style-dictionary --force # Add other dependencies if needed
-
       - name: Build tokens
-        run: yarn style-dictionary build --config ./style-dictionary.config.js
+        run: npx style-dictionary build --config ./style-dictionary.config.js

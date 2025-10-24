@@ -10,10 +10,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shared setup
-        uses:  ./.github/actions/shared-action-setup --leagacy-peer-deps
+        uses:  ./.github/actions/shared-action-setup
 
       - name: Install dependencies
-        run: npm install style-dictionary --leagacy-peer-deps # Add other dependencies if needed
+        run: npm install style-dictionary # Add other dependencies if needed
 
       - name: Build tokens
         run: yarn style-dictionary build --config ./style-dictionary.config.js

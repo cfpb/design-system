@@ -1,0 +1,24 @@
+name: Build Design Tokens
+
+on:
+  push:
+    paths:
+      - '../packages/cfpb-design-system/src/tokens'
+
+jobs:
+  build_tokens:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install style-dictionary # Add other dependencies if needed
+
+      - name: Build tokens
+        run: yarn style-dictionary build --config ./style-dictionary.config.js

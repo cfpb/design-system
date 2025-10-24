@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - 'packages/cfpb-design-system/src/tokens/**'
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build_tokens:

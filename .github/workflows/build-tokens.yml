@@ -9,14 +9,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Shared setup
-        uses:  ./.github/actions/shared-action-setup
-
       - name: Install dependencies
         run: npm install style-dictionary --force # Add other dependencies if needed
-      
-      - name: Update lockfile
-        run: yarn install
 
       - name: Build tokens
         run: yarn style-dictionary build --config ./style-dictionary.config.js

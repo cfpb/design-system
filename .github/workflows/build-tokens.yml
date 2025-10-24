@@ -13,7 +13,7 @@ jobs:
         uses:  ./.github/actions/shared-action-setup
 
       - name: Install dependencies
-        run: npm install style-dictionary --force # Add other dependencies if needed
+        run: npm install style-dictionary # Add other dependencies if needed
 
       - name: Yarn lockfile update
         run: yarn install

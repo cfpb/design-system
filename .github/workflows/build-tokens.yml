@@ -1,6 +1,9 @@
 name: Build Design Tokens
 
-on: push
+on: 
+  push:
+    paths:
+      - '../packages/cfpb-design-system/src/tokens/**'
 
 jobs:
   build_tokens:

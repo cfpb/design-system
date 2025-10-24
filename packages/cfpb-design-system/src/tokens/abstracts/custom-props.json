@@ -954,7 +954,7 @@
     },
     "pacific": {
       "$type": "color",
-      "$value": "#0072CE",
+      "$value": "#00ff00",
       "$description": "0072CE",
       "$extensions": {
         "com.figma": {

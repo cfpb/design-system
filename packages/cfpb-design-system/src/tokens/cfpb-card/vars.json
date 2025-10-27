@@ -1,0 +1,60 @@
+{
+  "cfpb-card": {
+    "breakout-card-bg": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-5}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-card",
+          "collectionID": "VariableCollectionId:8314:6211",
+          "modeName": "default",
+          "modeID": "8314:0",
+          "variableName": "breakout-card-bg",
+          "variableID": "VariableID:8314:6214"
+        }
+      }
+    },
+    "breakout-card-border": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-20}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-card",
+          "collectionID": "VariableCollectionId:8314:6211",
+          "modeName": "default",
+          "modeID": "8314:0",
+          "variableName": "breakout-card-border",
+          "variableID": "VariableID:8314:6215"
+        }
+      }
+    },
+    "card-bg": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.white}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-card",
+          "collectionID": "VariableCollectionId:8314:6211",
+          "modeName": "default",
+          "modeID": "8314:0",
+          "variableName": "card-bg",
+          "variableID": "VariableID:8314:6212"
+        }
+      }
+    },
+    "card-border": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-20}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-card",
+          "collectionID": "VariableCollectionId:8314:6211",
+          "modeName": "default",
+          "modeID": "8314:0",
+          "variableName": "card-border",
+          "variableID": "VariableID:8314:6213"
+        }
+      }
+    }
+  }
+}

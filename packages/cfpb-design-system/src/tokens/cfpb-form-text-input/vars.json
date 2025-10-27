@@ -1,0 +1,116 @@
+{
+  "cfpb-form-text-input": {
+    "input-bg": {
+      "$type": "color",
+      "$value": "{abstracts-vars.input-bg-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-text-input",
+          "collectionID": "VariableCollectionId:8234:11734",
+          "modeName": "default",
+          "modeID": "8234:4",
+          "variableName": "input-bg",
+          "variableID": "VariableID:8234:11741"
+        }
+      }
+    },
+    "input-bg-disabled": {
+      "$type": "color",
+      "$value": "{abstracts-vars.input-bg-disabled-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-text-input",
+          "collectionID": "VariableCollectionId:8234:11734",
+          "modeName": "default",
+          "modeID": "8234:4",
+          "variableName": "input-bg-disabled",
+          "variableID": "VariableID:8234:11742"
+        }
+      }
+    },
+    "input-border": {
+      "$type": "color",
+      "$value": "{abstracts-vars.input-border-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-text-input",
+          "collectionID": "VariableCollectionId:8234:11734",
+          "modeName": "default",
+          "modeID": "8234:4",
+          "variableName": "input-border",
+          "variableID": "VariableID:8234:11738"
+        }
+      }
+    },
+    "input-border-focus": {
+      "$type": "color",
+      "$value": "{abstracts-vars.input-border-focus-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-text-input",
+          "collectionID": "VariableCollectionId:8234:11734",
+          "modeName": "default",
+          "modeID": "8234:4",
+          "variableName": "input-border-focus",
+          "variableID": "VariableID:8234:11740"
+        }
+      }
+    },
+    "input-border-hover": {
+      "$type": "color",
+      "$value": "{abstracts-vars.input-border-hover-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-text-input",
+          "collectionID": "VariableCollectionId:8234:11734",
+          "modeName": "default",
+          "modeID": "8234:4",
+          "variableName": "input-border-hover",
+          "variableID": "VariableID:8234:11739"
+        }
+      }
+    },
+    "input-text": {
+      "$type": "color",
+      "$value": "{abstracts-vars.input-text-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-text-input",
+          "collectionID": "VariableCollectionId:8234:11734",
+          "modeName": "default",
+          "modeID": "8234:4",
+          "variableName": "input-text",
+          "variableID": "VariableID:8234:11735"
+        }
+      }
+    },
+    "input-text-disabled": {
+      "$type": "color",
+      "$value": "{abstracts-vars.input-text-disabled-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-text-input",
+          "collectionID": "VariableCollectionId:8234:11734",
+          "modeName": "default",
+          "modeID": "8234:4",
+          "variableName": "input-text-disabled",
+          "variableID": "VariableID:8234:11736"
+        }
+      }
+    },
+    "input-text-placeholder": {
+      "$type": "color",
+      "$value": "{abstracts-vars.input-text-placeholder-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-text-input",
+          "collectionID": "VariableCollectionId:8234:11734",
+          "modeName": "default",
+          "modeID": "8234:4",
+          "variableName": "input-text-placeholder",
+          "variableID": "VariableID:8234:11737"
+        }
+      }
+    }
+  }
+}

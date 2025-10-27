@@ -1,0 +1,18 @@
+{
+  "cfpb-form-select": {
+    "select-border": {
+      "$type": "color",
+      "$value": "{abstracts-vars.select-border-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-select",
+          "collectionID": "VariableCollectionId:8234:11732",
+          "modeName": "default",
+          "modeID": "8234:3",
+          "variableName": "select-border",
+          "variableID": "VariableID:8234:11733"
+        }
+      }
+    }
+  }
+}

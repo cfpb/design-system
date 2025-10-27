@@ -1,0 +1,18 @@
+{
+  "cfpb-form-alert": {
+    "form-alert-icon-color": {
+      "$type": "color",
+      "$value": "{abstracts-vars.form-alert-icon-color-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-form-alert",
+          "collectionID": "VariableCollectionId:8234:11730",
+          "modeName": "default",
+          "modeID": "8234:2",
+          "variableName": "form-alert-icon-color",
+          "variableID": "VariableID:8234:11731"
+        }
+      }
+    }
+  }
+}

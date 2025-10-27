@@ -1,0 +1,10 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:host {
+  --breakout-card-bg: var(--gray-5);
+  --breakout-card-border: var(--gray-20);
+  --card-bg: var(--white);
+  --card-border: var(--gray-20);
+}

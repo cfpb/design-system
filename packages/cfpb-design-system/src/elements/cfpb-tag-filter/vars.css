@@ -1,0 +1,11 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:host {
+  --tag-filter-bg: var(--tag-filter-bg-default);
+  --tag-filter-bg-active: var(--tag-filter-bg-active-default);
+  --tag-filter-bg-hover: var(--tag-filter-bg-hover-default);
+  --tag-filter-border: var(--tag-filter-border-default);
+  --tag-filter-outline-focus: var(--tag-filter-outline-focuse-default);
+}

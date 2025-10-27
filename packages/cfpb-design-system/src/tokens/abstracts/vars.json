@@ -946,6 +946,76 @@
         }
       }
     },
+    "tag-filter-bg-active-default": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.teal-60}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "abstracts-vars",
+          "collectionID": "VariableCollectionId:8191:7010",
+          "modeName": "default",
+          "modeID": "8191:2",
+          "variableName": "tag-filter-bg-active-default",
+          "variableID": "VariableID:8418:11401"
+        }
+      }
+    },
+    "tag-filter-bg-default": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.teal-20}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "abstracts-vars",
+          "collectionID": "VariableCollectionId:8191:7010",
+          "modeName": "default",
+          "modeID": "8191:2",
+          "variableName": "tag-filter-bg-default",
+          "variableID": "VariableID:8418:11400"
+        }
+      }
+    },
+    "tag-filter-bg-hover-default": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.teal-40}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "abstracts-vars",
+          "collectionID": "VariableCollectionId:8191:7010",
+          "modeName": "default",
+          "modeID": "8191:2",
+          "variableName": "tag-filter-bg-hover-default",
+          "variableID": "VariableID:8418:11402"
+        }
+      }
+    },
+    "tag-filter-border-default": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.teal}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "abstracts-vars",
+          "collectionID": "VariableCollectionId:8191:7010",
+          "modeName": "default",
+          "modeID": "8191:2",
+          "variableName": "tag-filter-border-default",
+          "variableID": "VariableID:8418:11403"
+        }
+      }
+    },
+    "tag-filter-outline-focuse-default": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.teal-dark}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "abstracts-vars",
+          "collectionID": "VariableCollectionId:8191:7010",
+          "modeName": "default",
+          "modeID": "8191:2",
+          "variableName": "tag-filter-outline-focuse-default",
+          "variableID": "VariableID:8418:11404"
+        }
+      }
+    },
     "text": {
       "$type": "color",
       "$value": "{abstracts-custom-props.black}",

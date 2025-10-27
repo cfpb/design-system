@@ -1,0 +1,32 @@
+{
+  "cfpb-icons": {
+    "cf-icon-social-svg": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-dark}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-icons",
+          "collectionID": "VariableCollectionId:8271:4372",
+          "modeName": "default",
+          "modeID": "8271:2",
+          "variableName": "cf-icon-social-svg",
+          "variableID": "VariableID:8303:2441"
+        }
+      }
+    },
+    "cf-icon-svg": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.pacific}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-icons",
+          "collectionID": "VariableCollectionId:8271:4372",
+          "modeName": "default",
+          "modeID": "8271:2",
+          "variableName": "cf-icon-svg",
+          "variableID": "VariableID:8271:4373"
+        }
+      }
+    }
+  }
+}

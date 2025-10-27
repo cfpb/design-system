@@ -1,0 +1,18 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:host {
+  --banner-link-text: var(--pacific-mid-dark);
+  --banner-link-text-active: var(--navy-dark);
+  --banner-link-text-focus: var(--pacific-mid-dark);
+  --banner-link-text-visited: var(--teal);
+  --banner-dark-link-text-active: var(--gray-15);
+  --banner-dark-link-text-focus: var(--white);
+  --banner-dark-link-text-hover: var(--gray-15);
+  --banner-dark-link-text-visited: var(--teal-40);
+  --banner-dark-background: var(--teal-dark);
+  --banner-dark-foreground: var(--white);
+  --banner-link-text-hover: var(--link-text-hover);
+  --banner-dark-link-text: var(--banner-dark-foreground);
+}

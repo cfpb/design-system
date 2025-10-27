@@ -5,7 +5,9 @@
 @use '../../abstracts/media-queries.scss' as *;
 @use '../abstracts/sizing-vars' as *;
 @use '../abstracts/custom-props.css' as *;
+@use '../abstracts/vars.css' as *;
 @use '../cfpb-button/vars.css' as *;
+@use './vars.css' as *;
 
 :host {
   button {
@@ -16,26 +18,26 @@
     display: flex;
     gap: math.div(10px, $btn-font-size) + rem;
 
-    border: 1px solid var(--teal);
+    border: 1px solid var(--tag-filter-border);
     padding: 4px 6px;
-    background-color: var(--teal-20);
+    background-color: var(--tag-filter-bg);
     border-radius: math.div(3px, $base-font-size-px) + rem;
-    color: var(--black);
+    color: var(--text);
     text-align: left;
     min-width: fit-content;
 
     &:hover {
-      background-color: var(--teal-40);
+      background-color: var(--tag-filter-bg-hover);
       cursor: pointer;
     }
 
     &:focus {
-      outline: 1px dotted var(--teal);
+      outline: 1px dotted var(--tag-filter-outline-focus);
       outline-offset: 1px;
     }
 
     &:active {
-      background-color: var(--teal-60);
+      background-color: var(--tag-filter-bg-active);
     }
   }
 

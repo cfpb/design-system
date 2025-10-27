@@ -1,0 +1,74 @@
+{
+  "cfpb-tag-filter": {
+    "tag-filter-bg": {
+      "$type": "color",
+      "$value": "{abstracts-vars.tag-filter-bg-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-tag-filter",
+          "collectionID": "VariableCollectionId:8275:4688",
+          "modeName": "default",
+          "modeID": "8275:4",
+          "variableName": "tag-filter-bg",
+          "variableID": "VariableID:8275:4689"
+        }
+      }
+    },
+    "tag-filter-bg-active": {
+      "$type": "color",
+      "$value": "{abstracts-vars.tag-filter-bg-active-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-tag-filter",
+          "collectionID": "VariableCollectionId:8275:4688",
+          "modeName": "default",
+          "modeID": "8275:4",
+          "variableName": "tag-filter-bg-active",
+          "variableID": "VariableID:8278:4693"
+        }
+      }
+    },
+    "tag-filter-bg-hover": {
+      "$type": "color",
+      "$value": "{abstracts-vars.tag-filter-bg-hover-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-tag-filter",
+          "collectionID": "VariableCollectionId:8275:4688",
+          "modeName": "default",
+          "modeID": "8275:4",
+          "variableName": "tag-filter-bg-hover",
+          "variableID": "VariableID:8278:4691"
+        }
+      }
+    },
+    "tag-filter-border": {
+      "$type": "color",
+      "$value": "{abstracts-vars.tag-filter-border-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-tag-filter",
+          "collectionID": "VariableCollectionId:8275:4688",
+          "modeName": "default",
+          "modeID": "8275:4",
+          "variableName": "tag-filter-border",
+          "variableID": "VariableID:8275:4690"
+        }
+      }
+    },
+    "tag-filter-outline-focus": {
+      "$type": "color",
+      "$value": "{abstracts-vars.tag-filter-outline-focuse-default}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-tag-filter",
+          "collectionID": "VariableCollectionId:8275:4688",
+          "modeName": "default",
+          "modeID": "8275:4",
+          "variableName": "tag-filter-outline-focus",
+          "variableID": "VariableID:8278:4692"
+        }
+      }
+    }
+  }
+}

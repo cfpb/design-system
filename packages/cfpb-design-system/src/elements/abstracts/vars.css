@@ -64,6 +64,11 @@
   --select-text-disabled-default: var(--gray-dark);
   --table-border: var(--gray);
   --table-head-bg: var(--gray-5);
+  --tag-filter-bg-active-default: var(--teal-60);
+  --tag-filter-bg-default: var(--teal-20);
+  --tag-filter-bg-hover-default: var(--teal-40);
+  --tag-filter-border-default: var(--teal);
+  --tag-filter-outline-focuse-default: var(--teal-dark);
   --text: var(--black); /** body */
   --block-border-bottom: var(--block-border);
   --block-border-left: var(--block-border);

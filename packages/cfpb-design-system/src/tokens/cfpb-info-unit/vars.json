@@ -1,0 +1,18 @@
+{
+  "cfpb-info-unit": {
+    "info-unit-border": {
+      "$type": "color",
+      "$value": "{abstracts-custom-props.gray-40}",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "cfpb-info-unit",
+          "collectionID": "VariableCollectionId:8315:6222",
+          "modeName": "default",
+          "modeID": "8315:6",
+          "variableName": "info-unit-border",
+          "variableID": "VariableID:8315:6223"
+        }
+      }
+    }
+  }
+}

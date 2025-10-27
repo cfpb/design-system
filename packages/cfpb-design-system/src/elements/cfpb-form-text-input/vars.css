@@ -1,0 +1,14 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:host {
+  --input-bg: var(--input-bg-default);
+  --input-bg-disabled: var(--input-bg-disabled-default);
+  --input-border: var(--input-border-default);
+  --input-border-focus: var(--input-border-focus-default);
+  --input-border-hover: var(--input-border-hover-default);
+  --input-text: var(--input-text-default);
+  --input-text-disabled: var(--input-text-disabled-default);
+  --input-text-placeholder: var(--input-text-placeholder-default);
+}

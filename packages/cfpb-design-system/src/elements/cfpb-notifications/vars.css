@@ -1,0 +1,18 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:host {
+  --notification-bg: var(--gray-5);
+  --notification-bg-error: var(--red-10);
+  --notification-bg-success: var(--green-10);
+  --notification-bg-warning: var(--gold-10);
+  --notification-border: var(--gray-40);
+  --notification-border-error: var(--red);
+  --notification-border-success: var(--green);
+  --notification-border-warning: var(--gold);
+  --notification-icon: var(--gray);
+  --notification-icon-error: var(--red);
+  --notification-icon-success: var(--green);
+  --notification-icon-warning: var(--gold);
+}

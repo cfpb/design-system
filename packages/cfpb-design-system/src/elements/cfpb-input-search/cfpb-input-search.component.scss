@@ -16,8 +16,11 @@
       position: relative;
       display: flex;
       width: initial;
-      min-width: 250px;
       flex: 0 1 100%;
+
+      // Add a min-width for the default width of the text input + clear button,
+      // so that when the clear button appears it doesn't bump the input width.
+      min-width: 300px;
 
       background: var(--white);
       // Create a faux input border that includes the input and clear button.

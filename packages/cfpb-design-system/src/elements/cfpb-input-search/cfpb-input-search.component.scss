@@ -16,7 +16,12 @@
       position: relative;
       display: flex;
       width: initial;
+      min-width: 250px;
       flex: 0 1 100%;
+
+      background: var(--white);
+      // Create a faux input border that includes the input and clear button.
+      border: 1px solid var(--gray-60);
 
       &-label {
         position: absolute;
@@ -32,19 +37,21 @@
       input[type='search'] {
         font-size: 1rem;
         width: 100%;
-        min-height: 34px;
         white-space: nowrap;
         padding-left: 30px;
+        cursor: text;
 
         // Remove default rounding in Safari.
         appearance: none;
+
+        // Remove input border and re-create it around the input and clear X.
+        border: none;
+        box-shadow: none;
       }
 
       // Style the clear x button, and hide it by default.
       button[type='reset'] {
         display: none;
-        position: absolute;
-        right: 0;
         align-self: center;
 
         color: var(--gray-40);
@@ -55,7 +62,6 @@
 
         // Set the touch target minimum for iOS.
         width: 44px;
-        padding: 5px;
         text-align: right;
 
         > svg {
@@ -70,13 +76,6 @@
       button[type='reset']:hover {
         color: var(--black);
         cursor: pointer;
-      }
-
-      // When the reset button is showing, pad the input so there's no overlap.
-      input[type='search']:not(:placeholder-shown) {
-        // 6px is accounting for the border and focus area.
-        padding-right: var(--btn-reset-width);
-        width: 100%;
       }
 
       // Style the clear x focus rectangle.
@@ -103,6 +102,21 @@
       input[type='search']::-webkit-search-results-decoration {
         display: none;
       }
+
+      &:hover,
+      &:focus-within {
+        border: 1px solid var(--pacific);
+        box-shadow: 0 0 0 1px var(--pacific);
+      }
+
+      &:focus-within {
+        input[type='search'] {
+          outline: none;
+        }
+
+        outline: 1px dotted var(--pacific);
+        outline-offset: 2px;
+      }
     }
 
     // Show the clear x button if we're focused within the search input area.
@@ -120,22 +134,6 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         flex-basis: 25%;
-      }
-
-      button[type='reset'] {
-        right: var(--btn-reset-width);
-      }
-
-      // When the reset button is showing, pad the input so there's no overlap.
-      input[type='search']:not(:placeholder-shown) {
-        padding-right: calc(var(--btn-reset-width) + 7px);
-        width: calc(100% - var(--btn-reset-width));
-      }
-
-      .o-search-input__input {
-        &:has(input[type='search']:not(:placeholder-shown)) {
-          left: var(--btn-reset-width);
-        }
       }
     }
   }

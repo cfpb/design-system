@@ -1,15 +1,10 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon' as *;
 
 :host {
   width: 100%;
-
-  .cf-icon-svg {
-    height: $cf-icon-height;
-    vertical-align: middle;
-    fill: currentcolor;
-  }
 
   .m-pagination {
     display: grid;

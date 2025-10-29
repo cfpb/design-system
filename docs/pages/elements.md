@@ -519,6 +519,18 @@ variation_groups:
             </select>
           </cfpb-multiselect>
       - variation_is_deprecated: false
+        variation_name: Search input
+        variation_description: >-
+          A search input component.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-input-search>
+            </cfpb-input-search>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-input-search>
+          </cfpb-input-search>
+      - variation_is_deprecated: false
         variation_name: Pagination
         variation_description: >-
           A pagination component.

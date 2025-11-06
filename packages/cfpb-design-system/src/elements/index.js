@@ -4,6 +4,7 @@
 
 // TODO: aggregate and export the component subdirectories automatically.
 export * from './cfpb-button';
+export * from './cfpb-form-alert';
 export * from './cfpb-form-choice';
 export * from './cfpb-file-upload';
 export * from './cfpb-label';

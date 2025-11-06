@@ -531,6 +531,20 @@ variation_groups:
           <cfpb-input-search>
           </cfpb-input-search>
       - variation_is_deprecated: false
+        variation_name: Form-level alert
+        variation_description: >-
+          A form-level alert component.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-form-alert validation="error">An error</cfpb-form-alert>
+            <cfpb-form-alert validation="warning">A warning</cfpb-form-alert>
+            <cfpb-form-alert validation="success">A success message</cfpb-form-alert>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-form-alert validation="error">An error</cfpb-form-alert>
+          <cfpb-form-alert validation="warning">A warning</cfpb-form-alert>
+          <cfpb-form-alert validation="success">A success message</cfpb-form-alert>
+      - variation_is_deprecated: false
         variation_name: Pagination
         variation_description: >-
           A pagination component.

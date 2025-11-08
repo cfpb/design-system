@@ -71,6 +71,19 @@ variation_groups:
           A checkbox component.
         variation_code_snippet_rendered: >-
           <div>
+            <checkbox-icon></checkbox-icon>
+            <checkbox-icon checked></checkbox-icon>
+            <checkbox-icon disabled></checkbox-icon>
+            <checkbox-icon checked disabled></checkbox-icon>
+            <checkbox-icon validation="error"></checkbox-icon>
+            <checkbox-icon checked validation="warning"></checkbox-icon>
+            <checkbox-icon validation="success"></checkbox-icon>
+
+            <br>
+            <br>
+            <hr>
+            <br>
+
             <cfpb-form-choice>
               Gold
             </cfpb-form-choice>

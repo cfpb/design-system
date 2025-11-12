@@ -20,6 +20,7 @@ export class CfpbFormChoice extends LitElement {
   `;
 
   #checkboxIcon = createRef();
+  #focus;
 
   /**
    * @property {boolean} checked - Whether the choice is checked or not.
@@ -55,6 +56,7 @@ export class CfpbFormChoice extends LitElement {
     this.inlist = false;
     this.name = '';
     this.value = '';
+    this.#focus = false;
   }
 
   #onChange(evt) {
@@ -77,23 +79,25 @@ export class CfpbFormChoice extends LitElement {
   }
 
   #onFocus() {
-    if (this.#checkboxIcon.value)
-      this.#checkboxIcon.value.setAttribute('focus', '');
+    this.#focus = true;
+    if (this.#checkboxIcon.value) {
+      this.#checkboxIcon.value.focus();
+    }
   }
 
   #onBlur() {
-    if (this.#checkboxIcon.value)
-      this.#checkboxIcon.value.removeAttribute('focus');
+    this.#focus = false;
+    if (this.#checkboxIcon.value) {
+      this.#checkboxIcon.value.blur();
+    }
   }
 
   #onMouseOver() {
-    if (this.#checkboxIcon.value)
-      this.#checkboxIcon.value.setAttribute('hover', '');
+    if (this.#checkboxIcon.value) this.#checkboxIcon.value.mouseover();
   }
 
   #onMouseLeave() {
-    if (this.#checkboxIcon.value)
-      this.#checkboxIcon.value.removeAttribute('hover');
+    if (this.#checkboxIcon.value) this.#checkboxIcon.value.mouseleave();
   }
 
   focus() {

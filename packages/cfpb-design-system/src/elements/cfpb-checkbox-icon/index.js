@@ -12,6 +12,9 @@ export class CfpbCheckboxIcon extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
+  #hover;
+  #focus;
+
   /**
    * @property {boolean} borderless - Whether the checkbox has a border or not.
    * @property {boolean} checked - Whether the checkbox is checked or not.
@@ -34,6 +37,8 @@ export class CfpbCheckboxIcon extends LitElement {
     this.checked = false;
     this.disabled = false;
     this.validation = '';
+    this.#hover = false;
+    this.#focus = false;
   }
 
   /**
@@ -46,13 +51,54 @@ export class CfpbCheckboxIcon extends LitElement {
       : undefined;
   }
 
+  mouseover() {
+    if (!this.disabled) {
+      this.#hover = true;
+      this.requestUpdate();
+    }
+  }
+
+  mouseleave() {
+    this.#hover = false;
+    this.requestUpdate();
+  }
+
+  focus() {
+    if (!this.disabled) {
+      this.#focus = true;
+      this.requestUpdate();
+    }
+  }
+
+  blur() {
+    this.#focus = false;
+    this.requestUpdate();
+  }
+
+  #computeClassString() {
+    return [
+      'cfpb-checkbox-icon',
+      this.checked && 'checked',
+      this.disabled && 'disabled',
+      this.borderless && 'borderless',
+      this.#validValidation && `validation-${this.#validValidation}`,
+      this.#hover && 'hover',
+      this.#focus && 'focus',
+    ]
+      .filter(Boolean)
+      .join(' ');
+  }
+
   render() {
+    const validation = this.#validValidation;
+
     return html`
       <div
-        borderless=${this.borderless}
-        validation=${this.#validValidation}
+        class=${this.#computeClassString()}
         ?disabled=${this.disabled}
-        .checked=${this.checked}
+        role="checkbox"
+        aria-checked=${this.checked}
+        aria-disabled=${this.disabled}
       ></div>
     `;
   }

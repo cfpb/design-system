@@ -17,6 +17,8 @@
     // Private variables.
     --choice-border-width-addendum: 0;
 
+    width: max-content;
+
     &--in-list label {
       box-sizing: border-box;
       padding-top: math.div(5px, $base-font-size-px) + em;
@@ -187,6 +189,7 @@
     }
 
     &--lg-target {
+      width: 100%;
       display: block;
 
       .a-label {

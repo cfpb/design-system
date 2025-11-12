@@ -1,0 +1,80 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities' as *;
+
+:host {
+  // Theme variables.
+  --choice-border: var(--choice-border-default);
+  --choice-border-hover: var(--choice-border-hover-default);
+  --choice-bg: var(--choice-bg-default);
+  --choice-bg-selected: var(--choice-bg-selected-default);
+
+  // Private variables.
+  --choice-border-width-addendum: 0;
+}
+
+:host::before {
+  display: inline-block;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border: 1px solid var(--choice-border);
+  outline: var(--choice-border-width-addendum) solid var(--choice-border);
+  height: math.div(18px, $base-font-size-px) + em;
+  width: math.div(18px, $base-font-size-px) + em;
+  margin-right: 10px;
+  background-color: var(--choice-bg);
+  content: '';
+  vertical-align: top;
+
+  // Offset so that the checkbox/radio fits within focused area.
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+:host([checked])::before {
+  --cfpb-background-icon-svg: 'approved';
+  background-size: auto $cf-icon-height;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+:host([disabled])::before {
+  cursor: not-allowed;
+  --choice-border: var(--choice-border-disabled);
+  --choice-bg: var(--choice-bg-disabled);
+  --choice-bg-selected: var(--choice-bg-selected-disabled);
+}
+
+:host([checked][disabled])::before {
+  // RGB values are CFPB gray (#5a5d61).
+  // For some reason SVG isn't accepting hex values for the fill.
+  --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
+}
+
+:host(:not([disabled])[focus])::before,
+:host(:not([disabled])[hover])::before,
+:host(:not([disabled]):hover)::before {
+  cursor: pointer;
+  border-color: var(--choice-border-hover);
+  box-shadow: 0 0 0 1px var(--choice-border-hover);
+  outline-color: var(--choice-border-hover);
+}
+
+:host([validation='error']),
+:host([validation='warning']),
+:host([validation='success']) {
+  --choice-border-width-addendum: 1px;
+}
+
+:host([validation='error']) {
+  --choice-border: var(--choice-border-error);
+}
+
+:host([validation='warning']) {
+  --choice-border: var(--choice-border-warning);
+}
+
+:host([validation='success']) {
+  --choice-border: var(--choice-border-success);
+}

@@ -1,6 +1,8 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
+import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-form-choice.component.scss';
+import { CheckboxIcon } from './checkbox-icon';
 
 // The validation states are error, warning, or success.
 const VALID_VALIDATION = ['error', 'warning', 'success'];
@@ -16,6 +18,8 @@ export class CfpbFormChoice extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
+
+  #checkboxIcon = createRef();
 
   /**
    * @property {boolean} checked - Whether the choice is checked or not.
@@ -53,7 +57,8 @@ export class CfpbFormChoice extends LitElement {
     this.value = '';
   }
 
-  #onChange() {
+  #onChange(evt) {
+    this.checked = evt.target.checked;
     this.dispatchEvent(
       new Event('change', {
         bubbles: true,
@@ -69,6 +74,26 @@ export class CfpbFormChoice extends LitElement {
         composed: true,
       }),
     );
+  }
+
+  #onFocus() {
+    if (this.#checkboxIcon.value)
+      this.#checkboxIcon.value.setAttribute('focus', '');
+  }
+
+  #onBlur() {
+    if (this.#checkboxIcon.value)
+      this.#checkboxIcon.value.removeAttribute('focus');
+  }
+
+  #onMouseOver() {
+    if (this.#checkboxIcon.value)
+      this.#checkboxIcon.value.setAttribute('hover', '');
+  }
+
+  #onMouseLeave() {
+    if (this.#checkboxIcon.value)
+      this.#checkboxIcon.value.removeAttribute('hover');
   }
 
   focus() {
@@ -107,11 +132,27 @@ export class CfpbFormChoice extends LitElement {
     return classes;
   }
 
+  #renderCheckbox() {
+    return html`
+      <checkbox-icon
+        .checked=${this.checked}
+        ?disabled=${this.disabled}
+        validation=${this.#validValidation}
+        ${ref(this.#checkboxIcon)}
+      ></checkbox-icon>
+    `;
+  }
+
   render() {
     const classes = classMap(this.#baseClass);
 
     return html`
-      <div class="${classes}" ?large=${this.large}>
+      <div
+        class="${classes}"
+        ?large=${this.large}
+        @mouseover=${this.#onMouseOver}
+        @mouseleave=${this.#onMouseLeave}
+      >
         <input
           class="a-${this.type}"
           type="${this.#validType}"
@@ -120,9 +161,12 @@ export class CfpbFormChoice extends LitElement {
           .checked=${this.checked}
           @change=${this.#onChange}
           @input=${this.#onInput}
+          @focus=${this.#onFocus}
+          @blur=${this.#onBlur}
           aria-invalid=${this.#validValidation === 'error' ? 'true' : 'false'}
         />
         <label class="a-label" for="choice-input">
+          ${this.type === 'checkbox' ? this.#renderCheckbox() : null}
           <slot></slot>
         </label>
       </div>
@@ -130,6 +174,8 @@ export class CfpbFormChoice extends LitElement {
   }
 
   static init() {
+    CheckboxIcon.init();
+
     window.customElements.get('cfpb-form-choice') ||
       window.customElements.define('cfpb-form-choice', CfpbFormChoice);
   }

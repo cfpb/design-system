@@ -1,6 +1,12 @@
 name: Deploy PR preview
 concurrency: preview-${{ github.ref }}
-on: [push]
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
 env:
   PREVIEW_BRANCH: gh-pages
 jobs:

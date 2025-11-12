@@ -3,6 +3,7 @@ import AnchorJS from 'anchor-js';
 import {
   CfpbButton,
   CfpbFileUpload,
+  CfpbFormAlert,
   CfpbFormChoice,
   CfpbLabel,
   CfpbTagFilter,
@@ -45,6 +46,7 @@ anchors.remove(`
 
 CfpbButton.init();
 CfpbFileUpload.init();
+CfpbFormAlert.init();
 CfpbFormChoice.init();
 CfpbLabel.init();
 CfpbTagFilter.init();

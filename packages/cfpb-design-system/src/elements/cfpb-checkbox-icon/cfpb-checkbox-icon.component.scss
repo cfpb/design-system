@@ -52,9 +52,8 @@
   --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
 }
 
-:host(:not([disabled])[focus])::before,
-:host(:not([disabled])[hover])::before,
-:host(:not([disabled]):hover)::before {
+:host(:not([disabled]):not([borderless])[hover])::before,
+:host(:not([disabled]):not([borderless]):hover)::before {
   cursor: pointer;
   border-color: var(--choice-border-hover);
   box-shadow: 0 0 0 1px var(--choice-border-hover);
@@ -77,4 +76,10 @@
 
 :host([validation='success']) {
   --choice-border: var(--choice-border-success);
+}
+
+:host([borderless])::before {
+  border-color: transparent;
+  outline-color: transparent;
+  background-color: transparent;
 }

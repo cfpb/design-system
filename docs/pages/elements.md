@@ -71,13 +71,19 @@ variation_groups:
           A checkbox component.
         variation_code_snippet_rendered: >-
           <div>
-            <checkbox-icon></checkbox-icon>
-            <checkbox-icon checked></checkbox-icon>
-            <checkbox-icon disabled></checkbox-icon>
-            <checkbox-icon checked disabled></checkbox-icon>
-            <checkbox-icon validation="error"></checkbox-icon>
-            <checkbox-icon checked validation="warning"></checkbox-icon>
-            <checkbox-icon validation="success"></checkbox-icon>
+            <p> Checkbox icons:</p>
+
+            <cfpb-checkbox-icon borderless checked></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon borderless></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon borderless disabled checked></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon borderless checked validation="error"></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon checked></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon disabled></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon checked disabled></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon validation="error"></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon checked validation="warning"></cfpb-checkbox-icon>
+            <cfpb-checkbox-icon validation="success"></cfpb-checkbox-icon>
 
             <br>
             <br>

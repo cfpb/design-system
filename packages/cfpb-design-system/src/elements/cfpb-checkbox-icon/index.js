@@ -1,33 +1,36 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
-import styles from './checkbox-icon.component.scss';
+import styles from './cfpb-checkbox-icon.component.scss';
 
 // The validation states are error, warning, or success.
 const VALID_VALIDATION = ['error', 'warning', 'success'];
 
 /**
- * @element checkbox-icon
+ * @element cfpb-checkbox-icon
  */
-export class CheckboxIcon extends LitElement {
+export class CfpbCheckboxIcon extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
   /**
-   * @property {boolean} checked - Whether the choice is checked or not.
-   * @property {boolean} disabled - Whether the choice is disabled or not.
+   * @property {boolean} borderless - Whether the checkbox has a border or not.
+   * @property {boolean} checked - Whether the checkbox is checked or not.
+   * @property {boolean} disabled - Whether the checkbox is disabled or not.
    * @property {string} validation - Validation style: error, warning, success.
    * @returns {object} The map of properties.
    */
   static get properties() {
     return {
+      borderless: { type: Boolean, reflect: true },
       checked: { type: Boolean, reflect: true },
-      disabled: { type: Boolean },
-      validation: { type: String },
+      disabled: { type: Boolean, reflect: true },
+      validation: { type: String, reflect: true },
     };
   }
 
   constructor() {
     super();
+    this.borderless = false;
     this.checked = false;
     this.disabled = false;
     this.validation = '';
@@ -46,6 +49,7 @@ export class CheckboxIcon extends LitElement {
   render() {
     return html`
       <div
+        borderless=${this.borderless}
         validation=${this.#validValidation}
         ?disabled=${this.disabled}
         .checked=${this.checked}
@@ -54,7 +58,7 @@ export class CheckboxIcon extends LitElement {
   }
 
   static init() {
-    window.customElements.get('checkbox-icon') ||
-      window.customElements.define('checkbox-icon', CheckboxIcon);
+    window.customElements.get('cfpb-checkbox-icon') ||
+      window.customElements.define('cfpb-checkbox-icon', CfpbCheckboxIcon);
   }
 }

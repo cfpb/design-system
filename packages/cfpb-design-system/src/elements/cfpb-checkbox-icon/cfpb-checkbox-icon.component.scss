@@ -11,75 +11,77 @@
 
   // Private variables.
   --choice-border-width-addendum: 0;
-}
 
-:host::before {
-  display: inline-block;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  border: 1px solid var(--choice-border);
-  outline: var(--choice-border-width-addendum) solid var(--choice-border);
-  height: math.div(18px, $base-font-size-px) + em;
-  width: math.div(18px, $base-font-size-px) + em;
-  margin-right: 10px;
-  background-color: var(--choice-bg);
-  content: '';
-  vertical-align: top;
+  .cfpb-checkbox-icon::before {
+    display: inline-block;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border: 1px solid var(--choice-border);
+    outline: var(--choice-border-width-addendum) solid var(--choice-border);
+    height: math.div(18px, $base-font-size-px) + em;
+    width: math.div(18px, $base-font-size-px) + em;
+    margin-right: 10px;
+    background-color: var(--choice-bg);
+    content: '';
+    vertical-align: top;
 
-  // Offset so that the checkbox/radio fits within focused area.
-  position: relative;
-  top: 1px;
-  left: 1px;
-}
+    // Offset so that the checkbox/radio fits within focused area.
+    position: relative;
+    top: 1px;
+    left: 1px;
+  }
 
-:host([checked])::before {
-  --cfpb-background-icon-svg: 'approved';
-  background-size: auto $cf-icon-height;
-  background-repeat: no-repeat;
-  background-position: center 0;
-}
+  .checked::before {
+    --cfpb-background-icon-svg: 'approved';
+    background-size: auto $cf-icon-height;
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
 
-:host([disabled])::before {
-  cursor: not-allowed;
-  --choice-border: var(--choice-border-disabled);
-  --choice-bg: var(--choice-bg-disabled);
-  --choice-bg-selected: var(--choice-bg-selected-disabled);
-}
+  .disabled::before {
+    cursor: not-allowed;
+    --choice-border: var(--choice-border-disabled);
+    --choice-bg: var(--choice-bg-disabled);
+    --choice-bg-selected: var(--choice-bg-selected-disabled);
+  }
 
-:host([checked][disabled])::before {
-  // RGB values are CFPB gray (#5a5d61).
-  // For some reason SVG isn't accepting hex values for the fill.
-  --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
-}
+  .checked.disabled::before {
+    // RGB values are CFPB gray (#5a5d61).
+    // For some reason SVG isn't accepting hex values for the fill.
+    --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
+  }
 
-:host(:not([disabled]):not([borderless])[hover])::before,
-:host(:not([disabled]):not([borderless]):hover)::before {
-  cursor: pointer;
-  border-color: var(--choice-border-hover);
-  box-shadow: 0 0 0 1px var(--choice-border-hover);
-  outline-color: var(--choice-border-hover);
-}
+  .cfpb-checkbox-icon:not(.disabled):not(.borderless).focus::before,
+  .cfpb-checkbox-icon:not(.disabled):not(.borderless):focus::before,
+  .cfpb-checkbox-icon:not(.disabled):not(.borderless).hover::before,
+  .cfpb-checkbox-icon:not(.disabled):not(.borderless):hover::before {
+    cursor: pointer;
+    border-color: var(--choice-border-hover);
+    box-shadow: 0 0 0 1px var(--choice-border-hover);
+    outline-color: var(--choice-border-hover);
+  }
 
-:host([validation='error']),
-:host([validation='warning']),
-:host([validation='success']) {
-  --choice-border-width-addendum: 1px;
-}
+  .validation-error,
+  .validation-warning,
+  .validation-success {
+    --choice-border-width-addendum: 1px;
+  }
 
-:host([validation='error']) {
-  --choice-border: var(--choice-border-error);
-}
+  .validation-error {
+    --choice-border: var(--choice-border-error);
+  }
 
-:host([validation='warning']) {
-  --choice-border: var(--choice-border-warning);
-}
+  .validation-warning {
+    --choice-border: var(--choice-border-warning);
+  }
 
-:host([validation='success']) {
-  --choice-border: var(--choice-border-success);
-}
+  .validation-success {
+    --choice-border: var(--choice-border-success);
+  }
 
-:host([borderless])::before {
-  border-color: transparent;
-  outline-color: transparent;
-  background-color: transparent;
+  .borderless::before {
+    border-color: transparent;
+    outline-color: transparent;
+    background-color: transparent;
+  }
 }

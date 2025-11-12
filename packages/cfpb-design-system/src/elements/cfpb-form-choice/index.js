@@ -2,7 +2,7 @@ import { html, LitElement, css, unsafeCSS } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-form-choice.component.scss';
-import { CheckboxIcon } from './checkbox-icon';
+import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
 
 // The validation states are error, warning, or success.
 const VALID_VALIDATION = ['error', 'warning', 'success'];
@@ -134,12 +134,12 @@ export class CfpbFormChoice extends LitElement {
 
   #renderCheckbox() {
     return html`
-      <checkbox-icon
+      <cfpb-checkbox-icon
         .checked=${this.checked}
         ?disabled=${this.disabled}
         validation=${this.#validValidation}
         ${ref(this.#checkboxIcon)}
-      ></checkbox-icon>
+      ></cfpb-checkbox-icon>
     `;
   }
 
@@ -174,7 +174,7 @@ export class CfpbFormChoice extends LitElement {
   }
 
   static init() {
-    CheckboxIcon.init();
+    CfpbCheckboxIcon.init();
 
     window.customElements.get('cfpb-form-choice') ||
       window.customElements.define('cfpb-form-choice', CfpbFormChoice);

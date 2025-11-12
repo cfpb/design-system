@@ -1,0 +1,47 @@
+name: Deploy PR preview
+concurrency: preview-${{ github.ref }}
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+env:
+  PREVIEW_BRANCH: gh-pages
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+      
+      - name: Shared setup
+        uses:  ./.github/actions/shared-action-setup
+
+      - uses: rossjrw/pr-preview-action@v1
+        id: preview-step
+        with:
+          source-dir: packages/dist/
+          preview-branch: ${{ env.PREVIEW_BRANCH }}
+          comment: false
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        if: steps.preview-step.outputs.deployment-action == 'deploy' && env.deployment_status == 'success'
+        with:
+          header: pr-preview
+          message: |
+            [PR Preview Action](https://github.com/rossjrw/pr-preview-action) ${{ steps.preview-step.outputs.action-version }}
+            :---:
+            | <p></p> :rocket: View preview at <br> ${{ steps.preview-step.outputs.preview-url }} <br><br>
+            | <h6>Built to branch [`${{ env.PREVIEW_BRANCH }}`](${{ github.server_url }}/${{ github.repository }}/tree/${{ env.PREVIEW_BRANCH }}) at ${{ steps.preview-step.outputs.action-start-time }}. <br> Preview will be ready when the [GitHub Pages deployment](${{ github.server_url }}/${{ github.repository }}/deployments) is complete. <br><br> </h6>
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        if: steps.preview-step.outputs.deployment-action == 'remove' && env.deployment_status == 'success'
+        with:
+          header: pr-preview
+          message: |
+            [PR Preview Action](https://github.com/rossjrw/pr-preview-action) ${{ steps.preview-step.outputs.action-version }}
+            :---:
+            Preview removed because the pull request was closed.
+            ${{ steps.preview-step.outputs.action-start-time }}

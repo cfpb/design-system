@@ -220,7 +220,7 @@
         }
 
         &:disabled + .a-label,
-        &:checked:disabled + .a-label,
+        // &:checked:disabled + .a-label,
         &:hover:disabled + .a-label {
           color: var(--choice-label-disabled);
           box-shadow: none;

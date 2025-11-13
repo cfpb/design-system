@@ -20,7 +20,6 @@ export class CfpbFormChoice extends LitElement {
   `;
 
   #checkboxIcon = createRef();
-  #focus;
 
   /**
    * @property {boolean} checked - Whether the choice is checked or not.
@@ -33,18 +32,16 @@ export class CfpbFormChoice extends LitElement {
    * @property {string} value - The value to submit within a form.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      checked: { type: Boolean, reflect: true },
-      disabled: { type: Boolean },
-      large: { type: Boolean },
-      validation: { type: String },
-      type: { type: String },
-      inlist: { type: Boolean, attribute: true },
-      name: { type: String },
-      value: { type: String },
-    };
-  }
+  static properties = {
+    checked: { type: Boolean, reflect: true },
+    disabled: { type: Boolean },
+    large: { type: Boolean },
+    validation: { type: String },
+    type: { type: String },
+    inlist: { type: Boolean, attribute: true },
+    name: { type: String },
+    value: { type: String },
+  };
 
   constructor() {
     super();
@@ -56,7 +53,6 @@ export class CfpbFormChoice extends LitElement {
     this.inlist = false;
     this.name = '';
     this.value = '';
-    this.#focus = false;
   }
 
   #onChange(evt) {
@@ -79,14 +75,12 @@ export class CfpbFormChoice extends LitElement {
   }
 
   #onFocus() {
-    this.#focus = true;
     if (this.#checkboxIcon.value) {
       this.#checkboxIcon.value.focus();
     }
   }
 
   #onBlur() {
-    this.#focus = false;
     if (this.#checkboxIcon.value) {
       this.#checkboxIcon.value.blur();
     }

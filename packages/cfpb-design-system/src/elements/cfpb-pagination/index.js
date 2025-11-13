@@ -24,13 +24,11 @@ export class CfpbPagination extends LitElement {
    * @property {number} maxPage - The maximum page count.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      currentPage: { type: Number, attribute: 'value', reflect: true },
-      maxPage: { type: Number, attribute: 'max', reflect: true },
-      lang: { type: String, reflect: true },
-    };
-  }
+  static properties = {
+    currentPage: { type: Number, attribute: 'value', reflect: true },
+    maxPage: { type: Number, attribute: 'max', reflect: true },
+    lang: { type: String, reflect: true },
+  };
 
   constructor() {
     super();

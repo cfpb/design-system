@@ -14,17 +14,14 @@ export class CfpbLabel extends LitElement {
   `;
 
   /**
-   * @property {string} for - Associate the label with an ID elsewhere.
    * @property {boolean} block - Whether this has block or inline helper text.
+   * @property {string} for - Associate the label with an ID elsewhere.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      // Other properties.
-      block: { type: Boolean, reflect: true },
-      for: { type: String },
-    };
-  }
+  static properties = {
+    block: { type: Boolean, reflect: true },
+    for: { type: String },
+  };
 
   constructor() {
     super();

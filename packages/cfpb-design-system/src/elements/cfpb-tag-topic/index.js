@@ -17,12 +17,10 @@ export class CfpbTagTopic extends LitElement {
    *   Whether the preceding sibling is a jump link or not.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      href: { type: String, reflect: true },
-      siblingOfJumpLink: { type: Boolean },
-    };
-  }
+  static properties = {
+    href: { type: String, reflect: true },
+    siblingOfJumpLink: { type: Boolean },
+  };
 
   /*
    * @property {string} href - The URL to link to (makes the tag a link).

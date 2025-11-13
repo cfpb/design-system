@@ -15,11 +15,9 @@ export class CfpbIconText extends LitElement {
    * @property {boolean} disabled - Apply disabled styles or not.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      disabled: { type: Boolean, reflect: true },
-    };
-  }
+  static properties = {
+    disabled: { type: Boolean, reflect: true },
+  };
 
   // DOM references.
   #svgObserver;

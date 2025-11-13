@@ -40,6 +40,7 @@
 
   .disabled::before {
     cursor: not-allowed;
+
     --choice-border: var(--choice-border-disabled);
     --choice-bg: var(--choice-bg-disabled);
     --choice-bg-selected: var(--choice-bg-selected-disabled);
@@ -51,10 +52,10 @@
     --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
   }
 
-  .cfpb-checkbox-icon:not(.disabled):not(.borderless).focus::before,
-  .cfpb-checkbox-icon:not(.disabled):not(.borderless):focus::before,
-  .cfpb-checkbox-icon:not(.disabled):not(.borderless).hover::before,
-  .cfpb-checkbox-icon:not(.disabled):not(.borderless):hover::before {
+  .cfpb-checkbox-icon:not(.disabled, .borderless).focus::before,
+  .cfpb-checkbox-icon:not(.disabled, .borderless):focus::before,
+  .cfpb-checkbox-icon:not(.disabled, .borderless).hover::before,
+  .cfpb-checkbox-icon:not(.disabled, .borderless):hover::before {
     cursor: pointer;
     border-color: var(--choice-border-hover);
     box-shadow: 0 0 0 1px var(--choice-border-hover);

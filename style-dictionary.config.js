@@ -7,6 +7,7 @@ import {
   logVerbosityLevels,
   logWarningLevels,
 } from 'style-dictionary/enums';
+import { getReferences, usesReferences } from 'style-dictionary/utils';
 
 const baseDir = 'packages/cfpb-design-system/src';
 const tokenBase = path.resolve(baseDir, 'tokens');
@@ -97,6 +98,156 @@ for (const { filterName, fullPathAbsPosix } of filtersToRegister) {
   });
 }
 
+StyleDictionary.registerFormat({
+  name: 'markdown/token-table',
+  format: ({ dictionary, file, options }) => {
+    const {
+      frontMatter,
+      documentHeading = '# Design Tokens',
+      intro,
+      groupHeadingLevel = 2,
+      outputReferences = false,
+      outputReferenceFallbacks = false,
+    } = file?.options || {};
+    const usesDtcg = options?.usesDtcg ?? false;
+
+    const fmBlock = frontMatter
+      ? `---\n${Object.entries(frontMatter)
+          .map(([key, value]) => `${key}: ${value}`)
+          .join('\n')}\n---\n\n`
+      : '';
+
+    const headingPrefix = '#'.repeat(
+      Math.max(1, Number(groupHeadingLevel) || 2),
+    );
+
+    const normalizeValue = (value) => {
+      if (value === null || value === undefined) {
+        return '';
+      }
+      if (typeof value === 'string') {
+        return value.replace(/\n/g, ' ');
+      }
+      if (typeof value === 'number' || typeof value === 'boolean') {
+        return String(value);
+      }
+      return JSON.stringify(value);
+    };
+
+    const resolveReferencesIfNeeded = (token) => {
+      const originalValue =
+        token?.original?.value ?? token?.original?.$value ?? token?.original;
+      const transformedValue =
+        token?.value !== undefined ? token.value : token?.$value;
+
+      if (
+        !outputReferences ||
+        originalValue === undefined ||
+        !usesReferences(originalValue)
+      ) {
+        return transformedValue;
+      }
+
+      const refs =
+        getReferences(originalValue, dictionary.tokens, {
+          unfilteredTokens: dictionary.unfilteredTokens,
+          usesDtcg,
+          warnImmediately: false,
+        }) || [];
+
+      const originalIsObject =
+        typeof originalValue === 'object' && originalValue !== null;
+
+      let valueToFormat = originalIsObject
+        ? transformedValue
+        : originalValue;
+
+      refs.forEach((ref) => {
+        if (!ref?.name) {
+          return;
+        }
+
+        const refValue = ref.$value ?? ref.value;
+        const replacement =
+          outputReferenceFallbacks && refValue !== undefined
+            ? `var(--${ref.name}, ${refValue})`
+            : `var(--${ref.name})`;
+
+        const searchPattern = originalIsObject
+          ? refValue
+          : new RegExp(`{${ref.path.join('\\.')}(\\.\\$?value)?}`, 'g');
+
+        if (!searchPattern) {
+          return;
+        }
+
+        valueToFormat = `${valueToFormat}`.replace(searchPattern, replacement);
+      });
+
+      return valueToFormat;
+    };
+
+    const formatValue = (token) =>
+      normalizeValue(resolveReferencesIfNeeded(token));
+
+    const formatName = (token) => {
+      if (token?.name) {
+        return `--${token.name}`;
+      }
+      if (Array.isArray(token?.path)) {
+        return `--${token.path.join('-')}`;
+      }
+      return token?.value || '';
+    };
+
+    const humanize = (slug) =>
+      slug
+        .replace(/[-_]+/g, ' ')
+        .replace(/\b\w/g, (char) => char.toUpperCase());
+
+    const tokenGroups = dictionary.allTokens.reduce((acc, token) => {
+      const groupKey = token.path?.[0] || 'tokens';
+      if (!acc[groupKey]) {
+        acc[groupKey] = [];
+      }
+      acc[groupKey].push(token);
+      return acc;
+    }, {});
+
+    const groupsMarkdown = Object.keys(tokenGroups)
+      .sort((a, b) => a.localeCompare(b))
+      .map((group) => {
+        const rows = tokenGroups[group]
+          .slice()
+          .sort((a, b) => formatName(a).localeCompare(formatName(b)))
+          .map((token) => {
+            const type = token.type || token.attributes?.category || '';
+            return `| \`${formatName(token)}\` | \`${formatValue(
+              token,
+            )}\` | ${type} |`;
+          });
+
+        if (rows.length === 0) {
+          return '';
+        }
+
+        return [
+          `${headingPrefix} ${humanize(group)}`,
+          '| Token | Value | Type |',
+          '| --- | --- | --- |',
+          ...rows,
+          '',
+        ].join('\n');
+      })
+      .filter(Boolean)
+      .join('\n');
+
+    const introBlock = intro ? `${intro}\n\n` : '';
+
+    return `${fmBlock}${documentHeading}\n\n${introBlock}${groupsMarkdown}`.trimEnd() + '\n';
+  },
+});
+
 // ---- export the config object ----
 export default {
   // Keep all tokens loaded so references can be resolved / named consistently
@@ -117,6 +268,30 @@ export default {
       transformGroup: 'css/without-group',
       buildPath: `${baseDir}/elements/`,
       files,
+    },
+    docs: {
+      transformGroup: 'css/without-group',
+      buildPath: 'docs/pages/',
+      files: [
+        {
+          destination: 'tokens.md',
+          format: 'markdown/token-table',
+          options: {
+            frontMatter: {
+              title: 'Tokens',
+              layout: 'variation',
+              section: 'foundation',
+              status: 'Generated',
+              description: 'Auto-generated reference for CFPB design tokens.',
+            },
+            documentHeading: '# Design Tokens',
+            intro:
+              '_This file is generated by Style Dictionary. Do not edit it manually._',
+            groupHeadingLevel: 2,
+            outputReferences: true,
+          },
+        },
+      ],
     },
   },
 };

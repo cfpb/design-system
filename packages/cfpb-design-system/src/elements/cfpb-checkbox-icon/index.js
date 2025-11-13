@@ -22,14 +22,12 @@ export class CfpbCheckboxIcon extends LitElement {
    * @property {string} validation - Validation style: error, warning, success.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      borderless: { type: Boolean, reflect: true },
-      checked: { type: Boolean, reflect: true },
-      disabled: { type: Boolean, reflect: true },
-      validation: { type: String, reflect: true },
-    };
-  }
+  static properties = {
+    borderless: { type: Boolean, reflect: true },
+    checked: { type: Boolean, reflect: true },
+    disabled: { type: Boolean, reflect: true },
+    validation: { type: String, reflect: true },
+  };
 
   constructor() {
     super();
@@ -90,8 +88,6 @@ export class CfpbCheckboxIcon extends LitElement {
   }
 
   render() {
-    const validation = this.#validValidation;
-
     return html`
       <div
         class=${this.#computeClassString()}

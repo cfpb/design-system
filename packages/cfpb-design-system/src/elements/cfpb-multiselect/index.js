@@ -25,15 +25,12 @@ export class CfpbMultiselect extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
-  static get properties() {
-    return {
-      // Other properties.
-      name: { type: String },
-      options: { type: Array, state: true },
-      selectedLabel: { type: String, state: true },
-      label: { type: String, attribute: true },
-    };
-  }
+  static properties = {
+    name: { type: String },
+    options: { type: Array, state: true },
+    selectedLabel: { type: String, state: true },
+    label: { type: String, attribute: true },
+  };
 
   // DOM references.
   #containerDom;

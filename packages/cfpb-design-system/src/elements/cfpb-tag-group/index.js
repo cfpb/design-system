@@ -25,12 +25,10 @@ export class CfpbTagGroup extends LitElement {
    * @property {Array} tagList - List of the tags in the tag group.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      stacked: { type: Boolean, reflect: true },
-      tagList: { type: Array },
-    };
-  }
+  static properties = {
+    stacked: { type: Boolean, reflect: true },
+    tagList: { type: Array },
+  };
 
   // Private properties.
   #observer;

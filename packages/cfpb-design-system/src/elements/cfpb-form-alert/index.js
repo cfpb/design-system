@@ -18,11 +18,9 @@ export class CfpbFormAlert extends LitElement {
    * @property {string} validation - Validation style: error, warning, success.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      validation: { type: String },
-    };
-  }
+  static properties = {
+    validation: { type: String },
+  };
 
   constructor() {
     super();

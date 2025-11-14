@@ -3,12 +3,12 @@ name: Build Design Tokens
 on: 
   push:
     paths:
-      - './packages/cfpb-design-system/src/tokens/**'
+      - 'packages/cfpb-design-system/src/tokens/**'
   pull_request:
     branches:
       - main
     paths: 
-      - './packages/cfpb-design-system/src/tokens/**'
+      - 'packages/cfpb-design-system/src/tokens/**'
 
 jobs:
   grab_tokens:

@@ -43,7 +43,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with: 
-          file_pattern: '*.css'
+          file_pattern: 'packages/cfpb-design-system/src/elements/*.css'
           commit_message: "Automated commit of Style Dictionary translated JSON token files to CSS done by GH action."
           branch: ${{ github.ref_name }}
           commit_options: '-a'

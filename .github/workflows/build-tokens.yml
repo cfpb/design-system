@@ -3,19 +3,19 @@ name: Build Design Tokens
 on: 
   push:
     paths:
-      - 'packages/cfpb-design-system/src/tokens/**'
+      - './packages/cfpb-design-system/src/tokens/**'
   pull_request:
     branches:
       - main
     paths: 
-      - 'packages/cfpb-design-system/src/tokens/**'
+      - './packages/cfpb-design-system/src/tokens/**'
 
 jobs:
-  build_tokens:
+  grab_tokens:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - name: Checkout repository
@@ -29,9 +29,21 @@ jobs:
       - name: Build tokens
         run: npx style-dictionary build --config ./style-dictionary.config.js
 
+  commit_changes:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    needs: grab_tokens
+
+    steps:
       - name: Auto commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with: 
-          commit_message: "Automated commit of translated JSON token files done by GH action."
+          file_pattern: '*.css'
+          commit_message: "Automated commit of Style Dictionary translated JSON token files to CSS done by GH action."
           branch: ${{ github.ref_name }}
           commit_options: '-a'

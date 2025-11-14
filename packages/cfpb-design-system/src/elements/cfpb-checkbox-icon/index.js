@@ -92,9 +92,7 @@ export class CfpbCheckboxIcon extends LitElement {
       <div
         class=${this.#computeClassString()}
         ?disabled=${this.disabled}
-        role="checkbox"
-        aria-checked=${this.checked}
-        aria-disabled=${this.disabled}
+        aria-hidden="true"
       ></div>
     `;
   }

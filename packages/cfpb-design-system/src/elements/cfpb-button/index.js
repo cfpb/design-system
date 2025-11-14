@@ -31,34 +31,32 @@ export class CfpbButton extends LitElement {
    * @property {boolean} styleAsLink - Style the button as a link.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      type: { type: String },
-      href: { type: String },
-      disabled: { type: Boolean, reflect: true },
-      variant: { type: String },
-      fullOnMobile: {
-        type: Boolean,
-        attribute: 'full-on-mobile',
-        reflect: true,
-      },
-      flushLeft: {
-        type: Boolean,
-        attribute: 'flush-left',
-        reflect: true,
-      },
-      flushRight: {
-        type: Boolean,
-        attribute: 'flush-right',
-        reflect: true,
-      },
-      styleAsLink: {
-        type: Boolean,
-        attribute: 'style-as-link',
-        reflect: true,
-      },
-    };
-  }
+  static properties = {
+    type: { type: String },
+    href: { type: String },
+    disabled: { type: Boolean, reflect: true },
+    variant: { type: String },
+    fullOnMobile: {
+      type: Boolean,
+      attribute: 'full-on-mobile',
+      reflect: true,
+    },
+    flushLeft: {
+      type: Boolean,
+      attribute: 'flush-left',
+      reflect: true,
+    },
+    flushRight: {
+      type: Boolean,
+      attribute: 'flush-right',
+      reflect: true,
+    },
+    styleAsLink: {
+      type: Boolean,
+      attribute: 'style-as-link',
+      reflect: true,
+    },
+  };
 
   // DOM references.
   #iconTextDom = createRef();

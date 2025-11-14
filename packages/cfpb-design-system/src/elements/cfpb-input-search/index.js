@@ -28,19 +28,17 @@ export class CfpbInputSearch extends LitElement {
    * @property {string} ariaLabelButton - aria-label for button.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      disabled: { type: Boolean },
-      validation: { type: String },
-      label: { type: String },
-      name: { type: String },
-      title: { type: Boolean, attribute: true },
-      value: { type: String },
-      placeholder: { type: String },
-      ariaLabelInput: { type: String, attribute: 'aria-label-input' },
-      ariaLabelButton: { type: String, attribute: 'aria-label-button' },
-    };
-  }
+  static properties = {
+    disabled: { type: Boolean },
+    validation: { type: String },
+    label: { type: String },
+    name: { type: String },
+    title: { type: Boolean, attribute: true },
+    value: { type: String },
+    placeholder: { type: String },
+    ariaLabelInput: { type: String, attribute: 'aria-label-input' },
+    ariaLabelButton: { type: String, attribute: 'aria-label-button' },
+  };
 
   #internals;
   #searchInput;

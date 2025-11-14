@@ -17,11 +17,9 @@ export class CfpbTagFilter extends LitElement {
    * @property {string} for - Associate the label with an ID elsewhere.
    * @returns {object} The map of properties.
    */
-  static get properties() {
-    return {
-      for: { type: String },
-    };
-  }
+  static properties = {
+    for: { type: String },
+  };
 
   constructor() {
     super();

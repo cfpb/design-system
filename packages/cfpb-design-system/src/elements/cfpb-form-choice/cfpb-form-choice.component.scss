@@ -91,7 +91,7 @@
     }
 
     &--radio {
-      &:disabled {
+      input:disabled {
         &:checked + .a-label::before,
         &:focus + .a-label::before,
         &.focus + .a-label::before,

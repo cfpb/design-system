@@ -4795,7 +4795,7 @@ __metadata:
     release-it: "npm:19.0.6"
     sass: "npm:1.94.0"
     slugify: "npm:1.6.6"
-    style-dictionary: "npm:^5.1.1"
+    style-dictionary: "npm:5.1.1"
     stylelint: "npm:16.25.0"
     stylelint-config-standard-scss: "npm:16.0.0"
     svgo: "npm:4.0.0"
@@ -16459,7 +16459,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^5.1.1":
+"style-dictionary@npm:5.1.1":
   version: 5.1.1
   resolution: "style-dictionary@npm:5.1.1"
   dependencies:

@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Design System
+   Breakpoint variables.
+
+   NOTE: If any of the values in this file are adjusted,
+         they need to be adjusted in vars-breakpoints.js as well.
+   ========================================================================== */
+
+$bp-xs-max: 600px;
+$bp-sm-min: $bp-xs-max + 1px;
+$bp-sm-max: 900px;
+$bp-med-min: $bp-sm-max + 1px;
+$bp-med-max: 1020px;
+$bp-lg-min: $bp-med-max + 1px;
+$bp-lg-max: 1230px;
+$bp-xl-min: $bp-lg-max + 1px;

@@ -1,0 +1,67 @@
+@use 'sass:math';
+
+//  Seperating sizing vars out because for now we are only doing color tokens
+//  Putting these in a partial.  
+$base-font-size: 16;
+$base-font-size-px: 16px;
+$base-line-height-px: 22px;
+$base-line-height: math.div($base-line-height-px, $base-font-size-px);
+$btn-font-size: $base-font-size-px;
+$btn-border-radius-size: 4px;
+$btn-v-padding: 8px;
+$btn-h-padding: 14px;
+
+$size-xl: 48px; // Super-size
+$size-i: 34px; // h1-size
+$size-ii: 26px; // h2-size
+$size-iii: 22px; // h3-size
+$size-iv: 18px; // h4-size
+$size-v: 14px; // h5-size
+$size-vi: 12px; // h6-size
+$size-code: 13px; // Custom size only for Mono code blocks
+
+// Icons' SVG viewbox are a consistent 19px (h) x variable (w).
+// The height matches the 19px rendered canvas of text set in Source Sans 3
+// sized at 16px (19/16 = 1.1875).
+$cf-icon-height: 1.1875em;
+
+// Grid variables
+
+$grid-wrapper-width: 1230px;
+$grid-gutter-width: 30px;
+$grid-total-columns: 12;
+
+// .a-select
+$select-height: 35px;
+
+// Featured Content Module sizing variables.
+$fcm-visual-width: 270px;
+$fcm-min-height: 220px;
+
+:host {
+// Typography normalization
+    --font-adjust-base: 0.517;
+    --font-adjust-step: 0.0054;
+
+    /* Derived font-size-adjust-values */
+    --font-adjust-h1: calc(
+        var(--font-size-adjust-base) + (5 * var(--font-adjust-step))
+    );
+    --font-adjust-h2: calc(
+        var(--font-size-adjust-base) + (4 * var(--font-adjust-step))
+    );
+    --font-adjust-h3: calc(
+        var(--font-size-adjust-base) + (3 * var(--font-adjust-step))
+    );
+    --font-adjust-h4: calc(
+        var(--font-size-adjust-base) + (2 * var(--font-adjust-step))
+    );
+    --font-adjust-h5: calc(
+        var(--font-size-adjust-base) + (1 * var(--font-adjust-step))
+    );
+    --font-adjust-h6: var(--font-adjust-base);
+    --font-adjust-body: var(--font-adjust-base);
+        
+    //.a-select
+    --select-border-width-default: 1px;
+}

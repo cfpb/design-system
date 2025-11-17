@@ -1,7 +1,7 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/base' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/vars' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '../cfpb-button/vars.css' as *;
 
 :host {
   // Theme variables.

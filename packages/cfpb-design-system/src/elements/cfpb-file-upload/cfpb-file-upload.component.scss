@@ -1,5 +1,5 @@
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
-@use '../cfpb-button/vars.css' as *;
+@use '@cfpb/cfpb-design-system/src/elements/cfpb-button/vars' as *;
 
 :host {
   // This prevents the child button from having an empty gap after the button.

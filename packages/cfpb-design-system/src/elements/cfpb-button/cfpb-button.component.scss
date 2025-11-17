@@ -1,7 +1,7 @@
 @use '@cfpb/cfpb-design-system/src/elements/base' as *;
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
-@use 'cfpb-button' as *;
-@use 'cfpb-button-link' as *;
+@use '@cfpb/cfpb-design-system/src/elements/cfpb-button/cfpb-button' as *;
+@use '@cfpb/cfpb-design-system/src/elements/cfpb-button/cfpb-button-link' as *;
 
 :host {
   // This prevents the child button from having an empty gap after the button.

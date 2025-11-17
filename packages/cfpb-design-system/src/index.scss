@@ -64,3 +64,13 @@
 
 // Utilities.
 @forward 'utilities';
+
+// Web components.
+@forward 'elements/base';
+@forward 'elements/abstracts';
+
+// Button.
+@forward 'elements/cfpb-button/cfpb-button';
+@forward 'elements/cfpb-button/cfpb-button-group';
+@forward 'elements/cfpb-button/cfpb-button-link';
+@forward 'elements/cfpb-button/vars';

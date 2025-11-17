@@ -10,7 +10,6 @@ $btn-font-size: $base-font-size-px;
 $btn-border-radius-size: 4px;
 $btn-v-padding: 8px;
 $btn-h-padding: 14px;
-
 $size-xl: 48px; // Super-size
 $size-i: 34px; // h1-size
 $size-ii: 26px; // h2-size
@@ -62,6 +61,6 @@ $fcm-min-height: 220px;
     --font-adjust-h6: var(--font-adjust-base);
     --font-adjust-body: var(--font-adjust-base);
         
-    //.a-select
+    // .a-select
     --select-border-width-default: 1px;
 }

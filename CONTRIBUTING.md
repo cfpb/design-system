@@ -162,3 +162,42 @@ Instructions for developers who've received a new or updated icon from a designe
    accordingly
 1. If any icons were deleted, be sure to delete them from both
    `packages/cfpb-design-system/src/components/cfpb-icons/icons/` and `docs/_includes/icons/`
+
+## Adding and updating web component JSON design tokens
+
+The web components in the design system use JSON format design tokens that get transformed by Style Dicitonary into css.
+These tokens are exported from Figma and then saved to the tokens directory in subfolders organized by their usage.
+Meaning, global tokens are in the packages/cfpb-design-system/src/tokens/abstracts directory and any component specific tokens are located
+in their own sub directories inside tokens (e.g. packages/cfpb-design-system/src/tokens/cfpb-button or similar).
+
+Style dicitonary transforms any JSON token it finds in the tokens directory into css files and places them in a directory mirroring the structure
+it found in tokens to the src/elements directory as sub directories.
+
+1. To add or update a color token's value, find the relevant JSON token file and change the value or create a JSON token file in the
+   appropriate location.
+   - For example,if you wanted to change the value of "pacific" you would go to tokens/abstracts/custom-props.json find the
+     "pacific" token and then change its $value: #`newval`.
+   - If you wanted to add a color token file for cfpb-newcomponent, you would create tokens/cfpb-newcomponent directory and then add the JSON
+     token file using the approriate JSON token form.
+1. Then either use `yarn start` to build the cobebase and view it in a browser or `yarn tokens` if you would like to simply create
+   the .css.
+1. Then the rest of the steps outlined for changing the codebase apply.
+   - Open a feature branch for your change
+   - Commit the changes
+   - `yarn start` to verify your changes in a browser (for developers or designers who can bulid the project)
+   - Open a pull request and ask for a review
+
+### Our tokens take the form of
+
+Below is an example of a valid JSON token file structure for our project.
+
+```
+{
+  "namespace": {
+    "token_name": {
+      "$type": "color",
+      "$value": "#bea96f"
+    }
+  }
+}
+```

@@ -187,9 +187,9 @@ it found in tokens to the src/elements directory as sub directories.
    - `yarn start` to verify your changes in a browser (for developers or designers who can bulid the project)
    - Open a pull request and ask for a review
 
-### Our tokens take the form of
+### Our tokens have the following form
 
-Below is an example of a valid JSON token file structure for our project.
+Example of a valid JSON token file structure for our project.
 
 ```
 {

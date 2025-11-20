@@ -21,11 +21,9 @@ export class CfpbIconText extends LitElement {
 
   // DOM references.
   #svgObserver;
-  #iconClasses;
 
   constructor() {
     super();
-    this.#iconClasses = '';
   }
 
   connectedCallback() {
@@ -99,8 +97,7 @@ export class CfpbIconText extends LitElement {
     const icon = this.#findIconInSlot();
     const div = this.shadowRoot.querySelector('div');
     if (icon) {
-      this.#iconClasses = div.className;
-      div.className = '';
+      div.classList.add('u-has-icon--hidden');
     }
   }
 
@@ -110,7 +107,7 @@ export class CfpbIconText extends LitElement {
   showIcon() {
     const icon = this.#findIconInSlot();
     const div = this.shadowRoot.querySelector('div');
-    if (icon) div.className = this.#iconClasses;
+    if (icon) div.classList.remove('u-has-icon--hidden');
   }
 
   /**

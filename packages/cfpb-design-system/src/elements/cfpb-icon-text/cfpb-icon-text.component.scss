@@ -10,7 +10,10 @@
 
 :host {
   // Theme variables.
-  --icon-text-divider: var(--pacific-60);
+  --icon-text-divider-default: var(--pacific-60);
+  --icon-text-divider-disabled: var(--gray-60);
+
+  --icon-text-divider: var(--icon-text-divider-default);
 
   div {
     // This prevents the child button from having an empty gap after the button.
@@ -23,38 +26,40 @@
       display: none;
     }
 
-    &.u-has-icon {
-      gap: math.div(10px, $btn-font-size) + rem;
-      & slot::before {
-        @include u-btn-divider;
+    &:not(.u-has-icon--hidden) {
+      &.u-has-icon {
+        gap: math.div(10px, $btn-font-size) + rem;
+        & slot::before {
+          @include u-btn-divider;
+        }
+
+        // Show SVG.
+        & ::slotted(svg) {
+          display: initial;
+        }
       }
 
-      // Show SVG.
-      & ::slotted(svg) {
-        display: initial;
+      &.u-has-icon--left {
+        & ::slotted(svg) {
+          order: 1;
+        }
+        & ::slotted(span) {
+          order: 3;
+        }
       }
-    }
 
-    &.u-has-icon--left {
-      & ::slotted(svg) {
-        order: 1;
-      }
-      & ::slotted(span) {
-        order: 3;
-      }
-    }
-
-    &.u-has-icon--right {
-      & ::slotted(svg) {
-        order: 3;
-      }
-      & ::slotted(span) {
-        order: 1;
+      &.u-has-icon--right {
+        & ::slotted(svg) {
+          order: 3;
+        }
+        & ::slotted(span) {
+          order: 1;
+        }
       }
     }
   }
 }
 
 :host([disabled]) {
-  --icon-text-divider: var(--gray-60);
+  --icon-text-divider: var(--icon-text-divider-disabled);
 }

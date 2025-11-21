@@ -7,6 +7,25 @@ description: The components are custom elements (web components).
 variation_groups:
   - variations:
       - variation_is_deprecated: false
+        variation_name: Icon and Text
+        variation_description: A basic pairing of an SVG icon and text.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-icon-text>No icon</cfpb-icon-text>
+
+            <br>
+
+            <cfpb-icon-text>{% include icons/download.svg %} Icon on left</cfpb-icon-text>
+
+            <br>
+
+            <cfpb-icon-text>Icon on right {% include icons/download.svg %}</cfpb-icon-text>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-icon-text>No icon</cfpb-icon-text>
+          <cfpb-icon-text>{% include icons/download.svg %} Icon on left</cfpb-icon-text>
+          <cfpb-icon-text>Icon on right {% include icons/download.svg %}</cfpb-icon-text>
+      - variation_is_deprecated: false
         variation_name: Button
         variation_description: A basic button in web component syntax.
         variation_code_snippet_rendered: >-

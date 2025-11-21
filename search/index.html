@@ -2061,17 +2061,21 @@ Label
                 
 
                 
-                    'variation_name1': 'Button',
-                    'variation_description1': "A+basic+button+in+web+component+syntax.%0A",
-                    'variation_code_snippet1': `&lt;cfpb-button&gt;This is a button&lt;/cfpb-button&gt; &lt;cfpb-button href=&quot;#&quot; full-on-mobile&gt;This is a button link&lt;/cfpb-button&gt; &lt;cfpb-button disabled&gt;This is a disabled button link&lt;/cfpb-button&gt; &lt;cfpb-button style-as-link href=&quot;#&quot;&gt;This is a button styled as a link&lt;/cfpb-button&gt;`,
+                    'variation_name1': 'Icon and Text',
+                    'variation_description1': "A+basic+pairing+of+an+SVG+icon+and+text.%0A",
+                    'variation_code_snippet1': `&lt;cfpb-icon-text&gt;No icon&lt;/cfpb-icon-text&gt; &lt;cfpb-icon-text&gt;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg> Icon on left&lt;/cfpb-icon-text&gt; &lt;cfpb-icon-text&gt;Icon on right <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>&lt;/cfpb-icon-text&gt;`,
                 
-                    'variation_name2': 'File upload',
-                    'variation_description2': "Allows+files+to+be+selected+for+upload.%0A",
-                    'variation_code_snippet2': `&lt;cfpb-file-upload&gt;Select file&lt;/cfpb-file-upload&gt;`,
+                    'variation_name2': 'Button',
+                    'variation_description2': "A+basic+button+in+web+component+syntax.%0A",
+                    'variation_code_snippet2': `&lt;cfpb-button&gt;This is a button&lt;/cfpb-button&gt; &lt;cfpb-button href=&quot;#&quot; full-on-mobile&gt;This is a button link&lt;/cfpb-button&gt; &lt;cfpb-button disabled&gt;This is a disabled button link&lt;/cfpb-button&gt; &lt;cfpb-button style-as-link href=&quot;#&quot;&gt;This is a button styled as a link&lt;/cfpb-button&gt;`,
                 
-                    'variation_name3': 'Checkbox',
-                    'variation_description3': "A+checkbox+component.%0A",
-                    'variation_code_snippet3': `&lt;cfpb-form-choice&gt;
+                    'variation_name3': 'File upload',
+                    'variation_description3': "Allows+files+to+be+selected+for+upload.%0A",
+                    'variation_code_snippet3': `&lt;cfpb-file-upload&gt;Select file&lt;/cfpb-file-upload&gt;`,
+                
+                    'variation_name4': 'Checkbox',
+                    'variation_description4': "A+checkbox+component.%0A",
+                    'variation_code_snippet4': `&lt;cfpb-form-choice&gt;
   Gold
 &lt;/cfpb-form-choice&gt;
 &lt;cfpb-form-choice disabled&gt;
@@ -2093,9 +2097,9 @@ Label
   Gold
 &lt;/cfpb-form-choice&gt;`,
                 
-                    'variation_name4': 'Radio button',
-                    'variation_description4': "A+radio+button+component.%0A",
-                    'variation_code_snippet4': `&lt;cfpb-form-choice type=&quot;radio&quot;&gt;
+                    'variation_name5': 'Radio button',
+                    'variation_description5': "A+radio+button+component.%0A",
+                    'variation_code_snippet5': `&lt;cfpb-form-choice type=&quot;radio&quot;&gt;
   Gold
 &lt;/cfpb-form-choice&gt;
 &lt;cfpb-form-choice type=&quot;radio&quot; disabled&gt;
@@ -2126,9 +2130,9 @@ Label
   Gold
 &lt;/cfpb-form-choice&gt;`,
                 
-                    'variation_name5': 'Topic tag',
-                    'variation_description5': "Tag+element+for+topics.%0A",
-                    'variation_code_snippet5': `&lt;cfpb-tag-group stacked&gt;
+                    'variation_name6': 'Topic tag',
+                    'variation_description6': "Tag+element+for+topics.%0A",
+                    'variation_code_snippet6': `&lt;cfpb-tag-group stacked&gt;
   &lt;cfpb-tag-topic&gt;
     Option 1
   &lt;/cfpb-tag-topic&gt;
@@ -2140,15 +2144,15 @@ Label
   &lt;/cfpb-tag-topic&gt;
 &lt;/cfpb-tag-group&gt;`,
                 
-                    'variation_name6': 'Filter tag',
-                    'variation_description6': "Tag+element+for+filters.%0A",
-                    'variation_code_snippet6': `&lt;cfpb-tag-filter&gt;
+                    'variation_name7': 'Filter tag',
+                    'variation_description7': "Tag+element+for+filters.%0A",
+                    'variation_code_snippet7': `&lt;cfpb-tag-filter&gt;
   Option 1
 &lt;/cfpb-tag-filter&gt;`,
                 
-                    'variation_name7': 'Filter tag group',
-                    'variation_description7': "A+group+of+filter+Tag+elements.%0A",
-                    'variation_code_snippet7': `&lt;cfpb-tag-group&gt;
+                    'variation_name8': 'Filter tag group',
+                    'variation_description8': "A+group+of+filter+Tag+elements.%0A",
+                    'variation_code_snippet8': `&lt;cfpb-tag-group&gt;
   &lt;cfpb-tag-filter&gt;
     Option 1
   &lt;/cfpb-tag-filter&gt;
@@ -2160,9 +2164,9 @@ Label
   &lt;/cfpb-tag-filter&gt;
 &lt;/cfpb-tag-group&gt;`,
                 
-                    'variation_name8': 'Label',
-                    'variation_description8': "A+label+component.%0A",
-                    'variation_code_snippet8': `&lt;cfpb-label&gt;
+                    'variation_name9': 'Label',
+                    'variation_description9': "A+label+component.%0A",
+                    'variation_code_snippet9': `&lt;cfpb-label&gt;
   &lt;div slot=&quot;label&quot;&gt;This is a label&lt;/div&gt;
 &lt;/cfpb-label&gt;
 &lt;cfpb-label&gt;
@@ -2174,9 +2178,9 @@ Label
   &lt;div slot=&quot;helper&quot;&gt;With a block-level helper text&lt;/div&gt;
 &lt;/cfpb-label&gt;`,
                 
-                    'variation_name9': 'Multiselect',
-                    'variation_description9': "A+select+component+that+can+have+multiple+selections.%0A",
-                    'variation_code_snippet9': `&lt;cfpb-multiselect&gt;
+                    'variation_name10': 'Multiselect',
+                    'variation_description10': "A+select+component+that+can+have+multiple+selections.%0A",
+                    'variation_code_snippet10': `&lt;cfpb-multiselect&gt;
   &lt;select multiple&gt;
     &lt;option&gt;
       Mercury
@@ -2205,17 +2209,17 @@ Label
   &lt;/select&gt;
 &lt;/cfpb-multiselect&gt;`,
                 
-                    'variation_name10': 'Search input',
-                    'variation_description10': "A+search+input+component.%0A",
-                    'variation_code_snippet10': `&lt;cfpb-input-search&gt; &lt;/cfpb-input-search&gt;`,
+                    'variation_name11': 'Search input',
+                    'variation_description11': "A+search+input+component.%0A",
+                    'variation_code_snippet11': `&lt;cfpb-input-search&gt; &lt;/cfpb-input-search&gt;`,
                 
-                    'variation_name11': 'Form-level alert',
-                    'variation_description11': "A+form-level+alert+component.%0A",
-                    'variation_code_snippet11': `&lt;cfpb-form-alert validation=&quot;error&quot;&gt;An error&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;warning&quot;&gt;A warning&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;success&quot;&gt;A success message&lt;/cfpb-form-alert&gt;`,
+                    'variation_name12': 'Form-level alert',
+                    'variation_description12': "A+form-level+alert+component.%0A",
+                    'variation_code_snippet12': `&lt;cfpb-form-alert validation=&quot;error&quot;&gt;An error&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;warning&quot;&gt;A warning&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;success&quot;&gt;A success message&lt;/cfpb-form-alert&gt;`,
                 
-                    'variation_name12': 'Pagination',
-                    'variation_description12': "A+pagination+component.%0A",
-                    'variation_code_snippet12': `&lt;cfpb-pagination value=&quot;4&quot; max=&quot;10&quot;&gt;
+                    'variation_name13': 'Pagination',
+                    'variation_description13': "A+pagination+component.%0A",
+                    'variation_code_snippet13': `&lt;cfpb-pagination value=&quot;4&quot; max=&quot;10&quot;&gt;
   &lt;i18n-service&gt;
     &lt;template&gt;
       {

@@ -13,10 +13,16 @@
   // Mobile only.
   @include respond-to-max($bp-xs-max) {
     width: 100%;
+
+    button,
+    [role='button'] {
+      width: 100%;
+    }
   }
 }
 
 :host([flush-left]) {
+  button,
   [role='button'] {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -24,6 +30,7 @@
 }
 
 :host([flush-right]) {
+  button,
   [role='button'] {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;

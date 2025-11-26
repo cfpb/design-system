@@ -32,7 +32,7 @@ variation_groups:
             <br><hr><br>
 
             <p>
-            The following section allows interacting with the icon-text API.
+            The following section allows interacting with the API.
             </p>
             <p><cfpb-icon-text id="icon-text-example">{% include icons/bank.svg %} Example icon-text component {% include icons/download.svg %}</cfpb-icon-text></p>
             <p>
@@ -101,7 +101,7 @@ variation_groups:
             <hr>
             <br>
             <p>
-            The following section allows interacting with the button API.
+            The following section allows interacting with the API.
             </p>
             <p><cfpb-button id="btn-example">{% include icons/updating.svg %} Example button</cfpb-button></p>
 
@@ -230,7 +230,7 @@ variation_groups:
             <hr>
             <br>
             <p>
-            The following section allows interacting with the button API.
+            The following section allows interacting with the API.
             </p>
             <p><cfpb-checkbox-icon id="checkbox-icon-example"></cfpb-checkbox-icon></p>
 
@@ -444,6 +444,76 @@ variation_groups:
             <cfpb-form-choice type="radio" large validation="error">
               Gold
             </cfpb-form-choice>
+
+
+            <br>
+            <hr>
+            <br>
+
+            <p>
+            The following section allows interacting with the API.
+            </p>
+            <p><cfpb-form-choice id="choice-example">Form choice example</cfpb-form-choice></p>
+
+            <p>
+            Validation state:
+            <select id="choice-example-type">
+              <option>checkbox</option>
+              <option>radio</option>
+            </select>
+
+            </p><p>
+
+            Validation state:
+            <select id="choice-example-validation">
+              <option>---</option>
+              <option>success</option>
+              <option>warning</option>
+              <option>error</option>
+            </select>
+
+            </p><p>
+
+            <input type="checkbox" id="choice-example-large" />
+            <label for="choice-example-large">Large</label>
+
+            </p><p>
+
+            <input type="checkbox" id="choice-example-disabled" />
+            <label for="choice-example-disabled">Disabled</label>
+
+            </p>
+
+            <script>
+            (function(){
+            const choiceEx = document.querySelector('#choice-example');
+
+            const typeSel = document.querySelector('#choice-example-type');
+            const valSel = document.querySelector('#choice-example-validation');
+
+            const largeBtn = document.querySelector('#choice-example-large');
+            const disBtn = document.querySelector('#choice-example-disabled');
+
+            typeSel.addEventListener('change',()=>{
+              choiceEx.type = typeSel.value;
+            });
+
+            valSel.addEventListener('change',()=>{
+              if (valSel.value !== '---') choiceEx.validation = valSel.value;
+              else choiceEx.removeAttribute('validation');
+            });
+
+            largeBtn.addEventListener('click',()=>{
+              choiceEx.large = !choiceEx.large;
+            });
+
+            disBtn.addEventListener('click',()=>{
+              choiceEx.disabled = !choiceEx.disabled;
+            });
+
+            })();
+            </script>
+
           </div>
         variation_code_snippet: >-
           <cfpb-form-choice type="radio">
@@ -552,7 +622,7 @@ variation_groups:
             <hr>
             <br>
             <p>
-            The following section allows interacting with the tag group API.
+            The following section allows interacting with the API.
             </p>
             <p>
             <label>

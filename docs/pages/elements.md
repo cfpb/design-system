@@ -106,7 +106,7 @@ variation_groups:
             <p><cfpb-button id="btn-example">{% include icons/updating.svg %} Example button</cfpb-button></p>
 
             <p>
-            Button type:
+            <label for="btn-example-variant">Button type:</label>
             <select id="btn-example-variant">
               <option>primary</option>
               <option>secondary</option>
@@ -235,7 +235,8 @@ variation_groups:
             <p><cfpb-checkbox-icon id="checkbox-icon-example"></cfpb-checkbox-icon></p>
 
             <p>
-            Validation state:
+
+            <label for="checkbox-icon-example-validation">Validation state:</label>
             <select id="checkbox-icon-example-validation">
               <option>---</option>
               <option>success</option>
@@ -456,7 +457,7 @@ variation_groups:
             <p><cfpb-form-choice id="choice-example">Form choice example</cfpb-form-choice></p>
 
             <p>
-            Validation state:
+            <label for="choice-example-type">Choice type:</label>
             <select id="choice-example-type">
               <option>checkbox</option>
               <option>radio</option>
@@ -464,7 +465,7 @@ variation_groups:
 
             </p><p>
 
-            Validation state:
+            <label for="choice-example-validation">Validation state:</label>
             <select id="choice-example-validation">
               <option>---</option>
               <option>success</option>

@@ -4,57 +4,50 @@
 @mixin u-btn-divider() {
   content: '';
   border-left: 1px solid var(--icon-text-divider);
-  order: 2;
   place-self: normal;
 }
 
 :host {
   // Theme variables.
-  --icon-text-divider: var(--pacific-60);
+  --icon-text-divider-default: var(--pacific-60);
+  --icon-text-divider-disabled: var(--gray-60);
 
-  div {
+  // Private variables.
+  --icon-text-divider: var(--icon-text-divider-default);
+
+  .wrapper {
     // This prevents the child button from having an empty gap after the button.
     display: flex;
     width: fit-content;
     align-items: center;
 
-    // Hide SVG by default.
-    & ::slotted(svg) {
-      display: none;
-    }
+    gap: math.div(10px, $btn-font-size) + rem;
+  }
 
-    &.u-has-icon {
-      gap: math.div(10px, $btn-font-size) + rem;
-      & slot::before {
-        @include u-btn-divider;
-      }
+  .left-divider::before,
+  .right-divider::after {
+    @include u-btn-divider;
+  }
 
-      // Show SVG.
-      & ::slotted(svg) {
-        display: initial;
-      }
-    }
-
-    &.u-has-icon--left {
-      & ::slotted(svg) {
-        order: 1;
-      }
-      & ::slotted(span) {
-        order: 3;
-      }
-    }
-
-    &.u-has-icon--right {
-      & ::slotted(svg) {
-        order: 3;
-      }
-      & ::slotted(span) {
-        order: 1;
-      }
-    }
+  // Shine the slot contents through to the wrapper's flexbox items.
+  slot {
+    display: contents;
   }
 }
 
+.left-divider ::slotted(svg:first-of-type) {
+  order: -1;
+}
+
+.right-divider ::slotted(svg:last-of-type) {
+  order: 1;
+}
+
 :host([disabled]) {
-  --icon-text-divider: var(--gray-60);
+  --icon-text-divider: var(--icon-text-divider-disabled);
+}
+
+// Hide SVG if user calls hideIcon()
+:host([icon-hidden]) ::slotted(svg) {
+  display: none !important;
 }

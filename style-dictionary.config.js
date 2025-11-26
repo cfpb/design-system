@@ -12,8 +12,8 @@ const baseDir = 'packages/cfpb-design-system/src';
 const tokenBase = path.resolve(baseDir, 'tokens');
 
 // ---- helpers ----
-const toPosix = (p) => p.split(path.sep).join('/');
-const toAbsPosix = (p) => toPosix(path.isAbsolute(p) ? p : path.resolve(p));
+const toPosix = (fsPath) => fsPath.split(path.sep).join('/');
+const toAbsPosix = (fsPath) => toPosix(path.isAbsolute(fsPath) ? fsPath : path.resolve(fsPath));
 
 function getAllDirs(dirPath) {
   const out = [];

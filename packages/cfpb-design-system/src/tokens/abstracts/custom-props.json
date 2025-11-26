@@ -955,7 +955,6 @@
     "pacific": {
       "$type": "color",
       "$value": "#0072ce",
-      "$description": "0072CE",
       "$extensions": {
         "com.figma": {
           "collectionName": "abstracts-custom-props",

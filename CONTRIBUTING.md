@@ -175,9 +175,9 @@ it found in tokens to the src/elements directory as sub directories.
 
 1. To add or update a color token's value, find the relevant JSON token file and change the value or create a JSON token file in the
    appropriate location.
-   - For example,if you wanted to change the value of "pacific" you would go to tokens/abstracts/custom-props.json find the
+   - For example,if you wanted to change the value of "pacific" you would go to `tokens/abstracts/custom-props.json` find the
      "pacific" token and then change its $value: #`newval`.
-   - If you wanted to add a color token file for cfpb-newcomponent, you would create tokens/cfpb-newcomponent directory and then add the JSON
+   - If you wanted to add a color token file for cfpb-newcomponent, you would create `tokens/cfpb-newcomponent` directory and then add the JSON
      token file using the approriate JSON token form.
 1. Then either use `yarn start` to build the cobebase and view it in a browser or `yarn tokens` if you would like to simply create
    the .css.

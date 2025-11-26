@@ -28,6 +28,41 @@ variation_groups:
             <br>
 
             <cfpb-icon-text disabled>Disabled state {% include icons/download.svg %}</cfpb-icon-text>
+
+            <br><hr><br>
+
+            <p>
+            The following section allows interacting with the API.
+            </p>
+            <p><cfpb-icon-text id="icon-text-example">{% include icons/bank.svg %} Example icon-text component {% include icons/download.svg %}</cfpb-icon-text></p>
+            <p>
+
+            <input type="checkbox" id="icon-text-example-disabled" />
+            <label for="icon-text-example-disabled">Disabled</label>
+
+            </p><p>
+
+            <input type="checkbox" id="icon-text-example-icon-hidden" />
+            <label for="icon-text-example-icon-hidden">Hide icon</label>
+
+            </p>
+            <script>
+            (function(){
+            const iconTextEx = document.querySelector('#icon-text-example');
+
+            const disBtn = document.querySelector('#icon-text-example-disabled');
+
+            const hiddenBtn = document.querySelector('#icon-text-example-icon-hidden');
+
+            disBtn.addEventListener('click', () => {
+              iconTextEx.disabled = !iconTextEx.disabled;
+            });
+
+            hiddenBtn.addEventListener('click', () => {
+              iconTextEx.iconHidden = !iconTextEx.iconHidden;
+            });
+            })();
+            </script>
           </div>
         variation_code_snippet: >-
           <cfpb-icon-text>No icon</cfpb-icon-text>
@@ -66,25 +101,94 @@ variation_groups:
             <hr>
             <br>
             <p>
-            The following section allows interacting with the button API.
+            The following section allows interacting with the API.
             </p>
             <p><cfpb-button id="btn-example">{% include icons/updating.svg %} Example button</cfpb-button></p>
+
             <p>
-            <button id="show-icon">Show icon</button>
-            <button id="hide-icon">Hide icon</button>
+            <label for="btn-example-variant">Button type:</label>
+            <select id="btn-example-variant">
+              <option>primary</option>
+              <option>secondary</option>
+              <option>warning</option>
+            </select>
+
+            </p><p>
+
+            <input type="checkbox" id="btn-example-flush-left" />
+            <label for="btn-example-flush-left">Flush left</label>
+
+            </p><p>
+
+            <input type="checkbox" id="btn-example-flush-right" />
+            <label for="btn-example-flush-right">Flush right</label>
+
+            </p><p>
+
+            <input type="checkbox" id="btn-example-disabled" />
+            <label for="btn-example-disabled">Disabled</label>
+
+            </p><p>
+
+            <input type="checkbox" id="btn-example-hidden" />
+            <label for="btn-example-hidden">Hide icon</label>
+
+            </p><p>
+
+            <input type="checkbox" id="btn-example-link" />
+            <label for="btn-example-link">Link style</label>
+
+            </p><p>
+
+            <input type="checkbox" id="btn-example-full" />
+            <label for="btn-example-full">Full on mobile</label>
+
             </p>
+
             <script>
-            const btn = document.querySelector('#btn-example');
+            (function(){
+            const btnEx = document.querySelector('#btn-example');
 
-            const btnShowIcon = document.querySelector('#show-icon');
-            const btnHideIcon = document.querySelector('#hide-icon');
+            const variantSel = document.querySelector('#btn-example-variant');
 
-            btnShowIcon.addEventListener('click',()=>{
-              btn.showIcon();
+            const flushLeft = document.querySelector('#btn-example-flush-left');
+            const flushRight = document.querySelector('#btn-example-flush-right');
+
+            const disBtn = document.querySelector('#btn-example-disabled');
+            const hidBtn = document.querySelector('#btn-example-hidden');
+            const linkBtn = document.querySelector('#btn-example-link');
+            const fullBtn = document.querySelector('#btn-example-full');
+
+            variantSel.addEventListener('change',()=>{
+              btnEx.variant = variantSel.value;
             });
-            btnHideIcon.addEventListener('click',()=>{
-              btn.hideIcon();
+
+            flushLeft.addEventListener('click',()=>{
+              btnEx.flushLeft = !btnEx.flushLeft;
             });
+
+            flushRight.addEventListener('click',()=>{
+              btnEx.flushRight = !btnEx.flushRight;
+            });
+
+            disBtn.addEventListener('click',()=>{
+              btnEx.disabled = !btnEx.disabled;
+            });
+
+            hidBtn.addEventListener('click',()=>{
+              if (hidBtn.checked) btnEx.hideIcon();
+              else btnEx.showIcon();
+            });
+
+            linkBtn.addEventListener('click',()=>{
+              btnEx.styleAsLink = !btnEx.styleAsLink;
+            });
+
+            fullBtn.addEventListener('click',()=>{
+              btnEx.fullOnMobile = !btnEx.fullOnMobile;
+            });
+
+            })();
             </script>
           </div>
         variation_code_snippet: >-
@@ -121,6 +225,71 @@ variation_groups:
             <cfpb-checkbox-icon validation="error"></cfpb-checkbox-icon>
             <cfpb-checkbox-icon checked validation="warning"></cfpb-checkbox-icon>
             <cfpb-checkbox-icon validation="success"></cfpb-checkbox-icon>
+
+            <br>
+            <hr>
+            <br>
+            <p>
+            The following section allows interacting with the API.
+            </p>
+            <p><cfpb-checkbox-icon id="checkbox-icon-example"></cfpb-checkbox-icon></p>
+
+            <p>
+
+            <label for="checkbox-icon-example-validation">Validation state:</label>
+            <select id="checkbox-icon-example-validation">
+              <option>---</option>
+              <option>success</option>
+              <option>warning</option>
+              <option>error</option>
+            </select>
+
+            </p><p>
+
+            <input type="checkbox" id="checkbox-icon-example-checked" />
+            <label for="checkbox-icon-example-checked">Checked</label>
+
+            </p><p>
+
+            <input type="checkbox" id="checkbox-icon-example-borderless" />
+            <label for="checkbox-icon-example-borderless">Borderless</label>
+
+            </p><p>
+
+            <input type="checkbox" id="checkbox-icon-example-disabled" />
+            <label for="checkbox-icon-example-disabled">Disabled</label>
+
+            </p>
+
+            <script>
+            (function(){
+            const iconEx = document.querySelector('#checkbox-icon-example');
+
+            const valSel = document.querySelector('#checkbox-icon-example-validation');
+
+            const checkBtn = document.querySelector('#checkbox-icon-example-checked');
+            const borderBtn = document.querySelector('#checkbox-icon-example-borderless');
+            const disBtn = document.querySelector('#checkbox-icon-example-disabled');
+
+            valSel.addEventListener('change',()=>{
+              if (valSel.value !== '---') iconEx.validation = valSel.value;
+              else iconEx.removeAttribute('validation');
+            });
+
+            checkBtn.addEventListener('click',()=>{
+              iconEx.checked = !iconEx.checked;
+            });
+
+            borderBtn.addEventListener('click',()=>{
+              iconEx.borderless = !iconEx.borderless;
+            });
+
+            disBtn.addEventListener('click',()=>{
+              iconEx.disabled = !iconEx.disabled;
+            });
+
+            })();
+            </script>
 
             <br>
             <br>
@@ -276,6 +445,76 @@ variation_groups:
             <cfpb-form-choice type="radio" large validation="error">
               Gold
             </cfpb-form-choice>
+
+
+            <br>
+            <hr>
+            <br>
+
+            <p>
+            The following section allows interacting with the API.
+            </p>
+            <p><cfpb-form-choice id="choice-example">Form choice example</cfpb-form-choice></p>
+
+            <p>
+            <label for="choice-example-type">Choice type:</label>
+            <select id="choice-example-type">
+              <option>checkbox</option>
+              <option>radio</option>
+            </select>
+
+            </p><p>
+
+            <label for="choice-example-validation">Validation state:</label>
+            <select id="choice-example-validation">
+              <option>---</option>
+              <option>success</option>
+              <option>warning</option>
+              <option>error</option>
+            </select>
+
+            </p><p>
+
+            <input type="checkbox" id="choice-example-large" />
+            <label for="choice-example-large">Large</label>
+
+            </p><p>
+
+            <input type="checkbox" id="choice-example-disabled" />
+            <label for="choice-example-disabled">Disabled</label>
+
+            </p>
+
+            <script>
+            (function(){
+            const choiceEx = document.querySelector('#choice-example');
+
+            const typeSel = document.querySelector('#choice-example-type');
+            const valSel = document.querySelector('#choice-example-validation');
+
+            const largeBtn = document.querySelector('#choice-example-large');
+            const disBtn = document.querySelector('#choice-example-disabled');
+
+            typeSel.addEventListener('change',()=>{
+              choiceEx.type = typeSel.value;
+            });
+
+            valSel.addEventListener('change',()=>{
+              if (valSel.value !== '---') choiceEx.validation = valSel.value;
+              else choiceEx.removeAttribute('validation');
+            });
+
+            largeBtn.addEventListener('click',()=>{
+              choiceEx.large = !choiceEx.large;
+            });
+
+            disBtn.addEventListener('click',()=>{
+              choiceEx.disabled = !choiceEx.disabled;
+            });
+
+            })();
+            </script>
+
           </div>
         variation_code_snippet: >-
           <cfpb-form-choice type="radio">
@@ -384,7 +623,7 @@ variation_groups:
             <hr>
             <br>
             <p>
-            The following section allows interacting with the tag group API.
+            The following section allows interacting with the API.
             </p>
             <p>
             <label>

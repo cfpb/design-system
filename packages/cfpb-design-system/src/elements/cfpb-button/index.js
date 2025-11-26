@@ -24,7 +24,8 @@ export class CfpbButton extends LitElement {
    * @property {string} type - The button type: button, submit, or reset.
    * @property {string} href - The URL to link to (makes the button a link).
    * @property {boolean} disabled - Whether the button is disabled or not.
-   * @property {string} variant - The button variant: secondary and warning.
+   * @property {string} variant
+   *   The button variant: primary, secondary, or warning.
    * @property {boolean} fullOnMobile - Whether to be width 100% on mobile.
    * @property {boolean} flushLeft - Whether button is not rounded on left.
    * @property {boolean} flushRight - Whether button is not rounded on right.

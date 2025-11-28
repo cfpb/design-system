@@ -819,6 +819,99 @@ variation_groups:
           A search input component.
         variation_code_snippet_rendered: >-
           <div>
+            <cfpb-form-search-input>
+            </cfpb-form-search-input>
+            <br>
+            <cfpb-form-search-input disabled>
+            </cfpb-form-search-input>
+            <br>
+            <cfpb-form-search-input validation="error">
+            </cfpb-form-search-input>
+            <br>
+            <cfpb-form-search-input validation="warning">
+            </cfpb-form-search-input>
+            <br>
+            <cfpb-form-search-input validation="success">
+            </cfpb-form-search-input>
+
+            <br><hr><br>
+
+            <p>
+            The following section allows interacting with the API.
+            </p>
+            <p><cfpb-form-search-input id="search-input-example"></cfpb-form-search-input></p>
+
+            <p>
+
+            <label for="search-input-example-validation">Validation state:</label>
+            <select id="search-input-example-validation">
+              <option>---</option>
+              <option>success</option>
+              <option>warning</option>
+              <option>error</option>
+            </select>
+
+            </p><p>
+
+            <input type="checkbox" id="search-input-example-disabled" />
+            <label for="search-input-example-disabled">Disabled</label>
+
+            </p><p>
+
+            <input type="checkbox" id="search-input-example-placeholder" />
+            <label for="search-input-example-placeholder">Placeholder</label>
+
+            </p>
+            <script>
+            (function(){
+            const formSearchEx = document.querySelector('#search-input-example');
+
+            const valSel = document.querySelector('#search-input-example-validation');
+
+            const disBtn = document.querySelector('#search-input-example-disabled');
+            const plcBtn = document.querySelector('#search-input-example-placeholder');
+
+            valSel.addEventListener('change', () => {
+              if (valSel.value !== '---') formSearchEx.validation = valSel.value;
+              else formSearchEx.removeAttribute('validation');
+            });
+
+            disBtn.addEventListener('click', () => {
+              formSearchEx.disabled = !formSearchEx.disabled;
+            });
+
+            plcBtn.addEventListener('click', () => {
+              if ( formSearchEx.placeholder === '') {
+               formSearchEx.placeholder = 'Example placeholder…';
+              } else {
+                formSearchEx.placeholder = '';
+              }
+            });
+
+            })();
+            </script>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-form-search-input>
+          </cfpb-form-search-input>
+
+          <cfpb-form-search-input disabled>
+          </cfpb-form-search-input>
+
+          <cfpb-form-search-input validation="error">
+          </cfpb-form-search-input>
+
+          <cfpb-form-search-input validation="warning">
+          </cfpb-form-search-input>
+
+          <cfpb-form-search-input validation="success">
+          </cfpb-form-search-input>
+      - variation_is_deprecated: false
+        variation_name: Search widget
+        variation_description: >-
+          A search widget component.
+        variation_code_snippet_rendered: >-
+          <div>
             <cfpb-input-search>
             </cfpb-input-search>
           </div>

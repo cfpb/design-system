@@ -1,0 +1,200 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-forms/text-input' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon' as *;
+
+:host {
+  // Theme
+  --input-border-default: var(--gray-60); // $input-border
+  --input-border-disabled: var(--gray-60);
+  --input-border-success: var(--green);
+  --input-border-warning: var(--gold);
+  --input-border-error: var(--red);
+
+  // Private vars
+  --input-border: var(--input-border-default);
+
+  .o-search-input {
+    position: relative;
+    display: flex;
+    width: initial;
+    flex: 0 1 100%;
+
+    // Add a min-width for the default width of the text input + clear button,
+    // so that when the clear button appears it doesn't bump the input width.
+    min-width: 300px;
+
+    background: var(--white);
+
+    // Create a faux input border that includes the input and clear button.
+    border: 1px solid var(--input-border);
+    outline: 0 solid var(--input-border);
+
+    label {
+      position: absolute;
+      left: 10px;
+      align-self: center;
+      cursor: pointer;
+      line-height: math.div(
+        14.4px,
+        $base-font-size-px
+      ); // 9px vertically centers icon.
+    }
+
+    input[type='search'] {
+      font-size: 1rem;
+      width: 100%;
+      white-space: nowrap;
+      padding-left: 30px;
+      cursor: text;
+
+      // Remove default rounding in Safari.
+      appearance: none;
+
+      // Remove input border and re-create it around the input and clear X.
+      border: none;
+      box-shadow: none;
+      outline: none;
+    }
+
+    // Style the clear x button, and hide it by default.
+    button[type='reset'] {
+      display: none;
+      align-self: center;
+
+      color: var(--gray-40);
+      font-size: 20px;
+      border: 1px solid transparent;
+      background-color: transparent;
+      outline: 0;
+
+      // Set the touch target minimum for iOS.
+      width: 44px;
+      text-align: right;
+
+      > svg {
+        // Set width of SVG width to create a box for the focus rectangle.
+        width: 25px;
+
+        // Prevent targeting of button's internal SVG icon.
+        pointer-events: none;
+      }
+    }
+
+    button[type='reset']:hover {
+      color: var(--black);
+      cursor: pointer;
+    }
+
+    // Style the clear x focus rectangle.
+    button[type='reset']:focus {
+      color: var(--black);
+
+      // Put the focus rectangle on the icon
+      // because the button touch target is larger and would be lop-sided if
+      // we put the rectangle on the button.
+      > svg {
+        outline: 1px dotted var(--pacific);
+      }
+    }
+
+    // However, hide it if we haven't entered any text yet.
+    input[type='search']:placeholder-shown ~ button[type='reset'] {
+      display: none;
+    }
+
+    // Remove the default x mark in Chrome.
+    input[type='search']::-webkit-search-decoration,
+    input[type='search']::-webkit-search-cancel-button,
+    input[type='search']::-webkit-search-results-button,
+    input[type='search']::-webkit-search-results-decoration {
+      display: none;
+    }
+
+    &:hover,
+    &:focus-within {
+      border: 1px solid var(--pacific);
+      box-shadow: 0 0 0 1px var(--pacific);
+      outline-color: var(--pacific);
+
+      input[type='search'] {
+        outline: none;
+
+        // Remove the right-hand padding, because the clear button is showing.
+        padding-right: 0;
+      }
+    }
+
+    &:focus-within {
+      outline: 1px dotted var(--pacific);
+      outline-offset: 2px;
+    }
+
+    // Validation state coloring.
+    &--error,
+    &--warning,
+    &--success {
+      outline-width: 1px;
+    }
+
+    &--error {
+      --input-border: var(--input-border-error);
+    }
+
+    &--warning {
+      --input-border: var(--input-border-warning);
+    }
+
+    &--success {
+      --input-border: var(--input-border-success);
+    }
+
+    // Show the clear x button if we're focused within the search input area.
+    &:focus-within button[type='reset'],
+    &:hover button[type='reset'] {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  // If the value is on a search input by the backend, then the reset button
+  // will only reset the input back to initial value at page load. We add a
+  // small amount of JS to fully clear the input for this circumstance.
+  // However, this doesn't work when JS is disabled,
+  // so in that case we hide the reset button.
+  .no-js .o-search-input button[type='reset'] {
+    display: none !important;
+  }
+}
+
+:host([disabled]) {
+  --input-border: var(--input-border-disabled);
+
+  .o-search-input {
+    label,
+    input[type='search'] {
+      color: var(--input-border);
+    }
+
+    &:hover {
+      border: 1px solid var(--input-border);
+      box-shadow: none;
+
+      label,
+      input[type='search'] {
+        cursor: not-allowed;
+      }
+
+      button[type='reset'] {
+        display: none;
+      }
+    }
+
+    // Validation state coloring.
+    &--error:hover,
+    &--warning:hover,
+    &--success:hover {
+      outline-color: var(--input-border);
+    }
+  }
+}

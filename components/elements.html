@@ -1898,8 +1898,80 @@
             
             <div class="a-live__code">
                 <div>
-  <cfpb-input-search>
-  </cfpb-input-search>
+  <cfpb-form-search-input>
+  </cfpb-form-search-input>
+  <br>
+  <cfpb-form-search-input disabled>
+  </cfpb-form-search-input>
+  <br>
+  <cfpb-form-search-input validation="error">
+  </cfpb-form-search-input>
+  <br>
+  <cfpb-form-search-input validation="warning">
+  </cfpb-form-search-input>
+  <br>
+  <cfpb-form-search-input validation="success">
+  </cfpb-form-search-input>
+
+  <br><hr>
+<br>
+
+  <p>
+  The following section allows interacting with the API.
+  </p>
+  <p><cfpb-form-search-input id="search-input-example"></cfpb-form-search-input></p>
+
+  <p>
+
+  <label for="search-input-example-validation">Validation state:</label>
+  <select id="search-input-example-validation">
+    <option>---</option>
+    <option>success</option>
+    <option>warning</option>
+    <option>error</option>
+  </select>
+
+  </p>
+<p>
+
+  <input type="checkbox" id="search-input-example-disabled">
+  <label for="search-input-example-disabled">Disabled</label>
+
+  </p>
+<p>
+
+  <input type="checkbox" id="search-input-example-placeholder">
+  <label for="search-input-example-placeholder">Placeholder</label>
+
+  </p>
+  <script>
+  (function(){
+  const formSearchEx = document.querySelector('#search-input-example');
+
+  const valSel = document.querySelector('#search-input-example-validation');
+
+  const disBtn = document.querySelector('#search-input-example-disabled');
+  const plcBtn = document.querySelector('#search-input-example-placeholder');
+
+  valSel.addEventListener('change', () => {
+    if (valSel.value !== '---') formSearchEx.validation = valSel.value;
+    else formSearchEx.removeAttribute('validation');
+  });
+
+  disBtn.addEventListener('click', () => {
+    formSearchEx.disabled = !formSearchEx.disabled;
+  });
+
+  plcBtn.addEventListener('click', () => {
+    if ( formSearchEx.placeholder === '') {
+     formSearchEx.placeholder = 'Example placeholder…';
+    } else {
+      formSearchEx.placeholder = '';
+    }
+  });
+
+  })();
+  </script>
 </div>
             </div>
             
@@ -1933,6 +2005,95 @@
                 <!-- HTML snippet -->
                 
                 <section class="m-tabs__panel" id="details-search-input-a-search-input-comp-html-code-snippet-11">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-form-search-input&gt; &lt;/cfpb-form-search-input&gt;
+&lt;cfpb-form-search-input disabled&gt; &lt;/cfpb-form-search-input&gt;
+&lt;cfpb-form-search-input validation="error"&gt; &lt;/cfpb-form-search-input&gt;
+&lt;cfpb-form-search-input validation="warning"&gt; &lt;/cfpb-form-search-input&gt;
+&lt;cfpb-form-search-input validation="success"&gt; &lt;/cfpb-form-search-input&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Search widget
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A search widget component.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-input-search>
+  </cfpb-input-search>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-search-widget-a-search-widget-co-12" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-search-widget-a-search-widget-co-12" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-search-widget-a-search-widget-co-12">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-search-widget-a-search-widget-co-html-code-snippet-12">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-search-widget-a-search-widget-co-html-code-snippet-12">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1998,15 +2159,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-form-level-alert-a-form-level-al-12" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-form-level-alert-a-form-level-al-12" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-form-level-alert-a-form-level-al-13" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-form-level-alert-a-form-level-al-13" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-form-level-alert-a-form-level-al-12">
+            <div class="m-tabs u-hidden" id="details-form-level-alert-a-form-level-al-13">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-form-level-alert-a-form-level-al-html-code-snippet-12">
+                        <a class="m-tabs__tab" href="#details-form-level-alert-a-form-level-al-html-code-snippet-13">
                             HTML code snippet
                         </a>
                     </li>
@@ -2018,7 +2179,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-form-level-alert-a-form-level-al-html-code-snippet-12">
+                <section class="m-tabs__panel" id="details-form-level-alert-a-form-level-al-html-code-snippet-13">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2109,15 +2270,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-pagination-a-pagination-componen-13" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-pagination-a-pagination-componen-13" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-pagination-a-pagination-componen-14" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-pagination-a-pagination-componen-14" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-pagination-a-pagination-componen-13">
+            <div class="m-tabs u-hidden" id="details-pagination-a-pagination-componen-14">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-pagination-a-pagination-componen-html-code-snippet-13">
+                        <a class="m-tabs__tab" href="#details-pagination-a-pagination-componen-html-code-snippet-14">
                             HTML code snippet
                         </a>
                     </li>
@@ -2129,7 +2290,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-pagination-a-pagination-componen-html-code-snippet-13">
+                <section class="m-tabs__panel" id="details-pagination-a-pagination-componen-html-code-snippet-14">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2277,15 +2438,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-list-item-a-list-item-component--14" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-list-item-a-list-item-component--14" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-list-item-a-list-item-component--15" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-list-item-a-list-item-component--15" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-list-item-a-list-item-component--14">
+            <div class="m-tabs u-hidden" id="details-list-item-a-list-item-component--15">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-list-item-a-list-item-component--html-code-snippet-14">
+                        <a class="m-tabs__tab" href="#details-list-item-a-list-item-component--html-code-snippet-15">
                             HTML code snippet
                         </a>
                     </li>
@@ -2297,7 +2458,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-list-item-a-list-item-component--html-code-snippet-14">
+                <section class="m-tabs__panel" id="details-list-item-a-list-item-component--html-code-snippet-15">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2347,8 +2508,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/elements.md">
-                            <time datetime="2025-11-28 13:03:13 -0500">
-                                 1:03:13 PM Nov 28, 2025
+                            <time datetime="2025-11-28 16:14:29 -0500">
+                                 4:14:29 PM Nov 28, 2025
                             </time>
                         </a>
                     </section>

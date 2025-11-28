@@ -903,6 +903,78 @@ variation_groups:
               </template>
             </i18n-service>
           </cfpb-pagination>
+      - variation_is_deprecated: false
+        variation_name: List item
+        variation_description: >-
+          A list item component.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-list-item disabled>Earth</cfpb-list-item>
+            <cfpb-list-item checked disabled>Jupiter</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
+            <cfpb-list-item type="checkbox" checked>Venus</cfpb-list-item>
+            <cfpb-list-item type="check">Mars</cfpb-list-item>
+            <cfpb-list-item type="check" checked>Saturn</cfpb-list-item>
+            <cfpb-list-item type="plain">Uranus</cfpb-list-item>
+            <cfpb-list-item type="plain" checked>Pluto</cfpb-list-item>
+
+            <br>
+            <hr>
+            <br>
+
+            <p>
+            The following section allows interacting with the list item API.
+            </p>
+            <p><cfpb-list-item id="list-item-example">Ceres</cfpb-list-item></p>
+            <p>
+            <label for="list-item-example-type">List item type:</label>
+            <select id="list-item-example-type">
+              <option>plain</option>
+              <option>check</option>
+              <option>checkbox</option>
+            </select>
+
+            </p><p>
+
+            <input type="checkbox" id="list-item-example-disabled" />
+            <label for="list-item-example-disabled">Disabled</label>
+
+            </p><p>
+
+            <input type="checkbox" id="list-item-example-hidden" />
+            <label for="list-item-example-hidden">Hidden</label>
+
+            </p>
+            <script>
+            const listItem = document.querySelector('#list-item-example');
+
+            const typeSel = document.querySelector('#list-item-example-type');
+
+            const disBtn = document.querySelector('#list-item-example-disabled');
+            const hiddenBtn = document.querySelector('#list-item-example-hidden');
+
+            typeSel.addEventListener('change', (evt) => {
+              listItem.type = evt.target.value;
+            });
+
+            disBtn.addEventListener('click', () => {
+              listItem.disabled = !listItem.disabled;
+            });
+
+            hiddenBtn.addEventListener('click', () => {
+              listItem.hidden = !listItem.hidden;
+            });
+            </script>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-list-item disabled>Earth</cfpb-list-item>
+          <cfpb-list-item checked disabled>Jupiter</cfpb-list-item>
+          <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
+          <cfpb-list-item type="checkbox" checked>Venus</cfpb-list-item>
+          <cfpb-list-item type="check">Mars</cfpb-list-item>
+          <cfpb-list-item type="check" checked>Saturn</cfpb-list-item>
+          <cfpb-list-item type="plain">Uranus</cfpb-list-item>
+          <cfpb-list-item type="plain" checked>Pluto</cfpb-list-item>
     variation_group_name: Types
 guidelines: ''
 eyebrow: Web Components

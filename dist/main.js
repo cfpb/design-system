@@ -45,14 +45,14 @@
     ${X(ns)}
   `),M(ar,"properties",{borderless:{type:Boolean,reflect:!0},checked:{type:Boolean,reflect:!0},disabled:{type:Boolean,reflect:!0},validation:{type:String,reflect:!0}});var co=ar;var $c=["error","warning","success"],Tc=["checkbox","radio"],Oe,ee,ls,ds,cs,hs,us,ps,ho,fs,ms,gs,rr=class rr extends H{constructor(){super();k(this,ee);k(this,Oe,ot());this.checked=!1,this.disabled=!1,this.large=!1,this.validation="",this.type="checkbox",this.inlist=!1,this.name="",this.value=""}focus(){this.shadowRoot.querySelector("input").focus()}render(){let e=ro(h(this,ee,ms));return P`
       <div
-        class="${e}"
+        class=${e}
         ?large=${this.large}
         @mouseover=${g(this,ee,us)}
         @mouseleave=${g(this,ee,ps)}
       >
         <input
           class="a-${this.type}"
-          type="${h(this,ee,fs)}"
+          type=${h(this,ee,fs)}
           id="choice-input"
           ?disabled=${this.disabled}
           .checked=${this.checked}
@@ -79,7 +79,7 @@
   `),M(rr,"properties",{checked:{type:Boolean,reflect:!0},disabled:{type:Boolean},large:{type:Boolean},validation:{type:String},type:{type:String},inlist:{type:Boolean,attribute:!0},name:{type:String},value:{type:String}});var ma=rr;var bs=":root{--font-adjust-base:0.517;--font-adjust-step:0.0054;--font-adjust-h1:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*5);--font-adjust-h2:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*4);--font-adjust-h3:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*3);--font-adjust-h4:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*2);--font-adjust-h5:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*1);--font-adjust-h6:var(--font-adjust-base);--font-adjust-body:var(--font-adjust-base);--input-text-default:var(--black);--input-text-disabled-default:var(--gray-dark);--input-text-placeholder-default:var(--gray-dark);--input-border-default:var(--gray-60);--input-border-disabled:var(--gray-60);--input-border-success:var(--green);--input-border-warning:var(--gold);--input-border-error:var(--red);--input-border-hover-default:var(--pacific);--input-border-focus-default:var(--pacific);--input-bg-default:var(--white);--input-bg-disabled-default:var(--gray-10);--form-alert-icon-color-default:var(--gray);--form-alert-icon-color-success:var(--green);--form-alert-icon-color-warning:var(--gold);--form-alert-icon-color-error:var(--red);--select-border-default:var(--gray-60);--select-border-width-default:1px;--select-border-error:var(--red);--select-border-width-error:2px;--select-border-hover-default:var(--pacific);--select-border-focus-default:var(--pacific);--select-bg-disabled-default:var(--gray-10);--select-icon-bg-default:var(--gray-10);--select-text-disabled-default:var(--gray-dark);--choice-border-default:var(--gray-60);--choice-border-disabled:var(--gray-60);--choice-border-success:var(--green);--choice-border-warning:var(--gold);--choice-border-error:var(--red);--choice-border-hover-default:var(--pacific);--choice-border-focus-default:var(--pacific);--choice-outline-focus-default:var(--pacific);--choice-bg-default:var(--white);--choice-bg-disabled:var(--gray-10);--choice-bg-selected-default:var(--pacific);--choice-bg-selected-disabled:var(--gray-40);--choice-bg-selected-focus-default:var(--pacific);--choice-label-disabled-default:var(--gray-dark)}:host{display:flex;flex-direction:column;width:fit-content}:host::part(upload-details)[hidden=true]{display:none}";var $e,vs,xs,ji,Ei,or=class or extends H{constructor(){super();k(this,$e);M(this,"fileInput",ot());M(this,"fileDetails",ot());g(this,$e,ji).call(this)}render(){return P`
       <cfpb-button
         variant="secondary"
-        @click="${()=>{this.fileInput.value.click()}}"
+        @click=${()=>{this.fileInput.value.click()}}
       >
         <slot></slot>
       </cfpb-button>
@@ -87,9 +87,9 @@
         class="a-btn a-btn--secondary"
         type="file"
         hidden
-        accept="${this.accept}"
-        @input="${()=>g(this,$e,Ei).call(this)}"
-        @cancel="${()=>g(this,$e,Ei).call(this)}"
+        accept=${this.accept}
+        @input=${()=>g(this,$e,Ei).call(this)}
+        @cancel=${()=>g(this,$e,Ei).call(this)}
         ${it(this.fileInput)}
       />
       <div
@@ -113,13 +113,13 @@
         for=${ws(this.for&&this.for.trim()?this.for:void 0)}
       >
         <slot name="label"></slot>
-        <small class="${h(this,po,_s)}">
+        <small class=${h(this,po,_s)}>
           <slot name="helper"></slot>
         </small>
       </label>
     `}static init(){window.customElements.get("cfpb-label")||window.customElements.define("cfpb-label",ir)}};po=new WeakSet,_s=function(){let e="a-label__helper";return this.block&&(e+=" a-label__helper--block"),e},M(ir,"styles",K`
     ${X(ys)}
-  `),M(ir,"properties",{block:{type:Boolean,reflect:!0},for:{type:String}});var ga=ir;var ks=":root{--font-adjust-base:0.517;--font-adjust-step:0.0054;--font-adjust-h1:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*5);--font-adjust-h2:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*4);--font-adjust-h3:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*3);--font-adjust-h4:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*2);--font-adjust-h5:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*1);--font-adjust-h6:var(--font-adjust-base);--font-adjust-body:var(--font-adjust-base);--input-text-default:var(--black);--input-text-disabled-default:var(--gray-dark);--input-text-placeholder-default:var(--gray-dark);--input-border-default:var(--gray-60);--input-border-disabled:var(--gray-60);--input-border-success:var(--green);--input-border-warning:var(--gold);--input-border-error:var(--red);--input-border-hover-default:var(--pacific);--input-border-focus-default:var(--pacific);--input-bg-default:var(--white);--input-bg-disabled-default:var(--gray-10);--form-alert-icon-color-default:var(--gray);--form-alert-icon-color-success:var(--green);--form-alert-icon-color-warning:var(--gold);--form-alert-icon-color-error:var(--red);--select-border-default:var(--gray-60);--select-border-width-default:1px;--select-border-error:var(--red);--select-border-width-error:2px;--select-border-hover-default:var(--pacific);--select-border-focus-default:var(--pacific);--select-bg-disabled-default:var(--gray-10);--select-icon-bg-default:var(--gray-10);--select-text-disabled-default:var(--gray-dark);--choice-border-default:var(--gray-60);--choice-border-disabled:var(--gray-60);--choice-border-success:var(--green);--choice-border-warning:var(--gold);--choice-border-error:var(--red);--choice-border-hover-default:var(--pacific);--choice-border-focus-default:var(--pacific);--choice-outline-focus-default:var(--pacific);--choice-bg-default:var(--white);--choice-bg-disabled:var(--gray-10);--choice-bg-selected-default:var(--pacific);--choice-bg-selected-disabled:var(--gray-40);--choice-bg-selected-focus-default:var(--pacific);--choice-label-disabled-default:var(--gray-dark)}:host button{background-color:var(--teal-20);border:1px solid var(--teal);border-radius:.1875rem;color:var(--black);display:flex;font-size:1rem;gap:.625rem;line-height:1.1875;min-width:fit-content;padding:4px 6px;text-align:left}:host button:hover{background-color:var(--teal-40);cursor:pointer}:host button:focus{outline:1px dotted var(--teal);outline-offset:1px}:host button:active{background-color:var(--teal-60)}:host svg{flex:none;height:1.1875rem;pointer-events:none}:host label{display:contents;pointer-events:none}";var mo,As,nr=class nr extends H{constructor(){super();k(this,mo);this.for=""}render(){let e=this.for===""?P`<slot></slot>`:P`<label for="${this.for}"><slot></slot></label>`;return P`<button @click=${g(this,mo,As)}>
+  `),M(ir,"properties",{block:{type:Boolean,reflect:!0},for:{type:String}});var ga=ir;var ks=":root{--font-adjust-base:0.517;--font-adjust-step:0.0054;--font-adjust-h1:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*5);--font-adjust-h2:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*4);--font-adjust-h3:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*3);--font-adjust-h4:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*2);--font-adjust-h5:calc(var(--font-size-adjust-base) + var(--font-adjust-step)*1);--font-adjust-h6:var(--font-adjust-base);--font-adjust-body:var(--font-adjust-base);--input-text-default:var(--black);--input-text-disabled-default:var(--gray-dark);--input-text-placeholder-default:var(--gray-dark);--input-border-default:var(--gray-60);--input-border-disabled:var(--gray-60);--input-border-success:var(--green);--input-border-warning:var(--gold);--input-border-error:var(--red);--input-border-hover-default:var(--pacific);--input-border-focus-default:var(--pacific);--input-bg-default:var(--white);--input-bg-disabled-default:var(--gray-10);--form-alert-icon-color-default:var(--gray);--form-alert-icon-color-success:var(--green);--form-alert-icon-color-warning:var(--gold);--form-alert-icon-color-error:var(--red);--select-border-default:var(--gray-60);--select-border-width-default:1px;--select-border-error:var(--red);--select-border-width-error:2px;--select-border-hover-default:var(--pacific);--select-border-focus-default:var(--pacific);--select-bg-disabled-default:var(--gray-10);--select-icon-bg-default:var(--gray-10);--select-text-disabled-default:var(--gray-dark);--choice-border-default:var(--gray-60);--choice-border-disabled:var(--gray-60);--choice-border-success:var(--green);--choice-border-warning:var(--gold);--choice-border-error:var(--red);--choice-border-hover-default:var(--pacific);--choice-border-focus-default:var(--pacific);--choice-outline-focus-default:var(--pacific);--choice-bg-default:var(--white);--choice-bg-disabled:var(--gray-10);--choice-bg-selected-default:var(--pacific);--choice-bg-selected-disabled:var(--gray-40);--choice-bg-selected-focus-default:var(--pacific);--choice-label-disabled-default:var(--gray-dark)}:host button{background-color:var(--teal-20);border:1px solid var(--teal);border-radius:.1875rem;color:var(--black);display:flex;font-size:1rem;gap:.625rem;line-height:1.1875;min-width:fit-content;padding:4px 6px;text-align:left}:host button:hover{background-color:var(--teal-40);cursor:pointer}:host button:focus{outline:1px dotted var(--teal);outline-offset:1px}:host button:active{background-color:var(--teal-60)}:host svg{flex:none;height:1.1875rem;pointer-events:none}:host label{display:contents;pointer-events:none}";var mo,As,nr=class nr extends H{constructor(){super();k(this,mo);this.for=""}render(){let e=this.for===""?P`<slot></slot>`:P`<label for=${this.for}><slot></slot></label>`;return P`<button @click=${g(this,mo,As)}>
       ${e} ${es(da)}
     </button>`}static init(){window.customElements.get("cfpb-tag-filter")||window.customElements.define("cfpb-tag-filter",nr)}};mo=new WeakSet,As=function(){this.dispatchEvent(new CustomEvent("tag-click",{detail:{target:this},bubbles:!1,composed:!1}))},M(nr,"styles",K`
     ${X(ks)}
@@ -128,7 +128,7 @@
       >•</span
     >`,r=this.href===""?P`<span class="a-tag-topic"
             >${e}<span class="a-tag-topic__text"><slot></slot></span
-          ></span>`:P`<a class="${h(this,bo,Es)}" href="${this.href}"
+          ></span>`:P`<a class=${h(this,bo,Es)} href=${this.href}
             >${e}<span class="a-tag-topic__text"><slot></slot></span
           ></a>`;return P`${r}`}static init(){window.customElements.get("cfpb-tag-topic")||window.customElements.define("cfpb-tag-topic",sr)}};bo=new WeakSet,Es=function(){let e="a-tag-topic";return this.siblingOfJumpLink&&(e+=" a-tag-topic--no-top-border"),e},M(sr,"styles",K`
     ${X(js)}
@@ -140,20 +140,20 @@
           <label
             for="search-text"
             class="o-search-input__input-label"
-            aria-label="${this.label}"
+            aria-label=${this.label}
           >
             ${vt(Ps)}
           </label>
           <input
             type="search"
-            name="${this.name}"
-            value="${this.value}"
+            name=${this.name}
+            value=${this.value}
             class="a-text-input a-text-input__full"
-            placeholder="${this.placeholder}"
-            title="${this.title}"
+            placeholder=${this.placeholder}
+            title=${this.title}
             autocomplete="off"
             maxlength="75"
-            aria-label="${this.ariaLabelInput}"
+            aria-label=${this.ariaLabelInput}
             ${it(h(this,ya))}
             @input=${g(this,xt,qs)}
           />
@@ -196,7 +196,7 @@
             id="search-input"
             type="text"
             autocomplete="off"
-            aria-label="${i}"
+            aria-label=${i}
             value=${this.selectedLabel||""}
             @input=${n=>g(this,D,tl).call(this,n.target.value)}
             @focus=${g(this,D,al)}
@@ -211,14 +211,14 @@
           </ul>
         </fieldset>
       </div>
-    `}static init(){ma.init(),ga.init(),window.customElements.get("cfpb-multiselect")||window.customElements.define("cfpb-multiselect",pr)}};ka=new WeakMap,Ee=new WeakMap,wt=new WeakMap,ve=new WeakMap,Aa=new WeakMap,Z=new WeakMap,nt=new WeakMap,D=new WeakSet,Ks=function(){g(this,D,Qs).call(this),E(this,Z,new wo(this.options,this.name,{}).init()),this.updateComplete.then(()=>{E(this,Aa,Array.from(this.renderRoot.querySelectorAll("li")))})},Qs=function(){var r;let e=this.querySelector("select");if(e){this.name=e.name;let o=0;this.options=Array.from(e.options).map(i=>({value:i.value,label:i.label,text:i.text,checked:i.selected,index:o++})),this.selectedLabel=((r=e.selectedOptions[0])==null?void 0:r.label)||"",e.style.display="none"}},Js=function(){h(this,ve).classList.remove("u-no-results"),h(this,ve).classList.add("u-filtered");let e=h(this,Z).lastFilterIndicesList;for(let r=0,o=e.length;r<o;r++)h(this,Aa)[e[r]].classList.remove("u-filter-match");e=h(this,Z).filterIndicesList;for(let r=0,o=e.length;r<o;r++)h(this,Aa)[e[r]].classList.add("u-filter-match")},Oi=function(){h(this,ve).classList.remove("u-filtered","u-no-results");for(let e=0,r=h(this,ve).children.length;e<r;e++)h(this,ve).children[e].classList.remove("u-filter-match");h(this,Z).clearFilter()},Zs=function(){h(this,ve).classList.add("u-no-results"),h(this,ve).classList.remove("u-filtered")},el=function(e){return e.length>0?(g(this,D,Js).call(this),!0):(g(this,D,Zs).call(this),!1)},tl=function(e){g(this,D,Oi).call(this),h(this,Z).resetIndex();let r=h(this,Z).filterIndices(e);g(this,D,el).call(this,r)},ur=function(e){e===ko?h(this,Z).index=h(this,Z).index+1:e===Fs&&(h(this,Z).index=h(this,Z).index-1);let r=h(this,Z).index;if(r>-1){let o=r,i=h(this,Z).filterIndicesList;i.length>0&&(o=i[r]);let l=h(this,Z).getOption(o).value,s=h(this,ve).querySelector('[data-option="'+l+'"]');E(this,nt,!0),s.focus()}else E(this,nt,!1),h(this,wt).focus()},$i=function(){h(this,wt).value="",g(this,D,Oi).call(this)},Ti=function(e){let r=h(this,Z).getOption(e)||h(this,Z).getOption(h(this,Z).index);r&&r.checked&&h(this,ve).classList.contains("u-max-selections")&&h(this,ve).classList.remove("u-max-selections"),!(h(this,Z).isAtMaxSelections()&&!r.checked)&&(h(this,ve).classList.contains("u-max-selections")&&h(this,ve).classList.remove("u-max-selections"),h(this,Z).toggleOption(e),h(this,Z).resetIndex(),E(this,nt,!1),h(this,Ee).getAttribute("aria-hidden")==="false"&&h(this,wt).focus(),this.options=[...h(this,Z).options],h(this,Z).isAtMaxSelections()&&h(this,ve).classList.add("u-max-selections"))},al=function(){h(this,Ee).getAttribute("aria-hidden")==="true"&&this.expand()},rl=function(){!h(this,nt)&&h(this,Ee).getAttribute("aria-hidden")==="false"&&this.collapse()},ol=function(e){let r=e.key;h(this,Ee).getAttribute("aria-hidden")==="true"&&r!==Xs&&this.expand(),r===Ws?(e.preventDefault(),g(this,D,ur).call(this,ko)):r===Ys?(g(this,D,$i).call(this),this.collapse()):r===Gs?g(this,D,ur).call(this,ko):r===Xs&&!e.shiftKey&&h(this,Ee).getAttribute("aria-hidden")==="false"&&this.collapse()},il=function(e){g(this,D,$i).call(this),g(this,D,Ti).call(this,e)},nl=function(e){let r=e.key,o=e.target,i=o.checked;r===Ws?(e.preventDefault(),o.checked=!i):r===Ys?(h(this,wt).focus(),this.collapse()):r===Rc?g(this,D,ur).call(this,Fs):r===Gs&&g(this,D,ur).call(this,ko)},sl=function(e){let r=P``;return e.checked===!0&&(r=P`<cfpb-tag-filter data-index="${e.index}"
+    `}static init(){ma.init(),ga.init(),window.customElements.get("cfpb-multiselect")||window.customElements.define("cfpb-multiselect",pr)}};ka=new WeakMap,Ee=new WeakMap,wt=new WeakMap,ve=new WeakMap,Aa=new WeakMap,Z=new WeakMap,nt=new WeakMap,D=new WeakSet,Ks=function(){g(this,D,Qs).call(this),E(this,Z,new wo(this.options,this.name,{}).init()),this.updateComplete.then(()=>{E(this,Aa,Array.from(this.renderRoot.querySelectorAll("li")))})},Qs=function(){var r;let e=this.querySelector("select");if(e){this.name=e.name;let o=0;this.options=Array.from(e.options).map(i=>({value:i.value,label:i.label,text:i.text,checked:i.selected,index:o++})),this.selectedLabel=((r=e.selectedOptions[0])==null?void 0:r.label)||"",e.style.display="none"}},Js=function(){h(this,ve).classList.remove("u-no-results"),h(this,ve).classList.add("u-filtered");let e=h(this,Z).lastFilterIndicesList;for(let r=0,o=e.length;r<o;r++)h(this,Aa)[e[r]].classList.remove("u-filter-match");e=h(this,Z).filterIndicesList;for(let r=0,o=e.length;r<o;r++)h(this,Aa)[e[r]].classList.add("u-filter-match")},Oi=function(){h(this,ve).classList.remove("u-filtered","u-no-results");for(let e=0,r=h(this,ve).children.length;e<r;e++)h(this,ve).children[e].classList.remove("u-filter-match");h(this,Z).clearFilter()},Zs=function(){h(this,ve).classList.add("u-no-results"),h(this,ve).classList.remove("u-filtered")},el=function(e){return e.length>0?(g(this,D,Js).call(this),!0):(g(this,D,Zs).call(this),!1)},tl=function(e){g(this,D,Oi).call(this),h(this,Z).resetIndex();let r=h(this,Z).filterIndices(e);g(this,D,el).call(this,r)},ur=function(e){e===ko?h(this,Z).index=h(this,Z).index+1:e===Fs&&(h(this,Z).index=h(this,Z).index-1);let r=h(this,Z).index;if(r>-1){let o=r,i=h(this,Z).filterIndicesList;i.length>0&&(o=i[r]);let l=h(this,Z).getOption(o).value,s=h(this,ve).querySelector('[data-option="'+l+'"]');E(this,nt,!0),s.focus()}else E(this,nt,!1),h(this,wt).focus()},$i=function(){h(this,wt).value="",g(this,D,Oi).call(this)},Ti=function(e){let r=h(this,Z).getOption(e)||h(this,Z).getOption(h(this,Z).index);r&&r.checked&&h(this,ve).classList.contains("u-max-selections")&&h(this,ve).classList.remove("u-max-selections"),!(h(this,Z).isAtMaxSelections()&&!r.checked)&&(h(this,ve).classList.contains("u-max-selections")&&h(this,ve).classList.remove("u-max-selections"),h(this,Z).toggleOption(e),h(this,Z).resetIndex(),E(this,nt,!1),h(this,Ee).getAttribute("aria-hidden")==="false"&&h(this,wt).focus(),this.options=[...h(this,Z).options],h(this,Z).isAtMaxSelections()&&h(this,ve).classList.add("u-max-selections"))},al=function(){h(this,Ee).getAttribute("aria-hidden")==="true"&&this.expand()},rl=function(){!h(this,nt)&&h(this,Ee).getAttribute("aria-hidden")==="false"&&this.collapse()},ol=function(e){let r=e.key;h(this,Ee).getAttribute("aria-hidden")==="true"&&r!==Xs&&this.expand(),r===Ws?(e.preventDefault(),g(this,D,ur).call(this,ko)):r===Ys?(g(this,D,$i).call(this),this.collapse()):r===Gs?g(this,D,ur).call(this,ko):r===Xs&&!e.shiftKey&&h(this,Ee).getAttribute("aria-hidden")==="false"&&this.collapse()},il=function(e){g(this,D,$i).call(this),g(this,D,Ti).call(this,e)},nl=function(e){let r=e.key,o=e.target,i=o.checked;r===Ws?(e.preventDefault(),o.checked=!i):r===Ys?(h(this,wt).focus(),this.collapse()):r===Rc?g(this,D,ur).call(this,Fs):r===Gs&&g(this,D,ur).call(this,ko)},sl=function(e){let r=P``;return e.checked===!0&&(r=P`<cfpb-tag-filter data-index=${e.index}
         >${e.value}</cfpb-tag-filter
       >`),r},ll=function(e,r){return P`
       <li role="option">
         <cfpb-form-choice
-          data-option="${e.label}"
+          data-option=${e.label}
           inlist="true"
-          .checked="${e.checked}"
+          .checked=${e.checked}
           @change=${()=>g(this,D,il).call(this,r)}
           @mousedown=${()=>E(this,nt,!0)}
         >
@@ -232,7 +232,7 @@
       <nav
         class="m-pagination"
         role="navigation"
-        aria-label="${e("page number")}"
+        aria-label=${e("page number")}
       >
         <cfpb-button
           class="m-pagination__btn-prev"

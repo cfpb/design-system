@@ -146,14 +146,14 @@ export class CfpbFormChoice extends LitElement {
 
     return html`
       <div
-        class="${classes}"
+        class=${classes}
         ?large=${this.large}
         @mouseover=${this.#onMouseOver}
         @mouseleave=${this.#onMouseLeave}
       >
         <input
           class="a-${this.type}"
-          type="${this.#validType}"
+          type=${this.#validType}
           id="choice-input"
           ?disabled=${this.disabled}
           .checked=${this.checked}

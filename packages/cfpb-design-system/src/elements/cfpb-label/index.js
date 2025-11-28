@@ -45,7 +45,7 @@ export class CfpbLabel extends LitElement {
         for=${ifDefined(this.for && this.for.trim() ? this.for : undefined)}
       >
         <slot name="label"></slot>
-        <small class="${this.#helperClass}">
+        <small class=${this.#helperClass}>
           <slot name="helper"></slot>
         </small>
       </label>

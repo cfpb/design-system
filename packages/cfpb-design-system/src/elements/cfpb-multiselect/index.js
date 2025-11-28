@@ -386,7 +386,7 @@ export class CfpbMultiselect extends LitElement {
             id="search-input"
             type="text"
             autocomplete="off"
-            aria-label="${label}"
+            aria-label=${label}
             value=${this.selectedLabel || ''}
             @input=${(event) => this.#evaluate(event.target.value)}
             @focus=${this.#searchInputFocus}
@@ -407,7 +407,7 @@ export class CfpbMultiselect extends LitElement {
   #renderTag(item) {
     let htmlSnippet = html``;
     if (item.checked === true) {
-      htmlSnippet = html`<cfpb-tag-filter data-index="${item.index}"
+      htmlSnippet = html`<cfpb-tag-filter data-index=${item.index}
         >${item.value}</cfpb-tag-filter
       >`;
     }
@@ -419,9 +419,9 @@ export class CfpbMultiselect extends LitElement {
     return html`
       <li role="option">
         <cfpb-form-choice
-          data-option="${opt.label}"
+          data-option=${opt.label}
           inlist="true"
-          .checked="${opt.checked}"
+          .checked=${opt.checked}
           @change=${() => this.#onChangeCheckbox(index)}
           @mousedown=${() => (this.#isBlurSkipped = true)}
         >

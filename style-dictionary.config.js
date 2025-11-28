@@ -13,7 +13,8 @@ const tokenBase = path.resolve(baseDir, 'tokens');
 
 // ---- helpers ----
 const toPosix = (fsPath) => fsPath.split(path.sep).join('/');
-const toAbsPosix = (fsPath) => toPosix(path.isAbsolute(fsPath) ? fsPath : path.resolve(fsPath));
+const toAbsPosix = (fsPath) =>
+  toPosix(path.isAbsolute(fsPath) ? fsPath : path.resolve(fsPath));
 
 function getAllDirs(dirPath) {
   const out = [];

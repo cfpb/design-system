@@ -6,13 +6,10 @@ $base-font-size: 16;
 $base-font-size-px: 16px;
 $base-line-height-px: 22px;
 $base-line-height: math.div($base-line-height-px, $base-font-size-px);
-
 $btn-font-size: $base-font-size-px;
 $btn-border-radius-size: 4px;
-
 $btn-v-padding: 8px;
 $btn-h-padding: 14px;
-
 $size-xl: 48px; // Super-size
 $size-i: 34px; // h1-size
 $size-ii: 26px; // h2-size

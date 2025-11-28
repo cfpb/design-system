@@ -2180,6 +2180,147 @@
 
         </div>
         
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    List item
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A list item component.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-list-item disabled>Earth</cfpb-list-item>
+  <cfpb-list-item checked disabled>Jupiter</cfpb-list-item>
+  <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
+  <cfpb-list-item type="checkbox" checked>Venus</cfpb-list-item>
+  <cfpb-list-item type="check">Mars</cfpb-list-item>
+  <cfpb-list-item type="check" checked>Saturn</cfpb-list-item>
+  <cfpb-list-item type="plain">Uranus</cfpb-list-item>
+  <cfpb-list-item type="plain" checked>Pluto</cfpb-list-item>
+
+  <br>
+  <hr>
+  <br>
+
+  <p>
+  The following section allows interacting with the list item API.
+  </p>
+  <p><cfpb-list-item id="list-item-example">Ceres</cfpb-list-item></p>
+  <p>
+  <label for="list-item-example-type">List item type:</label>
+  <select id="list-item-example-type">
+    <option>plain</option>
+    <option>check</option>
+    <option>checkbox</option>
+  </select>
+
+  </p>
+<p>
+
+  <input type="checkbox" id="list-item-example-disabled">
+  <label for="list-item-example-disabled">Disabled</label>
+
+  </p>
+<p>
+
+  <input type="checkbox" id="list-item-example-hidden">
+  <label for="list-item-example-hidden">Hidden</label>
+
+  </p>
+  <script>
+  const listItem = document.querySelector('#list-item-example');
+
+  const typeSel = document.querySelector('#list-item-example-type');
+
+  const disBtn = document.querySelector('#list-item-example-disabled');
+  const hiddenBtn = document.querySelector('#list-item-example-hidden');
+
+  typeSel.addEventListener('change', (evt) => {
+    listItem.type = evt.target.value;
+  });
+
+  disBtn.addEventListener('click', () => {
+    listItem.disabled = !listItem.disabled;
+  });
+
+  hiddenBtn.addEventListener('click', () => {
+    listItem.hidden = !listItem.hidden;
+  });
+  </script>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-list-item-a-list-item-component--14" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-list-item-a-list-item-component--14" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-list-item-a-list-item-component--14">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-list-item-a-list-item-component--html-code-snippet-14">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-list-item-a-list-item-component--html-code-snippet-14">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-list-item disabled&gt;Earth&lt;/cfpb-list-item&gt; &lt;cfpb-list-item checked disabled&gt;Jupiter&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="checkbox"&gt;Mercury&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="checkbox" checked&gt;Venus&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="check"&gt;Mars&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="check" checked&gt;Saturn&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="plain"&gt;Uranus&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="plain" checked&gt;Pluto&lt;/cfpb-list-item&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
     </section>
     
     
@@ -2206,8 +2347,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/elements.md">
-                            <time datetime="2025-11-28 12:00:32 -0500">
-                                12:00:32 PM Nov 28, 2025
+                            <time datetime="2025-11-28 13:03:13 -0500">
+                                 1:03:13 PM Nov 28, 2025
                             </time>
                         </a>
                     </section>

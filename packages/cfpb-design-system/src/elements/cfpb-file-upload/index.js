@@ -69,9 +69,9 @@ export class CfpbFileUpload extends LitElement {
     return html`
       <cfpb-button
         variant="secondary"
-        @click="${() => {
+        @click=${() => {
           this.fileInput.value.click();
-        }}"
+        }}
       >
         <slot></slot>
       </cfpb-button>
@@ -79,9 +79,9 @@ export class CfpbFileUpload extends LitElement {
         class="a-btn a-btn--secondary"
         type="file"
         hidden
-        accept="${this.accept}"
-        @input="${() => this.#checkStatus()}"
-        @cancel="${() => this.#checkStatus()}"
+        accept=${this.accept}
+        @input=${() => this.#checkStatus()}
+        @cancel=${() => this.#checkStatus()}
         ${ref(this.fileInput)}
       />
       <div

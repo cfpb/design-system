@@ -40,7 +40,7 @@ export class CfpbTagFilter extends LitElement {
     const slot =
       this.for === ''
         ? html`<slot></slot>`
-        : html`<label for="${this.for}"><slot></slot></label>`;
+        : html`<label for=${this.for}><slot></slot></label>`;
     return html`<button @click=${this.#onClick}>
       ${slot} ${unsafeHTML(icon)}
     </button>`;

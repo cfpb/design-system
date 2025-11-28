@@ -53,7 +53,7 @@ export class CfpbTagTopic extends LitElement {
         ? html`<span class="a-tag-topic"
             >${bullet}<span class="a-tag-topic__text"><slot></slot></span
           ></span>`
-        : html`<a class="${this.#tagClass}" href="${this.href}"
+        : html`<a class=${this.#tagClass} href=${this.href}
             >${bullet}<span class="a-tag-topic__text"><slot></slot></span
           ></a>`;
     return html`${slot}`;

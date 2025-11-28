@@ -144,7 +144,7 @@ export class CfpbPagination extends LitElement {
       <nav
         class="m-pagination"
         role="navigation"
-        aria-label="${trans('page number')}"
+        aria-label=${trans('page number')}
       >
         <cfpb-button
           class="m-pagination__btn-prev"

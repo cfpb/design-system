@@ -80,20 +80,20 @@ export class CfpbInputSearch extends LitElement {
           <label
             for="search-text"
             class="o-search-input__input-label"
-            aria-label="${this.label}"
+            aria-label=${this.label}
           >
             ${unsafeSVG(searchIcon)}
           </label>
           <input
             type="search"
-            name="${this.name}"
-            value="${this.value}"
+            name=${this.name}
+            value=${this.value}
             class="a-text-input a-text-input__full"
-            placeholder="${this.placeholder}"
-            title="${this.title}"
+            placeholder=${this.placeholder}
+            title=${this.title}
             autocomplete="off"
             maxlength="75"
-            aria-label="${this.ariaLabelInput}"
+            aria-label=${this.ariaLabelInput}
             ${ref(this.#searchInput)}
             @input=${this.#onInput}
           />

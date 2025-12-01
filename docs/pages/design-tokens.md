@@ -5,12 +5,12 @@ layout: variation
 section: development
 description: >-
   ## The design system encapsulates all of the design choices that make up the
-  system in design tokens. 
+  system in design tokens
 
 
   ### Intro to design tokens
 
-  Everything that we see used on our website consists of the all the design choices the embody the CFPB design system. The site is built from these typography, spacing, sizing, opacity, etc decisions.
+  Everything that you see on our website consists of the all the design choices that embody the CFPB design system. The site is built from these typography, spacing, sizing, opacity, etc decisions.
 
 
   #### Legacy components
@@ -75,8 +75,5 @@ variation_groups:
 
       ```
 use_cases: ""
-guidelines: |-
-  ## Designer Usage
-
-  ## Developer Usage
+guidelines: ""
 ---

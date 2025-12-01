@@ -34,6 +34,49 @@ description: >-
 
   Not only that, but the move to JSON tokens means we are centralizing our source of truth. We are hoping to enhance collaboration between design and development where a designer can manages and maintain these tokens in Figma and then developers can directly consume the output. These efforts are helping to reduce technical debt by centralizing design values for consumption.  
 variation_groups:
-  - variations:
-      - variation_is_deprecated: false
+  - variations: []
+    variation_group_name: JSON Token Structure
+    variation_group_description: >-
+      ```
+
+      {
+        "abstracts-custom-props": {
+          "beige": {
+            "$type": "color",
+            "$value": "#bea96f",
+            "$extensions": {
+              "com.figma": {
+                "collectionName": "abstracts-custom-props",
+                "collectionID": "VariableCollectionId:296:179",
+                "modeName": "default",
+                "modeID": "296:2",
+                "variableName": "beige",
+                "variableID": "VariableID:296:293"
+              }
+            }
+         }
+      }
+
+      ```
+
+
+      The above is a simplified example of our Figma exported JSON tokens. We take that JSON with Figma specific metadata and translate it into CSS using Style Dictionary. This example is using a direct value and gets translated into the following for consumption in our codebase:
+
+
+      ```
+
+      /**
+       * Do not edit directly, this file was auto-generated.
+       */
+
+      :host {
+        --beige: #bea96f;
+      }
+
+      ```
+use_cases: ""
+guidelines: |-
+  ## Designer Usage
+
+  ## Developer Usage
 ---

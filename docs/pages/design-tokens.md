@@ -10,6 +10,7 @@ description: >-
 
   ### Intro to design tokens
 
+
   Everything that you see on our website consists of the all the design choices that embody the CFPB design system. The site is built from these typography, spacing, sizing, opacity, radii, shadows, motion and animation, opacity, and icon  decisions.
 
 
@@ -18,10 +19,11 @@ description: >-
 
   #### Legacy components
 
-  We have been using design tokens in the form of SCSS variables for quite a while now. That has served us well. If you start to use the CFPB design system you will see that we have leveraged SCSS mixins, variables, etc to create the CFPB design system. When you get started using components from the design system this is what you will be working with. 
+
+  We have been using design tokens in the form of SCSS variables for quite a while now. That has served us well. If you start to use the CFPB design system you will see that we have leveraged SCSS mixins, variables, etc to create it. When you start using components from the design system, these SCSS variables or CSS custom properties is what you will be working with. 
 
 
-  The legacy components utilize variables in the form of `$varible-name: value` and will see this used throughout the codebase. This is a sound a approach and delivers a good developer experience. However, this does require knowledge of SCSS to work with and is tied to the platform. Our design token usage with our legacy components is extensive and mainly relies on css custom properties and SCSS variables.  
+  The legacy components utilize variables in the form of `$varible-name: value` or `--variable-name: value` and will see this used throughout the codebase. This has been a good approach and delivers a familiar developer experience. However, this does require knowledge of SCSS to work with and is tied to the platform. Our design token usage with our legacy components is extensive. 
 
 
   #### Web components
@@ -35,7 +37,7 @@ description: >-
 
   What this allows us, is the tokens become easily parsed and consumed. We could deliver these tokens into Android or iOS formats if we needed to make native apps. 
 
-  Not only that, but the move to JSON tokens means we are centralizing our source of truth by exporting them directly out of Figma. We are hoping to enhance collaboration between design and development. The idea is that a designer can manage and maintain these tokens in Figma and then developers can directly consume the output.  
+  Not only that, but the move to JSON tokens means we are centralizing our source of truth by exporting them directly out of Figma. We are hoping to enhance collaboration between design and development. The idea is that a designer can manage and maintain these tokens in Figma and then developers can directly consume the output.
 variation_groups:
   - variations: []
     variation_group_name: JSON Token Structure
@@ -78,16 +80,5 @@ variation_groups:
 
       ```
 use_cases: ""
-guidelines: >-
-  ![cpfb-design-system/src/](/design-system/images/uploads/screenshot-2025-12-02-at-2.09.17 pm.png
-  "Token location")
-
-
-  ### Legacy component tokens
-
-
-  Our legacy components use tokens that are located in the GitHub project here:
-
-
-  ### Web component tokens
+guidelines: ""
 ---

@@ -78,5 +78,16 @@ variation_groups:
 
       ```
 use_cases: ""
-guidelines: ""
+guidelines: >-
+  ![cpfb-design-system/src/](/design-system/images/uploads/screenshot-2025-12-02-at-2.09.17 pm.png
+  "Token location")
+
+
+  ### Legacy component tokens
+
+
+  Our legacy components use tokens that are located in the GitHub project here:
+
+
+  ### Web component tokens
 ---

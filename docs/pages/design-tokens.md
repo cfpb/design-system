@@ -3,6 +3,7 @@ title: Design Tokens
 collection_name: pages
 layout: variation
 section: development
+status: Beta
 description: >-
   ## The design system encapsulates all of the design choices in design tokens
 
@@ -76,6 +77,6 @@ variation_groups:
       }
 
       ```
-use_cases: " "
+use_cases: ""
 guidelines: ""
 ---

@@ -1088,6 +1088,133 @@ variation_groups:
           <cfpb-list-item type="check" checked>Saturn</cfpb-list-item>
           <cfpb-list-item type="plain">Uranus</cfpb-list-item>
           <cfpb-list-item type="plain" checked>Pluto</cfpb-list-item>
+      - variation_is_deprecated: false
+        variation_name: Lists
+        variation_description: >-
+          A list component.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-list>
+              <cfpb-list-item>Mercury</cfpb-list-item>
+              <cfpb-list-item>Venus</cfpb-list-item>
+              <cfpb-list-item>Earth</cfpb-list-item>
+              <cfpb-list-item>Mars</cfpb-list-item>
+              <cfpb-list-item>Jupiter</cfpb-list-item>
+              <cfpb-list-item>Saturn</cfpb-list-item>
+              <cfpb-list-item>Uranus</cfpb-list-item>
+              <cfpb-list-item>Neptune</cfpb-list-item>
+            </cfpb-list>
+
+            <br><br>
+
+            <cfpb-list>
+              <cfpb-list-item type="check">Mercury</cfpb-list-item>
+              <cfpb-list-item type="check">Venus</cfpb-list-item>
+              <cfpb-list-item type="check">Earth</cfpb-list-item>
+              <cfpb-list-item type="check" checked>Mars</cfpb-list-item>
+              <cfpb-list-item type="check">Jupiter</cfpb-list-item>
+              <cfpb-list-item type="check">Saturn</cfpb-list-item>
+              <cfpb-list-item type="check">Uranus</cfpb-list-item>
+              <cfpb-list-item type="check">Neptune</cfpb-list-item>
+            </cfpb-list>
+
+            <br><br>
+
+            <cfpb-list>
+              <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
+              <cfpb-list-item type="checkbox">Venus</cfpb-list-item>
+              <cfpb-list-item type="checkbox">Earth</cfpb-list-item>
+              <cfpb-list-item type="checkbox" checked>Mars</cfpb-list-item>
+              <cfpb-list-item type="checkbox">Jupiter</cfpb-list-item>
+              <cfpb-list-item type="checkbox">Saturn</cfpb-list-item>
+              <cfpb-list-item type="checkbox">Uranus</cfpb-list-item>
+              <cfpb-list-item type="checkbox">Neptune</cfpb-list-item>
+            </cfpb-list>
+
+            <br>
+            <hr>
+            <br>
+
+            <p>
+            The following section allows interacting with the list item API.
+            </p>
+            <p>
+              <cfpb-list id="list-example">
+                <cfpb-list-item type="check">Mercury</cfpb-list-item>
+                <cfpb-list-item type="check">Venus</cfpb-list-item>
+                <cfpb-list-item type="check">Earth</cfpb-list-item>
+                <cfpb-list-item type="check">Mars</cfpb-list-item>
+                <cfpb-list-item type="check">Jupiter</cfpb-list-item>
+                <cfpb-list-item type="check">Saturn</cfpb-list-item>
+                <cfpb-list-item type="check">Uranus</cfpb-list-item>
+                <cfpb-list-item type="check">Neptune</cfpb-list-item>
+              </cfpb-list>
+
+            </p><p>
+
+            <input type="text" id="list-example-filter" />
+            <button id="list-example-filter-btn">Filter</button>
+
+            </p><p>
+
+            <input type="text" id="list-example-visible" />
+            <button id="list-example-visible-btn"># of visible items</button>
+
+            </p><p>
+
+            <input type="text" id="list-example-checked" />
+            <button id="list-example-checked-btn"># of checked items</button>
+
+            </p><p>
+
+            <input type="checkbox" id="list-example-multi" />
+            <label for="list-example-multi">Allow checking multiple</label>
+
+            </p>
+            <script>
+            const listEx = document.querySelector('#list-example');
+
+            const filterInput = document.querySelector('#list-example-filter')
+            const filterBtn = document.querySelector('#list-example-filter-btn');
+
+            const multiBtn = document.querySelector('#list-example-multi');
+
+            const visInput = document.querySelector('#list-example-visible');
+            const visBtn = document.querySelector('#list-example-visible-btn');
+
+            const checkInput = document.querySelector('#list-example-checked');
+            const checkBtn = document.querySelector('#list-example-checked-btn');
+
+            filterBtn.addEventListener('click', () => {
+              const items = filterInput.value.split(',');
+              if (items.length > 0) listEx.filterItems(items);
+              else listEx.showAllItems();
+            });
+
+            multiBtn.addEventListener('click', () => {
+              listEx.multiple = !listEx.multiple;
+            });
+
+            visBtn.addEventListener('click', () => {
+              visInput.value = listEx.visibleItems.length;
+            });
+
+            checkBtn.addEventListener('click', () => {
+              checkInput.value = listEx.checkedItems.length;
+            });
+            </script>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-list>
+            <cfpb-list-item disabled>Mercury</cfpb-list-item>
+            <cfpb-list-item checked disabled>Venus</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Earth</cfpb-list-item>
+            <cfpb-list-item type="checkbox" checked>Mars</cfpb-list-item>
+            <cfpb-list-item type="check">Jupiter</cfpb-list-item>
+            <cfpb-list-item type="check" checked>Saturn</cfpb-list-item>
+            <cfpb-list-item type="plain">Uranus</cfpb-list-item>
+            <cfpb-list-item type="plain" checked>Neptune</cfpb-list-item>
+          </cfpb-list>
     variation_group_name: Types
 guidelines: ''
 eyebrow: Web Components

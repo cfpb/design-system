@@ -9,6 +9,7 @@ export * from './cfpb-form-choice';
 export * from './cfpb-file-upload';
 export * from './cfpb-list-item';
 export * from './cfpb-label';
+export * from './cfpb-form-search';
 export * from './cfpb-form-search-input';
 export * from './cfpb-tag-filter';
 export * from './cfpb-tag-topic';

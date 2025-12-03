@@ -67,4 +67,11 @@
 
 // Web components.
 @forward 'elements/base';
-@forward 'elements/abstracts'
+@forward 'elements/abstracts';
+
+// cfpb-button
+@forward 'elements/cfpb-button/cfpb-button';
+@forward 'elements/cfpb-button/cfpb-button-group';
+@forward 'elements/cfpb-button/cfpb-button-link'; 
+@forward 'elements/cfpb-button/cfpb-button.component';
+@forward 'elements/cfpb-button/vars';

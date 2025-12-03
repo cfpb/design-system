@@ -2530,7 +2530,7 @@
             
             <div class="a-live__code">
                 <div>
-  <cfpb-list>
+  <cfpb-list aria-label="List of planets">
     <cfpb-list-item>Mercury</cfpb-list-item>
     <cfpb-list-item>Venus</cfpb-list-item>
     <cfpb-list-item>Earth</cfpb-list-item>
@@ -2543,7 +2543,7 @@
 
   <br><br>
 
-  <cfpb-list>
+  <cfpb-list aria-label="List of planets">
     <cfpb-list-item type="check">Mercury</cfpb-list-item>
     <cfpb-list-item type="check">Venus</cfpb-list-item>
     <cfpb-list-item type="check">Earth</cfpb-list-item>
@@ -2556,7 +2556,7 @@
 
   <br><br>
 
-  <cfpb-list>
+  <cfpb-list aria-label="List of planets">
     <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
     <cfpb-list-item type="checkbox">Venus</cfpb-list-item>
     <cfpb-list-item type="checkbox">Earth</cfpb-list-item>
@@ -2575,7 +2575,7 @@
   The following section allows interacting with the list item API.
   </p>
   <p>
-    <cfpb-list id="list-example">
+    <cfpb-list id="list-example" aria-label="List of planets">
       <cfpb-list-item type="check">Mercury</cfpb-list-item>
       <cfpb-list-item type="check">Venus</cfpb-list-item>
       <cfpb-list-item type="check">Earth</cfpb-list-item>
@@ -2589,19 +2589,29 @@
   </p>
 <p>
 
-  <input type="text" id="list-example-filter">
+  <label for="list-example-type">List item type:</label>
+  <select id="list-example-type">
+    <option>plain</option>
+    <option>check</option>
+    <option>checkbox</option>
+  </select>
+
+  </p>
+<p>
+
+  <input type="text" id="list-example-filter" aria-labelledby="list-example-filter-btn">
   <button id="list-example-filter-btn">Filter</button>
 
   </p>
 <p>
 
-  <input type="text" id="list-example-visible">
+  <input type="text" id="list-example-visible" aria-labelledby="list-example-visible-btn">
   <button id="list-example-visible-btn"># of visible items</button>
 
   </p>
 <p>
 
-  <input type="text" id="list-example-checked">
+  <input type="text" id="list-example-checked" aria-labelledby="list-example-checked-btn">
   <button id="list-example-checked-btn"># of checked items</button>
 
   </p>
@@ -2612,7 +2622,10 @@
 
   </p>
   <script>
+  (function() {
   const listEx = document.querySelector('#list-example');
+
+  const typeSel = document.querySelector('#list-example-type');
 
   const filterInput = document.querySelector('#list-example-filter')
   const filterBtn = document.querySelector('#list-example-filter-btn');
@@ -2624,6 +2637,10 @@
 
   const checkInput = document.querySelector('#list-example-checked');
   const checkBtn = document.querySelector('#list-example-checked-btn');
+
+  typeSel.addEventListener('change', (evt) => {
+    listEx.type = evt.target.value;
+  });
 
   filterBtn.addEventListener('click', () => {
     const items = filterInput.value.split(',');
@@ -2642,6 +2659,8 @@
   checkBtn.addEventListener('click', () => {
     checkInput.value = listEx.checkedItems.length;
   });
+
+  })()
   </script>
 </div>
             </div>
@@ -2679,15 +2698,35 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;cfpb-list&gt;
-  &lt;cfpb-list-item disabled&gt;Mercury&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item checked disabled&gt;Venus&lt;/cfpb-list-item&gt;
+                            <pre><code class="language-html">&lt;cfpb-list aria-label="List of planets"&gt;
+  &lt;cfpb-list-item&gt;Mercury&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item&gt;Venus&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item&gt;Earth&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item&gt;Mars&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item&gt;Jupiter&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item&gt;Saturn&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item&gt;Uranus&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item&gt;Neptune&lt;/cfpb-list-item&gt;
+&lt;/cfpb-list&gt;
+&lt;cfpb-list aria-label="List of planets"&gt;
+  &lt;cfpb-list-item type="check"&gt;Mercury&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="check"&gt;Venus&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="check"&gt;Earth&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="check" checked&gt;Mars&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="check"&gt;Jupiter&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="check"&gt;Saturn&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="check"&gt;Uranus&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="check"&gt;Neptune&lt;/cfpb-list-item&gt;
+&lt;/cfpb-list&gt;
+&lt;cfpb-list aria-label="List of planets"&gt;
+  &lt;cfpb-list-item type="checkbox"&gt;Mercury&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="checkbox"&gt;Venus&lt;/cfpb-list-item&gt;
   &lt;cfpb-list-item type="checkbox"&gt;Earth&lt;/cfpb-list-item&gt;
   &lt;cfpb-list-item type="checkbox" checked&gt;Mars&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="check"&gt;Jupiter&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="check" checked&gt;Saturn&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="plain"&gt;Uranus&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="plain" checked&gt;Neptune&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="checkbox"&gt;Jupiter&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="checkbox"&gt;Saturn&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="checkbox"&gt;Uranus&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type="checkbox"&gt;Neptune&lt;/cfpb-list-item&gt;
 &lt;/cfpb-list&gt;</code></pre>
                         </div>
                     </div>
@@ -2734,8 +2773,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/elements.md">
-                            <time datetime="2025-12-03 14:38:09 -0500">
-                                 2:38:09 PM Dec 03, 2025
+                            <time datetime="2025-12-03 16:17:05 -0500">
+                                 4:17:05 PM Dec 03, 2025
                             </time>
                         </a>
                     </section>

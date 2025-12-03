@@ -19,6 +19,7 @@ export class CfpbList extends LitElement {
     multiple: { type: Boolean, reflect: true },
     itemsData: { type: String, attribute: 'itemsdata' },
     type: { type: String, reflect: true },
+    ariaLabel: { type: String, attribute: 'aria-label' },
   };
 
   constructor() {
@@ -26,6 +27,7 @@ export class CfpbList extends LitElement {
     this.multiple = false;
     this.itemsData = '';
     this.type = 'plain';
+    this.ariaLabel = '';
   }
 
   firstUpdated() {
@@ -280,7 +282,13 @@ export class CfpbList extends LitElement {
 
   render() {
     return html`
-      <div role="listbox" tabindex="0" @keydown=${this.#onKeyDown}>
+      <div
+        role="listbox"
+        tabindex="0"
+        @keydown=${this.#onKeyDown}
+        aria-label=${this.ariaLabel}
+        ?aria-multiselectable=${this.multiple}
+      >
         <slot></slot>
       </div>
     `;

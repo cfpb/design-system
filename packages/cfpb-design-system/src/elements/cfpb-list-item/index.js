@@ -87,7 +87,11 @@ export class CfpbListItem extends LitElement {
 
     if (changed.has('hidden')) {
       this.setAttribute('aria-hidden', this.hidden ? 'true' : 'false');
-      if (this.hidden) this.tabIndex = -1;
+      if (this.hidden) {
+        this.tabIndex = -1;
+        this.removeAttribute('aria-selected');
+        this.checked = false;
+      }
     }
   }
 

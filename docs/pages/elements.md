@@ -1094,7 +1094,7 @@ variation_groups:
           A list component.
         variation_code_snippet_rendered: >-
           <div>
-            <cfpb-list>
+            <cfpb-list aria-label="List of planets">
               <cfpb-list-item>Mercury</cfpb-list-item>
               <cfpb-list-item>Venus</cfpb-list-item>
               <cfpb-list-item>Earth</cfpb-list-item>
@@ -1107,7 +1107,7 @@ variation_groups:
 
             <br><br>
 
-            <cfpb-list>
+            <cfpb-list aria-label="List of planets">
               <cfpb-list-item type="check">Mercury</cfpb-list-item>
               <cfpb-list-item type="check">Venus</cfpb-list-item>
               <cfpb-list-item type="check">Earth</cfpb-list-item>
@@ -1120,7 +1120,7 @@ variation_groups:
 
             <br><br>
 
-            <cfpb-list>
+            <cfpb-list aria-label="List of planets">
               <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
               <cfpb-list-item type="checkbox">Venus</cfpb-list-item>
               <cfpb-list-item type="checkbox">Earth</cfpb-list-item>
@@ -1139,7 +1139,7 @@ variation_groups:
             The following section allows interacting with the list item API.
             </p>
             <p>
-              <cfpb-list id="list-example">
+              <cfpb-list id="list-example" aria-label="List of planets">
                 <cfpb-list-item type="check">Mercury</cfpb-list-item>
                 <cfpb-list-item type="check">Venus</cfpb-list-item>
                 <cfpb-list-item type="check">Earth</cfpb-list-item>
@@ -1152,17 +1152,26 @@ variation_groups:
 
             </p><p>
 
-            <input type="text" id="list-example-filter" />
+            <label for="list-example-type">List item type:</label>
+            <select id="list-example-type">
+              <option>plain</option>
+              <option>check</option>
+              <option>checkbox</option>
+            </select>
+
+            </p><p>
+
+            <input type="text" id="list-example-filter" aria-labelledby="list-example-filter-btn" />
             <button id="list-example-filter-btn">Filter</button>
 
             </p><p>
 
-            <input type="text" id="list-example-visible" />
+            <input type="text" id="list-example-visible" aria-labelledby="list-example-visible-btn"  />
             <button id="list-example-visible-btn"># of visible items</button>
 
             </p><p>
 
-            <input type="text" id="list-example-checked" />
+            <input type="text" id="list-example-checked" aria-labelledby="list-example-checked-btn"  />
             <button id="list-example-checked-btn"># of checked items</button>
 
             </p><p>
@@ -1172,7 +1181,10 @@ variation_groups:
 
             </p>
             <script>
+            (function() {
             const listEx = document.querySelector('#list-example');
+
+            const typeSel = document.querySelector('#list-example-type');
 
             const filterInput = document.querySelector('#list-example-filter')
             const filterBtn = document.querySelector('#list-example-filter-btn');
@@ -1184,6 +1196,10 @@ variation_groups:
 
             const checkInput = document.querySelector('#list-example-checked');
             const checkBtn = document.querySelector('#list-example-checked-btn');
+
+            typeSel.addEventListener('change', (evt) => {
+              listEx.type = evt.target.value;
+            });
 
             filterBtn.addEventListener('click', () => {
               const items = filterInput.value.split(',');
@@ -1202,18 +1218,42 @@ variation_groups:
             checkBtn.addEventListener('click', () => {
               checkInput.value = listEx.checkedItems.length;
             });
+
+            })()
             </script>
           </div>
         variation_code_snippet: >-
-          <cfpb-list>
-            <cfpb-list-item disabled>Mercury</cfpb-list-item>
-            <cfpb-list-item checked disabled>Venus</cfpb-list-item>
+          <cfpb-list aria-label="List of planets">
+            <cfpb-list-item>Mercury</cfpb-list-item>
+            <cfpb-list-item>Venus</cfpb-list-item>
+            <cfpb-list-item>Earth</cfpb-list-item>
+            <cfpb-list-item>Mars</cfpb-list-item>
+            <cfpb-list-item>Jupiter</cfpb-list-item>
+            <cfpb-list-item>Saturn</cfpb-list-item>
+            <cfpb-list-item>Uranus</cfpb-list-item>
+            <cfpb-list-item>Neptune</cfpb-list-item>
+          </cfpb-list>
+
+          <cfpb-list aria-label="List of planets">
+            <cfpb-list-item type="check">Mercury</cfpb-list-item>
+            <cfpb-list-item type="check">Venus</cfpb-list-item>
+            <cfpb-list-item type="check">Earth</cfpb-list-item>
+            <cfpb-list-item type="check" checked>Mars</cfpb-list-item>
+            <cfpb-list-item type="check">Jupiter</cfpb-list-item>
+            <cfpb-list-item type="check">Saturn</cfpb-list-item>
+            <cfpb-list-item type="check">Uranus</cfpb-list-item>
+            <cfpb-list-item type="check">Neptune</cfpb-list-item>
+          </cfpb-list>
+
+          <cfpb-list aria-label="List of planets">
+            <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Venus</cfpb-list-item>
             <cfpb-list-item type="checkbox">Earth</cfpb-list-item>
             <cfpb-list-item type="checkbox" checked>Mars</cfpb-list-item>
-            <cfpb-list-item type="check">Jupiter</cfpb-list-item>
-            <cfpb-list-item type="check" checked>Saturn</cfpb-list-item>
-            <cfpb-list-item type="plain">Uranus</cfpb-list-item>
-            <cfpb-list-item type="plain" checked>Neptune</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Jupiter</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Saturn</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Uranus</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Neptune</cfpb-list-item>
           </cfpb-list>
     variation_group_name: Types
 guidelines: ''

@@ -11,17 +11,23 @@ export class CfpbList extends LitElement {
   #checkedItems = [];
   #visibleItems = [];
   #focusedIndex = 0;
-  #clickListeners = new WeakMap(); // WeakMap to store per-item click listeners
+
+  // WeakMap to store per-item click listeners.
+  #clickListeners = new WeakMap();
 
   static properties = {
     multiple: { type: Boolean, reflect: true },
     itemsData: { type: String, attribute: 'itemsdata' },
+    type: { type: String, reflect: true },
+    ariaLabel: { type: String, attribute: 'aria-label' },
   };
 
   constructor() {
     super();
     this.multiple = false;
     this.itemsData = '';
+    this.type = 'plain';
+    this.ariaLabel = '';
   }
 
   firstUpdated() {
@@ -31,6 +37,10 @@ export class CfpbList extends LitElement {
   updated(changedProps) {
     if (changedProps.has('itemsData')) {
       this.#parseItemsData();
+    }
+
+    if (changedProps.has('type')) {
+      this.#applyTypeToItems();
     }
   }
 
@@ -58,7 +68,8 @@ export class CfpbList extends LitElement {
     let itemsArray;
     try {
       if (Array.isArray(this.itemsData)) {
-        itemsArray = this.itemsData; // direct JS array
+        // Direct JS array.
+        itemsArray = this.itemsData;
       } else {
         // HTML-safe JSON: replace single quotes with double quotes
         itemsArray = JSON.parse(this.itemsData.replace(/'/g, '"'));
@@ -80,7 +91,7 @@ export class CfpbList extends LitElement {
   // RENDER ITEMS
   // -------------------------
   #renderItemsFromData(itemsArray) {
-    // Remove all children except <template>
+    // Remove all children except <template> and <noscript>.
     [...this.children].forEach((child) => {
       if (child.tagName !== 'TEMPLATE' || child.tagName !== 'NOSCRIPT')
         child.remove();
@@ -92,8 +103,8 @@ export class CfpbList extends LitElement {
       if ('checked' in data) item.checked = data.checked;
       if ('disabled' in data) item.disabled = data.disabled;
       if ('hidden' in data) item.hidden = data.hidden;
-      if ('type' in data) item.type = data.type;
       if ('href' in data) item.href = data.href;
+      item.type = data.type ?? this.type;
 
       this.appendChild(item);
     });
@@ -105,36 +116,51 @@ export class CfpbList extends LitElement {
   // SYNC ITEMS & LISTENERS
   // -------------------------
   #syncItems() {
+    // Collect items.
     this.#items = [...this.querySelectorAll('cfpb-list-item')];
-    this.#visibleItems = this.#items.filter((i) => !i.hidden);
 
-    // Populate #checkedItems based on pre-checked items.
+    // Ensure each item has a type.
+    this.#items.forEach((item) => {
+      if (!item.type) item.type = this.type;
+    });
+
+    // Visible items.
+    this.#visibleItems = this.#items.filter((item) => !item.hidden);
+
+    // Populate initial checked states.
     if (this.multiple) {
       this.#checkedItems = this.#items.filter((item) => item.checked);
     } else {
       const firstChecked = this.#items.find((item) => item.checked);
       this.#checkedItems = firstChecked ? [firstChecked] : [];
 
-      // Uncheck any other items.
+      // Uncheck all others.
       this.#items.forEach((item) => {
         if (item !== firstChecked) item.checked = false;
       });
     }
 
+    // Assign tabindex, role, listeners.
     this.#items.forEach((item, index) => {
       item.setAttribute('tabindex', index === 0 ? '0' : '-1');
       item.setAttribute('role', 'option');
 
-      // Remove previous listener if exists
-      const prevListener = this.#clickListeners.get(item);
-      if (prevListener) {
-        item.removeEventListener('click', prevListener);
-      }
+      // Remove prior listener if present.
+      const prev = this.#clickListeners.get(item);
+      if (prev) item.removeEventListener('click', prev);
 
-      const listener = () => this.#fireItemClick(index, item);
-      item.addEventListener('click', listener);
+      // Listener that toggles the item before handling.
+      const listener = (evt) => {
+        // Prevent actual click bubbling to list container.
+        evt.stopPropagation();
+
+        this.#handleToggle(item, item.checked, index);
+      };
+
+      item.addEventListener('click-item', listener);
       this.#clickListeners.set(item, listener);
 
+      // Track focus index.
       item.addEventListener('focus', () => {
         this.#focusedIndex = index;
       });
@@ -153,11 +179,27 @@ export class CfpbList extends LitElement {
     );
   }
 
-  #fireItemClick(index, element) {
+  #applyTypeToItems() {
+    if (!['plain', 'check', 'checkbox'].includes(this.type)) {
+      console.warn(`<cfpb-list>: invalid type "${this.type}".`);
+      return;
+    }
+    this.#items.forEach((item) => (item.type = this.type));
+  }
+
+  #handleToggle(element, isChecked, index) {
     if (this.multiple) {
-      if (element.checked) this.#checkedItems.push(element);
-      else this.#checkedItems = this.#checkedItems.filter((i) => i !== element);
+      if (isChecked) {
+        // Add if not already present.
+        if (!this.#checkedItems.includes(element)) {
+          this.#checkedItems.push(element);
+        }
+      } else {
+        // Remove cleanly.
+        this.#checkedItems = this.#checkedItems.filter((i) => i !== element);
+      }
     } else {
+      // Single-select mode.
       this.#checkedItems.forEach((i) => {
         if (i !== element) i.checked = false;
       });
@@ -194,13 +236,13 @@ export class CfpbList extends LitElement {
   }
 
   showAllItems() {
-    this.items.forEach((i) => (i.hidden = false));
+    this.items.forEach((item) => (item.hidden = false));
     this.#focusedIndex = 0;
     this.#visibleItems = this.#items;
   }
 
   focusItemAt(index) {
-    const visibleItems = this.items.filter((i) => !i.hidden);
+    const visibleItems = this.items.filter((item) => !item.hidden);
     if (!visibleItems.length) return;
 
     const item = visibleItems[index % visibleItems.length];
@@ -212,7 +254,7 @@ export class CfpbList extends LitElement {
   // KEYBOARD NAVIGATION
   // -------------------------
   #onKeyDown(evt) {
-    const visibleItems = this.items.filter((i) => !i.hidden);
+    const visibleItems = this.items.filter((item) => !item.hidden);
     if (!visibleItems.length) return;
     const last = visibleItems.length - 1;
 
@@ -240,7 +282,13 @@ export class CfpbList extends LitElement {
 
   render() {
     return html`
-      <div role="listbox" tabindex="0" @keydown=${this.#onKeyDown}>
+      <div
+        role="listbox"
+        tabindex="0"
+        @keydown=${this.#onKeyDown}
+        aria-label=${this.ariaLabel}
+        ?aria-multiselectable=${this.multiple}
+      >
         <slot></slot>
       </div>
     `;

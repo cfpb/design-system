@@ -912,12 +912,32 @@ variation_groups:
           A search widget component.
         variation_code_snippet_rendered: >-
           <div>
-            <cfpb-input-search>
-            </cfpb-input-search>
+            <cfpb-form-search>
+              <ul>
+                <li>How do I add money to my prepaid card?</li>
+                <li>What are credit card “add-on products?”</li>
+                <li>How do I qualify for an advertised 0% auto financing?</li>
+                <li>Can I make additional payments on my student loan?</li>
+                <li>How do I tell if I have a fixed or adjustable rate mortgage?</li>
+                <li>I was offered a pension advance. What is this? What should I look out for?</li>
+                <li>What are rate caps with an adjustable-rate mortgage (ARM), and how do they work?</li>
+                <li>For an adjustable-rate mortgage (ARM), what are the index and margin, and how do they work?</li>
+              </ul>
+            </cfpb-form-search>
           </div>
         variation_code_snippet: >-
-          <cfpb-input-search>
-          </cfpb-input-search>
+          <cfpb-form-search>
+            <ul>
+              <li>How do I add money to my prepaid card?</li>
+              <li>What are credit card “add-on products?”</li>
+              <li>How do I qualify for an advertised 0% auto financing?</li>
+              <li>Can I make additional payments on my student loan?</li>
+              <li>How do I tell if I have a fixed or adjustable rate mortgage?</li>
+              <li>I was offered a pension advance. What is this? What should I look out for?</li>
+              <li>What are rate caps with an adjustable-rate mortgage (ARM), and how do they work?</li>
+              <li>For an adjustable-rate mortgage (ARM), what are the index and margin, and how do they work?</li>
+            </ul>
+          </cfpb-form-search>
       - variation_is_deprecated: false
         variation_name: Form-level alert
         variation_description: >-

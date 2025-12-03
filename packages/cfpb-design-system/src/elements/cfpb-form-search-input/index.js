@@ -31,7 +31,7 @@ export class CfpbFormSearchInput extends LitElement {
     validation: { type: String, reflect: true },
     label: { type: String },
     name: { type: String },
-    title: { type: Boolean, attribute: true },
+    title: { type: String, attribute: true },
     value: { type: String },
     maxlength: { type: Number, reflect: true },
     placeholder: { type: String },
@@ -60,11 +60,20 @@ export class CfpbFormSearchInput extends LitElement {
     this.value = evt.target.value;
   }
 
+  #onBlur() {
+    this.dispatchEvent(
+      new Event('blur', {
+        bubbles: true,
+        composed: true,
+      }),
+    );
+  }
+
   #onClickClear(evt) {
     evt.preventDefault();
     if (this.disabled) return;
     this.value = '';
-    this.#searchInput.value.focus();
+    this.#searchInput.value?.focus();
     this.dispatchEvent(
       new CustomEvent('clear', { detail: '', bubbles: true, composed: true }),
     );
@@ -85,6 +94,7 @@ export class CfpbFormSearchInput extends LitElement {
           ${unsafeSVG(searchIcon)}
         </label>
         <input
+          id="search-text"
           type="search"
           name=${this.name}
           .value=${this.value}
@@ -93,15 +103,16 @@ export class CfpbFormSearchInput extends LitElement {
           placeholder=${this.placeholder}
           title=${this.title}
           autocomplete="off"
-          maxlength="${this.maxlength}"
-          aria-label="${this.ariaLabelInput}"
+          maxlength=${this.maxlength}
+          aria-label=${this.ariaLabelInput}
           ${ref(this.#searchInput)}
           @input=${this.#onInput}
+          @blur=${this.#onBlur}
         />
         <button
           type="reset"
-          aria-label="${this.ariaLabelButton}"
-          title="${this.ariaLabelButton}"
+          aria-label=${this.ariaLabelButton}
+          title=${this.ariaLabelButton}
           @click=${this.#onClickClear}
         >
           ${unsafeSVG(clearIcon)}

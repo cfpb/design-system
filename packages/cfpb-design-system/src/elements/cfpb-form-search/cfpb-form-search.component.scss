@@ -1,0 +1,48 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-buttons/button' as *;
+
+:host {
+  .o-form-search {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: math.div(15px, $base-font-size-px) + rem;
+
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      flex-direction: row;
+      border-left: 0;
+      button[type='submit'] {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        flex-basis: 25%;
+      }
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .popup {
+      display: none;
+      position: absolute;
+      top: 34px;
+      z-index: 100;
+      background: white;
+      border: 1px solid var(--pacific);
+      border-top: 0;
+      width: calc(100% - 2px);
+    }
+
+    .popup.show {
+      display: block;
+    }
+  }
+
+  // Hide light DOM content.
+  ::slotted(ul),
+  ::slotted(ol) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,17 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon';
+
+:host {
+  ::slotted(cfpb-list-item) {
+    border-bottom: 1px solid var(--gray-20);
+  }
+
+  ::slotted(cfpb-list-item:first-of-type) {
+    border-top: 1px solid var(--gray-20);
+  }
+
+  :focus {
+    outline: 1px dotted var(--pacific);
+  }
+}

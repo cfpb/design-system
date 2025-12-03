@@ -15,7 +15,7 @@ description: >-
   Everything you see on [consumerfinance.gov](https://www.consumerfinance.gov/) consists of the many design choices that embody the CFPB design system. The site is built from these typography, spacing, sizing, opacity, radii, shadows, motion and animation, and icon decisions.
 
 
-  We call these decisions design tokens. From a code sokens can take many forms, such as SCSS variables, CSS custom properties, or platform agnostic JSON design tokens. 
+  We call these decisions design tokens.Code tokens can take many forms, such as SCSS variables, CSS custom properties, or platform agnostic JSON design tokens. 
 
 
   #### Legacy components

@@ -90,7 +90,7 @@ export class CfpbListItem extends LitElement {
       if (this.hidden) {
         this.tabIndex = -1;
         this.removeAttribute('aria-selected');
-        this.checked = false;
+        if (this.checked) this.#toggleChecked();
       }
     }
   }

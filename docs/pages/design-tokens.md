@@ -5,39 +5,35 @@ layout: variation
 section: development
 status: null
 description: >-
-  ## The design system encapsulates all of the design choices in design tokens
+  ## The design system encapsulates all of its design choices into design
+  tokens.
 
 
   ### Intro to design tokens
 
 
-  Everything that you see on our website consists of the all the design choices that embody the CFPB design system. The site is built from these typography, spacing, sizing, opacity, radii, shadows, motion and animation, opacity, and icon  decisions.
+  Everything you see on [consumerfinance.gov](https://www.consumerfinance.gov/) consists of the many design choices that embody the CFPB design system. The site is built from these typography, spacing, sizing, opacity, radii, shadows, motion and animation, and icon decisions.
 
 
-  We call all of these decisions design tokens. Tokens can take many forms. Things like SCSS variables, CSS custom properties or platform agnostic JSON design tokens. 
+  We call these decisions design tokens. From a code sokens can take many forms, such as SCSS variables, CSS custom properties, or platform agnostic JSON design tokens. 
 
 
   #### Legacy components
 
 
-  We have been using design tokens in the form of SCSS variables for quite a while now. That has served us well. If you start to use the CFPB design system you will see that we have leveraged SCSS mixins, variables, etc to create it. When you start using components from the design system, these SCSS variables or CSS custom properties is what you will be working with. 
+  Our legacy component versions—currently found in the "Components" sub section of [Components](https://cfpb.github.io/design-system/components/)—leverage SCSS mixins, variables, etc., in the form of `$varible-name: value` or `--variable-name: value`. We've used this approach for several years, and it has served us well as it delivers a familiar developer experience. However, this approach requires knowledge of SCSS, is tied to the platform, and is extensive. 
 
 
-  The legacy components utilize variables in the form of `$varible-name: value` or `--variable-name: value` and will see this used throughout the codebase. This has been a good approach and delivers a familiar developer experience. However, this does require knowledge of SCSS to work with and is tied to the platform. Our design token usage with our legacy components is extensive. 
+  #### Web components (beta)
 
 
-  #### Web components
+  We've started creating web component versions of our legacy components. These can be found on the [Elements](https://cfpb.github.io/design-system/components/elements) page within the "Web components (beta)" sub section of [Components](https://cfpb.github.io/design-system/components/). These web components utilize design tokens for color values in the form of platform-agnostic JSON. Style Dictionary translates this JSON into .css custom properties. These tokens become easily parsed and consumed, meaning we could deliver them into Android or iOS formats if desired. 
 
 
-  We have started to make web component versions of our legacy components. These use a slightly different take on using design tokens. 
+  With this move to JSON tokens, we are also centralizing our source of truth by exporting the tokens directly from our [Figma library](https://www.figma.com/community/file/1487539003249310850), enhancing collaboration between design and development. Designers can manage and maintain the tokens in Figma, and developers can directly consume the output.
 
 
-  The tokens we are using in our web components use platform agnostic JSON for color which Style Dictionary then translates into .css custom properties. For now we are using JSON for our colors but more will be coming soon (think sizing, spacing, etc).  
-
-
-  What this allows us, is the tokens become easily parsed and consumed. We could deliver these tokens into Android or iOS formats if we needed to make native apps. 
-
-  Not only that, but the move to JSON tokens means we are centralizing our source of truth by exporting them directly out of Figma. We are hoping to enhance collaboration between design and development. The idea is that a designer can manage and maintain these tokens in Figma and then developers can directly consume the output.
+  Currently, we are using JSON design tokens in our web components for color values. We plan to incrementally create more JSON design tokens for values such as sizing and spacing.
 variation_groups:
   - variations: []
     variation_group_name: JSON Token Structure

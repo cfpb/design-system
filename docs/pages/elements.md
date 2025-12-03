@@ -1152,6 +1152,15 @@ variation_groups:
 
             </p><p>
 
+            <label for="list-example-type">List item type:</label>
+            <select id="list-example-type">
+              <option>plain</option>
+              <option>check</option>
+              <option>checkbox</option>
+            </select>
+
+            </p><p>
+
             <input type="text" id="list-example-filter" />
             <button id="list-example-filter-btn">Filter</button>
 
@@ -1172,7 +1181,10 @@ variation_groups:
 
             </p>
             <script>
+            (function() {
             const listEx = document.querySelector('#list-example');
+
+            const typeSel = document.querySelector('#list-example-type');
 
             const filterInput = document.querySelector('#list-example-filter')
             const filterBtn = document.querySelector('#list-example-filter-btn');
@@ -1184,6 +1196,10 @@ variation_groups:
 
             const checkInput = document.querySelector('#list-example-checked');
             const checkBtn = document.querySelector('#list-example-checked-btn');
+
+            typeSel.addEventListener('change', (evt) => {
+              listEx.type = evt.target.value;
+            });
 
             filterBtn.addEventListener('click', () => {
               const items = filterInput.value.split(',');
@@ -1202,19 +1218,10 @@ variation_groups:
             checkBtn.addEventListener('click', () => {
               checkInput.value = listEx.checkedItems.length;
             });
+
+            })()
             </script>
           </div>
-        variation_code_snippet: >-
-          <cfpb-list>
-            <cfpb-list-item disabled>Mercury</cfpb-list-item>
-            <cfpb-list-item checked disabled>Venus</cfpb-list-item>
-            <cfpb-list-item type="checkbox">Earth</cfpb-list-item>
-            <cfpb-list-item type="checkbox" checked>Mars</cfpb-list-item>
-            <cfpb-list-item type="check">Jupiter</cfpb-list-item>
-            <cfpb-list-item type="check" checked>Saturn</cfpb-list-item>
-            <cfpb-list-item type="plain">Uranus</cfpb-list-item>
-            <cfpb-list-item type="plain" checked>Neptune</cfpb-list-item>
-          </cfpb-list>
     variation_group_name: Types
 guidelines: ''
 eyebrow: Web Components

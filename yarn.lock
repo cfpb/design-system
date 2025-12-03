@@ -4803,7 +4803,7 @@ __metadata:
     autoprefixer: "npm:10.4.22"
     concurrently: "npm:9.2.1"
     cssnano: "npm:7.1.2"
-    cypress: "npm:15.7.0"
+    cypress: "npm:15.7.1"
     decap-cms-app: "npm:3.9.0"
     esbuild: "npm:0.27.0"
     esbuild-plugin-liquid: "npm:0.2.0"
@@ -4832,7 +4832,7 @@ __metadata:
     marked: "npm:17.0.1"
     postcss: "npm:8.5.6"
     postcss-replace: "npm:2.0.1"
-    prettier: "npm:3.7.1"
+    prettier: "npm:3.7.3"
     prop-types: "npm:15.8.1"
     react: "npm:19.2.0"
     react-dom: "npm:19.2.0"
@@ -5701,9 +5701,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:15.7.0":
-  version: 15.7.0
-  resolution: "cypress@npm:15.7.0"
+"cypress@npm:15.7.1":
+  version: 15.7.1
+  resolution: "cypress@npm:15.7.1"
   dependencies:
     "@cypress/request": "npm:^3.0.9"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -5749,7 +5749,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10c0/e0d25943862ae442c16320f1f5766fd1e38986a9a1b20592cec8247b7a6a5ec1066abecc283d8e5c7cbc4a447b20b55e5dbb662e86046ad846e0cff61c4b2056
+  checksum: 10c0/537d5352c86067455b96fcbc35934820b391413e6d3327204d0936ac14ffb4d69a02290a5007dc532c87976c43b6ebe503d84907768c0daa7d68318907b7ac80
   languageName: node
   linkType: hard
 
@@ -14138,12 +14138,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.7.1":
-  version: 3.7.1
-  resolution: "prettier@npm:3.7.1"
+"prettier@npm:3.7.3":
+  version: 3.7.3
+  resolution: "prettier@npm:3.7.3"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/a6610043ee0a64a3251a948bf82fad3e59d984a8e8dea206400cfa190585417e3343b32c1f6ae7d8f40798a9b4bd91affc08fa7795dd99a9dec5c9bccdf31500
+  checksum: 10c0/ee86bb06121c74dadc54f30b6f99aff6288966d9b842ce501d6991e20d20c6ce2d45028651b3b0955ca6e5fa89c1bee1e72b6f810243a93cef8bc69737972ef7
   languageName: node
   linkType: hard
 

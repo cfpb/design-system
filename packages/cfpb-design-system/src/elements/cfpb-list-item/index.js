@@ -16,11 +16,19 @@ export class CfpbListItem extends LitElement {
   #value;
   #inList = false;
 
+  /**
+   * @property {string} type - Choice type: plain, check, checkbox.
+   * @property {boolean} checked - Whether the list item is checked or not.
+   * @property {boolean} disabled - Whether the list item is selectable or not.
+   * @property {boolean} hidden - Whether the list item is hidden or not.
+   * @returns {object} The map of properties.
+   */
   static properties = {
     type: { type: String, reflect: true },
     checked: { type: Boolean, reflect: true },
     disabled: { type: Boolean, reflect: true },
     hidden: { type: Boolean, reflect: true },
+    href: { type: String, refrect: true },
   };
 
   constructor() {
@@ -29,6 +37,7 @@ export class CfpbListItem extends LitElement {
     this.checked = false;
     this.disabled = false;
     this.hidden = false;
+    this.href = '';
   }
 
   firstUpdated() {
@@ -83,6 +92,12 @@ export class CfpbListItem extends LitElement {
   }
 
   #toggleChecked() {
+    // If the item has an href attribute, go to that page.
+    if (this.href !== '') {
+      window.location.href = this.href;
+    }
+
+    // … Otherwise, toggle the checked state.
     this.checked = !this.checked;
     this.dispatchEvent(
       new CustomEvent('click-item', {

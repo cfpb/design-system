@@ -17,8 +17,8 @@ describe('<cfpb-list> tests', () => {
     document.body.innerHTML = '';
   });
 
-  test('renders itemsData and sets checked state (single)', async () => {
-    list.itemsData = JSON.stringify([
+  test('renders childData and sets checked state (single)', async () => {
+    list.childData = JSON.stringify([
       { value: 'A', checked: true },
       { value: 'B', checked: true },
       { value: 'C' },
@@ -36,7 +36,7 @@ describe('<cfpb-list> tests', () => {
 
   test('multiple selection mode allows multiple checked items', async () => {
     list.multiple = true;
-    list.itemsData = JSON.stringify([
+    list.childData = JSON.stringify([
       { value: 'A', checked: true },
       { value: 'B', checked: true },
       { value: 'C' },
@@ -60,7 +60,7 @@ describe('<cfpb-list> tests', () => {
   });
 
   test('click-item toggles single selection', async () => {
-    list.itemsData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
+    list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
 
     await list.updateComplete;
 
@@ -85,7 +85,7 @@ describe('<cfpb-list> tests', () => {
   });
 
   test('replaces prior click listeners on items', async () => {
-    list.itemsData = JSON.stringify([{ value: 'X' }]);
+    list.childData = JSON.stringify([{ value: 'X' }]);
     await list.updateComplete;
 
     const listenerSpy = jest.fn();
@@ -102,7 +102,7 @@ describe('<cfpb-list> tests', () => {
   });
 
   test('filterItems hides items and sets focused index', async () => {
-    list.itemsData = JSON.stringify([
+    list.childData = JSON.stringify([
       { value: 'A' },
       { value: 'B' },
       { value: 'C' },
@@ -118,7 +118,7 @@ describe('<cfpb-list> tests', () => {
   });
 
   test('arrow keys skip hidden items', async () => {
-    list.itemsData = JSON.stringify([
+    list.childData = JSON.stringify([
       { value: 'A' },
       { value: 'B' },
       { value: 'C' },
@@ -148,7 +148,7 @@ describe('<cfpb-list> tests', () => {
   });
 
   test('showAllItems unhides all items', async () => {
-    list.itemsData = JSON.stringify([
+    list.childData = JSON.stringify([
       { value: 'A', hidden: true },
       { value: 'B', hidden: true },
     ]);
@@ -159,9 +159,9 @@ describe('<cfpb-list> tests', () => {
     expect(list.visibleItems.length).toBe(2);
   });
 
-  test('invalid itemsData logs error', async () => {
+  test('invalid childData logs error', async () => {
     console.error = jest.fn();
-    list.itemsData = 'not-json';
+    list.childData = 'not-json';
     await list.updateComplete;
 
     expect(console.error).toHaveBeenCalled();

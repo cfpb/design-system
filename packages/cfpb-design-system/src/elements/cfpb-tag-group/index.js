@@ -1,5 +1,6 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
 import styles from './cfpb-tag-group.component.scss';
+import { parseChildData } from '../cfpb-utilities/parse-child-data';
 
 const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
 
@@ -21,11 +22,13 @@ export class CfpbTagGroup extends LitElement {
   `;
 
   /**
+   * @property {string} childData - Structure data to create child components.
    * @property {boolean} stacked - Whether to stack the tags vertically.
    * @property {Array} tagList - List of the tags in the tag group.
    * @returns {object} The map of properties.
    */
   static properties = {
+    childData: { type: String, attribute: 'childdata' },
     stacked: { type: Boolean, reflect: true },
     tagList: { type: Array },
   };
@@ -37,6 +40,7 @@ export class CfpbTagGroup extends LitElement {
 
   constructor() {
     super();
+    this.childData = '';
     this.stacked = false;
     this.tagList = [];
     this.#observer = new MutationObserver(this.#onMutation.bind(this));
@@ -62,6 +66,26 @@ export class CfpbTagGroup extends LitElement {
       });
 
       this.#initialized = true;
+    });
+  }
+
+  updated(changedProps) {
+    if (changedProps.has('childData')) {
+      const parsed = parseChildData(this.childData);
+      if (parsed) {
+        this.#renderTagsFromData(parsed);
+      }
+    }
+  }
+
+  #renderTagsFromData(arr) {
+    arr.forEach((data) => {
+      const tag = document.createElement(data.tagName);
+      // e.g. 'cfpb-tag-filter' or 'cfpb-tag-topic'
+      if (data.text) tag.textContent = data.text;
+      if (data.href) tag.href = data.href;
+      // any other props from `data`
+      this.addTag(tag);
     });
   }
 

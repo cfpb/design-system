@@ -1163,18 +1163,29 @@ variation_groups:
 
             <input type="text" id="list-example-filter" aria-labelledby="list-example-filter-btn" />
             <button id="list-example-filter-btn">Filter</button>
+            <button id="list-example-show-all-btn">Show all</button>
 
             </p><p>
 
-            <input type="text" id="list-example-visible" aria-labelledby="list-example-visible-btn"  />
-            <button id="list-example-visible-btn"># of visible items</button>
+            <div>
+            <b id="list-example-visible"></b>
+            # of visible items</div>
 
             </p><p>
 
-            <input type="text" id="list-example-checked" aria-labelledby="list-example-checked-btn"  />
-            <button id="list-example-checked-btn"># of checked items</button>
+            <div>
+            <b id="list-example-checked"></b>
+            # of checked items</div>
 
             </p><p>
+
+            <div>
+            <b id="list-example-checked-visible"></b>
+            # of checked and visible items</div>
+
+            </p><p>
+
+            <br>
 
             <input type="checkbox" id="list-example-multi" />
             <label for="list-example-multi">Allow checking multiple</label>
@@ -1188,14 +1199,15 @@ variation_groups:
 
             const filterInput = document.querySelector('#list-example-filter')
             const filterBtn = document.querySelector('#list-example-filter-btn');
+            const showAllBtn = document.querySelector('#list-example-show-all-btn');
 
             const multiBtn = document.querySelector('#list-example-multi');
 
             const visInput = document.querySelector('#list-example-visible');
-            const visBtn = document.querySelector('#list-example-visible-btn');
 
             const checkInput = document.querySelector('#list-example-checked');
-            const checkBtn = document.querySelector('#list-example-checked-btn');
+
+            const visCheckInput = document.querySelector('#list-example-checked-visible');
 
             typeSel.addEventListener('change', (evt) => {
               listEx.type = evt.target.value;
@@ -1203,20 +1215,35 @@ variation_groups:
 
             filterBtn.addEventListener('click', () => {
               const items = filterInput.value.split(',');
-              if (items.length > 0) listEx.filterItems(items);
-              else listEx.showAllItems();
+              listEx.filterItems(items);
+            });
+
+            showAllBtn.addEventListener('click', () => {
+              listEx.showAllItems();
             });
 
             multiBtn.addEventListener('click', () => {
               listEx.multiple = !listEx.multiple;
             });
 
-            visBtn.addEventListener('click', () => {
-              visInput.value = listEx.visibleItems.length;
-            });
+            const itemsHandler = (evt) => {
+              if (evt.detail.visibleItems.length === listEx.visibleItems.length) visInput.innerText = evt.detail.visibleItems.length;
+              else visInput.innerText = 'ERR';
 
-            checkBtn.addEventListener('click', () => {
-              checkInput.value = listEx.checkedItems.length;
+              if (evt.detail.checkedItems.length === listEx.checkedItems.length) checkInput.innerText = evt.detail.checkedItems.length;
+              else checkInput.innerText = 'ERR';
+
+              if (evt.detail.visibleCheckedItems.length === listEx.visibleCheckedItems.length) visCheckInput.innerText = evt.detail.visibleCheckedItems.length;
+              else visCheckInput.innerText = 'ERR';
+            }
+
+            listEx.addEventListener('items-ready', itemsHandler);
+            listEx.addEventListener('items-filter', itemsHandler);
+
+            listEx.addEventListener('item-click', (evt) => {
+              visInput.innerText = listEx.visibleItems.length;
+              checkInput.innerText = listEx.checkedItems.length;
+              visCheckInput.innerText = listEx.visibleCheckedItems.length;
             });
 
             })()

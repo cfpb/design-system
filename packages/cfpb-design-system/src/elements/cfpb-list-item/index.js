@@ -4,8 +4,8 @@ import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
 
 /**
- * @element cfpb-list-item
- * @slot - The text for the list item
+ * @element cfpb-list-item.
+ * @slot - The text for the list item.
  */
 export class CfpbListItem extends LitElement {
   static styles = css`

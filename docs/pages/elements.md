@@ -1107,28 +1107,28 @@ variation_groups:
 
             <br><br>
 
-            <cfpb-list aria-label="List of planets">
-              <cfpb-list-item type="check">Mercury</cfpb-list-item>
-              <cfpb-list-item type="check">Venus</cfpb-list-item>
-              <cfpb-list-item type="check">Earth</cfpb-list-item>
-              <cfpb-list-item type="check" checked>Mars</cfpb-list-item>
-              <cfpb-list-item type="check">Jupiter</cfpb-list-item>
-              <cfpb-list-item type="check">Saturn</cfpb-list-item>
-              <cfpb-list-item type="check">Uranus</cfpb-list-item>
-              <cfpb-list-item type="check">Neptune</cfpb-list-item>
+            <cfpb-list aria-label="List of planets" type="check">
+              <cfpb-list-item>Mercury</cfpb-list-item>
+              <cfpb-list-item>Venus</cfpb-list-item>
+              <cfpb-list-item>Earth</cfpb-list-item>
+              <cfpb-list-item checked>Mars</cfpb-list-item>
+              <cfpb-list-item>Jupiter</cfpb-list-item>
+              <cfpb-list-item>Saturn</cfpb-list-item>
+              <cfpb-list-item>Uranus</cfpb-list-item>
+              <cfpb-list-item>Neptune</cfpb-list-item>
             </cfpb-list>
 
             <br><br>
 
-            <cfpb-list aria-label="List of planets">
-              <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
-              <cfpb-list-item type="checkbox">Venus</cfpb-list-item>
-              <cfpb-list-item type="checkbox">Earth</cfpb-list-item>
-              <cfpb-list-item type="checkbox" checked>Mars</cfpb-list-item>
-              <cfpb-list-item type="checkbox">Jupiter</cfpb-list-item>
-              <cfpb-list-item type="checkbox">Saturn</cfpb-list-item>
-              <cfpb-list-item type="checkbox">Uranus</cfpb-list-item>
-              <cfpb-list-item type="checkbox">Neptune</cfpb-list-item>
+            <cfpb-list aria-label="List of planets" type="checkbox">
+              <cfpb-list-item>Mercury</cfpb-list-item>
+              <cfpb-list-item>Venus</cfpb-list-item>
+              <cfpb-list-item>Earth</cfpb-list-item>
+              <cfpb-list-item checked>Mars</cfpb-list-item>
+              <cfpb-list-item>Jupiter</cfpb-list-item>
+              <cfpb-list-item>Saturn</cfpb-list-item>
+              <cfpb-list-item>Uranus</cfpb-list-item>
+              <cfpb-list-item>Neptune</cfpb-list-item>
             </cfpb-list>
 
             <br>
@@ -1140,14 +1140,14 @@ variation_groups:
             </p>
             <p>
               <cfpb-list id="list-example" aria-label="List of planets">
-                <cfpb-list-item type="check">Mercury</cfpb-list-item>
-                <cfpb-list-item type="check">Venus</cfpb-list-item>
-                <cfpb-list-item type="check">Earth</cfpb-list-item>
-                <cfpb-list-item type="check">Mars</cfpb-list-item>
-                <cfpb-list-item type="check">Jupiter</cfpb-list-item>
-                <cfpb-list-item type="check">Saturn</cfpb-list-item>
-                <cfpb-list-item type="check">Uranus</cfpb-list-item>
-                <cfpb-list-item type="check">Neptune</cfpb-list-item>
+                <cfpb-list-item>Mercury</cfpb-list-item>
+                <cfpb-list-item>Venus</cfpb-list-item>
+                <cfpb-list-item>Earth</cfpb-list-item>
+                <cfpb-list-item>Mars</cfpb-list-item>
+                <cfpb-list-item>Jupiter</cfpb-list-item>
+                <cfpb-list-item>Saturn</cfpb-list-item>
+                <cfpb-list-item>Uranus</cfpb-list-item>
+                <cfpb-list-item>Neptune</cfpb-list-item>
               </cfpb-list>
 
             </p><p>
@@ -1234,26 +1234,26 @@ variation_groups:
             <cfpb-list-item>Neptune</cfpb-list-item>
           </cfpb-list>
 
-          <cfpb-list aria-label="List of planets">
-            <cfpb-list-item type="check">Mercury</cfpb-list-item>
-            <cfpb-list-item type="check">Venus</cfpb-list-item>
-            <cfpb-list-item type="check">Earth</cfpb-list-item>
-            <cfpb-list-item type="check" checked>Mars</cfpb-list-item>
-            <cfpb-list-item type="check">Jupiter</cfpb-list-item>
-            <cfpb-list-item type="check">Saturn</cfpb-list-item>
-            <cfpb-list-item type="check">Uranus</cfpb-list-item>
-            <cfpb-list-item type="check">Neptune</cfpb-list-item>
+          <cfpb-list aria-label="List of planets" type="check">
+            <cfpb-list-item>Mercury</cfpb-list-item>
+            <cfpb-list-item>Venus</cfpb-list-item>
+            <cfpb-list-item>Earth</cfpb-list-item>
+            <cfpb-list-item checked>Mars</cfpb-list-item>
+            <cfpb-list-item>Jupiter</cfpb-list-item>
+            <cfpb-list-item>Saturn</cfpb-list-item>
+            <cfpb-list-item>Uranus</cfpb-list-item>
+            <cfpb-list-item>Neptune</cfpb-list-item>
           </cfpb-list>
 
-          <cfpb-list aria-label="List of planets">
-            <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
-            <cfpb-list-item type="checkbox">Venus</cfpb-list-item>
-            <cfpb-list-item type="checkbox">Earth</cfpb-list-item>
-            <cfpb-list-item type="checkbox" checked>Mars</cfpb-list-item>
-            <cfpb-list-item type="checkbox">Jupiter</cfpb-list-item>
-            <cfpb-list-item type="checkbox">Saturn</cfpb-list-item>
-            <cfpb-list-item type="checkbox">Uranus</cfpb-list-item>
-            <cfpb-list-item type="checkbox">Neptune</cfpb-list-item>
+          <cfpb-list aria-label="List of planets" type="checkbox">
+            <cfpb-list-item>Mercury</cfpb-list-item>
+            <cfpb-list-item>Venus</cfpb-list-item>
+            <cfpb-list-item>Earth</cfpb-list-item>
+            <cfpb-list-item checked>Mars</cfpb-list-item>
+            <cfpb-list-item>Jupiter</cfpb-list-item>
+            <cfpb-list-item>Saturn</cfpb-list-item>
+            <cfpb-list-item>Uranus</cfpb-list-item>
+            <cfpb-list-item>Neptune</cfpb-list-item>
           </cfpb-list>
     variation_group_name: Types
 guidelines: ''

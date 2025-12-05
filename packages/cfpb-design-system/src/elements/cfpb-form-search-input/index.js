@@ -15,7 +15,7 @@ export class CfpbFormSearchInput extends LitElement {
   `;
 
   /**
-   * @property {boolean} disabled - Whether the choice is disabled or not.
+   * @property {boolean} disabled - Whether the input is disabled or not.
    * @property {string} validation - Validation style: error, warning, success.
    * @property {string} label - The aria-label for the input.
    * @property {string} name - The name within a form.
@@ -24,6 +24,7 @@ export class CfpbFormSearchInput extends LitElement {
    * @property {string} placeholder - The placeholder value.
    * @property {string} ariaLabelInput - aria-label for input.
    * @property {string} ariaLabelButton - aria-label for button.
+   * @property {boolean} borderless - Whether the input has a border or not.
    * @returns {object} The map of properties.
    */
   static properties = {
@@ -37,6 +38,7 @@ export class CfpbFormSearchInput extends LitElement {
     placeholder: { type: String },
     ariaLabelInput: { type: String, attribute: 'aria-label-input' },
     ariaLabelButton: { type: String, attribute: 'aria-label-button' },
+    borderless: { type: Boolean, reflect: true },
   };
 
   #searchInput;
@@ -54,6 +56,9 @@ export class CfpbFormSearchInput extends LitElement {
     this.ariaLabelButton = 'Clear search';
     this.disabled = false;
     this.#searchInput = createRef();
+
+    // Borderless is only used for CSS.
+    this.borderless = false;
   }
 
   #onInput(evt) {

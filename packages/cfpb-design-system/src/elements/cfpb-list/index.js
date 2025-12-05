@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-list.component.scss';
 import { CfpbListItem } from '../cfpb-list-item';
 
@@ -7,6 +8,7 @@ export class CfpbList extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
+  #container = createRef();
   #items = [];
   #checkedItems = [];
   #visibleItems = [];
@@ -15,6 +17,10 @@ export class CfpbList extends LitElement {
   // WeakMap to store per-item click listeners.
   #clickListeners = new WeakMap();
 
+  /**
+   * @property {boolean} multiple - Whether the select supports multiple or not.
+   * @returns {object} The map of properties.
+   */
   static properties = {
     multiple: { type: Boolean, reflect: true },
     itemsData: { type: String, attribute: 'itemsdata' },
@@ -93,18 +99,24 @@ export class CfpbList extends LitElement {
   #renderItemsFromData(itemsArray) {
     // Remove all children except <template> and <noscript>.
     [...this.children].forEach((child) => {
-      if (child.tagName !== 'TEMPLATE' || child.tagName !== 'NOSCRIPT')
+      if (child.tagName !== 'TEMPLATE' && child.tagName !== 'NOSCRIPT')
         child.remove();
     });
 
+    let firstChecked;
     itemsArray.forEach((data) => {
       const item = document.createElement('cfpb-list-item');
       item.textContent = data.value ?? '';
-      if ('checked' in data) item.checked = data.checked;
       if ('disabled' in data) item.disabled = data.disabled;
       if ('hidden' in data) item.hidden = data.hidden;
       if ('href' in data) item.href = data.href;
       item.type = data.type ?? this.type;
+      if (this.multiple) {
+        if ('checked' in data) item.checked = data.checked;
+      } else if (!firstChecked && data.checked) {
+        firstChecked = true;
+        if ('checked' in data) item.checked = true;
+      }
 
       this.appendChild(item);
     });
@@ -147,7 +159,7 @@ export class CfpbList extends LitElement {
 
       // Remove prior listener if present.
       const prev = this.#clickListeners.get(item);
-      if (prev) item.removeEventListener('click', prev);
+      if (prev) item.removeEventListener('click-item', prev);
 
       // Listener that toggles the item before handling.
       const listener = (evt) => {
@@ -196,14 +208,22 @@ export class CfpbList extends LitElement {
         }
       } else {
         // Remove cleanly.
-        this.#checkedItems = this.#checkedItems.filter((i) => i !== element);
+        this.#checkedItems = this.#checkedItems.filter(
+          (item) => item !== element,
+        );
       }
     } else {
-      // Single-select mode.
-      this.#checkedItems.forEach((i) => {
-        if (i !== element) i.checked = false;
-      });
-      this.#checkedItems = [element];
+      if (isChecked) {
+        // Select this item, uncheck all others.
+        this.#items.forEach((item) => {
+          if (item !== element) item.checked = false;
+        });
+        this.#checkedItems = [element];
+      } else {
+        // Item is unchecked -> clear selection.
+        this.#checkedItems.forEach((item) => (item.checked = false));
+        this.#checkedItems = [];
+      }
     }
 
     this.dispatchEvent(
@@ -233,6 +253,8 @@ export class CfpbList extends LitElement {
     });
 
     this.#focusedIndex = firstIndex;
+
+    return this.#visibleItems;
   }
 
   showAllItems() {
@@ -245,9 +267,19 @@ export class CfpbList extends LitElement {
     const visibleItems = this.items.filter((item) => !item.hidden);
     if (!visibleItems.length) return;
 
-    const item = visibleItems[index % visibleItems.length];
+    const normalizedIndex =
+      ((index % visibleItems.length) + visibleItems.length) %
+      visibleItems.length;
+    const item = visibleItems[normalizedIndex];
     item.focus();
-    this.#focusedIndex = index % visibleItems.length;
+    this.#focusedIndex = normalizedIndex;
+  }
+
+  #onFocus(evt) {
+    // If the focus is on the container itself (not an item), set index to -1.
+    if (evt.target === this.#container.value) {
+      this.#focusedIndex = -1;
+    }
   }
 
   // -------------------------
@@ -261,13 +293,11 @@ export class CfpbList extends LitElement {
     switch (evt.key) {
       case 'ArrowDown':
         evt.preventDefault();
-        this.focusItemAt((this.#focusedIndex + 1) % visibleItems.length);
+        this.focusItemAt(this.#focusedIndex + 1);
         break;
       case 'ArrowUp':
         evt.preventDefault();
-        this.focusItemAt(
-          (this.#focusedIndex - 1 + visibleItems.length) % visibleItems.length,
-        );
+        this.focusItemAt(this.#focusedIndex - 1);
         break;
       case 'Home':
         evt.preventDefault();
@@ -286,8 +316,10 @@ export class CfpbList extends LitElement {
         role="listbox"
         tabindex="0"
         @keydown=${this.#onKeyDown}
+        @focus=${this.#onFocus}
         aria-label=${this.ariaLabel}
         ?aria-multiselectable=${this.multiple}
+        ${ref(this.#container)}
       >
         <slot></slot>
       </div>

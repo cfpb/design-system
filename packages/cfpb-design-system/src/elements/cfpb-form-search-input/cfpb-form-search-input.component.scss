@@ -166,6 +166,19 @@
   }
 }
 
+:host([borderless]) {
+  .o-search-input {
+    border-color: transparent;
+
+    &:hover,
+    &:focus-within {
+      border-color: transparent;
+      box-shadow: 0 0 0 1px transparent;
+      outline-color: transparent;
+    }
+  }
+}
+
 :host([disabled]) {
   --input-border: var(--input-border-disabled);
 

@@ -44,7 +44,7 @@ export class CfpbFormSearch extends LitElement {
     };
   }
 
-  #list;
+  #list = createRef();
   #popup = createRef();
 
   #internals;
@@ -103,13 +103,13 @@ export class CfpbFormSearch extends LitElement {
 
   #onClear() {
     this.#popup.value.classList.remove('show');
-    this.#list.showAllItems();
+    this.#list.value.showAllItems();
   }
 
   #onInput(evt) {
     if (evt.target.value.length > 1) {
       this.#popup.value.classList.add('show');
-      this.#list.filterItems(this.#search.search(evt.target.value));
+      this.#list.value.filterItems(this.#search.search(evt.target.value));
     } else {
       this.#popup.value.classList.remove('show');
     }
@@ -164,7 +164,8 @@ export class CfpbFormSearch extends LitElement {
           ></cfpb-form-search-input>
 
           <div class="popup" ${ref(this.#popup)}>
-            <cfpb-list .itemsData=${this.searchList}> </cfpb-list>
+            <cfpb-list .itemsData=${this.searchList} ${ref(this.#list)}>
+            </cfpb-list>
           </div>
         </div>
 

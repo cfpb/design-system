@@ -65,6 +65,10 @@ export class CfpbList extends LitElement {
     return this.#visibleItems;
   }
 
+  get visibleCheckedItems() {
+    return this.#visibleItems.filter((item) => item.checked);
+  }
+
   // -------------------------
   // PARSE ATTRIBUTE OR JS ARRAY
   // -------------------------
@@ -184,6 +188,7 @@ export class CfpbList extends LitElement {
           items: this.#items,
           checkedItems: this.#checkedItems,
           visibleItems: this.#visibleItems,
+          visibleCheckedItems: this.visibleCheckedItems,
         },
         bubbles: true,
         composed: true,
@@ -238,6 +243,11 @@ export class CfpbList extends LitElement {
   // -------------------------
   // FILTER & FOCUS
   // -------------------------
+
+  /**
+   * @param {Array} queryList - List of search words.
+   * @returns {Array} List of visible list items.
+   */
   filterItems(queryList) {
     let firstIndex = 0;
     this.#visibleItems = [];
@@ -254,6 +264,8 @@ export class CfpbList extends LitElement {
 
     this.#focusedIndex = firstIndex;
 
+    this.#broadcastFiltered();
+
     return this.#visibleItems;
   }
 
@@ -261,6 +273,23 @@ export class CfpbList extends LitElement {
     this.items.forEach((item) => (item.hidden = false));
     this.#focusedIndex = 0;
     this.#visibleItems = this.#items;
+
+    this.#broadcastFiltered();
+  }
+
+  #broadcastFiltered() {
+    this.dispatchEvent(
+      new CustomEvent('items-filter', {
+        detail: {
+          items: this.#items,
+          checkedItems: this.#checkedItems,
+          visibleItems: this.#visibleItems,
+          visibleCheckedItems: this.visibleCheckedItems,
+        },
+        bubbles: true,
+        composed: true,
+      }),
+    );
   }
 
   focusItemAt(index) {

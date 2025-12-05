@@ -164,7 +164,7 @@ export class CfpbFormSearch extends LitElement {
           ></cfpb-form-search-input>
 
           <div class="popup" ${ref(this.#popup)}>
-            <cfpb-list .itemsData=${this.searchList} ${ref(this.#list)}>
+            <cfpb-list .childData=${this.searchList} ${ref(this.#list)}>
             </cfpb-list>
           </div>
         </div>

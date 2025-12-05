@@ -2,6 +2,7 @@ import { LitElement, html, css, unsafeCSS } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-list.component.scss';
 import { CfpbListItem } from '../cfpb-list-item';
+import { parseChildData } from '../cfpb-utilities/parse-child-data';
 
 export class CfpbList extends LitElement {
   static styles = css`
@@ -18,20 +19,23 @@ export class CfpbList extends LitElement {
   #clickListeners = new WeakMap();
 
   /**
+   * @property {string} childData - Structure data to create child components.
    * @property {boolean} multiple - Whether the select supports multiple or not.
+   * @property {string} type - List item type: plain, check, or checkbox.
+   * @property {string} ariaLabel - The aria-label for the list container.
    * @returns {object} The map of properties.
    */
   static properties = {
+    childData: { type: String, attribute: 'childdata' },
     multiple: { type: Boolean, reflect: true },
-    itemsData: { type: String, attribute: 'itemsdata' },
     type: { type: String, reflect: true },
     ariaLabel: { type: String, attribute: 'aria-label' },
   };
 
   constructor() {
     super();
+    this.childData = '';
     this.multiple = false;
-    this.itemsData = '';
     this.type = 'plain';
     this.ariaLabel = '';
   }
@@ -41,8 +45,11 @@ export class CfpbList extends LitElement {
   }
 
   updated(changedProps) {
-    if (changedProps.has('itemsData')) {
-      this.#parseItemsData();
+    if (changedProps.has('childData')) {
+      const parsed = parseChildData(this.childData);
+      if (parsed) {
+        this.#renderItemsFromData(parsed);
+      }
     }
 
     if (changedProps.has('type')) {
@@ -67,34 +74,6 @@ export class CfpbList extends LitElement {
 
   get visibleCheckedItems() {
     return this.#visibleItems.filter((item) => item.checked);
-  }
-
-  // -------------------------
-  // PARSE ATTRIBUTE OR JS ARRAY
-  // -------------------------
-  #parseItemsData() {
-    if (!this.itemsData) return;
-
-    let itemsArray;
-    try {
-      if (Array.isArray(this.itemsData)) {
-        // Direct JS array.
-        itemsArray = this.itemsData;
-      } else {
-        // HTML-safe JSON: replace single quotes with double quotes
-        itemsArray = JSON.parse(this.itemsData.replace(/'/g, '"'));
-      }
-    } catch (err) {
-      console.error('Invalid JSON for <cfpb-list itemsData>', err);
-      return;
-    }
-
-    if (!Array.isArray(itemsArray)) {
-      console.error('<cfpb-list itemsData> must be a JSON array');
-      return;
-    }
-
-    this.#renderItemsFromData(itemsArray);
   }
 
   // -------------------------

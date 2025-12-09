@@ -1,0 +1,219 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/base' as *;
+@use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon';
+@use '../cfpb-utilities/transition/transition.scss' as *;
+
+:host {
+  // Theme
+  --select-border-default: var(--gray-60); // $input-border
+  --select-border-width-default: 1px;
+  --select-border-error: var(--red);
+  --select-border-width-error: 2px;
+  --select-border-hover-default: var(--pacific); // $input-border-hover
+  --select-border-focus-default: var(--pacific); // $input-border-focused
+  --select-bg-disabled-default: var(--gray-10); // $input-bg-disabled
+  --select-icon-bg-default: var(--gray-10);
+  --select-text-disabled-default: var(--gray-dark); // $input-text-disabled
+  --select-border: var(--select-border-default);
+  --select-border-width: var(--select-border-width-default);
+
+  // Hide light DOM content.
+  ::slotted(ul),
+  ::slotted(ol) {
+    display: none !important;
+  }
+
+  // Reset lack of scrollbar on Apple devices.
+  ::-webkit-scrollbar {
+    appearance: none;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    // border-radius: 4px;
+    background-color: var(--pacific-20);
+    box-shadow: 0 0 1px var(--gray-10);
+  }
+
+  // Overide heading defaults.
+  ::slotted([slot='header']) {
+    margin-bottom: 0 !important;
+    color: var(--black) !important;
+    font-weight: 500 !important;
+  }
+
+  //
+  // Recommended select pattern
+  //
+
+  .o-select {
+    position: relative;
+
+    &:focus-within {
+      outline: 1px dotted var(--pacific);
+      outline-offset: 2px;
+
+      box-shadow: 0 0 0 1px var(--pacific);
+    }
+
+    //
+    // Header
+    //
+
+    &__header {
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+
+      display: flex;
+
+      // Single select.
+      &:has(.o-select__label) {
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+
+      // Multiselect.
+      cfpb-form-search-input {
+        width: 100%;
+      }
+
+      .o-select__cue-close,
+      .o-select__cue-open {
+        display: none;
+      }
+
+      &[aria-expanded='false'] .o-select__cue-open {
+        display: block;
+      }
+
+      &[aria-expanded='true'] .o-select__cue-close {
+        display: block;
+      }
+    }
+
+    .no-results {
+      padding: 6.5px 10px;
+    }
+
+    // Using the button element with .o-select__header requires setting
+    // an explicit width.
+    button.o-select__header {
+      width: 100%;
+      text-align: left;
+    }
+
+    //
+    // select text elements
+    //
+
+    &__label {
+      // Grow to available width.
+      flex-grow: 1;
+      padding: math.div(7px, $base-font-size-px) + em
+        math.div(10px, $base-font-size-px) + em;
+    }
+
+    &__cues {
+      align-self: center;
+      background: var(--select-icon-bg-default);
+      border-left: 1px solid var(--select-border-default);
+      padding: math.div(7px, $base-font-size-px) + em
+        math.div(10px, $base-font-size-px) + em;
+    }
+
+    &__content {
+      box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: absolute;
+      z-index: 10;
+      width: calc(100% + 2px);
+      left: -1px;
+      border: 2px solid var(--pacific);
+      background-color: var(--white);
+      padding: 0;
+
+      &::after {
+        padding-bottom: math.div(15px, $base-font-size-px) + em;
+        width: 100%;
+      }
+    }
+
+    //
+    // select with a border modifier
+    //
+
+    &--border {
+      border: 1px solid var(--select-border);
+    }
+
+    @media print {
+      // Hide the interactive select cues when printing
+      &__header[aria-expanded='true'] &__cue-close,
+      &__header[aria-expanded='false'] &__cue-open {
+        display: none;
+      } // Ensure all selects are expanded when printing.
+      // To accommodate print stylesheets that display the raw URL after links,
+      // set an enormous max height to accommodate selects that have a lot of links.
+      &__content[aria-expanded='false'] {
+        display: block;
+        max-height: 99999px !important;
+      }
+    }
+  }
+}
+
+// The drop-down is expanded.
+:host([open]) {
+  .o-select {
+    // The divider between __header and __content.
+    &::before {
+      position: absolute;
+      z-index: 11;
+      content: '';
+      display: block;
+      width: 100%;
+      border-top: 1px solid var(--select-border);
+    }
+
+    &:has(.u-max-height-dynamic--down) {
+      &::before {
+        bottom: -1px;
+      }
+
+      .o-select__content {
+        border-top: 0;
+      }
+    }
+
+    &:has(.u-max-height-dynamic--up) {
+      &::before {
+        top: -1px;
+      }
+
+      .o-select__content {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+// Used when the set language reads right-to-left
+html[lang='ar'] {
+  :host {
+    .o-select {
+      &__header {
+        text-align: right;
+      }
+
+      &__cues {
+        text-align: left;
+      }
+    }
+  }
+}

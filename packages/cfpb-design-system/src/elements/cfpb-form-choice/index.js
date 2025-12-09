@@ -27,7 +27,6 @@ export class CfpbFormChoice extends LitElement {
    * @property {boolean} large - Whether the choice has a large target area.
    * @property {string} validation - Validation style: error, warning, success.
    * @property {string} type - Choice type: checkbox or radio.
-   * @property {string} inlist - Whether the choice appears in a <li> list.
    * @property {string} name - The name within a form.
    * @property {string} value - The value to submit within a form.
    * @returns {object} The map of properties.
@@ -38,7 +37,6 @@ export class CfpbFormChoice extends LitElement {
     large: { type: Boolean },
     validation: { type: String },
     type: { type: String },
-    inlist: { type: Boolean, attribute: true },
     name: { type: String },
     value: { type: String },
   };
@@ -50,7 +48,6 @@ export class CfpbFormChoice extends LitElement {
     this.large = false;
     this.validation = '';
     this.type = 'checkbox';
-    this.inlist = false;
     this.name = '';
     this.value = '';
   }
@@ -121,7 +118,6 @@ export class CfpbFormChoice extends LitElement {
       'm-form-field': true,
       [`m-form-field--${this.type}`]: true,
       'm-form-field--lg-target': this.large,
-      'm-form-field--in-list': this.inlist,
     };
 
     if (this.#validValidation)

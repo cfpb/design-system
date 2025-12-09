@@ -19,11 +19,13 @@ export class CfpbTagFilter extends LitElement {
    */
   static properties = {
     for: { type: String },
+    value: { type: String },
   };
 
   constructor() {
     super();
     this.for = '';
+    this.value = '';
   }
 
   #onClick() {
@@ -36,10 +38,18 @@ export class CfpbTagFilter extends LitElement {
     );
   }
 
+  #onSlotChange() {
+    const slot = this.shadowRoot.querySelector('slot');
+    this.value = slot
+      .assignedNodes({ flatten: true })
+      .map((node) => node.textContent.trim())
+      .join(' ');
+  }
+
   render() {
     const slot =
       this.for === ''
-        ? html`<slot></slot>`
+        ? html`<slot @slotchange=${this.#onSlotChange}></slot>`
         : html`<label for=${this.for}><slot></slot></label>`;
     return html`<button @click=${this.#onClick}>
       ${slot} ${unsafeHTML(icon)}

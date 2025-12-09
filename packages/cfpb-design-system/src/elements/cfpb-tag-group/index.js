@@ -79,14 +79,39 @@ export class CfpbTagGroup extends LitElement {
   }
 
   #renderTagsFromData(arr) {
-    arr.forEach((data) => {
+    if (!Array.isArray(arr)) return;
+
+    this.#clearAllTags();
+
+    arr.forEach((data, index) => {
       const tag = document.createElement(data.tagName);
       // e.g. 'cfpb-tag-filter' or 'cfpb-tag-topic'
       if (data.text) tag.textContent = data.text;
       if (data.href) tag.href = data.href;
       // any other props from `data`
-      this.addTag(tag);
+      this.addTag(tag, index);
     });
+  }
+
+  /**
+   * Remove all previous tags from shadow DOM and light DOM.
+   */
+  #clearAllTags() {
+    // Remove shadow DOM wrappers.
+    if (this.#tagMap) {
+      this.#tagMap.forEach((wrapped) => {
+        if (wrapped.parentElement) wrapped.remove();
+      });
+      this.#tagMap.clear();
+    }
+
+    // Remove light DOM tags.
+    [...this.children].forEach((child) => {
+      if (SUPPORTED_TAG_LIST.includes(child.tagName)) child.remove();
+    });
+
+    // Reset tagList
+    this.tagList = [];
   }
 
   /**

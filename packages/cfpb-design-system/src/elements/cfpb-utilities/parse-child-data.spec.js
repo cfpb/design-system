@@ -1,4 +1,3 @@
-import { parse } from 'postcss';
 import { parseChildData } from './parse-child-data.js';
 
 describe('parseChildData', () => {

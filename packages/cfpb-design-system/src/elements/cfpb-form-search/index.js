@@ -94,13 +94,6 @@ export class CfpbFormSearch extends LitElement {
     );
   }
 
-  #onSearch(evt) {
-    if (evt.detail !== '') {
-      this.#internals.setFormValue(evt.detail);
-      this.#internals.form?.requestSubmit();
-    }
-  }
-
   #onClear() {
     this.#popup.value.classList.remove('show');
     this.#list.value.showAllItems();
@@ -109,10 +102,14 @@ export class CfpbFormSearch extends LitElement {
   #onInput(evt) {
     if (evt.target.value.length > 1) {
       this.#popup.value.classList.add('show');
-      this.#list.value.filterItems(this.#search.search(evt.target.value));
+      if (this.#search) {
+        this.#list.value.filterItems(this.#search.search(evt.target.value));
+      }
     } else {
       this.#popup.value.classList.remove('show');
     }
+
+    this.value = evt.target.value;
   }
 
   #onBlur() {
@@ -133,13 +130,13 @@ export class CfpbFormSearch extends LitElement {
   #onClickSearch(evt) {
     evt.preventDefault();
     if (this.disabled) return;
-    this.dispatchEvent(
-      new CustomEvent('search', {
-        detail: this.value,
-        bubbles: true,
-        composed: true,
-      }),
-    );
+
+    console.log(this.value);
+
+    if (this.value !== '') {
+      this.#internals.setFormValue(this.value);
+      this.#internals.form?.requestSubmit();
+    }
   }
 
   render() {
@@ -157,7 +154,6 @@ export class CfpbFormSearch extends LitElement {
             ?maxlength=${this.maxlength}
             aria-label=${this.ariaLabelInput}
             ?validation=${this.validation}
-            @search=${this.#onSearch}
             @clear=${this.#onClear}
             @input=${this.#onInput}
             @blur=${this.#onBlur}

@@ -11,8 +11,20 @@ describe('The search feature', () => {
   });
 
   it('should show search results', () => {
-    cy.get('#search-box').shadow().find('input[type=search]').type('button');
-    cy.get('#search-box').shadow().find('button[type=submit]').click();
+    cy.get('#search-box')
+      .shadow()
+      .find('cfpb-form-search-input')
+      .should('exist')
+      .shadow()
+      .find('input[type=search]')
+      .type('button');
+    cy.get('#search-box')
+      .shadow()
+      .find('cfpb-form-search-input')
+      .should('exist')
+      .shadow()
+      .find('button[type=submit]')
+      .click();
     cy.get('#search-results').find('li').its('length').should('be.gte', 1);
   });
 });

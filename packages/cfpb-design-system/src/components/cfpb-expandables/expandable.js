@@ -62,6 +62,9 @@ function Expandable(element) {
       : MaxHeightTransition.CLASSES.MH_ZERO;
     _transition = new MaxHeightTransition(_contentDom).init(initialClass);
 
+    // Initially hide content if expandable isn't expanded.
+    if (!isExpanded) _contentDom.classList.add('u-hidden');
+
     // Create root menu.
     _flyout = new FlyoutMenu(_dom);
 

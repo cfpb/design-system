@@ -3,7 +3,7 @@ title: Elements
 layout: variation
 section: components
 status: Released
-description: The components are custom elements (web components).
+description: These components are custom elements (web components).
 variation_groups:
   - variations:
       - variation_is_deprecated: false
@@ -1366,6 +1366,35 @@ variation_groups:
             <cfpb-list-item type="checkbox">Uranus</cfpb-list-item>
             <cfpb-list-item type="checkbox">Neptune</cfpb-list-item>
           </cfpb-select>
+      - variation_is_deprecated: false
+        variation_name: Expandables
+        variation_description: >-
+          An expandable component.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-expandable>
+              <h3 slot="header">Expandable header</h3>
+              <p slot="content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                  temporibus magnam debitis quidem. Ducimus ratione
+                  corporis nesciunt earum vel est quaerat blanditiis
+                  dolore ipsa?
+                  <a href="#">Lorem link</a>.
+              </p>
+            </cfpb-expandable>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-expandable>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+                <a href="#">Lorem link</a>.
+            </p>
+          </cfpb-expandable>
     variation_group_name: Types
 guidelines: ''
 eyebrow: Web Components

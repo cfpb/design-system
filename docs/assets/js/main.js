@@ -2,6 +2,7 @@ import { toggleAllDetails, toggleDetails } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
 import {
   CfpbButton,
+  CfpbExpandable,
   CfpbFileUpload,
   CfpbFormAlert,
   CfpbFormChoice,
@@ -49,6 +50,7 @@ anchors.remove(`
 `);
 
 CfpbButton.init();
+CfpbExpandable.init();
 CfpbFileUpload.init();
 CfpbFormAlert.init();
 CfpbFormChoice.init();

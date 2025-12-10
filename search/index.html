@@ -40,7 +40,8 @@
   <div class="site-header">
 
     <form id="search-form" action="/design-system/search" method="get">
-    <cfpb-input-search id="search-box" form="search-form" name="searchQuery"></cfpb-input-search>
+    <cfpb-form-search id="search-box" form="search-form" name="searchQuery">
+    </cfpb-form-search>
 </form>
 
 
@@ -2211,7 +2212,8 @@ Label
                 
                     'variation_name11': 'Search input',
                     'variation_description11': "A+search+input+component.%0A",
-                    'variation_code_snippet11': `&lt;cfpb-form-search-input&gt; &lt;/cfpb-form-search-input&gt;
+                    'variation_code_snippet11': `&lt;cfpb-form-search-input borderless&gt; &lt;/cfpb-form-search-input&gt;
+&lt;cfpb-form-search-input&gt; &lt;/cfpb-form-search-input&gt;
 &lt;cfpb-form-search-input disabled&gt; &lt;/cfpb-form-search-input&gt;
 &lt;cfpb-form-search-input validation=&quot;error&quot;&gt; &lt;/cfpb-form-search-input&gt;
 &lt;cfpb-form-search-input validation=&quot;warning&quot;&gt; &lt;/cfpb-form-search-input&gt;
@@ -2303,6 +2305,19 @@ Label
   &lt;cfpb-list-item&gt;Uranus&lt;/cfpb-list-item&gt;
   &lt;cfpb-list-item&gt;Neptune&lt;/cfpb-list-item&gt;
 &lt;/cfpb-list&gt;`,
+                
+                    'variation_name17': 'Select list',
+                    'variation_description17': "A+select+list+component.%0A",
+                    'variation_code_snippet17': `&lt;cfpb-select multiple&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Mercury&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Venus&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Earth&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot; checked&gt;Mars&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Jupiter&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Saturn&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Uranus&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Neptune&lt;/cfpb-list-item&gt;
+&lt;/cfpb-select&gt;`,
                 
             
 

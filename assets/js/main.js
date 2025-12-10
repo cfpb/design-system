@@ -7,14 +7,15 @@ import {
   CfpbFormChoice,
   CfpbFormSearch,
   CfpbFormSearchInput,
-  CfpbListItem,
   CfpbLabel,
+  CfpbList,
+  CfpbListItem,
   CfpbTagFilter,
   CfpbTagTopic,
   CfpbTagGroup,
-  CfpbInputSearch,
   CfpbMultiselect,
   CfpbPagination,
+  CfpbSelect,
   Expandable,
   ExpandableGroup,
   Summary,
@@ -53,13 +54,14 @@ CfpbFormAlert.init();
 CfpbFormChoice.init();
 CfpbFormSearch.init();
 CfpbFormSearchInput.init();
-CfpbListItem.init();
 CfpbLabel.init();
+CfpbList.init();
+CfpbListItem.init();
 CfpbTagFilter.init();
 CfpbTagTopic.init();
 CfpbTagGroup.init();
-CfpbInputSearch.init();
 CfpbMultiselect.init();
+CfpbSelect.init();
 CfpbPagination.init();
 Summary.init();
 SummaryMinimal.init();

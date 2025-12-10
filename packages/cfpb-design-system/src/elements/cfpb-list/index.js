@@ -14,19 +14,20 @@ export class CfpbList extends LitElement {
   #checkedItems = [];
   #visibleItems = [];
   #focusedIndex = 0;
+  #internalSync = false;
 
   // WeakMap to store per-item click listeners.
   #clickListeners = new WeakMap();
 
   /**
-   * @property {string} childData - Structure data to create child components.
+   * @property {Array} childData - Structure data to create child components.
    * @property {boolean} multiple - Whether the select supports multiple or not.
    * @property {string} type - List item type: plain, check, or checkbox.
    * @property {string} ariaLabel - The aria-label for the list container.
    * @returns {object} The map of properties.
    */
   static properties = {
-    childData: { type: String, attribute: 'childdata' },
+    childData: { type: Array, attribute: 'childdata' },
     multiple: { type: Boolean, reflect: true },
     type: { type: String, reflect: true },
     ariaLabel: { type: String, attribute: 'aria-label' },
@@ -45,11 +46,9 @@ export class CfpbList extends LitElement {
   }
 
   updated(changedProps) {
-    if (changedProps.has('childData')) {
+    if (!this.#internalSync && changedProps.has('childData')) {
       const parsed = parseChildData(this.childData);
-      if (parsed) {
-        this.#renderItemsFromData(parsed);
-      }
+      if (parsed) this.#renderItemsFromData(parsed);
     }
 
     if (changedProps.has('type')) {
@@ -175,6 +174,19 @@ export class CfpbList extends LitElement {
     );
   }
 
+  #syncChildDataFromItems() {
+    const data = this.#items.map((item) => ({
+      value: item.value,
+      label: item.textContent.trim(),
+      checked: item.checked,
+      disabled: item.disabled,
+    }));
+
+    this.#internalSync = true;
+    this.childData = data;
+    this.#internalSync = false;
+  }
+
   #applyTypeToItems() {
     if (!['plain', 'check', 'checkbox'].includes(this.type)) {
       console.warn(`<cfpb-list>: invalid type "${this.type}".`);
@@ -209,6 +221,8 @@ export class CfpbList extends LitElement {
         this.#checkedItems = [];
       }
     }
+
+    this.#syncChildDataFromItems();
 
     this.dispatchEvent(
       new CustomEvent('item-click', {

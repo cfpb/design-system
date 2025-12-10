@@ -819,6 +819,9 @@ variation_groups:
           A search input component.
         variation_code_snippet_rendered: >-
           <div>
+            <cfpb-form-search-input borderless>
+            </cfpb-form-search-input>
+            <br>
             <cfpb-form-search-input>
             </cfpb-form-search-input>
             <br>
@@ -892,6 +895,9 @@ variation_groups:
             </script>
           </div>
         variation_code_snippet: >-
+          <cfpb-form-search-input borderless>
+          </cfpb-form-search-input>
+
           <cfpb-form-search-input>
           </cfpb-form-search-input>
 
@@ -1282,6 +1288,84 @@ variation_groups:
             <cfpb-list-item>Uranus</cfpb-list-item>
             <cfpb-list-item>Neptune</cfpb-list-item>
           </cfpb-list>
+      - variation_is_deprecated: false
+        variation_name: Select list
+        variation_description: >-
+          A select list component.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-select>
+              <ul>
+                <li>
+                  Mercury
+                </li>
+                <li>
+                  Venus
+                </li>
+                <li selected>
+                  Earth
+                </li>
+                <li>
+                  Mars
+                </li>
+                <li>
+                  Jupiter
+                </li>
+                <li>
+                  Saturn
+                </li>
+                <li>
+                  Uranus
+                </li>
+                <li>
+                  Neptune
+                </li>
+              </ul>
+            </cfpb-select>
+
+
+            <br><br>
+
+            <cfpb-select multiple>
+              <ul>
+                <li>
+                  Mercury
+                </li>
+                <li>
+                  Venus
+                </li>
+                <li selected>
+                  Earth
+                </li>
+                <li>
+                  Mars
+                </li>
+                <li>
+                  Jupiter
+                </li>
+                <li>
+                  Saturn
+                </li>
+                <li>
+                  Uranus
+                </li>
+                <li>
+                  Neptune
+                </li>
+              </ul>
+            </cfpb-select>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-select multiple>
+            <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Venus</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Earth</cfpb-list-item>
+            <cfpb-list-item type="checkbox" checked>Mars</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Jupiter</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Saturn</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Uranus</cfpb-list-item>
+            <cfpb-list-item type="checkbox">Neptune</cfpb-list-item>
+          </cfpb-select>
     variation_group_name: Types
 guidelines: ''
 eyebrow: Web Components

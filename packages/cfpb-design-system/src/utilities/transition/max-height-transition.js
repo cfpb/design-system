@@ -7,6 +7,9 @@ const CLASSES = {
   BASE_CLASS: 'u-max-height-transition',
   MH_DEFAULT: 'u-max-height-default',
   MH_SUMMARY: 'u-max-height-summary',
+  MH_DYNAMIC: 'u-max-height-dynamic',
+  MH_DYNAMIC_UP: 'u-max-height-dynamic--up',
+  MH_DYNAMIC_DOWN: 'u-max-height-dynamic--down',
   MH_ZERO: 'u-max-height-zero',
 };
 
@@ -30,6 +33,27 @@ function MaxHeightTransition(element) {
     const elmHeight = element.scrollHeight;
     const newHeight = elmHeight + 'px';
     element.style.maxHeight = newHeight;
+
+    // Revert to default value to clear any value used in "up" direction.
+    element.style.bottom = 'auto';
+  }
+
+  /**
+   * @returns {{rect: number, distanceToBottom: number, distanceToTop: number, dir: string}}
+   *   Useful metrics for presenting a popup.
+   */
+  function calcPosition() {
+    const rect = element.getBoundingClientRect();
+    const distanceToBottom = window.innerHeight - rect.bottom;
+    const distanceToTop = rect.top;
+    const dir = distanceToBottom <= 140 ? 'up' : 'down';
+
+    return {
+      rect,
+      distanceToBottom,
+      distanceToTop,
+      dir,
+    };
   }
 
   /**
@@ -85,7 +109,49 @@ function MaxHeightTransition(element) {
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightSummary() {
+    refresh();
     _baseTransition.applyClass(CLASSES.MH_SUMMARY);
+
+    _previousHeight = element.scrollHeight;
+
+    return this;
+  }
+
+  /**
+   * Collapses the max-height to just a summary height.
+   * @returns {MaxHeightTransition} An instance.
+   */
+  function maxHeightDynamic() {
+    refresh();
+    const position = calcPosition();
+
+    let minHeight = 30;
+
+    const borderWidth = 2;
+
+    let newHeight =
+      element.scrollHeight + minHeight < position.distanceToBottom
+        ? `${element.scrollHeight + borderWidth}px`
+        : `${position.distanceToBottom - minHeight}px`;
+
+    if (position.dir === 'up') {
+      const parentHeight = element.parentElement.offsetHeight;
+      minHeight += parentHeight;
+      element.style.bottom = `${parentHeight - borderWidth}px`;
+      newHeight =
+        element.scrollHeight + minHeight < position.distanceToTop
+          ? `${element.scrollHeight + borderWidth}px`
+          : `${position.distanceToTop - minHeight}px`;
+    }
+
+    element.style.maxHeight = newHeight;
+
+    _baseTransition.applyClass(CLASSES.MH_DYNAMIC);
+
+    // `applyClass` flushes the classes, so we can add these direct.
+    if (position.dir === 'up')
+      _baseTransition.applyClass(CLASSES.MH_DYNAMIC_UP);
+    else _baseTransition.applyClass(CLASSES.MH_DYNAMIC_DOWN);
 
     _previousHeight = element.scrollHeight;
 
@@ -132,6 +198,7 @@ function MaxHeightTransition(element) {
   this.maxHeightDefault = maxHeightDefault;
   this.maxHeightSummary = maxHeightSummary;
   this.maxHeightZero = maxHeightZero;
+  this.maxHeightDynamic = maxHeightDynamic;
 
   return this;
 }

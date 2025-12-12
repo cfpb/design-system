@@ -16,9 +16,10 @@
   --select-bg-disabled-default: var(--gray-10); // $input-bg-disabled
   --select-icon-bg-default: var(--gray-10);
   --select-text-disabled-default: var(--gray-dark); // $input-text-disabled
+
+  // Private variables.
   --select-border: var(--select-border-default);
   --select-border-width: var(--select-border-width-default);
-
   --select-border-hover: var(--select-border-hover-default);
   --select-border-focus: var(--select-border-focus-default);
 
@@ -200,10 +201,6 @@
     }
 
     &--up {
-      &::before {
-        //top: -1px;
-      }
-
       .o-select__content {
         border-bottom: 0;
         top: unset;
@@ -223,8 +220,6 @@
       display: block;
       width: 100%;
       border-top: 1px solid var(--select-border);
-      //bottom: -1px;
-
       pointer-events: none;
     }
   }

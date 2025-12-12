@@ -51,7 +51,7 @@ first-level:
           - page: Text inputs
           - page: Tooltips
         third-level: []
-      - heading: Web Components
+      - heading: Web Components (beta)
         nav-items:
           - page: Elements
     nav-items: []

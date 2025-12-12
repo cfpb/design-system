@@ -19,11 +19,18 @@
   --select-border: var(--select-border-default);
   --select-border-width: var(--select-border-width-default);
 
+  --select-border-hover: var(--select-border-hover-default);
+  --select-border-focus: var(--select-border-focus-default);
+
   // Hide light DOM content.
   ::slotted(ul),
   ::slotted(ol) {
     display: none !important;
   }
+
+  //
+  // Custom scrollbar
+  //
 
   // Reset lack of scrollbar on Apple devices.
   ::-webkit-scrollbar {
@@ -32,16 +39,21 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    // border-radius: 4px;
     background-color: var(--pacific-20);
     box-shadow: 0 0 1px var(--gray-10);
   }
 
-  // Overide heading defaults.
-  ::slotted([slot='header']) {
-    margin-bottom: 0 !important;
-    color: var(--black) !important;
-    font-weight: 500 !important;
+  //
+  // Base styling
+  //
+
+  button {
+    // This line-height settings is larger than base.scss to
+    // accommodate the SVG height.
+    line-height: math.div(21px, $base-font-size-px);
+
+    // Remove default focus ring.
+    outline: none;
   }
 
   //
@@ -50,12 +62,20 @@
 
   .o-select {
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 38px;
 
+    &:hover {
+      border-color: var(--select-border-hover);
+      box-shadow: 0 0 0 1px var(--select-border-hover);
+    }
+
+    &:focus,
     &:focus-within {
-      outline: 1px dotted var(--pacific);
+      outline: 1px dotted var(--select-border-focus);
       outline-offset: 2px;
 
-      box-shadow: 0 0 0 1px var(--pacific);
+      box-shadow: 0 0 0 1px var(--select-border-focus);
     }
 
     //
@@ -116,6 +136,8 @@
       flex-grow: 1;
       padding: math.div(7px, $base-font-size-px) + em
         math.div(10px, $base-font-size-px) + em;
+
+      cursor: pointer;
     }
 
     &__cues {
@@ -165,6 +187,28 @@
         max-height: 99999px !important;
       }
     }
+
+    &--down {
+      &::before {
+        bottom: -1px;
+      }
+
+      .o-select__content {
+        border-top: 0;
+        top: 35px;
+      }
+    }
+
+    &--up {
+      &::before {
+        //top: -1px;
+      }
+
+      .o-select__content {
+        border-bottom: 0;
+        top: unset;
+      }
+    }
   }
 }
 
@@ -179,26 +223,9 @@
       display: block;
       width: 100%;
       border-top: 1px solid var(--select-border);
-    }
+      //bottom: -1px;
 
-    &:has(.u-max-height-dynamic--down) {
-      &::before {
-        bottom: -1px;
-      }
-
-      .o-select__content {
-        border-top: 0;
-      }
-    }
-
-    &:has(.u-max-height-dynamic--up) {
-      &::before {
-        top: -1px;
-      }
-
-      .o-select__content {
-        border-bottom: 0;
-      }
+      pointer-events: none;
     }
   }
 }

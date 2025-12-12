@@ -21,6 +21,7 @@ input.a-btn::-moz-focus-inner {
 }
 
 .a-btn {
+  line-height: math.div(19px, $base-font-size-px);
   appearance: none;
   display: flex;
   gap: math.div(10px, $base-font-size-px) + rem;

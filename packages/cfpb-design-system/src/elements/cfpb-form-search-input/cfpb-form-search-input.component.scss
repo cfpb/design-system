@@ -41,6 +41,11 @@
       ); // 9px vertically centers icon.
     }
 
+    // This line-height settings is taken from base.scss.
+    input {
+      line-height: math.div(19px, $base-font-size-px);
+    }
+
     input[type='search'] {
       font-size: 1rem;
       width: 100%;

@@ -9,6 +9,11 @@
     display: none !important;
   }
 
+  // This line-height settings is taken from base.scss.
+  button {
+    line-height: math.div(19px, $base-font-size-px);
+  }
+
   .o-form-search {
     position: relative;
     display: flex;

@@ -25,6 +25,10 @@ export class CfpbSelect extends LitElement {
   #flyoutMenu;
   #transition;
   #search;
+  #root = createRef();
+  #headerDom = createRef();
+  #contentDom = createRef();
+  #input = createRef();
   #tagGroup = createRef();
   #list = createRef();
   #displayLabel = createRef();
@@ -49,7 +53,7 @@ export class CfpbSelect extends LitElement {
       maxlength: { type: Number },
       placeholder: { type: String },
       ariaLabelInput: { type: String, attribute: 'aria-label-input' },
-      ariaLabelButton: { type: String, attribute: 'aria-label-button' },
+      ariaLabelList: { type: String, attribute: 'aria-label-list' },
 
       isExpanded: { type: Boolean, attribute: 'open', reflect: true },
       selectedTexts: { type: Array },
@@ -67,6 +71,10 @@ export class CfpbSelect extends LitElement {
     this.#boundOnOutsideClick = this.#onOutsideClick.bind(this);
   }
 
+  firstUpdated() {
+    this.#initFlyoutMenu();
+  }
+
   disconnectedCallback() {
     document.removeEventListener('pointerdown', this.#boundOnOutsideClick);
     super.disconnectedCallback();
@@ -76,17 +84,6 @@ export class CfpbSelect extends LitElement {
     const path = evt.composedPath();
     if (!path.includes(this)) {
       this.isExpanded = false;
-    }
-  }
-
-  firstUpdated() {
-    this.#initFlyoutMenu();
-
-    const selectEl = this.querySelector('select');
-    if (selectEl && this.selectedTexts.length === 0) {
-      this.selectedTexts = Array.from(selectEl.selectedOptions).map(
-        (opt) => opt.text,
-      );
     }
   }
 
@@ -148,8 +145,8 @@ export class CfpbSelect extends LitElement {
   }
 
   #initFlyoutMenu() {
-    const root = this.shadowRoot.querySelector('div');
-    const contentDom = root.querySelector('.o-select__content');
+    const root = this.#root.value;
+    const contentDom = this.#contentDom.value;
 
     // If it's expanded we don't set an initial height,
     // as it will be calculated internally.
@@ -183,6 +180,14 @@ export class CfpbSelect extends LitElement {
     this.#flyoutMenu.addEventListener('collapseend', () => {
       this.isExpanded = false;
       contentDom.classList.add('u-hidden');
+
+      // Remove direction classes.
+      this.#root.value.classList.remove(`o-select--up`);
+      this.#root.value.classList.remove(`o-select--down`);
+    });
+
+    this.#transition.addEventListener('transitiondir', (evt) => {
+      this.#root.value.classList.add(`o-select--${evt.dir}`);
     });
   }
 
@@ -207,11 +212,18 @@ export class CfpbSelect extends LitElement {
   }
 
   #onClick(evt) {
-    if (evt.currentTarget.tagName === 'CFPB-FORM-SEARCH-INPUT') {
-      if (this.isExpanded) this.#flyoutMenu.suspend();
-      else this.#flyoutMenu.resume();
-    } else {
-      this.#flyoutMenu.resume();
+    const target = evt.currentTarget;
+
+    if (this.multiple) {
+      if (target.tagName === 'CFPB-FORM-SEARCH-INPUT') {
+        if (this.isExpanded) this.#flyoutMenu.suspend();
+        else this.#flyoutMenu.expand();
+      } else {
+        this.#flyoutMenu.resume();
+      }
+    } else if (target.classList.contains('o-select__label')) {
+      this.#headerDom.value.focus();
+      this.isExpanded = !this.isExpanded;
     }
   }
 
@@ -235,6 +247,10 @@ export class CfpbSelect extends LitElement {
 
       // Now close the dropdown.
       this.isExpanded = false;
+
+      // Move focus back to the header.
+      if (this.multiple) this.#input.value.focus();
+      else this.#headerDom.value.focus();
     }
   }
 
@@ -249,6 +265,15 @@ export class CfpbSelect extends LitElement {
     }));
 
     this.requestUpdate();
+  }
+
+  #onKeyDown(evt) {
+    switch (evt.key) {
+      case 'ArrowDown':
+        evt.preventDefault();
+        this.#contentDom.value.querySelector('cfpb-list-item').focus();
+        break;
+    }
   }
 
   render() {
@@ -274,14 +299,17 @@ export class CfpbSelect extends LitElement {
       <div
         class="o-select o-select--border"
         data-js-hook="behavior_flyout-menu"
+        ${ref(this.#root)}
       >
+        ${this.#renderInput()}
+
         <button
           class="o-select__header"
           title="Expand content"
           data-js-hook="behavior_flyout-menu_trigger"
+          ${ref(this.#headerDom)}
+          @keydown=${this.#onKeyDown}
         >
-          ${this.#renderInput()}
-
           <span class="o-select__cues" @click=${this.#onClick}>
             <span class="o-select__cue-open" role="img" aria-label="Show">
               ${unsafeSVG(expandIcon)}
@@ -296,12 +324,16 @@ export class CfpbSelect extends LitElement {
         <div
           class="o-select__content"
           data-js-hook="behavior_flyout-menu_content"
+          ${ref(this.#contentDom)}
         >
           <cfpb-list
             @item-click=${this.#onItemClick}
             ?multiple=${this.multiple}
             .childData=${this.optionList}
             type=${this.multiple ? 'checkbox' : 'check'}
+            aria-label=${this.ariaLabelList
+              ? this.ariaLabelList
+              : 'Choose an item…'}
             ${ref(this.#list)}
           >
           </cfpb-list>
@@ -317,6 +349,7 @@ export class CfpbSelect extends LitElement {
     return this.multiple
       ? html`
           <cfpb-form-search-input
+            ${ref(this.#input)}
             borderless
             ?name=${this.name}
             ?value=${this.value}
@@ -330,7 +363,11 @@ export class CfpbSelect extends LitElement {
             @click=${this.#onClick}
           ></cfpb-form-search-input>
         `
-      : html`<div class="o-select__label" ${ref(this.#displayLabel)}></div>`;
+      : html`<div
+          class="o-select__label"
+          ${ref(this.#displayLabel)}
+          @click=${this.#onClick}
+        ></div>`;
   }
 
   static init() {

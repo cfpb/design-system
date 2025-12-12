@@ -1,6 +1,8 @@
 import { BaseTransition } from '../transition/base-transition.js';
 import { EventObserver } from '../event-observer.js';
 
+const DIR_EVENT = 'transitiondir';
+
 // Exported constants.
 const CLASSES = {
   CSS_PROPERTY: 'max-height',
@@ -8,8 +10,6 @@ const CLASSES = {
   MH_DEFAULT: 'u-max-height-default',
   MH_SUMMARY: 'u-max-height-summary',
   MH_DYNAMIC: 'u-max-height-dynamic',
-  MH_DYNAMIC_UP: 'u-max-height-dynamic--up',
-  MH_DYNAMIC_DOWN: 'u-max-height-dynamic--down',
   MH_ZERO: 'u-max-height-zero',
 };
 
@@ -21,6 +21,7 @@ const CLASSES = {
  * @returns {MaxHeightTransition} An instance.
  */
 function MaxHeightTransition(element) {
+  const that = this;
   const eventObserver = new EventObserver();
   const _baseTransition = new BaseTransition(element, CLASSES, this);
   let _previousHeight = 0;
@@ -36,6 +37,7 @@ function MaxHeightTransition(element) {
 
     // Revert to default value to clear any value used in "up" direction.
     element.style.bottom = 'auto';
+    element.style.top = 'auto';
   }
 
   /**
@@ -123,10 +125,13 @@ function MaxHeightTransition(element) {
    */
   function maxHeightDynamic() {
     refresh();
+
+    // Assume direction is down to begin.
+    element.style.top = '100%';
+
     const position = calcPosition();
 
     let minHeight = 30;
-
     const borderWidth = 2;
 
     let newHeight =
@@ -142,16 +147,18 @@ function MaxHeightTransition(element) {
         element.scrollHeight + minHeight < position.distanceToTop
           ? `${element.scrollHeight + borderWidth}px`
           : `${position.distanceToTop - minHeight}px`;
+      element.style.top = 'unset';
     }
 
     element.style.maxHeight = newHeight;
 
     _baseTransition.applyClass(CLASSES.MH_DYNAMIC);
 
-    // `applyClass` flushes the classes, so we can add these direct.
-    if (position.dir === 'up')
-      _baseTransition.applyClass(CLASSES.MH_DYNAMIC_UP);
-    else _baseTransition.applyClass(CLASSES.MH_DYNAMIC_DOWN);
+    that.dispatchEvent(DIR_EVENT, {
+      target: that,
+      type: DIR_EVENT,
+      dir: position.dir,
+    });
 
     _previousHeight = element.scrollHeight;
 

@@ -4,12 +4,15 @@
 
 :host {
   button {
+    // This line-height isn't 19 or 22, as 20 creates a 30px high tag.
+    line-height: math.div(20px, $base-font-size-px);
+
     // Filter tags appear in filtered contexts, often as part of multiselects.
-    line-height: math.div(19px, $base-font-size-px);
     font-size: math.div(16px, $btn-font-size) + rem;
 
     display: flex;
     gap: math.div(10px, $btn-font-size) + rem;
+    align-items: center;
 
     border: 1px solid var(--teal);
     padding: 4px 6px;

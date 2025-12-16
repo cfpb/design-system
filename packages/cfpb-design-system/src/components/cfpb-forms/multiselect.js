@@ -556,7 +556,7 @@ function Multiselect(element) {
 
     _instance = this;
     _name = _dom.name || _dom.id;
-    _placeholder = _dom.getAttribute('placeholder');
+    _placeholder = _dom.getAttribute('data-placeholder');
     _options = _dom.options || [];
 
     // Allow devs to pass the config settings they want and not worry about the rest

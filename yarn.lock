@@ -4144,21 +4144,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.4.22":
-  version: 10.4.22
-  resolution: "autoprefixer@npm:10.4.22"
+"autoprefixer@npm:10.4.23":
+  version: 10.4.23
+  resolution: "autoprefixer@npm:10.4.23"
   dependencies:
-    browserslist: "npm:^4.27.0"
-    caniuse-lite: "npm:^1.0.30001754"
+    browserslist: "npm:^4.28.1"
+    caniuse-lite: "npm:^1.0.30001760"
     fraction.js: "npm:^5.3.4"
-    normalize-range: "npm:^0.1.2"
     picocolors: "npm:^1.1.1"
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 10c0/2ae8d135af2deaaa5065a3a466c877787373c0ed766b8a8e8259d7871db79c1a7e1d9f6c9541c54fa95647511d3c2066bb08a30160e58c9bfa75506f9c18f3aa
+  checksum: 10c0/3765c5d0fa3e95fb2ebe9d5a6d4da0156f5d346c7ec9ac0fbf5c97c8139d0ca1e8743bf5dc1b4aa954467be6929fddf8498a3b6202d468d70b5f359f3b6af90f
   languageName: node
   linkType: hard
 
@@ -4393,6 +4392,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"baseline-browser-mapping@npm:^2.9.0":
+  version: 2.9.8
+  resolution: "baseline-browser-mapping@npm:2.9.8"
+  bin:
+    baseline-browser-mapping: dist/cli.js
+  checksum: 10c0/73d8e4aa80345833c5c73d43d8fff87dca67883ad3f8edb8ed13cf0da60a5210816fea868b532016d60ac9f8734946cbe5fcce867113a73c9b2f8b0dbfd1e33e
+  languageName: node
+  linkType: hard
+
 "basic-auth@npm:^2.0.1":
   version: 2.0.1
   resolution: "basic-auth@npm:2.0.1"
@@ -4534,6 +4542,21 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 10c0/395611e54374da9171cdbe7e3704ab426e0f1d622751392df6d6cbf60c539bf06cf2407e9dd769bc01ee2abca6a14af6509a2e0bbb448ba75a054db6c1840643
+  languageName: node
+  linkType: hard
+
+"browserslist@npm:^4.28.1":
+  version: 4.28.1
+  resolution: "browserslist@npm:4.28.1"
+  dependencies:
+    baseline-browser-mapping: "npm:^2.9.0"
+    caniuse-lite: "npm:^1.0.30001759"
+    electron-to-chromium: "npm:^1.5.263"
+    node-releases: "npm:^2.0.27"
+    update-browserslist-db: "npm:^1.2.0"
+  bin:
+    browserslist: cli.js
+  checksum: 10c0/545a5fa9d7234e3777a7177ec1e9134bb2ba60a69e6b95683f6982b1473aad347c77c1264ccf2ac5dea609a9731fbfbda6b85782bdca70f80f86e28a402504bd
   languageName: node
   linkType: hard
 
@@ -4770,10 +4793,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001754":
-  version: 1.0.30001754
-  resolution: "caniuse-lite@npm:1.0.30001754"
-  checksum: 10c0/d38709ab11abc36eea28068d241434eba925c4d3462916ccaa17a34a6227dfdeb58ab0e1eb614bab12fb393c7d527db392a0f477b48c33d70d8e466954f381ba
+"caniuse-lite@npm:^1.0.30001759, caniuse-lite@npm:^1.0.30001760":
+  version: 1.0.30001760
+  resolution: "caniuse-lite@npm:1.0.30001760"
+  checksum: 10c0/cee26dff5c5b15ba073ab230200e43c0d4e88dc3bac0afe0c9ab963df70aaa876c3e513dde42a027f317136bf6e274818d77b073708b74c5807dfad33c029d3c
   languageName: node
   linkType: hard
 
@@ -4800,7 +4823,7 @@ __metadata:
     "@lhci/cli": "npm:0.15.1"
     "@types/react": "npm:19.2.7"
     anchor-js: "npm:5.0.0"
-    autoprefixer: "npm:10.4.22"
+    autoprefixer: "npm:10.4.23"
     concurrently: "npm:9.2.1"
     cssnano: "npm:7.1.2"
     cypress: "npm:15.7.1"
@@ -4818,7 +4841,7 @@ __metadata:
     eslint-plugin-lit: "npm:2.1.1"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-wc: "npm:3.0.2"
-    git-cliff: "npm:2.10.1"
+    git-cliff: "npm:2.11.0"
     glob: "npm:13.0.0"
     globals: "npm:16.5.0"
     html-entities: "npm:2.6.0"
@@ -4837,7 +4860,7 @@ __metadata:
     react: "npm:19.2.3"
     react-dom: "npm:19.2.3"
     release-it: "npm:19.1.0"
-    sass: "npm:1.96.0"
+    sass: "npm:1.97.0"
     slugify: "npm:1.6.6"
     style-dictionary: "npm:5.1.1"
     stylelint: "npm:16.26.1"
@@ -6950,6 +6973,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"electron-to-chromium@npm:^1.5.263":
+  version: 1.5.267
+  resolution: "electron-to-chromium@npm:1.5.267"
+  checksum: 10c0/0732bdb891b657f2e43266a3db8cf86fff6cecdcc8d693a92beff214e136cb5c2ee7dc5945ed75fa1db16e16bad0c38695527a020d15f39e79084e0b2e447621
+  languageName: node
+  linkType: hard
+
 "electron-to-chromium@npm:^1.5.41":
   version: 1.5.43
   resolution: "electron-to-chromium@npm:1.5.43"
@@ -8764,59 +8794,59 @@ __metadata:
   languageName: node
   linkType: hard
 
-"git-cliff-darwin-arm64@npm:2.10.1":
-  version: 2.10.1
-  resolution: "git-cliff-darwin-arm64@npm:2.10.1"
+"git-cliff-darwin-arm64@npm:2.11.0":
+  version: 2.11.0
+  resolution: "git-cliff-darwin-arm64@npm:2.11.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"git-cliff-darwin-x64@npm:2.10.1":
-  version: 2.10.1
-  resolution: "git-cliff-darwin-x64@npm:2.10.1"
+"git-cliff-darwin-x64@npm:2.11.0":
+  version: 2.11.0
+  resolution: "git-cliff-darwin-x64@npm:2.11.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"git-cliff-linux-arm64@npm:2.10.1":
-  version: 2.10.1
-  resolution: "git-cliff-linux-arm64@npm:2.10.1"
+"git-cliff-linux-arm64@npm:2.11.0":
+  version: 2.11.0
+  resolution: "git-cliff-linux-arm64@npm:2.11.0"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"git-cliff-linux-x64@npm:2.10.1":
-  version: 2.10.1
-  resolution: "git-cliff-linux-x64@npm:2.10.1"
+"git-cliff-linux-x64@npm:2.11.0":
+  version: 2.11.0
+  resolution: "git-cliff-linux-x64@npm:2.11.0"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"git-cliff-windows-arm64@npm:2.10.1":
-  version: 2.10.1
-  resolution: "git-cliff-windows-arm64@npm:2.10.1"
+"git-cliff-windows-arm64@npm:2.11.0":
+  version: 2.11.0
+  resolution: "git-cliff-windows-arm64@npm:2.11.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"git-cliff-windows-x64@npm:2.10.1":
-  version: 2.10.1
-  resolution: "git-cliff-windows-x64@npm:2.10.1"
+"git-cliff-windows-x64@npm:2.11.0":
+  version: 2.11.0
+  resolution: "git-cliff-windows-x64@npm:2.11.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"git-cliff@npm:2.10.1":
-  version: 2.10.1
-  resolution: "git-cliff@npm:2.10.1"
+"git-cliff@npm:2.11.0":
+  version: 2.11.0
+  resolution: "git-cliff@npm:2.11.0"
   dependencies:
     execa: "npm:^9.6.0"
-    git-cliff-darwin-arm64: "npm:2.10.1"
-    git-cliff-darwin-x64: "npm:2.10.1"
-    git-cliff-linux-arm64: "npm:2.10.1"
-    git-cliff-linux-x64: "npm:2.10.1"
-    git-cliff-windows-arm64: "npm:2.10.1"
-    git-cliff-windows-x64: "npm:2.10.1"
+    git-cliff-darwin-arm64: "npm:2.11.0"
+    git-cliff-darwin-x64: "npm:2.11.0"
+    git-cliff-linux-arm64: "npm:2.11.0"
+    git-cliff-linux-x64: "npm:2.11.0"
+    git-cliff-windows-arm64: "npm:2.11.0"
+    git-cliff-windows-x64: "npm:2.11.0"
   dependenciesMeta:
     git-cliff-darwin-arm64:
       optional: true
@@ -8832,7 +8862,7 @@ __metadata:
       optional: true
   bin:
     git-cliff: lib/cli/cli.js
-  checksum: 10c0/7662cf911d9f00d13a074b09b19bf7a0964d2b1a02f45f78e7021a06b4987eb0db3b780b4136fb1c01b482845e3ff52f45e6fbfff344a763dd6b5cca46544f44
+  checksum: 10c0/d2e755ddcd4ad8a2a70c565f41d2616b014e5568a01c35dbfc25b0a553432baade93fbf6a8ce0bb188fc7eee4c3c779bbe1781478cf9e5812c9adf00108c12bb
   languageName: node
   linkType: hard
 
@@ -12810,7 +12840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-releases@npm:^2.0.26":
+"node-releases@npm:^2.0.26, node-releases@npm:^2.0.27":
   version: 2.0.27
   resolution: "node-releases@npm:2.0.27"
   checksum: 10c0/f1e6583b7833ea81880627748d28a3a7ff5703d5409328c216ae57befbced10ce2c991bea86434e8ec39003bd017f70481e2e5f8c1f7e0a7663241f81d6e00e2
@@ -12832,13 +12862,6 @@ __metadata:
   version: 3.0.0
   resolution: "normalize-path@npm:3.0.0"
   checksum: 10c0/e008c8142bcc335b5e38cf0d63cfd39d6cf2d97480af9abdbe9a439221fd4d749763bab492a8ee708ce7a194bb00c9da6d0a115018672310850489137b3da046
-  languageName: node
-  linkType: hard
-
-"normalize-range@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "normalize-range@npm:0.1.2"
-  checksum: 10c0/bf39b73a63e0a42ad1a48c2bd1bda5a07ede64a7e2567307a407674e595bcff0fa0d57e8e5f1e7fa5e91000797c7615e13613227aaaa4d6d6e87f5bd5cc95de6
   languageName: node
   linkType: hard
 
@@ -15551,9 +15574,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.96.0":
-  version: 1.96.0
-  resolution: "sass@npm:1.96.0"
+"sass@npm:1.97.0":
+  version: 1.97.0
+  resolution: "sass@npm:1.97.0"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -15564,7 +15587,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10c0/a932054bcee6935757417af6072d31b65ce3557798a53351b3e1369d7f06e24b0ec211e1617bdaaee998b429a44bf0f52acd240fd47f88422d5bc241eeb71672
+  checksum: 10c0/4c0e2596131054089beeeb6e98f7318beb909c4775187690656cbb85a45153d04eecd970e6a4431fe47dc94f9749cf8d58c9c5e59055d2cae39f4887a4bb6104
   languageName: node
   linkType: hard
 
@@ -17817,6 +17840,20 @@ __metadata:
   bin:
     update-browserslist-db: cli.js
   checksum: 10c0/db0c9aaecf1258a6acda5e937fc27a7996ccca7a7580a1b4aa8bba6a9b0e283e5e65c49ebbd74ec29288ef083f1b88d4da13e3d4d326c1e5fc55bf72d7390702
+  languageName: node
+  linkType: hard
+
+"update-browserslist-db@npm:^1.2.0":
+  version: 1.2.3
+  resolution: "update-browserslist-db@npm:1.2.3"
+  dependencies:
+    escalade: "npm:^3.2.0"
+    picocolors: "npm:^1.1.1"
+  peerDependencies:
+    browserslist: ">= 4.21.0"
+  bin:
+    update-browserslist-db: cli.js
+  checksum: 10c0/13a00355ea822388f68af57410ce3255941d5fb9b7c49342c4709a07c9f230bbef7f7499ae0ca7e0de532e79a82cc0c4edbd125f1a323a1845bf914efddf8bec
   languageName: node
   linkType: hard
 

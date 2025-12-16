@@ -2,7 +2,172 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.2.4](https://github.com/cfpb/design-system/compare/v4.2.3..v4.2.4) - October 16, 2025
+## [4.3.0](https://github.com/cfpb/design-system/compare/v4.2.4..v4.3.0) - December 16, 2025
+
+### PRs in this release
+
+- PR #[2410](https://github.com/cfpb/design-system/pull/2410): Add search input component - Ans
+- PR #[2409](https://github.com/cfpb/design-system/pull/2409): Update decap-cms-app, liquidjs, react, cssnano, cypress, esbuild, eslint, eslint-plugin-jsdoc, globals, sass - Ans
+- PR #[2412](https://github.com/cfpb/design-system/pull/2412): Add cfpb-form-alert component - Ans
+- PR #[2413](https://github.com/cfpb/design-system/pull/2413): Add checkbox-icon component - Ans
+- PR #[2414](https://github.com/cfpb/design-system/pull/2414): Move checkbox-icon to cfpb-checkbox-icon - Ans
+- PR #[2415](https://github.com/cfpb/design-system/pull/2415): Fix focus/blur/hover states of checkboxes - Ans
+- PR #[2418](https://github.com/cfpb/design-system/pull/2418): Fix linter issues - Ans
+- PR #[2420](https://github.com/cfpb/design-system/pull/2420): Fix a11y issues - Ans
+- PR #[2427](https://github.com/cfpb/design-system/pull/2427): Fix icon and text show/hide icon api - Ans
+- PR #[2428](https://github.com/cfpb/design-system/pull/2428): Update marked, cypress, eslint-plugin-jsdoc, glob, sass - Ans
+- PR #[2430](https://github.com/cfpb/design-system/pull/2430): Refactor cfpb-icon-text - Ans
+- PR #[2432](https://github.com/cfpb/design-system/pull/2432): Add API examples - Ans
+- PR #[2434](https://github.com/cfpb/design-system/pull/2434): Update @types/react, eslint-plugin-jsdoc, prettier, stylelint - Ans
+- PR #[2435](https://github.com/cfpb/design-system/pull/2435): Add cfpb-list-item - Ans
+- PR #[2436](https://github.com/cfpb/design-system/pull/2436): Add `<cfpb-form-search-input>` component - Ans
+- PR #[2438](https://github.com/cfpb/design-system/pull/2438): Upgrade cypress, prettier | update cfpb-form-search with search-service - Ans
+- PR #[2440](https://github.com/cfpb/design-system/pull/2440): Add cfpb-list interactive example - Ans
+- PR #[2457](https://github.com/cfpb/design-system/pull/2457): Enhancements to `cfpb-list` and `cfpb-form-search-input` - Ans
+- PR #[2458](https://github.com/cfpb/design-system/pull/2458): Lists - Add visibleCheckedItems property and add a filtered event - Ans
+- PR #[2459](https://github.com/cfpb/design-system/pull/2459): Add parse-child-data utility - Ans
+- PR #[2460](https://github.com/cfpb/design-system/pull/2460): Update react, react-dom, esbuild, eslint-plugin-jsdoc, prettier, sass - Ans
+- PR #[2461](https://github.com/cfpb/design-system/pull/2461): Add cfpb-select - Ans
+- PR #[2462](https://github.com/cfpb/design-system/pull/2462): Add cfpb-expandable - Ans
+- PR #[2463](https://github.com/cfpb/design-system/pull/2463): Remove cfpb-multiselect - Ans
+- PR #[2464](https://github.com/cfpb/design-system/pull/2464): CSS and accessibility fixes - Ans
+- PR #[2465](https://github.com/cfpb/design-system/pull/2465): Update react, react-dom, eslint, release-it, sass - Ans
+- PR #[2355](https://github.com/cfpb/design-system/pull/2355): Multiselect: Fix erroneous placeholder reference - Ans
+
+### General
+
+- Add search input component - ([6adf6b5](https://github.com/cfpb/design-system/commit/6adf6b5513c1abf7ff477f654d95f01dbfe15771)) - Ans
+- Refactor search input CSS - ([024e75e](https://github.com/cfpb/design-system/commit/024e75ed17b2ced0f8d326579f4f2f57462e4057)) - Ans
+- Up min-width to 300px to satisfy Firefox - ([d07b103](https://github.com/cfpb/design-system/commit/d07b1031b4655d021e1d59b04f999be360f758bc)) - Ans
+- Lint files - ([db5fc8c](https://github.com/cfpb/design-system/commit/db5fc8c7bddf910087528f37b84193fe0eb50b1b)) - Ans
+- Add cfpb-form-alert component - ([9273bf8](https://github.com/cfpb/design-system/commit/9273bf8d2cd836d4b1ace42caf0aaa5fdd8d654c)) - Ans
+- Merge branch 'main' into ans_update_deps - Ans
+- Add checkbox-icon component - ([41f2fcf](https://github.com/cfpb/design-system/commit/41f2fcf31c67099db9965b716e7992668a2c9cab)) - Ans
+- Move checkbox-icon to cfpb-checkbox-icon - ([61380a3](https://github.com/cfpb/design-system/commit/61380a33b6348c9827ce38fa7156908d2e0596d3)) - Ans
+- Fix focus/blur/hover states of checkboxes - ([1971c0c](https://github.com/cfpb/design-system/commit/1971c0c4e4f960bc2f8b58786c4f35dba9e1e2a6)) - Ans
+- Fix linter issues - ([6ae04ee](https://github.com/cfpb/design-system/commit/6ae04ee3d83a196cdfb456bd83d19c752335726d)) - Ans
+- Fix a11y issues - ([928626e](https://github.com/cfpb/design-system/commit/928626e8b2117c6001e46683d513c3f9b2b39720)) - Ans
+- Fix icon and text show/hide icon api - ([3bb9401](https://github.com/cfpb/design-system/commit/3bb94011e9a7ef8a67bca69133076610647d2f96)) - Ans
+- Lint files - ([3dd91b1](https://github.com/cfpb/design-system/commit/3dd91b108601c6ed69ea6aff98b039fdb58b8265)) - Ans
+- Refactor cfpb-icon-text - ([70f10be](https://github.com/cfpb/design-system/commit/70f10be9b5aa4d43e68db0618ae4245a535b89b4)) - Ans
+- Adding styledict config (#2421)
+
+* Adding styledict config
+
+Adds:
+
+style-dictionary.config.js <- transforms from JSON tokens to .css
+build-tokens.yml <- does what the above does on every commit or PR to the repo to ensure edits commited directly to JSON token files produces the .css files we need
+package.json <- adds a yarn tokens to commands and invokes it as first step in yarn start process
+
+* Adding style-dictionary to package.json and test files
+
+* Remove GH action and add in details on how to contribute tokens
+
+removing based on review with ans. Will be added back as a cron job that runs at night later. Updated contributors.md to include information about token usage.
+
+Also small linting fixes.
+
+* Fix formatting and wording in CONTRIBUTING.md
+
+* addressing PR review feedback.
+
+1) Removed building tokens from the yarn start command. `yarn tokens` will still kick off translation of the tokens.
+2) Removed any variable descriptions from Figma variables. (that removed the comment from the generated .css)
+3) Added empty last line
+4) Renamed single letter var from p to fsPath.
+5) Fixed contributing.md to use code blocks for paths - ([7e10857](https://github.com/cfpb/design-system/commit/7e108577294fae15c2bea85b988f147226a76b6b)) - itsmedavep
+- Add API examples - ([d45c474](https://github.com/cfpb/design-system/commit/d45c4740ca3504c2f66687da3803adee59ebbcd1)) - Ans
+- Restructuring to have web components use JSON (#2431)
+
+* restructuring to have web components use JSON
+
+duplicated contents of abstracts and base into elements/abstracts and elements/base
+updated to using css custom props in base.scss instead of scss vars
+added elements/abstracts and elements/base to index.scss
+added vars.css to abstracts
+
+this should establish a base to hook up the JSON tokens as the next step
+
+* renaming sizing-vars to not be an scss partial file
+
+As @anselmbradford  pointed out we do not do that for any other files in the codebase, so the usage here was inconsistent.
+
+Renamed to remove the underscore.
+
+* removing unused js files and one grid-gutter-size var
+
+* getting rid of the leftover js files in dist - ([b7e4922](https://github.com/cfpb/design-system/commit/b7e49228169d30d0593f63c791f7320b252f0077)) - itsmedavep
+- Lint files - ([e04fb1a](https://github.com/cfpb/design-system/commit/e04fb1a6d05ea87ea1e804758714f7c7410ccefc)) - Ans
+- Add cfpb-list-item - ([24292f2](https://github.com/cfpb/design-system/commit/24292f2bba1b64e2e9ee0d6180aa3570dd13bb2b)) - Ans
+- Add `<cfpb-form-search-input>` - ([71b1303](https://github.com/cfpb/design-system/commit/71b1303f542810c624bd8fa5121e6c302ea883c3)) - Ans
+- Upgrade cypress, prettier | update cfpb-form-search with search-service - ([28e2395](https://github.com/cfpb/design-system/commit/28e23956d01aac0fd0f27c4a99681f2ab9f13d71)) - Ans
+- Update elements example - ([4da9e69](https://github.com/cfpb/design-system/commit/4da9e69763c3505f674c408743f5b9c33d0cea75)) - Ans
+- Transitioning buttons over to using JSON and css custom props (#2433)
+
+Co-authored-by: Ans <git@anselmbradford.com> - ([8bc75bf](https://github.com/cfpb/design-system/commit/8bc75bfe9b4613f1b37ad521d50c0bff8089c7e0)) - itsmedavep
+- Add cfpb-list interactive example - ([4e960c4](https://github.com/cfpb/design-system/commit/4e960c472f134517bacb01879f28ab73791050c9)) - Ans
+- Add correct ARIA attributes - ([8f9600f](https://github.com/cfpb/design-system/commit/8f9600f6f75e068f2f979ea74813c47000cd4efd)) - Ans
+- Fixed issue with checked items - ([b28ac05](https://github.com/cfpb/design-system/commit/b28ac057283a441d47d6e5cdbb1a71d890b677ba)) - Ans
+- Rewire import to use tokens from elements - ([06e7a5e](https://github.com/cfpb/design-system/commit/06e7a5e48ae3aaffe1a6e7d87ccf5043cd97fcfd)) - itsmedavep
+- Revert "rewire import to use tokens from elements"
+
+This reverts commit 06e7a5e48ae3aaffe1a6e7d87ccf5043cd97fcfd. - ([6ac5c22](https://github.com/cfpb/design-system/commit/6ac5c226b6da878f9055d921085bd6f59d9bdee9)) - itsmedavep
+- Enhancements to lists - ([46619cd](https://github.com/cfpb/design-system/commit/46619cd4c7b01ff62273d6e34e35fe0b6e60a46d)) - Ans
+- Lists-Add visibleCheckedItems property and add a filtered event - ([929c30e](https://github.com/cfpb/design-system/commit/929c30e2d02751676792b5cfb1bbbe9225741956)) - Ans
+- Add parse-child-data utility - ([527570f](https://github.com/cfpb/design-system/commit/527570faf97367bb9f0353130c3dd3751969ecf8)) - Ans
+- Lint files - ([9e53195](https://github.com/cfpb/design-system/commit/9e53195e797da125797b957fd0ef7fc4ae5e9378)) - Ans
+- Add cfpb-select - ([c25851d](https://github.com/cfpb/design-system/commit/c25851dc8b29f404fe60301e3e4a173912efe261)) - Ans
+- Fix search - ([53fbe96](https://github.com/cfpb/design-system/commit/53fbe96534c2e53eb92c17361bd6d8b66c1dd816)) - Ans
+- Add cfpb-expandable - ([f3231c5](https://github.com/cfpb/design-system/commit/f3231c5b766f0c5ec4a8985b570b14a48340a086)) - Ans
+- Remove cfpb-multiselect - ([8a93942](https://github.com/cfpb/design-system/commit/8a9394202918a2988c9c2e2378b0fe6f44c48898)) - Ans
+- Importing abstracts from elements (#2441)
+
+Updating import to use src/elements/abstracts - ([05bb28a](https://github.com/cfpb/design-system/commit/05bb28a749540bfee2363224167ed51b5e5870d5)) - itsmedavep
+- Rewire imports to use new location and css output from JSON (#2442) - ([dcea912](https://github.com/cfpb/design-system/commit/dcea912494d9282b69c71cfb2231105546c6872b)) - itsmedavep
+- Change to import so that things now point at the JSON versions of tokens (#2443) - ([e58f88b](https://github.com/cfpb/design-system/commit/e58f88be2f766dcaf82da6610baae66954766d36)) - itsmedavep
+- Cfpb-from-choice rewired to import the css transformed from JSON tokens (#2444)
+
+Also updated:
+
+form-field-input-lg-target-bg
+form-field-input-lg-target-bg-selected
+form-field-input-lg-target-border
+form-field-input-lg-target-bg-disabled
+
+To use css custom props instead of SCSS variables - ([d6acf40](https://github.com/cfpb/design-system/commit/d6acf40f7866bce841f03a5729cee1e2c1e5bfbb)) - itsmedavep
+- Rewired cfpb-form-search to import css translated from JSON tokens (#2445) - ([ed4ada5](https://github.com/cfpb/design-system/commit/ed4ada55be7d6acea8fa5f5aae985678b8d360f8)) - itsmedavep
+- Cfpb-form-search-input rewired to import from css translated from JSON tokens (#2446) - ([7e4c6e3](https://github.com/cfpb/design-system/commit/7e4c6e35df6d03b6a7d81adf447c614614427e0a)) - itsmedavep
+- Cfpb-icon-text import update (#2447)
+
+updated @use to point at src/elements/abstracts in order to use our JSON translated css - ([53b9e9a](https://github.com/cfpb/design-system/commit/53b9e9a3aa1ce4ec604c5526eecfc40edc834fed)) - itsmedavep
+- Updated import to use translated JSON (#2449)
+
+Also updated
+
+label-helper to use CSS custom properties - ([a995053](https://github.com/cfpb/design-system/commit/a9950532aeacf40ad37d6b69d0307a20e395ce37)) - itsmedavep
+- Rewired cfpb-list to import JSON translated tokens (#2450)
+
+Updated @use to point oat elements/abstracts - ([1f6e10d](https://github.com/cfpb/design-system/commit/1f6e10d6aa28196343da4d478fc0c9eec315bc02)) - itsmedavep
+- Rewired import to use elements/abstracts (#2451) - ([b6919c5](https://github.com/cfpb/design-system/commit/b6919c571bfdb0a1f48c6a0ea41e2d23e95c0f8d)) - itsmedavep
+- Rewired the import to use JSON translated tokens (#2453)
+
+Updated @use to point at src/elements/abstracts
+
+I did NOT change the utilities import because we are not duplicating that into the web components currently
+Same thing goes for the icons. We currently are not duplicating them into elements so I did not update that import - ([f0f7e53](https://github.com/cfpb/design-system/commit/f0f7e538f662901aed6b25e05ce1ffcd1a054042)) - itsmedavep
+- Rewired import to piont at elements (#2454)
+
+Updated @use imports to point at our JSON translated css files - ([9862c9c](https://github.com/cfpb/design-system/commit/9862c9c8c5bad80ec404c365fd55625da946ef24)) - itsmedavep
+- Rewired cfpb-tag-group to use JSON translated css (#2455)
+
+Updated @use to point at src/elements/abstracts & src/elements/cfpb-button/vars - ([ca4b57a](https://github.com/cfpb/design-system/commit/ca4b57abd716085b7469e8032a9f6649073e80fd)) - itsmedavep
+- CSS and accessibility fixes - ([85c59d8](https://github.com/cfpb/design-system/commit/85c59d805f37523183886be9a070d017bd12ab04)) - Ans
+- Linter fixes - ([e3d73a5](https://github.com/cfpb/design-system/commit/e3d73a5572e52e57fa4e8c4d868e367f103720bb)) - Ans
+- Fix erroneous placeholder reference - ([80fe377](https://github.com/cfpb/design-system/commit/80fe377c4c62d35d04b1307d3c046f3282c80865)) - Ans
+- Re-build assets - ([133fe55](https://github.com/cfpb/design-system/commit/133fe55e86ca592ae0c8df470adedef500939ed6)) - Ans
+
+## [4.2.4](https://github.com/cfpb/design-system/compare/v4.2.3..vv4.2.4) - October 16, 2025
 
 ### PRs in this release
 

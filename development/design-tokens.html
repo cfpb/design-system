@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Variables - CFPB Design System</title>
+  <title>Design Tokens - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -249,13 +249,9 @@
 
   <div class="ds-content">
     <section>
-      <div class="h5">
-        Utilities
-      </div>
-    
 
     <h1 class="component-header u-mb30">
-        Variables
+        Design Tokens
     </h1>
 
     
@@ -269,7 +265,7 @@
     <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
         
         <li class="m-list__item">
-            <a href="#typography">Typography</a>
+            <a href="#json-token-structure">JSON Token Structure</a>
         </li>
         
     </ul>
@@ -277,9 +273,25 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Variables are either processed at build-time by the Sass compiler, if they are Sass variables, or at run-time by the browser, if they are CSS custom variables (CSS custom properties).</p>
+        <h2 id="the-design-system-encapsulates-all-of-its-design-choices-into-design-tokens">The design system encapsulates all of its design choices into design tokens.</h2>
 
-<p>The Sass variables appear as a <code class="language-plaintext highlighter-rouge">@key:value</code> format and are generally used to theme a component. CSS custom properties appear as a <code class="language-plaintext highlighter-rouge">--key: value</code> format.</p>
+<h3 id="intro-to-design-tokens">Intro to design tokens</h3>
+
+<p>Everything you see on <a href="https://www.consumerfinance.gov/">consumerfinance.gov</a> consists of the many design choices that embody the CFPB design system. The site is built from these typography, spacing, sizing, opacity, radii, shadows, motion and animation, and icon decisions.</p>
+
+<p>We call these decisions design tokens. Code tokens can take many forms, such as SCSS variables, CSS custom properties, or platform agnostic JSON design tokens.</p>
+
+<h4 id="legacy-components">Legacy components</h4>
+
+<p>Our legacy component versions—currently found in the “Components” sub section of <a href="https://cfpb.github.io/design-system/components/">Components</a>—leverage SCSS mixins, variables, etc., in the form of <code class="language-plaintext highlighter-rouge">$varible-name: value</code> or <code class="language-plaintext highlighter-rouge">--variable-name: value</code>. We’ve used this approach for several years, and it has served us well as it delivers a familiar developer experience. However, this approach requires knowledge of SCSS, is tied to the platform, and is extensive.</p>
+
+<h4 id="web-components-beta">Web components (beta)</h4>
+
+<p>We’ve started creating web component versions of our legacy components. These can be found on the <a href="https://cfpb.github.io/design-system/components/elements">Elements</a> page within the “Web components (beta)” sub section of <a href="https://cfpb.github.io/design-system/components/">Components</a>. These web components utilize design tokens for color values in the form of platform-agnostic JSON. Style Dictionary translates this JSON into .css custom properties. These tokens become easily parsed and consumed, meaning we could deliver them into Android or iOS formats if desired.</p>
+
+<p>With this move to JSON tokens, we are also centralizing our source of truth by exporting the tokens directly from our <a href="https://www.figma.com/community/file/1487539003249310850">Figma library</a>, enhancing collaboration between design and development. Designers can manage and maintain the tokens in Figma, and developers can directly consume the output.</p>
+
+<p>Currently, we are using JSON design tokens in our web components for color values. We plan to incrementally create more JSON design tokens for values such as sizing and spacing.</p>
 
     </section>
     
@@ -288,137 +300,49 @@
 
     
     
-    <section class="o-variation-group" id="typography">
+    <section class="o-variation-group" id="json-token-structure">
 
         
         <h2 class="o-variation-group__title">
-            Typography
+            JSON Token Structure
         </h2>
         
 
         
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Color and Font custom props
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>There is a Sass mixin for defining the CSS custom variables
-(CSS custom properties) used in the project. This should be used and
-included once in your project’s CSS entry-point file.</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'@cfpb/cfpb-design-system/src/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
-<span class="k">@include</span> <span class="nd">define-custom-props</span><span class="p">;</span>
+        <div class="o-variation-group__description">
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "abstracts-custom-props": {
+    "beige": {
+      "$type": "color",
+      "$value": "#bea96f",
+      "$extensions": {
+        "com.figma": {
+          "collectionName": "abstracts-custom-props",
+          "collectionID": "VariableCollectionId:296:179",
+          "modeName": "default",
+          "modeID": "296:2",
+          "variableName": "beige",
+          "variableID": "VariableID:296:293"
+        }
+      }
+   }
+}
 </code></pre></div></div>
 
-            </div>
-            
+<p>The above is a simplified example of our Figma exported JSON tokens. We take that JSON with Figma specific metadata and translate it into CSS using Style Dictionary. This example is using a direct value and gets translated into the following for consumption in our codebase:</p>
 
-            <!-- Live code example -->
-            
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
+ * Do not edit directly, this file was auto-generated.
+ */
 
-            
-            
-            
-            
-
-            
+:host {
+  --beige: #bea96f;
+}
+</code></pre></div></div>
 
         </div>
         
-        <div class="m-variation">
 
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Font stack
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>Override this variable in order to specify a font stack other than the
-CFPB’s default brand font and fallback.</p>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">:root</span> <span class="p">{</span>
-  <span class="py">--font-stack</span><span class="p">:</span> <span class="s2">'Source Sans 3 Variable'</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Font source
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>There is a Sass mixin for specifying the path to the woff2 font files for the CFPB default brand font, Source Sans 3.
-Pass in the path to the files. The path can be either a relative or absolute path.</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">licensed-font</span><span class="p">(</span><span class="s1">'/path/to/fonts/woff2/files'</span><span class="p">);</span>
-</code></pre></div></div>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
         
     </section>
     
@@ -456,7 +380,7 @@ Pass in the path to the files. The path can be either a relative or absolute pat
                         
                         
                         
-                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/variables.md">
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/design-tokens.md">
                             <time datetime="2025-12-17 12:38:08 -0500">
                                 12:38:08 PM Dec 17, 2025
                             </time>
@@ -482,7 +406,7 @@ Pass in the path to the files. The path can be either a relative or absolute pat
     
 
     <div class="o-editor" id="edit-page">
-      <a class="a-btn" href="/design-system/updating-this-website?page=Variables" title="Edit this page in Decap CMS">
+      <a class="a-btn" href="/design-system/updating-this-website?page=Design+Tokens" title="Edit this page in Decap CMS">
         <span>Edit page</span>
         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--edit" viewbox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg>
       </a>
@@ -502,7 +426,7 @@ Pass in the path to the files. The path can be either a relative or absolute pat
             If you see something wrong or missing,
             <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
             If you can’t make those changes yourself,
-            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Variables%3A+Add+issue+description">file an issue</a>.
+            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Design%20Tokens%3A+Add+issue+description">file an issue</a>.
             If you have a substantial change to an existing page, or a new standard you want to add,
             <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
         </p>

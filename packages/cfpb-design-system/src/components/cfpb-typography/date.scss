@@ -1,9 +1,9 @@
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .a-date {
   color: $date;
   white-space: nowrap;
 
-  @include heading-5;
+  @include legacy.legacy-heading-5;
 }

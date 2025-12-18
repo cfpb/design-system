@@ -1,10 +1,10 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .o-search-input {
   display: flex;
   flex-direction: column;
-  row-gap: math.div(15px, $base-font-size-px) + rem;
+  row-gap: math.div(15px, legacy.$legacy-base-font-size-px) + rem;
 
   &__input {
     position: relative;
@@ -19,7 +19,7 @@
       cursor: pointer;
       line-height: math.div(
         14.4px,
-        $base-font-size-px
+        legacy.$legacy-base-font-size-px
       ); // 9px vertically centers icon.
     }
 
@@ -102,7 +102,7 @@
   }
 
   // Tablet and above.
-  @include respond-to-min($bp-sm-min) {
+  @include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
     flex-direction: row;
     border-left: 0;
     button[type='submit'] {

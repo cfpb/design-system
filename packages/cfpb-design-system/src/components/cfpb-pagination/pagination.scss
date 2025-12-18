@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 //
 // Pagination
@@ -12,17 +12,17 @@
   grid-template-areas:
     'pag-btn-prev . pag-btn-next'
     'pag-form pag-form pag-form';
-  row-gap: math.div(15px, $base-font-size-px) + rem;
+  row-gap: math.div(15px, legacy.$legacy-base-font-size-px) + rem;
 
   &__form {
     grid-area: pag-form;
     display: flex;
     flex-flow: wrap;
     place-content: center;
-    gap: math.div(10px, $base-font-size-px) + rem;
+    gap: math.div(10px, legacy.$legacy-base-font-size-px) + rem;
 
-    padding: math.div(5px, $base-font-size-px) + rem;
-    border-radius: math.div(4px, $base-font-size-px) + rem;
+    padding: math.div(5px, legacy.$legacy-base-font-size-px) + rem;
+    border-radius: math.div(4px, legacy.$legacy-base-font-size-px) + rem;
     background: $pagination-bg;
     color: $pagination-text;
   }
@@ -30,7 +30,7 @@
   &__current-page {
     // 45px is a magic number to provide enough room for three digits
     // and the number spinners for type="number" inputs on desktop
-    width: math.div(45px, $base-font-size-px) + rem;
+    width: math.div(45px, legacy.$legacy-base-font-size-px) + rem;
 
     font-weight: 500;
     text-align: right;
@@ -51,7 +51,7 @@
   }
 
   // Tablet and above.
-  @include respond-to-min($bp-sm-min) {
+  @include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
     grid-template-areas: 'pag-btn-prev pag-form pag-btn-next';
 
     &__btn-prev {

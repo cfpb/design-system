@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 /* ==========================================================================
    Design System
@@ -22,8 +22,8 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    padding: math.div(10px, $base-font-size-px) + em
-      math.div(15px, $base-font-size-px) + em;
+    padding: math.div(10px, legacy.$legacy-base-font-size-px) + em
+      math.div(15px, legacy.$legacy-base-font-size-px) + em;
     border: 0;
     background-color: transparent;
     cursor: pointer;
@@ -71,23 +71,23 @@
   &__icon,
   &__label {
     // h4 size.
-    font-size: math.div(18px, $base-font-size-px) + em;
+    font-size: math.div(18px, legacy.$legacy-base-font-size-px) + em;
 
     // Mobile only.
-    @include respond-to-max($bp-xs-max) {
-      font-size: math.div(16px, $base-font-size-px) + em;
+    @include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max) {
+      font-size: math.div(16px, legacy.$legacy-base-font-size-px) + em;
     }
   }
 
   &__cues {
     align-self: center;
     color: var(--pacific);
-    font-size: math.div(16px, $base-font-size-px) + em;
-    line-height: math.div($base-line-height-px, $base-font-size-px);
+    font-size: math.div(16px, legacy.$legacy-base-font-size-px) + em;
+    line-height: math.div(legacy.$legacy-base-line-height-px, legacy.$legacy-base-font-size-px);
   }
 
   &__content {
-    padding: math.div(15px, $base-font-size-px) + em;
+    padding: math.div(15px, legacy.$legacy-base-font-size-px) + em;
     padding-top: 0;
 
     // The divider between __header and __content.
@@ -95,11 +95,11 @@
       content: '';
       display: block;
       border-top: 1px solid $expandable-border;
-      padding-top: math.div(15px, $base-font-size-px) + em;
+      padding-top: math.div(15px, legacy.$legacy-base-font-size-px) + em;
     }
 
     &::after {
-      padding-bottom: math.div(15px, $base-font-size-px) + em;
+      padding-bottom: math.div(15px, legacy.$legacy-base-font-size-px) + em;
       width: 100%;
     }
   }
@@ -111,18 +111,18 @@
   &--padded {
     .o-expandable {
       &__header {
-        padding: math.div(25px, $base-font-size-px) + em
-          math.div(15px, $base-font-size-px) + em;
+        padding: math.div(25px, legacy.$legacy-base-font-size-px) + em
+          math.div(15px, legacy.$legacy-base-font-size-px) + em;
       }
 
       &__icon,
       &__label {
         // h2 size.
-        font-size: math.div(26px, $base-font-size-px) + em;
+        font-size: math.div(26px, legacy.$legacy-base-font-size-px) + em;
 
         // Mobile only.
-        @include respond-to-max($bp-xs-max) {
-          font-size: math.div(22px, $base-font-size-px) + em;
+        @include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max) {
+          font-size: math.div(22px, legacy.$legacy-base-font-size-px) + em;
         }
       }
     }

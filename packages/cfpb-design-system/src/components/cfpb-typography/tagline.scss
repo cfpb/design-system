@@ -1,8 +1,8 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .a-tagline {
-  font-size: math.div(12px, $base-font-size-px) + rem;
+  font-size: math.div(12px, legacy.$legacy-base-font-size-px) + rem;
 
   display: grid;
   grid-template-columns: 22px 1fr;
@@ -18,7 +18,7 @@
   }
 
   &--large {
-    font-size: math.div(16px, $base-font-size-px) + rem;
+    font-size: math.div(16px, legacy.$legacy-base-font-size-px) + rem;
 
     & .u-usa-flag {
       margin-top: 4px;

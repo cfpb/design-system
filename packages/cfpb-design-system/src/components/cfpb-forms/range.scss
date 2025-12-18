@@ -1,29 +1,29 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 @mixin u-range-track-styles() {
-  height: math.div(11px, $base-font-size-px) + rem;
+  height: math.div(11px, legacy.$legacy-base-font-size-px) + rem;
   width: 100%;
-  background-color: $range-bg-track;
-  border: 1px solid $range-border;
+  background-color: legacy.$legacy-range-bg-track;
+  border: 1px solid legacy.$legacy-range-border;
   border-radius: 8px;
   cursor: pointer;
 }
 
 @mixin u-range-thumb-styles() {
-  height: math.div(45px, $base-font-size-px) + rem;
-  width: math.div(45px, $base-font-size-px) + rem;
-  margin-top: math.div(-18px, $base-font-size-px) + rem;
+  height: math.div(45px, legacy.$legacy-base-font-size-px) + rem;
+  width: math.div(45px, legacy.$legacy-base-font-size-px) + rem;
+  margin-top: math.div(-18px, legacy.$legacy-base-font-size-px) + rem;
   appearance: none;
-  border: 1px solid $range-border;
+  border: 1px solid legacy.$legacy-range-border;
   border-radius: 50%;
-  background-color: $range-bg;
+  background-color: legacy.$legacy-range-bg;
   cursor: pointer;
 }
 
 @mixin u-range-thumb-focus-styles() {
-  background-color: $range-bg-focused;
-  border: 2px solid $range-border-focused;
+  background-color: legacy.$legacy-range-bg-focused;
+  border: 2px solid legacy.$legacy-range-border-focused;
 }
 
 .a-range {

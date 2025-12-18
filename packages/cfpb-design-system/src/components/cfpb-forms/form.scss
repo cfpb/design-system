@@ -1,9 +1,9 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .o-form {
   &__group {
-    margin-bottom: math.div(30px, $base-font-size-px) + em;
+    margin-bottom: math.div(30px, legacy.$legacy-base-font-size-px) + em;
   }
 
   &__fieldset {
@@ -13,7 +13,7 @@
     padding: 0;
 
     .m-form-field + .m-form-field {
-      margin-top: math.div(10px, $base-font-size-px) + em;
+      margin-top: math.div(10px, legacy.$legacy-base-font-size-px) + em;
     }
   }
 }

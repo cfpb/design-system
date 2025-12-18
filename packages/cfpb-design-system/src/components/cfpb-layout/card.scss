@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 // $c = default state.
 // $v = `:visited` state.
@@ -60,7 +60,7 @@
 
   &:not(.m-card--breakout) {
     & > a {
-      padding: math.div($grid-gutter-width, $base-font-size-px) + em;
+      padding: math.div(legacy.$legacy-grid-gutter-width, legacy.$legacy-base-font-size-px) + em;
     }
 
     .m-card__footer {
@@ -72,7 +72,7 @@
     background: var(--white);
     border: 1px solid var(--gray-20);
     border-bottom-width: 3px;
-    padding: math.div($grid-gutter-width, $base-font-size-px) + em;
+    padding: math.div(legacy.$legacy-grid-gutter-width, legacy.$legacy-base-font-size-px) + em;
   }
 
   &:not(.m-card--breakout, .m-card--topic),
@@ -96,8 +96,8 @@
 
   // Shrink heading at smaller screen sizes.
   &__heading {
-    @include respond-to-max($bp-med-min) {
-      @include heading-3;
+    @include legacy.legacy-respond-to-max(legacy.$legacy-bp-med-min) {
+      @include legacy.legacy-heading-3;
     }
   }
 
@@ -112,7 +112,7 @@
     & .m-card__icon {
       font-size: 1em;
       margin-bottom: 0;
-      padding-right: math.div(7.5px, $base-font-size-px) + em;
+      padding-right: math.div(7.5px, legacy.$legacy-base-font-size-px) + em;
       vertical-align: bottom;
     }
 
@@ -139,9 +139,9 @@
     }
 
     .m-card__icon {
-      font-size: math.div(30px, $base-font-size-px) + em;
+      font-size: math.div(30px, legacy.$legacy-base-font-size-px) + em;
       color: var(--green);
-      margin-bottom: math.div(5px, $base-font-size-px) + em;
+      margin-bottom: math.div(5px, legacy.$legacy-base-font-size-px) + em;
     }
 
     &:hover {
@@ -186,7 +186,7 @@
     .m-card__inner-wrapper {
       position: relative;
       z-index: 0;
-      min-height: $card-img-height + math.div($grid-gutter-width, 2);
+      min-height: $card-img-height + math.div(legacy.$legacy-grid-gutter-width, 2);
 
       background: var(--gray-5);
       border: 1px solid var(--gray-20);
@@ -207,7 +207,7 @@
 
     .m-card__footer {
       // Subtract 6px to accommodate heading-3 size.
-      margin-top: math.div($card-img-height, 2) + $grid-gutter-width - 6px;
+      margin-top: math.div($card-img-height, 2) + legacy.$legacy-grid-gutter-width - 6px;
     }
 
     &:hover {
@@ -232,7 +232,7 @@
 
     // Breakout cards have larger links.
     .m-card__footer > span {
-      @include heading-3($is-responsive: false);
+      @include legacy.legacy-heading-3($is-responsive: false);
     }
   }
 }

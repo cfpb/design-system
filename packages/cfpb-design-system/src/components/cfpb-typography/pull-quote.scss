@@ -1,11 +1,11 @@
 @use './vars' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .m-pull-quote {
   &__body {
     color: $pull-quote-body;
 
-    @include heading-3(
+    @include legacy.legacy-heading-3(
       $has-margin-bottom: false,
       $has-margin-top: false,
       $is-responsive: true
@@ -15,7 +15,7 @@
   &__citation {
     color: $pull-quote-citation;
 
-    @include heading-5;
+    @include legacy.legacy-heading-5;
 
     &::before {
       // An em dash before the cited author name.

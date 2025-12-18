@@ -1,9 +1,9 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .m-btn-group {
   display: flex;
-  gap: math.div(15px, $base-font-size-px) + rem;
+  gap: math.div(15px, legacy.$legacy-base-font-size-px) + rem;
   flex-wrap: wrap;
   align-items: center;
   width: fit-content;

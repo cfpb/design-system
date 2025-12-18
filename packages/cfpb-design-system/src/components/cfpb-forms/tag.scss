@@ -1,19 +1,19 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-typography/mixins' as *;
 
 // Filter tags appear in filtered contexts, often as part of multiselects.
 .a-tag-filter {
-  line-height: math.div(19px, $base-font-size-px);
+  line-height: math.div(19px, legacy.$legacy-base-font-size-px);
 
   display: flex;
-  gap: math.div(10px, $btn-font-size) + rem;
+  gap: math.div(10px, legacy.$legacy-btn-font-size) + rem;
 
   border: 1px solid var(--teal);
   padding: 4px 6px;
   background-color: var(--teal-20);
-  border-radius: math.div(3px, $base-font-size-px) + rem;
+  border-radius: math.div(3px, legacy.$legacy-base-font-size-px) + rem;
   color: var(--black);
   text-align: left;
   min-width: fit-content;
@@ -70,7 +70,7 @@ a.a-tag-filter {
 // Topic tags
 .a-tag-topic {
   display: flex;
-  gap: math.div(5px, $btn-font-size) + rem;
+  gap: math.div(5px, legacy.$legacy-btn-font-size) + rem;
 }
 
 @include u-jump-link(
@@ -86,7 +86,7 @@ a.a-tag-filter {
 }
 
 // Tablet and above.
-@include respond-to-min($bp-sm-min) {
+@include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
   a.a-tag-topic__text {
     // Colors for :link, :visited, :hover, :focus, :active
     @include u-link-colors(
@@ -139,9 +139,9 @@ a.a-tag-filter {
   }
 
   // Tablet and above.
-  @include respond-to-min($bp-sm-min) {
+  @include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
     display: flex;
-    gap: math.div(15px, $btn-font-size) + em;
+    gap: math.div(15px, legacy.$legacy-btn-font-size) + em;
     flex-wrap: wrap;
 
     &--stacked {
@@ -152,7 +152,7 @@ a.a-tag-filter {
 
   &:has(.a-tag-filter) {
     display: flex;
-    gap: math.div(15px, $btn-font-size) + em;
+    gap: math.div(15px, legacy.$legacy-btn-font-size) + em;
     flex-wrap: wrap;
   }
 }

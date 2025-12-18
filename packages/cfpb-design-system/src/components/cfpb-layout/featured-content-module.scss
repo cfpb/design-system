@@ -1,15 +1,15 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .o-featured-content-module {
-  min-height: $fcm-min-height;
+  min-height: legacy.$legacy-fcm-min-height;
   position: relative;
   border: 1px solid var(--gray-40);
   background-color: var(--gray-5);
 
   &__text {
-    padding-top: math.div($grid-gutter-width, $base-font-size-px) + em;
-    padding-bottom: math.div($grid-gutter-width, $base-font-size-px) + em;
+    padding-top: math.div(legacy.$legacy-grid-gutter-width, legacy.$legacy-base-font-size-px) + em;
+    padding-bottom: math.div(legacy.$legacy-grid-gutter-width, legacy.$legacy-base-font-size-px) + em;
   }
 
   &__img {
@@ -17,29 +17,29 @@
   }
 
   // Mobile only.
-  @include respond-to-max($bp-xs-max) {
+  @include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max) {
     &__text {
       padding-right: math.div(
-          math.div($grid-gutter-width, 2),
-          $base-font-size-px
+          math.div(legacy.$legacy-grid-gutter-width, 2),
+          legacy.$legacy-base-font-size-px
         ) + em;
       padding-left: math.div(
-          math.div($grid-gutter-width, 2),
-          $base-font-size-px
+          math.div(legacy.$legacy-grid-gutter-width, 2),
+          legacy.$legacy-base-font-size-px
         ) + em;
     }
     &__visual {
       padding-right: math.div(
-          math.div($grid-gutter-width, 2),
-          $base-font-size-px
+          math.div(legacy.$legacy-grid-gutter-width, 2),
+          legacy.$legacy-base-font-size-px
         ) + em;
       padding-bottom: math.div(
-          math.div($grid-gutter-width, 2),
-          $base-font-size-px
+          math.div(legacy.$legacy-grid-gutter-width, 2),
+          legacy.$legacy-base-font-size-px
         ) + em;
       padding-left: math.div(
-          math.div($grid-gutter-width, 2),
-          $base-font-size-px
+          math.div(legacy.$legacy-grid-gutter-width, 2),
+          legacy.$legacy-base-font-size-px
         ) + em;
     }
     &__img {
@@ -49,10 +49,10 @@
   }
 
   // Tablet and above.
-  @include respond-to-min($bp-sm-min) {
+  @include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
     &__text {
-      padding-right: $fcm-visual-width + $grid-gutter-width;
-      padding-left: math.div($grid-gutter-width, $base-font-size-px) + em;
+      padding-right: legacy.$legacy-fcm-visual-width + legacy.$legacy-grid-gutter-width;
+      padding-left: math.div(legacy.$legacy-grid-gutter-width, legacy.$legacy-base-font-size-px) + em;
     }
     &__visual {
       height: 100%;
@@ -60,7 +60,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: $fcm-visual-width;
+      width: legacy.$legacy-fcm-visual-width;
     }
     &__img {
       max-width: none;

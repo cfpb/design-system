@@ -1,16 +1,16 @@
 @use 'sass:math';
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .m-slug-header {
   border-top: 1px solid $slug-header-border-thin;
 
   &__heading {
     display: inline-block;
-    padding-top: math.div(4px, $size-v) + em;
+    padding-top: math.div(4px, legacy.$legacy-size-v) + em;
     border-top: 5px solid $slug-header-border-thick;
     margin-top: -3px;
 
-    @include heading-5($has-margin-top: false);
+    @include legacy.legacy-heading-5($has-margin-top: false);
   }
 }

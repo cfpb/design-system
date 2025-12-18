@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 //
 // Unstyled list modifier
@@ -28,7 +28,7 @@
 
     // Assuming a natural space of 4px between inline block items
     // then the space between would be 8px (4px natural + 4px added).
-    margin-right: math.div(4px, $base-font-size-px) + em;
+    margin-right: math.div(4px, legacy.$legacy-base-font-size-px) + em;
     margin-bottom: 0;
   }
 }
@@ -40,7 +40,7 @@
 .m-list--links {
   .m-list__item {
     // Mobile only.
-    @include respond-to-max($bp-xs-max) {
+    @include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max) {
       margin-bottom: 0;
     }
   }

@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
 
 //
@@ -9,7 +9,7 @@
 
 .m-notification {
   display: none;
-  padding: math.div(15px, $base-font-size-px) + rem;
+  padding: math.div(15px, legacy.$legacy-base-font-size-px) + rem;
   background: $notification-bg;
   border: 1px solid $notification-border;
 
@@ -63,7 +63,7 @@
 
   &--visible {
     display: flex;
-    gap: math.div(5px, $base-font-size-px) + rem;
+    gap: math.div(5px, legacy.$legacy-base-font-size-px) + rem;
   }
 
   &__content {
@@ -76,42 +76,42 @@
   }
 
   &__message {
-    font-size: math.div(16px, $base-font-size-px) + rem;
+    font-size: math.div(16px, legacy.$legacy-base-font-size-px) + rem;
     line-height: 1.25;
     font-weight: 500;
 
     // Tablet and above.
-    @include respond-to-min($bp-sm-min) {
+    @include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
       // h4 size
-      font-size: math.div(18px, $base-font-size-px) + rem;
+      font-size: math.div(18px, legacy.$legacy-base-font-size-px) + rem;
     }
   }
 
   &__explanation {
-    margin-top: math.div(5px, $base-font-size-px) + rem;
-    margin-bottom: math.div(15px, $base-font-size-px) + rem;
+    margin-top: math.div(5px, legacy.$legacy-base-font-size-px) + rem;
+    margin-bottom: math.div(15px, legacy.$legacy-base-font-size-px) + rem;
   }
 
   // We need to provide a margin for links if an explanation is absent.
   &__message + .m-list {
-    margin-top: math.div(15px, $base-font-size-px) + rem;
+    margin-top: math.div(15px, legacy.$legacy-base-font-size-px) + rem;
   }
 
   // Tablet and above.
-  @include respond-to-min($bp-sm-min) {
+  @include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
     // Make adjustments to the icon, explanation, and links if at non-mobile.
     // Increase the icon size.
     .cf-icon-svg {
-      font-size: math.div(18px, $base-font-size-px) + rem;
+      font-size: math.div(18px, legacy.$legacy-base-font-size-px) + rem;
     } // Remove default margin between explanation and list of links.
     &__explanation {
       margin-bottom: 0;
     } // Decrease the margin between the links and the message/explanation.
     .m-list {
-      margin-top: math.div(5px, $base-font-size-px) + rem;
+      margin-top: math.div(5px, legacy.$legacy-base-font-size-px) + rem;
     } // Decrease the margin between link items.
     .m-list__item {
-      margin-bottom: math.div(5px, $base-font-size-px) + rem;
+      margin-bottom: math.div(5px, legacy.$legacy-base-font-size-px) + rem;
     }
   }
 }
@@ -120,7 +120,7 @@
 html[lang='ar'] .m-notification {
   .cf-icon-svg + .m-notification__content {
     padding-left: initial;
-    padding-right: math.div(25px, $base-font-size-px) + rem;
+    padding-right: math.div(25px, legacy.$legacy-base-font-size-px) + rem;
   }
 
   .m-list {

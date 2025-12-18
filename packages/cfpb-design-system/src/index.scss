@@ -1,66 +1,66 @@
-@forward 'abstracts';
-@forward 'base';
+@forward 'abstracts' as legacy-*;
+@forward 'base' as legacy-*;
 
 // Buttons.
-@forward 'components/cfpb-buttons/vars';
-@forward 'components/cfpb-buttons/button';
-@forward 'components/cfpb-buttons/button-group';
-@forward 'components/cfpb-buttons/button-link';
+@forward 'components/cfpb-buttons/vars' as legacy-*;
+@forward 'components/cfpb-buttons/button' as legacy-*;
+@forward 'components/cfpb-buttons/button-group' as legacy-*;
+@forward 'components/cfpb-buttons/button-link' as legacy-*;
 
 // Expandables.
-@forward 'components/cfpb-expandables/vars';
-@forward 'components/cfpb-expandables/expandable';
-@forward 'components/cfpb-expandables/expandable-group';
-@forward 'components/cfpb-expandables/summary';
-@forward 'components/cfpb-expandables/summary-minimal';
+@forward 'components/cfpb-expandables/vars' as legacy-*;
+@forward 'components/cfpb-expandables/expandable' as legacy-*;
+@forward 'components/cfpb-expandables/expandable-group' as legacy-*;
+@forward 'components/cfpb-expandables/summary' as legacy-*;
+@forward 'components/cfpb-expandables/summary-minimal' as legacy-*;
 
 // Forms.
-@forward 'components/cfpb-forms/form';
-@forward 'components/cfpb-forms/form-alert';
-@forward 'components/cfpb-forms/form-field';
-@forward 'components/cfpb-forms/label';
-@forward 'components/cfpb-forms/multiselect';
-@forward 'components/cfpb-forms/range';
-@forward 'components/cfpb-forms/search-input';
-@forward 'components/cfpb-forms/select';
-@forward 'components/cfpb-forms/tag';
-@forward 'components/cfpb-forms/text-input';
+@forward 'components/cfpb-forms/form' as legacy-*;
+@forward 'components/cfpb-forms/form-alert' as legacy-*;
+@forward 'components/cfpb-forms/form-field' as legacy-*;
+@forward 'components/cfpb-forms/label' as legacy-*;
+@forward 'components/cfpb-forms/multiselect' as legacy-*;
+@forward 'components/cfpb-forms/range' as legacy-*;
+@forward 'components/cfpb-forms/search-input' as legacy-*;
+@forward 'components/cfpb-forms/select' as legacy-*;
+@forward 'components/cfpb-forms/tag' as legacy-*;
+@forward 'components/cfpb-forms/text-input' as legacy-*;
 
 // Icons.
-@forward 'components/cfpb-icons/icon';
+@forward 'components/cfpb-icons/icon' as legacy-*;
 
 // Layout.
-@forward 'components/cfpb-layout/card-group';
-@forward 'components/cfpb-layout/card';
-@forward 'components/cfpb-layout/email-signup';
-@forward 'components/cfpb-layout/featured-content-module';
-@forward 'components/cfpb-layout/hero';
-@forward 'components/cfpb-layout/layout';
-@forward 'components/cfpb-layout/text-introduction';
-@forward 'components/cfpb-layout/well';
+@forward 'components/cfpb-layout/card-group' as legacy-*;
+@forward 'components/cfpb-layout/card' as legacy-*;
+@forward 'components/cfpb-layout/email-signup' as legacy-*;
+@forward 'components/cfpb-layout/featured-content-module' as legacy-*;
+@forward 'components/cfpb-layout/hero' as legacy-*;
+@forward 'components/cfpb-layout/layout' as legacy-*;
+@forward 'components/cfpb-layout/text-introduction' as legacy-*;
+@forward 'components/cfpb-layout/well' as legacy-*;
 
 // Notifications.
-@forward 'components/cfpb-notifications/vars';
-@forward 'components/cfpb-notifications/banner';
-@forward 'components/cfpb-notifications/notification';
+@forward 'components/cfpb-notifications/vars' as legacy-*;
+@forward 'components/cfpb-notifications/banner' as legacy-*;
+@forward 'components/cfpb-notifications/notification' as legacy-*;
 
 // Pagination.
-@forward 'components/cfpb-pagination/vars';
-@forward 'components/cfpb-pagination/pagination';
+@forward 'components/cfpb-pagination/vars' as legacy-*;
+@forward 'components/cfpb-pagination/pagination' as legacy-*;
 
 // Tables.
-@forward 'components/cfpb-tables/vars';
-@forward 'components/cfpb-tables/table';
+@forward 'components/cfpb-tables/vars' as legacy-*;
+@forward 'components/cfpb-tables/table' as legacy-*;
 
 // Typography.
-@forward 'components/cfpb-typography/vars';
-@forward 'components/cfpb-typography/date';
-@forward 'components/cfpb-typography/link';
-@forward 'components/cfpb-typography/list';
-@forward 'components/cfpb-typography/meta-header';
-@forward 'components/cfpb-typography/pull-quote';
-@forward 'components/cfpb-typography/slug-header';
-@forward 'components/cfpb-typography/tagline';
+@forward 'components/cfpb-typography/vars' as legacy-*;
+@forward 'components/cfpb-typography/date' as legacy-*;
+@forward 'components/cfpb-typography/link' as legacy-*;
+@forward 'components/cfpb-typography/list' as legacy-*;
+@forward 'components/cfpb-typography/meta-header' as legacy-*;
+@forward 'components/cfpb-typography/pull-quote' as legacy-*;
+@forward 'components/cfpb-typography/slug-header' as legacy-*;
+@forward 'components/cfpb-typography/tagline' as legacy-*;
 
 // Utilities.
 @forward 'utilities';
@@ -72,6 +72,6 @@
 // cfpb-button
 @forward 'elements/cfpb-button/cfpb-button';
 @forward 'elements/cfpb-button/cfpb-button-group';
-@forward 'elements/cfpb-button/cfpb-button-link'; 
+@forward 'elements/cfpb-button/cfpb-button-link';
 @forward 'elements/cfpb-button/cfpb-button.component';
 @forward 'elements/cfpb-button/vars';

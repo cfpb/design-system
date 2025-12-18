@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 /* ==========================================================================
    Design System
@@ -32,15 +32,15 @@
 }
 
 // Tablet and above.
-@include respond-to-min($bp-sm-min) {
+@include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
   .o-table--striped {
     @include u-striped-table;
   }
 }
 
 // We don't want responsive table styles applied to the `print` media type
-// so we're not using @include respond-to-max($bp-xs-max ) here.
-@media only screen and (max-width: $bp-xs-max) {
+// so we're not using @include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max ) here.
+@media only screen and (max-width: legacy.$legacy-bp-xs-max) {
   .o-table {
     width: 100%;
   }
@@ -78,12 +78,12 @@
     td[data-label]::before {
       display: block;
       margin-top: 0;
-      margin-bottom: math.div(5px, $base-font-size-px) + em;
+      margin-bottom: math.div(5px, legacy.$legacy-base-font-size-px) + em;
       content: attr(data-label);
       line-height: 1.83333333;
 
       // h5 size.
-      font-size: math.div($size-v, $base-font-size-px) + em;
+      font-size: math.div(legacy.$legacy-size-v, legacy.$legacy-base-font-size-px) + em;
       font-weight: 600;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -91,7 +91,7 @@
 
     td:last-child,
     [data-display-table='cell']:last-child {
-      margin-bottom: math.div(30px, $base-font-size-px) + em;
+      margin-bottom: math.div(30px, legacy.$legacy-base-font-size-px) + em;
     }
   }
 }

@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
 
 //
@@ -13,7 +13,7 @@
 ) {
   .#{$jump-link-class} {
     @if $is-gold {
-      font-size: math.div(14px, $base-font-size-px) + rem;
+      font-size: math.div(14px, legacy.$legacy-base-font-size-px) + rem;
       font-weight: 600;
       text-transform: uppercase;
       color: var(--gold-80);
@@ -33,15 +33,15 @@
     }
 
     // Mobile only.
-    @include respond-to-max($bp-xs-max) {
+    @include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max) {
       position: relative;
       display: flex;
       align-items: center;
-      gap: math.div(5px, $base-font-size-px) + rem;
+      gap: math.div(5px, legacy.$legacy-base-font-size-px) + rem;
 
       box-sizing: border-box;
-      padding-top: math.div(10px, $base-font-size-px) + em;
-      padding-bottom: math.div(10px, $base-font-size-px) + em;
+      padding-top: math.div(10px, legacy.$legacy-base-font-size-px) + em;
+      padding-bottom: math.div(10px, legacy.$legacy-base-font-size-px) + em;
 
       // 100% width is needed when block or jump link are applied to a <button>.
       width: 100%;
@@ -74,7 +74,7 @@
     }
 
     // Mobile only.
-    @include respond-to-max($bp-xs-max) {
+    @include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max) {
       text-decoration: none;
       border-top-style: dotted;
       border-bottom-style: dotted;
@@ -108,7 +108,7 @@
 
 @mixin u-jump-link-group($jump-link-class: 'a-link--jump') {
   // Mobile only.
-  @include respond-to-max($bp-xs-max) {
+  @include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max) {
     // Handle the borders of jump links that are adjacent in a list.
     li:has(.#{$jump-link-class}) + li:has(.#{$jump-link-class}) {
       .#{$jump-link-class} {

@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 @use 'tippy.js/dist/tippy.css';
 @use 'tippy.js/dist/border.css';
 
@@ -9,7 +9,7 @@
   border: 1px solid var(--gray-40);
   border-radius: 0;
   color: var(--black);
-  padding: math.div(15px, $base-font-size-px) + rem;
+  padding: math.div(15px, legacy.$legacy-base-font-size-px) + rem;
 
   .tippy-arrow {
     color: var(--gray-5);
@@ -17,12 +17,12 @@
 
   .tippy-heading {
     font-weight: 500;
-    font-size: math.div(18px, $base-font-size-px) + rem;
+    font-size: math.div(18px, legacy.$legacy-base-font-size-px) + rem;
   }
 
   .tippy-body {
-    font-size: math.div(16px, $base-font-size-px) + rem;
-    margin-top: math.div(15px, $base-font-size-px) + rem;
+    font-size: math.div(16px, legacy.$legacy-base-font-size-px) + rem;
+    margin-top: math.div(15px, legacy.$legacy-base-font-size-px) + rem;
   }
 }
 

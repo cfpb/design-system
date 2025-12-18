@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 // Hero variables
 $hero-desktop-height: 285px;
@@ -7,26 +7,26 @@ $hero-desktop-height: 285px;
 // Jumbo hero text mixin.
 @mixin u-jumbo-text() {
   .m-hero__subhead {
-    @include u-lead-paragraph;
+    @include legacy.legacy-u-lead-paragraph;
   }
 
   // Tablet and above.
-  @include respond-to-min($bp-sm-min) {
+  @include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
     .m-hero__subhead {
-      @include heading-3($is-responsive: false);
+      @include legacy.legacy-heading-3($is-responsive: false);
     }
   }
 
   // Large desktop.
-  @include respond-to-min($bp-lg-min) {
+  @include legacy.legacy-respond-to-min(legacy.$legacy-bp-lg-min) {
     .m-hero__wrapper {
       min-height: $hero-desktop-height;
     }
     .m-hero__heading {
-      @include u-superheading;
+      @include legacy.legacy-u-superheading;
     }
     .m-hero__subhead {
-      @include heading-2($is-responsive: false, $font-weight: 400);
+      @include legacy.legacy-heading-2($is-responsive: false, $font-weight: 400);
     }
   }
 }
@@ -37,25 +37,25 @@ $hero-desktop-height: 285px;
 
   &__wrapper {
     display: grid;
-    max-width: ($grid-wrapper-width - $grid-gutter-width);
+    max-width: (legacy.$legacy-grid-wrapper-width - legacy.$legacy-grid-gutter-width);
     margin: 0 auto;
-    padding-top: $grid-gutter-width;
-    padding-bottom: $grid-gutter-width;
+    padding-top: legacy.$legacy-grid-gutter-width;
+    padding-bottom: legacy.$legacy-grid-gutter-width;
   }
 
   &__text {
-    padding-right: math.div($grid-gutter-width, 2);
-    padding-left: math.div($grid-gutter-width, 2);
+    padding-right: math.div(legacy.$legacy-grid-gutter-width, 2);
+    padding-left: math.div(legacy.$legacy-grid-gutter-width, 2);
   }
 
   &__heading {
-    @include heading-1($is-responsive: false);
+      @include legacy.legacy-heading-1($is-responsive: false);
   }
 
   &__subhead {
     // Not using the `.heading-3()` mixin here because we want the weight
     // to remain Regular on smaller screens.
-    font-size: $size-iii;
+    font-size: legacy.$legacy-size-iii;
     line-height: 1.25;
   }
 
@@ -103,10 +103,10 @@ $hero-desktop-height: 285px;
 }
 
 // Mobile only.
-@include respond-to-max($bp-xs-max) {
+@include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max) {
   .m-hero {
     &__image-wrapper {
-      margin-top: math.div($grid-gutter-width, $base-font-size-px) + em;
+      margin-top: math.div(legacy.$legacy-grid-gutter-width, legacy.$legacy-base-font-size-px) + em;
     }
 
     &--overlay {
@@ -127,26 +127,26 @@ $hero-desktop-height: 285px;
 }
 
 // Tablet and below.
-@include respond-to-max($bp-sm-max) {
+@include legacy.legacy-respond-to-max(legacy.$legacy-bp-sm-max) {
   .m-hero {
     &__heading {
-      @include heading-2($is-responsive: false);
+      @include legacy.legacy-heading-2($is-responsive: false);
     }
 
     &__subhead {
-      font-size: $size-iv;
+      font-size: legacy.$legacy-size-iv;
     }
   }
 }
 
 // Tablet and above.
-@include respond-to-min($bp-sm-min) {
+@include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
   .m-hero {
     &__wrapper {
       grid-template-columns: 7fr 5fr;
-      padding-right: math.div($grid-gutter-width, 2);
-      padding-left: math.div($grid-gutter-width, 2);
-      min-height: $hero-desktop-height - ($grid-gutter-width * 2);
+      padding-right: math.div(legacy.$legacy-grid-gutter-width, 2);
+      padding-left: math.div(legacy.$legacy-grid-gutter-width, 2);
+      min-height: $hero-desktop-height - (legacy.$legacy-grid-gutter-width * 2);
     }
 
     &__text {
@@ -154,9 +154,9 @@ $hero-desktop-height: 285px;
     }
 
     &__image-wrapper {
-      padding-right: math.div($grid-gutter-width, 2);
+      padding-right: math.div(legacy.$legacy-grid-gutter-width, 2);
       padding-left: math.div(
-        $grid-gutter-width,
+        legacy.$legacy-grid-gutter-width,
         2
       ); // Vertically center hero images
       display: flex;
@@ -166,8 +166,8 @@ $hero-desktop-height: 285px;
     &--bleeding {
       .m-hero__image-wrapper {
         width: 100%;
-        margin-top: math.div($grid-gutter-width * -1.5, $base-font-size-px) + em;
-        margin-bottom: math.div($grid-gutter-width * -1.5, $base-font-size-px) +
+        margin-top: math.div(legacy.$legacy-grid-gutter-width * -1.5, legacy.$legacy-base-font-size-px) + em;
+        margin-bottom: math.div(legacy.$legacy-grid-gutter-width * -1.5, legacy.$legacy-base-font-size-px) +
           em;
       }
       .m-hero__image {
@@ -215,25 +215,25 @@ $hero-desktop-height: 285px;
 }
 
 // Large desktop.
-@include respond-to-min($bp-lg-min) {
+@include legacy.legacy-respond-to-min(legacy.$legacy-bp-lg-min) {
   .m-hero {
     &__wrapper {
-      padding-top: math.div(($grid-gutter-width * 1.5), $base-font-size-px) + em;
-      padding-bottom: math.div(($grid-gutter-width * 1.5), $base-font-size-px) +
+      padding-top: math.div((legacy.$legacy-grid-gutter-width * 1.5), legacy.$legacy-base-font-size-px) + em;
+      padding-bottom: math.div((legacy.$legacy-grid-gutter-width * 1.5), legacy.$legacy-base-font-size-px) +
         em;
-      min-height: $hero-desktop-height - (($grid-gutter-width * 1.5) * 2);
+      min-height: $hero-desktop-height - ((legacy.$legacy-grid-gutter-width * 1.5) * 2);
     }
     &--bleeding {
       .m-hero__image-wrapper {
-        margin-top: math.div($grid-gutter-width * -1.5, $base-font-size-px) + em;
-        margin-bottom: math.div($grid-gutter-width * -1.5, $base-font-size-px) +
+        margin-top: math.div(legacy.$legacy-grid-gutter-width * -1.5, legacy.$legacy-base-font-size-px) + em;
+        margin-bottom: math.div(legacy.$legacy-grid-gutter-width * -1.5, legacy.$legacy-base-font-size-px) +
           em;
       }
     }
     &--50-50 {
       .m-hero__wrapper {
         // Enlarge the 50/50 height on large screens to maximize the image size
-        min-height: $hero-desktop-height + ($grid-gutter-width * 2);
+        min-height: $hero-desktop-height + (legacy.$legacy-grid-gutter-width * 2);
       }
     }
   }

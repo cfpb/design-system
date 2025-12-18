@@ -1,32 +1,32 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .a-label {
   display: inline-block;
 
   &__helper {
-    color: $label-helper;
-    font-size: math.div(16px, $base-font-size-px) + rem;
+    color: legacy.$legacy-label-helper;
+    font-size: math.div(16px, legacy.$legacy-base-font-size-px) + rem;
     font-weight: normal;
 
     &--block {
       display: block;
 
       // Add a gap between the label helper and label.
-      margin-top: math.div(10px, $size-vi) + em;
+      margin-top: math.div(10px, legacy.$legacy-size-vi) + em;
     }
   }
 
   &--heading {
     display: block;
 
-    margin-bottom: math.div(10px, $size-iv) + em;
+    margin-bottom: math.div(10px, legacy.$legacy-size-iv) + em;
 
-    @include heading-4($has-margin-bottom: false);
+      @include legacy.legacy-heading-4($has-margin-bottom: false);
 
     // Add a gap between the label helper and label heading
     .a-label__helper--block {
-      margin-top: math.div(10px, $base-font-size-px) + rem;
+      margin-top: math.div(10px, legacy.$legacy-base-font-size-px) + rem;
     }
   }
 }

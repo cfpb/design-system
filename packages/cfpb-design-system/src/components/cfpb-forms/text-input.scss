@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 .a-text-input {
   // Theme variables.
@@ -15,7 +15,7 @@
   // Reset the browser's default styling.
   appearance: none;
   display: inline-block;
-  padding: math.div(7px, $base-font-size-px) + em;
+  padding: math.div(7px, legacy.$legacy-base-font-size-px) + em;
   border: 1px solid var(--input-border);
   outline: 0 solid var(--input-border);
   background: var(--input-bg);

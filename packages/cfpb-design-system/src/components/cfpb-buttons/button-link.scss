@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 //
 // Button link
@@ -59,7 +59,7 @@ $a: Link active color.
 
   &:has(svg) {
     // Button links should be closer to their icon.
-    gap: math.div(5px, $base-font-size-px) + rem;
+    gap: math.div(5px, legacy.$legacy-base-font-size-px) + rem;
 
     // Button links shouldn't have a divider.
     &::before {
@@ -70,10 +70,10 @@ $a: Link active color.
 
 @include u-btn-link-states(
   '.a-btn--link',
-  $link-text,
-  $link-text-hover,
-  $link-text,
-  $link-text-active
+  legacy.$legacy-link-text,
+  legacy.$legacy-link-text-hover,
+  legacy.$legacy-link-text,
+  legacy.$legacy-link-text-active
 );
 
 //

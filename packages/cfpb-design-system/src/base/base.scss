@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '../abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 /* ==========================================================================
    Design System
@@ -10,11 +10,11 @@
 // Type hierarchy
 //
 body {
-  color: $text;
+  color: legacy.$legacy-text;
   font-family: var(--font-stack);
-  font-size: math.div($base-font-size, 16) * 100%;
+  font-size: math.div(legacy.$legacy-base-font-size, 16) * 100%;
   font-size-adjust: var(--font-adjust-body);
-  line-height: $base-line-height;
+  line-height: legacy.$legacy-base-line-height;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -29,7 +29,7 @@ textarea {
   // Characters in some languages, like Chinese, have a larger x-height,
   // which will make the button taller than the input.
   // Fix that by setting the line height on the button and the input.
-  line-height: math.div(19px, $base-font-size-px);
+  line-height: math.div(19px, legacy.$legacy-base-font-size-px);
   font-size-adjust: var(--font-adjust-body);
 }
 
@@ -73,40 +73,40 @@ h6 {
 
 h1,
 .h1 {
-  @include heading-1;
+  @include legacy.legacy-heading-1;
 }
 
 h2,
 .h2 {
-  @include heading-2;
+  @include legacy.legacy-heading-2;
 }
 
 h3,
 .h3 {
-  @include heading-3;
+  @include legacy.legacy-heading-3;
 }
 
 h4,
 .h4 {
-  @include heading-4;
+  @include legacy.legacy-heading-4;
 }
 
 h5,
 .h5 {
-  @include heading-5;
+  @include legacy.legacy-heading-5;
 }
 
 h6,
 .h6 {
-  @include heading-6;
+  @include legacy.legacy-heading-6;
 }
 
 .lead-paragraph {
-  @include u-lead-paragraph;
+  @include legacy.legacy-u-lead-paragraph;
 }
 
 .superheading {
-  @include u-superheading;
+  @include legacy.legacy-u-superheading;
 }
 
 //
@@ -121,7 +121,7 @@ figure,
 table,
 blockquote {
   margin-top: 0;
-  margin-bottom: math.div(15px, $base-font-size-px) + em;
+  margin-bottom: math.div(15px, legacy.$legacy-base-font-size-px) + em;
 
   &:last-child {
     margin-bottom: 0;
@@ -130,18 +130,18 @@ blockquote {
 
 p + ul,
 p + ol {
-  margin-top: math.div(-5px, $base-font-size-px) + em;
+  margin-top: math.div(-5px, legacy.$legacy-base-font-size-px) + em;
 }
 
 ul ul,
 ol ol,
 ul ol,
 ol ul {
-  margin-top: math.div(8px, $base-font-size-px) + em;
+  margin-top: math.div(8px, legacy.$legacy-base-font-size-px) + em;
 }
 
 li {
-  margin-bottom: math.div(8px, $base-font-size-px) + em;
+  margin-bottom: math.div(8px, legacy.$legacy-base-font-size-px) + em;
 
   &:last-child,
   nav & {
@@ -154,9 +154,9 @@ li {
 //
 
 a {
-  color: $link-text;
+  color: legacy.$legacy-link-text;
 
-  text-decoration-color: $link-underline;
+  text-decoration-color: legacy.$legacy-link-underline;
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-decoration-style: dotted;
@@ -167,15 +167,15 @@ a {
 
   &:visited,
   &.visited {
-    text-decoration-color: $link-underline-visited;
-    color: $link-text-visited;
+    text-decoration-color: legacy.$legacy-link-underline-visited;
+    color: legacy.$legacy-link-text-visited;
   }
 
   &:hover,
   &.hover {
     text-decoration-style: solid;
-    text-decoration-color: $link-underline-hover;
-    color: $link-text-hover;
+    text-decoration-color: legacy.$legacy-link-underline-hover;
+    color: legacy.$legacy-link-text-hover;
   }
 
   &:focus,
@@ -187,8 +187,8 @@ a {
   &:active,
   &.active {
     text-decoration-style: solid;
-    text-decoration-color: $link-underline-active;
-    color: $link-text-active;
+    text-decoration-color: legacy.$legacy-link-underline-active;
+    color: legacy.$legacy-link-text-active;
   }
 }
 
@@ -202,7 +202,7 @@ nav a {
 //
 
 ul {
-  padding-left: math.div(18px, $base-font-size-px) + em;
+  padding-left: math.div(18px, legacy.$legacy-base-font-size-px) + em;
   list-style: square;
 }
 
@@ -213,12 +213,12 @@ ul ul {
 ol {
   // Slightly larger than necessary, but this is the minimum value
   // for numbers to not be partially in the margin in Internet Explorer.
-  padding-left: math.div(21px, $base-font-size-px) + em;
+  padding-left: math.div(21px, legacy.$legacy-base-font-size-px) + em;
 
   li:nth-last-child(n + 10),
   li:nth-last-child(n + 10) ~ li {
     // 0.5625rem
-    margin-left: math.div(9px, $base-font-size-px) + rem;
+    margin-left: math.div(9px, legacy.$legacy-base-font-size-px) + rem;
   }
 }
 
@@ -249,27 +249,27 @@ nav ol ol {
 //
 
 caption {
-  margin-bottom: math.div(10px, $base-font-size-px) + em;
+  margin-bottom: math.div(10px, legacy.$legacy-base-font-size-px) + em;
   text-align: left;
 }
 
 th,
 td {
-  padding: math.div(10px, $base-font-size-px) + em;
+  padding: math.div(10px, legacy.$legacy-base-font-size-px) + em;
 
   thead & {
     // 10px / 14px
-    padding: math.div(10px, $size-v) + em;
-    background: $table-head-bg;
-    color: $table-head-text;
-    font-size: math.div(16px, $base-font-size-px) + em;
+    padding: math.div(10px, legacy.$legacy-size-v) + em;
+    background: legacy.$legacy-table-head-bg;
+    color: legacy.$legacy-table-head-text;
+    font-size: math.div(16px, legacy.$legacy-base-font-size-px) + em;
     vertical-align: top;
   }
 }
 
 thead,
 tbody tr {
-  border-bottom: 1px solid $table-border;
+  border-bottom: 1px solid legacy.$legacy-table-border;
 }
 
 th {
@@ -306,13 +306,13 @@ th {
 //
 
 blockquote {
-  margin-right: math.div(15px, $base-font-size-px) + em;
-  margin-left: math.div(15px, $base-font-size-px) + em;
+  margin-right: math.div(15px, legacy.$legacy-base-font-size-px) + em;
+  margin-left: math.div(15px, legacy.$legacy-base-font-size-px) + em;
 
   // Tablet and above.
-  @include respond-to-min($bp-sm-min) {
-    margin-right: math.div(30px, $base-font-size-px) + em;
-    margin-left: math.div(30px, $base-font-size-px) + em;
+  @include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
+    margin-right: math.div(30px, legacy.$legacy-base-font-size-px) + em;
+    margin-left: math.div(30px, legacy.$legacy-base-font-size-px) + em;
   }
 }
 
@@ -350,21 +350,21 @@ figure {
 
 pre,
 code {
-  background: $code-bg;
+  background: legacy.$legacy-code-bg;
   border-radius: 4px;
-  color: $code-text;
+  color: legacy.$legacy-code-text;
   font-family: 'Input Mono', Consolas, Monaco, 'Courier New', monospace;
 }
 
 code {
-  padding: math.div(3px, $size-code) + em math.div(3px, $size-code) + em 0;
-  font-size: math.div($size-code, $base-font-size-px) + em;
+  padding: math.div(3px, legacy.$legacy-size-code) + em math.div(3px, legacy.$legacy-size-code) + em 0;
+  font-size: math.div(legacy.$legacy-size-code, legacy.$legacy-base-font-size-px) + em;
 }
 
 pre {
   display: block;
-  padding: math.div(10px, $base-font-size-px) + em
-    math.div(15px, $base-font-size-px) + em;
+  padding: math.div(10px, legacy.$legacy-base-font-size-px) + em
+    math.div(15px, legacy.$legacy-base-font-size-px) + em;
   white-space: pre-wrap;
   overflow-wrap: break-word;
 

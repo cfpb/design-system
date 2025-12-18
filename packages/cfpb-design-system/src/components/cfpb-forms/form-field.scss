@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
 
 .m-form-field {
@@ -21,7 +21,7 @@
   }
 
   .a-label + .a-text-input {
-    margin-top: math.div(5px, $base-font-size-px) + em;
+    margin-top: math.div(5px, legacy.$legacy-base-font-size-px) + em;
   }
 
   &--checkbox,
@@ -30,7 +30,7 @@
       display: inline-grid;
 
       // 30px is width of checkbox/radio button plus the needed padding.
-      grid-template-columns: math.div(30px, $base-font-size-px) + em auto;
+      grid-template-columns: math.div(30px, legacy.$legacy-base-font-size-px) + em auto;
       vertical-align: top;
       cursor: pointer;
 
@@ -43,8 +43,8 @@
         grid-row-end: 3;
         border: 1px solid var(--choice-border);
         outline: var(--choice-border-width-addendum) solid var(--choice-border);
-        height: math.div(18px, $base-font-size-px) + em;
-        width: math.div(18px, $base-font-size-px) + em;
+        height: math.div(18px, legacy.$legacy-base-font-size-px) + em;
+        width: math.div(18px, legacy.$legacy-base-font-size-px) + em;
         margin-right: 10px;
         background-color: var(--choice-bg);
         content: '';
@@ -139,7 +139,7 @@
       &:checked + .a-label::before {
         --cfpb-background-icon-svg: 'approved';
 
-        background-size: auto $cf-icon-height;
+        background-size: auto legacy.$legacy-cf-icon-height;
         background-repeat: no-repeat;
         background-position: center 0;
       }
@@ -216,21 +216,21 @@
       box-sizing: border-box;
       width: 100%;
       padding: 15px;
-      background-color: $form-field-input-lg-target-bg;
+      background-color: legacy.$legacy-form-field-input-lg-target-bg;
     }
 
     .a-checkbox,
     .a-radio {
       &:checked + .a-label {
-        background-color: $form-field-input-lg-target-bg-selected;
-        box-shadow: inset 0 0 0 1px $form-field-input-lg-target-border;
+        background-color: legacy.$legacy-form-field-input-lg-target-bg-selected;
+        box-shadow: inset 0 0 0 1px legacy.$legacy-form-field-input-lg-target-border;
       }
 
       &:hover + .a-label,
       &.hover + .a-label,
       &:focus + .a-label,
       &.focus + .a-label {
-        box-shadow: inset 0 0 0 2px $form-field-input-lg-target-border;
+        box-shadow: inset 0 0 0 2px legacy.$legacy-form-field-input-lg-target-border;
       }
 
       &:focus + .a-label,
@@ -244,7 +244,7 @@
       &:hover:disabled + .a-label {
         color: var(--choice-label-disabled);
         box-shadow: none;
-        background-color: $form-field-input-lg-target-bg-disabled;
+        background-color: legacy.$legacy-form-field-input-lg-target-bg-disabled;
       }
 
       &:checked:disabled + .a-label {
@@ -260,7 +260,7 @@
   // with-button forms in organisms/form.scss; we should find a way to merge
   // these to be less repetitive.
   .a-form-alert {
-    margin-top: math.div(math.div($grid-gutter-width, 2), $base-font-size-px) +
+    margin-top: math.div(math.div(legacy.$legacy-grid-gutter-width, 2), legacy.$legacy-base-font-size-px) +
       em;
   }
 }

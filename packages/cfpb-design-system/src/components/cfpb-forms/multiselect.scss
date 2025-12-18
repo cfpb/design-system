@@ -1,23 +1,23 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 // Initial and no-js state.
 select.o-multiselect {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: math.div(7px, $base-font-size-px) + em;
+  padding: math.div(7px, legacy.$legacy-base-font-size-px) + em;
 
   // Fixed height breaks the bottom border
   // mid-character to indicate there's more content.
   height: 5.5em;
-  padding-top: math.div(4px, $base-font-size-px) + em;
-  padding-bottom: math.div(4px, $base-font-size-px) + em;
+  padding-top: math.div(4px, legacy.$legacy-base-font-size-px) + em;
+  padding-bottom: math.div(4px, legacy.$legacy-base-font-size-px) + em;
   border: 1px solid var(--select-border-default);
 
   option {
-    padding: math.div(2px, $base-font-size-px) + em
-      math.div(6px, $base-font-size-px) + em;
+    padding: math.div(2px, legacy.$legacy-base-font-size-px) + em
+      math.div(6px, legacy.$legacy-base-font-size-px) + em;
   }
 }
 
@@ -29,7 +29,7 @@ select.o-multiselect {
 
     &::after {
       // Arrow box width must be odd size to properly center the bg image
-      width: math.div($select-height, $base-font-size-px) + em;
+      width: math.div(legacy.$legacy-select-height, legacy.$legacy-base-font-size-px) + em;
       box-sizing: border-box;
       border: 1px solid var(--select-border-default);
       position: absolute;
@@ -40,7 +40,7 @@ select.o-multiselect {
 
       --cfpb-background-icon-svg: 'down';
 
-      background-size: auto $cf-icon-height;
+      background-size: auto legacy.$legacy-cf-icon-height;
       background-repeat: no-repeat;
       background-position: center center;
       content: '';
@@ -106,7 +106,7 @@ select.o-multiselect {
 
     li:first-child {
       .a-label {
-        padding-top: math.div(10px, $base-font-size-px) + em;
+        padding-top: math.div(10px, legacy.$legacy-base-font-size-px) + em;
       }
     }
 
@@ -116,7 +116,7 @@ select.o-multiselect {
 
     &.u-no-results,
     &.u-max-selections {
-      padding: math.div(10px, $base-font-size-px) + em;
+      padding: math.div(10px, legacy.$legacy-base-font-size-px) + em;
 
       li {
         display: none;
@@ -141,10 +141,10 @@ select.o-multiselect {
 
     .a-label {
       box-sizing: border-box;
-      padding-top: math.div(5px, $base-font-size-px) + em;
+      padding-top: math.div(5px, legacy.$legacy-base-font-size-px) + em;
       padding-right: 0;
-      padding-bottom: math.div(5px, $base-font-size-px) + em;
-      padding-left: math.div(10px, $base-font-size-px) + em;
+      padding-bottom: math.div(5px, legacy.$legacy-base-font-size-px) + em;
+      padding-left: math.div(10px, legacy.$legacy-base-font-size-px) + em;
       width: 100%;
     }
   }

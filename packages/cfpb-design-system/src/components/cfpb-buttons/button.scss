@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 
 //
 // Default button
@@ -23,16 +23,16 @@ input.a-btn::-moz-focus-inner {
 @mixin a-btn() {
   appearance: none;
   display: flex;
-  gap: math.div(10px, $base-font-size-px) + rem;
+  gap: math.div(10px, legacy.$legacy-base-font-size-px) + rem;
 
   box-sizing: border-box;
-  padding: math.div($btn-v-padding, $btn-font-size) + em
-    math.div($btn-h-padding, $btn-font-size) + em;
+  padding: math.div(legacy.$legacy-btn-v-padding, legacy.$legacy-btn-font-size) + em
+    math.div(legacy.$legacy-btn-h-padding, legacy.$legacy-btn-font-size) + em;
   border: 0;
   margin: 0;
-  border-radius: math.div($btn-border-radius-size, $btn-font-size) + em;
+  border-radius: math.div(legacy.$legacy-btn-border-radius-size, legacy.$legacy-btn-font-size) + em;
   cursor: pointer;
-  font-size: math.div($btn-font-size, $base-font-size-px) + em;
+  font-size: math.div(legacy.$legacy-btn-font-size, legacy.$legacy-base-font-size-px) + em;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
@@ -169,7 +169,7 @@ input.a-btn::-moz-focus-inner {
   //
   &--full-on-xs {
     // Mobile only.
-    @include respond-to-max($bp-xs-max) {
+    @include legacy.legacy-respond-to-max(legacy.$legacy-bp-xs-max) {
       width: 100%;
     }
   }

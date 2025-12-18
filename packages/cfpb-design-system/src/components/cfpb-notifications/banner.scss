@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/legacy' as legacy;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
 
 //
@@ -12,7 +12,7 @@ $banner-dark-background: var(--teal-dark);
 $banner-dark-foreground: var(--white);
 
 .o-banner {
-  padding: math.div(math.div($grid-gutter-width, 2), $base-font-size-px) + em 0;
+  padding: math.div(math.div(legacy.$legacy-grid-gutter-width, 2), legacy.$legacy-base-font-size-px) + em 0;
   background: var(--gold-10);
   border-bottom: 1px solid var(--gray-40);
   font-size: 0.875em;
@@ -54,7 +54,7 @@ $banner-dark-foreground: var(--white);
   }
 
   // Tablet and above.
-  @include respond-to-min($bp-sm-min) {
+  @include legacy.legacy-respond-to-min(legacy.$legacy-bp-sm-min) {
     font-size: 1em;
   }
 }

@@ -29,6 +29,7 @@ $a: Link active color.
       text-decoration-style: solid;
       background-color: transparent;
       color: $h;
+      box-shadow: none; // Added by secondary variant.
     }
 
     &:focus,
@@ -49,6 +50,10 @@ $a: Link active color.
 }
 
 .a-btn--link {
+  // Remove any border and background add by primary and secondary button.
+  box-shadow: none;
+  background-color: transparent;
+
   // Padding added so the focus rectangle falls below the underline.
   padding: 1.5px 0;
   border-radius: 0;

@@ -155,7 +155,7 @@ input.a-btn::-moz-focus-inner {
     &.active {
       background-color: var(--btn-disabled-bg);
       color: var(--btn-disabled-text);
-      cursor: default; // Fallback for IE/Opera
+      box-shadow: none; // Added by secondary variant.
       cursor: not-allowed;
     }
 

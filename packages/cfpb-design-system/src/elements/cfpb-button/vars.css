@@ -2,7 +2,7 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-:host {
+:root {
   --btn-bg: var(--pacific);
   --btn-bg-active: var(--navy);
   --btn-bg-hover: var(--pacific-dark);

@@ -2,7 +2,7 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-:host {
+:root {
   --block-bg: var(--gray-5);
   --block-border: var(--gray-40);
   --choice-bg-default: var(--white);

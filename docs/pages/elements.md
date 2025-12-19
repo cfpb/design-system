@@ -29,6 +29,10 @@ variation_groups:
 
             <cfpb-icon-text disabled>Disabled state {% include icons/download.svg %}</cfpb-icon-text>
 
+            <br>
+
+            <cfpb-icon-text style="--icon-text-divider: var(--red-60)">{% include icons/warning.svg %} Warning state</cfpb-icon-text>
+
             <br><hr><br>
 
             <p>
@@ -36,6 +40,11 @@ variation_groups:
             </p>
             <p><cfpb-icon-text id="icon-text-example">{% include icons/bank.svg %} Example icon-text component {% include icons/download.svg %}</cfpb-icon-text></p>
             <p>
+
+            <input type="checkbox" id="icon-text-example-warning" />
+            <label for="icon-text-example-warning">Warning</label>
+
+            </p><p>
 
             <input type="checkbox" id="icon-text-example-disabled" />
             <label for="icon-text-example-disabled">Disabled</label>
@@ -50,9 +59,18 @@ variation_groups:
             (function(){
             const iconTextEx = document.querySelector('#icon-text-example');
 
+            const warBtn = document.querySelector('#icon-text-example-warning');
             const disBtn = document.querySelector('#icon-text-example-disabled');
 
             const hiddenBtn = document.querySelector('#icon-text-example-icon-hidden');
+
+            warBtn.addEventListener('click', () => {
+              if (iconTextEx.hasAttribute('style')) {
+                iconTextEx.removeAttribute('style');
+              } else {
+                iconTextEx.setAttribute('style', '--icon-text-divider: var(--red-60)');
+              }
+            });
 
             disBtn.addEventListener('click', () => {
               iconTextEx.disabled = !iconTextEx.disabled;

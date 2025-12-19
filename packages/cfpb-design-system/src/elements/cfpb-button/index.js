@@ -92,6 +92,17 @@ export class CfpbButton extends LitElement {
     this.#iconTextDom.value?.showIcon();
   }
 
+  get dividerColorVar() {
+    switch (this.variant) {
+      case 'warning':
+        return '--btn-warning-divider';
+      case 'secondary':
+        return '--btn-secondary-divider';
+      default:
+        return '--btn-divider';
+    }
+  }
+
   /**
    * Ensure the variant value is valid, and fall back to a default if not.
    * @returns {string} A valid variant value string.
@@ -122,7 +133,11 @@ export class CfpbButton extends LitElement {
 
   #renderTextAndIcon() {
     return html`
-      <cfpb-icon-text ${ref(this.#iconTextDom)} ?disabled=${this.disabled}>
+      <cfpb-icon-text
+        ${ref(this.#iconTextDom)}
+        ?disabled=${this.disabled}
+        style="--icon-text-divider: var(${this.dividerColorVar})"
+      >
         <slot></slot>
       </cfpb-icon-text>
     `;

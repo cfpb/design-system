@@ -13,8 +13,8 @@ import { CfpbTagGroup } from '../cfpb-tag-group';
 
 /**
  *
- * @element cfpb-button
- * @slot - The main content for the button.
+ * @element cfpb-select
+ * @slot - The main content for the select.
  */
 export class CfpbSelect extends LitElement {
   static styles = css`

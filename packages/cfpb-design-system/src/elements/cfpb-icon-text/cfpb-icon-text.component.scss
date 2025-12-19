@@ -11,7 +11,6 @@
   // Theme variables.
   --icon-text-divider-default: var(--pacific-60);
   --icon-text-divider-disabled: var(--gray-60);
-  --icon-text-divider-warning: var(--red-60);
 
   // Private variables.
   --icon-text-divider: var(--icon-text-divider-default);
@@ -45,7 +44,8 @@
 }
 
 :host([disabled]) {
-  --icon-text-divider: var(--icon-text-divider-disabled);
+  // !important is set so that disabled divider color overrides all other color.
+  --icon-text-divider: var(--icon-text-divider-disabled) !important;
 }
 
 // Hide SVG if user calls hideIcon()

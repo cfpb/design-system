@@ -30,8 +30,8 @@ export class CfpbFileUpload extends LitElement {
     this.#hideDetails();
   }
 
-  fileInput = createRef();
-  fileDetails = createRef();
+  #fileInput = createRef();
+  #fileDetails = createRef();
 
   #getUploadName(fileName) {
     let uploadName = fileName;
@@ -44,9 +44,9 @@ export class CfpbFileUpload extends LitElement {
   }
 
   #showDetails() {
-    this.fileName = this.#getUploadName(this.fileInput.value.value);
-    this.value = this.fileInput.value.value;
-    this.files = this.fileInput.value.files;
+    this.fileName = this.#getUploadName(this.#fileInput.value.value);
+    this.value = this.#fileInput.value.value;
+    this.files = this.#fileInput.value.files;
     this.isDetailHidden = false;
   }
 
@@ -58,7 +58,7 @@ export class CfpbFileUpload extends LitElement {
   }
 
   #checkStatus() {
-    if (this.fileInput.value.value == '') {
+    if (this.#fileInput.value.value == '') {
       this.#hideDetails();
     } else {
       this.#showDetails();
@@ -70,7 +70,7 @@ export class CfpbFileUpload extends LitElement {
       <cfpb-button
         variant="secondary"
         @click=${() => {
-          this.fileInput.value.click();
+          this.#fileInput.value.click();
         }}
       >
         <slot></slot>
@@ -82,12 +82,12 @@ export class CfpbFileUpload extends LitElement {
         accept=${this.accept}
         @input=${() => this.#checkStatus()}
         @cancel=${() => this.#checkStatus()}
-        ${ref(this.fileInput)}
+        ${ref(this.#fileInput)}
       />
       <div
         part="upload-details"
         ?hidden=${this.isDetailHidden}
-        ${ref(this.fileDetails)}
+        ${ref(this.#fileDetails)}
       >
         <h4>File added</h4>
         <ul>

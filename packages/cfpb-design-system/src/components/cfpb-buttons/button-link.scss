@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 
 //
 // Button link
@@ -70,10 +70,10 @@ $a: Link active color.
 
 @include u-btn-link-states(
   '.a-btn--link',
-  $link-text,
-  $link-text-hover,
-  $link-text,
-  $link-text-active
+  var(--link-text),
+  var(--link-text-hover),
+  var(--link-text),
+  var(--link-text-active)
 );
 
 //
@@ -89,8 +89,8 @@ $a: Link active color.
 
 @include u-btn-link-states(
   '.a-btn--link.a-btn--warning',
-  $btn-warning-bg,
-  $btn-warning-bg-hover,
-  $btn-warning-bg,
-  $btn-warning-bg-active
+  var(--btn-warning-bg),
+  var(--btn-warning-bg-hover),
+  var(--btn-warning-bg),
+  var(--btn-warning-bg-active)
 );

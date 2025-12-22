@@ -13,13 +13,6 @@ input.a-btn::-moz-focus-inner {
   border: 0;
 }
 
-@mixin u-btn-divider() {
-  content: '';
-  border-left: 1px solid var(--btn-divider);
-  order: 2;
-  place-self: normal;
-}
-
 .a-btn {
   line-height: math.div(19px, $base-font-size-px);
   appearance: none;

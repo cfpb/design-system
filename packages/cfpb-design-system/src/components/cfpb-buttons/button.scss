@@ -1,6 +1,7 @@
 @use 'sass:math';
 @use './vars.scss' as *;
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/elements/cfpb-icon-text/cfpb-icon-text.component' as *;
 
 //
 // Default button
@@ -13,12 +14,12 @@ input.a-btn::-moz-focus-inner {
   border: 0;
 }
 
-@mixin u-btn-divider() {
-  content: '';
-  border-left: 1px solid $btn-divider;
-  order: 2;
-  place-self: normal;
-}
+// @mixin u-btn-divider() {
+//   content: '';
+//   border-left: 1px solid $btn-divider;
+//   order: 2;
+//   place-self: normal;
+// }
 
 @mixin a-btn() {
   appearance: none;

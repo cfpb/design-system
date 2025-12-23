@@ -9,12 +9,14 @@ export class CfpbList extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
+  #internalSync = false;
   #container = createRef();
   #items = [];
   #checkedItems = [];
   #visibleItems = [];
-  #focusedIndex = 0;
-  #internalSync = false;
+
+  // index in visibleItems
+  #focusedIndex = -1;
 
   // WeakMap to store per-item click listeners.
   #clickListeners = new WeakMap();
@@ -50,7 +52,6 @@ export class CfpbList extends LitElement {
       const parsed = parseChildData(this.childData);
       if (parsed) this.#renderItemsFromData(parsed);
     }
-
     if (changedProps.has('type')) {
       this.#applyTypeToItems();
     }
@@ -62,15 +63,12 @@ export class CfpbList extends LitElement {
   get items() {
     return this.#items;
   }
-
   get checkedItems() {
     return this.#checkedItems;
   }
-
   get visibleItems() {
     return this.#visibleItems;
   }
-
   get visibleCheckedItems() {
     return this.#visibleItems.filter((item) => item.checked);
   }
@@ -79,13 +77,12 @@ export class CfpbList extends LitElement {
   // RENDER ITEMS
   // -------------------------
   #renderItemsFromData(itemsArray) {
-    // Remove all children except <template> and <noscript>.
     [...this.children].forEach((child) => {
       if (child.tagName !== 'TEMPLATE' && child.tagName !== 'NOSCRIPT')
         child.remove();
     });
 
-    let firstChecked;
+    let firstChecked = null;
     itemsArray.forEach((data) => {
       const item = document.createElement('cfpb-list-item');
       item.textContent = data.value ?? '';
@@ -93,11 +90,12 @@ export class CfpbList extends LitElement {
       if ('hidden' in data) item.hidden = data.hidden;
       if ('href' in data) item.href = data.href;
       item.type = data.type ?? this.type;
+
       if (this.multiple) {
         if ('checked' in data) item.checked = data.checked;
       } else if (!firstChecked && data.checked) {
-        firstChecked = true;
-        if ('checked' in data) item.checked = true;
+        firstChecked = item;
+        item.checked = true;
       }
 
       this.appendChild(item);
@@ -136,7 +134,7 @@ export class CfpbList extends LitElement {
 
     // Assign tabindex, role, listeners.
     this.#items.forEach((item, index) => {
-      item.setAttribute('tabindex', index === 0 ? '0' : '-1');
+      item.setAttribute('tabindex', '-1');
       item.setAttribute('role', 'option');
 
       // Remove prior listener if present.
@@ -147,7 +145,6 @@ export class CfpbList extends LitElement {
       const listener = (evt) => {
         // Prevent actual click bubbling to list container.
         evt.stopPropagation();
-
         this.#handleToggle(item, item.checked, index);
       };
 
@@ -156,7 +153,8 @@ export class CfpbList extends LitElement {
 
       // Track focus index.
       item.addEventListener('focus', () => {
-        this.#focusedIndex = index;
+        const visIndex = this.#visibleItems.indexOf(item);
+        if (visIndex !== -1) this.#focusedIndex = visIndex;
       });
     });
 
@@ -181,7 +179,6 @@ export class CfpbList extends LitElement {
       checked: item.checked,
       disabled: item.disabled,
     }));
-
     this.#internalSync = true;
     this.childData = data;
     this.#internalSync = false;
@@ -199,9 +196,8 @@ export class CfpbList extends LitElement {
     if (this.multiple) {
       if (isChecked) {
         // Add if not already present.
-        if (!this.#checkedItems.includes(element)) {
+        if (!this.#checkedItems.includes(element))
           this.#checkedItems.push(element);
-        }
       } else {
         // Remove cleanly.
         this.#checkedItems = this.#checkedItems.filter(
@@ -224,6 +220,11 @@ export class CfpbList extends LitElement {
 
     this.#syncChildDataFromItems();
 
+    window.queueMicrotask(() => {
+      const visIndex = this.#visibleItems.indexOf(element);
+      this.focusItemAt(visIndex !== -1 ? visIndex : -1);
+    });
+
     this.dispatchEvent(
       new CustomEvent('item-click', {
         detail: { index, value: element.value, element },
@@ -242,31 +243,31 @@ export class CfpbList extends LitElement {
    * @returns {Array} List of visible list items.
    */
   filterItems(queryList) {
-    let firstIndex = 0;
     this.#visibleItems = [];
+    let firstVisibleIndex = -1;
 
-    this.items.forEach((item) => {
-      const valueLower = item.value.toLowerCase();
+    this.#items.forEach((item) => {
       const matches = queryList.some((q) =>
-        valueLower.includes(q.toLowerCase()),
+        item.value.toLowerCase().includes(q.toLowerCase()),
       );
-      if (!matches) firstIndex++;
-      else this.#visibleItems.push(item);
       item.hidden = !matches;
+      if (matches) {
+        if (firstVisibleIndex === -1)
+          firstVisibleIndex = this.#visibleItems.length;
+        this.#visibleItems.push(item);
+      }
     });
 
-    this.#focusedIndex = firstIndex;
-
+    this.#focusedIndex = firstVisibleIndex;
     this.#broadcastFiltered();
 
     return this.#visibleItems;
   }
 
   showAllItems() {
-    this.items.forEach((item) => (item.hidden = false));
+    this.#items.forEach((item) => (item.hidden = false));
+    this.#visibleItems = [...this.#items];
     this.#focusedIndex = 0;
-    this.#visibleItems = this.#items;
-
     this.#broadcastFiltered();
   }
 
@@ -285,41 +286,58 @@ export class CfpbList extends LitElement {
     );
   }
 
+  #focusContainer() {
+    this.#container.value.focus();
+    this.#focusedIndex = -1;
+  }
+
+  /**
+   * Focus a visible item by index.
+   * Pass -1 to move focus to the list container (no active item).
+   * @param {number} index - The index of the item to focus.
+   * @returns {undefined} If nothing to focus.
+   */
   focusItemAt(index) {
-    const visibleItems = this.items.filter((item) => !item.hidden);
-    if (!visibleItems.length) return;
+    // No active item (sentinel or invalid input).
+    const visibleItems = this.#visibleItems;
+    if (
+      !visibleItems.length ||
+      index == null ||
+      typeof index !== 'number' ||
+      Number.isNaN(index) ||
+      index === -1
+    ) {
+      this.#focusContainer();
+      return;
+    }
 
     const normalizedIndex =
       ((index % visibleItems.length) + visibleItems.length) %
       visibleItems.length;
-    const item = visibleItems[normalizedIndex];
-    item.focus();
+    visibleItems[normalizedIndex].focus();
     this.#focusedIndex = normalizedIndex;
   }
 
   #onFocus(evt) {
     // If the focus is on the container itself (not an item), set index to -1.
-    if (evt.target === this.#container.value) {
-      this.#focusedIndex = -1;
-    }
+    if (evt.target === this.#container.value) this.#focusContainer();
   }
 
-  // -------------------------
-  // KEYBOARD NAVIGATION
-  // -------------------------
   #onKeyDown(evt) {
-    const visibleItems = this.items.filter((item) => !item.hidden);
+    const visibleItems = this.#visibleItems;
     if (!visibleItems.length) return;
     const last = visibleItems.length - 1;
 
     switch (evt.key) {
       case 'ArrowDown':
         evt.preventDefault();
-        this.focusItemAt(this.#focusedIndex + 1);
+        this.focusItemAt(this.#focusedIndex < 0 ? 0 : this.#focusedIndex + 1);
         break;
       case 'ArrowUp':
         evt.preventDefault();
-        this.focusItemAt(this.#focusedIndex - 1);
+        this.focusItemAt(
+          this.#focusedIndex < 0 ? last : this.#focusedIndex - 1,
+        );
         break;
       case 'Home':
         evt.preventDefault();
@@ -330,6 +348,10 @@ export class CfpbList extends LitElement {
         this.focusItemAt(last);
         break;
     }
+  }
+
+  get focusedIndex() {
+    return this.#focusedIndex;
   }
 
   render() {

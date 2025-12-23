@@ -27,7 +27,6 @@ describe('<cfpb-list> tests', () => {
     await list.updateComplete;
 
     expect(list.items.length).toBe(3);
-    // Only first checked stays true in single select
     expect(list.items[0].checked).toBe(true);
     expect(list.items[1].checked).toBe(false);
     expect(list.items[2].checked).toBe(false);
@@ -48,7 +47,6 @@ describe('<cfpb-list> tests', () => {
     expect(list.checkedItems).toContain(list.items[0]);
     expect(list.checkedItems).toContain(list.items[1]);
 
-    // Uncheck an item
     const event = new CustomEvent('click-item', {
       bubbles: true,
       composed: true,
@@ -61,13 +59,11 @@ describe('<cfpb-list> tests', () => {
 
   test('click-item toggles single selection', async () => {
     list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
-
     await list.updateComplete;
 
     const clickSpy = jest.fn();
     list.addEventListener('item-click', clickSpy);
 
-    // Click first item
     list.items[0].checked = true;
     list.items[0].dispatchEvent(
       new CustomEvent('click-item', { bubbles: true, composed: true }),
@@ -76,7 +72,6 @@ describe('<cfpb-list> tests', () => {
     expect(list.checkedItems).toEqual([list.items[0]]);
     expect(clickSpy).toHaveBeenCalledTimes(1);
 
-    // Click again to uncheck
     list.items[0].checked = false;
     list.items[0].dispatchEvent(
       new CustomEvent('click-item', { bubbles: true, composed: true }),
@@ -91,7 +86,6 @@ describe('<cfpb-list> tests', () => {
     const listenerSpy = jest.fn();
     list.addEventListener('item-click', listenerSpy);
 
-    // Trigger click-item event
     const event = new CustomEvent('click-item', {
       bubbles: true,
       composed: true,
@@ -127,24 +121,27 @@ describe('<cfpb-list> tests', () => {
 
     list.filterItems(['C']); // only C visible
 
-    list.focusItemAt(0);
+    const container = list.shadowRoot.querySelector('div');
+    container.focus();
+    expect(document.activeElement.tagName).toBe('CFPB-LIST');
+
+    // ArrowDown → first visible
+    container.dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }),
+    );
     expect(document.activeElement.value).toBe('C');
 
-    // Press ArrowDown, should wrap to same visible item
-    list.shadowRoot
-      .querySelector('div')
-      .dispatchEvent(
-        new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }),
-      );
+    // ArrowDown → wrap
+    container.dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }),
+    );
     expect(document.activeElement.value).toBe('C');
 
-    // Press ArrowUp
-    list.shadowRoot
-      .querySelector('div')
-      .dispatchEvent(
-        new KeyboardEvent('keydown', { key: 'ArrowUp', bubbles: true }),
-      );
-    expect(document.activeElement.value).toBe('C');
+    // ArrowUp → wrap
+    container.dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'ArrowUp', bubbles: true }),
+    );
+    expect(document.activeElement.tagName).toBe('CFPB-LIST');
   });
 
   test('showAllItems unhides all items', async () => {
@@ -163,7 +160,58 @@ describe('<cfpb-list> tests', () => {
     console.error = jest.fn();
     list.childData = 'not-json';
     await list.updateComplete;
-
     expect(console.error).toHaveBeenCalled();
+  });
+
+  // -------------------------------
+  // focusItemAt sentinel tests
+  // -------------------------------
+
+  test('focusItemAt(-1) focuses the container', async () => {
+    list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
+    await list.updateComplete;
+    const container = list.shadowRoot.querySelector('div');
+    list.focusItemAt(-1);
+    expect(document.activeElement.tagName).toBe('CFPB-LIST');
+  });
+
+  test('focusItemAt(null) focuses the container', async () => {
+    list.childData = JSON.stringify([{ value: 'A' }]);
+    await list.updateComplete;
+    const container = list.shadowRoot.querySelector('div');
+    list.focusItemAt(null);
+    expect(document.activeElement.tagName).toBe('CFPB-LIST');
+  });
+
+  test('focusItemAt(undefined) focuses the container', async () => {
+    list.childData = JSON.stringify([{ value: 'A' }]);
+    await list.updateComplete;
+    const container = list.shadowRoot.querySelector('div');
+    list.focusItemAt(undefined);
+    expect(document.activeElement.tagName).toBe('CFPB-LIST');
+  });
+
+  test('ArrowDown from container focuses first visible item', async () => {
+    list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
+    await list.updateComplete;
+
+    const container = list.shadowRoot.querySelector('div');
+    container.focus();
+    container.dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }),
+    );
+    expect(document.activeElement.value).toBe('A');
+  });
+
+  test('ArrowUp from container focuses last visible item', async () => {
+    list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
+    await list.updateComplete;
+
+    const container = list.shadowRoot.querySelector('div');
+    container.focus();
+    container.dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'ArrowUp', bubbles: true }),
+    );
+    expect(document.activeElement.value).toBe('B');
   });
 });

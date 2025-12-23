@@ -28,6 +28,7 @@ $cf-icon-height: 1.1875em;
 
 $grid-wrapper-width: 1230px;
 $grid-total-columns: 12;
+$grid-gutter-width: 30px;
 
 // .a-select
 $select-height: 35px;
@@ -36,7 +37,7 @@ $select-height: 35px;
 $fcm-visual-width: 270px;
 $fcm-min-height: 220px;
 
-:host {
+:root {
 // Typography normalization
     --font-adjust-base: 0.517;
     --font-adjust-step: 0.0054;

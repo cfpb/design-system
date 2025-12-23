@@ -59,7 +59,7 @@ for (const dirPath of tokenDirs) {
       options: {
         // keep references as var(--...) in the output
         outputReferences: true,
-        selector: ':host', // <-output to shadow dom
+        selector: ':root', // <-output to shadow dom
       },
     });
   }

@@ -2,12 +2,12 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-:host {
+:root {
   --beige: #bea96f;
   --beige-30: #f0e8d8;
   --beige-60: #d8c8a0;
   --black: #101820;
-  --font-stack: system-ui, sans-serif;
+  --font-stack: system-ui,sans-serif;
   --gold: #ff9e1b;
   --gold-10: #fff6ec;
   --gold-20: #fff0dd;

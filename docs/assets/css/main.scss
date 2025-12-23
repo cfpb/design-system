@@ -3,8 +3,8 @@
    ========================================================================== */
 
 // Import Design System packages.
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/base' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/elements/base' as *;
 @use '@cfpb/cfpb-design-system/dist/index.css' as *;
 
 // Custom modules.
@@ -22,7 +22,7 @@
 @use 'variation' as *;
 @use 'color-swatches' as *;
 @use 'search' as *;
-@include define-custom-props;
+
 
 // Webfont
 // This is the path for self-hosted fonts.

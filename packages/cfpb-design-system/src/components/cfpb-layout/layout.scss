@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 
 /* ==========================================================================
    Design System
@@ -63,7 +63,7 @@
 
 .content__line {
   height: 1px;
-  background: $block-border;
+  background: var(--block-border);
 }
 
 //
@@ -125,7 +125,7 @@
         position: relative;
         &::after {
           content: '';
-          border-left: 1px solid $content-main-border;
+          border-left: 1px solid var(--content-main-border);
           position: absolute;
           top: math.div(($grid-gutter-width * 1.5), $base-font-size-px) + em;
           bottom: 0;
@@ -176,23 +176,23 @@
   margin-bottom: math.div($grid-gutter-width * 2, $base-font-size-px) + em;
 
   &--border-top {
-    border-top: 1px solid $block-border-top;
+    border-top: 1px solid var(--block-border-top);
   }
 
   &--border-right {
-    border-right: 1px solid $block-border-right;
+    border-right: 1px solid var(--block-border-right);
   }
 
   &--border-bottom {
-    border-bottom: 1px solid $block-border-bottom;
+    border-bottom: 1px solid var(--block-border-bottom);
   }
 
   &--border-left {
-    border-left: 1px solid $block-border-left;
+    border-left: 1px solid var(--block-border-left);
   }
 
   &--border {
-    border: 1px solid $block-border;
+    border: 1px solid var(--block-border);
   }
 
   &--flush-top {
@@ -268,7 +268,7 @@
     padding: math.div($grid-gutter-width, $base-font-size-px) + em
       math.div(math.div($grid-gutter-width, 2), $base-font-size-px) + em;
     padding-bottom: math.div($grid-gutter-width * 2, $base-font-size-px) + em;
-    background: $block-bg;
+    background: var(--block-bg);
 
     // Tablet and above.
     @include respond-to-min($bp-sm-min) {

@@ -84,6 +84,10 @@ export class CfpbFormSearchInput extends LitElement {
     );
   }
 
+  focus() {
+    this.#searchInput.value.focus();
+  }
+
   render() {
     return html`
       <div

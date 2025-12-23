@@ -5,16 +5,10 @@
 :host {
   ::slotted(cfpb-list-item) {
     border-bottom: 1px solid var(--gray-20);
-
-    // Overlap with the border of prior item.
-    margin-top: -1px;
   }
 
   ::slotted(cfpb-list-item:first-of-type) {
     border-top: 1px solid var(--gray-20);
-
-    // Don't shift the first item.
-    margin-top: 0;
   }
 
   :focus {

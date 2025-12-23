@@ -11,6 +11,9 @@ import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
 import { CfpbList } from '../cfpb-list';
 import { CfpbTagGroup } from '../cfpb-tag-group';
 
+import { SingleSelectEventProxy } from './single-select-event-proxy.js';
+import { MultipleSelectEventProxy } from './multiple-select-event-proxy.js';
+
 /**
  *
  * @element cfpb-select
@@ -21,7 +24,7 @@ export class CfpbSelect extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
-  // Flyout menu options.
+  #eventProxy;
   #flyoutMenu;
   #transition;
   #search;
@@ -32,7 +35,7 @@ export class CfpbSelect extends LitElement {
   #tagGroup = createRef();
   #list = createRef();
   #displayLabel = createRef();
-  #boundOnOutsideClick;
+  #boundOnOutsideFocus;
   #noResults = false;
 
   /**
@@ -64,23 +67,33 @@ export class CfpbSelect extends LitElement {
   constructor() {
     super();
 
+    this.multiple = false;
     this.options = [];
     this.selectedTexts = [];
     this.optionList = [];
 
-    this.#boundOnOutsideClick = this.#onOutsideClick.bind(this);
+    this.#boundOnOutsideFocus = this.#onFocusOutside.bind(this);
   }
 
   firstUpdated() {
     this.#initFlyoutMenu();
+
+    this.addEventListener('focus', () => {
+      this.#eventProxy.onFocus();
+    });
+
+    this.addEventListener('keydown', (evt) => {
+      this.#eventProxy.onKeyDown(evt, this);
+    });
   }
 
   disconnectedCallback() {
-    document.removeEventListener('pointerdown', this.#boundOnOutsideClick);
+    document.removeEventListener('pointerdown', this.#boundOnOutsideFocus);
+    document.removeEventListener('focusin', this.#boundOnOutsideFocus);
     super.disconnectedCallback();
   }
 
-  #onOutsideClick(evt) {
+  #onFocusOutside(evt) {
     const path = evt.composedPath();
     if (!path.includes(this)) {
       this.isExpanded = false;
@@ -106,13 +119,18 @@ export class CfpbSelect extends LitElement {
     const items = [...list[0].querySelectorAll('li')].map((li) => {
       const checked =
         li.hasAttribute('data-checked') || li.hasAttribute('checked');
+
+      const itemValue = li.textContent.trim();
+
       if (checked) {
+        if (!this.multiple) this.#displayLabel.value.textContent = itemValue;
         return {
-          value: li.textContent.trim(),
+          value: itemValue,
           checked: 'true',
         };
       }
-      return { value: li.textContent.trim() };
+
+      return { value: itemValue };
     });
 
     this.optionList = items;
@@ -193,6 +211,10 @@ export class CfpbSelect extends LitElement {
   }
 
   updated(changedProps) {
+    if (changedProps.has('multiple')) {
+      this.#eventProxy = this.#createEventProxy();
+    }
+
     if (changedProps.has('isExpanded')) {
       const oldVal = changedProps.get('isExpanded');
       const newVal = this.isExpanded;
@@ -200,81 +222,49 @@ export class CfpbSelect extends LitElement {
       if (newVal !== oldVal) {
         if (newVal) {
           this.#flyoutMenu.expand();
-          document.addEventListener('pointerdown', this.#boundOnOutsideClick);
+          document.addEventListener('pointerdown', this.#boundOnOutsideFocus);
+          document.addEventListener('focusin', this.#boundOnOutsideFocus);
         } else {
           this.#flyoutMenu.collapse();
           document.removeEventListener(
             'pointerdown',
-            this.#boundOnOutsideClick,
+            this.#boundOnOutsideFocus,
           );
+          document.removeEventListener('focusin', this.#boundOnOutsideFocus);
         }
       }
     }
   }
 
-  #onClick(evt) {
-    const target = evt.currentTarget;
+  #createEventProxy() {
+    const common = {
+      list: this.#list.value,
+      flyout: () => this.#flyoutMenu,
+    };
 
-    if (this.multiple) {
-      if (target.tagName === 'CFPB-FORM-SEARCH-INPUT') {
-        if (this.isExpanded) this.#flyoutMenu.suspend();
-        else this.#flyoutMenu.expand();
-      } else {
-        this.#flyoutMenu.resume();
-      }
-    } else if (target.classList.contains('o-select__label')) {
-      this.#headerDom.value.focus();
-      this.isExpanded = !this.isExpanded;
-    }
+    return this.multiple
+      ? new MultipleSelectEventProxy({
+          ...common,
+          input: this.#input.value,
+          tagGroup: this.#tagGroup.value,
+        })
+      : new SingleSelectEventProxy({
+          ...common,
+          displayLabel: this.#displayLabel.value,
+          header: this.#headerDom.value,
+        });
   }
 
-  #onItemClick() {
-    if (this.multiple) {
-      this.optionList = this.#list.value.childData;
-      this.requestUpdate();
-    } else {
-      const checkedItems = this.#list.value.checkedItems;
-      const selectedValue = checkedItems[0]?.value;
+  #onClick(evt) {
+    this.#eventProxy?.onClick(evt, this);
+  }
 
-      this.#displayLabel.value.innerHTML = selectedValue ? selectedValue : '';
-
-      // Update optionList so the selection persists.
-      this.optionList = this.optionList.map((item) => ({
-        ...item,
-        checked: item.value === selectedValue,
-      }));
-
-      this.requestUpdate();
-
-      // Now close the dropdown.
-      this.isExpanded = false;
-
-      // Move focus back to the header.
-      if (this.multiple) this.#input.value.focus();
-      else this.#headerDom.value.focus();
-    }
+  #onItemClick(evt) {
+    this.#eventProxy?.onItemClick(evt, this);
   }
 
   #onTagClick(evt) {
-    const tagList = this.#tagGroup.value.tagList.filter((item) => {
-      return item !== evt.detail.target;
-    });
-
-    this.optionList = this.optionList.map((item) => ({
-      ...item,
-      checked: !!tagList.find((tag) => tag.value === item.value),
-    }));
-
-    this.requestUpdate();
-  }
-
-  #onKeyDown(evt) {
-    switch (evt.key) {
-      case 'ArrowDown':
-        evt.preventDefault();
-        this.#contentDom.value.querySelector('cfpb-list-item').focus();
-        break;
-    }
+    this.#eventProxy?.onTagClick(evt, this);
   }
 
   render() {
@@ -309,7 +299,6 @@ export class CfpbSelect extends LitElement {
           title="Expand content"
           data-js-hook="behavior_flyout-menu_trigger"
           ${ref(this.#headerDom)}
-          @keydown=${this.#onKeyDown}
         >
           <span class="o-select__cues" @click=${this.#onClick}>
             <span class="o-select__cue-open" role="img" aria-label="Show">

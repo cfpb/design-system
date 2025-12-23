@@ -13,8 +13,8 @@ import { CfpbTagGroup } from '../cfpb-tag-group';
 
 /**
  *
- * @element cfpb-button
- * @slot - The main content for the button.
+ * @element cfpb-select
+ * @slot - The main content for the select.
  */
 export class CfpbSelect extends LitElement {
   static styles = css`
@@ -104,7 +104,8 @@ export class CfpbSelect extends LitElement {
 
     // Extract list items (with their text or link info)
     const items = [...list[0].querySelectorAll('li')].map((li) => {
-      const checked = li.querySelector('b');
+      const checked =
+        li.hasAttribute('data-checked') || li.hasAttribute('checked');
       if (checked) {
         return {
           value: li.textContent.trim(),

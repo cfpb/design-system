@@ -1,6 +1,6 @@
 @use 'sass:math';
-@use './vars.scss' as *;
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use './vars.scss' as *;
 
 //
 // Default button
@@ -199,16 +199,19 @@ input.a-btn::-moz-focus-inner {
   // Handle different coloring in divider.
   &--secondary:has(svg)::before {
     border-color: $btn-secondary-divider !important;
+    @include legacy-u-btn-divider;
   }
 
   &--warning:has(svg)::before {
     border-color: $btn-warning-divider !important;
+    @include legacy-u-btn-divider;
   }
 
   &--disabled:has(svg)::before,
   &[disabled]:has(svg)::before,
   &[aria-disabled='true']:has(svg)::before {
     border-color: $btn-disabled-divider !important;
+    @include legacy-u-btn-divider;
   }
 
   // Hide the icon if the a-btn--hide-icon modifier is set.

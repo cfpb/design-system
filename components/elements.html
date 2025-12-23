@@ -378,6 +378,10 @@
 
   <cfpb-icon-text disabled>Disabled state <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg></cfpb-icon-text>
 
+  <br>
+
+  <cfpb-icon-text style="--icon-text-divider: var(--red-60)"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--warning" viewbox="0 0 3 19"><path d="M2.828 15.984A1.328 1.328 0 1 1 1.5 14.657a1.33 1.33 0 0 1 1.328 1.327M1.5 13.244a1.03 1.03 0 0 1-1.03-1.03V2.668a1.03 1.03 0 0 1 2.06 0v9.548a1.03 1.03 0 0 1-1.03 1.029z"></path></svg> Warning state</cfpb-icon-text>
+
   <br><hr>
 <br>
 
@@ -386,6 +390,12 @@
   </p>
   <p><cfpb-icon-text id="icon-text-example"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--bank" viewbox="0 0 16 19"><path d="M15.442 14.75v.491H.558v-.49a.476.476 0 0 1 .475-.476h.478l-.003-.048v-.443a.476.476 0 0 1 .475-.475h.713V7.164H1.508a.554.554 0 0 1-.22-1.063L7.78 3.288a.55.55 0 0 1 .44 0L14.712 6.1a.554.554 0 0 1-.22 1.063h-1.188v6.145h.713a.476.476 0 0 1 .475.475v.443l-.003.048h.478a.476.476 0 0 1 .475.475zM3.804 13.31h2.058V8.264H3.804zm.377-7.254h7.639L8 4.4zm2.79 2.21v5.043h2.058V8.265zm5.225 5.043V8.265h-2.059v5.044z"></path></svg> Example icon-text component <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg></cfpb-icon-text></p>
   <p>
+
+  <input type="checkbox" id="icon-text-example-warning">
+  <label for="icon-text-example-warning">Warning</label>
+
+  </p>
+<p>
 
   <input type="checkbox" id="icon-text-example-disabled">
   <label for="icon-text-example-disabled">Disabled</label>
@@ -401,9 +411,18 @@
   (function(){
   const iconTextEx = document.querySelector('#icon-text-example');
 
+  const warBtn = document.querySelector('#icon-text-example-warning');
   const disBtn = document.querySelector('#icon-text-example-disabled');
 
   const hiddenBtn = document.querySelector('#icon-text-example-icon-hidden');
+
+  warBtn.addEventListener('click', () => {
+    if (iconTextEx.hasAttribute('style')) {
+      iconTextEx.removeAttribute('style');
+    } else {
+      iconTextEx.setAttribute('style', '--icon-text-divider: var(--red-60)');
+    }
+  });
 
   disBtn.addEventListener('click', () => {
     iconTextEx.disabled = !iconTextEx.disabled;
@@ -2677,7 +2696,7 @@
       <li>
         Venus
       </li>
-      <li selected>
+      <li data-checked>
         Earth
       </li>
       <li>
@@ -2709,10 +2728,10 @@
       <li>
         Venus
       </li>
-      <li selected>
+      <li data-checked>
         Earth
       </li>
-      <li>
+      <li checked>
         Mars
       </li>
       <li>
@@ -2766,15 +2785,33 @@
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;cfpb-select multiple&gt;
-  &lt;cfpb-list-item type="checkbox"&gt;Mercury&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="checkbox"&gt;Venus&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="checkbox"&gt;Earth&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="checkbox" checked&gt;Mars&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="checkbox"&gt;Jupiter&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="checkbox"&gt;Saturn&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="checkbox"&gt;Uranus&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item type="checkbox"&gt;Neptune&lt;/cfpb-list-item&gt;
-&lt;/cfpb-select&gt;</code></pre>
+    &lt;ul&gt;
+      &lt;li&gt;
+        Mercury
+      &lt;/li&gt;
+      &lt;li&gt;
+        Venus
+      &lt;/li&gt;
+      &lt;li data-checked&gt;
+        Earth
+      &lt;/li&gt;
+      &lt;li checked&gt;
+        Mars
+      &lt;/li&gt;
+      &lt;li&gt;
+        Jupiter
+      &lt;/li&gt;
+      &lt;li&gt;
+        Saturn
+      &lt;/li&gt;
+      &lt;li&gt;
+        Uranus
+      &lt;/li&gt;
+      &lt;li&gt;
+        Neptune
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/cfpb-select&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -2923,8 +2960,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/elements.md">
-                            <time datetime="2025-12-17 12:43:14 -0500">
-                                12:43:14 PM Dec 17, 2025
+                            <time datetime="2025-12-23 12:30:44 -0500">
+                                12:30:44 PM Dec 23, 2025
                             </time>
                         </a>
                     </section>

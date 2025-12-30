@@ -7,7 +7,7 @@
     position: relative;
     margin-top: 1px;
 
-    &:before,
+    &::before,
     &::after {
       position: absolute;
       content: '';
@@ -16,7 +16,7 @@
       height: 1px;
     }
 
-    &:before {
+    &::before {
       top: -1px;
       border-top: 1px solid var(--gray-20);
     }

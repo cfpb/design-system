@@ -75,6 +75,6 @@ variation_groups:
       }
 
       ```
-use_cases: ""
-guidelines: ""
+use_cases: ''
+guidelines: ''
 ---

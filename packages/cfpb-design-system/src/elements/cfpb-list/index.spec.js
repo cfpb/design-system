@@ -170,7 +170,6 @@ describe('<cfpb-list> tests', () => {
   test('focusItemAt(-1) focuses the container', async () => {
     list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
     await list.updateComplete;
-    const container = list.shadowRoot.querySelector('div');
     list.focusItemAt(-1);
     expect(document.activeElement.tagName).toBe('CFPB-LIST');
   });
@@ -178,7 +177,6 @@ describe('<cfpb-list> tests', () => {
   test('focusItemAt(null) focuses the container', async () => {
     list.childData = JSON.stringify([{ value: 'A' }]);
     await list.updateComplete;
-    const container = list.shadowRoot.querySelector('div');
     list.focusItemAt(null);
     expect(document.activeElement.tagName).toBe('CFPB-LIST');
   });
@@ -186,7 +184,6 @@ describe('<cfpb-list> tests', () => {
   test('focusItemAt(undefined) focuses the container', async () => {
     list.childData = JSON.stringify([{ value: 'A' }]);
     await list.updateComplete;
-    const container = list.shadowRoot.querySelector('div');
     list.focusItemAt(undefined);
     expect(document.activeElement.tagName).toBe('CFPB-LIST');
   });

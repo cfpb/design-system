@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.3.1](https://github.com/cfpb/design-system/compare/v4.3.0..v4.3.1) - December 30, 2025
+## [4.3.2](https://github.com/cfpb/design-system/compare/v4.3.1..v4.3.2) - December 30, 2025
+
+### General
+
+- Force source sans (#2472) - ([706b8e8](https://github.com/cfpb/design-system/commit/706b8e80c9a6985dd60e1c15e89e8341f45cdffe)) - itsmedavep
+- Re-generate assets - ([ee2de2c](https://github.com/cfpb/design-system/commit/ee2de2ce107f97ce208425c4fcce622f84179688)) - Ans
+
+## [4.3.1](https://github.com/cfpb/design-system/compare/v4.3.0..vv4.3.1) - December 30, 2025
 
 ### PRs in this release
 

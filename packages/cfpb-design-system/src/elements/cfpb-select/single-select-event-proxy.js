@@ -15,8 +15,8 @@ export class SingleSelectEventProxy {
   onItemClick(evt, host) {
     const selected = this.list.checkedItems[0]?.value ?? '';
 
-    if (this.displayLabel.value) {
-      this.displayLabel.value.textContent = selected;
+    if (this.displayLabel) {
+      this.displayLabel.textContent = selected;
     }
 
     host.optionList = host.optionList.map((item) => ({
@@ -28,12 +28,16 @@ export class SingleSelectEventProxy {
     host.isExpanded = false;
   }
 
-  onKeyDown(evt) {
-    switch (evt.key) {
-      case 'ArrowDown':
-        evt.preventDefault();
-        this.list.querySelector('cfpb-list-item')?.focus();
-        break;
+  onKeyDown(evt, host) {
+    const focused = host.shadowRoot.activeElement.tagName;
+    if (focused === 'BUTTON') {
+      switch (evt.key) {
+        case 'ArrowDown':
+          evt.preventDefault();
+          host.isExpanded = true;
+          this.list.querySelector('cfpb-list-item')?.focus();
+          break;
+      }
     }
   }
 

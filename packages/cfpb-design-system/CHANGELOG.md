@@ -2,7 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.3.0](https://github.com/cfpb/design-system/compare/v4.2.4..v4.3.0) - December 16, 2025
+## [4.3.1](https://github.com/cfpb/design-system/compare/v4.3.0..v4.3.1) - December 30, 2025
+
+### PRs in this release
+
+- PR #[2469](https://github.com/cfpb/design-system/pull/2469): FIxes to cfpb-icon-text and cfpb-button divider coloring | bump dependencies and fix examples - Ans
+- PR #[2470](https://github.com/cfpb/design-system/pull/2470): Add event proxies to cfpb-select - Ans
+- PR #[2471](https://github.com/cfpb/design-system/pull/2471): Fix focus state - Ans
+
+### General
+
+- Update cypress, esbuild | Update elements docs - ([6bbc2c1](https://github.com/cfpb/design-system/commit/6bbc2c1b79ca77fef1bf11ed275c22acf9cfb980)) - Ans
+- FIxes to cfpb-icon-text and cfpb-button divider coloring - ([898c6da](https://github.com/cfpb/design-system/commit/898c6da4a73c11a67e197d3254969a3fa71fb066)) - Ans
+- Add event proxies to cfpb-select - ([13807e8](https://github.com/cfpb/design-system/commit/13807e8717c01d7c2d29b1c2af6806d2e3def7b7)) - Ans
+- Regenerate assets - ([95d2e3d](https://github.com/cfpb/design-system/commit/95d2e3d24b36e93527d1d2fa27bf27bed9db1c2a)) - Ans
+- Fix focus state - ([d6ea63c](https://github.com/cfpb/design-system/commit/d6ea63c2ca0178baa6e3d656b1b02e1feffec16e)) - Ans
+- Re-build assets - ([3b9bd43](https://github.com/cfpb/design-system/commit/3b9bd4383957ca2ac5527639c3610b337b1cf477)) - Ans
+- Fix mixin name duplicate error (#2468) - ([d9ea070](https://github.com/cfpb/design-system/commit/d9ea0703abfc1d7af4b81e02f2c36a890f36677d)) - itsmedavep
+- Re-generate assets - ([6ba5ca6](https://github.com/cfpb/design-system/commit/6ba5ca6eecb0fb68a20a9238b993c19e587934d0)) - Ans
+- Run linter - ([8f58656](https://github.com/cfpb/design-system/commit/8f58656ffb0593568c56c3b2574e557e1d027f3f)) - Ans
+
+## [4.3.0](https://github.com/cfpb/design-system/compare/v4.2.4..vv4.3.0) - December 16, 2025
 
 ### PRs in this release
 

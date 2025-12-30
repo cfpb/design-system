@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 
 //
 // Default button
@@ -13,7 +13,7 @@ input.a-btn::-moz-focus-inner {
   border: 0;
 }
 
-@mixin u-btn-divider() {
+@mixin legacy-u-btn-divider() {
   content: '';
   border-left: 1px solid $btn-divider;
   order: 2;
@@ -193,7 +193,7 @@ input.a-btn::-moz-focus-inner {
   // Handle button with icon divider logic.
   &:not(.a-btn--hide-icon):has(svg + span)::before,
   &:not(.a-btn--hide-icon):has(span + svg)::before {
-    @include u-btn-divider;
+    @include legacy-u-btn-divider;
   }
 
   // Handle different coloring in divider.

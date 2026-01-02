@@ -264,7 +264,7 @@ export class CfpbSelect extends LitElement {
   }
 
   #onTagClick(evt) {
-    this.#eventProxy?.onTagClick(evt, this);
+    this.#eventProxy?.onTagClick(evt, this, this.#tagGroup.value);
   }
 
   render() {
@@ -288,27 +288,26 @@ export class CfpbSelect extends LitElement {
         : nothing}
 
       <div
-        class="o-select o-select--border"
+        class="o-select"
         data-js-hook="behavior_flyout-menu"
         ${ref(this.#root)}
       >
         ${this.#renderInput()}
 
         <button
-          class="o-select__header"
+          class="o-select__cues"
           title="Expand content"
           data-js-hook="behavior_flyout-menu_trigger"
           ${ref(this.#headerDom)}
+          @click=${this.#onClick}
         >
-          <span class="o-select__cues" @click=${this.#onClick}>
-            <span class="o-select__cue-open" role="img" aria-label="Show">
-              ${unsafeSVG(expandIcon)}
-              <span class="u-visually-hidden">Show</span>
-            </span>
-            <span class="o-select__cue-close" role="img" aria-label="Hide">
-              ${unsafeSVG(collapseIcon)}
-              <span class="u-visually-hidden">Hide</span>
-            </span>
+          <span class="o-select__cue-open" role="img" aria-label="Show">
+            ${unsafeSVG(expandIcon)}
+            <span class="u-visually-hidden">Show</span>
+          </span>
+          <span class="o-select__cue-close" role="img" aria-label="Hide">
+            ${unsafeSVG(collapseIcon)}
+            <span class="u-visually-hidden">Hide</span>
           </span>
         </button>
         <div

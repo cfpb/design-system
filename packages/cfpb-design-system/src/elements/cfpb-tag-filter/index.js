@@ -28,6 +28,10 @@ export class CfpbTagFilter extends LitElement {
     this.value = '';
   }
 
+  focus() {
+    this.shadowRoot.querySelector('button').focus();
+  }
+
   #onClick() {
     this.dispatchEvent(
       new CustomEvent('tag-click', {

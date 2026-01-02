@@ -14,11 +14,14 @@
   // Private vars
   --input-border: var(--input-border-default);
 
+  display: flex;
+
   .o-search-input {
     position: relative;
     display: flex;
     width: initial;
     flex: 0 1 100%;
+    align-items: center;
 
     // Add a min-width for the default width of the text input + clear button,
     // so that when the clear button appears it doesn't bump the input width.
@@ -33,12 +36,7 @@
     label {
       position: absolute;
       left: 10px;
-      align-self: center;
       cursor: pointer;
-      line-height: math.div(
-        14.4px,
-        $base-font-size-px
-      ); // 9px vertically centers icon.
     }
 
     // This line-height settings is taken from base.scss.
@@ -174,6 +172,11 @@
 :host([borderless]) {
   .o-search-input {
     border-color: transparent;
+
+    input {
+      padding-top: math.div(5px, $base-font-size-px) + em;
+      padding-bottom: math.div(5px, $base-font-size-px) + em;
+    }
 
     &:hover,
     &:focus-within {

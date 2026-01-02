@@ -5,6 +5,10 @@ export class SingleSelectEventProxy {
     this.header = header;
   }
 
+  onFocus() {
+    this.header.focus();
+  }
+
   onClick(evt, host) {
     if (evt.currentTarget.classList.contains('o-select__label')) {
       this.header.focus();
@@ -24,7 +28,6 @@ export class SingleSelectEventProxy {
       checked: item.value === selected,
     }));
 
-    //host.requestUpdate();
     host.isExpanded = false;
   }
 
@@ -39,9 +42,5 @@ export class SingleSelectEventProxy {
           break;
       }
     }
-  }
-
-  onFocus() {
-    // Additional actions done on focus can be added here.
   }
 }

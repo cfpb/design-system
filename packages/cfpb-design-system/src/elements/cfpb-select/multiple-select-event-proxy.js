@@ -6,6 +6,10 @@ export class MultipleSelectEventProxy {
     this.flyout = flyout;
   }
 
+  onFocus() {
+    this.input.focus();
+  }
+
   onClick(evt, host) {
     const target = evt.currentTarget;
 
@@ -19,10 +23,9 @@ export class MultipleSelectEventProxy {
   onItemClick(evt, host) {
     host.optionList = this.list.childData ?? [];
     evt.currentTarget.focusItemAt(evt.detail.index);
-    //host.requestUpdate();
   }
 
-  onTagClick(evt, host) {
+  async onTagClick(evt, host, tagGroup) {
     const remaining =
       this.tagGroup.tagList.filter((tag) => tag !== evt.detail.target) ?? [];
 
@@ -31,7 +34,10 @@ export class MultipleSelectEventProxy {
       checked: remaining.some((tag) => tag.value === item.value),
     }));
 
-    //host.requestUpdate();
+    // Wait for tagGroup items to refresh.
+    await host.updateComplete;
+
+    tagGroup.focus();
   }
 
   onKeyDown(evt, host) {
@@ -40,11 +46,17 @@ export class MultipleSelectEventProxy {
     if (focused === 'CFPB-FORM-SEARCH-INPUT') {
       switch (evt.key) {
         case 'Tab':
-          evt.preventDefault();
           if (evt.shiftKey) {
-            if (host.isExpanded) host.isExpanded = false;
-            this.input.focus();
+            if (host.isExpanded) {
+              evt.preventDefault();
+              host.isExpanded = false;
+              this.input.focus();
+            } else if (this.tagGroup.tagList.length > 0) {
+              evt.preventDefault();
+              this.tagGroup.focus();
+            }
           } else {
+            evt.preventDefault();
             if (!host.isExpanded) host.isExpanded = true;
             this.list.focusItemAt(0);
           }
@@ -66,7 +78,6 @@ export class MultipleSelectEventProxy {
         case 'Tab':
           if (evt.shiftKey) {
             if (this.list.focusedIndex === 0) {
-              //host.shadowRoot.activeElement.blur();
               evt.preventDefault();
               this.list.focusItemAt(-1);
               this.input.focus();
@@ -80,9 +91,5 @@ export class MultipleSelectEventProxy {
       evt.preventDefault();
       host.isExpanded = false;
     }
-  }
-
-  onFocus() {
-    this.input.focus();
   }
 }

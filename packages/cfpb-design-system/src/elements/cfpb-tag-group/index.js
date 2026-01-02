@@ -78,6 +78,14 @@ export class CfpbTagGroup extends LitElement {
     }
   }
 
+  async focus() {
+    // Wait for tagList to update.
+    await this.updateComplete;
+
+    const firstChild = this.tagList[0];
+    if (firstChild) firstChild.focus();
+  }
+
   #renderTagsFromData(arr) {
     if (!Array.isArray(arr)) return;
 
@@ -315,6 +323,7 @@ export class CfpbTagGroup extends LitElement {
     );
 
     this.#refreshTagList();
+    this.focus();
   }
 
   /**

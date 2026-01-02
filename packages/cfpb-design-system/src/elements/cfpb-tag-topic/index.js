@@ -34,6 +34,13 @@ export class CfpbTagTopic extends LitElement {
     this.siblingOfJumpLink = false;
   }
 
+  async focus() {
+    // Wait for UI to settle.
+    await this.updateComplete;
+
+    this.shadowRoot.querySelector('.a-tag-topic').focus();
+  }
+
   get #tagClass() {
     let tagClass = 'a-tag-topic';
 

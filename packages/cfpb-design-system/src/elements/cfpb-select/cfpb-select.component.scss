@@ -64,7 +64,11 @@
   .o-select {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 38px;
+    grid-template-columns: 1fr 35px;
+
+    // Height should be 35px (33px + 1px top and bottom border).
+    min-height: 33px;
+    border: 1px solid var(--select-border);
 
     &:hover {
       border-color: var(--select-border-hover);
@@ -83,25 +87,15 @@
     // Header
     //
 
-    &__header {
+    &__cues {
       padding: 0;
       border: 0;
       background-color: transparent;
       cursor: pointer;
 
       display: flex;
-
-      // Single select.
-      &:has(.o-select__label) {
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-      }
-
-      // Multiselect.
-      cfpb-form-search-input {
-        width: 100%;
-      }
+      justify-content: space-evenly;
+      align-items: center;
 
       .o-select__cue-close,
       .o-select__cue-open {
@@ -110,10 +104,12 @@
 
       &[aria-expanded='false'] .o-select__cue-open {
         display: block;
+        margin-top: -1px;
       }
 
       &[aria-expanded='true'] .o-select__cue-close {
         display: block;
+        margin-top: -5px;
       }
     }
 
@@ -121,11 +117,11 @@
       padding: 6.5px 10px;
     }
 
-    // Using the button element with .o-select__header requires setting
+    // Using the button element with .o-select__cues requires setting
     // an explicit width.
-    button.o-select__header {
-      width: 100%;
-      text-align: left;
+    button.o-select__cues {
+      background: var(--select-icon-bg-default);
+      border-left: 1px solid var(--select-border-default);
     }
 
     //
@@ -133,20 +129,13 @@
     //
 
     &__label {
-      // Grow to available width.
-      flex-grow: 1;
-      padding: math.div(7px, $base-font-size-px) + em
-        math.div(10px, $base-font-size-px) + em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding-left: math.div(10px, $base-font-size-px) + em;
 
       cursor: pointer;
-    }
-
-    &__cues {
-      align-self: center;
-      background: var(--select-icon-bg-default);
-      border-left: 1px solid var(--select-border-default);
-      padding: math.div(7px, $base-font-size-px) + em
-        math.div(10px, $base-font-size-px) + em;
     }
 
     &__content {
@@ -164,28 +153,6 @@
       &::after {
         padding-bottom: math.div(15px, $base-font-size-px) + em;
         width: 100%;
-      }
-    }
-
-    //
-    // select with a border modifier
-    //
-
-    &--border {
-      border: 1px solid var(--select-border);
-    }
-
-    @media print {
-      // Hide the interactive select cues when printing
-      &__header[aria-expanded='true'] &__cue-close,
-      &__header[aria-expanded='false'] &__cue-open {
-        display: none;
-      } // Ensure all selects are expanded when printing.
-      // To accommodate print stylesheets that display the raw URL after links,
-      // set an enormous max height to accommodate selects that have a lot of links.
-      &__content[aria-expanded='false'] {
-        display: block;
-        max-height: 99999px !important;
       }
     }
 
@@ -207,12 +174,26 @@
       }
     }
   }
+
+  @media print {
+    // Hide the interactive select cues when printing
+    &__cues[aria-expanded='true'] &__cue-close,
+    &__cues[aria-expanded='false'] &__cue-open {
+      display: none;
+    } // Ensure all selects are expanded when printing.
+    // To accommodate print stylesheets that display the raw URL after links,
+    // set an enormous max height to accommodate selects that have a lot of links.
+    &__content[aria-expanded='false'] {
+      display: block;
+      max-height: 99999px !important;
+    }
+  }
 }
 
 // The drop-down is expanded.
 :host([open]) {
   .o-select {
-    // The divider between __header and __content.
+    // The divider between input and content.
     &::before {
       position: absolute;
       z-index: 11;
@@ -229,10 +210,6 @@
 html[lang='ar'] {
   :host {
     .o-select {
-      &__header {
-        text-align: right;
-      }
-
       &__cues {
         text-align: left;
       }

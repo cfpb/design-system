@@ -2085,7 +2085,7 @@
 
 <p>If you look in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/src/cfpb-icons.scss">cfpb-icons.scss</a> you can see that we have encoded <code class="language-plaintext highlighter-rouge">class="cf-icon-svg"</code> in the root element of each of our SVG icons. As a result, the CSS rule gets applied to all of the SVGs on the page, just like any other HTML element.</p>
 
-<p>We start by limiting the size of the SVG to a proportion of the text height, using the <code class="language-plaintext highlighter-rouge">@cf-icon-height</code> variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set <code class="language-plaintext highlighter-rouge">vertical-align: text-top;</code>. Finally, setting <code class="language-plaintext highlighter-rouge">fill: currentColor;</code> tells the SVG to set its path’s fill <code class="language-plaintext highlighter-rouge">color</code> to match the color value of its parent element.</p>
+<p>We start by limiting the size of the SVG to a proportion of the text height, using the <code class="language-plaintext highlighter-rouge">@cf-icon-height</code> variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set <code class="language-plaintext highlighter-rouge">vertical-align: middle;</code>. Finally, setting <code class="language-plaintext highlighter-rouge">fill: currentColor;</code> tells the SVG to set its path’s fill <code class="language-plaintext highlighter-rouge">color</code> to match the color value of its parent element.</p>
 
 <h4 id="inline-svg-background">Inline SVG background</h4>
 <p>In some cases we embed an SVG as a background image. To accomplish this, a custom postcss plugin is used to inject the SVG icon source file inline into the CSS <code class="language-plaintext highlighter-rouge">background-image</code> property. This is exposed via a custom CSS property, <code class="language-plaintext highlighter-rouge">--cfpb-background-icon-svg: '[name] [color]'</code>, where <code class="language-plaintext highlighter-rouge">[name]</code> is the SVG icon canonical name, and the optional <code class="language-plaintext highlighter-rouge">[color]</code> is the color of the icon in <code class="language-plaintext highlighter-rouge">rgb(r,g,b)</code> format.</p>
@@ -2120,8 +2120,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/iconography.md">
-                            <time datetime="2026-01-02 14:05:32 -0500">
-                                 2:05:32 PM Jan 02, 2026
+                            <time datetime="2026-01-02 18:28:56 -0500">
+                                 6:28:56 PM Jan 02, 2026
                             </time>
                         </a>
                     </section>

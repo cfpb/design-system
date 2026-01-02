@@ -65,6 +65,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 35px;
+
     // Height should be 35px (33px + 1px top and bottom border).
     min-height: 33px;
     border: 1px solid var(--select-border);
@@ -129,7 +130,6 @@
 
     &__label {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       align-items: center;
       gap: 10px;

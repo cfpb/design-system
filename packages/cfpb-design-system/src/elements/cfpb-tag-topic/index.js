@@ -34,7 +34,10 @@ export class CfpbTagTopic extends LitElement {
     this.siblingOfJumpLink = false;
   }
 
-  focus() {
+  async focus() {
+    // Wait for UI to settle.
+    await this.updateComplete;
+
     this.shadowRoot.querySelector('.a-tag-topic').focus();
   }
 

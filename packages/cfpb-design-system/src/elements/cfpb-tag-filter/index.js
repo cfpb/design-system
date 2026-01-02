@@ -28,7 +28,10 @@ export class CfpbTagFilter extends LitElement {
     this.value = '';
   }
 
-  focus() {
+  async focus() {
+    // Wait for UI to settle.
+    await this.updateComplete;
+
     this.shadowRoot.querySelector('button').focus();
   }
 

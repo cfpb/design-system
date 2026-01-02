@@ -323,6 +323,7 @@ export class CfpbTagGroup extends LitElement {
     );
 
     this.#refreshTagList();
+    this.focus();
   }
 
   /**

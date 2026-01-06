@@ -160,7 +160,12 @@ export class CfpbSelect extends LitElement {
   }
 
   #onClear() {
+    this.#flyoutMenu.suspend();
+    this.isExpanded = false;
     this.#list.value.showAllItems();
+    this.#noResults = false;
+    this.requestUpdate();
+    this.#flyoutMenu.resume();
   }
 
   #initFlyoutMenu() {
@@ -295,6 +300,7 @@ export class CfpbSelect extends LitElement {
         ${this.#renderInput()}
 
         <button
+          tabindex="-1"
           class="o-select__cues"
           title="Expand content"
           data-js-hook="behavior_flyout-menu_trigger"
@@ -316,6 +322,7 @@ export class CfpbSelect extends LitElement {
           ${ref(this.#contentDom)}
         >
           <cfpb-list
+            .tabindex=${this.#noResults ? '-1' : ''}
             @item-click=${this.#onItemClick}
             ?multiple=${this.multiple}
             .childData=${this.optionList}

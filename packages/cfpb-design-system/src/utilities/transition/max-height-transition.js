@@ -46,7 +46,7 @@ function MaxHeightTransition(element) {
    */
   function calcPosition() {
     const rect = element.getBoundingClientRect();
-    const distanceToBottom = window.innerHeight - rect.bottom;
+    const distanceToBottom = window.innerHeight - rect.top;
     const distanceToTop = rect.top;
     const dir = distanceToBottom <= 140 ? 'up' : 'down';
 

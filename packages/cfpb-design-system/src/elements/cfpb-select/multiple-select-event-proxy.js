@@ -55,10 +55,6 @@ export class MultipleSelectEventProxy {
               evt.preventDefault();
               this.tagGroup.focus();
             }
-          } else {
-            evt.preventDefault();
-            if (!host.isExpanded) host.isExpanded = true;
-            this.list.focusItemAt(0);
           }
           break;
         case 'ArrowDown':
@@ -71,9 +67,19 @@ export class MultipleSelectEventProxy {
           host.isExpanded = !host.isExpanded;
           break;
       }
-    }
-
-    if (focused === 'CFPB-LIST-ITEM') {
+    } else if (focused === 'CFPB-LIST') {
+      switch (evt.key) {
+        case 'Tab':
+          evt.preventDefault();
+          if (this.list.visibleItems.length > 0) {
+            if (!host.isExpanded) host.isExpanded = true;
+            this.list.focusItemAt(0);
+          } else {
+            this.input.focus();
+          }
+          break;
+      }
+    } else if (focused === 'CFPB-LIST-ITEM') {
       switch (evt.key) {
         case 'Tab':
           if (evt.shiftKey) {

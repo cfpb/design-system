@@ -4787,7 +4787,6 @@ __metadata:
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-wc: "npm:3.0.2"
     git-cliff: "npm:2.11.0"
-    glob: "npm:13.0.0"
     globals: "npm:17.0.0"
     html-entities: "npm:2.6.0"
     http-server: "npm:14.1.1"
@@ -8873,17 +8872,6 @@ __metadata:
   peerDependencies:
     tslib: 2
   checksum: 10c0/011c81ae2a4d7ac5fd617038209fd9639d54c76211cc88fe8dd85d1a0850bc683a63cf5b1eae370141fca7dd2c834dfb9684dfdd8bf7472f2c1e4ef6ab6e34f9
-  languageName: node
-  linkType: hard
-
-"glob@npm:13.0.0":
-  version: 13.0.0
-  resolution: "glob@npm:13.0.0"
-  dependencies:
-    minimatch: "npm:^10.1.1"
-    minipass: "npm:^7.1.2"
-    path-scurry: "npm:^2.0.0"
-  checksum: 10c0/8e2f5821f3f7c312dd102e23a15b80c79e0837a9872784293ba2e15ec73b3f3749a49a42a31bfcb4e52c84820a474e92331c2eebf18819d20308f5c33876630a
   languageName: node
   linkType: hard
 

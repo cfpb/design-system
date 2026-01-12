@@ -25,6 +25,7 @@ jobs:
           source-dir: ./packages/cfpb-design-system/dist/
           preview-branch: ${{ env.PREVIEW_BRANCH }}
           comment: false
+          umbrella-dir: ./packages/cfpb-design-system/pr-previews/
 
       - uses: marocchino/sticky-pull-request-comment@v2
         if: steps.preview-step.outputs.deployment-action == 'deploy' && env.deployment_status == 'success'

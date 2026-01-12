@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../packages/cfpb-design-system/src/abstracts/vars-breakpoints.js"],
+  "sourcesContent": ["/* ==========================================================================\n   Design System\n   Breakpoint JavaScript variables.\n   All values are pixel based.\n\n   NOTE: If any of the values in this file are adjusted,\n         they need to be adjusted in vars-breakpoints.scss as well.\n   ========================================================================== */\n\nexport const varsBreakpoints = {\n  bpXS: {\n    min: 0,\n    max: 600,\n  },\n  bpSM: {\n    min: 601,\n    max: 900,\n  },\n  bpMED: {\n    min: 901,\n    max: 1020,\n  },\n  bpLG: {\n    min: 1021,\n    max: 1200,\n  },\n  bpXL: {\n    min: 1201,\n  },\n};\n"],
+  "mappings": "MASO,IAAMA,EAAkB,CAC7B,KAAM,CACJ,IAAK,EACL,IAAK,GACP,EACA,KAAM,CACJ,IAAK,IACL,IAAK,GACP,EACA,MAAO,CACL,IAAK,IACL,IAAK,IACP,EACA,KAAM,CACJ,IAAK,KACL,IAAK,IACP,EACA,KAAM,CACJ,IAAK,IACP,CACF",
+  "names": ["varsBreakpoints"]
+}

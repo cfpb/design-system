@@ -28,8 +28,11 @@ jobs:
       - uses: rossjrw/pr-preview-action@v1
         id: preview-step
         with:
-          source-dir: ./packages/cfpb-design-system/dist/
+          source-dir: ./packages/cfpb-design-system/dist
           preview-branch: ${{ env.PREVIEW_BRANCH }}
           comment: false
           umbrella-dir: ./packages/cfpb-design-system/pr-previews/
+          pages-base-url: cfpb.github.io/design-system/
+          wait-for-pages-deployment: true
+          action: auto
           

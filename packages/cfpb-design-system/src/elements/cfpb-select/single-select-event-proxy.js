@@ -9,6 +9,10 @@ export class SingleSelectEventProxy {
     this.header.focus();
   }
 
+  onBlur(host) {
+    host.isExpanded = false;
+  }
+
   onClick(evt, host) {
     if (evt.currentTarget.classList.contains('o-select__label')) {
       this.header.focus();

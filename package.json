@@ -41,7 +41,7 @@
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.8",
     "anchor-js": "5.0.0",
     "decap-cms-app": "3.10.0",
     "html-entities": "2.6.0",

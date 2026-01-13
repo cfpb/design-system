@@ -10,6 +10,11 @@ export class MultipleSelectEventProxy {
     this.input.focus();
   }
 
+  onBlur(host) {
+    // In multiselect, blur happens when inside the list, so we ignore any
+    // blur actions.
+  }
+
   onClick(evt, host) {
     const target = evt.currentTarget;
 
@@ -65,18 +70,6 @@ export class MultipleSelectEventProxy {
         case 'Enter':
           evt.preventDefault();
           host.isExpanded = !host.isExpanded;
-          break;
-      }
-    } else if (focused === 'CFPB-LIST') {
-      switch (evt.key) {
-        case 'Tab':
-          evt.preventDefault();
-          if (this.list.visibleItems.length > 0) {
-            if (!host.isExpanded) host.isExpanded = true;
-            this.list.focusItemAt(0);
-          } else {
-            this.input.focus();
-          }
           break;
       }
     } else if (focused === 'CFPB-LIST-ITEM') {

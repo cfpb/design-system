@@ -82,6 +82,10 @@ export class CfpbSelect extends LitElement {
       this.#eventProxy.onFocus();
     });
 
+    this.addEventListener('blur', () => {
+      this.#eventProxy.onBlur(this);
+    });
+
     this.addEventListener('keydown', (evt) => {
       this.#eventProxy.onKeyDown(evt, this);
     });
@@ -300,7 +304,7 @@ export class CfpbSelect extends LitElement {
         ${this.#renderInput()}
 
         <button
-          tabindex="-1"
+          tabindex=${this.multiple ? '-1' : '0'}
           class="o-select__cues"
           title="Expand content"
           data-js-hook="behavior_flyout-menu_trigger"
@@ -322,7 +326,7 @@ export class CfpbSelect extends LitElement {
           ${ref(this.#contentDom)}
         >
           <cfpb-list
-            .tabindex=${this.#noResults ? '-1' : ''}
+            tabindex=${this.#noResults ? '-1' : '0'}
             @item-click=${this.#onItemClick}
             ?multiple=${this.multiple}
             .childData=${this.optionList}

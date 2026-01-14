@@ -10,7 +10,7 @@ export class MultipleSelectEventProxy {
     this.input.focus();
   }
 
-  onBlur(host) {
+  onBlur() {
     // In multiselect, blur happens when inside the list, so we ignore any
     // blur actions.
   }

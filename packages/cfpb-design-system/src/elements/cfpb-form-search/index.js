@@ -131,8 +131,6 @@ export class CfpbFormSearch extends LitElement {
     evt.preventDefault();
     if (this.disabled) return;
 
-    console.log(this.value);
-
     if (this.value !== '') {
       this.#internals.setFormValue(this.value);
       this.#internals.form?.requestSubmit();
@@ -148,7 +146,7 @@ export class CfpbFormSearch extends LitElement {
         <div class="container">
           <cfpb-form-search-input
             ?name=${this.name}
-            ?value=${this.value}
+            .value=${this.value}
             ?placeholder=${this.placeholder}
             title=${this.title}
             ?maxlength=${this.maxlength}

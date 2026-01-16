@@ -1,12 +1,7 @@
-name: Deploy PR preview
-concurrency: preview-${{ github.ref }}
+name: Deploy PR Preview
 on:
   pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
+    types: [opened, synchronize, reopened, closed]
 
 permissions:
   contents: write
@@ -19,20 +14,31 @@ jobs:
   deploy-preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
+      - name: Checkout repo
         uses: actions/checkout@v4
-      
-      - name: Shared setup
-        uses:  ./.github/actions/shared-action-setup
 
-      - uses: rossjrw/pr-preview-action@v1
+      - name: Shared setup
+        uses: ./.github/actions/shared-action-setup
+
+      - name: Build project assets
+        run: yarn build
+
+      - name: Build documentation site for PR preview
+        # Use a PR-scoped baseurl so preview assets resolve under pr-preview/<PR>.
+        run: bundle exec jekyll build --baseurl "/design-system/pr-preview/${{ github.event.number }}"
+
+      - name: Deploy PR preview
+        uses: rossjrw/pr-preview-action@v1
         id: preview-step
         with:
-          source-dir: ./packages/cfpb-design-system/dist
           preview-branch: ${{ env.PREVIEW_BRANCH }}
+          source-dir: docs/_site/design-system
           comment: false
-          umbrella-dir: ./packages/cfpb-design-system/pr-previews/
-          pages-base-url: cfpb.github.io/design-system/
+          # WARNING: If the umbrella-dir is not set, or set to / we could potentially overwrite the live site
+          umbrella-dir: pr-preview
+          pages-base-url: https://cfpb.github.io/design-system
+          # GH Pages serves from gh-pages root for this repo.
+          pages-base-path: .
           wait-for-pages-deployment: true
           action: auto
           

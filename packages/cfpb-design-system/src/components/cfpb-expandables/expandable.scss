@@ -27,6 +27,7 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
+    align-items: center;
 
     &:focus {
       outline: 1px dotted var(--black);
@@ -36,6 +37,7 @@
     .o-expandable__cue-close,
     .o-expandable__cue-open {
       display: none;
+      line-height: 0;
     }
 
     &[aria-expanded='false'] .o-expandable__cue-open {
@@ -83,7 +85,7 @@
     align-self: center;
     color: var(--pacific);
     font-size: math.div(16px, $base-font-size-px) + em;
-    line-height: math.div($base-line-height-px, $base-font-size-px);
+    line-height: 0;
   }
 
   &__content {
@@ -119,6 +121,9 @@
       &__label {
         // h2 size.
         font-size: math.div(26px, $base-font-size-px) + em;
+        display: flex;
+        align-items: center;
+        line-height: 0;
 
         // Mobile only.
         @include respond-to-max($bp-xs-max) {

@@ -12,7 +12,7 @@ export class MediaQueryService extends EventTarget {
 
   /**
    *
-   * @param {Record<string, {min: number, max?: number}} [breakpoints]
+   * @param {Record<string, {min: number, max?: number}>} [breakpoints]
    *   A map of breakpoint name -> { min: px, optional max: px }.
    *   If not provided, default breakpoints are used.
    */

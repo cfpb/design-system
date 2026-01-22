@@ -24,10 +24,15 @@ engine.registerFilter('xml_escape', (val) => {
 });
 
 /**
+ * @typedef {object} ReactLiquidProps
+ * @property {string} template - Template ot render in component.
+ * @property {Record<string, unknown>} data - Data to feed to the template.
+ */
+
+/**
  * Create a <ReactLiquid> component.
- * @param root0
- * @param root0.template - Template to render in component.
- * @param root0.data - Data to feed to the template.
+ * @param {ReactLiquidProps} props - Component properties.
+ * @returns {React.ReactElement} Rendered component output.
  */
 export default function ReactLiquid({ template, data }) {
   const [html, setHtml] = useState('');

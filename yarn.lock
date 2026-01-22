@@ -4792,7 +4792,7 @@ __metadata:
     eslint-import-resolver-typescript: "npm:4.4.4"
     eslint-plugin-cypress: "npm:5.2.1"
     eslint-plugin-import: "npm:2.32.0"
-    eslint-plugin-jsdoc: "npm:62.3.0"
+    eslint-plugin-jsdoc: "npm:62.3.1"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-lit: "npm:2.1.1"
     eslint-plugin-react: "npm:7.37.5"
@@ -4811,14 +4811,14 @@ __metadata:
     marked: "npm:17.0.1"
     postcss: "npm:8.5.6"
     postcss-replace: "npm:2.0.1"
-    prettier: "npm:3.8.0"
+    prettier: "npm:3.8.1"
     prop-types: "npm:15.8.1"
     react: "npm:19.2.3"
     react-dom: "npm:19.2.3"
     release-it: "npm:19.2.4"
-    sass: "npm:1.97.2"
+    sass: "npm:1.97.3"
     slugify: "npm:1.6.6"
-    style-dictionary: "npm:5.1.4"
+    style-dictionary: "npm:5.2.0"
     stylelint: "npm:17.0.0"
     stylelint-config-standard-scss: "npm:17.0.0"
     svgo: "npm:4.0.0"
@@ -5270,6 +5270,13 @@ __metadata:
   version: 1.4.4
   resolution: "comment-parser@npm:1.4.4"
   checksum: 10c0/85eaa6b8cd05206b6dcde9c779879ab5d36b7640ec5ed9f0709f1529a2d84638603860ea0a78df3fab9443db8c31f6f881e37d2264edadb653ebd9736a5f9ad8
+  languageName: node
+  linkType: hard
+
+"comment-parser@npm:1.4.5":
+  version: 1.4.5
+  resolution: "comment-parser@npm:1.4.5"
+  checksum: 10c0/6a6a74697c79927e3bd42bde9608a471f1a9d4995affbc22fa3364cc42b4017f82ef477431a1558b0b6bef959f9bb6964c01c1bbfc06a58ba1730dec9c423b44
   languageName: node
   linkType: hard
 
@@ -7575,14 +7582,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:62.3.0":
-  version: 62.3.0
-  resolution: "eslint-plugin-jsdoc@npm:62.3.0"
+"eslint-plugin-jsdoc@npm:62.3.1":
+  version: 62.3.1
+  resolution: "eslint-plugin-jsdoc@npm:62.3.1"
   dependencies:
     "@es-joy/jsdoccomment": "npm:~0.82.0"
     "@es-joy/resolve.exports": "npm:1.2.0"
     are-docs-informative: "npm:^0.0.2"
-    comment-parser: "npm:1.4.4"
+    comment-parser: "npm:1.4.5"
     debug: "npm:^4.4.3"
     escape-string-regexp: "npm:^4.0.0"
     espree: "npm:^11.1.0"
@@ -7595,7 +7602,7 @@ __metadata:
     to-valid-identifier: "npm:^1.0.0"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10c0/bc2013de9f4e38b3d681b7714c29d4b2565c8f9017955aeb83afd1683837d3e416a635d2ed4f151f5aa1749cbae171b83816f887fb63da6a10a94bd8dc1ce630
+  checksum: 10c0/0fb58a91e905004dae8513685372883db065ea7c7e6e132a74c46c1f426ba074d0d9dcd9e4cc9904d7b25d6072782161ac580a02d4e9f38348602e67f9ebdaa1
   languageName: node
   linkType: hard
 
@@ -14142,12 +14149,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.8.0":
-  version: 3.8.0
-  resolution: "prettier@npm:3.8.0"
+"prettier@npm:3.8.1":
+  version: 3.8.1
+  resolution: "prettier@npm:3.8.1"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/8926e9c9941a293b76c2d799089d038e9f6d84fb37702fc370bedd03b3c70d7fcf507e2e3c4f151f222d81820a3b74cac5e692c955cfafe34dd0d02616ce8327
+  checksum: 10c0/33169b594009e48f570471271be7eac7cdcf88a209eed39ac3b8d6d78984039bfa9132f82b7e6ba3b06711f3bfe0222a62a1bfb87c43f50c25a83df1b78a2c42
   languageName: node
   linkType: hard
 
@@ -15571,9 +15578,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.97.2":
-  version: 1.97.2
-  resolution: "sass@npm:1.97.2"
+"sass@npm:1.97.3":
+  version: 1.97.3
+  resolution: "sass@npm:1.97.3"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -15584,7 +15591,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10c0/5622a4f9d0acf5cdfb72c73c448366b3ec7bfe2b6e1ecb62c6e9f8eaff9c02a6afd86a31ded246fc818fe660cedea6bd27335e82fc9bd7cce46c29f95774bece
+  checksum: 10c0/67f6b5d220f20c1c23a8b16dda5fd1c5d119ad5caf8195b185d553b5b239fb188a3787f04fc00171c62515f2c4e5e0eb5ad4992a80f8543428556883c1240ba3
   languageName: node
   linkType: hard
 
@@ -16583,9 +16590,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:5.1.4":
-  version: 5.1.4
-  resolution: "style-dictionary@npm:5.1.4"
+"style-dictionary@npm:5.2.0":
+  version: 5.2.0
+  resolution: "style-dictionary@npm:5.2.0"
   dependencies:
     "@bundled-es-modules/deepmerge": "npm:^4.3.1"
     "@bundled-es-modules/glob": "npm:^11.1.0"
@@ -16601,7 +16608,7 @@ __metadata:
     tinycolor2: "npm:^1.6.0"
   bin:
     style-dictionary: bin/style-dictionary.js
-  checksum: 10c0/71ff560d4786f93a51595bafdfd1f69f95ba782764b3b5e2fcbe085cfe777d8198cd5e2779c96234e8b3b946f2f75e46610a16234967f740aabc8f442f7a10e3
+  checksum: 10c0/67667dcdfa86dce2e368682354440ea4f4a6a03f1459e459e8adc0cef62a5cc6d47903691e22b25ccc1bc76593f64da3b5255977be2bb70bfec0ba2fe568eda2
   languageName: node
   linkType: hard
 

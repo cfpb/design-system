@@ -4,7 +4,7 @@
  *   - JS arrays
  *   - JSON strings
  *   - JSON-like strings with single quotes
- * @param {Array | string} input
+ * @param {Array | string} input - An array or JSON string.
  * @param {object} options - optional settings.
  * @param {boolean} options.allowSingleQuotes - default true.
  * @returns {Array|null} Parsed array/string, or null if invalid.

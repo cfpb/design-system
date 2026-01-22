@@ -15,7 +15,7 @@ const getIframeBody = () => {
 
 /**
  * Load up the CMS at a particular path.
- * @param path - {string} - A URL path.
+ * @param {string} path - A URL path.
  */
 function setupCmsVisit(path) {
   cy.reload(true);

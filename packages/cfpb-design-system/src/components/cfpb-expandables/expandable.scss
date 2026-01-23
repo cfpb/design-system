@@ -37,7 +37,6 @@
     .o-expandable__cue-close,
     .o-expandable__cue-open {
       display: none;
-      // line-height: 0;
     }
 
     &[aria-expanded='false'] .o-expandable__cue-open {

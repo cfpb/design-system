@@ -37,7 +37,7 @@
     .o-expandable__cue-close,
     .o-expandable__cue-open {
       display: none;
-      line-height: 0;
+      // line-height: 0;
     }
 
     &[aria-expanded='false'] .o-expandable__cue-open {
@@ -123,7 +123,6 @@
         font-size: math.div(26px, $base-font-size-px) + em;
         display: flex;
         align-items: center;
-        line-height: 0;
 
         // Mobile only.
         @include respond-to-max($bp-xs-max) {

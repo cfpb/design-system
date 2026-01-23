@@ -4792,14 +4792,14 @@ __metadata:
     eslint-import-resolver-typescript: "npm:4.4.4"
     eslint-plugin-cypress: "npm:5.2.1"
     eslint-plugin-import: "npm:2.32.0"
-    eslint-plugin-jsdoc: "npm:62.3.1"
+    eslint-plugin-jsdoc: "npm:62.4.0"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-lit: "npm:2.1.1"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-wc: "npm:3.0.2"
     git-cliff: "npm:2.12.0"
     glob: "npm:13.0.0"
-    globals: "npm:17.0.0"
+    globals: "npm:17.1.0"
     html-entities: "npm:2.6.0"
     http-server: "npm:14.1.1"
     jest: "npm:30.2.0"
@@ -7582,9 +7582,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:62.3.1":
-  version: 62.3.1
-  resolution: "eslint-plugin-jsdoc@npm:62.3.1"
+"eslint-plugin-jsdoc@npm:62.4.0":
+  version: 62.4.0
+  resolution: "eslint-plugin-jsdoc@npm:62.4.0"
   dependencies:
     "@es-joy/jsdoccomment": "npm:~0.82.0"
     "@es-joy/resolve.exports": "npm:1.2.0"
@@ -7602,7 +7602,7 @@ __metadata:
     to-valid-identifier: "npm:^1.0.0"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10c0/0fb58a91e905004dae8513685372883db065ea7c7e6e132a74c46c1f426ba074d0d9dcd9e4cc9904d7b25d6072782161ac580a02d4e9f38348602e67f9ebdaa1
+  checksum: 10c0/c7552785b20f6c52d9aaa90625a6ead67a9f3b70f0766cc8a64aee67d619e977ba8581e3fb7a1381d5ebee601854813d73b8b8f5c9d05e2133dc1592caba4292
   languageName: node
   linkType: hard
 
@@ -8971,10 +8971,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:17.0.0":
-  version: 17.0.0
-  resolution: "globals@npm:17.0.0"
-  checksum: 10c0/e3c169fdcb0fc6755707b697afb367bea483eb29992cfc0de1637382eb893146e17f8f96db6d7453e3696b478a7863ae2000e6c71cd2f4061410285106d3847a
+"globals@npm:17.1.0":
+  version: 17.1.0
+  resolution: "globals@npm:17.1.0"
+  checksum: 10c0/4a4a17847676a09f164b8bdce7df105a4f484d6d44586e374087ba9ec7089cbf4c578b8648838dee9917074199c542ce157ea3c07b266f708dfb1652010900c8
   languageName: node
   linkType: hard
 

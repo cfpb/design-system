@@ -139,7 +139,7 @@ export class CfpbList extends LitElement {
 
       // Remove prior listener if present.
       const prev = this.#clickListeners.get(item);
-      if (prev) item.removeEventListener('click-item', prev);
+      if (prev) item.removeEventListener('item-click', prev);
 
       // Listener that toggles the item before handling.
       const listener = (evt) => {
@@ -148,7 +148,7 @@ export class CfpbList extends LitElement {
         this.#handleToggle(item, item.checked, index);
       };
 
-      item.addEventListener('click-item', listener);
+      item.addEventListener('item-click', listener);
       this.#clickListeners.set(item, listener);
 
       // Track focus index.

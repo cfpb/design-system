@@ -47,7 +47,7 @@ describe('<cfpb-list> tests', () => {
     expect(list.checkedItems).toContain(list.items[0]);
     expect(list.checkedItems).toContain(list.items[1]);
 
-    const event = new CustomEvent('click-item', {
+    const event = new CustomEvent('item-click', {
       bubbles: true,
       composed: true,
     });
@@ -57,7 +57,7 @@ describe('<cfpb-list> tests', () => {
     expect(list.checkedItems).toEqual([list.items[1]]);
   });
 
-  test('click-item toggles single selection', async () => {
+  test('item-click toggles single selection', async () => {
     list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
     await list.updateComplete;
 
@@ -66,7 +66,7 @@ describe('<cfpb-list> tests', () => {
 
     list.items[0].checked = true;
     list.items[0].dispatchEvent(
-      new CustomEvent('click-item', { bubbles: true, composed: true }),
+      new CustomEvent('item-click', { bubbles: true, composed: true }),
     );
 
     expect(list.checkedItems).toEqual([list.items[0]]);
@@ -74,7 +74,7 @@ describe('<cfpb-list> tests', () => {
 
     list.items[0].checked = false;
     list.items[0].dispatchEvent(
-      new CustomEvent('click-item', { bubbles: true, composed: true }),
+      new CustomEvent('item-click', { bubbles: true, composed: true }),
     );
     expect(list.checkedItems).toEqual([]);
   });
@@ -86,7 +86,7 @@ describe('<cfpb-list> tests', () => {
     const listenerSpy = jest.fn();
     list.addEventListener('item-click', listenerSpy);
 
-    const event = new CustomEvent('click-item', {
+    const event = new CustomEvent('item-click', {
       bubbles: true,
       composed: true,
     });

@@ -112,8 +112,16 @@ export class CfpbFormSearch extends LitElement {
     this.value = evt.target.value;
   }
 
-  #onBlur() {
+  #onBlur(evt) {
+    console.log(evt.target, evt.currentTarget);
+    evt.preventDefault();
     this.#popup.value.classList.remove('show');
+  }
+
+  #onItemClick(evt) {
+    console.log('onItemClick');
+    console.log(evt.target, evt.currentTarget);
+    evt.preventDefault();
   }
 
   get isSearchDisabled() {
@@ -158,7 +166,11 @@ export class CfpbFormSearch extends LitElement {
           ></cfpb-form-search-input>
 
           <div class="popup" ${ref(this.#popup)}>
-            <cfpb-list .childData=${this.searchList} ${ref(this.#list)}>
+            <cfpb-list
+              .childData=${this.searchList}
+              ${ref(this.#list)}
+              @item-click=${this.#onItemClick}
+            >
             </cfpb-list>
           </div>
         </div>

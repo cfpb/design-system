@@ -1,13 +1,9 @@
 @use 'sass:math';
 @use './mixins' as *;
-@use '@cfpb/cfpb-design-system/src/elements/abstracts/sizing-vars' as *;
 
 .a-link {
   border-bottom-width: 0;
   text-decoration-line: none;
-  display: inline-flex;
-  align-items: center;
-  gap: math.div(4px, $base-font-size-px) + rem;  
 
   .a-link__text {
     text-decoration-line: underline;

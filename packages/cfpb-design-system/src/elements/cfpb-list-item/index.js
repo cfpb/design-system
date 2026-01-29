@@ -49,7 +49,7 @@ export class CfpbListItem extends LitElement {
       this.addEventListener('keydown', this.#onKeyDown);
     }
 
-    this.addEventListener('click', this.#onClick);
+    this.addEventListener('pointerdown', this.#onClick);
   }
 
   connectedCallback() {
@@ -102,7 +102,7 @@ export class CfpbListItem extends LitElement {
     // … Otherwise, toggle the checked state.
     this.checked = !this.checked;
     this.dispatchEvent(
-      new CustomEvent('click-item', {
+      new CustomEvent('item-click', {
         detail: { checked: this.checked, value: this.value },
         bubbles: true,
         composed: true,

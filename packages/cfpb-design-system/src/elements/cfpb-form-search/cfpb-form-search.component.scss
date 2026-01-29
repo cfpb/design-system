@@ -45,6 +45,16 @@
       border: 1px solid var(--pacific);
       border-top: 0;
       width: calc(100% - 2px);
+
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        bottom: -1px;
+        border-bottom: 1px solid var(--pacific);
+      }
     }
 
     .popup.show {

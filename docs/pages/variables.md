@@ -17,8 +17,8 @@ variation_groups:
       - variation_name: Color and Font custom props
         variation_description: >-
           CSS custom properties generated from W3C design token format JSON for
-          colors (e.g. custom-props.css) are now used extensively. This should
-          be used and included once in your project's CSS entry-point file.
+          colors (e.g. custom-props.css) are used. This should be included once
+          in your project's CSS entry-point file.
 
 
           ```scss

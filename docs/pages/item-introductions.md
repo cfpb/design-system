@@ -2,7 +2,7 @@
 layout: variation
 section: patterns
 variation_groups:
-  - variation_group_name: Standard item introduction
+  - variation_group_name: Types
     variations:
       - variation_description: >-
           Example of a [blog post that uses an item
@@ -10,7 +10,8 @@ variation_groups:
 
 
           ![Example of an item introduction](/design-system/images/uploads/item_introduction.png)
-        variation_specs: ''
+        variation_specs: ""
+        variation_name: Item introduction
 guidelines: >-
   * Heading should be as succinct as possible, 80 characters max.
 
@@ -38,7 +39,7 @@ use_cases: >-
 
 
   * When creating general content pages, even if the content is detailed or lengthy
-behavior: ''
+behavior: ""
 related_items: >-
   * [Learn pages](https://cfpb.github.io/design-system/pages/learn-pages) 
 

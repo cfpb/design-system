@@ -3,7 +3,7 @@ title: Tooltips
 collection_name: pages
 layout: variation
 section: components
-status: Beta
+status: Released
 description: A tooltip provides short, descriptive information when a user
   hovers or focuses on an element. It contains helpful but non-critical
   information and is useful in a space-constrained user interface.
@@ -62,10 +62,11 @@ variation_groups:
           ...rest of your code
 
           -->
-        variation_description: ''
-        variation_code_snippet_rendered: ''
-    variation_group_name: Standard tooltip
-    variation_group_description: ''
+        variation_description: ""
+        variation_code_snippet_rendered: ""
+        variation_name: Tooltip
+    variation_group_name: Types
+    variation_group_description: ""
 guidelines: Be judicious in using tooltips and explore other design options that
   keep content visible before choosing to use a tooltip. Only consider using a
   tooltip for short, non-critical information in a space-constrained user
@@ -87,5 +88,5 @@ accessibility: As USWDS states, tooltips are progressive enhancements for the
   doesn’t initialize. When testing tooltips for accessibility, ensure they are
   compliant with [USWDS tooltip accessibility
   tests](https://designsystem.digital.gov/components/tooltip/accessibility-tests/).
-related_items: ''
+related_items: ""
 ---

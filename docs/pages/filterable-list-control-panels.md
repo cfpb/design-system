@@ -132,15 +132,14 @@ variation_groups:
               </div>
           </div>
         variation_description: ""
-        variation_name: ""
+        variation_name: Filterable list control panel
         variation_specs: ""
         variation_code_snippet_rendered: ""
     variation_group_name: Types
-    variation_group_description: >-
-      ### Filterable list control panel
-
-
-      Use filters in conjunction with search to help users narrow down large amounts of data or content. Follow form patterns for grouping, layout, and messaging.  Note that notification messaging sits below the filter and above results.
+    variation_group_description: Use filters in conjunction with search to help
+      users narrow down large amounts of data or content. Follow form patterns
+      for grouping, layout, and messaging.  Note that notification messaging
+      sits below the filter and above results.
 guidelines: >-
   ### Content guidelines
 

@@ -3,7 +3,7 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Summaries
+  - variation_group_name: Types
     variations:
       - variation_name: Summary (on desktop)
         variation_code_snippet: >-
@@ -54,8 +54,7 @@ variation_groups:
                 {% include icons/plus-round.svg %}
             </button>
           </div>
-        variation_description:
-          Adding the `o-summary--mobile` modifier makes the summary
+        variation_description: Adding the `o-summary--mobile` modifier makes the summary
           behavior only show up on a mobile (narrow) page width.
       - variation_name: Summary Minimal
         variation_code_snippet: >-
@@ -75,9 +74,8 @@ variation_groups:
                 </span>
             </button>
           </div>
-        variation_description:
-          This component provides a more inconspicous button, which stays
-          at the bottom of the summary when expanded.
+        variation_description: This component provides a more inconspicous button, which
+          stays at the bottom of the summary when expanded.
 eyebrow: Components
 title: Summaries
 description: Summary components hides content over a certain height. When the

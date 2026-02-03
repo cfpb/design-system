@@ -54,7 +54,8 @@ variation_groups:
                 {% include icons/plus-round.svg %}
             </button>
           </div>
-        variation_description: Adding the `o-summary--mobile` modifier makes the summary
+        variation_description:
+          Adding the `o-summary--mobile` modifier makes the summary
           behavior only show up on a mobile (narrow) page width.
       - variation_name: Summary Minimal
         variation_code_snippet: >-
@@ -74,7 +75,8 @@ variation_groups:
                 </span>
             </button>
           </div>
-        variation_description: This component provides a more inconspicous button, which
+        variation_description:
+          This component provides a more inconspicous button, which
           stays at the bottom of the summary when expanded.
 eyebrow: Components
 title: Summaries

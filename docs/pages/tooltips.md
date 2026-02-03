@@ -62,11 +62,11 @@ variation_groups:
           ...rest of your code
 
           -->
-        variation_description: ""
-        variation_code_snippet_rendered: ""
+        variation_description: ''
+        variation_code_snippet_rendered: ''
         variation_name: Tooltip
     variation_group_name: Types
-    variation_group_description: ""
+    variation_group_description: ''
 guidelines: Be judicious in using tooltips and explore other design options that
   keep content visible before choosing to use a tooltip. Only consider using a
   tooltip for short, non-critical information in a space-constrained user
@@ -88,5 +88,5 @@ accessibility: As USWDS states, tooltips are progressive enhancements for the
   doesn’t initialize. When testing tooltips for accessibility, ensure they are
   compliant with [USWDS tooltip accessibility
   tests](https://designsystem.digital.gov/components/tooltip/accessibility-tests/).
-related_items: ""
+related_items: ''
 ---

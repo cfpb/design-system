@@ -33,13 +33,14 @@ variation_groups:
               </li>
             </ul>
           </div>
-        variation_description: Text introductions consist of a heading, lead paragraph,
+        variation_description:
+          Text introductions consist of a heading, lead paragraph,
           and optional descriptive paragraph, and link text. They should be used
           on every page except in cases when a
           [hero](https://cfpb.github.io/design-system/patterns/heroes) or [item
           introduction](https://cfpb.github.io/design-system/patterns/item-introductions)
           is used.
-        variation_jinja_code_snippet: ""
+        variation_jinja_code_snippet: ''
         variation_name: Text introduction
         variation_specs: >-
           ![Image of text intro showing desktop and mobile design
@@ -87,7 +88,7 @@ variation_groups:
 
           * Imagery: May use either a circle (1x1) image or a 16x9 ratio image.
     variation_group_name: Types
-    variation_group_description: ""
+    variation_group_description: ''
 guidelines: >-
   ### Content guidelines
 
@@ -125,8 +126,8 @@ guidelines: >-
 
   The optional call-to-action link should be one line; about 40 characters or less. Link content should follow [link guidelines](https://cfpb.github.io/design-system/components/links).
 eyebrow: Introductions
-use_cases: ""
-accessibility: ""
+use_cases: ''
+accessibility: ''
 related_items: >-
   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
 
@@ -158,5 +159,5 @@ behavior: >-
   | Breakout sidebar on the right                                                         | Breakout sidebar stacked immediately after text intro                                          |
 
   | ![Mockup of 900+ pixel layout](/design-system/images/uploads/breakout_sidebar_breakpoint_large.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/breakout_sidebar_breakpoint_small.png) |
-research: ""
+research: ''
 ---

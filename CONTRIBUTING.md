@@ -54,7 +54,7 @@ and file a pull request by clicking the link to compare changes across forks.
 ### Updating Documentation
 
 The Design System's website lives in this repository's `docs/` directory and is
-powered by Decap CMS and Jekyll.
+powered by Decap CMS and Eleventy.
 To edit any page of the website, click the edit button at the bottom right of
 the page.
 You'll need to be added as a contributor to this repository in order to

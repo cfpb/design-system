@@ -375,8 +375,8 @@ import the CSS into your project. This should happen in your main CSS entry-poin
 
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Adjust paths to the package as necessary.</span>
 
-<span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
-<span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/base'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
+<span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/elements/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
+<span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/elements/base'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
 <span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/dist/index.css'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
 </code></pre></div></div>
 
@@ -385,7 +385,7 @@ import the CSS into your project. This should happen in your main CSS entry-poin
 <p>Next you’ll want to define the custom CSS properties (variables) that set the
 colors and font stack.</p>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@include</span> <span class="nd">define-custom-props</span><span class="p">;</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/elements/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
 </code></pre></div></div>
 
 <h3 id="set-official-font-stack">Set official font stack</h3>
@@ -403,7 +403,7 @@ to point to those woff2 files and create the Source Sans 3 <code class="language
 a reference to where those references are defined. Most often this will mean
 repeating an import of the abstracts directory in your <code class="language-plaintext highlighter-rouge">.scss</code> files.</p>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'node_modules/@cfpb/cfpb-design-system/src/elements/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
 </code></pre></div></div>
 
 <p>Although discouraged, occasionally you may reference a variable that appears within a component itself, in which case you need to reference that components SCSS, such as:</p>
@@ -492,8 +492,8 @@ repeating an import of the abstracts directory in your <code class="language-pla
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/integrating-the-design-system-into-your-project.md">
-                            <time datetime="2026-02-04 09:05:47 -0500">
-                                 9:05:47 AM Feb 04, 2026
+                            <time datetime="2026-02-04 10:39:44 -0500">
+                                10:39:44 AM Feb 04, 2026
                             </time>
                         </a>
                     </section>

@@ -1,0 +1,11 @@
+// Button to show/hide code snippets and specs on component pages.
+
+.a-toggle__code {
+  margin: 0 -1rem 0 auto;
+  padding: 0 1rem 1rem;
+  width: fit-content;
+
+  .a-btn {
+    text-transform: uppercase;
+  }
+}

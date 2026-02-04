@@ -4,6 +4,9 @@ import yaml from 'js-yaml';
 import fs from 'fs';
 
 export default function (eleventyConfig) {
+  // Get baseurl from environment or use default
+  const baseurl = process.env.BASEURL || '/design-system';
+
   // Copy assets
   eleventyConfig.addPassthroughCopy('docs/assets');
   eleventyConfig.addPassthroughCopy('docs/images');
@@ -40,7 +43,6 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter('relative_url', function (url) {
-    const baseurl = '/design-system';
     if (!url) return baseurl;
     return url.startsWith('/') ? baseurl + url : baseurl + '/' + url;
   });
@@ -77,7 +79,7 @@ export default function (eleventyConfig) {
     description: "CFPB's design system",
     org: 'CFPB',
     repository: 'cfpb/design-system',
-    baseurl: '/design-system',
+    baseurl: baseurl,
     data: {
       sideNavigation: navigationData,
     },
@@ -136,6 +138,6 @@ export default function (eleventyConfig) {
     templateFormats: ['html', 'md', 'liquid', 'njk'],
     htmlTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
-    pathPrefix: '/design-system/',
+    pathPrefix: baseurl + '/',
   };
 }

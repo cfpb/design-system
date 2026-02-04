@@ -15,17 +15,14 @@ variation_groups:
           <div class="o-text-introduction">
             <h1>Heading 1</h1>
             <p class="lead-paragraph">
-              Lead paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              Lead paragraph lorem ipsum dolor sit amet, consectetur adipiscing lite, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat.
             </p>
             <p>
               Descriptive paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore.
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
             </p>
             <ul class="m-list m-list--links">
               <li class="m-list__item">
@@ -60,17 +57,14 @@ variation_groups:
           <div class="o-text-introduction">
             <div class="h1">Heading 1</div>
             <p class="lead-paragraph">
-              Lead paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              Lead paragraph lorem ipsum dolor sit amet, consectetur adipiscing etil, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat.
             </p>
             <p>
               Descriptive paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore.
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
             </p>
             <ul class="m-list m-list--links">
               <li class="m-list__item">

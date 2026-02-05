@@ -22,6 +22,16 @@ variation_groups:
 
           * Anywhere we're making a website, we should be able to use the Design System for it
       - variation_is_deprecated: false
+        variation_name: The Design System holds CFPB's fundamental components, those we
+          want to encourage the use and reuse of
+        variation_description: >-
+          * Patterns and components "graduate" into the Design System
+
+          * It's the foundation, but not the limits
+
+          * It's the default, but not the only (or every) option
+
+          * Patterns that were created for specific products (and are not for global use) should not be included
       - variation_is_deprecated: false
       - variation_is_deprecated: false
     variation_group_name: Design System principles

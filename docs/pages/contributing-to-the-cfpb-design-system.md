@@ -50,8 +50,33 @@ variation_groups:
     variations:
       - variation_is_deprecated: false
         variation_name: Minor documentation change
+        variation_description: >-
+          This includes fixing typos or making minor updates to an existing
+          component's documentation, such as to reflect new research insights or
+          code changes.
+
+
+          ### 1. Make the change.
+
+
+          Minor documentation changes can be made individually without review. Changes will be captured in a change log included on each DS page. To make a change, sign into the DS CMS with your public Github account. Don't have one? Contact the Design & Content team for assistance.[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#make-a-minor-documentation-change)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-make-the-change)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#make-a-major-documentation-change-or-addition)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-consult-the-design--content-team)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#2-draft-and-publish-the-documentation)
       - variation_is_deprecated: false
         variation_name: Major documentation change or addition
+        variation_description: >-
+          ### 1. Consult the Design & Content Team.
+
+
+          * Contact the Design & Content team to discuss your proposed documentation change or addition. We'll want to talk through your reasons for making the change or addition, so please come prepared to share any relevant data or research.
+
+
+          #### 2. Draft and publish the documentation.
+
+
+          * Draft the documentation change or addition in Word for easy editing and collaboration before moving it to the DS.
+
+          * Request a documentation review from at least one member of each relevant technical discipline including product/UX design, FEWD, and BEWD.
+
+            [](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#2-draft-and-publish-the-documentation)
   - variation_group_name: Component Changes
     variations:
       - variation_is_deprecated: false

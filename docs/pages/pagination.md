@@ -14,7 +14,7 @@ variation_groups:
                         m-pagination__btn-prev"
                 href="?page=21#pagination_content">
                   {% include icons/left.svg %}
-                  <span>Newer</span>
+                  <span>Previous</span>
               </a>
 
               <form class="m-pagination__form"
@@ -42,7 +42,7 @@ variation_groups:
               <a class="a-btn
                         m-pagination__btn-next"
                 href="?page=23#pagination_content">
-                  <span>Older</span>
+                  <span>Next</span>
                   {% include icons/right.svg %}
               </a>
           </nav>
@@ -67,7 +67,7 @@ variation_groups:
                         m-pagination__btn-prev"
                 href="?page=21#pagination_content">
                   {% include icons/left.svg %}
-                  <span>Newer</span>
+                  <span>Previous</span>
               </a>
 
               <form class="m-pagination__form"
@@ -95,7 +95,7 @@ variation_groups:
               <a class="a-btn
                         m-pagination__btn-next"
                 href="?page=23#pagination_content">
-                  <span>Older</span>
+                  <span>Next</span>
                   {% include icons/right.svg %}
               </a>
           </nav>
@@ -107,7 +107,7 @@ variation_groups:
 
           <a class="a-btn a-btn--disabled m-pagination__btn-prev">
 
-          {% include icons/left.svg %}<span>Newer</span></a>
+          {% include icons/left.svg %}<span>Previous</span></a>
 
           <form class="m-pagination__form" action="#pagination_content">
             <label class="m-pagination__label">  Page
@@ -124,7 +124,7 @@ variation_groups:
           <button class="a-btn a-btn--link" type="submit">Go</button> </form>
 
           <a class="a-btn m-pagination__btn-next" href="?page=2#pagination_content">
-            <span>Older</span>
+            <span>Next</span>
             {% include icons/right.svg %}
           </a>
 

@@ -47,5 +47,15 @@ variation_groups:
           * We should have the HTML documented in it
     variation_group_name: Design System principles
   - variation_group_name: Documentation Changes
+    variations:
+      - variation_is_deprecated: false
+        variation_name: Minor documentation change
+      - variation_is_deprecated: false
+        variation_name: Major documentation change or addition
   - variation_group_name: Component Changes
+    variations:
+      - variation_is_deprecated: false
+        variation_name: Change an existing component
+      - variation_is_deprecated: false
+        variation_name: Add a new component
 ---

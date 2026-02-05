@@ -46,4 +46,6 @@ variation_groups:
           * We should have the CSS & JS in it
           * We should have the HTML documented in it
     variation_group_name: Design System principles
+  - variation_group_name: Guidance on making a minor documentation change
+  - variation_group_name: Guidance on making a major documentation change or addition
 ---

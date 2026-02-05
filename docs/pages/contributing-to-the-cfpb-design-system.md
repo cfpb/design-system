@@ -80,7 +80,41 @@ variation_groups:
   - variation_group_name: Component Changes
     variations:
       - variation_is_deprecated: false
-        variation_name: Change an existing component
+        variation_name: ""
+        variation_description: >-
+          ## 1. Review the following acceptance criteria.
+
+
+          Please ensure you can answer "yes" to one of the following questions before proceeding.
+
+
+          * Is the proposed change due to an accessibility or usability issue with the existing component?
+
+          * Does the proposed change alter the existing component in only one major way (for example, color)? If so, consider if it should be a variant of the existing component rather than a replacement.  
+
+
+          ### 2. Prepare your proposed change for review.
+
+
+          * Gather data or research to show that the proposed change is accessible and usable.
+
+          * Request a technical review of the proposed change from at least one member of each discipline including product/UX design, FEWD, and BEWD.
+
+          * Determine if you have sufficient resources on your team to design and build the proposed change or if you will need to request additional resourcing.
+
+          * Draft documentation for the proposed change to be included in the DS site. Please draft the documentation change in Word for easy editing and collaboration before moving it to the DS.
+
+
+          #### 3. Start the review process
+
+
+          * Contact the Design & Content team to request a review. We'll review your proposed change and talk you through the remaining steps of building, QA'ing, publishing, and updating the component in our CFPB Figma library.
+
+
+          [](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-review-the-following-acceptance-criteria-1)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#2-prepare-your-proposed-change-for-review)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#3-start-the-review-process-1)
+
+
+          * [](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#3-start-the-review-process-1)
       - variation_is_deprecated: false
         variation_name: Add a new component
 ---

@@ -50,9 +50,7 @@ export default class Preview extends Component {
   }
 
   render() {
-    const data = {
-      page: this.props.entry.toJS().data,
-    };
+    const data = this.props.entry.toJS().data;
     return (
       // TODO: We're breaking some a11y here by making the whole page clickable.
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions

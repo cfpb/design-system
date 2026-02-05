@@ -8,7 +8,7 @@ export default class Preview extends Component {
     const data = {
       site: {
         data: {
-          'side-navigation': this.props.entry.toJS().data,
+          sideNavigation: this.props.entry.toJS().data,
         },
       },
     };

@@ -27,7 +27,7 @@ yarn after-install
 # Build the design system website
 yarn build-decap
 
-# Remove the built Jekyll website from .gitignore
+# Remove the built Eleventy website from .gitignore
 sed -i '/_site/d' ./.gitignore
 
 # Check to see if there are any changes to commit.

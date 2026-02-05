@@ -1,9 +1,0 @@
-[build]
-  environment = { NODE_VERSION = "22", RUBY_VERSION = "3.4.3" }
-  publish = "docs/_site/"
-  command = "./scripts/build-netlify-pr-preview.sh"
-
-[[redirects]]
-  from = "/"
-  to = "/design-system"
-  status = 302

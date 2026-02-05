@@ -33,6 +33,17 @@ variation_groups:
 
           * Patterns that were created for specific products (and are not for global use) should not be included
       - variation_is_deprecated: false
+        variation_name: The Design System should be CMS agnostic
+        variation_description: >-
+          * We shouldn't include any of
+          [www.consumerfinance.gov](www.consumerfinance.gov) specific code into
+          our Design System code
+
+          * Doing so would bake the CMS choice into our design patterns, and we don't want to do that
       - variation_is_deprecated: false
+        variation_name: The Design System should include code
+        variation_description: |-
+          * We should have the CSS & JS in it
+          * We should have the HTML documented in it
     variation_group_name: Design System principles
 ---

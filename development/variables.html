@@ -346,12 +346,9 @@
 
             
             <div class="m-variation__description">
-                <p>There is a Sass mixin for defining the CSS custom variables
-(CSS custom properties) used in the project. This should be used and
-included once in your project’s CSS entry-point file.</p>
+                <p>CSS custom properties generated from W3C design token format JSON for colors (e.g. custom-props.css) are used. This should be included once in your project’s CSS entry-point file.</p>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'@cfpb/cfpb-design-system/src/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
-<span class="k">@include</span> <span class="nd">define-custom-props</span><span class="p">;</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'@cfpb/cfpb-design-system/src/elements/abstracts'</span> <span class="nt">as</span> <span class="o">*</span><span class="p">;</span>
 </code></pre></div></div>
 
             </div>
@@ -387,8 +384,7 @@ included once in your project’s CSS entry-point file.</p>
 
             
             <div class="m-variation__description">
-                <p>Override this variable in order to specify a font stack other than the
-CFPB’s default brand font and fallback.</p>
+                <p>Override this variable in order to specify a font stack other than the CFPB’s default brand font and fallback.</p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">:root</span> <span class="p">{</span>
   <span class="py">--font-stack</span><span class="p">:</span> <span class="s2">'Source Sans 3 Variable'</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
@@ -486,8 +482,8 @@ Pass in the path to the files. The path can be either a relative or absolute pat
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/variables.md">
-                            <time datetime="2026-02-04 10:39:44 -0500">
-                                10:39:44 AM Feb 04, 2026
+                            <time datetime="2026-02-05 17:41:07 -0500">
+                                 5:41:07 PM Feb 05, 2026
                             </time>
                         </a>
                     </section>

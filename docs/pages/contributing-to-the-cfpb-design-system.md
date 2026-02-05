@@ -11,8 +11,18 @@ description: The [Design System](https://cfpb.github.io/design-system/) (DS) i
 variation_groups:
   - variations:
       - variation_is_deprecated: false
+        variation_name: The Design System represents the Bureau (not just
+          www.consumerfinance.gov)
+        variation_description: >-
+          * The Design System is a product
+
+          * There are products that use the Design System, of which [www.consumerfinance.gov](www.consumerfinance.gov) is one
+
+          * Its documentation applies to all of our current and future products and services
+
+          * Anywhere we're making a website, we should be able to use the Design System for it
+      - variation_is_deprecated: false
+      - variation_is_deprecated: false
+      - variation_is_deprecated: false
     variation_group_name: Design System principles
-  - {}
-  - {}
-  - {}
 ---

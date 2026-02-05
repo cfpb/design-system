@@ -97,8 +97,9 @@ guidelines: >-
   * Tables with over 20 rows can be paired with pagination.
 eyebrow: Components
 title: Pagination
-description: Pagination is used for splitting up content or data into several
-  pages, so as to make it easier for users to consume information.
+description: Pagination is navigation for paginated content. It is used to break
+  long content or large datasets into multiple pages, to make it easier for
+  users to consume information.
 use_cases: ""
 behavior: On small screens, the buttons display next to each other, stacked on
   top of the form (`@bp-xs-max`).

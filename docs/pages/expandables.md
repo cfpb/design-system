@@ -14,7 +14,7 @@ variation_groups:
               <button class="o-expandable__header"
                       title="Expand content">
                   <h3 class="o-expandable__label">
-                      Expandable header
+                      Expandable label
                   </h3>
                   <span class="o-expandable__cues">
                       <span class="o-expandable__cue-open" role="img" aria-label="Show">
@@ -95,7 +95,7 @@ variation_groups:
                       {% include icons/bank.svg %}
                   </span>
                   <h3 class="o-expandable__label">
-                      Expandable header
+                      Expandable label
                   </h3>
                   <span class="o-expandable__cues">
                       <span class="o-expandable__cue-open" role="img" aria-label="Show">
@@ -129,7 +129,7 @@ variation_groups:
               <button class="o-expandable__header"
                       title="Expand content">
                   <h3 class="o-expandable__label">
-                      Expandable header
+                      Expandable label
                   </h3>
                   <span class="o-expandable__cues">
                       <span class="o-expandable__cue-open" role="img" aria-label="Show">
@@ -170,7 +170,7 @@ variation_groups:
                   <button class="o-expandable__header"
                           title="Expand content">
                       <h3 class="o-expandable__label">
-                          Expandable header
+                          Expandable label
                       </h3>
                       <span class="o-expandable__cues">
                           <span class="o-expandable__cue-open" role="img" aria-label="Show">
@@ -196,7 +196,7 @@ variation_groups:
                   <button class="o-expandable__header"
                           title="Expand content">
                       <h3 class="o-expandable__label">
-                          Expandable header
+                          Expandable label
                       </h3>
                       <span class="o-expandable__cues">
                           <span class="o-expandable__cue-open" role="img" aria-label="Show">
@@ -222,7 +222,7 @@ variation_groups:
                   <button class="o-expandable__header"
                           title="Expand content">
                       <h3 class="o-expandable__label">
-                          Expandable header
+                          Expandable label
                       </h3>
                       <span class="o-expandable__cues">
                           <span class="o-expandable__cue-open" role="img" aria-label="Show">
@@ -260,7 +260,7 @@ variation_groups:
                   <button class="o-expandable__header"
                           title="Expand content">
                       <h3 class="o-expandable__label">
-                          Expandable header
+                          Expandable label
                       </h3>
                       <span class="o-expandable__cues">
                           <span class="o-expandable__cue-open" role="img" aria-label="Show">
@@ -286,7 +286,7 @@ variation_groups:
                   <button class="o-expandable__header"
                           title="Expand content">
                       <h3 class="o-expandable__label">
-                          Expandable header
+                          Expandable label
                       </h3>
                       <span class="o-expandable__cues">
                           <span class="o-expandable__cue-open" role="img" aria-label="Show">
@@ -348,7 +348,7 @@ variation_groups:
                   <button class="o-expandable__header"
                           title="Expand content">
                       <h3 class="o-expandable__label">
-                          Expandable header
+                          Expandable label
                       </h3>
                       <span class="o-expandable__cues">
                           <span class="o-expandable__cue-open" role="img" aria-label="Show">

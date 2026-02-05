@@ -99,6 +99,9 @@ variation_groups:
                   {% include icons/right.svg %}
               </a>
           </nav>
+        variation_description: This variation of the pagination component only allows
+          users to navigate pages in sequential order (forward or backward one
+          step at a time), forcing a linear user flow.
       - variation_code_snippet: >-
           <nav class="m-pagination" role="navigation" aria-label="Pagination">
 

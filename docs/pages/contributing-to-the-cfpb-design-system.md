@@ -46,7 +46,7 @@ variation_groups:
           * We should have the CSS & JS in it
           * We should have the HTML documented in it
     variation_group_name: Design System principles
-  - variation_group_name: Documentation Changes
+  - variation_group_name: Website Documentation Changes
     variations:
       - variation_is_deprecated: false
         variation_name: Minor documentation change
@@ -56,10 +56,14 @@ variation_groups:
           code changes.
 
 
-          ### 1. Make the change.
+          #### Make the change
 
 
-          Minor documentation changes can be made individually without review. Changes will be captured in a change log included on each DS page. To make a change, sign into the DS CMS with your public Github account. Don't have one? Contact the Design & Content team for assistance.[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#make-a-minor-documentation-change)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-make-the-change)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#make-a-major-documentation-change-or-addition)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-consult-the-design--content-team)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#2-draft-and-publish-the-documentation)
+          Minor documentation changes can be made individually without review by employees of the Bureau. The public at large will not have the ability to make changes directly but they can fill out an [issue in our public Design System GitHub repo.](https://github.com/cfpb/design-system/issues)\
+
+          \
+
+          Changes will be captured in a change log included on each Design System page. To make a change as a CFPB employee, sign into the Design System CMS with your public Github account. Don't have one? Contact the Design & Content team for assistance.[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#make-a-minor-documentation-change)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-make-the-change)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#make-a-major-documentation-change-or-addition)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-consult-the-design--content-team)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#2-draft-and-publish-the-documentation)
       - variation_is_deprecated: false
         variation_name: Major documentation change or addition
         variation_description: >-
@@ -80,41 +84,8 @@ variation_groups:
   - variation_group_name: Component Changes
     variations:
       - variation_is_deprecated: false
-        variation_name: ""
-        variation_description: >-
-          ## 1. Review the following acceptance criteria.
-
-
-          Please ensure you can answer "yes" to one of the following questions before proceeding.
-
-
-          * Is the proposed change due to an accessibility or usability issue with the existing component?
-
-          * Does the proposed change alter the existing component in only one major way (for example, color)? If so, consider if it should be a variant of the existing component rather than a replacement.  
-
-
-          ### 2. Prepare your proposed change for review.
-
-
-          * Gather data or research to show that the proposed change is accessible and usable.
-
-          * Request a technical review of the proposed change from at least one member of each discipline including product/UX design, FEWD, and BEWD.
-
-          * Determine if you have sufficient resources on your team to design and build the proposed change or if you will need to request additional resourcing.
-
-          * Draft documentation for the proposed change to be included in the DS site. Please draft the documentation change in Word for easy editing and collaboration before moving it to the DS.
-
-
-          #### 3. Start the review process
-
-
-          * Contact the Design & Content team to request a review. We'll review your proposed change and talk you through the remaining steps of building, QA'ing, publishing, and updating the component in our CFPB Figma library.
-
-
-          [](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-review-the-following-acceptance-criteria-1)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#2-prepare-your-proposed-change-for-review)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#3-start-the-review-process-1)
-
-
-          * [](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#3-start-the-review-process-1)
+        variation_name: Change to existing component
+        variation_description: ""
       - variation_is_deprecated: false
         variation_name: Add a new component
 ---

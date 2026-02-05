@@ -2,6 +2,7 @@ import slugify from 'slugify';
 import markdownIt from 'markdown-it';
 import yaml from 'js-yaml';
 import fs from 'fs';
+import path from 'path';
 
 export default function (eleventyConfig) {
   // Get baseurl from environment or use default
@@ -49,7 +50,18 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter('markdownify', function (content) {
     if (!content) return '';
-    return md.render(content);
+    const iconsDir = path.resolve('docs/_includes/icons');
+    const withIcons = content.replace(
+      /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g,
+      (match, icon) => {
+        const iconPath = path.join(iconsDir, `${icon}.svg`);
+        if (!fs.existsSync(iconPath)) return match;
+        return fs
+          .readFileSync(iconPath, { encoding: 'utf8', flag: 'r' })
+          .trim();
+      },
+    );
+    return md.render(withIcons);
   });
 
   // Custom collection for pages by section

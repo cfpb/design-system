@@ -192,12 +192,25 @@ it found in tokens to the src/elements directory as sub directories.
 Example of a valid JSON token file structure for our project.
 
 ```
-{
-  "namespace": {
-    "token_name": {
-      "$type": "color",
-      "$value": "#bea96f"
+"beige": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7450980544090271,
+        0.6627451181411743,
+        0.43529412150382996
+      ],
+      "alpha": 1,
+      "hex": "#BEA96F"
+    },
+    "$extensions": {
+      "com.figma.variableId": "VariableID:296:293",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.isOverride": true
     }
-  }
-}
+  },
 ```
+Figma emits JSON color that adears to the [w3c design token spec](https://www.designtokens.org/tr/drafts/color/#format). Editors can supply only hex values, srgb int or srgb float while ignoring the Figma specifc metadata.

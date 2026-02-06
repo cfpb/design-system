@@ -16,5 +16,3 @@ Remember, new standards should be discussed in Hubcap first before being added t
 
 
 When you're ready to share a draft of the page, or want to raise questions, use this issue to track the discussion.
-
-@sonnakim for awareness

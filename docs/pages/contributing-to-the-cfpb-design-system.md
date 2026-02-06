@@ -43,49 +43,65 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: The Design System should include code
         variation_description: |-
-          * We should have the CSS & JS in it
-          * We should have the HTML documented in it
+          * We should have the CSS and Javascript
+          * We should always include HTML examples
     variation_group_name: Design System principles
-  - variation_group_name: Website Documentation Changes
-    variations:
-      - variation_is_deprecated: false
-        variation_name: Minor documentation change
-        variation_description: >-
-          This includes fixing typos or making minor updates to an existing
-          component's documentation, such as to reflect new research insights or
-          code changes.
+  - variation_group_name: Documentation change request
+    variations: []
+    variation_group_description: >-
+      Changes can be suggested by visiting the CFPB Design System
+
+      public GitHub repo and creating a [website documentation
+
+      change issue](https://github.com/cfpb/design-system/issues). 
 
 
-          #### Make the change
+      The GItHub issue will have some additional information for you to
+
+      supply. Be sure to include what content you would like to see changed and
+
+      what page(s) would be affected, what your reason for the changes or additions are,
+
+      and any relevant data or research you may have that would necessitate or
+
+      support the change.
+  - variation_group_name: Component change or addition request
+    variations: []
+    variation_group_description: >-
+      If you would like to see an update or change
+
+      to an existing component or a new component please visit the CFPB Design System public GitHub repository and create a [component change/addition issue](https://github.com/cfpb/design-system/issues). The issue will have some additional
+
+      information for you to include. 
 
 
-          Minor documentation changes can be made individually without review by employees of the Bureau. The public at large will not have the ability to make changes directly but they can fill out an [issue in our public Design System GitHub repo.](https://github.com/cfpb/design-system/issues)\
-
-          \
-
-          Changes will be captured in a change log included on each Design System page. To make a change as a CFPB employee, sign into the Design System CMS with your public Github account. Don't have one? Contact the Design & Content team for assistance.[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#make-a-minor-documentation-change)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-make-the-change)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#make-a-major-documentation-change-or-addition)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#1-consult-the-design--content-team)[](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#2-draft-and-publish-the-documentation)
-      - variation_is_deprecated: false
-        variation_name: Major documentation change or addition
-        variation_description: >-
-          ### 1. Consult the Design & Content Team.
+      Before filling out the information be sure that you can answer “**yes**” to one of the following questions:
 
 
-          * Contact the Design & Content team to discuss your proposed documentation change or addition. We'll want to talk through your reasons for making the change or addition, so please come prepared to share any relevant data or research.
+      ### Existing components:
 
 
-          #### 2. Draft and publish the documentation.
+      * Is the proposed change due to any accessibility or usability issue with the existing component?
+
+      * Does the change alter the existing component in only one major way (e.g. color change)? If so, consider if it should be a variation of the existing component rather than a replacement.
 
 
-          * Draft the documentation change or addition in Word for easy editing and collaboration before moving it to the DS.
+      ### Adding a new component: 
 
-          * Request a documentation review from at least one member of each relevant technical discipline including product/UX design, FEWD, and BEWD.
 
-            [](https://github.cfpb.gov/CFPB/hubcap/wiki/The-Design-System-(DS)#2-draft-and-publish-the-documentation)
-  - variation_group_name: Component Changes
-    variations:
-      - variation_is_deprecated: false
-        variation_name: Change to existing component
-        variation_description: ""
-      - variation_is_deprecated: false
-        variation_name: Add a new component
+      * Is the proposed component currently being used on more than one page type on www.consumerfinance.gov? Alternatively, can you provide examples of multiple places where the proposed component could be used?
+
+      * Are existing Design System components not sufficiently able to serve your product or users’ needs, thus requiring the need to create a new component?
+
+      * Is the proposed component different in more than one major way from existing components in the Design System? If the proposed component is different from and existing component in only one way (for example color), it would likely be better to add it as a variant of the existing component. 
+
+
+      If you were able to answer **“yes”** to any of the above questions the next steps are to prepare your change for review by adding the following information to the GitHub issue. 
+
+
+      ### For component update or new additions, please be sure to include the following:\
+
+      \
+
+      GitHub issue details:
 ---

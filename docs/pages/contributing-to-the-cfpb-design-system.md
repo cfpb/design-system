@@ -86,7 +86,7 @@ variation_groups:
       * Does the change alter the existing component in only one major way (e.g. color change)? If so, consider if it should be a variation of the existing component rather than a replacement.
 
 
-      ### Adding a new component: 
+      ### Adding a new component:
 
 
       * Is the proposed component currently being used on more than one page type on www.consumerfinance.gov? Alternatively, can you provide examples of multiple places where the proposed component could be used?
@@ -99,9 +99,25 @@ variation_groups:
       If you were able to answer **“yes”** to any of the above questions the next steps are to prepare your change for review by adding the following information to the GitHub issue. 
 
 
-      ### For component update or new additions, please be sure to include the following:\
+      ### GitHub issue details:
 
-      \
 
-      GitHub issue details:
+      *For component update or new additions, please be sure to include the following:*
+
+
+      * Indicate if your change request  is for making a change to an existing component or for adding a new one to the Design System
+
+      * Add any data or research you have to show that the proposed change is accessible and usable
+
+      * Supply any design and development context for your request (e.g. Figma concepts, code samples, etc)
+
+      * Include if you can design and build the proposed change or if you will need to request that someone make the changes for you
+
+      * Draft documentation for the proposed change to be included in the Design System website (can be included in the issue or as a comment)
+  - variation_group_name: After change request creation and submission
+    variation_group_description: Submitting the request via GitHub issue will
+      trigger a review of the proposed change from at least one member of each
+      discipline responsible for supporting the Design System. Communication
+      about your change request will be handled via the GitHub issue in our
+      Design System public GitHub repository.
 ---

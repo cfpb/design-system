@@ -93,7 +93,7 @@ variation_groups:
 
       * Are existing Design System components not sufficiently able to serve your product or users’ needs, thus requiring the need to create a new component?
 
-      * Is the proposed component different in more than one major way from existing components in the Design System? If the proposed component is different from and existing component in only one way (for example color), it would likely be better to add it as a variant of the existing component. 
+      * Is the proposed component different in more than one major way from existing components in the Design System? If the proposed component is different from an existing component in only one way (e.g. color), it would likely be better to add it as a variant of the existing component. 
 
 
       If you were able to answer **“yes”** to any of the above questions the next steps are to prepare your change for review by adding the following information to the GitHub issue. 

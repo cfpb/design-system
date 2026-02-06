@@ -109,7 +109,7 @@ variation_groups:
 
       * Add any data or research you have to show that the proposed change is accessible and usable
 
-      * Supply any design and development context for your request (e.g. Figma concepts, code samples, etc)
+      * Supply any design and development context for your request you may have (e.g. Figma concepts, code samples, etc)
 
       * Include if you can design and build the proposed change or if you will need to request that someone make the changes for you
 

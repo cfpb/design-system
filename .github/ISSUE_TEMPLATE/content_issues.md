@@ -1,5 +1,5 @@
 ---
-name: Content issue
+name: Documentation change request
 about: Suggest a content addition or improvement
 title: 'Add Design System page title: Add issue label'
 labels: content 
@@ -32,4 +32,3 @@ Make sure NOT to include internal links.
 ***Thanks. Don't forget to add labels indicating issue type and size before submitting!***
 ***Once you've submitted your issue, please add it to the content backlog project board: https://github.com/cfpb/design-system/projects/1***
 
-@sonnakim for awareness

@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <!-- Google Tag Manager code -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
+  <title>Helper classes and mixins - CFPB Design System</title>
+  <meta name="description" content="CFPB's design system">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/design-system/pr-preview/pr-2512/dist/main.css">
+  <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+  </script>
+</head>
+<body class="t-variation">
+  <!-- Google Tag Manager code -->
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <div class="skip-nav">
+    <a class="skip-nav__link" href="#main">
+        Skip to main content
+    </a>
+  </div>
+  <header role="banner" class="site-header-wrapper">
+
+  <div class="m-global-eyebrow">
+    <div class="a-tagline">
+        <span class="u-usa-flag"></span>
+        <div>
+            An official website of the
+            <span class="u-nowrap">United States government</span>
+        </div>
+    </div>
+</div>
+
+
+  <div class="site-header">
+
+    <form id="search-form" action="/design-system/pr-preview/pr-2512/search" method="get">
+    <cfpb-form-search id="search-box" form="search-form" name="searchQuery">
+        <ul>
+            <li><a href="/design-system/components/alerts">Alerts</a></li>
+            <li><a href="/design-system/components/banner-notification">Banner (notification)</a></li>
+            <li><a href="/design-system/components/banner-us-gov">Banner (US gov)</a></li>
+            <li><a href="/design-system/components/buttons">Buttons</a></li>
+            <li><a href="/design-system/components/checkboxes">Checkboxes</a></li>
+            <li><a href="/design-system/components/date-picker">Date picker</a></li>
+            <li><a href="/design-system/components/expandables">Expandables</a></li>
+            <li><a href="/design-system/components/fieldsets">Fieldsets</a></li>
+            <li><a href="/design-system/components/helper-text">Helper text</a></li>
+            <li><a href="/design-system/components/labels-and-legends">Labels and legends</a></li>
+            <li><a href="/design-system/components/links">Links</a></li>
+            <li><a href="/design-system/components/lists">Lists</a></li>
+            <li><a href="/design-system/components/pagination">Pagination</a></li>
+            <li><a href="/design-system/components/radio-buttons">Radio buttons</a></li>
+            <li><a href="/design-system/components/range-sliders">Range sliders</a></li>
+            <li><a href="/design-system/components/selects">Selects</a></li>
+            <li><a href="/design-system/components/summaries">Summaries</a></li>
+            <li><a href="/design-system/components/tables">Tables</a></li>
+            <li><a href="/design-system/components/tags">Tags</a></li>
+            <li><a href="/design-system/components/taglines">Taglines</a></li>
+            <li><a href="/design-system/components/text-inputs">Text inputs</a></li>
+            <li><a href="/design-system/components/tooltips">Tooltips</a></li>
+            <li><a href="/design-system/components/elements">Web Components</a></li>
+        </ul>
+    </cfpb-form-search>
+</form>
+
+
+    <h1 class="title">
+      <a class="title-link" href="/design-system/pr-preview/pr-2512/">
+        <span class="demi">CFPB</span> Design System
+      </a>
+    </h1>
+  </div> <!-- /.wrapper -->
+</header>
+
+
+  <div
+  id="redirect-banner"
+  class="block block--flush-top block--flush-bottom block--padded-top u-hidden"
+>
+  <div class="m-global-banner">
+    <div class="wrapper wrapper--match-content">
+      <div class="m-notification m-notification--warning m-notification--visible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--warning-round" viewBox="0 0 17 20.4"><path d="M16.406 10.283a7.917 7.917 0 1 1-7.917-7.917 7.916 7.916 0 0 1 7.917 7.917zM9.48 14.367a1.003 1.003 0 1 0-1.004 1.003 1.003 1.003 0 0 0 1.004-1.003zM7.697 11.53a.792.792 0 0 0 1.583 0V5.262a.792.792 0 0 0-1.583 0z"/></svg>
+        <div class="m-notification__content">
+          <div class="m-notification__message">
+            You’ve been redirected to this website from
+            <span data-redirect="source-name"></span>.
+          </div>
+          <p class="m-notification__explanation">
+            The website you were trying to visit has been deprecated.
+            Future updates will happen here.
+          </p>
+          <p>
+            A permanent snapshot of
+            <span data-redirect="source-name"></span>
+            is available at
+            <a data-redirect="archive-website"></a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<main id="main" role="main">
+  <aside class="ds-sidebar">
+
+<details open class="ds-nav-container">
+
+    <summary class="h4">Navigation</summary>
+
+    <ul class="m-list m-list--links">
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation">Foundation</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components">Components</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/patterns">Patterns</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/pages">Pages</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development">Development</a>
+                </div>
+
+            
+                
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">General principles</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/atomic-components">Atomic components</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/variables">Variables</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/design-tokens">Design Tokens</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Getting started</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/getting-started">Getting Started</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/integrating-the-design-system-into-your-project">Integrating the Design System into your project</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/reference-for-component-states">Reference for component states</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Layout</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/blocks">Blocks</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/main-content-and-sidebars">Main content and sidebars</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Utilities</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/helper-classes-and-mixins">Helper classes and mixins</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development/media-queries">Media queries</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines">Guidelines</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+    </ul>
+
+</details>
+
+</aside>
+
+
+  <div class="ds-content">
+    <section>
+      <div class="h5">
+        Utilities
+      </div>
+    
+
+    <h1 class="component-header u-mb30">
+        Helper classes and mixins
+    </h1>
+
+    
+
+    
+
+    
+        
+        
+             
+            
+            
+        
+    
+        
+        
+             
+            
+                
+            
+            
+        
+    
+
+    
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+    <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
+        
+        <li class="m-list__item">
+            <a href="#helper-classes">Helper classes</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#mixins">Mixins</a>
+        </li>
+        
+    </ul>
+    
+
+    
+    <section id="description" class="u-mb30">
+        <p>Helper classes and mixins are utilities to help front-end web development meet our design standards.</p>
+
+    </section>
+    
+
+    
+
+    
+    
+    <section class="o-variation-group" id="helper-classes">
+
+        
+        <h2 class="o-variation-group__title">
+            Helper classes
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "JS only" helper class
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Hide an element when JavaScript isn’t available. Requires a small script in the <code>&lt;head&gt;</code> of your <code>&lt;html&gt;</code> document that removes a <code>.no-js</code> class.</p>
+<ul>
+<li>Add a <code>no-js</code> class to the html</li>
+</ul>
+<pre><code class="language-html">&lt;html class=&quot;no-js&quot;&gt;
+</code></pre>
+<ul>
+<li>Add a script to remove the no-js class after confirming JavaScript is available</li>
+</ul>
+<pre><code class="language-html">&lt;script&gt;
+    // Confirm availability of JavaScript and remove no-js class from html
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>Add the utility class to the element you want to hide</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;u-js-only&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <html class="no-js">
+<script>
+      // Confirm availability of JavaScript and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+</script>
+<div class="u-js-only"></div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-js-only-helper-class-hide-an-ele-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-js-only-helper-class-hide-an-ele-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-js-only-helper-class-hide-an-ele-1">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-js-only-helper-class-hide-an-ele-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-js-only-helper-class-hide-an-ele-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;html class=&#34;no-js&#34;&gt;
+&lt;script&gt;
+      // Confirm availability of JavaScript and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, &#39;$1$2&#39;);
+&lt;/script&gt;
+&lt;div class=&#34;u-js-only&#34;&gt;&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Media type utilities
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Hide an element on screen or in print.<br>
+<code>html &lt;div class=&quot;u-print-only&quot;&gt;Print this!&lt;/div&gt; &lt;div class=&quot;u-screen-only&quot;&gt;Don't print this!&lt;/div&gt; </code></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div class="u-print-only">Print this!</div> <div class="u-screen-only">Don't print this!</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-media-type-utilities-hide-an-ele-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-media-type-utilities-hide-an-ele-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-media-type-utilities-hide-an-ele-2">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-media-type-utilities-hide-an-ele-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-media-type-utilities-hide-an-ele-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class=&#34;u-print-only&#34;&gt;Print this!&lt;/div&gt; &lt;div class=&#34;u-screen-only&#34;&gt;Don&#39;t print this!&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Clearfix" helper class
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Clear floated elements to avoid following elements from flowing into the previous one.</p>
+<p>For example, to float an element to the left, but prevent the following text from flowing into it.</p>
+<p>More information see: <a href="http://css-tricks.com/snippets/css/clear-fix">http://css-tricks.com/snippets/css/clear-fix</a></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div class="u-clearfix">
+    <div style="float:left; width:100%; height:60px; background:black;"></div>
+</div>
+<em>This text would normally flow up into the black box of the box above</em>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-clearfix-helper-class-clear-floa-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-clearfix-helper-class-clear-floa-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-clearfix-helper-class-clear-floa-3">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-clearfix-helper-class-clear-floa-html-code-snippet-3">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-clearfix-helper-class-clear-floa-html-code-snippet-3">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class=&#34;u-clearfix&#34;&gt;
+    &lt;div style=&#34;float:left; width:100%; height:60px; background:black;&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;em&gt;This text would normally flow up into the black box of the box above&lt;/em&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Visually hidden" helper class
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Hide an element from view while keeping it accessible to screen readers.</p>
+<p>For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the <code>u-visually-hidden</code> class.</p>
+<pre><code class="language-html">&lt;h1&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;span class=&quot;cf-icon cf-icon-x-square&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;u-visually-hidden&quot;&gt;Share on Twitter&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/h1&gt;
+</code></pre>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Totally hidden" helper class
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Use <code>u-hidden</code> to hide an element from everything (including screen readers). This is useful for dynamically hiding and showing content. It is also useful for progressive enhancement. For example, if you want to hide something initially on page load but show it after checking for browser support, use JavaScript to remove this class from the element after verifying support.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Float right" helper class
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <pre><code class="language-html">&lt;div class=&quot;u-right&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Margin utilities" helper classes
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Force a <code>margin</code> top or bottom on an element in pixels.</p>
+<p><code>.u-m[p][#]</code></p>
+<p><em><code>[p]</code> is the position, use <code>t</code> for top or <code>b</code> for bottom. <code>[#]</code> is the pixel value, available options are 0, 5, 10, 15, 20, 30, 45, 60</em></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <h4 class="u-mb0">Demonstration of heading 4 with zero bottom margin</h4>
+<hr>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-margin-utilities-helper-classes--7" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-margin-utilities-helper-classes--7" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-margin-utilities-helper-classes--7">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-margin-utilities-helper-classes--html-code-snippet-7">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-margin-utilities-helper-classes--html-code-snippet-7">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;h4 class=&#34;u-mb0&#34;&gt;Demonstration of heading 4 with zero bottom margin&lt;/h4&gt;
+&lt;hr&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Width utilities" helper classes
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Set the <code>width</code> of an element in percentages.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <!--NOTE: Inline style properties for demonstration only.-->
+
+<div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px; font-size:12px;">
+    <code>.u-w100pct</code>
+</div>
+<div class="u-w90pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w90pct</code>
+</div>
+<div class="u-w80pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w80pct</code>
+</div>
+<div class="u-w70pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w70pct</code>
+</div>
+<div class="u-w60pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w60pct</code>
+</div>
+<div class="u-w50pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w50pct</code>
+</div>
+<div class="u-w40pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w40pct</code>
+</div>
+<div class="u-w30pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w30pct</code>
+</div>
+<div class="u-w20pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w20pct</code>
+</div>
+<div class="u-w10pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w10pct</code>
+</div>
+<div class="u-w75pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w75pct</code>
+</div>
+<div class="u-w25pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w25pct</code>
+</div>
+<div class="u-w65pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w65pct</code>
+</div>
+<div class="u-w15pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w15pct</code>
+</div>
+<div class="u-w66pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w66pct</code>
+</div>
+<div class="u-w33pct" style="background: #f4edf3; margin-bottom: 1px;font-size:12px;">
+    <code>.u-w33pct</code>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-width-utilities-helper-classes-s-8" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-width-utilities-helper-classes-s-8" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-width-utilities-helper-classes-s-8">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-width-utilities-helper-classes-s-html-code-snippet-8">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-width-utilities-helper-classes-s-html-code-snippet-8">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only.--&gt;
+
+&lt;div class=&#34;u-w100pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px; font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w100pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w90pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w90pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w80pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w80pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w70pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w70pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w60pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w60pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w50pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w50pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w40pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w40pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w30pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w30pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w20pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w20pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w10pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w10pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w75pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w75pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w25pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w25pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w65pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w65pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w15pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w15pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w66pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w66pct&lt;/code&gt;
+&lt;/div&gt;
+&lt;div class=&#34;u-w33pct&#34; style=&#34;background: #f4edf3; margin-bottom: 1px;font-size:12px;&#34;&gt;
+    &lt;code&gt;.u-w33pct&lt;/code&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Show on mobile" width-specific helper class
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Shows content on screen widths under 601px. Reduce screen size to see this in action.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <!--NOTE: Inline style properties for demonstration only-->
+
+<div style="border: 1px solid black; height: 22px; padding: 5px;">
+    <p class="u-show-on-mobile">Visible on mobile</p>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-show-on-mobile-width-specific-he-9" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-show-on-mobile-width-specific-he-9" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-show-on-mobile-width-specific-he-9">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-show-on-mobile-width-specific-he-html-code-snippet-9">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-show-on-mobile-width-specific-he-html-code-snippet-9">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+
+&lt;div style=&#34;border: 1px solid black; height: 22px; padding: 5px;&#34;&gt;
+    &lt;p class=&#34;u-show-on-mobile&#34;&gt;Visible on mobile&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Hide on mobile" width-specific helper class
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Hides content on screens widths under 601px. Reduce screen size to see this in action.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <!--NOTE: Inline style properties for demonstration only-->
+
+<div style="border: 1px solid black; height: 22px; padding: 5px;">
+    <p class="u-hide-on-mobile">Hidden on mobile</p>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-hide-on-mobile-width-specific-he-10" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-hide-on-mobile-width-specific-he-10" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-hide-on-mobile-width-specific-he-10">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-hide-on-mobile-width-specific-he-html-code-snippet-10">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-hide-on-mobile-width-specific-he-html-code-snippet-10">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+
+&lt;div style=&#34;border: 1px solid black; height: 22px; padding: 5px;&#34;&gt;
+    &lt;p class=&#34;u-hide-on-mobile&#34;&gt;Hidden on mobile&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation-group" id="mixins">
+
+        
+        <h2 class="o-variation-group__title">
+            Mixins
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Flexible proportional containers" mixin
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Utilize intrinsic ratios to create a flexible container that retains an aspect ratio. When <code>&lt;img&gt;</code> tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.</p>
+<p><em>Read more about intrinsic ratios: <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video">http://alistapart.com/article/creating-intrinsic-ratios-for-video</a></em></p>
+<p><code>.u-flexible-container-mixin(@width: 16, @height: 9);</code></p>
+<p>In addition to the mixin, there are two default classes available for building 16:9 and 4:3 containers.</p>
+<p><em>When using the mixin, pass the <code>width</code> as the first argument, and the <code>height</code> as the second argument. Default values are <code>16, 9</code>.</em></p>
+<p>Original mixin credit: <a href="https://gist.github.com/craigmdennis/6655047">https://gist.github.com/craigmdennis/6655047</a></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <!--NOTE: Inline style properties for demonstration only-->
+
+<h4>16:9 flexible video player</h4>
+<p>
+    To create a 16:9 flexible video player,
+    wrap the video element in an element with
+    <code>u-flexible-container</code>
+    and add the <code>u-flexible-container__inner</code>
+    to the video element.
+</p>
+<div class="u-flexible-container">
+    <video class="u-flexible-container__inner"
+          style="background:#75787B;"
+          controls>
+    </video>
+</div>
+
+<br />
+
+<h4>Flexible container with background</h4>
+<p>
+    To create a flexible container with only a background
+    (no inner video or object element), omit the inner container.
+</p>
+<div class="u-flexible-container"
+    style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
+            background-position: center center;
+            background-repeat: no-repeat;"></div>
+
+<br />
+
+<h4>4:3 flexible video player</h4>
+<p>
+    To create a 4:3 flexible video player,
+    add the <code>__4_3 modifier</code> to the container.
+</p>
+<div class="u-flexible-container u-flexible-container--4-3">
+    <video class="u-flexible-container__inner"
+          style="background:#75787B;"
+          controls>
+    </video>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-flexible-proportional-containers-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-flexible-proportional-containers-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-flexible-proportional-containers-1">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-flexible-proportional-containers-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-flexible-proportional-containers-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+
+&lt;h4&gt;16:9 flexible video player&lt;/h4&gt;
+&lt;p&gt;
+    To create a 16:9 flexible video player,
+    wrap the video element in an element with
+    &lt;code&gt;u-flexible-container&lt;/code&gt;
+    and add the &lt;code&gt;u-flexible-container__inner&lt;/code&gt;
+    to the video element.
+&lt;/p&gt;
+&lt;div class=&#34;u-flexible-container&#34;&gt;
+    &lt;video class=&#34;u-flexible-container__inner&#34;
+          style=&#34;background:#75787B;&#34;
+          controls&gt;
+    &lt;/video&gt;
+&lt;/div&gt;
+
+&lt;br /&gt;
+
+&lt;h4&gt;Flexible container with background&lt;/h4&gt;
+&lt;p&gt;
+    To create a flexible container with only a background
+    (no inner video or object element), omit the inner container.
+&lt;/p&gt;
+&lt;div class=&#34;u-flexible-container&#34;
+    style=&#34;background-image: url(https://dummyimage.com/700x394/addc91/101820);
+            background-position: center center;
+            background-repeat: no-repeat;&#34;&gt;&lt;/div&gt;
+
+&lt;br /&gt;
+
+&lt;h4&gt;4:3 flexible video player&lt;/h4&gt;
+&lt;p&gt;
+    To create a 4:3 flexible video player,
+    add the &lt;code&gt;__4_3 modifier&lt;/code&gt; to the container.
+&lt;/p&gt;
+&lt;div class=&#34;u-flexible-container u-flexible-container--4-3&#34;&gt;
+    &lt;video class=&#34;u-flexible-container__inner&#34;
+          style=&#34;background:#75787B;&#34;
+          controls&gt;
+    &lt;/video&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Link color" mixin
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Calling the mixin without arguments will set the following states: default - <code>#0071bc</code>, <code>:hover</code> - <code>#205493</code>, <code>:focus</code> - <code>#0071bc</code>, <code>:visited</code> - <code>#4c2c92</code>, <code>:active</code> - <code>#046b99</code>.</p>
+<p><code>@include u-link-colors()</code></p>
+<p>Passing a single argument into the mixin will set the color for the default, <code>:visited</code>, <code>:hover</code>, <code>:focus</code>, and <code>:active</code> states.</p>
+<p><code>@include u-link-colors(@c)</code></p>
+<p>Passing two arguments into the mixin will set the color for the default, <code>:visited</code>, and <code>:active</code> states as the first argument, and <code>:hover</code> and <code>:focus</code> as the second argument.</p>
+<p><code>@include u-link-colors(@c, @h)</code></p>
+<p>Passing five arguments will set the color for the default, <code>:visited</code>, <code>:hover</code>, <code>:focus</code>, and <code>:active</code> states respectively.</p>
+<p><code>@include u-link-colors(@c, @v, @h, @f, @a)</code></p>
+<p>Passing ten arguments will set the text (default, <code>:visited</code>, <code>:hover</code>, <code>:focus</code>, and <code>:active</code> states in the first five arguments) and border colors (default, <code>:visited</code>, <code>:hover</code>, <code>:focus</code>, and <code>:active</code> states in the following five arguments) separately.</p>
+<p><code>@include u-link-colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)</code></p>
+<p><strong>A base mixin of <code>@include u-link-colors-base</code> exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use <code>@include u-link-colors(@c, @v, @h, @f, @a)</code>.</strong></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Link border" mixins
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Turn off the default bottom <code>border</code> on the default and <code>:hover</code> states.</p>
+<p><code>@include u-link-no-border</code></p>
+<p>Turn off the default bottom <code>border</code> on the default state but force a bottom border on the <code>:hover</code> state.</p>
+<p><code>@include u-link-hover-border</code></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    "Small text utility" mixin
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <h4><strong>Class</strong></h4>
+<p>Sets the element to <code>14px</code> (in <code>em</code>s).</p>
+<p><em>To be used on default <code>16px</code> text only. To use on text set to another size, use the mixin below.</em></p>
+<p><code>@include u-small-text</code></p>
+<p>There is also a modifier, <code>u-small-text--subtle</code>, which sets the color to be gray.</p>
+<h4><strong>Mixin</strong></h4>
+<p>Sets the element to <code>14px</code> (in <code>em</code>s) based on the text size passed as <code>@context</code>.</p>
+<p><code> @include u-small-text(@context)</code></p>
+<pre><code class="language-scss">// Ex.
+.example {
+  font-size: math.div(20px, @base-font-size-px) + em;
+
+  small {
+    @include u-small-text(20px);
+  }
+}
+// Compiles to
+.example {
+  font-size: 1.25em;
+}
+.example small {
+  font-size: 0.7em;
+}
+</code></pre>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+    </section>
+    
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <section class="content-l u-mb45">
+            <div class="content-l__col content-l__col-1">
+                <div>
+                    <section>
+                        <h2 id="latest-updates">Latest updates</h2>
+                        <div class="content__line--wide content__line u-mb20"></div>
+                        <strong>Page last edited:</strong>
+                        
+                        
+                        
+                        
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/">
+                            <time datetime="">
+                                
+                            </time>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+
+    </div>
+
+</section><!-- .content__main -->
+ 
+
+    <div class="o-editor" id="edit-page">
+      <a
+        class="a-btn"
+        href="/design-system/updating-this-website?page=Helper+classes+and+mixins"
+        title="Edit this page in Decap CMS"
+      >
+        <span>Edit page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--edit" viewBox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"/></svg>
+      </a>
+    </div>
+  </div>
+</main>
+
+
+  
+  <footer class="ds-footer" role="contentinfo">
+
+    <hr>
+
+    <div class="block block--sub ds-footer__content">
+        <p>
+            We need your help keeping the Design System accurate and up-to-date!
+            If you see something wrong or missing,
+            <a href="/design-system/pr-preview/pr-2512/updating-this-website/#editing-pages">edit the page</a>.
+            If you can’t make those changes yourself,
+            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&labels=content&template=content_issues.md&title=Helper classes and mixins%3A+Add+issue+description">file an issue</a>.
+            If you have a substantial change to an existing page, or a new standard you want to add,
+            <a href="/design-system/pr-preview/pr-2512/updating-this-website/#creating-new-pages">follow these guidelines</a>.
+        </p>
+    </div>
+
+</footer>
+
+  
+  <script src="/design-system/pr-preview/pr-2512/dist/main.js" charset="utf-8"></script>
+
+  
+
+</body>
+</html>

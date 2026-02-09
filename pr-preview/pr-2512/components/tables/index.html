@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <!-- Google Tag Manager code -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
+  <title>Tables - CFPB Design System</title>
+  <meta name="description" content="CFPB's design system">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/design-system/pr-preview/pr-2512/dist/main.css">
+  <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+  </script>
+</head>
+<body class="t-variation">
+  <!-- Google Tag Manager code -->
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <div class="skip-nav">
+    <a class="skip-nav__link" href="#main">
+        Skip to main content
+    </a>
+  </div>
+  <header role="banner" class="site-header-wrapper">
+
+  <div class="m-global-eyebrow">
+    <div class="a-tagline">
+        <span class="u-usa-flag"></span>
+        <div>
+            An official website of the
+            <span class="u-nowrap">United States government</span>
+        </div>
+    </div>
+</div>
+
+
+  <div class="site-header">
+
+    <form id="search-form" action="/design-system/pr-preview/pr-2512/search" method="get">
+    <cfpb-form-search id="search-box" form="search-form" name="searchQuery">
+        <ul>
+            <li><a href="/design-system/components/alerts">Alerts</a></li>
+            <li><a href="/design-system/components/banner-notification">Banner (notification)</a></li>
+            <li><a href="/design-system/components/banner-us-gov">Banner (US gov)</a></li>
+            <li><a href="/design-system/components/buttons">Buttons</a></li>
+            <li><a href="/design-system/components/checkboxes">Checkboxes</a></li>
+            <li><a href="/design-system/components/date-picker">Date picker</a></li>
+            <li><a href="/design-system/components/expandables">Expandables</a></li>
+            <li><a href="/design-system/components/fieldsets">Fieldsets</a></li>
+            <li><a href="/design-system/components/helper-text">Helper text</a></li>
+            <li><a href="/design-system/components/labels-and-legends">Labels and legends</a></li>
+            <li><a href="/design-system/components/links">Links</a></li>
+            <li><a href="/design-system/components/lists">Lists</a></li>
+            <li><a href="/design-system/components/pagination">Pagination</a></li>
+            <li><a href="/design-system/components/radio-buttons">Radio buttons</a></li>
+            <li><a href="/design-system/components/range-sliders">Range sliders</a></li>
+            <li><a href="/design-system/components/selects">Selects</a></li>
+            <li><a href="/design-system/components/summaries">Summaries</a></li>
+            <li><a href="/design-system/components/tables">Tables</a></li>
+            <li><a href="/design-system/components/tags">Tags</a></li>
+            <li><a href="/design-system/components/taglines">Taglines</a></li>
+            <li><a href="/design-system/components/text-inputs">Text inputs</a></li>
+            <li><a href="/design-system/components/tooltips">Tooltips</a></li>
+            <li><a href="/design-system/components/elements">Web Components</a></li>
+        </ul>
+    </cfpb-form-search>
+</form>
+
+
+    <h1 class="title">
+      <a class="title-link" href="/design-system/pr-preview/pr-2512/">
+        <span class="demi">CFPB</span> Design System
+      </a>
+    </h1>
+  </div> <!-- /.wrapper -->
+</header>
+
+
+  <div
+  id="redirect-banner"
+  class="block block--flush-top block--flush-bottom block--padded-top u-hidden"
+>
+  <div class="m-global-banner">
+    <div class="wrapper wrapper--match-content">
+      <div class="m-notification m-notification--warning m-notification--visible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--warning-round" viewBox="0 0 17 20.4"><path d="M16.406 10.283a7.917 7.917 0 1 1-7.917-7.917 7.916 7.916 0 0 1 7.917 7.917zM9.48 14.367a1.003 1.003 0 1 0-1.004 1.003 1.003 1.003 0 0 0 1.004-1.003zM7.697 11.53a.792.792 0 0 0 1.583 0V5.262a.792.792 0 0 0-1.583 0z"/></svg>
+        <div class="m-notification__content">
+          <div class="m-notification__message">
+            You’ve been redirected to this website from
+            <span data-redirect="source-name"></span>.
+          </div>
+          <p class="m-notification__explanation">
+            The website you were trying to visit has been deprecated.
+            Future updates will happen here.
+          </p>
+          <p>
+            A permanent snapshot of
+            <span data-redirect="source-name"></span>
+            is available at
+            <a data-redirect="archive-website"></a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<main id="main" role="main">
+  <aside class="ds-sidebar">
+
+<details open class="ds-nav-container">
+
+    <summary class="h4">Navigation</summary>
+
+    <ul class="m-list m-list--links">
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation">Foundation</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components">Components</a>
+                </div>
+
+            
+                
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Components</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/alerts">Alerts</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/banner-notification">Banner (notification)</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/banner-us-gov">Banner (US gov)</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/buttons">Buttons</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/checkboxes">Checkboxes</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/date-picker">Date picker</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/expandables">Expandables</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/fieldsets">Fieldsets</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/helper-text">Helper text</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/labels-and-legends">Labels and legends</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/links">Links</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/lists">Lists</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/pagination">Pagination</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/radio-buttons">Radio buttons</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/range-sliders">Range sliders</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/selects">Selects</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/summaries">Summaries</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/tables">Tables</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/tags">Tags</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/taglines">Taglines</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/text-inputs">Text inputs</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/tooltips">Tooltips</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Web Components (beta)</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components/elements">Elements</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/patterns">Patterns</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/pages">Pages</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development">Development</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines">Guidelines</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+    </ul>
+
+</details>
+
+</aside>
+
+
+  <div class="ds-content">
+    <section>
+      <div class="h5">
+        Components
+      </div>
+    
+
+    <h1 class="component-header u-mb30">
+        Tables
+    </h1>
+
+    
+
+    
+
+    
+        
+        
+             
+            
+            
+        
+    
+        
+        
+             
+            
+                
+            
+            
+        
+    
+        
+        
+             
+            
+                
+            
+            
+        
+    
+
+    
+    
+        
+        
+        
+            
+            
+                
+            
+            
+        
+    
+        
+        
+        
+            
+            
+                
+            
+            
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+            
+            
+                
+            
+            
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+    <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
+        
+        <li class="m-list__item">
+            <a href="#standard-table">Standard table</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#responsive-tables">Responsive tables</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#variations">Variations</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#use-cases">Use cases</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#guidelines">Guidelines</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#accessibility">Accessibility</a>
+        </li>
+        
+    </ul>
+    
+
+    
+    <section id="description" class="u-mb30">
+        <p>Tables allow for the presentation of many data points grouped together in a visual way. They serve a unique purpose of allowing easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).</p>
+
+    </section>
+    
+
+    
+
+    
+    
+    <section class="o-variation-group" id="standard-table">
+
+        
+        <h2 class="o-variation-group__title">
+            Standard table
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p>This is the default style at the large screen breakpoint. Tables are not responsive by default; see options below for <a href="#responsive-tables">responsive tables</a>.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <table>
+    <caption>Table caption describing the data</caption>
+    <thead>
+        <tr>
+            <th>Column 1 header</th>
+            <th>Column 2 header</th>
+            <th>Column 3 header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1, column 1</td>
+            <td>Row 1, column 2</td>
+            <td>Row 1, column 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, column 1</td>
+            <td>Row 2, column 2</td>
+            <td>Row 2, column 3</td>
+        </tr>
+        <tr>
+            <td>Row 3, column 1</td>
+            <td>Row 3, column 2</td>
+            <td>Row 3, column 3</td>
+        </tr>
+    </tbody>
+</table>
+
+<!--
+Note: While th elements normally only contain raw text, they may sometimes contain heading elements when that would be beneficial to navigating a page’s content with a screenreader.
+-->
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-lesstablegreater-lesscaptiongrea-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-lesstablegreater-lesscaptiongrea-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-lesstablegreater-lesscaptiongrea-1">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-lesstablegreater-lesscaptiongrea-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-lesstablegreater-lesscaptiongrea-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table&gt;
+    &lt;caption&gt;Table caption describing the data&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1 header&lt;/th&gt;
+            &lt;th&gt;Column 2 header&lt;/th&gt;
+            &lt;th&gt;Column 3 header&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 1, column 1&lt;/td&gt;
+            &lt;td&gt;Row 1, column 2&lt;/td&gt;
+            &lt;td&gt;Row 1, column 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 2, column 1&lt;/td&gt;
+            &lt;td&gt;Row 2, column 2&lt;/td&gt;
+            &lt;td&gt;Row 2, column 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 3, column 1&lt;/td&gt;
+            &lt;td&gt;Row 3, column 2&lt;/td&gt;
+            &lt;td&gt;Row 3, column 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;!--
+Note: While th elements normally only contain raw text, they may sometimes contain heading elements when that would be beneficial to navigating a page’s content with a screenreader.
+--&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation-group" id="responsive-tables">
+
+        
+        <h2 class="o-variation-group__title">
+            Responsive tables
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p>Responsive tables fall into two main types: stacked, which stacks information vertically on smaller screens, and scrolling, which ensures that all the information can be accessed in its original tabular structure, even on a smaller screen.</p>
+<p>Note that tables are <strong>not</strong> responsive unless you add one of the small screen classes detailed below. Also note that the <code>data-label</code> attribute must be used to label each cell in a <code>table</code> for small screen responsive views. Responsive layouts are <strong>not</strong> applied to tables when pages are printed.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Responsive stacked table
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>To stack table information on smaller screens and make the information legible, use the <code>.o-table--stack-on-small</code> class.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <table class="o-table o-table--stack-on-small">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Column 1">Row A</td>
+            <td data-label="Column 2">Cell A2</td>
+            <td data-label="Column 3">Cell A3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row B</td>
+            <td data-label="Column 2">Cell B2</td>
+            <td data-label="Column 3">Cell B3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row C</td>
+            <td data-label="Column 2">Cell C2</td>
+            <td data-label="Column 3">Cell C3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row D</td>
+            <td data-label="Column 2">Cell D2</td>
+            <td data-label="Column 3">Cell D3</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-responsive-stacked-table-to-stac-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-responsive-stacked-table-to-stac-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-responsive-stacked-table-to-stac-1">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-responsive-stacked-table-to-stac-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-responsive-stacked-table-to-stac-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table class=&#34;o-table o-table--stack-on-small&#34;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row A&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34;&gt;Cell A3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row B&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34;&gt;Cell B3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row C&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell C2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34;&gt;Cell C3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row D&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell D2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34;&gt;Cell D3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Responsive table with horizontal scroll
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Use a table with horizontal scroll when the data you’re presenting has more columns than will fit comfortably on the screen, and you want to ensure all information can be accessed in its original tabular structure, even on smaller screens.</p>
+<p>The <code>.o-table--scrolling</code> class must be added to the parent element of the <code>table</code> (by adding a wrapping <code>div</code>, in most cases). The <code>table</code> element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table--striped class, below).</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div class="o-table o-table--scrolling">
+    <table>
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Column 5</th>
+                <th>Column 6</th>
+                <th>Column 7</th>
+                <th>Column 8</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Column 1">Row A</td>
+                <td data-label="Column 2">Cell A2</td>
+                <td data-label="Column 3">Cell A3</td>
+                <td data-label="Column 4">Cell A4</td>
+                <td data-label="Column 5">Cell A5</td>
+                <td data-label="Column 6">Cell A6</td>
+                <td data-label="Column 7">Cell A7</td>
+                <td data-label="Column 8">Cell A8</td>
+            </tr>
+            <tr>
+                <td data-label="Column 1">Row B</td>
+                <td data-label="Column 2">Cell B2</td>
+                <td data-label="Column 3">Cell B3</td>
+                <td data-label="Column 4">Cell B4</td>
+                <td data-label="Column 5">Cell B5</td>
+                <td data-label="Column 6">Cell B6</td>
+                <td data-label="Column 7">Cell B7</td>
+                <td data-label="Column 8">Cell B8</td>
+            </tr>
+            <tr>
+                <td data-label="Column 1">Row C</td>
+                <td data-label="Column 2">Cell C2</td>
+                <td data-label="Column 3">Cell C3</td>
+                <td data-label="Column 4">Cell C4</td>
+                <td data-label="Column 5">Cell C5</td>
+                <td data-label="Column 6">Cell C6</td>
+                <td data-label="Column 7">Cell C7</td>
+                <td data-label="Column 8">Cell C8</td>
+            </tr>
+            <tr>
+                <td data-label="Column 1">Row D</td>
+                <td data-label="Column 2">Cell D2</td>
+                <td data-label="Column 3">Cell D3</td>
+                <td data-label="Column 4">Cell D4</td>
+                <td data-label="Column 5">Cell D5</td>
+                <td data-label="Column 6">Cell D6</td>
+                <td data-label="Column 7">Cell D7</td>
+                <td data-label="Column 8">Cell D8</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-responsive-table-with-horizontal-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-responsive-table-with-horizontal-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-responsive-table-with-horizontal-2">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-responsive-table-with-horizontal-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-responsive-table-with-horizontal-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class=&#34;o-table o-table--scrolling&#34;&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Column 1&lt;/th&gt;
+                &lt;th&gt;Column 2&lt;/th&gt;
+                &lt;th&gt;Column 3&lt;/th&gt;
+                &lt;th&gt;Column 4&lt;/th&gt;
+                &lt;th&gt;Column 5&lt;/th&gt;
+                &lt;th&gt;Column 6&lt;/th&gt;
+                &lt;th&gt;Column 7&lt;/th&gt;
+                &lt;th&gt;Column 8&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td data-label=&#34;Column 1&#34;&gt;Row A&lt;/td&gt;
+                &lt;td data-label=&#34;Column 2&#34;&gt;Cell A2&lt;/td&gt;
+                &lt;td data-label=&#34;Column 3&#34;&gt;Cell A3&lt;/td&gt;
+                &lt;td data-label=&#34;Column 4&#34;&gt;Cell A4&lt;/td&gt;
+                &lt;td data-label=&#34;Column 5&#34;&gt;Cell A5&lt;/td&gt;
+                &lt;td data-label=&#34;Column 6&#34;&gt;Cell A6&lt;/td&gt;
+                &lt;td data-label=&#34;Column 7&#34;&gt;Cell A7&lt;/td&gt;
+                &lt;td data-label=&#34;Column 8&#34;&gt;Cell A8&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td data-label=&#34;Column 1&#34;&gt;Row B&lt;/td&gt;
+                &lt;td data-label=&#34;Column 2&#34;&gt;Cell B2&lt;/td&gt;
+                &lt;td data-label=&#34;Column 3&#34;&gt;Cell B3&lt;/td&gt;
+                &lt;td data-label=&#34;Column 4&#34;&gt;Cell B4&lt;/td&gt;
+                &lt;td data-label=&#34;Column 5&#34;&gt;Cell B5&lt;/td&gt;
+                &lt;td data-label=&#34;Column 6&#34;&gt;Cell B6&lt;/td&gt;
+                &lt;td data-label=&#34;Column 7&#34;&gt;Cell B7&lt;/td&gt;
+                &lt;td data-label=&#34;Column 8&#34;&gt;Cell B8&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td data-label=&#34;Column 1&#34;&gt;Row C&lt;/td&gt;
+                &lt;td data-label=&#34;Column 2&#34;&gt;Cell C2&lt;/td&gt;
+                &lt;td data-label=&#34;Column 3&#34;&gt;Cell C3&lt;/td&gt;
+                &lt;td data-label=&#34;Column 4&#34;&gt;Cell C4&lt;/td&gt;
+                &lt;td data-label=&#34;Column 5&#34;&gt;Cell C5&lt;/td&gt;
+                &lt;td data-label=&#34;Column 6&#34;&gt;Cell C6&lt;/td&gt;
+                &lt;td data-label=&#34;Column 7&#34;&gt;Cell C7&lt;/td&gt;
+                &lt;td data-label=&#34;Column 8&#34;&gt;Cell C8&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td data-label=&#34;Column 1&#34;&gt;Row D&lt;/td&gt;
+                &lt;td data-label=&#34;Column 2&#34;&gt;Cell D2&lt;/td&gt;
+                &lt;td data-label=&#34;Column 3&#34;&gt;Cell D3&lt;/td&gt;
+                &lt;td data-label=&#34;Column 4&#34;&gt;Cell D4&lt;/td&gt;
+                &lt;td data-label=&#34;Column 5&#34;&gt;Cell D5&lt;/td&gt;
+                &lt;td data-label=&#34;Column 6&#34;&gt;Cell D6&lt;/td&gt;
+                &lt;td data-label=&#34;Column 7&#34;&gt;Cell D7&lt;/td&gt;
+                &lt;td data-label=&#34;Column 8&#34;&gt;Cell D8&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation-group" id="variations">
+
+        
+        <h2 class="o-variation-group__title">
+            Variations
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Striped table
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Striping is useful to help the eye track across table rows. Use striping for tables that have more than five columns, or for tables with rows that are difficult to follow across the full width of the table.</p>
+<p>The <code>.o-table--striped</code> class adds stripes to the <code>table</code> rows. This striping is not visible on small screens.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <table class="o-table o-table--striped">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Column 1">Row A</td>
+            <td data-label="Column 2">Cell A2</td>
+            <td data-label="Column 3">Cell A3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row B</td>
+            <td data-label="Column 2">Cell B2</td>
+            <td data-label="Column 3">Cell B3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row C</td>
+            <td data-label="Column 2">Cell C2</td>
+            <td data-label="Column 3">Cell C3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row D</td>
+            <td data-label="Column 2">Cell D2</td>
+            <td data-label="Column 3">Cell D3</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-striped-table-striping-is-useful-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-striped-table-striping-is-useful-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-striped-table-striping-is-useful-1">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-striped-table-striping-is-useful-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-striped-table-striping-is-useful-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table class=&#34;o-table o-table--striped&#34;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row A&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34;&gt;Cell A3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row B&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34;&gt;Cell B3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row C&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell C2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34;&gt;Cell C3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row D&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell D2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34;&gt;Cell D3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Right-aligned table
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Right-align columns of numbers when they're quantities (counts, dollar amounts, percentages) or ordinals (ranks, item numbers). Use the <code>.o-table__cell--right-align</code> class on a <code>td</code>.</p>
+<p>Left-align columns of numbers when they're nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <table class="o-table o-table--stack-on-small">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th  class="o-table__cell--right-align">Right-aligned column</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Column 1">Row A</td>
+            <td data-label="Column 2">Cell A2</td>
+            <td data-label="Right-aligned column" class="o-table__cell--right-align">$1.00</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row B</td>
+            <td data-label="Column 2">Cell B2</td>
+            <td data-label="Right-aligned column" class="o-table__cell--right-align">$200.02</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-right-aligned-table-right-align--2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-right-aligned-table-right-align--2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-right-aligned-table-right-align--2">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-right-aligned-table-right-align--html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-right-aligned-table-right-align--html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table class=&#34;o-table o-table--stack-on-small&#34;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th  class=&#34;o-table__cell--right-align&#34;&gt;Right-aligned column&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row A&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label=&#34;Right-aligned column&#34; class=&#34;o-table__cell--right-align&#34;&gt;$1.00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;Row B&lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label=&#34;Right-aligned column&#34; class=&#34;o-table__cell--right-align&#34;&gt;$200.02&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <table class="o-table">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Column 1">
+                <a href="https://example.com/">Example 1</a>
+            </td>
+            <td data-label="Column 2">Cell A2</td>
+            <td data-label="Column 3" >Cell A3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">
+                <a href="https://example.com/">Example 2</a>
+            </td>
+            <td data-label="Column 2">Cell B2</td>
+            <td data-label="Column 3">Cell B3</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-lesstable-classo-tablegreater-le-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-lesstable-classo-tablegreater-le-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-lesstable-classo-tablegreater-le-3">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-lesstable-classo-tablegreater-le-html-code-snippet-3">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-lesstable-classo-tablegreater-le-html-code-snippet-3">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table class=&#34;o-table&#34;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;
+                &lt;a href=&#34;https://example.com/&#34;&gt;Example 1&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34; &gt;Cell A3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Column 1&#34;&gt;
+                &lt;a href=&#34;https://example.com/&#34;&gt;Example 2&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Column 2&#34;&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label=&#34;Column 3&#34;&gt;Cell B3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Pagination
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Tables with over 20 rows can be paired with pagination.</p>
+<p><img src="/design-system/images/uploads/table_pagination.png" alt="image showing a table with pagination"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <!--Code from Design Manual
+<table class="o-table o-table--stack-on-small">
+    <thead>
+        <tr>
+            <th class="u-w20pct">
+                Type
+            </th>
+            <th class="u-w55pct">
+                Title
+            </th>
+            <th class="u-w25pct">
+                Date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Type">
+                <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> Blog
+            </td>
+            <td data-label="Title">
+                Three things to do before closing
+            </td>
+            <td data-label="Date">
+                AUG 5, 2015
+            </td>
+        </tr>
+        <tr>
+            <td data-label="Type">
+                <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> News
+            </td>
+            <td data-label="Title">
+                Electronic Mortgage Closings Can Benefit Consumers
+            </td>
+            <td data-label="Date">
+                AUG 5, 2015
+            </td>
+        </tr>
+    <tr>
+            <td colspan="3" style="text-align: center; font-weight: bold;">
+                (18 more rows)
+            </td>
+        </tr>
+        <tr>
+            <td data-label="Type">
+                <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> Blog
+            </td>
+            <td data-label="Title">
+                National Day of Civic Hacking 2015
+            </td>
+            <td data-label="Date">
+                JUL 29, 2015
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<nav class="m-pagination" role="navigation" aria-label="Pagination">
+    <a class="a-btn
+              a-btn--disabled
+              m-pagination__btn-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.026 1.026 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
+        Newer
+    </a>
+
+    <a class="a-btn
+              m-pagination__btn-next" href="#">
+        Older
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.025 1.025 0 0 1-.727.302z"/></svg>
+    </a>
+    <form class="m-pagination__form" action="#">
+        <label class="m-pagination__label" for="m-pagination__current-page">
+            Page
+            <span class="u-visually-hidden">
+                number out of 3 total pages
+            </span>
+            <input class="m-pagination__current-page" id="m-pagination__current-page" name="page" type="number" min="1" max="3" inputmode="numeric" value="1">
+            of 3
+        </label>
+        <button class="a-btn
+                       a-btn--link
+                       m-pagination_submit-btn" id="pagination_submit" type="submit">Go</button>
+    </form>
+</nav>
+-->
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-pagination-tables-with-over-20-r-4" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-pagination-tables-with-over-20-r-4" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-pagination-tables-with-over-20-r-4">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-pagination-tables-with-over-20-r-html-code-snippet-4">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-pagination-tables-with-over-20-r-html-code-snippet-4">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;!--Code from Design Manual
+&lt;table class=&#34;o-table o-table--stack-on-small&#34;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&#34;u-w20pct&#34;&gt;
+                Type
+            &lt;/th&gt;
+            &lt;th class=&#34;u-w55pct&#34;&gt;
+                Title
+            &lt;/th&gt;
+            &lt;th class=&#34;u-w25pct&#34;&gt;
+                Date
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Type&#34;&gt;
+                &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;cf-icon-svg cf-icon-svg--speech-bubble&#34; viewBox=&#34;0 0 15 19&#34;&gt;&lt;path d=&#34;M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z&#34;/&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Title&#34;&gt;
+                Three things to do before closing
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Date&#34;&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Type&#34;&gt;
+                &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;cf-icon-svg cf-icon-svg--speech-bubble&#34; viewBox=&#34;0 0 15 19&#34;&gt;&lt;path d=&#34;M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z&#34;/&gt;&lt;/svg&gt; News
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Title&#34;&gt;
+                Electronic Mortgage Closings Can Benefit Consumers
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Date&#34;&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td colspan=&#34;3&#34; style=&#34;text-align: center; font-weight: bold;&#34;&gt;
+                (18 more rows)
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;Type&#34;&gt;
+                &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;cf-icon-svg cf-icon-svg--speech-bubble&#34; viewBox=&#34;0 0 15 19&#34;&gt;&lt;path d=&#34;M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z&#34;/&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Title&#34;&gt;
+                National Day of Civic Hacking 2015
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Date&#34;&gt;
+                JUL 29, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;nav class=&#34;m-pagination&#34; role=&#34;navigation&#34; aria-label=&#34;Pagination&#34;&gt;
+    &lt;a class=&#34;a-btn
+              a-btn--disabled
+              m-pagination__btn-prev&#34;&gt;
+        &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;cf-icon-svg cf-icon-svg--left&#34; viewBox=&#34;0 0 10 19&#34;&gt;&lt;path d=&#34;M8.4 17.269a1.026 1.026 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z&#34;/&gt;&lt;/svg&gt;
+        Newer
+    &lt;/a&gt;
+
+    &lt;a class=&#34;a-btn
+              m-pagination__btn-next&#34; href=&#34;#&#34;&gt;
+        Older
+        &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;cf-icon-svg cf-icon-svg--right&#34; viewBox=&#34;0 0 10 19&#34;&gt;&lt;path d=&#34;M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.025 1.025 0 0 1-.727.302z&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+    &lt;form class=&#34;m-pagination__form&#34; action=&#34;#&#34;&gt;
+        &lt;label class=&#34;m-pagination__label&#34; for=&#34;m-pagination__current-page&#34;&gt;
+            Page
+            &lt;span class=&#34;u-visually-hidden&#34;&gt;
+                number out of 3 total pages
+            &lt;/span&gt;
+            &lt;input class=&#34;m-pagination__current-page&#34; id=&#34;m-pagination__current-page&#34; name=&#34;page&#34; type=&#34;number&#34; min=&#34;1&#34; max=&#34;3&#34; inputmode=&#34;numeric&#34; value=&#34;1&#34;&gt;
+            of 3
+        &lt;/label&gt;
+        &lt;button class=&#34;a-btn
+                       a-btn--link
+                       m-pagination_submit-btn&#34; id=&#34;pagination_submit&#34; type=&#34;submit&#34;&gt;Go&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/nav&gt;
+--&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Fixed-width column tables
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Column widths are automatically set by browsers by default. If needed, some or all columns can be set to specific widths instead to accommodate longer data or labels.</p>
+<p>Fixed-width columns at the 600 px breakpoint and less lose their custom widths and expand to full width. This is the same responsive pattern used for default tables at small screens.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <table class="o-table o-table--stack-on-small">
+    <thead>
+        <tr>
+            <th class="u-w20pct">
+                County
+            </th>
+            <th class="u-w60pct">
+                Lien status
+            </th>
+            <th class="u-w20pct">
+                Active?
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="County">
+                Abbeville
+            </td>
+            <td data-label="Lien status">
+                Secured
+            </td>
+            <td data-label="Active?">
+                Yes
+            </td>
+        </tr>
+        <tr>
+            <td data-label="County">
+                Abbey
+            </td>
+            <td data-label="Lien status">
+                Secured
+            </td>
+            <td data-label="Active?">
+                No
+            </td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-fixed-width-column-tables-column-5" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-fixed-width-column-tables-column-5" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-fixed-width-column-tables-column-5">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-fixed-width-column-tables-column-html-code-snippet-5">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-fixed-width-column-tables-column-html-code-snippet-5">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table class=&#34;o-table o-table--stack-on-small&#34;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&#34;u-w20pct&#34;&gt;
+                County
+            &lt;/th&gt;
+            &lt;th class=&#34;u-w60pct&#34;&gt;
+                Lien status
+            &lt;/th&gt;
+            &lt;th class=&#34;u-w20pct&#34;&gt;
+                Active?
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;County&#34;&gt;
+                Abbeville
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Lien status&#34;&gt;
+                Secured
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Active?&#34;&gt;
+                Yes
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&#34;County&#34;&gt;
+                Abbey
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Lien status&#34;&gt;
+                Secured
+            &lt;/td&gt;
+            &lt;td data-label=&#34;Active?&#34;&gt;
+                No
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    
+
+    
+    
+        <section class="sticky-header u-mb45">
+
+            
+                <h2 id="use-cases">Use cases</h2>
+                <div class="content__line content__line--wide u-mb20"></div>
+                <p>
+                <p>Tables allow easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).</p>
+<p>Tables work best when:</p>
+<ul>
+<li>Presenting sequential data</li>
+<li>Data being presented requires specific or precise values</li>
+<li>Individual values are being presented or compared</li>
+<li>Values across columns or rows require different units of measurement</li>
+</ul>
+
+                </p>
+            
+
+            
+                <h2 id="guidelines">Guidelines</h2>
+                <div class="content__line content__line--wide u-mb20"></div>
+                <p>
+                <p>As a rule, design tables so that they are easy to read. Label columns precisely and include units of measurement where necessary. Organize the data so that the underlying meaning is quickly apparent.</p>
+<h3>Labels and titles</h3>
+<p>Give tables a meaningful title that succinctly describes the content presented so that users can understand their purpose at a glance. If presenting more than one table within a page, consider adding labels (e.g. “Table 1,” “Table 2,” etc.) in addition to titles. Labels should precede titles (e.g. “Table 1: The title given to this table”).</p>
+<h3>Long column labels</h3>
+<p>Consider using fixed columns or truncation for column labels that are significantly longer than the expected width of the data.</p>
+<h3>Unit of measurement</h3>
+<p>Make sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.</p>
+<p>Alternatively, if the table uses at most two units of measurement, consider using asterisks following the column label, and define the unit of measurement below the table.</p>
+<p>If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.</p>
+
+                </p>
+            
+
+            
+
+            
+        </section>
+    
+
+    
+        <section class="sticky-header u-mb45">
+            <h2 id="accessibility">Accessibility</h2>
+            <div class="content__line content__line--wide u-mb20"></div>
+            <p>
+                <p>Remember to always use headers (that is, <code>&lt;th&gt;</code> elements) for all data tables to make tabular data accessible.</p>
+
+            </p>
+        </section>
+    
+
+    
+
+    
+
+    
+        <section class="content-l u-mb45">
+            <div class="content-l__col content-l__col-1">
+                <div>
+                    <section>
+                        <h2 id="latest-updates">Latest updates</h2>
+                        <div class="content__line--wide content__line u-mb20"></div>
+                        <strong>Page last edited:</strong>
+                        
+                        
+                        
+                        
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/">
+                            <time datetime="">
+                                
+                            </time>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+
+    </div>
+
+</section><!-- .content__main -->
+ 
+
+    <div class="o-editor" id="edit-page">
+      <a
+        class="a-btn"
+        href="/design-system/updating-this-website?page=Tables"
+        title="Edit this page in Decap CMS"
+      >
+        <span>Edit page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--edit" viewBox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"/></svg>
+      </a>
+    </div>
+  </div>
+</main>
+
+
+  
+  <footer class="ds-footer" role="contentinfo">
+
+    <hr>
+
+    <div class="block block--sub ds-footer__content">
+        <p>
+            We need your help keeping the Design System accurate and up-to-date!
+            If you see something wrong or missing,
+            <a href="/design-system/pr-preview/pr-2512/updating-this-website/#editing-pages">edit the page</a>.
+            If you can’t make those changes yourself,
+            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&labels=content&template=content_issues.md&title=Tables%3A+Add+issue+description">file an issue</a>.
+            If you have a substantial change to an existing page, or a new standard you want to add,
+            <a href="/design-system/pr-preview/pr-2512/updating-this-website/#creating-new-pages">follow these guidelines</a>.
+        </p>
+    </div>
+
+</footer>
+
+  
+  <script src="/design-system/pr-preview/pr-2512/dist/main.js" charset="utf-8"></script>
+
+  
+
+</body>
+</html>

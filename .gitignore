@@ -85,6 +85,3 @@ docs/fonts/
 docs/_site
 .lighthouseci
 .sass-cache
-**/.jekyll-cache/
-.jekyll-metadata
-Gemfile.lock

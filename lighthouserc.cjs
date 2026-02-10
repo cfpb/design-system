@@ -24,7 +24,6 @@ if (!urlsSpecified) {
       "No HTML files found; build the docs first with 'yarn build-decap'.",
     );
 
-     
     process.exit(1);
   }
 
@@ -32,7 +31,7 @@ if (!urlsSpecified) {
     // Serve the documentation site locally when Lighthouse runs. Serve the
     // already-built HTML files using the Node http-server package, which
     // defaults to port 8080 and is simpler and reliably faster than using the
-    // Jekyll server.
+    // Eleventy server.
     startServerCommand: 'yarn serve-html',
     startServerReadyPattern: 'Hit CTRL-C to stop the server',
 

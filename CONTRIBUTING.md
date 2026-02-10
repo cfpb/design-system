@@ -34,7 +34,7 @@ here's what you'd do:
 1. `cd design-system`
 1. `git checkout main && git pull` to ensure you're on the latest changes (this step is not necessary when cloning for the first time).
 1. `yarn install` to install dependencies and set up [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
-1. `yarn after-install` to copy assets and configure Ruby dependencies.
+1. `yarn after-install` to copy assets.
 1. `git checkout -b button-fix` to create a new branch for your changes.
 1. Edit file(s) in `/packages/cfpb-design-system/src/components/cfpb-buttons` however you want.
 1. Copy `/packages/cfpb-design-system/` into `node_modules/@cfpb/cfpb-design-system/` in your consumerfinance.gov or other repo.
@@ -213,4 +213,5 @@ Example of a valid JSON token file structure for our project.
     }
   },
 ```
+
 Figma emits JSON color that adears to the [w3c design token spec](https://www.designtokens.org/tr/drafts/color/#format). Editors can supply only hex values, srgb int or srgb float while ignoring the Figma specifc metadata.

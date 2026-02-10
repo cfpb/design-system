@@ -4,6 +4,8 @@ import yaml from 'js-yaml';
 import fs from 'fs';
 import path from 'path';
 
+const ICON_REGEX = /{%\s+include\s+["']?\/?icons\/([\w-]+)\.svg["']?\s+%}/g;
+
 export default function (eleventyConfig) {
   // Get baseurl from environment or use default
   const baseurl = process.env.BASEURL || '/design-system';
@@ -48,20 +50,23 @@ export default function (eleventyConfig) {
     return url.startsWith('/') ? baseurl + url : baseurl + '/' + url;
   });
 
-  eleventyConfig.addFilter('markdownify', function (content) {
+  const renderIcons = (content) => {
     if (!content) return '';
     const iconsDir = path.resolve('docs/_includes/icons');
-    const withIcons = content.replace(
-      /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g,
-      (match, icon) => {
-        const iconPath = path.join(iconsDir, `${icon}.svg`);
-        if (!fs.existsSync(iconPath)) return match;
-        return fs
-          .readFileSync(iconPath, { encoding: 'utf8', flag: 'r' })
-          .trim();
-      },
-    );
-    return md.render(withIcons);
+    return content.replace(ICON_REGEX, (match, icon) => {
+      const iconPath = path.join(iconsDir, `${icon}.svg`);
+      if (!fs.existsSync(iconPath)) return match;
+      return fs.readFileSync(iconPath, { encoding: 'utf8', flag: 'r' }).trim();
+    });
+  };
+
+  eleventyConfig.addFilter('render_icons', function (content) {
+    return renderIcons(content);
+  });
+
+  eleventyConfig.addFilter('markdownify', function (content) {
+    if (!content) return '';
+    return md.render(renderIcons(content));
   });
 
   // Custom collection for pages by section
@@ -97,7 +102,7 @@ export default function (eleventyConfig) {
     },
   });
 
-  // Custom permalink computation matching Jekyll plugin behavior
+  // Custom permalinks
   eleventyConfig.addGlobalData('eleventyComputed', {
     permalink: (data) => {
       // Skip if permalink is already set
@@ -132,8 +137,7 @@ export default function (eleventyConfig) {
   });
 
   // Add date filters
-  eleventyConfig.addFilter('date', function (date, format) {
-    // Simple date formatting - you can use a library like luxon for more complex formatting
+  eleventyConfig.addFilter('date', function (date) {
     if (!date) return '';
     const d = new Date(date);
     return d.toISOString();

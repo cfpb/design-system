@@ -4,17 +4,17 @@
 
     {% assign variations_count = 0 %}
     // This is an inline script attached to the window so that we can utilize
-    // jekyll's liquid variables, such as site.pages.
+    // Eleventy's liquid variables, such as site.pages.
     window.searchStore = {
-        {% for page in site.pages %}
+        {% for page in collections.all %}
 
         {% comment %} Exclude search page itself from results. {% endcomment %}
-        {% if url == 'search/index' %} {% continue %} {% endif %}
+        {% if page.url == 'search/index' %} {% continue %} {% endif %}
 
-        '{{ url | slugify }}': {
+        '{{ page.url | slugify }}': {
 
             // Cycle through the variation fields of this page.
-            {% for variation_group in variation_groups %}
+            {% for variation_group in page.data.variation_groups %}
                 // Determine the maximum number of variations present overall.
                 {% if variation_group.variations.size > variations_count %}
                     {% assign variations_count = variation_group.variations | size  %}
@@ -28,14 +28,14 @@
             {% endfor %}
 
 
-            'title': '{{ title | escape }}',
-            'description': {{ page.description | markdownify | strip_html | url_encode | jsonify }},
-            'use_cases': {{ page.use_cases | markdownify | strip_html | url_encode | jsonify }},
-            'guidelines': {{ page.guidelines | markdownify | strip_html | url_encode | jsonify }},
-            'behavior': {{ page.behavior | markdownify | strip_html | url_encode | jsonify }},
-            'accessibility': {{ page.accessibility | markdownify | strip_html | url_encode | jsonify }},
-            'research': {{ page.research | markdownify | strip_html | url_encode | jsonify }},
-            'related_items': {{ page.related_items | markdownify | strip_html | url_encode | jsonify }},
+            'title': "{{ page.data.title | escape }}",
+            'description': {{ page.data.description | markdownify | strip_html | url_encode | jsonify }},
+            'use_cases': {{ page.data.use_cases | markdownify | strip_html | url_encode | jsonify }},
+            'guidelines': {{ page.data.guidelines | markdownify | strip_html | url_encode | jsonify }},
+            'behavior': {{ page.data.behavior | markdownify | strip_html | url_encode | jsonify }},
+            'accessibility': {{ page.data.accessibility | markdownify | strip_html | url_encode | jsonify }},
+            'research': {{ page.data.research | markdownify | strip_html | url_encode | jsonify }},
+            'related_items': {{ page.data.related_items | markdownify | strip_html | url_encode | jsonify }},
             'url': '{{ url | escape }}'
         }
         {% unless forloop.last %},{% endunless %}

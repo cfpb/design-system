@@ -133,7 +133,7 @@
             <!-- Live code example -->
             {% if variation_code_snippet and variation_code_snippet != '' %}
             <div class="a-live__code">
-                {{ variation_code_snippet }}
+                {{ variation_code_snippet | render_icons }}
             </div>
             {% endif %}
 

@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <!-- Google Tag Manager code -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
+  <title>Data visualization guidelines - CFPB Design System</title>
+  <meta name="description" content="CFPB's design system">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/design-system/pr-preview/pr-2512/dist/main.css">
+  <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+  </script>
+</head>
+<body class="t-variation">
+  <!-- Google Tag Manager code -->
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <div class="skip-nav">
+    <a class="skip-nav__link" href="#main">
+        Skip to main content
+    </a>
+  </div>
+  <header role="banner" class="site-header-wrapper">
+
+  <div class="m-global-eyebrow">
+    <div class="a-tagline">
+        <span class="u-usa-flag"></span>
+        <div>
+            An official website of the
+            <span class="u-nowrap">United States government</span>
+        </div>
+    </div>
+</div>
+
+
+  <div class="site-header">
+
+    <form id="search-form" action="/design-system/pr-preview/pr-2512/search" method="get">
+    <cfpb-form-search id="search-box" form="search-form" name="searchQuery">
+        <ul>
+            <li><a href="/design-system/components/alerts">Alerts</a></li>
+            <li><a href="/design-system/components/banner-notification">Banner (notification)</a></li>
+            <li><a href="/design-system/components/banner-us-gov">Banner (US gov)</a></li>
+            <li><a href="/design-system/components/buttons">Buttons</a></li>
+            <li><a href="/design-system/components/checkboxes">Checkboxes</a></li>
+            <li><a href="/design-system/components/date-picker">Date picker</a></li>
+            <li><a href="/design-system/components/expandables">Expandables</a></li>
+            <li><a href="/design-system/components/fieldsets">Fieldsets</a></li>
+            <li><a href="/design-system/components/helper-text">Helper text</a></li>
+            <li><a href="/design-system/components/labels-and-legends">Labels and legends</a></li>
+            <li><a href="/design-system/components/links">Links</a></li>
+            <li><a href="/design-system/components/lists">Lists</a></li>
+            <li><a href="/design-system/components/pagination">Pagination</a></li>
+            <li><a href="/design-system/components/radio-buttons">Radio buttons</a></li>
+            <li><a href="/design-system/components/range-sliders">Range sliders</a></li>
+            <li><a href="/design-system/components/selects">Selects</a></li>
+            <li><a href="/design-system/components/summaries">Summaries</a></li>
+            <li><a href="/design-system/components/tables">Tables</a></li>
+            <li><a href="/design-system/components/tags">Tags</a></li>
+            <li><a href="/design-system/components/taglines">Taglines</a></li>
+            <li><a href="/design-system/components/text-inputs">Text inputs</a></li>
+            <li><a href="/design-system/components/tooltips">Tooltips</a></li>
+            <li><a href="/design-system/components/elements">Web Components</a></li>
+        </ul>
+    </cfpb-form-search>
+</form>
+
+
+    <h1 class="title">
+      <a class="title-link" href="/design-system/pr-preview/pr-2512/">
+        <span class="demi">CFPB</span> Design System
+      </a>
+    </h1>
+  </div> <!-- /.wrapper -->
+</header>
+
+
+  <div
+  id="redirect-banner"
+  class="block block--flush-top block--flush-bottom block--padded-top u-hidden"
+>
+  <div class="m-global-banner">
+    <div class="wrapper wrapper--match-content">
+      <div class="m-notification m-notification--warning m-notification--visible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--warning-round" viewBox="0 0 17 20.4"><path d="M16.406 10.283a7.917 7.917 0 1 1-7.917-7.917 7.916 7.916 0 0 1 7.917 7.917zM9.48 14.367a1.003 1.003 0 1 0-1.004 1.003 1.003 1.003 0 0 0 1.004-1.003zM7.697 11.53a.792.792 0 0 0 1.583 0V5.262a.792.792 0 0 0-1.583 0z"/></svg>
+        <div class="m-notification__content">
+          <div class="m-notification__message">
+            You’ve been redirected to this website from
+            <span data-redirect="source-name"></span>.
+          </div>
+          <p class="m-notification__explanation">
+            The website you were trying to visit has been deprecated.
+            Future updates will happen here.
+          </p>
+          <p>
+            A permanent snapshot of
+            <span data-redirect="source-name"></span>
+            is available at
+            <a data-redirect="archive-website"></a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<main id="main" role="main">
+  <aside class="ds-sidebar">
+
+<details open class="ds-nav-container">
+
+    <summary class="h4">Navigation</summary>
+
+    <ul class="m-list m-list--links">
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation">Foundation</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components">Components</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/patterns">Patterns</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/pages">Pages</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development">Development</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines">Guidelines</a>
+                </div>
+
+            
+                
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Accessibility</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines/accessibility-principles">Accessibility principles</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines/accessibility-audit-tools">Accessibility audit tools</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Data visualization</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines/data-visualization-guidelines">Data visualization guidelines</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Community-centered design</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines/overview">Overview</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines/setting-the-foundation">Setting the foundation</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines/conducting-research">Conducting research</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines/design-and-development">Design and development</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Forms</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines/designing-forms">Designing forms</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Print</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines/print-styles">Print styles</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+            
+            </div>
+        </li>
+    
+    </ul>
+
+</details>
+
+</aside>
+
+
+  <div class="ds-content">
+    <section>
+      <div class="h5">
+        Data visualization
+      </div>
+    
+
+    <h1 class="component-header u-mb30">
+        Data visualization guidelines
+    </h1>
+
+    
+
+    
+
+    
+        
+        
+             
+            
+            
+        
+    
+        
+        
+             
+            
+                
+            
+            
+        
+    
+        
+        
+             
+            
+                
+            
+            
+        
+    
+        
+        
+             
+            
+                
+            
+            
+        
+    
+        
+        
+             
+            
+                
+            
+            
+        
+    
+
+    
+    
+        
+        
+        
+            
+            
+                
+            
+            
+        
+    
+        
+        
+        
+            
+            
+                
+            
+            
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+            
+            
+                
+            
+            
+        
+    
+        
+        
+        
+    
+        
+        
+        
+            
+            
+                
+            
+            
+        
+    
+    <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
+        
+        <li class="m-list__item">
+            <a href="#bar-chart">Bar chart</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#line-chart">Line chart</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#pie-chart">Pie chart</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#area-chart">Area chart</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#tile-grid-map">Tile grid map</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#use-cases">Use cases</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#guidelines">Guidelines</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#accessibility">Accessibility</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#related-items">Related items</a>
+        </li>
+        
+    </ul>
+    
+
+    
+    <section id="description" class="u-mb30">
+        <p>Data visualization can be a great way to tell stories, convey meaning, and help users make comparisons. At the CFPB, we’ve built the following styles, guidance, and many of the chart types below into our Content Management System (CMS) and <a href="https://github.com/cfpb/design-system/blob/0f22b87804640dfc7d1f1ae1f6a82ad507e9887c/docs/assets/CFPB%20Excel%20Data%20Samples%20v2.0.xlsx">Data visualization Excel file</a>.</p>
+
+    </section>
+    
+
+    
+
+    
+    
+    <section class="o-variation-group" id="bar-chart">
+
+        
+        <h2 class="o-variation-group__title">
+            Bar chart
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p>Bar charts are good at showing comparisons of discrete items or categories.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Vertical bar chart
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p><img src="/design-system/images/uploads/vertical_bar_chart.png" alt="Vertical bar chart example"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-vertical-bar-chart-vertical-bar--1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-vertical-bar-chart-vertical-bar--1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-vertical-bar-chart-vertical-bar--1">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-vertical-bar-chart-vertical-bar--implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-vertical-bar-chart-vertical-bar--implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Available for creation in CFPB's CMS and Excel template</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Horizontal bar chart
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p><img src="/design-system/images/uploads/horizontal_bar_chart.png" alt="Horizontal bar chart example"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-horizontal-bar-chart-horizontal--2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-horizontal-bar-chart-horizontal--2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-horizontal-bar-chart-horizontal--2">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-horizontal-bar-chart-horizontal--implementation-2">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-horizontal-bar-chart-horizontal--implementation-2">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Available for creation in CFPB's CMS and Excel template</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Grouped bar chart
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p><img src="/design-system/images/uploads/grouped_bar_chart.png" alt="Grouped bar chart example"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-grouped-bar-chart-grouped-bar-ch-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-grouped-bar-chart-grouped-bar-ch-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-grouped-bar-chart-grouped-bar-ch-3">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-grouped-bar-chart-grouped-bar-ch-implementation-3">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-grouped-bar-chart-grouped-bar-ch-implementation-3">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Available for creation in CFPB's CMS and Excel template</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Stacked bar chart
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p><img src="/design-system/images/uploads/stacked_bar_chart.png" alt="Stacked bar chart example"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-stacked-bar-chart-stacked-bar-ch-4" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-stacked-bar-chart-stacked-bar-ch-4" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-stacked-bar-chart-stacked-bar-ch-4">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-stacked-bar-chart-stacked-bar-ch-implementation-4">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-stacked-bar-chart-stacked-bar-ch-implementation-4">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Available for creation in CFPB's CMS and Excel template</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Bar chart stacked to 100 percent
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p><img src="/design-system/images/uploads/bar_chart_stacked_to_100.png" alt="Example of a bar chart stacked to 100%"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-bar-chart-stacked-to-100-percent-5" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-bar-chart-stacked-to-100-percent-5" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-bar-chart-stacked-to-100-percent-5">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-bar-chart-stacked-to-100-percent-implementation-5">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-bar-chart-stacked-to-100-percent-implementation-5">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Available for creation in CFPB's CMS and Excel template</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation-group" id="line-chart">
+
+        
+        <h2 class="o-variation-group__title">
+            Line chart
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p>Line charts are good at showing a change over time. A line chart's axis should always start at 0.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Simple line chart
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p><img src="/design-system/images/uploads/simple_line_chart.png" alt="Simple line chart example"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-simple-line-chart-simple-line-ch-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-simple-line-chart-simple-line-ch-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-simple-line-chart-simple-line-ch-1">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-simple-line-chart-simple-line-ch-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-simple-line-chart-simple-line-ch-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Available for creation in CFPB's CMS and Excel template</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Date/time chart
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A date/time chart is a line chart which graphs continuous data over a period of time. The chart includes buttons to select time ranges of 1, 3, or 5 years. The X axis is always based on time, and the period of time can be controlled in more detail with the slider control. Clicking and dragging the handles of the slider changes the length of time displayed in the chart, while moving the slider within the bar changes the starting and ending dates in the chart.</p>
+<p><img src="/design-system/images/uploads/date_time_chart.png" alt="Date/time chart example"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-datetime-chart-a-datetime-chart--2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-datetime-chart-a-datetime-chart--2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-datetime-chart-a-datetime-chart--2">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-datetime-chart-a-datetime-chart--implementation-2">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-datetime-chart-a-datetime-chart--implementation-2">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Not currently available for creation in CFPB's CMS or Excel template. Requires custom development.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation-group" id="pie-chart">
+
+        
+        <h2 class="o-variation-group__title">
+            Pie chart
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p>Pie charts are good at showing parts of a whole. Slices should always add up to 100 percent.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+
+            
+            <div class="m-variation__description">
+                <p><img src="/design-system/images/uploads/pie_chart.png" alt="Pie chart example"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-pie-chart-exampledesign-systemim-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-pie-chart-exampledesign-systemim-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-pie-chart-exampledesign-systemim-1">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-pie-chart-exampledesign-systemim-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-pie-chart-exampledesign-systemim-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Available for creation in CFPB's Excel template. Not currently available for creation in CFPB's CMS.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation-group" id="area-chart">
+
+        
+        <h2 class="o-variation-group__title">
+            Area chart
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p>Area charts are good at showing trends over time much like line charts. Unlike line charts, area charts use filled areas which help draw attention to the changing values. They are good at emphasizing the size of change over time.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+
+            
+            <div class="m-variation__description">
+                <p><img src="/design-system/images/uploads/area_chart.png" alt="Area chart example"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-area-chart-exampledesign-systemi-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-area-chart-exampledesign-systemi-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-area-chart-exampledesign-systemi-1">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-area-chart-exampledesign-systemi-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-area-chart-exampledesign-systemi-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Available for creation in CFPB's Excel template. Not currently available for creation in CFPB's CMS.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation-group" id="tile-grid-map">
+
+        
+        <h2 class="o-variation-group__title">
+            Tile grid map
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p>Tile grid maps can show comparative state data where population figures or geographic size are not part of the story. In tile grid maps, each state is the same size and shape. This prevents regions with large areas from dominating a map and prevent regions with small areas from going unnoticed.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+
+            
+            <div class="m-variation__description">
+                <p><img src="/design-system/images/uploads/tile_grid_map.png" alt="Tile grid map example"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-tile-grid-map-exampledesign-syst-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-tile-grid-map-exampledesign-syst-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-tile-grid-map-exampledesign-syst-1">
+                <ul class="m-tabs__list">
+                    
+                    
+                    
+                    <li class="m-tabs__list-item">
+                        <a class="m-tabs__tab" href="#details-tile-grid-map-exampledesign-syst-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs__panel" id="details-tile-grid-map-exampledesign-syst-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Not currently available for creation in CFPB's CMS or Excel template. Requires custom development.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    
+
+    
+    
+        <section class="sticky-header u-mb45">
+
+            
+                <h2 id="use-cases">Use cases</h2>
+                <div class="content__line content__line--wide u-mb20"></div>
+                <p>
+                <p>When deciding if and how to create a data visualization, consider the following.</p>
+<ul>
+<li>Is a data visualization truly the best format for your information? Data visualizations can be powerful in showing aspects such as patterns and comparisons. But sometimes data visualization isn’t the best approach, and a well-crafted sentence or table may actually be more impactful in conveying a specific point.</li>
+<li>Make sure you understand the data before deciding how to visualize it. For instance, bar charts are good at showing comparisons whereas line charts are good at showing a change over time.</li>
+<li>Consider your audience, their familiarity with data visualization, and how much information they need.</li>
+<li>Ensure your data visualization communicates a main point that users can easily recognize and walk away with.</li>
+</ul>
+
+                </p>
+            
+
+            
+                <h2 id="guidelines">Guidelines</h2>
+                <div class="content__line content__line--wide u-mb20"></div>
+                <p>
+                <h3>Limited data</h3>
+<p>Include no more than five data types in your chart to ensure it will be readable and accessible. For example, a line chart should have no more than five lines, and a pie chart should have no more than five slices. If you need to show more than five data types, break your chart into multiple smaller charts.</p>
+<h3>Accessible colors and patterns</h3>
+<p>When used properly, color and patterns can help clarify relationships and differences between data and maintain a consistent brand voice. When used poorly, color and patterns can overwhelm the user, make the data confusing, and break with brand standards.</p>
+<ul>
+<li><strong>Color:</strong> Refer to our <a href="https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes">Data visualization color palettes</a> and <a href="https://cfpb.github.io/design-system/foundation/color#accessibility">Color accessibility guidelines</a> when choosing colors for your visualization.</li>
+<li><strong>Patterns:</strong> We’ve built the following patterns into our CMS and Excel template: square dot, round dot, dash, and long dash.</li>
+</ul>
+<h3>Required information</h3>
+<p><img src="/design-system/images/uploads/data_visualization_required_information.png" alt="When creating a data visualization, you must include a title, axis labels, downloadable source data, and alt text."></p>
+<ul>
+<li>
+<p><strong>Title:</strong> The title should be as descriptive as possible to give users a sense of what the chart will be about.</p>
+<ul>
+<li><strong>Character count:</strong> No more than a single line at desktop screen size (approx. 95 characters including spaces)</li>
+</ul>
+</li>
+<li>
+<p><strong>Axis labels:</strong> Include and label one X axis and one Y axis per chart.</p>
+</li>
+<li>
+<p><strong>Downloadable source data:</strong> Provide the data used to create the chart in an Excel or CSV file. Within the file, format the data as a table with header columns for accessibility. Please reference this <a href="https://www.section508.gov/training/spreadsheets/aed-cop-xlsx05/">table accessibility video</a> for guidance.</p>
+<ul>
+<li><strong>Download text:</strong> Write a short phrase of text to appear as the link text when a user clicks to download the data. The text should succinctly describe the data the file contains so it is clear to a user using a screen reader what they are downloading.</li>
+</ul>
+</li>
+<li>
+<p><strong>Alt text (short description):</strong> Alt text should include the chart type, type of data, and main takeaway. This text will not be visible on the page. Rather, it will be read by a screen reader.</p>
+<ul>
+<li><strong>Character count:</strong> No more than 250 characters including spaces</li>
+<li><strong>Example:</strong> <em>“Line chart showing average credit card debt between June 2018 and September 2019 stayed relatively stable across respondents, whether or not they reported difficulty paying expenses.”</em></li>
+</ul>
+</li>
+</ul>
+<h3>Optional information</h3>
+<p><img src="/design-system/images/uploads/data_visualization_optional_info.png" alt="When creating a data visualization, you may optionally include a figure number, intro text, data source, date published, notes, and supporting text."></p>
+<ul>
+<li>
+<p><strong>Figure number:</strong> If there will be many charts on a page, include a figure number with each chart. This will appear as text above the chart’s title.</p>
+</li>
+<li>
+<p><strong>Intro text:</strong> Can be used to call out key takeaways and trends in the chart data. This will help a user understand why they may want to explore the data.</p>
+<ul>
+<li><strong>Character count:</strong> No more than three lines at desktop screen size (approx. 250 characters including spaces)</li>
+</ul>
+</li>
+<li>
+<p><strong>Data source:</strong> Cite where the data is from. This helps to promote trust and validity. Whenever possible, link to the original source.</p>
+</li>
+<li>
+<p><strong>Date published:</strong> The date the data in the chart was last updated</p>
+</li>
+<li>
+<p><strong>Notes:</strong> Include any additional notes about the chart and data to describe aspects such as caveats or inconsistencies with the data.</p>
+</li>
+<li>
+<p><strong>Supporting text:</strong> Increase the visualization’s accessibility by further describing it in the main body of text. In addition to text placed within the data visualization itself, describe the chart data, trends, and key takeaways in greater detail in the paragraphs directly following the visualization. This is especially necessary for more complex charts.</p>
+</li>
+</ul>
+
+                </p>
+            
+
+            
+
+            
+        </section>
+    
+
+    
+        <section class="sticky-header u-mb45">
+            <h2 id="accessibility">Accessibility</h2>
+            <div class="content__line content__line--wide u-mb20"></div>
+            <p>
+                <p>Enabling all users to comprehend data visualizations is a key part of being a government agency that serves the entire American public.</p>
+<p>As stated in the Guidelines section above, please ensure your visualization includes the following.</p>
+<ul>
+<li><a href="https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines#use-accessible-colors-and-patterns">Accessible colors and patterns</a></li>
+<li><a href="https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines#required-information">Required information</a> including a chart title, alt text, downloadable source data, download text, and axis labels</li>
+</ul>
+
+            </p>
+        </section>
+    
+
+    
+
+    
+        <section class="content-l u-mb45">
+            <div class="content-l__col content-l__col-1">
+                <div>
+                    <section>
+                        <h2 id="related-items">Related items</h2>
+                        <div class="content__line--wide content__line u-mb20"></div>
+                        <ul>
+<li><a href="https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1">Data visualization color palettes</a></li>
+<li><a href="https://cfpb.github.io/design-system/foundation/color#accessibility">Color accessibility guidelines</a></li>
+</ul>
+
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+
+    
+        <section class="content-l u-mb45">
+            <div class="content-l__col content-l__col-1">
+                <div>
+                    <section>
+                        <h2 id="latest-updates">Latest updates</h2>
+                        <div class="content__line--wide content__line u-mb20"></div>
+                        <strong>Page last edited:</strong>
+                        
+                        
+                        
+                            
+                        
+                        
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/">
+                            <time datetime="">
+                                
+                            </time>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+
+    </div>
+
+</section><!-- .content__main -->
+ 
+
+    <div class="o-editor" id="edit-page">
+      <a
+        class="a-btn"
+        href="/design-system/updating-this-website/?page=Data+visualization+guidelines"
+        title="Edit this page in Decap CMS"
+      >
+        <span>Edit page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--edit" viewBox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"/></svg>
+      </a>
+    </div>
+  </div>
+</main>
+
+
+  
+  <footer class="ds-footer" role="contentinfo">
+
+    <hr>
+
+    <div class="block block--sub ds-footer__content">
+        <p>
+            We need your help keeping the Design System accurate and up-to-date!
+            If you see something wrong or missing,
+            <a href="/design-system/pr-preview/pr-2512/updating-this-website/#editing-pages">edit the page</a>.
+            If you can’t make those changes yourself,
+            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&labels=content&template=content_issues.md&title=Data visualization guidelines%3A+Add+issue+description">file an issue</a>.
+            If you have a substantial change to an existing page, or a new standard you want to add,
+            <a href="/design-system/pr-preview/pr-2512/updating-this-website/#creating-new-pages">follow these guidelines</a>.
+        </p>
+    </div>
+
+</footer>
+
+  
+  <script src="/design-system/pr-preview/pr-2512/dist/main.js" charset="utf-8"></script>
+
+  
+
+</body>
+</html>

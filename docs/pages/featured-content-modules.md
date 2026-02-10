@@ -29,7 +29,7 @@ variation_groups:
           appears on a page in a language that reads right to left, such as
           Arabic, the layout remains the same, but the text is aligned right
           rather than left.
-        variation_name: Standard
+        variation_name: Featured content module
     variation_group_name: Types
     variation_group_description: ''
 guidelines: >-

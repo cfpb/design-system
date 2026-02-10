@@ -1,24 +1,28 @@
 ---
+title: Text introductions
 layout: variation
 section: patterns
 status: Released
+description: The text introduction is the standard page introduction pattern
+  used across all pages that do not have a
+  [hero](https://cfpb.github.io/design-system/patterns/heroes) or [item
+  introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
+  They introduce a page, or collection of pages, with a brief description of the
+  goals of that section.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
           <div class="o-text-introduction">
             <h1>Heading 1</h1>
             <p class="lead-paragraph">
-              Lead paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              Lead paragraph lorem ipsum dolor sit amet, consectetur adipiscing lite, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat.
             </p>
             <p>
               Descriptive paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore.
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
             </p>
             <ul class="m-list m-list--links">
               <li class="m-list__item">
@@ -50,21 +54,26 @@ variation_groups:
           * Text spans seven columns
 
           * At breakpoints below 600: Page title and lead paragraph drop down one type size to make reading on smaller devices easier.
-    variation_group_name: Types
-    variation_group_description: ''
-  - variation_group_name: Variation
-    variation_group_description: ''
-    variations:
-      - variation_specs: >-
-          ![Image of text intro with breakout sidebar showing grid and design
-          specs ](/design-system/images/uploads/breakout_sidebar_with_specs.png)
-
-
-          * Spacing: The breakout may be taller than the Text Intro content, in which case the margin beneath the breakout should be 60px.
-
-          * Required elements: slug title and paragraph text.
-
-          * Imagery: May use either a circle (1x1) image or a 16x9 ratio image.
+        variation_code_snippet_rendered: >-
+          <div class="o-text-introduction">
+            <div class="h1">Heading 1</div>
+            <p class="lead-paragraph">
+              Lead paragraph lorem ipsum dolor sit amet, consectetur adipiscing etil, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+            <p>
+              Descriptive paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            </p>
+            <ul class="m-list m-list--links">
+              <li class="m-list__item">
+                <a class="a-link a-link--jump" href="#"> <span class="a-link__text">Call-to-action link</span> </a>
+              </li>
+            </ul>
+          </div>
+      - variation_is_deprecated: false
         variation_name: Breakout sidebar
         variation_description: >-
           On [landing](https://cfpb.github.io/design-system/pages/landing-pages)
@@ -84,6 +93,18 @@ variation_groups:
 
 
           ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/breakout_sidebar.png)
+        variation_specs: >-
+          ![Image of text intro with breakout sidebar showing grid and design
+          specs ](/design-system/images/uploads/breakout_sidebar_with_specs.png)
+
+
+          * Spacing: The breakout may be taller than the Text Intro content, in which case the margin beneath the breakout should be 60px.
+
+          * Required elements: slug title and paragraph text.
+
+          * Imagery: May use either a circle (1x1) image or a 16x9 ratio image.
+    variation_group_name: Types
+    variation_group_description: ''
 guidelines: >-
   ### Content guidelines
 
@@ -121,14 +142,16 @@ guidelines: >-
 
   The optional call-to-action link should be one line; about 40 characters or less. Link content should follow [link guidelines](https://cfpb.github.io/design-system/components/links).
 eyebrow: Introductions
-title: Text introductions
-description: The text introduction is the standard page introduction pattern
-  used across all pages that do not have a
-  [hero](https://cfpb.github.io/design-system/patterns/heroes) or [item
-  introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
-  They introduce a page, or collection of pages, with a brief description of the
-  goals of that section.
 use_cases: ''
+accessibility: ''
+related_items: >-
+  * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
+
+  * [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
+redirect_from:
+  - /patterns/introductions/introductions
+  - /patterns/introductions/text-introductions
+last_updated: 2020-01-28T15:55:47.394Z
 behavior: >-
   ### Text introduction
 
@@ -152,15 +175,5 @@ behavior: >-
   | Breakout sidebar on the right                                                         | Breakout sidebar stacked immediately after text intro                                          |
 
   | ![Mockup of 900+ pixel layout](/design-system/images/uploads/breakout_sidebar_breakpoint_large.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/breakout_sidebar_breakpoint_small.png) |
-accessibility: ''
-related_items: >-
-  * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
-
-  * [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
-last_updated: 2020-01-28T15:55:47.394Z
 research: ''
-
-redirect_from:
-  - /patterns/introductions/introductions
-  - /patterns/introductions/text-introductions
 ---

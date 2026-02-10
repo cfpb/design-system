@@ -14,9 +14,9 @@ variation_groups:
 
           <input type="range" min="0" max="100" step="5" class="a-range" id="example-range-slider">
         variation_description: ''
-        variation_name: ''
+        variation_name: Range slider
         variation_specs: ''
-    variation_group_name: Standard range slider
+    variation_group_name: Types
     variation_group_description:
       Range sliders can have optional `min`, `max` and
       `step`

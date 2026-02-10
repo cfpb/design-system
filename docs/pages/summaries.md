@@ -3,7 +3,7 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Summaries
+  - variation_group_name: Types
     variations:
       - variation_name: Summary (on desktop)
         variation_code_snippet: >-
@@ -76,8 +76,8 @@ variation_groups:
             </button>
           </div>
         variation_description:
-          This component provides a more inconspicous button, which stays
-          at the bottom of the summary when expanded.
+          This component provides a more inconspicous button, which
+          stays at the bottom of the summary when expanded.
 eyebrow: Components
 title: Summaries
 description: Summary components hides content over a certain height. When the

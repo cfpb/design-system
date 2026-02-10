@@ -1,12 +1,12 @@
 <section>
-    {%- if page.eyebrow %}
+    {%- if eyebrow %}
       <div class="h5">
-        {{ page.eyebrow }}
+        {{ eyebrow }}
       </div>
     {% endif %}
 
     <h1 class="component-header u-mb30">
-        {{ page.title }}
+        {{ title }}
     </h1>
 
     {% comment %}
@@ -18,9 +18,9 @@
         that are empty.
     {% endcomment %}
 
-    {% assign jump_links = page.jumplinks | default | split: ',' %}
+    {% assign jump_links = jumplinks | default | split: ',' %}
 
-    {% for variation_group in page.variation_groups %}
+    {% for variation_group in variation_groups %}
         {% assign variation_name = variation_group.variation_group_name %}
         {% if variation_name %}
              {% assign jump_links = jump_links | join: ',' %}
@@ -34,7 +34,7 @@
     {% assign jump_sections = 'Use cases,Guidelines,Behavior,Restrictions,Accessibility,Research,Related items' | split: ',' %}
     {% for jump_section in jump_sections %}
         {% assign jump_section_slug = jump_section | slugify | replace: '-', '_' %}
-        {% assign page_section = page[jump_section_slug] %}
+        {% assign page_section = [jump_section_slug] %}
         {% if page_section and page_section != '' %}
             {% assign jump_links = jump_links | join: ',' %}
             {% if jump_links != '' %}
@@ -56,15 +56,15 @@
     </ul>
     {% endif %}
 
-    {% if page.description %}
+    {% if description %}
     <section id="description" class="u-mb30">
-        {{ page.description | markdownify }}
+        {{ description | markdownify }}
     </section>
     {% endif %}
 
-    {% if page.code_examples and page.code_examples.size > 0 %}
+    {% if code_examples and code_examples.size > 0 %}
 
-        {% for code_example in page.code_examples %}
+        {% for code_example in code_examples %}
             {% if code_example.code_title and code_example.code_title != '' %}
             <h2>
                 {{ code_example.code_title }}
@@ -72,7 +72,7 @@
             {% endif %}
 
             {% if code_example.code_snippet_url and code_example.code_snippet_url != '' %}
-                {% include {{ code_example.code_snippet_url }} %}
+                {% include code_example.code_snippet_url %}
             {% endif %}
 
             <br>
@@ -81,8 +81,8 @@
         {% endfor %}
     {% endif %}
 
-    {% if page.variation_groups and page.variation_groups.size > 0 %}
-    {% for variation_group in page.variation_groups %}
+    {% if variation_groups and variation_groups.size > 0 %}
+    {% for variation_group in variation_groups %}
     <section class="o-variation-group" id="{{ variation_group.variation_group_name | slugify }}">
 
         {% if variation_group.variation_group_name and variation_group.variation_group_name != '' %}
@@ -250,38 +250,38 @@
     {% endif %}
 
     {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
-    {% if page.use_cases != '' or page.guidelines != '' or page.behavior != '' or page.restrictions and page.restrictions != empty %}
+    {% if use_cases != '' or guidelines != '' or behavior != '' or restrictions and restrictions != empty %}
         <section class="sticky-header u-mb45">
 
-            {% if page.use_cases and page.use_cases != '' %}
+            {% if use_cases and use_cases != '' %}
                 <h2 id="use-cases">Use cases</h2>
                 <div class="content__line content__line--wide u-mb20"></div>
                 <p>
-                {{ page.use_cases | markdownify }}
+                {{ use_cases | markdownify }}
                 </p>
             {% endif %}
 
-            {% if page.guidelines and page.guidelines != '' %}
+            {% if guidelines and guidelines != '' %}
                 <h2 id="guidelines">Guidelines</h2>
                 <div class="content__line content__line--wide u-mb20"></div>
                 <p>
-                {{ page.guidelines | markdownify }}
+                {{ guidelines | markdownify }}
                 </p>
             {% endif %}
 
-            {% if page.behavior and page.behavior != '' %}
+            {% if behavior and behavior != '' %}
                 <h2 id="behavior">Behavior</h2>
                 <div class="content__line content__line--wide u-mb20"></div>
                 <p>
-                {{ page.behavior | markdownify }}
+                {{ behavior | markdownify }}
                 </p>
             {% endif %}
 
-            {% if page.restrictions and page.restrictions != empty %}
+            {% if restrictions and restrictions != empty %}
                 <h2 id="restrictions">Restrictions</h2>
                 <div class="content__line content__line--wide u-mb20"></div>
                 <div class="content-l component-restrictions">
-                    {% for restriction in page.restrictions %}
+                    {% for restriction in restrictions %}
                         {% if restriction.restrictions_do and restriction.restrictions_do != '' %}
                             <div class="content-l__col content-l__col-1-2">
                                 <div class="block
@@ -290,7 +290,7 @@
                                             block--padded-bottom">
                                     <header class="component-restrictions__heading-do">
                                         <h3>
-                                            {% include icons/approved-round.svg %}
+                                            {% include "icons/approved-round.svg" %}
                                             Do
                                         </h3>
                                     </header>
@@ -308,7 +308,7 @@
                                             block--padded-bottom">
                                     <header class="component-restrictions__heading-donot">
                                         <h3>
-                                            {% include icons/error-round.svg %}
+                                            {% include "icons/error-round.svg" %}
                                             Do not
                                         </h3>
                                     </header>
@@ -324,34 +324,34 @@
         </section>
     {% endif %}
 
-    {% if page.accessibility and page.accessibility != '' %}
+    {% if accessibility and accessibility != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="accessibility">Accessibility</h2>
             <div class="content__line content__line--wide u-mb20"></div>
             <p>
-                {{ page.accessibility | markdownify }}
+                {{ accessibility | markdownify }}
             </p>
         </section>
     {% endif %}
 
-    {% if page.research and page.research != '' %}
+    {% if research and research != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="research">Research</h2>
             <div class="content__line content__line--wide u-mb20"></div>
             <p>
-                {{ page.research | markdownify }}
+                {{ research | markdownify }}
             </p>
         </section>
     {% endif %}
 
-    {% if page.related_items and page.related_items != '' %}
+    {% if related_items and related_items != '' %}
         <section class="content-l u-mb45">
             <div class="content-l__col content-l__col-1">
                 <div>
                     <section>
                         <h2 id="related-items">Related items</h2>
                         <div class="content__line--wide content__line u-mb20"></div>
-                        {{ page.related_items | markdownify }}
+                        {{ related_items | markdownify }}
                     </section>
                 </div>
             </div>
@@ -359,14 +359,14 @@
     {% endif %}
 
     {%
-        if page.url != '/index'
-        and page.url != 'search/index'
-        and page.url != 'foundation/index'
-        and page.url != 'components/index'
-        and page.url != 'patterns/index'
-        and page.url != 'pages/index'
-        and page.url != 'development/index'
-        and page.url != 'guidelines/index'
+        if url != '/index'
+        and url != 'search/index'
+        and url != 'foundation/index'
+        and url != 'components/index'
+        and url != 'patterns/index'
+        and url != 'pages/index'
+        and url != 'development/index'
+        and url != 'guidelines/index'
     %}
         <section class="content-l u-mb45">
             <div class="content-l__col content-l__col-1">
@@ -375,15 +375,15 @@
                         <h2 id="latest-updates">Latest updates</h2>
                         <div class="content__line--wide content__line u-mb20"></div>
                         <strong>Page last edited:</strong>
-                        {% assign file_url_path = page.path | split: '/' | last %}
+                        {% assign file_url_path = path | split: '/' | last %}
                         {% assign page_collection_name = 'pages' %}
-                        {% if page.collection_name %}
-                            {% assign page_collection_name = page.collection_name %}
+                        {% if collection_name %}
+                            {% assign page_collection_name = collection_name %}
                         {% endif %}
                         {% assign file_url_path = page_collection_name | append: '/' | append: file_url_path %}
                         <a href="https://github.com/{{ site.repository }}/commits/main/docs/{{ file_url_path }}">
-                            <time datetime="{{ page.last_modified_at }}">
-                                {{ page.last_modified_at | date: "%l:%M:%S %p %b %d, %Y" }}
+                            <time datetime="{{ last_modified_at }}">
+                                {{ last_modified_at | date: "%l:%M:%S %p %b %d, %Y" }}
                             </time>
                         </a>
                     </section>

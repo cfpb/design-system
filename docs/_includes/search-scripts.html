@@ -9,12 +9,12 @@
         {% for page in site.pages %}
 
         {% comment %} Exclude search page itself from results. {% endcomment %}
-        {% if page.url == 'search/index' %} {% continue %} {% endif %}
+        {% if url == 'search/index' %} {% continue %} {% endif %}
 
-        '{{ page.url | slugify }}': {
+        '{{ url | slugify }}': {
 
             // Cycle through the variation fields of this page.
-            {% for variation_group in page.variation_groups %}
+            {% for variation_group in variation_groups %}
                 // Determine the maximum number of variations present overall.
                 {% if variation_group.variations.size > variations_count %}
                     {% assign variations_count = variation_group.variations | size  %}
@@ -28,7 +28,7 @@
             {% endfor %}
 
 
-            'title': '{{ page.title | escape }}',
+            'title': '{{ title | escape }}',
             'description': {{ page.description | markdownify | strip_html | url_encode | jsonify }},
             'use_cases': {{ page.use_cases | markdownify | strip_html | url_encode | jsonify }},
             'guidelines': {{ page.guidelines | markdownify | strip_html | url_encode | jsonify }},
@@ -36,7 +36,7 @@
             'accessibility': {{ page.accessibility | markdownify | strip_html | url_encode | jsonify }},
             'research': {{ page.research | markdownify | strip_html | url_encode | jsonify }},
             'related_items': {{ page.related_items | markdownify | strip_html | url_encode | jsonify }},
-            'url': '{{ page.url | escape }}'
+            'url': '{{ url | escape }}'
         }
         {% unless forloop.last %},{% endunless %}
         {% endfor %}

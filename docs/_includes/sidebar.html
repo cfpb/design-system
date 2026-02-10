@@ -5,7 +5,7 @@
     <summary class="h4">Navigation</summary>
 
     <ul class="m-list m-list--links">
-    {% for first in site.data.side-navigation.first-level %}
+    {% for first in site.data.sideNavigation['first-level'] %}
         {% assign first_level_slug = first.heading | slugify %}
         <li class="m-list__item">
 
@@ -14,7 +14,7 @@
                     <a class="a-link a-link--jump" href="{{ first_level_slug | relative_url }}">{{ first.heading }}</a>
                 </div>
 
-            {% if page.section == first_level_slug or page == blank %}
+            {% if section == first_level_slug or page == blank %}
                 {% if first.nav-items.size > 0 %}
                 <ul class="m-list m-list--links">
                 {% for link in first.nav-items %}

@@ -5,9 +5,7 @@ import template from '../../../../_includes/generic-content.html';
 
 export default class Preview extends Component {
   render() {
-    const data = {
-      page: this.props.entry.toJS().data,
-    };
+    const data = this.props.entry.toJS().data;
     return (
       <div>
         <ReactLiquid template={template} data={data} html />

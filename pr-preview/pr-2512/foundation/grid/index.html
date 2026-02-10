@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <!-- Google Tag Manager code -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
+  <title>Grid - CFPB Design System</title>
+  <meta name="description" content="CFPB's design system">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/design-system/pr-preview/pr-2512/dist/main.css">
+  <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+  </script>
+</head>
+<body class="t-variation">
+  <!-- Google Tag Manager code -->
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <div class="skip-nav">
+    <a class="skip-nav__link" href="#main">
+        Skip to main content
+    </a>
+  </div>
+  <header role="banner" class="site-header-wrapper">
+
+  <div class="m-global-eyebrow">
+    <div class="a-tagline">
+        <span class="u-usa-flag"></span>
+        <div>
+            An official website of the
+            <span class="u-nowrap">United States government</span>
+        </div>
+    </div>
+</div>
+
+
+  <div class="site-header">
+
+    <form id="search-form" action="/design-system/pr-preview/pr-2512/search/" method="get">
+    <cfpb-form-search id="search-box" form="search-form" name="searchQuery">
+        <ul>
+            <li><a href="/design-system/components/alerts">Alerts</a></li>
+            <li><a href="/design-system/components/banner-notification">Banner (notification)</a></li>
+            <li><a href="/design-system/components/banner-us-gov">Banner (US gov)</a></li>
+            <li><a href="/design-system/components/buttons">Buttons</a></li>
+            <li><a href="/design-system/components/checkboxes">Checkboxes</a></li>
+            <li><a href="/design-system/components/date-picker">Date picker</a></li>
+            <li><a href="/design-system/components/expandables">Expandables</a></li>
+            <li><a href="/design-system/components/fieldsets">Fieldsets</a></li>
+            <li><a href="/design-system/components/helper-text">Helper text</a></li>
+            <li><a href="/design-system/components/labels-and-legends">Labels and legends</a></li>
+            <li><a href="/design-system/components/links">Links</a></li>
+            <li><a href="/design-system/components/lists">Lists</a></li>
+            <li><a href="/design-system/components/pagination">Pagination</a></li>
+            <li><a href="/design-system/components/radio-buttons">Radio buttons</a></li>
+            <li><a href="/design-system/components/range-sliders">Range sliders</a></li>
+            <li><a href="/design-system/components/selects">Selects</a></li>
+            <li><a href="/design-system/components/summaries">Summaries</a></li>
+            <li><a href="/design-system/components/tables">Tables</a></li>
+            <li><a href="/design-system/components/tags">Tags</a></li>
+            <li><a href="/design-system/components/taglines">Taglines</a></li>
+            <li><a href="/design-system/components/text-inputs">Text inputs</a></li>
+            <li><a href="/design-system/components/tooltips">Tooltips</a></li>
+            <li><a href="/design-system/components/elements">Web Components</a></li>
+        </ul>
+    </cfpb-form-search>
+</form>
+
+
+    <h1 class="title">
+      <a class="title-link" href="/design-system/pr-preview/pr-2512/">
+        <span class="demi">CFPB</span> Design System
+      </a>
+    </h1>
+  </div> <!-- /.wrapper -->
+</header>
+
+
+  <div
+  id="redirect-banner"
+  class="block block--flush-top block--flush-bottom block--padded-top u-hidden"
+>
+  <div class="m-global-banner">
+    <div class="wrapper wrapper--match-content">
+      <div class="m-notification m-notification--warning m-notification--visible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--warning-round" viewBox="0 0 17 20.4"><path d="M16.406 10.283a7.917 7.917 0 1 1-7.917-7.917 7.916 7.916 0 0 1 7.917 7.917zM9.48 14.367a1.003 1.003 0 1 0-1.004 1.003 1.003 1.003 0 0 0 1.004-1.003zM7.697 11.53a.792.792 0 0 0 1.583 0V5.262a.792.792 0 0 0-1.583 0z"/></svg>
+        <div class="m-notification__content">
+          <div class="m-notification__message">
+            You’ve been redirected to this website from
+            <span data-redirect="source-name"></span>.
+          </div>
+          <p class="m-notification__explanation">
+            The website you were trying to visit has been deprecated.
+            Future updates will happen here.
+          </p>
+          <p>
+            A permanent snapshot of
+            <span data-redirect="source-name"></span>
+            is available at
+            <a data-redirect="archive-website"></a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<main id="main" role="main">
+  <aside class="ds-sidebar">
+
+<details open class="ds-nav-container">
+
+    <summary class="h4">Navigation</summary>
+
+    <ul class="m-list m-list--links">
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation">Foundation</a>
+                </div>
+
+            
+                
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Basics</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/color">Color</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/grid">Grid</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Typography</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/fonts">Fonts</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/headings">Headings</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/paragraphs">Paragraphs</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Brand symbols</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/logo">Logo</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/seal">Seal</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Graphics</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/iconography">Iconography</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/illustration">Illustration</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/photography">Photography</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Multimedia</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/video">Video</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/animation">Animation</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/foundation/motion">Motion</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/components">Components</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/patterns">Patterns</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/pages">Pages</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/development">Development</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pr-preview/pr-2512/guidelines">Guidelines</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+    </ul>
+
+</details>
+
+</aside>
+
+
+  <div class="ds-content">
+    <section>
+      <div class="h5">
+        Basics
+      </div>
+    
+
+    <h1 class="component-header u-mb30">
+        Grid
+    </h1>
+
+    
+
+    
+
+    
+        
+        
+             
+            
+            
+        
+    
+        
+        
+             
+            
+                
+            
+            
+        
+    
+        
+        
+             
+            
+                
+            
+            
+        
+    
+
+    
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+    <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
+        
+        <li class="m-list__item">
+            <a href="#standard-grid">Standard grid</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#breakpoints">Breakpoints</a>
+        </li>
+        
+        <li class="m-list__item">
+            <a href="#development">Development</a>
+        </li>
+        
+    </ul>
+    
+
+    
+    <section id="description" class="u-mb30">
+        <p>The grid provides structure for website content. The flexible design adjusts for different devices.</p>
+
+    </section>
+    
+
+    
+
+    
+    
+    <section class="o-variation-group" id="standard-grid">
+
+        
+        <h2 class="o-variation-group__title">
+            Standard grid
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p>Twelve-column grid with flexible column widths and fixed gutters. The width of the padding on the left and right edge of the grid depends on device size.</p>
+<ul>
+<li>30px fixed gutter width</li>
+<li>Max width 1230px, background colors may bleed to edge</li>
+<li>Desktop: 30px padding on each side</li>
+<li>Tablet: 30px padding on each side</li>
+<li>Mobile: 15px padding on each side</li>
+</ul>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div class="cols-12">
+    <section>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+        <div class="col col-1"><div>one</div></div>
+    </section>
+
+    <section>
+        <div class="col col-2"><div>two</div></div>
+        <div class="col col-2"><div>two</div></div>
+        <div class="col col-2"><div>two</div></div>
+        <div class="col col-2"><div>two</div></div>
+        <div class="col col-2"><div>two</div></div>
+        <div class="col col-2"><div>two</div></div>
+    </section>
+
+    <section>
+        <div class="col col-2"><div>two</div></div>
+        <div class="col col-3"><div>three</div></div>
+        <div class="col col-2"><div>two</div></div>
+        <div class="col col-3"><div>three</div></div>
+        <div class="col col-2"><div>two</div></div>
+    </section>
+
+    <section>
+        <div class="col col-3"><div>three</div></div>
+        <div class="col col-3"><div>three</div></div>
+        <div class="col col-3"><div>three</div></div>
+        <div class="col col-3"><div>three</div></div>
+    </section>
+
+    <section>
+        <div class="col col-4"><div>four</div></div>
+        <div class="col col-4"><div>four</div></div>
+        <div class="col col-4"><div>four</div></div>
+    </section>
+
+    <section>
+        <div class="col col-6"><div>six</div></div>
+        <div class="col col-6"><div>six</div></div>
+    </section>
+
+    <section>
+        <div class="col col-12"><div>twelve</div></div>
+    </section>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-lessdiv-classcols-12greater-less-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-lessdiv-classcols-12greater-less-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-lessdiv-classcols-12greater-less-1">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-lessdiv-classcols-12greater-less-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-lessdiv-classcols-12greater-less-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class=&#34;cols-12&#34;&gt;
+    &lt;section&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-1&#34;&gt;&lt;div&gt;one&lt;/div&gt;&lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;div class=&#34;col col-2&#34;&gt;&lt;div&gt;two&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-2&#34;&gt;&lt;div&gt;two&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-2&#34;&gt;&lt;div&gt;two&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-2&#34;&gt;&lt;div&gt;two&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-2&#34;&gt;&lt;div&gt;two&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-2&#34;&gt;&lt;div&gt;two&lt;/div&gt;&lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;div class=&#34;col col-2&#34;&gt;&lt;div&gt;two&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-2&#34;&gt;&lt;div&gt;two&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-2&#34;&gt;&lt;div&gt;two&lt;/div&gt;&lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;div class=&#34;col col-6&#34;&gt;&lt;div&gt;six&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&#34;col col-6&#34;&gt;&lt;div&gt;six&lt;/div&gt;&lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;div class=&#34;col col-12&#34;&gt;&lt;div&gt;twelve&lt;/div&gt;&lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation-group" id="breakpoints">
+
+        
+        <h2 class="o-variation-group__title">
+            Breakpoints
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p>Five major breakpoints standardize large-scale changes like navigation and sidebar behavior. Use other breakpoints as necessary.</p>
+<ul>
+<li><code>xs</code>: 0-600px</li>
+<li><code>sm</code>: 601-900px</li>
+<li><code>med</code>: 901-1020px</li>
+<li><code>lg</code>: 1021-1230px</li>
+<li><code>xl</code>: 1231px and up</li>
+</ul>
+
+        </div>
+        
+
+        
+    </section>
+    
+    <section class="o-variation-group" id="development">
+
+        
+        <h2 class="o-variation-group__title">
+            Development
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            <p><strong>Warning:</strong> <em>This document is written for people who might want to create a grid system using our SCSS mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write.</em></p>
+<hr>
+<p>The grid component is a suite of variables and mixins that enables you to<br>
+lay out a flexible 12-column grid with fixed-size gutters.<br>
+(Column widths will expand and contract with the width of the page,<br>
+but the gutter width remains constant.)<br>
+The mixins are made to be used within your project's SCSS code to give grid<br>
+layout to your content without needing to use non-semantic grid classes.</p>
+<p>For example, when creating a half-and-half layout, instead of applying classes<br>
+to your column wrappers, like this:</p>
+<pre><code class="language-scss">&lt;div class=&quot;col-half&quot;&gt; … &lt;/div&gt;
+&lt;div class=&quot;col-half&quot;&gt; … &lt;/div&gt;
+</code></pre>
+<p>You can give your wrappers semantic class names that describe their content,<br>
+and apply the mixins to those semantic classes, like this:</p>
+<pre><code class="language-scss">&lt;div class=&quot;description&quot;&gt; … &lt;/div&gt;
+&lt;div class=&quot;illustration&quot;&gt; … &lt;/div&gt;
+</code></pre>
+<pre><code class="language-scss">.description,
+.illustration {
+    @include u-grid-column(1, 2);
+}
+</code></pre>
+<p>Read on for more details on the variables and mixins this component provides.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Wrappers
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Wrappers are centered containers with a max-width<br>
+and outside left/right padding of ½ the gutter width on each side.</p>
+<h4>Sass mixin</h4>
+<pre><code class="language-scss">@include u-grid-wrapper( @grid_wrapper-width: @grid_wrapper-width )
+</code></pre>
+<p>You can create a wrapper with max-width other than the default<br>
+by passing a pixel value into the mixin.</p>
+<h4>Example</h4>
+<pre><code class="language-scss">.main-wrapper {
+    @include u-grid-wrapper();
+}
+.wide-wrapper {
+    @include u-grid-wrapper( 1900px );
+}
+</code></pre>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div class="main-wrapper" style="background-color: #f9f9f9">This container now has left and right padding and a centered max width.</div>
+<div class="wide-wrapper" style="background-color: #f9f9f9">This container is the same except it has a wider max-width.</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-wrappers-wrappers-are-centered-c-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-wrappers-wrappers-are-centered-c-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-wrappers-wrappers-are-centered-c-1">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-wrappers-wrappers-are-centered-c-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-wrappers-wrappers-are-centered-c-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class=&#34;main-wrapper&#34; style=&#34;background-color: #f9f9f9&#34;&gt;This container now has left and right padding and a centered max width.&lt;/div&gt;
+&lt;div class=&#34;wide-wrapper&#34; style=&#34;background-color: #f9f9f9&#34;&gt;This container is the same except it has a wider max-width.&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Columns
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <h4>Mixin</h4>
+<pre><code class="language-scss">@include u-grid-column( $columns: 1, $total: $grid-total-columns )
+</code></pre>
+<p>Create a grid column that is <code>$columns</code> wide given <code>$total</code> total grid columns.<br>
+Grid columns use transparent borders to create the gutters of the grid,<br>
+so if you want a column to have a background or border, you'll need to<br>
+add a wrapper just inside the column to be styled that way.</p>
+<pre><code class="language-scss">.main-wrapper {
+    @include u-grid-wrapper;
+}
+.half {
+    @include u-grid-column(1, 2);
+}
+.styled {
+    border: 1px solid #999;
+    background: #EEE;
+}
+</code></pre>
+<p><strong>NOTE:</strong> cf-grid does not have a &quot;row&quot; concept.<br>
+If you have a 12-column grid and place 24 columns inside a wrapper,<br>
+cf-grid columns will automatically stack into two rows of 12.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div class="main-wrapper">
+    <div class="half">I am half of my parent.</div>
+    <div class="half">
+            <div class="styled">I am half of my parent. I also have a border and background.</div>
+    </div>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-columns-mixin-scss-include-u-gri-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-columns-mixin-scss-include-u-gri-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-columns-mixin-scss-include-u-gri-2">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-columns-mixin-scss-include-u-gri-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-columns-mixin-scss-include-u-gri-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class=&#34;main-wrapper&#34;&gt;
+    &lt;div class=&#34;half&#34;&gt;I am half of my parent.&lt;/div&gt;
+    &lt;div class=&#34;half&#34;&gt;
+            &lt;div class=&#34;styled&#34;&gt;I am half of my parent. I also have a border and background.&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Nested columns
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Since all grid columns have left and right gutters,<br>
+you will notice undesirable offsetting when nesting columns.<br>
+Normally this is removed with complex selectors<br>
+or by adding classes to the first and last column per 'row'.</p>
+<p>In cf-grid, the way to get around this is by wrapping your columns<br>
+in a container that utilizes the <code>@include u-grid-nested-col-group</code> mixin.<br>
+This mixin uses negative left and right margins to<br>
+pull the columns back into alignment with parent columns.</p>
+<p>Working this way allows you to easily create responsive grids.<br>
+You are free to control the number of columns per &quot;row&quot; at different breakpoints<br>
+without having to deal with the first and last columns of each row.</p>
+<h4>Mixin</h4>
+<pre><code class="language-scss">@include u-grid-nested-col-group;
+</code></pre>
+<h4>Usage</h4>
+<pre><code class="language-scss">.main-wrapper {
+    @include u-grid-wrapper;
+}
+.nested {
+    @include u-grid-nested-col-group;
+}
+.half {
+    @include u-grid-column(1, 2);
+}
+</code></pre>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div class="main-wrapper">
+    <div class="half">
+        <div class="nested">
+            <div class="half"></div>
+            <div class="half"></div>
+        </div>
+    </div>
+    <div class="half">
+        <div class="nested">
+            <div class="half"></div>
+            <div class="half"></div>
+        </div>
+    </div>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-nested-columns-since-all-grid-co-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-nested-columns-since-all-grid-co-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-nested-columns-since-all-grid-co-3">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-nested-columns-since-all-grid-co-html-code-snippet-3">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-nested-columns-since-all-grid-co-html-code-snippet-3">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class=&#34;main-wrapper&#34;&gt;
+    &lt;div class=&#34;half&#34;&gt;
+        &lt;div class=&#34;nested&#34;&gt;
+            &lt;div class=&#34;half&#34;&gt;&lt;/div&gt;
+            &lt;div class=&#34;half&#34;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;half&#34;&gt;
+        &lt;div class=&#34;nested&#34;&gt;
+            &lt;div class=&#34;half&#34;&gt;&lt;/div&gt;
+            &lt;div class=&#34;half&#34;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Nesting
+                    
+                </h3>
+            </div>
+            
+
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div class="cols-12">
+    <section>
+        <div class="col col-6">
+            <div>six</div>
+            <section class="nested">
+                <div class="col col-4"><div>four</div></div>
+                <div class="col col-4"><div>four</div></div>
+                <div class="col col-4"><div>four</div></div>
+            </section>
+        </div>
+
+        <div class="col col-6">
+            <div>six</div>
+            <section class="nested">
+                <div class="col col-4"><div>four</div></div>
+                <div class="col col-4"><div>four</div></div>
+                <div class="col col-4"><div>four</div></div>
+            </section>
+        </div>
+    </section>
+
+    <section>
+        <div class="col col-3">
+            <div>three</div>
+            <section class="nested">
+                <div class="col col-6"><div>six</div></div>
+                <div class="col col-6"><div>six</div></div>
+            </section>
+        </div>
+
+        <div class="col col-6">
+            <div>six</div>
+            <section class="nested">
+                <div class="col col-4"><div>four</div></div>
+                <div class="col col-4"><div>four</div></div>
+                <div class="col col-4"><div>four</div></div>
+            </section>
+        </div>
+
+        <div class="col col-3">
+            <div>three</div>
+            <section class="nested">
+                <div class="col col-3"><div>three</div></div>
+                <div class="col col-3"><div>three</div></div>
+                <div class="col col-3"><div>three</div></div>
+                <div class="col col-3"><div>three</div></div>
+            </section>
+        </div>
+    </section>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-nesting-lessdiv-classcols-12grea-4" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-nesting-lessdiv-classcols-12grea-4" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-nesting-lessdiv-classcols-12grea-4">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-nesting-lessdiv-classcols-12grea-html-code-snippet-4">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-nesting-lessdiv-classcols-12grea-html-code-snippet-4">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class=&#34;cols-12&#34;&gt;
+    &lt;section&gt;
+        &lt;div class=&#34;col col-6&#34;&gt;
+            &lt;div&gt;six&lt;/div&gt;
+            &lt;section class=&#34;nested&#34;&gt;
+                &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&#34;col col-6&#34;&gt;
+            &lt;div&gt;six&lt;/div&gt;
+            &lt;section class=&#34;nested&#34;&gt;
+                &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;div class=&#34;col col-3&#34;&gt;
+            &lt;div&gt;three&lt;/div&gt;
+            &lt;section class=&#34;nested&#34;&gt;
+                &lt;div class=&#34;col col-6&#34;&gt;&lt;div&gt;six&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-6&#34;&gt;&lt;div&gt;six&lt;/div&gt;&lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&#34;col col-6&#34;&gt;
+            &lt;div&gt;six&lt;/div&gt;
+            &lt;section class=&#34;nested&#34;&gt;
+                &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-4&#34;&gt;&lt;div&gt;four&lt;/div&gt;&lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&#34;col col-3&#34;&gt;
+            &lt;div&gt;three&lt;/div&gt;
+            &lt;section class=&#34;nested&#34;&gt;
+                &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+                &lt;div class=&#34;col col-3&#34;&gt;&lt;div&gt;three&lt;/div&gt;&lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Cf-grid helpers: Wrapper
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Turns an element into a cf-grid wrapper at 801px and above (e.g., <code>&lt;div class=&quot;wrapper&quot;&gt;</code>). Includes some explicit declarations for Internet Explorer 8 due to the fact that it doesn’t support media queries.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div class="wrapper">
+    Wrapper
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-cf-grid-helpers-wrapper-turns-an-5" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-cf-grid-helpers-wrapper-turns-an-5" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-cf-grid-helpers-wrapper-turns-an-5">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-cf-grid-helpers-wrapper-turns-an-html-code-snippet-5">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-cf-grid-helpers-wrapper-turns-an-html-code-snippet-5">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class=&#34;wrapper&#34;&gt;
+    Wrapper
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <section class="content-l u-mb45">
+            <div class="content-l__col content-l__col-1">
+                <div>
+                    <section>
+                        <h2 id="latest-updates">Latest updates</h2>
+                        <div class="content__line--wide content__line u-mb20"></div>
+                        <strong>Page last edited:</strong>
+                        
+                        
+                        
+                        
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/">
+                            <time datetime="">
+                                
+                            </time>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+
+    </div>
+
+</section><!-- .content__main -->
+ 
+
+    <div class="o-editor" id="edit-page">
+      <a
+        class="a-btn"
+        href="/design-system/updating-this-website/?page=Grid"
+        title="Edit this page in Decap CMS"
+      >
+        <span>Edit page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--edit" viewBox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"/></svg>
+      </a>
+    </div>
+  </div>
+</main>
+
+
+  
+  <footer class="ds-footer" role="contentinfo">
+
+    <hr>
+
+    <div class="block block--sub ds-footer__content">
+        <p>
+            We need your help keeping the Design System accurate and up-to-date!
+            If you see something wrong or missing,
+            <a href="/design-system/pr-preview/pr-2512/updating-this-website/#editing-pages">edit the page</a>.
+            If you can’t make those changes yourself,
+            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&labels=content&template=content_issues.md&title=Grid%3A+Add+issue+description">file an issue</a>.
+            If you have a substantial change to an existing page, or a new standard you want to add,
+            <a href="/design-system/pr-preview/pr-2512/updating-this-website/#creating-new-pages">follow these guidelines</a>.
+        </p>
+    </div>
+
+</footer>
+
+  
+  <script src="/design-system/pr-preview/pr-2512/dist/main.js" charset="utf-8"></script>
+
+  
+
+</body>
+</html>

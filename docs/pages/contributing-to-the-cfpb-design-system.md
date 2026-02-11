@@ -42,7 +42,7 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: The Design System should include code
         variation_description: |-
-          * We should have the CSS and Javascript
+          * We should have the CSS and JavaScript
           * We should always include HTML examples
     variation_group_name: Design System principles
   - variation_group_name: Documentation change request

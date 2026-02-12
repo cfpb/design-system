@@ -5,11 +5,11 @@ status: Released
 variation_groups:
   - variation_group_name: Types
     variations:
-      - variation_name: Bulleted list
-        variation_description: Use a bulleted list when grouping similar items or short
+      - variation_name: Unordered list
+        variation_description: Use an ordered list when grouping similar items or short
           thoughts into “bite-size” chunks. Generally, the order or count of the
-          items in a bullet list isn’t important. An exception to this may be a
-          list of states, which naturally fits into an alphabetical order.
+          items in an ordered list isn’t important. An exception to this may be
+          a list of states, which naturally fits into an alphabetical order.
         variation_code_snippet: |-
           <ul class="m-list">
               <li class="m-list__item">List item 1</li>
@@ -24,11 +24,11 @@ variation_groups:
               <li class="m-list__item">List item 3</li>
           </ul>
         variation_specs: ""
-      - variation_name: Numbered list
+      - variation_name: Ordered list
         variation_description: When the order of information presented is important, use
-          a numbered list. This could include chronological items, things
-          presented in the order of importance, or a finite list of a counted
-          number of items.
+          an ordered list. This could include chronological items, things
+          presented in order of importance, or a finite list of a counted number
+          of items.
         variation_code_snippet: |-
           <p>Less than 10 items is not indented.</p>
           <ol>

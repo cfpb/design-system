@@ -46,9 +46,9 @@ variation_groups:
                   {% include icons/right.svg %}
               </a>
           </nav>
-        variation_description: The standard pagination component used on cf.gov pages,
-          this variation includes an inline form (input field, submit button) to
-          enable users to navigate to specific pages by number.
+        variation_description: The jump to page pagination component includes an inline
+          form (input field, submit button) to enable users to navigate to
+          specific pages by number.
         variation_name: Jump to page
         variation_implementation: To enable the component to jump directly to the
           paginated content, include an `id` on a wrapper of the paginated
@@ -99,9 +99,9 @@ variation_groups:
                   {% include icons/right.svg %}
               </a>
           </nav>
-        variation_description: This variation of the pagination component only allows
-          users to navigate pages in sequential order (forward or backward one
-          step at a time), forcing a linear user flow.
+        variation_description: This variation of the pagination component allows users
+          to navigate pages in sequential order (forward or backward one step at
+          a time), forcing a linear flow.
       - variation_code_snippet: >-
           <nav class="m-pagination" role="navigation" aria-label="Pagination">
 

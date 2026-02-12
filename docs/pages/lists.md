@@ -6,10 +6,11 @@ variation_groups:
   - variation_group_name: Types
     variations:
       - variation_name: Unordered list
-        variation_description: Use an ordered list when grouping similar items or short
-          thoughts into “bite-size” chunks. Generally, the order or count of the
-          items in an ordered list isn’t important. An exception to this may be
-          a list of states, which naturally fits into an alphabetical order.
+        variation_description: Use an unordered list when grouping similar items or
+          short thoughts into “bite-size” chunks. Generally, the order or count
+          of the items in an unordered list isn’t important. An exception to
+          this may be a list of states, which naturally fits into an
+          alphabetical order.
         variation_code_snippet: |-
           <ul class="m-list">
               <li class="m-list__item">List item 1</li>

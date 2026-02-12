@@ -10,8 +10,6 @@ declaration-empty-line-before -
 no-descending-specificity -
   Turned off, but probably shouldn't be.
   TODO: Turn on this rule and see if issues can be fixed.
-number-max-precision -
-  TODO: See if long decimal values can be shortened.
 rule-empty-line-before -
   Custom setting that differs from stylelint-config-standard.
 selector-class-pattern -
@@ -30,7 +28,6 @@ export default {
     'declaration-block-no-redundant-longhand-properties': null,
     'declaration-empty-line-before': null,
     'no-descending-specificity': null,
-    'number-max-precision': 10,
     'rule-empty-line-before': [
       'always-multi-line',
       {

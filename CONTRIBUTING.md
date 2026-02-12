@@ -213,4 +213,5 @@ Example of a valid JSON token file structure for our project.
     }
   },
 ```
+
 Figma emits JSON color that adears to the [w3c design token spec](https://www.designtokens.org/tr/drafts/color/#format). Editors can supply only hex values, srgb int or srgb float while ignoring the Figma specifc metadata.

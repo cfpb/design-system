@@ -27,12 +27,14 @@ export default [
   jsxA11y.flatConfigs.recommended,
   reactPlugin.configs.flat.recommended,
   pluginCypress.configs.recommended,
-  eslintConfigPrettier,
   eslintPluginLit['flat/recommended'],
   eslintPluginWc['flat/recommended'],
+
+  // Prettier always last
+  eslintConfigPrettier,
   {
     languageOptions: {
-      ecmaVersion: 2023,
+      ecmaVersion: 'latest',
       parserOptions: {
         ecmaFeatures: {
           jsx: true,

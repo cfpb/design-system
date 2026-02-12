@@ -80,7 +80,9 @@
       margin-top: 0;
       margin-bottom: math.div(5px, $base-font-size-px) + em;
       content: attr(data-label);
-      line-height: 1.83333333;
+      // Yeilds 1.83333333
+      // TODO: Research alternative to this magic number
+      line-height: math.div(11,6);
 
       // h5 size.
       font-size: math.div($size-v, $base-font-size-px) + em;

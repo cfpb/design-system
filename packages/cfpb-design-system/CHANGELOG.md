@@ -2,7 +2,52 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.3.2](https://github.com/cfpb/design-system/compare/v4.3.1..v4.3.2) - December 30, 2025
+## [4.4.0](https://github.com/cfpb/design-system/compare/v4.3.2..v4.4.0) - February 17, 2026
+
+### PRs in this release
+
+- PR #[2474](https://github.com/cfpb/design-system/pull/2474): cfpb-select - fix focus - Ans
+- PR #[2476](https://github.com/cfpb/design-system/pull/2476): cfpb-select: Fix select clearing - Ans
+- PR #[2478](https://github.com/cfpb/design-system/pull/2478): Update dependencies: decap-cms-app, cypress, eslint-plugin-jsdoc, release-it, style-dictionary - Ans
+- PR #[2481](https://github.com/cfpb/design-system/pull/2481): Update types/react - Ans
+- PR #[2483](https://github.com/cfpb/design-system/pull/2483): cfpb-select: Add blur event - Ans
+- PR #[2484](https://github.com/cfpb/design-system/pull/2484): Update cypress, style-dictionary - Ans
+- PR #[2486](https://github.com/cfpb/design-system/pull/2486): Update types/react, eslint-plugin-jsdoc, git-cliff, prettier, release-it, stylelint, stylelint-config-standard-scss - Ans
+- PR #[2490](https://github.com/cfpb/design-system/pull/2490): Update eslint-plugin-jsdoc, prettier, sass, style-dictionary, yarn - Ans
+- PR #[2495](https://github.com/cfpb/design-system/pull/2495): Add autocomplete to search component example - Ans
+- PR #[2518](https://github.com/cfpb/design-system/pull/2518): Bump types/react, cfpb/browserslist-config, cypress, esbuild, eslint-plugin-jsdoc, glob, stylelint - Ans
+- PR #[2521](https://github.com/cfpb/design-system/pull/2521): Clean up lint configs - Ans
+
+### General
+
+- Fix select focusing and default height - ([3f67a14](https://github.com/cfpb/design-system/commit/3f67a14a1ee9cf67982899ea829b61467dc0a1be)) - Ans
+- Fix async issue with tag focus - ([b6d5b4a](https://github.com/cfpb/design-system/commit/b6d5b4afd8ff101b4910ca86c7ae76d2c66753b4)) - Ans
+- Lint files - ([8771f65](https://github.com/cfpb/design-system/commit/8771f6584a6bafdeea576c86c9d897e24aba920e)) - Ans
+- Fix select clearing - ([59b6c9a](https://github.com/cfpb/design-system/commit/59b6c9a19874b53a79365e33e735374bc3cde356)) - Ans
+- Update dependencies: decap-cms-app, cypress, eslint-plugin-jsdoc, release-it, style-dictionary - ([1579a9a](https://github.com/cfpb/design-system/commit/1579a9a236da2b9dbe04433a38b3622b96bec47b)) - Ans
+- Rebuild assets - ([b637e34](https://github.com/cfpb/design-system/commit/b637e34a3ad92839103b3e61ec56b8d3542ecc56)) - Ans
+- Merge branch 'main' into dependabot/npm_and_yarn/glob-13.0.0 - Ans
+- Add blur event - ([c77e049](https://github.com/cfpb/design-system/commit/c77e04997a000e55ba0c222f9921b1c7d05ae286)) - Ans
+- Update multiple-select-event-proxy.js - ([b3910d0](https://github.com/cfpb/design-system/commit/b3910d01f5c2b1e08240899f4b2478cac36dc7e1)) - Ans
+- Merge branch 'main' into dependabot/npm_and_yarn/glob-13.0.0 - Ans
+- Update cypress, style-dictionary - ([f3c7f7c](https://github.com/cfpb/design-system/commit/f3c7f7cd84285b277f7b9515fc86abc5c77a8a25)) - Ans
+- Lint files - ([6243743](https://github.com/cfpb/design-system/commit/6243743ea441dc7991b4bcfa3bb80cba175459a8)) - Ans
+- Re-build assets - ([a21a176](https://github.com/cfpb/design-system/commit/a21a176f0332f77a49302d620025abebb92628d1)) - Ans
+- Merge branch 'main' into dependabot/npm_and_yarn/glob-13.0.0 - Ans
+- Lint and build files - ([8eaa4e0](https://github.com/cfpb/design-system/commit/8eaa4e0aea21bbbfd17d030448cb0e343b0119b2)) - Ans
+- Merge branch 'main' into dependabot/npm_and_yarn/glob-13.0.0 - Ans
+- Fix search value attribute - ([b5050d1](https://github.com/cfpb/design-system/commit/b5050d13bd2c11be105144ad0b04853f5d2cffea)) - Ans
+- Bump types/react, cfpb/browserslist-config, cypress, esbuild, eslint-plugin-jsdoc, glob, stylelint - ([d85c580](https://github.com/cfpb/design-system/commit/d85c5805db2f8e142191fa51b8df3a81dc5e0b02)) - Ans
+- Update to SD config to support native Figma JSON export (#2485) - ([48a5c18](https://github.com/cfpb/design-system/commit/48a5c1853dda3e3f73ccfd2c60a93b8478f9c3e1)) - itsmedavep
+- Merge branch 'main' into dependabot/npm_and_yarn/glob-13.0.0 - Ans
+- Re-build assets - ([23dc250](https://github.com/cfpb/design-system/commit/23dc250b00c8c1efc085f957f18325e1447f57a0)) - Ans
+- Updated table scss to do calcuation for mobile table header line height
+
+This allows us to remove linter precision rule - ([fb38d59](https://github.com/cfpb/design-system/commit/fb38d59560ea112bab525bd91bea063e509cef3f)) - itsmedavep
+- Remove `number-max-precision` stylelint rule - ([9c3a749](https://github.com/cfpb/design-system/commit/9c3a749379daa372ac36359b7e710441376ad073)) - Ans
+- Lint and re-build assets - ([ff02962](https://github.com/cfpb/design-system/commit/ff0296245979fda49e8208e4d62ab9494a5d670e)) - Ans
+
+## [4.3.2](https://github.com/cfpb/design-system/compare/v4.3.1..vv4.3.2) - December 30, 2025
 
 ### General
 
@@ -581,12 +626,18 @@ delete icon font folder and file - ([5bd827b](https://github.com/cfpb/design-sys
 - Update CHANGELOG.md - ([bfd91e3](https://github.com/cfpb/design-system/commit/bfd91e39d31d829ea8a2dcb296bea0fd9c36cbbd)) - Chris Contolini
 - Provide icon exports - ([9eccdc4](https://github.com/cfpb/design-system/commit/9eccdc415730d3f0e3b42c28ba51fda00d3aa7f6)) - Wyatt Pearsall
 
-## [3.6.1](https://github.com/cfpb/design-system/compare/v3.5.0..vv3.6.1) - December  4, 2024
+## [3.6.1](https://github.com/cfpb/design-system/compare/v3.6.0..vv3.6.1) - December  4, 2024
 
 ### PRs in this release
 
 - PR #[2054](https://github.com/cfpb/design-system/pull/2054): Add new tooltip component to DS - Chris Contolini
 - PR #[2133](https://github.com/cfpb/design-system/pull/2133): Add ESLint typescript resolver to fix exports issue - Chris Contolini
+
+### General
+
+- Return Tooltip instance to match JSDoc description - ([290b87e](https://github.com/cfpb/design-system/commit/290b87e4889c16c5e846e3039a7266ebb7c09e99)) - Chris Contolini
+
+## [3.6.0](https://github.com/cfpb/design-system/compare/v3.5.0..vv3.6.0) - December  3, 2024
 
 ### General
 
@@ -611,7 +662,6 @@ See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https
 - Change cursor to pointer on tooltip trigger hover - ([979f268](https://github.com/cfpb/design-system/commit/979f268281721fa6aca5900e1b90fa3d2e100f4d)) - CFPBot
 - Rebuild assets, move new packages to yarn cache dir - ([e0e9531](https://github.com/cfpb/design-system/commit/e0e95310cf3d94706ec143e23caa90157f7129f2)) - Chris Contolini
 - Remove erroneous auto-changelog dependency and config - ([980d9eb](https://github.com/cfpb/design-system/commit/980d9eb65147732323ce42f56014e17ffc638d5a)) - Chris Contolini
-- Return Tooltip instance to match JSDoc description - ([290b87e](https://github.com/cfpb/design-system/commit/290b87e4889c16c5e846e3039a7266ebb7c09e99)) - Chris Contolini
 
 ## [3.5.0](https://github.com/cfpb/design-system/compare/v3.4.14..vv3.5.0) - November 26, 2024
 

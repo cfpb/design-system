@@ -6,7 +6,8 @@ variation_groups:
   - variation_group_name: Types
     variations:
       - variation_name: Unordered list
-        variation_description: Use an unordered list when grouping similar items or
+        variation_description:
+          Use an unordered list when grouping similar items or
           short thoughts into “bite-size” chunks. Generally, the order or count
           of the items in an unordered list isn’t important. An exception to
           this may be a list of states, which naturally fits into an
@@ -24,9 +25,10 @@ variation_groups:
               </li>
               <li class="m-list__item">List item 3</li>
           </ul>
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Ordered list
-        variation_description: When the order of information presented is important, use
+        variation_description:
+          When the order of information presented is important, use
           an ordered list. This could include chronological items, things
           presented in order of importance, or a finite list of a counted number
           of items.
@@ -75,7 +77,7 @@ variation_groups:
               <li>List item 9</li>
               <li>List item 10</li>
           </ol>
-        variation_specs: ""
+        variation_specs: ''
   - variations:
       - variation_code_snippet: |-
           <ul class="m-list m-list--unstyled">
@@ -128,10 +130,10 @@ description: Lists are an effective way to visually highlight important
   information so that it can be more easily scanned and read. Before writing a
   list, it’s important to identify the best style needed for the information
   being presented.
-use_cases: ""
-behavior: ""
-accessibility: ""
-related_items: ""
+use_cases: ''
+behavior: ''
+accessibility: ''
+related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

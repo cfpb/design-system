@@ -53,7 +53,7 @@
 
   <button class="a-btn a-btn--full-on-xs" title="Default with icon">
     <span>Default with icon</span>
-    {% include icons/download.svg %}
+    {% include "icons/download.svg" %}
   </button>
 </div>
 
@@ -65,25 +65,25 @@
 
 <div class="m-btn-group">
   <button class="a-btn a-btn--secondary">
-    {% include icons/left.svg %}
+    {% include "icons/left.svg" %}
     <span>Go back</span>
   </button>
   <button class="a-btn">
-    <span>Continue</span>{% include icons/right.svg %}
+    <span>Continue</span>{% include "icons/right.svg" %}
   </button>
 </div>
 
 <br />
 
 <button class="a-btn">
-  <span>Upload file</span>{% include icons/upload.svg %}
+  <span>Upload file</span>{% include "icons/upload.svg" %}
 </button>
 
 <br />
 
 <button class="a-btn">
   <span>Submit your complaint</span>
-  {% include icons/updating.svg %}
+  {% include "icons/updating.svg" %}
 </button>
 
 <br />
@@ -95,11 +95,11 @@
 <div class="m-btn-group">
   <a class="a-btn">
     <span>Link styled as a button</span>
-    {% include icons/download.svg %}
+    {% include "icons/download.svg" %}
   </a>
   <button class="a-btn a-btn--link" href="#">
     <span>Button styled as a link</span>
-    {% include icons/download.svg %}
+    {% include "icons/download.svg" %}
   </button>
   <button class="a-btn a-btn--link a-btn--warning" href="#">
     <span>"Destructive" styled link</span>

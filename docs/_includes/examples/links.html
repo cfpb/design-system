@@ -25,7 +25,7 @@
 
 <a href="#">
   <span class="a-link__text">Link with icon</span> {% include
-  icons/external-link.svg %}
+  "icons/external-link.svg" %}
 </a>
 
 <br />
@@ -43,14 +43,14 @@
 <br />
 
 <a class="a-link a-link--jump" href="#">
-  {% include icons/left.svg %} <span class="a-link__text">Go back</span>
+  {% include "icons/left.svg" %} <span class="a-link__text">Go back</span>
 </a>
 
 <br />
 <br />
 
 <a class="a-link a-link--jump" href="#">
-  <span class="a-link__text">Continue</span> {% include icons/right.svg %}
+  <span class="a-link__text">Continue</span> {% include "icons/right.svg" %}
 </a>
 
 <br />
@@ -58,7 +58,7 @@
 
 <a class="a-link a-link--jump" href="#">
   <span class="a-link__text">External link</span> {% include
-  icons/external-link.svg %}
+  "icons/external-link.svg" %}
 </a>
 
 <br />
@@ -66,7 +66,7 @@
 
 <a class="a-link a-link--jump" href="#">
   <span class="a-link__text">Document or file</span> {% include
-  icons/download.svg %}
+  "icons/download.svg" %}
 </a>
 
 <br />
@@ -81,24 +81,25 @@
 <ul class="m-list m-list--links">
   <li class="m-list__item">
     <a class="a-link a-link--jump" href="#">
-      {% include icons/left.svg %} <span class="a-link__text">Go back</span>
+      {% include "icons/left.svg" %} <span class="a-link__text">Go back</span>
     </a>
   </li>
   <li class="m-list__item">
     <a class="a-link a-link--jump" href="#"
-      ><span class="a-link__text">Continue</span> {% include icons/right.svg %}
+      ><span class="a-link__text">Continue</span> {% include "icons/right.svg"
+      %}
     </a>
   </li>
   <li class="m-list__item">
     <a class="a-link a-link--jump" href="#"
       ><span class="a-link__text">External link</span> {% include
-      icons/external-link.svg %}
+      "icons/external-link.svg" %}
     </a>
   </li>
   <li class="m-list__item">
     <a class="a-link a-link--jump" href="#"
       ><span class="a-link__text">Document or file</span> {% include
-      icons/download.svg %}
+      "icons/download.svg" %}
     </a>
   </li>
 </ul>

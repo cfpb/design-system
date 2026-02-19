@@ -6,8 +6,8 @@
 <head>
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>{{ page.title }} - CFPB Design System</title>
-  <meta name="description" content="{{ site.description }}">
+  <title>{{ title }} - CFPB Design System</title>
+  <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
       docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
   </script>
 </head>
-<body class="t-{{ page.layout }}">
+<body class="t-{{ layout }}">
   <!-- Google Tag Manager code -->
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="skip-nav">
@@ -26,32 +26,32 @@
         Skip to main content
     </a>
   </div>
-  {% include header.html %}
+  {% include "header.html" %}
 
-  {% include redirect-banner.html %}
+  {% include "redirect-banner.html" %}
 
   {{ content }}
 
   {% if page.url != 'search/index' and page.url != '/index' %}
-  {% include footer.html %}
+  {% include "footer.html" %}
   {% endif %}
   <script src="{{ "/dist/main.js" | relative_url }}" charset="utf-8"></script>
 
-  {% if page.is_interstitial %}
+  {% if is_interstitial %}
   <script>
     {%- comment -%}
         The interstitial page redirects users to a URL based on a query parameter.
         To prevent malicious users from abusing this feature, we build a list of acceptable redirects.
     {%- endcomment -%}
     var PAGES_ALLOWED = {};
-    {%- for p in site.pages -%}
-      {%- if p.title -%}
-        {% assign collection_name = p.collection_name %}
+    {%- for p in collections.all -%}
+      {%- if p.data.title -%}
+        {% assign collection_name = p.data.collection_name %}
         {% unless collection_name %}{% assign collection_name = 'pages' %}{% endunless %}
         {%- capture edit_url -%}
-          {{-'/admin/#/collections/' | relative_url -}}{{- collection_name }}/entries/{{- p.path | split: '/' | last | replace: '.md' -}}
+          {{-'/admin/#/collections/' | relative_url -}}{{- collection_name }}/entries/{{- p.inputPath | split: '/' | last | replace: '.md' | remove_last: ',' -}}
         {%- endcapture -%}
-        PAGES_ALLOWED['{{ p.title | strip | escape }}'] = '{{ edit_url }}';
+        PAGES_ALLOWED['{{ p.data.title | strip | escape }}'] = '{{ edit_url }}';
       {%- endif -%}
     {%- endfor -%}
   </script>

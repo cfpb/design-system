@@ -339,23 +339,26 @@
 
         
         <div class="o-variation-group__description">
-            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-  "abstracts-custom-props": {
-    "beige": {
-      "$type": "color",
-      "$value": "#bea96f",
-      "$extensions": {
-        "com.figma": {
-          "collectionName": "abstracts-custom-props",
-          "collectionID": "VariableCollectionId:296:179",
-          "modeName": "default",
-          "modeID": "296:2",
-          "variableName": "beige",
-          "variableID": "VariableID:296:293"
-        }
-      }
-   }
-}
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"beige": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7450980544090271,
+        0.6627451181411743,
+        0.43529412150382996
+      ],
+      "alpha": 1,
+      "hex": "#BEA96F"
+    },
+    "$extensions": {
+      "com.figma.variableId": "VariableID:296:293",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
 </code></pre></div></div>
 
 <p>The above is a simplified example of our Figma exported JSON tokens. We take that JSON with Figma specific metadata and translate it into CSS using Style Dictionary. This example is using a direct value and gets translated into the following for consumption in our codebase:</p>
@@ -410,8 +413,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/design-tokens.md">
-                            <time datetime="2026-02-19 12:04:47 -0500">
-                                12:04:47 PM Feb 19, 2026
+                            <time datetime="2026-02-23 09:55:34 -0500">
+                                 9:55:34 AM Feb 23, 2026
                             </time>
                         </a>
                     </section>

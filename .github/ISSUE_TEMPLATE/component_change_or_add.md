@@ -28,7 +28,7 @@ If you were able to answer "yes" to any of the above questions, the next steps a
 - Indicate whether you are requesting to make a change to an existing component or whether you are requesting to add a new component to the Design Sytem
 - Add any data or research you have to show that the proposed change is accessibile and usable
 - Supply any design and development context you have for the request (e.g., Figma mock-ups, code samples, etc.)
-- Indicate whether you can design and build the proposed change or whether you will need someone to make the changes for you
+- Indicate whether you and your team can design and build the proposed change or whether you will need someone to make the changes for you
 - Draft documentation for the proposed change to be included in the Design System website (this can be added to this issue or as a comment)
 
 **Describe the solution you'd like**

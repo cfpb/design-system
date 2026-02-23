@@ -120,15 +120,18 @@ first-level:
         nav-items:
           - page: Accessibility principles
           - page: Accessibility audit tools
-      - heading: Data visualization
-        nav-items:
-          - page: Data visualization guidelines
       - heading: Community-centered design
         nav-items:
           - page: Overview
           - page: Setting the foundation
           - page: Conducting research
           - page: Design and development
+      - heading: Data visualization
+        nav-items:
+          - page: Data visualization guidelines
+      - nav-items:
+          - page: Contributing to the CFPB Design System
+        heading: Design System Governance
       - heading: Forms
         nav-items:
           - page: Designing forms

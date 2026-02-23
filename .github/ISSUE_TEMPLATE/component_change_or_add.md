@@ -19,7 +19,7 @@ assignees: ''
 ***Add a new component***
 - Is the proposed component currently being used on more than one page type on [www.consumerfinance.gov](www.consumerfinance.gov)? Alternatively, can you provide examples of multiple places where the proposed component could be used?
 - Are existing Design System components not sufficiently able to meet the product requirements or serve your users' needs, thus requiring the need to create a new component?
-- Is the proposed component different in more than one major way from existing components in the Design System? If the proposed component is different from an existing component in only one way (e.g. color), it would likely be better to add it as a variant of the existing component.
+- Is the proposed component different in more than one major way from existing Design System components? If the proposed component is different from an existing component in only one way (e.g., color), it would likely be better to add it as a variant of the existing component.
 
 If you were able to answer "yes" to any of the above questions, the next steps are to prepare your change request for review by adding the following information to the GitHub issue. 
 

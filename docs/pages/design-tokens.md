@@ -40,24 +40,26 @@ variation_groups:
     variation_group_description: >-
       ```
 
-      {
-        "abstracts-custom-props": {
-          "beige": {
-            "$type": "color",
-            "$value": "#bea96f",
-            "$extensions": {
-              "com.figma": {
-                "collectionName": "abstracts-custom-props",
-                "collectionID": "VariableCollectionId:296:179",
-                "modeName": "default",
-                "modeID": "296:2",
-                "variableName": "beige",
-                "variableID": "VariableID:296:293"
-              }
-            }
-         }
-      }
-
+      "beige": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.7450980544090271,
+              0.6627451181411743,
+              0.43529412150382996
+            ],
+            "alpha": 1,
+            "hex": "#BEA96F"
+          },
+          "$extensions": {
+            "com.figma.variableId": "VariableID:296:293",
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.isOverride": true
+          }
+        },
       ```
 
 
@@ -75,6 +77,6 @@ variation_groups:
       }
 
       ```
-use_cases: ''
-guidelines: ''
+use_cases: ""
+guidelines: ""
 ---

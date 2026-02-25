@@ -4799,6 +4799,7 @@ __metadata:
     concurrently: "npm:9.2.1"
     cssnano: "npm:7.1.2"
     cypress: "npm:15.10.0"
+    cypress-ct-lit: "npm:1.0.0"
     decap-cms-app: "npm:3.10.0"
     esbuild: "npm:0.27.3"
     esbuild-plugin-liquid: "npm:0.2.0"
@@ -5686,6 +5687,16 @@ __metadata:
   version: 3.2.3
   resolution: "csstype@npm:3.2.3"
   checksum: 10c0/cd29c51e70fa822f1cecd8641a1445bed7063697469d35633b516e60fe8c1bde04b08f6c5b6022136bb669b64c63d4173af54864510fbb4ee23281801841a3ce
+  languageName: node
+  linkType: hard
+
+"cypress-ct-lit@npm:1.0.0":
+  version: 1.0.0
+  resolution: "cypress-ct-lit@npm:1.0.0"
+  peerDependencies:
+    cypress: ">=10.6.0"
+    lit: ^2.0.0 || ^3.0.0
+  checksum: 10c0/bc32e29c4cd6e3b0af303943e77b352f8405dee49e5c62185f2a804702354cc0a500fe0f4c2068861cc98068d5b2a86d5c0d097d6d5d01b380b2f32559bd4875
   languageName: node
   linkType: hard
 

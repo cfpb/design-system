@@ -22,6 +22,7 @@ const tokenBase = path.resolve(baseDir, 'tokens');
 const cssFormatName = 'css/variables-no-space-commas';
 const hexPattern = /^#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
 const rgbaPattern = /^rgba\(/i;
+const numberRoundingPrecision = 4;
 
 const toPosix = (fsPath) => fsPath.split(path.sep).join('/');
 const toAbsPosix = (fsPath) =>
@@ -32,6 +33,9 @@ const toKebab = (value) =>
     .replace(/[\s_]+/g, '-')
     .replace(/-+/g, '-')
     .toLowerCase();
+const sizingTokenPath = path.resolve(tokenBase, 'abstracts/sizing.json');
+const sizingTokenAbsPosix = toAbsPosix(sizingTokenPath);
+const hasSizingTokenFile = fs.existsSync(sizingTokenPath);
 
 /**
  * Return nested subdirectories in depth-first order.
@@ -48,6 +52,14 @@ function getAllDirs(dirPath) {
   }
   return out;
 }
+
+const roundNumber = (value, precision = numberRoundingPrecision) => {
+  const factor = 10 ** precision;
+  const rounded = Math.round((value + Number.EPSILON) * factor) / factor;
+  return Number.isInteger(rounded)
+    ? rounded
+    : Number(rounded.toFixed(precision).replace(/\.?0+$/, ''));
+};
 
 // Emit warnings in a way that matches Style Dictionary log settings.
 const warn = (options, message) => {
@@ -79,7 +91,7 @@ const buildFilesAndFilters = (basePath) => {
   for (const dirPath of tokenDirs) {
     const jsonFiles = fs
       .readdirSync(dirPath)
-      .filter((file) => file.endsWith('.json'));
+      .filter((file) => file.endsWith('.json') && file !== 'sizing.json');
     for (const jsonFile of jsonFiles) {
       const fullPathAbsPosix = toAbsPosix(path.join(dirPath, jsonFile));
       const relDir = path.relative(basePath, dirPath);
@@ -98,7 +110,12 @@ const buildFilesAndFilters = (basePath) => {
         destination,
         format: cssFormatName,
         filter: filterName,
-        options: { outputReferences: true, usesDtcg: true, selector: ':root' },
+        options: {
+          outputReferences: true,
+          usesDtcg: true,
+          selector: ':root',
+          sort: 'name',
+        },
       });
     }
   }
@@ -209,6 +226,12 @@ const getAliasInfo = (token) => {
     : null;
 };
 
+const isSizingToken = (token) =>
+  Boolean(token?.filePath) && toAbsPosix(token.filePath) === sizingTokenAbsPosix;
+const getSizingPathUnit = (token) =>
+  Array.isArray(token?.path) && token.path.length > 1 ? token.path[1] : '';
+const isSizingNumberToken = (token) => (token?.$type ?? token?.type) === 'number';
+
 const { files, filtersToRegister } = buildFilesAndFilters(tokenBase);
 
 // Warn when we must normalize non-hex color objects (except RGBA passthrough).
@@ -249,6 +272,46 @@ const colorRgbaV4Transform = {
   },
 };
 
+// Round floating point noise for numeric token values exported from Figma.
+const numberRoundTransform = {
+  type: 'value',
+  filter: isSizingNumberToken,
+  transform: (token) => {
+    const value = token.$value ?? token.value;
+    if (typeof value === 'string') return value;
+    if (typeof value !== 'number') return value;
+    return roundNumber(value);
+  },
+};
+
+// Convert sizing taxonomy buckets into unitful values.
+const sizingUnitByPathTransform = {
+  type: 'value',
+  filter: isSizingToken,
+  transform: (token) => {
+    const value = token.$value ?? token.value;
+    if (typeof value === 'string') return value;
+    if (typeof value !== 'number') return value;
+    const unitBucket = getSizingPathUnit(token);
+    if (unitBucket === 'dimension-px') return `${value}px`;
+    if (unitBucket === 'dimension-rem') return `${value}rem`;
+    if (unitBucket === 'dimension-em') return `${value}em`;
+    return value;
+  },
+};
+
+// Keep sizing token names stable by using the leaf path segment only.
+const sizingLeafNameTransform = {
+  type: 'name',
+  filter: isSizingToken,
+  transform: (token) =>
+    toKebab(
+      Array.isArray(token.path) && token.path.length
+        ? token.path[token.path.length - 1]
+        : token.name,
+    ),
+};
+
 // Custom CSS formatter that preserves alias refs and tightens commas.
 const cssVariablesNoSpaceCommasFormat = async ({
   dictionary,
@@ -260,8 +323,13 @@ const cssVariablesNoSpaceCommasFormat = async ({
     : options.selector
       ? [options.selector]
       : [':root'];
-  const { outputReferences, outputReferenceFallbacks, usesDtcg, formatting } =
-    options;
+  const {
+    outputReferences,
+    outputReferenceFallbacks,
+    usesDtcg,
+    formatting,
+    sort,
+  } = options;
   const header = await fileHeader({
     file,
     formatting: formatting ? { ...formatting, prefix: undefined } : formatting,
@@ -342,6 +410,7 @@ const cssVariablesNoSpaceCommasFormat = async ({
         indentation: indentation.repeat(selector.length),
       },
       usesDtcg,
+      sort,
     }),
   );
   return (
@@ -369,6 +438,18 @@ StyleDictionary.registerTransform({
   name: 'value/color-rgba-v4',
   ...colorRgbaV4Transform,
 });
+StyleDictionary.registerTransform({
+  name: 'name/sizing-leaf-kebab',
+  ...sizingLeafNameTransform,
+});
+StyleDictionary.registerTransform({
+  name: 'value/number-round-4',
+  ...numberRoundTransform,
+});
+StyleDictionary.registerTransform({
+  name: 'value/sizing-unit-by-path',
+  ...sizingUnitByPathTransform,
+});
 StyleDictionary.registerTransformGroup({
   name: 'css/without-group',
   transforms: [
@@ -378,6 +459,14 @@ StyleDictionary.registerTransformGroup({
     'value/color-rgba-v4',
     'time/seconds',
     'size/px',
+  ],
+});
+StyleDictionary.registerTransformGroup({
+  name: 'sizing/without-group',
+  transforms: [
+    'name/sizing-leaf-kebab',
+    'value/number-round-4',
+    'value/sizing-unit-by-path',
   ],
 });
 StyleDictionary.registerFormat({
@@ -391,6 +480,52 @@ for (const { filterName, fullPathAbsPosix } of filtersToRegister) {
     filter: (token) => toAbsPosix(token.filePath) === fullPathAbsPosix,
   });
 }
+if (hasSizingTokenFile) {
+  StyleDictionary.registerFilter({
+    name: 'filter__sizing__sass',
+    filter: (token) => isSizingToken(token) && token.path?.[0] === 'sass',
+  });
+  StyleDictionary.registerFilter({
+    name: 'filter__sizing__css',
+    filter: (token) => isSizingToken(token) && token.path?.[0] === 'css',
+  });
+}
+
+const sizingPlatforms = hasSizingTokenFile
+  ? {
+      scssSizing: {
+        source: [toPosix(sizingTokenPath)],
+        transformGroup: 'sizing/without-group',
+        buildPath: `${baseDir}/elements/`,
+        files: [
+          {
+            destination: 'abstracts/sizing-tokens.scss',
+            format: 'scss/variables',
+            filter: 'filter__sizing__sass',
+            options: { outputReferences: true, usesDtcg: true, sort: 'name' },
+          },
+        ],
+      },
+      cssSizing: {
+        source: [toPosix(sizingTokenPath)],
+        transformGroup: 'sizing/without-group',
+        buildPath: `${baseDir}/elements/`,
+        files: [
+          {
+            destination: 'abstracts/sizing-tokens-custom-props.css',
+            format: cssFormatName,
+            filter: 'filter__sizing__css',
+            options: {
+              outputReferences: true,
+              usesDtcg: true,
+              selector: ':root',
+              sort: 'name',
+            },
+          },
+        ],
+      },
+    }
+  : {};
 
 export default {
   usesDtcg: true,
@@ -402,9 +537,14 @@ export default {
   },
   platforms: {
     css: {
+      source: [
+        `${toPosix(tokenBase)}/**/*.json`,
+        `!${toPosix(tokenBase)}/**/sizing.json`,
+      ],
       transformGroup: 'css/without-group',
       buildPath: `${baseDir}/elements/`,
       files,
     },
+    ...sizingPlatforms,
   },
 };

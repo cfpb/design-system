@@ -16,9 +16,7 @@ const VALID_TYPES = ['button', 'submit', 'reset'];
  * @slot - The main content for the button.
  */
 export class CfpbButton extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   /**
    * @property {string} type - The button type: button, submit, or reset.

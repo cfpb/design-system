@@ -1,8 +1,8 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './cfpb-pagination.component.scss';
-import leftIcon from '../../components/cfpb-icons/icons/left.svg';
-import rightIcon from '../../components/cfpb-icons/icons/right.svg';
+import leftIcon from '../../components/cfpb-icons/icons/left.svg?raw';
+import rightIcon from '../../components/cfpb-icons/icons/right.svg?raw';
 import { I18nService, MediaQueryService } from '../cfpb-utilities/';
 
 /**
@@ -15,9 +15,7 @@ export class CfpbPagination extends LitElement {
   #isMobile;
   #i18n;
 
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   /**
    * @property {number} currentPage - The currently selected page.

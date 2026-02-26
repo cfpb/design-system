@@ -10,9 +10,7 @@ import { CfpbFormAlert } from '../cfpb-form-alert';
  * @element cfpb-form-search
  */
 export class CfpbFormSearch extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   static formAssociated = true;
 

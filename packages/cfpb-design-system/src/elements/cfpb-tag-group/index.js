@@ -17,9 +17,7 @@ const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
  * @fires removetag - A tag was removed from the group.
  */
 export class CfpbTagGroup extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   /**
    * @property {string} childData - Structure data to create child components.

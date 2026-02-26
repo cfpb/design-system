@@ -125,7 +125,7 @@ exports.fn = (root, params, info) => {
           const classList = new Set(
             node.attributes.class == null
               ? null
-              : node.attributes.class.split(' ')
+              : node.attributes.class.split(' '),
           );
           for (const className of classNames) {
             if (className != null) {

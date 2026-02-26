@@ -7,9 +7,7 @@ import styles from './cfpb-tag-topic.component.scss';
  * @slot - The content for the topic tag.
  */
 export class CfpbTagTopic extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   /**
    * @property {string} href - href attribute, if this is a topic link.

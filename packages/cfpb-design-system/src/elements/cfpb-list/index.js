@@ -5,9 +5,7 @@ import { CfpbListItem } from '../cfpb-list-item';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 
 export class CfpbList extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   #internalSync = false;
   #container = createRef();

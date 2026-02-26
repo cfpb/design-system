@@ -6,9 +6,7 @@ import styles from './cfpb-icon-text.component.scss';
  * @slot - The main content for the text and icon.
  */
 export class CfpbIconText extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   /**
    * @property {boolean} disabled - Apply disabled styles or not.

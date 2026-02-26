@@ -8,9 +8,7 @@ import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
  * @slot - The text for the list item.
  */
 export class CfpbListItem extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   #checkboxIcon = createRef();
   #value;

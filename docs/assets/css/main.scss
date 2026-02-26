@@ -23,7 +23,6 @@
 @use 'color-swatches' as *;
 @use 'search' as *;
 
-
 // Webfont
 // This is the path for self-hosted fonts.
 @include licensed-font('/design-system/fonts');
@@ -69,11 +68,11 @@ details summary::after {
   display: block;
   content: '';
 
-  --cfpb-background-icon-svg: 'down';
+  background-image: url('../../_includes/icons/down.svg?raw');
 }
 
 details[open] summary::after {
-  --cfpb-background-icon-svg: 'up';
+  background-image: url('../../_includes/icons/up.svg?raw');
 }
 
 // Set padding for main content blocks.

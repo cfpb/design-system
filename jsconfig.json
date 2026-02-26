@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@cfpb/cfpb-design-system/*": ["packages/cfpb-design-system/src/*"]
+    }
+  }
+}

@@ -8,9 +8,7 @@ const VALID_VALIDATION = ['error', 'warning', 'success'];
  * @element cfpb-checkbox-icon
  */
 export class CfpbCheckboxIcon extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   #hover;
   #focus;

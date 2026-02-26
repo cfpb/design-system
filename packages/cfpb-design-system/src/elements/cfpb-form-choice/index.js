@@ -15,9 +15,7 @@ const VALID_TYPES = ['checkbox', 'radio'];
  * @slot - The label for the form input.
  */
 export class CfpbFormChoice extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   #checkboxIcon = createRef();
 

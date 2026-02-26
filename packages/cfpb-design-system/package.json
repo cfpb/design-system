@@ -5,7 +5,10 @@
   "exports": {
     ".": "./src/index.js",
     "./tooltips": "./src/components/cfpb-tooltips/index.js",
-    "./icons/": "./src/components/cfpb-icons/icons/"
+    "./icons/": "./src/components/cfpb-icons/icons/",
+    "./src/elements/abstracts/*": "./src/elements/abstracts/*",
+    "./src/elements/*": "./src/elements/*",
+    "./src/components/*": "./src/components/*"
   },
   "author": {
     "name": "Consumer Financial Protection Bureau",

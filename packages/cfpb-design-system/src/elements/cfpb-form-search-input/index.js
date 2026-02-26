@@ -3,16 +3,14 @@ import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-form-search-input.component.scss';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 
-import searchIcon from '../../components/cfpb-icons/icons/search.svg';
-import clearIcon from '../../components/cfpb-icons/icons/error.svg';
+import searchIcon from '../../components/cfpb-icons/icons/search.svg?raw';
+import clearIcon from '../../components/cfpb-icons/icons/error.svg?raw';
 
 /**
  * @element cfpb-form-search-input
  */
 export class CfpbFormSearchInput extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   /**
    * @property {boolean} disabled - Whether the input is disabled or not.

@@ -10,7 +10,7 @@ import { create } from './multiselect-utils.js';
 
 import * as MultiselectStyles from './multiselect.scss';
 
-import * as closeIconSrc from '../cfpb-icons/icons/error.svg';
+import * as closeIconSrc from '../cfpb-icons/icons/error.svg?raw';
 const closeIcon = closeIconSrc.default;
 
 const BASE_CLASS = 'o-multiselect';

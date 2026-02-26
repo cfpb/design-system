@@ -9,9 +9,7 @@ import { CfpbButton } from '../cfpb-button';
  * @slot - The main content for the upload button.
  */
 export class CfpbFileUpload extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   static properties = {
     isDetailHidden: {

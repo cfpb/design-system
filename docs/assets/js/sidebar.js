@@ -5,6 +5,9 @@
 function init() {
   const secondaryNavCat = document.querySelector('.ds-nav-container');
 
+  // Guard to bail out if secondary nav is not on the page, such as on the search page.
+  if (!secondaryNavCat) return;
+
   // First collapse the navigation if in mobile.
   const windowWidth = window.innerWidth;
   if (windowWidth < 601) {

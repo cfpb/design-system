@@ -1747,14 +1747,14 @@ class ht extends $ {
    * The classes added to the button.
    * @returns {object} A classmap of CSS class names.
    */
-  get #r() {
+  get #i() {
     return {
       "a-btn": !0,
       [`a-btn--${this.#t}`]: this.#t !== "primary",
       "a-btn--link": this.styleAsLink === !0
     };
   }
-  #i() {
+  #r() {
     return k`
       <cfpb-icon-text
         ${O(this.#e)}
@@ -1766,7 +1766,7 @@ class ht extends $ {
     `;
   }
   render() {
-    const e = Rt(this.#r);
+    const e = Rt(this.#i);
     return this.href ? k`
         <a
           class=${e}
@@ -1775,7 +1775,7 @@ class ht extends $ {
           aria-disabled=${String(this.disabled)}
           tabindex=${this.disabled ? -1 : 0}
         >
-          ${this.#i()}
+          ${this.#r()}
         </a>
       ` : k`
       <button
@@ -1783,7 +1783,7 @@ class ht extends $ {
         ?disabled=${this.disabled}
         type=${this.#a}
       >
-        ${this.#i()}
+        ${this.#r()}
       </button>
     `;
   }
@@ -1957,7 +1957,7 @@ class Ne extends $ {
   blur() {
     this.#t = !1, this.requestUpdate();
   }
-  #r() {
+  #i() {
     return [
       "cfpb-checkbox-icon",
       this.checked && "checked",
@@ -1971,7 +1971,7 @@ class Ne extends $ {
   render() {
     return k`
       <div
-        class=${this.#r()}
+        class=${this.#i()}
         ?disabled=${this.disabled}
         aria-hidden="true"
       ></div>
@@ -2023,10 +2023,10 @@ class Gt extends $ {
       })
     );
   }
-  #r() {
+  #i() {
     this.#e.value && this.#e.value.focus();
   }
-  #i() {
+  #r() {
     this.#e.value && this.#e.value.blur();
   }
   #o() {
@@ -2049,10 +2049,10 @@ class Gt extends $ {
    * Ensure the type value is valid, and fall back to a default if not.
    * @returns {string} A type value string.
    */
-  get #s() {
+  get #l() {
     return mr.includes(this.type) ? this.type : "checkbox";
   }
-  get #c() {
+  get #s() {
     const e = {
       "m-form-field": !0,
       [`m-form-field--${this.type}`]: !0,
@@ -2071,7 +2071,7 @@ class Gt extends $ {
     `;
   }
   render() {
-    const e = Rt(this.#c);
+    const e = Rt(this.#s);
     return k`
       <div
         class=${e}
@@ -2081,14 +2081,14 @@ class Gt extends $ {
       >
         <input
           class="a-${this.type}"
-          type=${this.#s}
+          type=${this.#l}
           id="choice-input"
           ?disabled=${this.disabled}
           .checked=${this.checked}
           @change=${this.#t}
           @input=${this.#a}
-          @focus=${this.#r}
-          @blur=${this.#i}
+          @focus=${this.#i}
+          @blur=${this.#r}
           aria-invalid=${this.#d === "error" ? "true" : "false"}
         />
         <label class="a-label" for="choice-input">
@@ -2123,7 +2123,7 @@ class Xt extends $ {
     // A FileList object.
   };
   constructor() {
-    super(), this.#i();
+    super(), this.#r();
   }
   #e = T();
   #t = T();
@@ -2135,14 +2135,14 @@ class Xt extends $ {
     }
     return t;
   }
-  #r() {
+  #i() {
     this.fileName = this.#a(this.#e.value.value), this.value = this.#e.value.value, this.files = this.#e.value.files, this.isDetailHidden = !1;
   }
-  #i() {
+  #r() {
     this.fileName = "", this.value = "", this.files = {}, this.isDetailHidden = !0;
   }
   #o() {
-    this.#e.value.value == "" ? this.#i() : this.#r();
+    this.#e.value.value == "" ? this.#r() : this.#i();
   }
   render() {
     return k`
@@ -2243,7 +2243,7 @@ class ut extends $ {
     super(), this.type = "plain", this.checked = !1, this.disabled = !1, this.hidden = !1, this.href = "";
   }
   firstUpdated() {
-    this.tabIndex = this.disabled ? -1 : 0, this.#a || this.addEventListener("keydown", this.#o), this.addEventListener("pointerdown", this.#i);
+    this.tabIndex = this.disabled ? -1 : 0, this.#a || this.addEventListener("keydown", this.#o), this.addEventListener("pointerdown", this.#r);
   }
   connectedCallback() {
     super.connectedCallback(), this.#a = this.closest("[role=listbox]") !== null, this.#a ? (this.setAttribute("role", "option"), this.setAttribute("aria-disabled", this.disabled ? "true" : "false"), this.setAttribute("aria-selected", this.checked ? "true" : "false"), this.tabIndex = -1) : (this.removeAttribute("role"), this.removeAttribute("aria-disabled"), this.removeAttribute("aria-selected"));
@@ -2251,7 +2251,7 @@ class ut extends $ {
   updated(e) {
     e.has("checked") && this.#a && this.setAttribute("aria-selected", this.checked ? "true" : "false"), e.has("disabled") && (this.tabIndex = this.disabled ? -1 : 0, this.#a && this.setAttribute("aria-disabled", this.disabled ? "true" : "false")), e.has("hidden") && (this.setAttribute("aria-hidden", this.hidden ? "true" : "false"), this.hidden && (this.tabIndex = -1));
   }
-  #r() {
+  #i() {
     this.href !== "" && (window.location.href = this.href), this.checked = !this.checked, this.dispatchEvent(
       new CustomEvent("item-click", {
         detail: { checked: this.checked, value: this.value },
@@ -2260,11 +2260,11 @@ class ut extends $ {
       })
     );
   }
-  #i() {
-    !this.disabled && !this.hidden && this.#r();
+  #r() {
+    !this.disabled && !this.hidden && this.#i();
   }
   #o(e) {
-    this.disabled || this.hidden || (e.key === " " || e.key === "Enter") && (e.preventDefault(), this.#r());
+    this.disabled || this.hidden || (e.key === " " || e.key === "Enter") && (e.preventDefault(), this.#i());
   }
   #n() {
     this.#e.value?.mouseover();
@@ -2289,21 +2289,21 @@ class ut extends $ {
         @mouseover=${this.#n}
         @mouseleave=${this.#d}
       >
-        ${this.#s()}
+        ${this.#l()}
       </div>
     `;
   }
-  #s() {
+  #l() {
     switch (this.type) {
       case "check":
         return this.#h();
       case "checkbox":
-        return this.#l();
-      default:
         return this.#c();
+      default:
+        return this.#s();
     }
   }
-  #c() {
+  #s() {
     return k`<div><slot></slot></div>`;
   }
   #h() {
@@ -2318,7 +2318,7 @@ class ut extends $ {
       </div>
     `;
   }
-  #l() {
+  #c() {
     return k`
       <div class="checkbox">
         <cfpb-checkbox-icon
@@ -2356,8 +2356,8 @@ class De extends $ {
   #e = !1;
   #t = T();
   #a = [];
-  #r = [];
   #i = [];
+  #r = [];
   // index in visibleItems
   #o = -1;
   // WeakMap to store per-item click listeners.
@@ -2379,7 +2379,7 @@ class De extends $ {
     super(), this.childData = "", this.multiple = !1, this.type = "plain", this.ariaLabel = "";
   }
   firstUpdated() {
-    this.#s();
+    this.#l();
   }
   updated(e) {
     if (!this.#e && e.has("childData")) {
@@ -2395,13 +2395,13 @@ class De extends $ {
     return this.#a;
   }
   get checkedItems() {
-    return this.#r;
-  }
-  get visibleItems() {
     return this.#i;
   }
+  get visibleItems() {
+    return this.#r;
+  }
   get visibleCheckedItems() {
-    return this.#i.filter((e) => e.checked);
+    return this.#r.filter((e) => e.checked);
   }
   // -------------------------
   // RENDER ITEMS
@@ -2414,19 +2414,19 @@ class De extends $ {
     e.forEach((a) => {
       const i = document.createElement("cfpb-list-item");
       i.textContent = a.value ?? "", "disabled" in a && (i.disabled = a.disabled), "hidden" in a && (i.hidden = a.hidden), "href" in a && (i.href = a.href), i.type = a.type ?? this.type, this.multiple ? "checked" in a && (i.checked = a.checked) : !t && a.checked && (t = i, i.checked = !0), this.appendChild(i);
-    }), this.#s();
+    }), this.#l();
   }
   // -------------------------
   // SYNC ITEMS & LISTENERS
   // -------------------------
-  #s() {
+  #l() {
     if (this.#a = [...this.querySelectorAll("cfpb-list-item")], this.#a.forEach((e) => {
       e.type || (e.type = this.type);
-    }), this.#i = this.#a.filter((e) => !e.hidden), this.multiple)
-      this.#r = this.#a.filter((e) => e.checked);
+    }), this.#r = this.#a.filter((e) => !e.hidden), this.multiple)
+      this.#i = this.#a.filter((e) => e.checked);
     else {
       const e = this.#a.find((t) => t.checked);
-      this.#r = e ? [e] : [], this.#a.forEach((t) => {
+      this.#i = e ? [e] : [], this.#a.forEach((t) => {
         t !== e && (t.checked = !1);
       });
     }
@@ -2435,18 +2435,18 @@ class De extends $ {
       const a = this.#n.get(e);
       a && e.removeEventListener("item-click", a);
       const i = (o) => {
-        o.stopPropagation(), this.#l(e, e.checked, t);
+        o.stopPropagation(), this.#c(e, e.checked, t);
       };
       e.addEventListener("item-click", i), this.#n.set(e, i), e.addEventListener("focus", () => {
-        const o = this.#i.indexOf(e);
+        const o = this.#r.indexOf(e);
         o !== -1 && (this.#o = o);
       });
     }), this.dispatchEvent(
       new CustomEvent("items-ready", {
         detail: {
           items: this.#a,
-          checkedItems: this.#r,
-          visibleItems: this.#i,
+          checkedItems: this.#i,
+          visibleItems: this.#r,
           visibleCheckedItems: this.visibleCheckedItems
         },
         bubbles: !0,
@@ -2454,7 +2454,7 @@ class De extends $ {
       })
     );
   }
-  #c() {
+  #s() {
     const e = this.#a.map((t) => ({
       value: t.value,
       label: t.textContent.trim(),
@@ -2470,13 +2470,13 @@ class De extends $ {
     }
     this.#a.forEach((e) => e.type = this.type);
   }
-  #l(e, t, a) {
-    this.multiple ? t ? this.#r.includes(e) || this.#r.push(e) : this.#r = this.#r.filter(
+  #c(e, t, a) {
+    this.multiple ? t ? this.#i.includes(e) || this.#i.push(e) : this.#i = this.#i.filter(
       (i) => i !== e
     ) : t ? (this.#a.forEach((i) => {
       i !== e && (i.checked = !1);
-    }), this.#r = [e]) : (this.#r.forEach((i) => i.checked = !1), this.#r = []), this.#c(), window.queueMicrotask(() => {
-      const i = this.#i.indexOf(e);
+    }), this.#i = [e]) : (this.#i.forEach((i) => i.checked = !1), this.#i = []), this.#s(), window.queueMicrotask(() => {
+      const i = this.#r.indexOf(e);
       this.focusItemAt(i !== -1 ? i : -1);
     }), this.dispatchEvent(
       new CustomEvent("item-click", {
@@ -2494,25 +2494,25 @@ class De extends $ {
    * @returns {Array} List of visible list items.
    */
   filterItems(e) {
-    this.#i = [];
+    this.#r = [];
     let t = -1;
     return this.#a.forEach((a) => {
       const i = e.some(
         (o) => a.value.toLowerCase().includes(o.toLowerCase())
       );
-      a.hidden = !i, i && (t === -1 && (t = this.#i.length), this.#i.push(a));
-    }), this.#o = t, this.#f(), this.#i;
+      a.hidden = !i, i && (t === -1 && (t = this.#r.length), this.#r.push(a));
+    }), this.#o = t, this.#f(), this.#r;
   }
   showAllItems() {
-    this.#a.forEach((e) => e.hidden = !1), this.#i = [...this.#a], this.#o = 0, this.#f();
+    this.#a.forEach((e) => e.hidden = !1), this.#r = [...this.#a], this.#o = 0, this.#f();
   }
   #f() {
     this.dispatchEvent(
       new CustomEvent("items-filter", {
         detail: {
           items: this.#a,
-          checkedItems: this.#r,
-          visibleItems: this.#i,
+          checkedItems: this.#i,
+          visibleItems: this.#r,
           visibleCheckedItems: this.visibleCheckedItems
         },
         bubbles: !0,
@@ -2530,7 +2530,7 @@ class De extends $ {
    * @returns {undefined} If nothing to focus.
    */
   focusItemAt(e) {
-    const t = this.#i;
+    const t = this.#r;
     if (!t.length || e == null || typeof e != "number" || Number.isNaN(e) || e === -1) {
       this.#u();
       return;
@@ -2542,7 +2542,7 @@ class De extends $ {
     e.target === this.#t.value && this.#u();
   }
   #g(e) {
-    const t = this.#i;
+    const t = this.#r;
     if (!t.length) return;
     const a = t.length - 1;
     switch (e.key) {
@@ -2620,7 +2620,15 @@ class Pe extends $ {
   #t(e) {
     this.value = e.target.value;
   }
-  #a() {
+  #a(e) {
+    e.key === "Enter" && this.dispatchEvent(
+      new CustomEvent("enter-down", {
+        bubbles: !0,
+        composed: !0
+      })
+    );
+  }
+  #i() {
     this.dispatchEvent(
       new Event("blur", {
         bubbles: !0,
@@ -2662,7 +2670,8 @@ class Pe extends $ {
           aria-label=${this.ariaLabelInput}
           ${O(this.#e)}
           @input=${this.#t}
-          @blur=${this.#a}
+          @keydown=${this.#a}
+          @blur=${this.#i}
         />
         <button
           type="reset"
@@ -2731,11 +2740,11 @@ class Wt extends $ {
   #e = T();
   #t = T();
   #a;
-  #r;
+  #i;
   constructor() {
     super(), this.value = "", this.#a = this.attachInternals(), this.searchList = [];
   }
-  #i(e) {
+  #r(e) {
     const a = e.target.assignedNodes({ flatten: !0 }).filter(
       (o) => o.nodeType === Node.ELEMENT_NODE && (o.tagName === "UL" || o.tagName === "OL")
     );
@@ -2748,17 +2757,20 @@ class Wt extends $ {
         href: n.getAttribute("href")
       } : { value: o.textContent.trim() };
     });
-    this.searchList = i, this.#r = new Zt(
+    this.searchList = i, this.#i = new Zt(
       i.map((o) => o.value)
     );
   }
   #o() {
-    this.#t.value.classList.remove("show"), this.#e.value.showAllItems();
+    this.value = "", this.#t.value.classList.remove("show"), this.#e.value.showAllItems();
   }
   #n(e) {
-    e.target.value.length > 1 ? (this.#t.value.classList.add("show"), this.#r && this.#e.value.filterItems(this.#r.search(e.target.value))) : this.#t.value.classList.remove("show"), this.value = e.target.value;
+    e.target.value.length > 1 ? (this.#t.value.classList.add("show"), this.#i && this.#e.value.filterItems(this.#i.search(e.target.value))) : this.#t.value.classList.remove("show"), this.value = e.target.value;
   }
-  #d() {
+  #d(e) {
+    this.#s(e);
+  }
+  #l() {
     this.#t.value.classList.remove("show");
   }
   get isSearchDisabled() {
@@ -2769,11 +2781,11 @@ class Wt extends $ {
     return e ? this.validation = "error" : this.validation = "", e;
   }
   #s(e) {
-    e.preventDefault(), !this.disabled && this.value !== "" && (this.#a.setFormValue(this.value), this.#a.form?.requestSubmit());
+    e.preventDefault(), !this.disabled && (this.#a.setFormValue(this.value), this.#a.form?.requestSubmit());
   }
   render() {
     return k` <!--Light DOM content-->
-      <slot @slotchange=${this.#i}></slot>
+      <slot @slotchange=${this.#r}></slot>
 
       <!--Shadow DOM content-->
       <div class="o-form-search">
@@ -2788,7 +2800,8 @@ class Wt extends $ {
             ?validation=${this.validation}
             @clear=${this.#o}
             @input=${this.#n}
-            @blur=${this.#d}
+            @enter-down=${this.#d}
+            @blur=${this.#l}
           ></cfpb-form-search-input>
 
           <div class="popup" ${O(this.#t)}>
@@ -2936,7 +2949,7 @@ class bt extends $ {
   updated(e) {
     if (e.has("childData")) {
       const t = Yt(this.childData);
-      t && this.#r(t);
+      t && this.#i(t);
     }
   }
   async focus() {
@@ -2944,8 +2957,8 @@ class bt extends $ {
     const e = this.tagList[0];
     e && e.focus();
   }
-  #r(e) {
-    Array.isArray(e) && (this.#i(), e.forEach((t, a) => {
+  #i(e) {
+    Array.isArray(e) && (this.#r(), e.forEach((t, a) => {
       const i = document.createElement(t.tagName);
       t.text && (i.textContent = t.text), t.href && (i.href = t.href), this.addTag(i, a);
     }));
@@ -2953,7 +2966,7 @@ class bt extends $ {
   /**
    * Remove all previous tags from shadow DOM and light DOM.
    */
-  #i() {
+  #r() {
     this.#a && (this.#a.forEach((e) => {
       e.parentElement && e.remove();
     }), this.#a.clear()), [...this.children].forEach((e) => {
@@ -2984,12 +2997,12 @@ class bt extends $ {
   #d(e) {
     if (this.#t)
       for (const t of e)
-        t.type === "childList" && (t.addedNodes.forEach((a) => this.#s(a)), t.removedNodes.forEach((a) => this.#c(a)));
+        t.type === "childList" && (t.addedNodes.forEach((a) => this.#l(a)), t.removedNodes.forEach((a) => this.#s(a)));
   }
   /**
    * @param {Node} node - The node that was added to the light DOM.
    */
-  #s(e) {
+  #l(e) {
     if (this.#n(e.tagName)) {
       const t = Array.from(this.children).indexOf(e);
       this.addTag(e, t);
@@ -2998,7 +3011,7 @@ class bt extends $ {
   /**
    * @param {Node} node - The node that was removed from the light DOM.
    */
-  #c(e) {
+  #s(e) {
     this.#n(e.tagName) && this.#b(e);
   }
   /**
@@ -3020,7 +3033,7 @@ class bt extends $ {
    */
   addTag(e, t = -1) {
     if (!Array.from(this.children).includes(e))
-      return this.#l(e, t), !1;
+      return this.#c(e, t), !1;
     this.#f(e, t), this.#h();
   }
   /**
@@ -3028,7 +3041,7 @@ class bt extends $ {
    * @param {*} tag - The tag to add.
    * @param {number} index - The position at which to add the tag.
    */
-  #l(e, t) {
+  #c(e, t) {
     t === -1 || t >= this.children.length ? this.appendChild(e) : this.insertBefore(e, this.children[t]);
   }
   /**
@@ -3177,15 +3190,15 @@ class ea extends $ {
   #e;
   #t;
   #a;
-  #r;
-  #i = T();
+  #i;
+  #r = T();
   #o = T();
   #n = T();
   #d = T();
+  #l = T();
   #s = T();
-  #c = T();
   #h = T();
-  #l;
+  #c;
   #f = !1;
   /**
    * @property {boolean} multiple - Whether the select supports multiple or not.
@@ -3212,7 +3225,7 @@ class ea extends $ {
     };
   }
   constructor() {
-    super(), this.multiple = !1, this.options = [], this.selectedTexts = [], this.optionList = [], this.#l = this.#u.bind(this);
+    super(), this.multiple = !1, this.options = [], this.selectedTexts = [], this.optionList = [], this.#c = this.#u.bind(this);
   }
   firstUpdated() {
     this.#m(), this.addEventListener("focus", () => {
@@ -3224,7 +3237,7 @@ class ea extends $ {
     });
   }
   disconnectedCallback() {
-    document.removeEventListener("pointerdown", this.#l), document.removeEventListener("focusin", this.#l), super.disconnectedCallback();
+    document.removeEventListener("pointerdown", this.#c), document.removeEventListener("focusin", this.#c), super.disconnectedCallback();
   }
   #u(e) {
     e.composedPath().includes(this) || (this.isExpanded = !1);
@@ -3242,20 +3255,20 @@ class ea extends $ {
         checked: "true"
       }) : { value: s };
     });
-    this.optionList = i, this.#r = new Zt(
+    this.optionList = i, this.#i = new Zt(
       i.map((o) => o.value)
     );
   }
   #g(e) {
-    this.#t.suspend(), this.isExpanded || (this.isExpanded = !0), this.#c.value.filterItems(
-      this.#r.search(e.target.value)
+    this.#t.suspend(), this.isExpanded || (this.isExpanded = !0), this.#s.value.filterItems(
+      this.#i.search(e.target.value)
     ).length === 0 ? (this.#f = !0, this.requestUpdate()) : (this.#f = !1, this.requestUpdate(), this.#t.resume());
   }
   #v() {
-    this.#t.suspend(), this.isExpanded = !1, this.#c.value.showAllItems(), this.#f = !1, this.requestUpdate(), this.#t.resume();
+    this.#t.suspend(), this.isExpanded = !1, this.#s.value.showAllItems(), this.#f = !1, this.requestUpdate(), this.#t.resume();
   }
   #m() {
-    const e = this.#i.value, t = this.#n.value, a = this.isExpanded ? I.CLASSES.MH_DEFAULT : I.CLASSES.MH_ZERO;
+    const e = this.#r.value, t = this.#n.value, a = this.isExpanded ? I.CLASSES.MH_DEFAULT : I.CLASSES.MH_ZERO;
     this.#a = new I(t).init(a), this.#t = new ce(e), this.#t.setTransition(
       this.#a,
       this.#a.maxHeightZero,
@@ -3269,29 +3282,29 @@ class ea extends $ {
         })
       );
     }), this.#t.addEventListener("collapseend", () => {
-      this.isExpanded = !1, t.classList.add("u-hidden"), this.#i.value.classList.remove("o-select--up"), this.#i.value.classList.remove("o-select--down");
+      this.isExpanded = !1, t.classList.add("u-hidden"), this.#r.value.classList.remove("o-select--up"), this.#r.value.classList.remove("o-select--down");
     }), this.#a.addEventListener("transitiondir", (i) => {
-      this.#i.value.classList.add(`o-select--${i.dir}`);
+      this.#r.value.classList.add(`o-select--${i.dir}`);
     });
   }
   updated(e) {
     if (e.has("multiple") && (this.#e = this.#y()), e.has("isExpanded")) {
       const t = e.get("isExpanded"), a = this.isExpanded;
-      a !== t && (a ? (this.#t.expand(), document.addEventListener("pointerdown", this.#l), document.addEventListener("focusin", this.#l)) : (this.#t.collapse(), document.removeEventListener(
+      a !== t && (a ? (this.#t.expand(), document.addEventListener("pointerdown", this.#c), document.addEventListener("focusin", this.#c)) : (this.#t.collapse(), document.removeEventListener(
         "pointerdown",
-        this.#l
-      ), document.removeEventListener("focusin", this.#l)));
+        this.#c
+      ), document.removeEventListener("focusin", this.#c)));
     }
   }
   #y() {
     const e = {
-      list: this.#c.value,
+      list: this.#s.value,
       flyout: () => this.#t
     };
     return this.multiple ? new Ir({
       ...e,
       input: this.#d.value,
-      tagGroup: this.#s.value
+      tagGroup: this.#l.value
     }) : new Or({
       ...e,
       displayLabel: this.#h.value,
@@ -3305,7 +3318,7 @@ class ea extends $ {
     this.#e?.onItemClick(e, this);
   }
   #k(e) {
-    this.#e?.onTagClick(e, this, this.#s.value);
+    this.#e?.onTagClick(e, this, this.#l.value);
   }
   render() {
     return k`
@@ -3313,7 +3326,7 @@ class ea extends $ {
       <slot @slotchange=${this.#b}></slot>
 
       ${this.multiple ? k`<cfpb-tag-group
-            ${O(this.#s)}
+            ${O(this.#l)}
             .childData=${this.optionList.filter((e) => e.checked).map((e) => ({ text: e.value, tagName: "cfpb-tag-filter" }))}
             @tag-click=${this.#k}
           >
@@ -3322,7 +3335,7 @@ class ea extends $ {
       <div
         class="o-select"
         data-js-hook="behavior_flyout-menu"
-        ${O(this.#i)}
+        ${O(this.#r)}
       >
         ${this.#w()}
 
@@ -3355,7 +3368,7 @@ class ea extends $ {
             .childData=${this.optionList}
             type=${this.multiple ? "checkbox" : "check"}
             aria-label=${this.ariaLabelList ? this.ariaLabelList : "Choose an item…"}
-            ${O(this.#c)}
+            ${O(this.#s)}
           >
           </cfpb-list>
           <div class=${this.#f ? "no-results" : "u-hidden"}>
@@ -3483,9 +3496,9 @@ class Dr extends EventTarget {
   // Map<key, MediaQueryList>
   #a = /* @__PURE__ */ new Map();
   // Map<key, listener>
-  #r = /* @__PURE__ */ new Map();
+  #i = /* @__PURE__ */ new Map();
   // Map<key, boolean>
-  #i = !1;
+  #r = !1;
   /**
    *
    * @param {Record<string, {min: number, max?: number}>} [breakpoints]
@@ -3502,10 +3515,10 @@ class Dr extends EventTarget {
     };
     for (const [t, a] of Object.entries(this.#e)) {
       const i = this.#o(a), o = window.matchMedia(i);
-      this.#t.set(t, o), this.#r.set(t, o.matches);
+      this.#t.set(t, o), this.#i.set(t, o.matches);
       const n = (s) => {
-        this.#r.set(t, s.matches), this.#i || (this.#i = !0, requestAnimationFrame(() => {
-          this.#i = !1, this.#n();
+        this.#i.set(t, s.matches), this.#r || (this.#r = !0, requestAnimationFrame(() => {
+          this.#r = !1, this.#n();
         }));
       };
       o.addEventListener("change", n), this.#a.set(t, n);
@@ -3518,19 +3531,19 @@ class Dr extends EventTarget {
   }
   #n() {
     const e = {
-      matches: Object.fromEntries(this.#r)
+      matches: Object.fromEntries(this.#i)
     };
     this.dispatchEvent(new CustomEvent("change", { detail: e }));
   }
   get matches() {
-    return Object.fromEntries(this.#r);
+    return Object.fromEntries(this.#i);
   }
   destroy() {
     for (const [e, t] of this.#t.entries()) {
       const a = this.#a.get(e);
       a && t.removeEventListener("change", a);
     }
-    this.#t.clear(), this.#a.clear(), this.#r.clear();
+    this.#t.clear(), this.#a.clear(), this.#i.clear();
   }
 }
 class ta extends $ {
@@ -3552,9 +3565,9 @@ class ta extends $ {
     super(), this.currentPage = 1, this.maxPage = 1, this.#e = new Dr(), this.#t = !1, this.lang = "en";
   }
   connectedCallback() {
-    super.connectedCallback(), this.#a = this.querySelector("i18n-service"), this.#a && (this.addEventListener("i18n-change", this.#r), this.#a.language = this.lang);
+    super.connectedCallback(), this.#a = this.querySelector("i18n-service"), this.#a && (this.addEventListener("i18n-change", this.#i), this.#a.language = this.lang);
   }
-  #r() {
+  #i() {
     const e = (t, a) => {
       const i = this.renderRoot.querySelector(t), o = i.querySelector("span");
       if (i) {
@@ -3565,12 +3578,12 @@ class ta extends $ {
     e("#previous", "previous"), e("#next", "next"), e("#go", "go"), this.requestUpdate();
   }
   firstUpdated() {
-    this.#e.addEventListener("change", this.#i), this.#t = this.#e.matches.xs;
+    this.#e.addEventListener("change", this.#r), this.#t = this.#e.matches.xs;
   }
   disconnectedCallback() {
-    super.disconnectedCallback(), this.#e.removeEventListener("change", this.#i), this.#e.destroy();
+    super.disconnectedCallback(), this.#e.removeEventListener("change", this.#r), this.#e.destroy();
   }
-  #i = (e) => {
+  #r = (e) => {
     const t = e.detail.matches.xs;
     t !== this.#t && (this.#t = t, this.requestUpdate());
   };

@@ -21,4 +21,16 @@ describe('The search feature', () => {
     cy.get('#search-box').shadow().find('button[type=submit]').click();
     cy.get('#search-results').find('li').its('length').should('be.gte', 1);
   });
+
+  it('should show search results on enter key press', () => {
+    cy.get('#search-box')
+      .shadow()
+      .find('cfpb-form-search-input')
+      .should('exist')
+      .shadow()
+      .find('input[type=search]')
+      .type('expandable')
+      .type('{enter}');
+    cy.get('#search-results').find('li').its('length').should('be.gte', 1);
+  });
 });

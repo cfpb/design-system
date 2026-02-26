@@ -3,67 +3,43 @@ import { toPosix } from './path-utils.js';
 export const createPlatforms = ({
   baseDir,
   tokenBase,
-  files,
-  hasSizingTokenFile,
-  sizingTokenPath,
-  cssFormatName,
+  defaultCssFiles,
+  intentCssFiles,
+  intentScssFiles,
 }) => {
-  // Dedicated sizing platforms are optional and only enabled when sizing.json
-  // is present. This allows incremental adoption in branches/environments.
-  const sizingPlatforms = hasSizingTokenFile
-    ? {
-        scssSizing: {
-          source: [toPosix(sizingTokenPath)],
-          transformGroup: 'sizing/without-group',
-          buildPath: `${baseDir}/elements/`,
-          files: [
-            {
-              // Emits Sass variables consumed via sizing-vars.scss.
-              destination: 'abstracts/sizing-tokens.scss',
-              format: 'scss/variables',
-              filter: 'filter__sizing__sass',
-              options: {
-                outputReferences: true,
-                usesDtcg: true,
-                sort: 'name',
-              },
-            },
-          ],
-        },
-        cssSizing: {
-          source: [toPosix(sizingTokenPath)],
-          transformGroup: 'sizing/without-group',
-          buildPath: `${baseDir}/elements/`,
-          files: [
-            {
-              // Emits runtime CSS custom properties for the sizing css branch.
-              destination: 'abstracts/sizing-tokens-custom-props.css',
-              format: cssFormatName,
-              filter: 'filter__sizing__css',
-              options: {
-                outputReferences: true,
-                usesDtcg: true,
-                selector: ':root',
-                sort: 'name',
-              },
-            },
-          ],
-        },
-      }
-    : {};
+  const allTokenSources = [`${toPosix(tokenBase)}/**/*.json`];
+  const platforms = {};
 
-  return {
-    // Generic CSS output for all token JSON files except sizing.json, which is
-    // handled by the dedicated sizing platforms above.
-    css: {
-      source: [
-        `${toPosix(tokenBase)}/**/*.json`,
-        `!${toPosix(tokenBase)}/**/sizing.json`,
-      ],
+  // Default CSS platform handles files without intent roots, and non-intent
+  // branches from mixed files.
+  if (defaultCssFiles.length > 0) {
+    platforms.css = {
+      source: allTokenSources,
       transformGroup: 'css/without-group',
       buildPath: `${baseDir}/elements/`,
-      files,
-    },
-    ...sizingPlatforms,
-  };
+      files: defaultCssFiles,
+    };
+  }
+
+  // Intent platforms are separated so they can use intent-specific transforms
+  // (leaf naming + path-based unit mapping) without affecting default tokens.
+  if (intentScssFiles.length > 0) {
+    platforms.scssIntent = {
+      source: allTokenSources,
+      transformGroup: 'intent/without-group',
+      buildPath: `${baseDir}/elements/`,
+      files: intentScssFiles,
+    };
+  }
+
+  if (intentCssFiles.length > 0) {
+    platforms.cssIntent = {
+      source: allTokenSources,
+      transformGroup: 'intent/without-group',
+      buildPath: `${baseDir}/elements/`,
+      files: intentCssFiles,
+    };
+  }
+
+  return platforms;
 };

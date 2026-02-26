@@ -18,12 +18,9 @@ import {
   warn,
 } from './style-dictionary-utilities/color.js';
 import {
-  createIsSizingToken,
-  createSizingLeafNameTransform,
-  createSizingUnitByPathTransform,
-  getSizingTokenInfo,
+  intentLeafNameTransform,
+  intentUnitByPathTransform,
   numberRoundTransform,
-  registerSizingFilters,
 } from './style-dictionary-utilities/sizing.js';
 import { createCssVariablesNoSpaceCommasFormat } from './style-dictionary-utilities/css-variables-no-space-commas.js';
 import { createPlatforms } from './style-dictionary-utilities/platforms.js';
@@ -31,35 +28,35 @@ import { createPlatforms } from './style-dictionary-utilities/platforms.js';
 const baseDir = 'packages/cfpb-design-system/src';
 const tokenBase = path.resolve(baseDir, 'tokens');
 const cssFormatName = 'css/variables-no-space-commas';
+// Keep file-level options centralized so default and intent outputs stay aligned
+// on reference behavior and deterministic ordering.
+const sharedCssFileOptions = {
+  outputReferences: true,
+  usesDtcg: true,
+  selector: ':root',
+  sort: 'name',
+};
+const sharedScssFileOptions = {
+  outputReferences: true,
+  usesDtcg: true,
+  sort: 'name',
+};
 
-const { files, filtersToRegister } = buildFilesAndFilters({
-  basePath: tokenBase,
-  excludedFiles: ['sizing.json'],
-  format: cssFormatName,
-  fileOptions: {
-    outputReferences: true,
-    usesDtcg: true,
-    selector: ':root',
-    sort: 'name',
-  },
-});
+const { defaultCssFiles, intentCssFiles, intentScssFiles, filtersToRegister } =
+  buildFilesAndFilters({
+    basePath: tokenBase,
+    cssFormat: cssFormatName,
+    cssFileOptions: sharedCssFileOptions,
+    scssFileOptions: sharedScssFileOptions,
+  });
 
-// Sizing tokens are generated from a dedicated source file so they can use
-// path-aware unit mapping (dimension-px/rem/em) while the rest of tokens use
-// the default CSS transform group.
-const { sizingTokenPath, sizingTokenAbsPosix, hasSizingTokenFile } =
-  getSizingTokenInfo(tokenBase);
-const isSizingToken = createIsSizingToken(sizingTokenAbsPosix);
-
-const sizingUnitByPathTransform = createSizingUnitByPathTransform(isSizingToken);
-const sizingLeafNameTransform = createSizingLeafNameTransform(isSizingToken);
 const cssVariablesNoSpaceCommasFormat = createCssVariablesNoSpaceCommasFormat({
   getAliasInfo,
   toKebab,
   warn,
 });
 
-// Register custom transforms used by both generic CSS output and sizing output.
+// Register custom transforms used by both default and intent outputs.
 StyleDictionary.registerTransform({
   name: 'value/color-warn-normalize',
   ...colorWarnNormalizeTransform,
@@ -69,25 +66,26 @@ StyleDictionary.registerTransform({
   ...colorRgbaV4Transform,
 });
 StyleDictionary.registerTransform({
-  name: 'name/sizing-leaf-kebab',
-  ...sizingLeafNameTransform,
+  name: 'name/intent-leaf-kebab',
+  ...intentLeafNameTransform,
 });
 StyleDictionary.registerTransform({
   name: 'value/number-round-4',
   ...numberRoundTransform,
 });
 StyleDictionary.registerTransform({
-  name: 'value/sizing-unit-by-path',
-  ...sizingUnitByPathTransform,
+  name: 'value/intent-unit-by-path',
+  ...intentUnitByPathTransform,
 });
 
 // Register transform groups:
-// - css/without-group: default CSS output with color normalization
-// - sizing/without-group: rounding + path-based unit conversion for sizing.json
+// - css/without-group: default CSS output
+// - intent/without-group: sass/css top-level intent outputs with unit-by-path
 StyleDictionary.registerTransformGroup({
   name: 'css/without-group',
   transforms: [
     'name/kebab',
+    'value/number-round-4',
     'value/color-warn-normalize',
     'color/css',
     'value/color-rgba-v4',
@@ -96,11 +94,16 @@ StyleDictionary.registerTransformGroup({
   ],
 });
 StyleDictionary.registerTransformGroup({
-  name: 'sizing/without-group',
+  name: 'intent/without-group',
   transforms: [
-    'name/sizing-leaf-kebab',
+    'name/intent-leaf-kebab',
     'value/number-round-4',
-    'value/sizing-unit-by-path',
+    'value/intent-unit-by-path',
+    'value/color-warn-normalize',
+    'color/css',
+    'value/color-rgba-v4',
+    'time/seconds',
+    'size/px',
   ],
 });
 
@@ -110,24 +113,35 @@ StyleDictionary.registerFormat({
 });
 
 // Each token file gets a file-scoped filter so generated CSS files map 1:1
-// with token JSON inputs.
-for (const { filterName, fullPathAbsPosix } of filtersToRegister) {
+// with token JSON inputs. includeRoots/excludeRoots further split mixed files
+// so intent groups (sass/css) and non-intent groups are emitted separately.
+for (const {
+  filterName,
+  fullPathAbsPosix,
+  includeRoots,
+  excludeRoots,
+} of filtersToRegister) {
+  const includeSet = includeRoots ? new Set(includeRoots) : null;
+  const excludeSet = excludeRoots ? new Set(excludeRoots) : null;
   StyleDictionary.registerFilter({
     name: filterName,
-    filter: (token) => toAbsPosix(token.filePath) === fullPathAbsPosix,
+    filter: (token) => {
+      if (toAbsPosix(token.filePath) !== fullPathAbsPosix) return false;
+      const topLevel =
+        Array.isArray(token.path) && token.path.length ? token.path[0] : '';
+      if (includeSet && !includeSet.has(topLevel)) return false;
+      if (excludeSet && excludeSet.has(topLevel)) return false;
+      return true;
+    },
   });
 }
-
-// Register sizing-only filters for sass vs css branches in sizing.json.
-registerSizingFilters(StyleDictionary, hasSizingTokenFile, isSizingToken);
 
 const platforms = createPlatforms({
   baseDir,
   tokenBase,
-  files,
-  hasSizingTokenFile,
-  sizingTokenPath,
-  cssFormatName,
+  defaultCssFiles,
+  intentCssFiles,
+  intentScssFiles,
 });
 
 export default {

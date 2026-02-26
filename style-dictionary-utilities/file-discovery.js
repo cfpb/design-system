@@ -1,6 +1,9 @@
+
 import fs from 'fs';
 import path from 'path';
 import { toAbsPosix, toPosix } from './path-utils.js';
+
+const INTENT_ROOTS = new Set(['sass', 'css']);
 
 /**
  * Return nested subdirectories in depth-first order.
@@ -18,52 +21,162 @@ export function getAllDirs(dirPath) {
   return out;
 }
 
+const toFilterId = (value) =>
+  value.replace(/[^a-zA-Z0-9_.-]/g, '_').replace(/[^a-zA-Z0-9_]/g, '_');
+
+const createFilterName = (relDir, jsonFile, branch) =>
+  `filter__${toFilterId(relDir || '_')}__${toFilterId(jsonFile)}__${toFilterId(branch)}`;
+
+const getDestination = (relDir, basename, ext, suffix = '') =>
+  relDir === ''
+    ? `${basename}${suffix}.${ext}`
+    : `${toPosix(relDir)}/${basename}${suffix}.${ext}`;
+
+const getTokenTopLevelRoots = (fullPath) => {
+  const json = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+  // $extensions is metadata and not a token branch.
+  return Object.keys(json).filter((key) => key !== '$extensions');
+};
+
+const classifyRoots = (roots) => {
+  const hasSassRoot = roots.includes('sass');
+  const hasCssRoot = roots.includes('css');
+  const nonIntentRoots = roots.filter((root) => !INTENT_ROOTS.has(root));
+  return {
+    hasSassRoot,
+    hasCssRoot,
+    nonIntentRoots,
+    hasNonIntentRoots: nonIntentRoots.length > 0,
+  };
+};
+
+const buildFilterSpec = ({
+  filterName,
+  fullPathAbsPosix,
+  includeRoots = null,
+  excludeRoots = null,
+}) => ({
+  filterName,
+  fullPathAbsPosix,
+  includeRoots,
+  excludeRoots,
+});
+
 export function buildFilesAndFilters({
   basePath,
-  excludedFiles = [],
-  format,
-  fileOptions,
+  cssFormat,
+  cssFileOptions,
+  scssFileOptions,
 }) {
-  // Build one output file per input JSON file, preserving folder structure.
-  // We also generate a dedicated filter name per source file so Style Dictionary
-  // can isolate tokens by origin.
+  // Discovery classifies each token file by top-level intent:
+  // - sass-only: emit .scss
+  // - css-only: emit .css
+  // - dual: emit both
+  // - default: emit normal .css
+  // Mixed files (intent + non-intent roots) emit non-intent roots through the
+  // default pipeline, optionally using .default.css to avoid collisions.
   const tokenDirs = [basePath, ...getAllDirs(basePath)];
-  const files = [];
+  const defaultCssFiles = [];
+  const intentCssFiles = [];
+  const intentScssFiles = [];
   const filtersToRegister = [];
-  const excluded = new Set(excludedFiles);
 
   for (const dirPath of tokenDirs) {
     const jsonFiles = fs
       .readdirSync(dirPath)
-      .filter((file) => file.endsWith('.json') && !excluded.has(file));
+      .filter((file) => file.endsWith('.json'));
 
     for (const jsonFile of jsonFiles) {
-      const fullPathAbsPosix = toAbsPosix(path.join(dirPath, jsonFile));
+      const fullPath = path.join(dirPath, jsonFile);
+      const fullPathAbsPosix = toAbsPosix(fullPath);
       const relDir = path.relative(basePath, dirPath);
-      const cssFileName = `${path.basename(jsonFile, '.json')}.css`;
+      const basename = path.basename(jsonFile, '.json');
+      const roots = getTokenTopLevelRoots(fullPath);
+      const { hasSassRoot, hasCssRoot, nonIntentRoots, hasNonIntentRoots } =
+        classifyRoots(roots);
 
-      // destination mirrors the token source directory layout under buildPath.
-      const destination =
-        relDir === '' ? cssFileName : `${toPosix(relDir)}/${cssFileName}`;
+      if (hasCssRoot) {
+        const filterName = createFilterName(relDir, jsonFile, 'intent_css');
+        filtersToRegister.push(
+          buildFilterSpec({
+            filterName,
+            fullPathAbsPosix,
+            includeRoots: ['css'],
+          }),
+        );
+        intentCssFiles.push({
+          destination: getDestination(relDir, basename, 'css'),
+          format: cssFormat,
+          filter: filterName,
+          options: { ...cssFileOptions },
+        });
+      }
 
-      // Style Dictionary filter names must be simple identifiers.
-      const filterName = `filter__${(relDir || '_').replace(
-        /[^a-zA-Z0-9_/-]/g,
-        '_',
-      )}__${jsonFile.replace(/[^a-zA-Z0-9_.-]/g, '_')}`.replace(
-        /[^a-zA-Z0-9_]/g,
-        '_',
-      );
+      if (hasSassRoot) {
+        const filterName = createFilterName(relDir, jsonFile, 'intent_sass');
+        filtersToRegister.push(
+          buildFilterSpec({
+            filterName,
+            fullPathAbsPosix,
+            includeRoots: ['sass'],
+          }),
+        );
+        intentScssFiles.push({
+          destination: getDestination(relDir, basename, 'scss'),
+          format: 'scss/variables',
+          filter: filterName,
+          options: { ...scssFileOptions },
+        });
+      }
 
-      filtersToRegister.push({ filterName, fullPathAbsPosix });
-      files.push({
-        destination,
-        format,
-        filter: filterName,
-        options: { ...fileOptions },
-      });
+      if (!hasSassRoot && !hasCssRoot) {
+        const filterName = createFilterName(relDir, jsonFile, 'default_all');
+        filtersToRegister.push(
+          buildFilterSpec({
+            filterName,
+            fullPathAbsPosix,
+          }),
+        );
+        defaultCssFiles.push({
+          destination: getDestination(relDir, basename, 'css'),
+          format: cssFormat,
+          filter: filterName,
+          options: { ...cssFileOptions },
+        });
+        continue;
+      }
+
+      if (hasNonIntentRoots) {
+        const filterName = createFilterName(
+          relDir,
+          jsonFile,
+          'default_non_intent',
+        );
+        filtersToRegister.push(
+          buildFilterSpec({
+            filterName,
+            fullPathAbsPosix,
+            includeRoots: nonIntentRoots,
+          }),
+        );
+        // Mixed files with an intent css branch would otherwise overwrite
+        // <basename>.css. We emit non-intent branches to <basename>.default.css
+        // to preserve intent transform behavior and avoid destination collisions.
+        const suffix = hasCssRoot ? '.default' : '';
+        defaultCssFiles.push({
+          destination: getDestination(relDir, basename, 'css', suffix),
+          format: cssFormat,
+          filter: filterName,
+          options: { ...cssFileOptions },
+        });
+      }
     }
   }
 
-  return { files, filtersToRegister };
+  return {
+    defaultCssFiles,
+    intentCssFiles,
+    intentScssFiles,
+    filtersToRegister,
+  };
 }

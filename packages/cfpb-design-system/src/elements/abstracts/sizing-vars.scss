@@ -1,7 +1,10 @@
-@forward './sizing-tokens';
+// These imports are basename-driven outputs from tokens/abstracts/sizing.json:
+// - sizing.scss from top-level "sass"
+// - sizing.css from top-level "css"
+@forward './sizing';
 @use 'sass:math';
-@use './sizing-tokens' as *;
-@use './sizing-tokens-custom-props.css';
+@use './sizing' as *;
+@use './sizing.css';
 
 // Derived from tokenized sizing primitives.
 $base-line-height: math.div($base-line-height-px, $base-font-size-px);

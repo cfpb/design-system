@@ -1,435 +1,65 @@
-// style-dictionary.config.js — ESM
-// Summary:
-// - Builds one CSS file per token JSON under packages/cfpb-design-system/src/tokens.
-// - Uses DTCG $type for transforms; names are full-path kebab-case.
-// - Prefers hex colors, emits CSS v4 rgba() only when RGBA is present and hex is absent.
-// - Preserves Figma alias metadata as var(--...) with collision checks.
-// - Outputs tight comma spacing in CSS values without touching comments.
+// Style Dictionary entrypoint.
+// This file intentionally stays as a thin composition layer:
+// - utility modules hold transform/filter/format implementation details
+// - this file wires registration order and platform outputs together
 import StyleDictionary from 'style-dictionary';
-import fs from 'fs';
-import path from 'path';
 import {
   logBrokenReferenceLevels,
   logVerbosityLevels,
   logWarningLevels,
-  propertyFormatNames,
 } from 'style-dictionary/enums';
-import { fileHeader, formattedVariables } from 'style-dictionary/utils';
+import path from 'path';
+import { toAbsPosix, toKebab, toPosix } from './style-dictionary-utilities/path-utils.js';
+import { buildFilesAndFilters } from './style-dictionary-utilities/file-discovery.js';
+import {
+  colorRgbaV4Transform,
+  colorWarnNormalizeTransform,
+  getAliasInfo,
+  warn,
+} from './style-dictionary-utilities/color.js';
+import {
+  createIsSizingToken,
+  createSizingLeafNameTransform,
+  createSizingUnitByPathTransform,
+  getSizingTokenInfo,
+  numberRoundTransform,
+  registerSizingFilters,
+} from './style-dictionary-utilities/sizing.js';
+import { createCssVariablesNoSpaceCommasFormat } from './style-dictionary-utilities/css-variables-no-space-commas.js';
+import { createPlatforms } from './style-dictionary-utilities/platforms.js';
 
-// Paths and shared constants for token IO and formatting.
 const baseDir = 'packages/cfpb-design-system/src';
 const tokenBase = path.resolve(baseDir, 'tokens');
 const cssFormatName = 'css/variables-no-space-commas';
-const hexPattern = /^#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
-const rgbaPattern = /^rgba\(/i;
-const numberRoundingPrecision = 4;
 
-const toPosix = (fsPath) => fsPath.split(path.sep).join('/');
-const toAbsPosix = (fsPath) =>
-  toPosix(path.isAbsolute(fsPath) ? fsPath : path.resolve(fsPath));
-const toKebab = (value) =>
-  String(value)
-    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
-    .replace(/[\s_]+/g, '-')
-    .replace(/-+/g, '-')
-    .toLowerCase();
-const sizingTokenPath = path.resolve(tokenBase, 'abstracts/sizing.json');
-const sizingTokenAbsPosix = toAbsPosix(sizingTokenPath);
-const hasSizingTokenFile = fs.existsSync(sizingTokenPath);
-
-/**
- * Return nested subdirectories in depth-first order.
- * @param {string} dirPath
- * @returns {string[]}
- */
-function getAllDirs(dirPath) {
-  const out = [];
-  for (const dirent of fs.readdirSync(dirPath, { withFileTypes: true })) {
-    if (dirent.isDirectory() && !dirent.name.startsWith('.')) {
-      const full = path.join(dirPath, dirent.name);
-      out.push(full, ...getAllDirs(full));
-    }
-  }
-  return out;
-}
-
-const roundNumber = (value, precision = numberRoundingPrecision) => {
-  const factor = 10 ** precision;
-  const rounded = Math.round((value + Number.EPSILON) * factor) / factor;
-  return Number.isInteger(rounded)
-    ? rounded
-    : Number(rounded.toFixed(precision).replace(/\.?0+$/, ''));
-};
-
-// Emit warnings in a way that matches Style Dictionary log settings.
-const warn = (options, message) => {
-  if (options.log?.warnings === logWarningLevels.error)
-    throw new Error(message);
-  if (
-    options.log?.warnings !== logWarningLevels.disabled &&
-    options.log?.verbosity !== logVerbosityLevels.silent
-  ) {
-    // eslint-disable-next-line no-console
-    console.warn(message);
-  }
-};
-
-// Normalize comma spacing inside single-line CSS values, leaving comments untouched.
-const normalizeCommaSpacing = (value) =>
-  value.replace(/(:[^;\n]*)(;)/g, (match, valuePart, semi) =>
-    valuePart.includes(',')
-      ? `${valuePart.replace(/\s*,\s*/g, ',')}${semi}`
-      : match,
-  );
-
-// Build one CSS output per token JSON and register per-file filters.
-const buildFilesAndFilters = (basePath) => {
-  const tokenDirs = [basePath, ...getAllDirs(basePath)];
-  const files = [];
-  const filtersToRegister = [];
-
-  for (const dirPath of tokenDirs) {
-    const jsonFiles = fs
-      .readdirSync(dirPath)
-      .filter((file) => file.endsWith('.json') && file !== 'sizing.json');
-    for (const jsonFile of jsonFiles) {
-      const fullPathAbsPosix = toAbsPosix(path.join(dirPath, jsonFile));
-      const relDir = path.relative(basePath, dirPath);
-      const cssFileName = `${path.basename(jsonFile, '.json')}.css`;
-      const destination =
-        relDir === '' ? cssFileName : `${toPosix(relDir)}/${cssFileName}`;
-      const filterName = `filter__${(relDir || '_').replace(
-        /[^a-zA-Z0-9_/-]/g,
-        '_',
-      )}__${jsonFile.replace(/[^a-zA-Z0-9_.-]/g, '_')}`.replace(
-        /[^a-zA-Z0-9_]/g,
-        '_',
-      );
-      filtersToRegister.push({ filterName, fullPathAbsPosix });
-      files.push({
-        destination,
-        format: cssFormatName,
-        filter: filterName,
-        options: {
-          outputReferences: true,
-          usesDtcg: true,
-          selector: ':root',
-          sort: 'name',
-        },
-      });
-    }
-  }
-
-  return { files, filtersToRegister };
-};
-
-// Color helpers for DTCG $value shapes and css rgba passthrough.
-const isColorToken = (token) => (token?.$type ?? token?.type) === 'color';
-const getRawTokenValue = (token) =>
-  token?.original?.$value ??
-  token?.$value ??
-  token?.original?.value ??
-  token?.value;
-const isReferenceValue = (value) =>
-  typeof value === 'string' &&
-  value.trim().startsWith('{') &&
-  value.trim().endsWith('}');
-const getHexValue = (value) => {
-  if (typeof value === 'string') {
-    const trimmed = value.trim();
-    return hexPattern.test(trimmed) ? trimmed : null;
-  }
-  const hex =
-    value && typeof value === 'object' ? value.hex || value.hexa : null;
-  return typeof hex === 'string' && hexPattern.test(hex.trim())
-    ? hex.trim()
-    : null;
-};
-const parseRgbaParts = (value) => {
-  if (!value) return null;
-  if (typeof value === 'string') {
-    const trimmed = value.trim();
-    if (!rgbaPattern.test(trimmed)) return null;
-    const start = trimmed.indexOf('(');
-    const end = trimmed.lastIndexOf(')');
-    if (start === -1 || end === -1 || end <= start + 1) return null;
-    const body = trimmed.slice(start + 1, end).trim();
-    if (!body) return null;
-    if (body.includes('/')) {
-      const [rgbPart, alphaPart] = body.split('/');
-      const rgbValues = rgbPart
-        .replace(/,/g, ' ')
-        .trim()
-        .split(/\s+/)
-        .filter(Boolean);
-      const alpha = alphaPart.trim();
-      return rgbValues.length === 3 && alpha
-        ? { r: rgbValues[0], g: rgbValues[1], b: rgbValues[2], a: alpha }
-        : null;
-    }
-    const parts = body.split(/[\s,]+/).filter(Boolean);
-    return parts.length === 4
-      ? { r: parts[0], g: parts[1], b: parts[2], a: parts[3] }
-      : null;
-  }
-  if (typeof value === 'object' && Array.isArray(value.components)) {
-    const [r, g, b] = value.components;
-    const a = value.alpha ?? value.opacity;
-    return a === undefined || a === null ? null : { r, g, b, a };
-  }
-  return null;
-};
-// Describe a token's color payload to decide hex vs rgba vs normalization.
-const getColorInfo = (token) => {
-  const raw = getRawTokenValue(token);
-  const hex = getHexValue(raw);
-  const isRef = isReferenceValue(raw);
-  const rgbaParts = !hex && !isRef ? parseRgbaParts(raw) : null;
-  return { raw, hex, rgbaParts, isRef };
-};
-
-// Convert DTCG color objects to a shape color/css can consume.
-const normalizeColorInput = (value) => {
-  if (!value || typeof value !== 'object') return value;
-  if (value.colorSpace === 'srgb' && Array.isArray(value.components)) {
-    const hex = getHexValue(value);
-    if (hex) return hex;
-    const [r, g, b] = value.components;
-    const a = value.alpha ?? value.opacity;
-    const toChannel = (channelValue) =>
-      channelValue <= 1
-        ? Math.round(channelValue * 255)
-        : Math.round(channelValue);
-    const out = {
-      r: toChannel(r),
-      g: toChannel(g),
-      b: toChannel(b),
-    };
-    if (a !== undefined && a !== null) {
-      out.a = a > 1 && a <= 255 ? a / 255 : a;
-    }
-    return out;
-  }
-  return value;
-};
-
-// Prefer Figma alias metadata so CSS keeps var(--alias) instead of resolved values.
-const getAliasInfo = (token) => {
-  const aliasData =
-    token?.$extensions?.['com.figma.aliasData'] ??
-    token?.extensions?.['com.figma.aliasData'];
-  return aliasData?.targetVariableName
-    ? {
-        name: aliasData.targetVariableName,
-        setName: aliasData.targetVariableSetName,
-      }
-    : null;
-};
-
-const isSizingToken = (token) =>
-  Boolean(token?.filePath) && toAbsPosix(token.filePath) === sizingTokenAbsPosix;
-const getSizingPathUnit = (token) =>
-  Array.isArray(token?.path) && token.path.length > 1 ? token.path[1] : '';
-const isSizingNumberToken = (token) => (token?.$type ?? token?.type) === 'number';
-
-const { files, filtersToRegister } = buildFilesAndFilters(tokenBase);
-
-// Warn when we must normalize non-hex color objects (except RGBA passthrough).
-const colorWarnNormalizeTransform = {
-  type: 'value',
-  filter: isColorToken,
-  transform: (token, _, options = {}) => {
-    const info = getColorInfo(token);
-    const value = normalizeColorInput(info.raw);
-    if (
-      info.raw &&
-      typeof info.raw === 'object' &&
-      !info.hex &&
-      !info.rgbaParts
-    ) {
-      const tokenName =
-        token.name ||
-        (Array.isArray(token.path) ? token.path.join('.') : 'unknown');
-      const tokenFile = token.filePath || 'unknown file';
-      warn(
-        options,
-        `Color token ${tokenName} in ${tokenFile} will be normalized by color/css.`,
-      );
-    }
-    return value;
+const { files, filtersToRegister } = buildFilesAndFilters({
+  basePath: tokenBase,
+  excludedFiles: ['sizing.json'],
+  format: cssFormatName,
+  fileOptions: {
+    outputReferences: true,
+    usesDtcg: true,
+    selector: ':root',
+    sort: 'name',
   },
-};
+});
 
-// Emit CSS Color v4 rgba() only when RGBA is present and hex is absent.
-const colorRgbaV4Transform = {
-  type: 'value',
-  filter: isColorToken,
-  transform: (token) => {
-    const info = getColorInfo(token);
-    if (!info.rgbaParts) return token.$value ?? token.value;
-    const { r, g, b, a } = info.rgbaParts;
-    return `rgba(${r} ${g} ${b} / ${a})`;
-  },
-};
+// Sizing tokens are generated from a dedicated source file so they can use
+// path-aware unit mapping (dimension-px/rem/em) while the rest of tokens use
+// the default CSS transform group.
+const { sizingTokenPath, sizingTokenAbsPosix, hasSizingTokenFile } =
+  getSizingTokenInfo(tokenBase);
+const isSizingToken = createIsSizingToken(sizingTokenAbsPosix);
 
-// Round floating point noise for numeric token values exported from Figma.
-const numberRoundTransform = {
-  type: 'value',
-  filter: isSizingNumberToken,
-  transform: (token) => {
-    const value = token.$value ?? token.value;
-    if (typeof value === 'string') return value;
-    if (typeof value !== 'number') return value;
-    return roundNumber(value);
-  },
-};
+const sizingUnitByPathTransform = createSizingUnitByPathTransform(isSizingToken);
+const sizingLeafNameTransform = createSizingLeafNameTransform(isSizingToken);
+const cssVariablesNoSpaceCommasFormat = createCssVariablesNoSpaceCommasFormat({
+  getAliasInfo,
+  toKebab,
+  warn,
+});
 
-// Convert sizing taxonomy buckets into unitful values.
-const sizingUnitByPathTransform = {
-  type: 'value',
-  filter: isSizingToken,
-  transform: (token) => {
-    const value = token.$value ?? token.value;
-    if (typeof value === 'string') return value;
-    if (typeof value !== 'number') return value;
-    const unitBucket = getSizingPathUnit(token);
-    if (unitBucket === 'dimension-px') return `${value}px`;
-    if (unitBucket === 'dimension-rem') return `${value}rem`;
-    if (unitBucket === 'dimension-em') return `${value}em`;
-    return value;
-  },
-};
-
-// Keep sizing token names stable by using the leaf path segment only.
-const sizingLeafNameTransform = {
-  type: 'name',
-  filter: isSizingToken,
-  transform: (token) =>
-    toKebab(
-      Array.isArray(token.path) && token.path.length
-        ? token.path[token.path.length - 1]
-        : token.name,
-    ),
-};
-
-// Custom CSS formatter that preserves alias refs and tightens commas.
-const cssVariablesNoSpaceCommasFormat = async ({
-  dictionary,
-  options = {},
-  file,
-}) => {
-  const selector = Array.isArray(options.selector)
-    ? options.selector
-    : options.selector
-      ? [options.selector]
-      : [':root'];
-  const {
-    outputReferences,
-    outputReferenceFallbacks,
-    usesDtcg,
-    formatting,
-    sort,
-  } = options;
-  const header = await fileHeader({
-    file,
-    formatting: formatting ? { ...formatting, prefix: undefined } : formatting,
-    options,
-  });
-  const indentation = formatting?.indentation || '  ';
-  const nestInSelector = (content, currentSelector, indent) =>
-    `${indent}${currentSelector} {\n${content}\n${indent}}`;
-  const aliasInfoByName = new Map();
-  if (outputReferences && usesDtcg) {
-    for (const token of dictionary.allTokens) {
-      const aliasInfo = getAliasInfo(token);
-      if (!aliasInfo?.name) continue;
-      const aliasKey = toKebab(aliasInfo.name);
-      const record = aliasInfoByName.get(aliasKey) || {
-        count: 0,
-        setNames: new Set(),
-        missingSetName: false,
-      };
-      record.count += 1;
-      if (aliasInfo.setName) record.setNames.add(toKebab(aliasInfo.setName));
-      else record.missingSetName = true;
-      aliasInfoByName.set(aliasKey, record);
-    }
-  }
-  const warnedAliases = new Set();
-  const dictionaryForAliases =
-    outputReferences && usesDtcg
-      ? {
-          ...dictionary,
-          allTokens: dictionary.allTokens.map((token) => {
-            const aliasInfo = getAliasInfo(token);
-            if (!aliasInfo) return token;
-            const aliasKey = toKebab(aliasInfo.name);
-            const record = aliasInfoByName.get(aliasKey);
-            const hasCollision = record && record.count > 1;
-            if (hasCollision && record.missingSetName) {
-              throw new Error(
-                `Alias name collision for "${aliasInfo.name}" without targetVariableSetName. ` +
-                  `Cannot disambiguate in ${token.filePath || 'unknown file'}.`,
-              );
-            }
-            if (
-              hasCollision &&
-              record.setNames.size > 1 &&
-              !warnedAliases.has(aliasKey)
-            ) {
-              warn(
-                options,
-                `Alias name collision for "${aliasInfo.name}". ` +
-                  'Multiple collections share the same alias name.',
-              );
-              warnedAliases.add(aliasKey);
-            }
-            const aliasVar = `var(--${aliasKey})`;
-            return {
-              ...token,
-              value: aliasVar,
-              $value: aliasVar,
-              original: {
-                ...token.original,
-                value: aliasVar,
-                $value: aliasVar,
-              },
-            };
-          }),
-        }
-      : dictionary;
-
-  const variablesNoCommaSpaces = normalizeCommaSpacing(
-    formattedVariables({
-      format: propertyFormatNames.css,
-      dictionary: dictionaryForAliases,
-      outputReferences,
-      outputReferenceFallbacks,
-      formatting: {
-        ...formatting,
-        indentation: indentation.repeat(selector.length),
-      },
-      usesDtcg,
-      sort,
-    }),
-  );
-  return (
-    header +
-    selector
-      .reverse()
-      .reduce(
-        (content, currentSelector, index) =>
-          nestInSelector(
-            content,
-            currentSelector,
-            indentation.repeat(selector.length - 1 - index),
-          ),
-        variablesNoCommaSpaces,
-      ) +
-    '\n'
-  );
-};
-
+// Register custom transforms used by both generic CSS output and sizing output.
 StyleDictionary.registerTransform({
   name: 'value/color-warn-normalize',
   ...colorWarnNormalizeTransform,
@@ -450,6 +80,10 @@ StyleDictionary.registerTransform({
   name: 'value/sizing-unit-by-path',
   ...sizingUnitByPathTransform,
 });
+
+// Register transform groups:
+// - css/without-group: default CSS output with color normalization
+// - sizing/without-group: rounding + path-based unit conversion for sizing.json
 StyleDictionary.registerTransformGroup({
   name: 'css/without-group',
   transforms: [
@@ -469,63 +103,32 @@ StyleDictionary.registerTransformGroup({
     'value/sizing-unit-by-path',
   ],
 });
+
 StyleDictionary.registerFormat({
   name: cssFormatName,
   format: cssVariablesNoSpaceCommasFormat,
 });
 
+// Each token file gets a file-scoped filter so generated CSS files map 1:1
+// with token JSON inputs.
 for (const { filterName, fullPathAbsPosix } of filtersToRegister) {
   StyleDictionary.registerFilter({
     name: filterName,
     filter: (token) => toAbsPosix(token.filePath) === fullPathAbsPosix,
   });
 }
-if (hasSizingTokenFile) {
-  StyleDictionary.registerFilter({
-    name: 'filter__sizing__sass',
-    filter: (token) => isSizingToken(token) && token.path?.[0] === 'sass',
-  });
-  StyleDictionary.registerFilter({
-    name: 'filter__sizing__css',
-    filter: (token) => isSizingToken(token) && token.path?.[0] === 'css',
-  });
-}
 
-const sizingPlatforms = hasSizingTokenFile
-  ? {
-      scssSizing: {
-        source: [toPosix(sizingTokenPath)],
-        transformGroup: 'sizing/without-group',
-        buildPath: `${baseDir}/elements/`,
-        files: [
-          {
-            destination: 'abstracts/sizing-tokens.scss',
-            format: 'scss/variables',
-            filter: 'filter__sizing__sass',
-            options: { outputReferences: true, usesDtcg: true, sort: 'name' },
-          },
-        ],
-      },
-      cssSizing: {
-        source: [toPosix(sizingTokenPath)],
-        transformGroup: 'sizing/without-group',
-        buildPath: `${baseDir}/elements/`,
-        files: [
-          {
-            destination: 'abstracts/sizing-tokens-custom-props.css',
-            format: cssFormatName,
-            filter: 'filter__sizing__css',
-            options: {
-              outputReferences: true,
-              usesDtcg: true,
-              selector: ':root',
-              sort: 'name',
-            },
-          },
-        ],
-      },
-    }
-  : {};
+// Register sizing-only filters for sass vs css branches in sizing.json.
+registerSizingFilters(StyleDictionary, hasSizingTokenFile, isSizingToken);
+
+const platforms = createPlatforms({
+  baseDir,
+  tokenBase,
+  files,
+  hasSizingTokenFile,
+  sizingTokenPath,
+  cssFormatName,
+});
 
 export default {
   usesDtcg: true,
@@ -535,16 +138,5 @@ export default {
     verbosity: logVerbosityLevels.verbose,
     errors: { brokenReferences: logBrokenReferenceLevels.throw },
   },
-  platforms: {
-    css: {
-      source: [
-        `${toPosix(tokenBase)}/**/*.json`,
-        `!${toPosix(tokenBase)}/**/sizing.json`,
-      ],
-      transformGroup: 'css/without-group',
-      buildPath: `${baseDir}/elements/`,
-      files,
-    },
-    ...sizingPlatforms,
-  },
+  platforms,
 };

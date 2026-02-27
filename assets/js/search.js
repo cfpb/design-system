@@ -4,6 +4,9 @@ const searchStore = window.searchStore;
 
 /**
  * Extracts a snippet, decodes URI components, and highlights the match.
+ * @param result
+ * @param item
+ * @param searchTerm
  */
 function getHighlightedSnippet(result, item, searchTerm) {
   // 1. Determine the best field to use for the preview
@@ -13,18 +16,19 @@ function getHighlightedSnippet(result, item, searchTerm) {
 
   // Prioritize fields that aren't the title or ID.
   const previewField =
-    matchedFields.find((f) => f !== 'title' && f !== 'id') ||
-    searchStore.fields.find((f) => f !== 'title' && f !== 'id') ||
+    matchedFields.find((fld) => fld !== 'title' && fld !== 'id') ||
+    searchStore.fields.find((fld) => fld !== 'title' && fld !== 'id') ||
     'content';
 
-  let rawText = (item[previewField] || '').toString();
+  const rawText = (item[previewField] || '').toString();
 
   // 2. Decode the URI characters (like %0A, %7B, etc).
   let text = '';
   try {
     // Replace '+' with space first, then decode.
     text = decodeURIComponent(rawText.replace(/\+/g, ' '));
-  } catch (e) {
+    // eslint-disable-next-line no-unused-vars
+  } catch (err) {
     // Fallback if the string contains malformed URI sequences.
     text = rawText.replace(/\+/g, ' ');
   }
@@ -58,14 +62,20 @@ function getHighlightedSnippet(result, item, searchTerm) {
   return snippet.replace(regex, '<mark>$1</mark>');
 }
 
-function displaySearchResults(elm, results, searchTerm, store) {
-  let resultsString = `<p>${results.length} result${results.length !== 1 ? 's' : ''} for '${searchTerm}'</p>`;
+/**
+ * @param elm - the HTML element into which to write the results.
+ * @param results - a list of matched results.
+ * @param term - the search term the user entered.
+ * @param store
+ */
+function displaySearchResults(elm, results, term, store) {
+  let resultsString = `<p>${results.length} result${results.length !== 1 ? 's' : ''} for '${term}'</p>`;
 
   for (const result of results) {
     const item = store[result.id];
     if (!item) continue;
 
-    const highlightedSnippet = getHighlightedSnippet(result, item, searchTerm);
+    const highlightedSnippet = getHighlightedSnippet(result, item, term);
 
     resultsString += `
       <li>
@@ -80,6 +90,9 @@ function displaySearchResults(elm, results, searchTerm, store) {
   elm.innerHTML = resultsString;
 }
 
+/**
+ * @param store - array of documents to search.
+ */
 function initializeSearchIndex(store) {
   // Ensure we use the fields defined in your store.
   const searchFields = store.fields || [];
@@ -124,7 +137,7 @@ if (searchTerm && searchResultsElm) {
 /**
  * Display no search results in markup.
  * @param {HTMLElement} elm - the HTML element to write to.
- * @param {string} term - the search term
+ * @param {string} term - the search term the user entered.
  */
 function displayNoSearchResults(elm, term) {
   elm.innerHTML = `<li>No search results found for '${term}'.</li>`;

@@ -1,0 +1,104 @@
+<a href="#">Default</a>
+
+<br />
+<br />
+
+<a href="#" class="visited">Visited</a>
+
+<br />
+<br />
+
+<a href="#" class="hover">Hovered</a>
+
+<br />
+<br />
+
+<a href="#" class="focus">Focused</a>
+
+<br />
+<br />
+
+<a href="#" class="active">Active</a>
+
+<br />
+<br />
+
+<a href="#">
+  <span class="a-link__text">Link with icon</span> {% include
+  icons/external-link.svg %}
+</a>
+
+<br />
+<br />
+<hr />
+<br />
+
+<h3 class="h4">Standalone links</h3>
+
+<a class="a-link a-link--jump" href="#">
+  <span class="a-link__text">Link without icon</span>
+</a>
+
+<br />
+<br />
+
+<a class="a-link a-link--jump" href="#">
+  {% include icons/left.svg %} <span class="a-link__text">Go back</span>
+</a>
+
+<br />
+<br />
+
+<a class="a-link a-link--jump" href="#">
+  <span class="a-link__text">Continue</span> {% include icons/right.svg %}
+</a>
+
+<br />
+<br />
+
+<a class="a-link a-link--jump" href="#">
+  <span class="a-link__text">External link</span> {% include
+  icons/external-link.svg %}
+</a>
+
+<br />
+<br />
+
+<a class="a-link a-link--jump" href="#">
+  <span class="a-link__text">Document or file</span> {% include
+  icons/download.svg %}
+</a>
+
+<br />
+<br />
+<hr />
+<br />
+
+<h3 class="h4">List link</h3>
+
+<p>Links that appear in an unordered list.</p>
+
+<ul class="m-list m-list--links">
+  <li class="m-list__item">
+    <a class="a-link a-link--jump" href="#">
+      {% include icons/left.svg %} <span class="a-link__text">Go back</span>
+    </a>
+  </li>
+  <li class="m-list__item">
+    <a class="a-link a-link--jump" href="#"
+      ><span class="a-link__text">Continue</span> {% include icons/right.svg %}
+    </a>
+  </li>
+  <li class="m-list__item">
+    <a class="a-link a-link--jump" href="#"
+      ><span class="a-link__text">External link</span> {% include
+      icons/external-link.svg %}
+    </a>
+  </li>
+  <li class="m-list__item">
+    <a class="a-link a-link--jump" href="#"
+      ><span class="a-link__text">Document or file</span> {% include
+      icons/download.svg %}
+    </a>
+  </li>
+</ul>

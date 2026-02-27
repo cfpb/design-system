@@ -1,0 +1,107 @@
+<div class="m-btn-group">
+  <button class="a-btn" title="Default">Default</button>
+
+  <button class="a-btn hover" title="Hover">Hover</button>
+
+  <button class="a-btn focus" title="Focus">Focus</button>
+
+  <button class="a-btn active" title="Active">Active</button>
+</div>
+
+<br />
+
+<div class="m-btn-group">
+  <button class="a-btn a-btn--secondary" title="Default">Default</button>
+
+  <button class="a-btn a-btn--secondary hover" title="Hover">Hover</button>
+
+  <button class="a-btn a-btn--secondary focus" title="Focus">Focus</button>
+
+  <button class="a-btn a-btn--secondary active" title="Active">Active</button>
+</div>
+
+<br />
+
+<div class="m-btn-group">
+  <button class="a-btn a-btn--warning" title="Default">Default</button>
+
+  <button class="a-btn a-btn--warning hover" title="Hover">Hover</button>
+
+  <button class="a-btn a-btn--warning focus" title="Focus">Focus</button>
+
+  <button class="a-btn a-btn--warning active" title="Active">Active</button>
+</div>
+
+<br />
+
+<button class="a-btn a-btn--disabled" title="Default" disabled>Disabled</button>
+
+<br />
+<hr />
+<br />
+
+<h3 class="h4">Full-width button (on x-small screens)</h3>
+
+<div class="m-btn-group">
+  <button class="a-btn a-btn--full-on-xs" title="Default">Default</button>
+
+  <button class="a-btn a-btn--full-on-xs hover" title="Hover">Hover</button>
+
+  <button class="a-btn a-btn--full-on-xs focus" title="Focus">Focus</button>
+
+  <button class="a-btn a-btn--full-on-xs active" title="Active">Active</button>
+
+  <button class="a-btn a-btn--full-on-xs" title="Default with icon">
+    <span>Default with icon</span>
+    {% include icons/download.svg %}
+  </button>
+</div>
+
+<br />
+<hr />
+<br />
+
+<h3 class="h4">Button with icon</h3>
+
+<div class="m-btn-group">
+  <button class="a-btn a-btn--secondary">
+    {% include icons/left.svg %}
+    <span>Go back</span>
+  </button>
+  <button class="a-btn">
+    <span>Continue</span>{% include icons/right.svg %}
+  </button>
+</div>
+
+<br />
+
+<button class="a-btn">
+  <span>Upload file</span>{% include icons/upload.svg %}
+</button>
+
+<br />
+
+<button class="a-btn">
+  <span>Submit your complaint</span>
+  {% include icons/updating.svg %}
+</button>
+
+<br />
+<hr />
+<br />
+
+<h3 class="h4">Button link</h3>
+
+<div class="m-btn-group">
+  <a class="a-btn">
+    <span>Link styled as a button</span>
+    {% include icons/download.svg %}
+  </a>
+  <button class="a-btn a-btn--link" href="#">
+    <span>Button styled as a link</span>
+    {% include icons/download.svg %}
+  </button>
+  <button class="a-btn a-btn--link a-btn--warning" href="#">
+    <span>"Destructive" styled link</span>
+  </button>
+</div>

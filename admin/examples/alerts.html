@@ -1,0 +1,262 @@
+<div class="m-notification m-notification--visible">
+  {% include icons/information-round.svg %}
+  <div class="m-notification__content">
+    <div class="m-notification__message">Information alert</div>
+  </div>
+</div>
+
+<br />
+
+<div class="m-notification m-notification--visible">
+  {% include icons/information-round.svg %}
+  <div class="m-notification__content">
+    <div class="m-notification__message">Information alert</div>
+    <p class="m-notification__explanation">
+      You can also add an explanation to the alert.
+    </p>
+  </div>
+</div>
+
+<br />
+
+<div class="m-notification m-notification--visible">
+  {% include icons/information-round.svg %}
+  <div class="m-notification__content">
+    <div class="m-notification__message">Information alert</div>
+    <p class="m-notification__explanation">
+      This is the explanation of the alert.
+    </p>
+    <ul class="m-list m-list--links">
+      <li class="m-list__item">
+        <a class="a-link a-link--jump" href="/">
+          <span class="a-link__text">
+            This is a link below the explanation
+          </span>
+        </a>
+      </li>
+      <li class="m-list__item">
+        <a class="a-link a-link--jump" href="/">
+          <span class="a-link__text"> This is an external link</span>
+          {% include icons/external-link.svg %}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<br />
+
+<div class="m-notification m-notification--visible m-notification--success">
+  {% include icons/approved-round.svg %}
+  <div class="m-notification__content">
+    <div class="m-notification__message">11 results</div>
+    <p class="m-notification__explanation">
+      This is an optional explanation of the success message.
+    </p>
+    <ul class="m-list m-list--links">
+      <li class="m-list__item">
+        <a class="a-link a-link--jump" href="/">
+          <span class="a-link__text"> This is an external link</span>
+          {% include icons/external-link.svg %}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<br />
+
+<div class="m-notification m-notification--visible m-notification--warning">
+  {% include icons/warning-round.svg %}
+  <div class="m-notification__content">
+    <div class="m-notification__message">No results found.</div>
+    <p class="m-notification__explanation">
+      This is an optional explanation of the warning.
+    </p>
+    <ul class="m-list m-list--links">
+      <li class="m-list__item">
+        <a class="a-link a-link--jump" href="/">
+          <span class="a-link__text"> This is an external link</span>
+          {% include icons/external-link.svg %}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<br />
+
+<div class="m-notification m-notification--visible m-notification--error">
+  {% include icons/error-round.svg %}
+  <div class="m-notification__content">
+    <div class="m-notification__message">Page not found.</div>
+    <p class="m-notification__explanation">
+      This is an optional explanation of the error.
+    </p>
+    <ul class="m-list m-list--links">
+      <li class="m-list__item">
+        <a class="a-link a-link--jump" href="/">
+          <span class="a-link__text"> This is an external link</span>
+          {% include icons/external-link.svg %}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<h3 class="h4">Field-level alert</h3>
+
+<br />
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="form-input-field-success">
+    Label
+  </label>
+  <input
+    class="a-text-input a-text-input--success"
+    type="text"
+    placeholder="Input text"
+    id="form-input-field-success"
+    aria-describedby="form-input-field-success-message"
+  />
+  <div
+    class="a-form-alert a-form-alert--success"
+    id="form-input-field-success-message"
+    role="alert"
+  >
+    {% include icons/approved-round.svg %}
+    <span class="a-form-alert__text">
+      This is a field-level alert with a success status.
+    </span>
+  </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="form-input-field-warning">
+    Label <small class="a-label__helper">(optional)</small>
+  </label>
+  <input
+    class="a-text-input a-text-input--warning"
+    type="text"
+    placeholder="Input text"
+    id="form-input-field-warning"
+    aria-describedby="form-input-field-warning-message"
+  />
+  <div
+    class="a-form-alert a-form-alert--warning"
+    id="form-input-field-warning-message"
+    role="alert"
+  >
+    {% include icons/warning-round.svg %}
+    <span class="a-form-alert__text">
+      This is a field-level alert with a warning status.
+    </span>
+  </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="form-input-field-error">
+    Label
+    <small class="a-label__helper a-label__helper--block"
+      >Use block helper text for instructions</small
+    >
+  </label>
+  <input
+    class="a-text-input a-text-input--error"
+    type="text"
+    placeholder="Input text"
+    id="form-input-field-error"
+    aria-describedby="form-input-field-error-message"
+  />
+  <div
+    class="a-form-alert a-form-alert--error"
+    id="form-input-field-error-message"
+    role="alert"
+  >
+    {% include icons/error-round.svg %}
+    <span class="a-form-alert__text">
+      This is a field-level alert with an error status.
+    </span>
+  </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="m-form-field m-form-field--checkbox m-form-field--checkbox-error">
+  <input class="a-checkbox" type="checkbox" id="test-checkbox-field-error" />
+  <label class="a-label" for="test-checkbox-field-error">Error</label>
+  <div
+    class="a-form-alert a-form-alert--error"
+    id="form-input-error_message"
+    role="alert"
+  >
+    {% include icons/error-round.svg %}
+    <span class="a-form-alert__text">
+      This is a field-level alert with an error status.
+    </span>
+  </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="m-form-field m-form-field--radio m-form-field--radio-error">
+  <input class="a-radio" type="radio" id="test-radio-basic-helper-field" />
+  <label class="a-label" for="test-radio-basic-helper-field">
+    Label
+    <small class="a-label__helper"> (This is optional helper text) </small>
+  </label>
+  <div
+    class="a-form-alert a-form-alert--error"
+    id="form-input-error_message"
+    role="alert"
+  >
+    {% include icons/error-round.svg %}
+    <span class="a-form-alert__text">
+      This is a field-level alert with an error status.
+    </span>
+  </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="m-form-field">
+  <label class="a-label a-label--heading" for="test-select-field-error"
+    >Error</label
+  >
+  <div class="a-select a-select--error">
+    <select id="test-select-field-error">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+    </select>
+  </div>
+  <div
+    class="a-form-alert a-form-alert--error"
+    id="form-input-error_message"
+    role="alert"
+  >
+    {% include icons/error-round.svg %}
+    <span class="a-form-alert__text">
+      This is a field-level alert with an error status.
+    </span>
+  </div>
+</div>

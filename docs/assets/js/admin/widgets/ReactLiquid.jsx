@@ -23,11 +23,12 @@ engine.registerFilter('xml_escape', (val) => {
   return encode(val);
 });
 
-/**
- * @typedef {object} ReactLiquidProps
- * @property {string} template - Template ot render in component.
- * @property {Record<string, unknown>} data - Data to feed to the template.
- */
+// Create a hash of all the icon paths and their sources.
+const icons = import.meta.glob('../../../../_includes/icons/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
 
 /**
  * Create a <ReactLiquid> component.
@@ -47,7 +48,16 @@ export default function ReactLiquid({ template, data }) {
       });
   }, [template, data]);
 
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  // Perform swap of {% include 'path/to/icon.svg' %} with actual <SVG> markup.
+  const htmlWithIcons = html.replace(
+    /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g,
+    (match, icon) => {
+      const path = `../../../../_includes/icons/${icon}.svg`;
+      return icons[path] ?? '';
+    },
+  );
+
+  return <div dangerouslySetInnerHTML={{ __html: htmlWithIcons }} />;
 }
 
 ReactLiquid.propTypes = {

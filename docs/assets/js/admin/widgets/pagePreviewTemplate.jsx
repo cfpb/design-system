@@ -8,28 +8,13 @@ import {
 import Tabs from '../../../../assets/js/tabs.js';
 import template from '../../../../_includes/variation-content.html?raw';
 
-// react-liquid (https://github.com/aquibm/react-liquid/) isn't able to `include` other files so we
-// replace instances of {% include icons/XXXXX.svg %} with the inlined SVG
-const icons = import.meta.glob('../../../../_includes/icons/*.svg', {
-  query: '?raw',
-  import: 'default',
-  eager: true,
-});
-
-const templateWithIcons = template.replace(
-  /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g,
-  (match, icon) => {
-    const path = `../../../../_includes/icons/${icon}.svg`;
-    return icons[path] ?? '';
-  },
-);
-
 export default class Preview extends Component {
   constructor(props) {
     super(props);
 
     const { document } = this.props;
     const script = document.createElement('script');
+    script.type = 'module';
     script.src = '../dist/admin-main-preview.js';
     document.head.appendChild(script);
 
@@ -62,11 +47,12 @@ export default class Preview extends Component {
     const data = {
       page: this.props.entry.toJS().data,
     };
+
     return (
       // TODO: We're breaking some a11y here by making the whole page clickable.
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
       <div ref={this.containerRef} onClick={(event) => this.handleClick(event)}>
-        <ReactLiquid template={templateWithIcons} data={data} html />
+        <ReactLiquid template={template} data={data} html />
       </div>
     );
   }

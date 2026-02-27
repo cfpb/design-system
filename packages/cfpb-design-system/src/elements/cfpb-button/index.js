@@ -1,4 +1,4 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-button.component.scss';
@@ -16,9 +16,7 @@ const VALID_TYPES = ['button', 'submit', 'reset'];
  * @slot - The main content for the button.
  */
 export class CfpbButton extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   /**
    * @property {string} type - The button type: button, submit, or reset.

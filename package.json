@@ -23,7 +23,8 @@
   ],
   "scripts": {
     "a11y": "lhci autorun",
-    "build": "node ./esbuild/packages/build.js && node ./esbuild/docs/build.js",
+    "build": "vite build --config vite.config.packages.js && vite build --config vite.config.docs.js",
+    "build-docs-watch": "vite build --config vite.config.docs.js --watch",
     "build-decap": "yarn install && yarn after-install && yarn build && bundle exec jekyll build",
     "copy-assets": "./scripts/fonts.sh && cp -r packages/cfpb-design-system/src/components/cfpb-icons/icons docs/_includes/",
     "after-install": "yarn copy-assets && bundle install",
@@ -33,7 +34,7 @@
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-decap": "npx decap-server",
-    "start": "yarn build && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build watch\"",
+    "start": "concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build-docs-watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "cy": "./scripts/cypress.sh",
     "changelog": "./scripts/changelog.sh",
@@ -59,7 +60,6 @@
     "@lhci/cli": "0.15.1",
     "autoprefixer": "10.4.24",
     "concurrently": "9.2.1",
-    "cssnano": "7.1.2",
     "cypress": "15.11.0",
     "esbuild": "0.27.3",
     "esbuild-plugin-liquid": "0.2.0",
@@ -90,7 +90,9 @@
     "style-dictionary": "5.3.2",
     "stylelint": "17.4.0",
     "stylelint-config-standard-scss": "17.0.0",
-    "svgo": "4.0.0"
+    "svgo": "4.0.0",
+    "vite": "7.3.1",
+    "vite-plugin-lit-css": "2.2.2"
   },
   "prettier": {
     "singleQuote": true

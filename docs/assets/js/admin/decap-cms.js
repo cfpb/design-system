@@ -1,9 +1,9 @@
 import CMS from 'decap-cms-app';
-import { StringTrimmedControl } from './widgets/StringTrimmed.js';
-import { StringWithInstructionsControl } from './widgets/StringWithInstructions.js';
-import genericPreviewTemplate from './widgets/genericPreviewTemplate.js';
-import navigationPreviewTemplate from './widgets/navigationPreviewTemplate.js';
-import pagePreviewTemplate from './widgets/pagePreviewTemplate.js';
+import { StringTrimmedControl } from './widgets/StringTrimmed';
+import { StringWithInstructionsControl } from './widgets/StringWithInstructions';
+import genericPreviewTemplate from './widgets/genericPreviewTemplate';
+import navigationPreviewTemplate from './widgets/navigationPreviewTemplate';
+import pagePreviewTemplate from './widgets/pagePreviewTemplate';
 
 CMS.init();
 
@@ -14,4 +14,4 @@ CMS.registerPreviewTemplate('special-pages', genericPreviewTemplate);
 CMS.registerPreviewTemplate('pages', pagePreviewTemplate);
 CMS.registerPreviewTemplate('side-navigation', navigationPreviewTemplate);
 
-CMS.registerPreviewStyle('/design-system/dist/main.css');
+CMS.registerPreviewStyle('/design-system/dist/index.css');

@@ -26,11 +26,10 @@ import {
   MaxHeightTransition,
   MoveTransition,
 } from '@cfpb/cfpb-design-system';
-import { Tooltip } from '@cfpb/cfpb-design-system/tooltips';
+import { Tooltip } from '@cfpb/cfpb-design-system/src/components/cfpb-tooltips/index.js';
 import Tabs from './tabs.js';
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
-export * as MainStyles from '../css/main.scss';
 
 redirectBanner.init();
 sidebar.init();

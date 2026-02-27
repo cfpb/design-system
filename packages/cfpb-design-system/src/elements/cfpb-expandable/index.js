@@ -1,8 +1,8 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './cfpb-expandable.component.scss';
-import expandIcon from '../../components/cfpb-icons/icons/plus-round.svg';
-import collapseIcon from '../../components/cfpb-icons/icons/minus-round.svg';
+import expandIcon from '../../components/cfpb-icons/icons/plus-round.svg?raw';
+import collapseIcon from '../../components/cfpb-icons/icons/minus-round.svg?raw';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';
 import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
 
@@ -12,9 +12,7 @@ import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
  * @slot - The main content for the button.
  */
 export class CfpbExpandable extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   #flyoutMenu;
   #transition;

@@ -1,4 +1,4 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-form-choice.component.scss';
@@ -15,9 +15,7 @@ const VALID_TYPES = ['checkbox', 'radio'];
  * @slot - The label for the form input.
  */
 export class CfpbFormChoice extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   #checkboxIcon = createRef();
 

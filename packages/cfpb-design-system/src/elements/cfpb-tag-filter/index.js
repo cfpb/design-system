@@ -1,7 +1,7 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import styles from './cfpb-tag-filter.component.scss';
-import icon from '../../components/cfpb-icons/icons/error.svg';
+import icon from '../../components/cfpb-icons/icons/error.svg?raw';
 
 /**
  *
@@ -9,9 +9,7 @@ import icon from '../../components/cfpb-icons/icons/error.svg';
  * @slot - The content for the filter tag.
  */
 export class CfpbTagFilter extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   /**
    * @property {string} for - Associate the label with an ID elsewhere.

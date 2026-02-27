@@ -1,4 +1,4 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import styles from './cfpb-label.component.scss';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
@@ -9,9 +9,7 @@ import { ifDefined } from 'lit/directives/if-defined.js';
  * @slot helper - The content for the label helper text.
  */
 export class CfpbLabel extends LitElement {
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
+  static styles = styles;
 
   /**
    * @property {boolean} block - Whether this has block or inline helper text.

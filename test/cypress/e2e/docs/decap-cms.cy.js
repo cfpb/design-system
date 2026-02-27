@@ -54,7 +54,8 @@ describe('Decap CMS', () => {
       // The button page's title field
       cy.get('#nc-root #title-field-1').should('be.visible');
       cy.get('#nc-root #title-field-1').clear({ force: true });
-      cy.get('#nc-root #title-field-1').type('best', { force: true, delay: 0 });
+      cy.get('#nc-root #title-field-1').type('best');
+      cy.get('#nc-root #title-field-1').should('have.value', 'best');
       cy.get('#nc-root #title-field-1').blur();
 
       getIframeBody().find('.frame-content').should('include.text', 'best');

@@ -34,7 +34,7 @@ variation_groups:
 
           ```css
 
-          :host {
+          :root {
             --font-stack: 'Source Sans 3 Variable', Arial, sans-serif;
           }
 

@@ -319,7 +319,7 @@ integrate it into your project:</p>
 <ol>
   <li>
     <p><strong>SCSS</strong>. Your project will need a way of building <code class="language-plaintext highlighter-rouge">.scss</code> files. The Design System uses
-<a href="https://esbuild.github.io/">esbuild</a> for this task.</p>
+<a href="https://vite.dev/">Vite</a> for this task.</p>
   </li>
   <li>
     <p><strong>Embedding SVG icons</strong>. There are some instances where SVG icons are embedded in the CSS.
@@ -327,7 +327,7 @@ The Design System uses a special CSS custom property, <code class="language-plai
 <a href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons">SVG icons directory</a>. Your build will need to
 perform that swap, if you are using the source SCSS files and include
 components that have embedded icons (the drop-down selects, for example).
-A esbuild script for processing the icons can be <a href="https://github.com/cfpb/design-system/blob/main/esbuild/plugins/postcss-process-icons.js">found in the Design System project</a>.</p>
+A PostCSS plugin for processing the icons can be <a href="https://github.com/cfpb/design-system/blob/main/postcss/plugins/process-icons.js">found in the Design System project</a>.</p>
   </li>
 </ol>
 
@@ -492,8 +492,8 @@ repeating an import of the abstracts directory in your <code class="language-pla
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/integrating-the-design-system-into-your-project.md">
-                            <time datetime="2026-02-27 17:05:35 -0500">
-                                 5:05:35 PM Feb 27, 2026
+                            <time datetime="2026-02-27 17:20:03 -0500">
+                                 5:20:03 PM Feb 27, 2026
                             </time>
                         </a>
                     </section>

@@ -57,6 +57,7 @@ describe('Decap CMS', () => {
       cy.get('#nc-root #title-field-1').type('best', { force: true, delay: 0 });
       cy.get('#nc-root #title-field-1').blur();
 
+      getIframeBody().find('.frame-content').should('be.visible');
       getIframeBody().find('.frame-content').should('include.text', 'best');
     });
 

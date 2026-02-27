@@ -1,4 +1,4 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-form-search-input.component.scss';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';

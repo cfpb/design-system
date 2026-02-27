@@ -1,4 +1,4 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import styles from './cfpb-tag-topic.component.scss';
 
 /**

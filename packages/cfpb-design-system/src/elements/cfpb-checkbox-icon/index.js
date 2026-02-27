@@ -1,4 +1,4 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import styles from './cfpb-checkbox-icon.component.scss';
 
 // The validation states are error, warning, or success.

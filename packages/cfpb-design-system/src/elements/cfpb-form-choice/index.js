@@ -1,4 +1,4 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-form-choice.component.scss';

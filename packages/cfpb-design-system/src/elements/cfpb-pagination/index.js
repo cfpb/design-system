@@ -1,4 +1,4 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './cfpb-pagination.component.scss';
 import leftIcon from '../../components/cfpb-icons/icons/left.svg?raw';

@@ -1,4 +1,4 @@
-import { LitElement, html, css, unsafeCSS } from 'lit';
+import { LitElement, html } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-list.component.scss';
 import { CfpbListItem } from '../cfpb-list-item';

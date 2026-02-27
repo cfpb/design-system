@@ -1,4 +1,4 @@
-import { html, LitElement, css, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import styles from './cfpb-tag-group.component.scss';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 

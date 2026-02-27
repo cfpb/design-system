@@ -1,11 +1,6 @@
-docs/_site
-docs/dist
+# Prettier will ignore files in .githubignore already. This is in addition to entries there.
 docs/_includes/*.html
-test/unit-test-coverage/
-.lighthouseci
 .github
-.eslintignore
 .stylelintignore
 CHANGELOG.md
 packages/cfpb-*/dist/
-changelog-template.hbs

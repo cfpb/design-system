@@ -3,7 +3,10 @@
 
 .o-email-signup {
   .m-notification {
-    margin-bottom: math.div(math.div($grid-gutter-width, 2), $base-font-size-px) +
+    margin-bottom: math.div(
+        math.div($grid-gutter-width, 2),
+        $base-font-size-px
+      ) +
       em;
   }
 

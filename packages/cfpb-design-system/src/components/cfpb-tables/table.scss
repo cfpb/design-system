@@ -83,7 +83,7 @@
 
       // Yeilds 1.83333333
       // TODO: Research alternative to this magic number
-      line-height: math.div(11,6);
+      line-height: math.div(11, 6);
 
       // h5 size.
       font-size: math.div($size-v, $base-font-size-px) + em;

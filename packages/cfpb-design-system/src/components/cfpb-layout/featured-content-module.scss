@@ -22,25 +22,30 @@
       padding-right: math.div(
           math.div($grid-gutter-width, 2),
           $base-font-size-px
-        ) + em;
+        ) +
+        em;
       padding-left: math.div(
           math.div($grid-gutter-width, 2),
           $base-font-size-px
-        ) + em;
+        ) +
+        em;
     }
     &__visual {
       padding-right: math.div(
           math.div($grid-gutter-width, 2),
           $base-font-size-px
-        ) + em;
+        ) +
+        em;
       padding-bottom: math.div(
           math.div($grid-gutter-width, 2),
           $base-font-size-px
-        ) + em;
+        ) +
+        em;
       padding-left: math.div(
           math.div($grid-gutter-width, 2),
           $base-font-size-px
-        ) + em;
+        ) +
+        em;
     }
     &__img {
       margin-right: auto;

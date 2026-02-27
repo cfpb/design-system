@@ -25,7 +25,7 @@ description: >-
 
   1. **SCSS**. Your project will need a way of building `.scss` files. The Design System uses
 
-  [esbuild](https://esbuild.github.io/) for this task.
+  [Vite](https://vite.dev/) for this task.
 
 
   2. **Embedding SVG icons**. There are some instances where SVG icons are embedded in the CSS.
@@ -38,7 +38,7 @@ description: >-
 
   components that have embedded icons (the drop-down selects, for example).
 
-  A esbuild script for processing the icons can be [found in the Design System project](https://github.com/cfpb/design-system/blob/main/esbuild/plugins/postcss-process-icons.js).
+  A PostCSS plugin for processing the icons can be [found in the Design System project](https://github.com/cfpb/design-system/blob/main/postcss/plugins/process-icons.js).
 
 
   ## Installing components in your project

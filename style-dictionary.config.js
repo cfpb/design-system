@@ -9,21 +9,21 @@ import {
   logWarningLevels,
 } from 'style-dictionary/enums';
 import path from 'path';
-import { toAbsPosix, toKebab, toPosix } from './style-dictionary-utilities/path-utils.js';
-import { buildFilesAndFilters } from './style-dictionary-utilities/file-discovery.js';
+import { toAbsPosix, toKebab, toPosix } from './style-dictionary/plugins/path-utils.js';
+import { buildFilesAndFilters } from './style-dictionary/plugins/file-discovery.js';
 import {
   colorRgbaV4Transform,
   colorWarnNormalizeTransform,
   getAliasInfo,
   warn,
-} from './style-dictionary-utilities/color.js';
+} from './style-dictionary/plugins/color.js';
 import {
   intentLeafNameTransform,
   intentUnitByPathTransform,
   numberRoundTransform,
-} from './style-dictionary-utilities/sizing.js';
-import { createCssVariablesNoSpaceCommasFormat } from './style-dictionary-utilities/css-variables-no-space-commas.js';
-import { createPlatforms } from './style-dictionary-utilities/platforms.js';
+} from './style-dictionary/plugins/sizing.js';
+import { createCssVariablesNoSpaceCommasFormat } from './style-dictionary/plugins/css-variables-no-space-commas.js';
+import { createPlatforms } from './style-dictionary/plugins/platforms.js';
 
 const baseDir = 'packages/cfpb-design-system/src';
 const tokenBase = path.resolve(baseDir, 'tokens');

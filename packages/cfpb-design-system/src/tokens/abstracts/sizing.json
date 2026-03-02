@@ -11,6 +11,17 @@
           ],
           "com.figma.isOverride": true
         }
+      },
+      "select-border-width-error": {
+        "$type": "number",
+        "$value": 2,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:9358:2",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ],
+          "com.figma.isOverride": true
+        }
       }
     },
     "unitless": {

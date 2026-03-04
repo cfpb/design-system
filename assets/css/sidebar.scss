@@ -1,13 +1,5 @@
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 
-.ds-nav a {
-  border-bottom-color: transparent;
-
-  &:hover {
-    border-bottom-color: initial;
-  }
-}
-
 .ds-nav > .h5:first-of-type {
   margin-top: 15px;
 }
@@ -33,10 +25,6 @@
 
 // Mobile only.
 @include respond-to-max($bp-xs-max) {
-  .ds-nav a {
-    border-style: solid;
-    border-top-width: 0;
-  }
   .ds-nav-2,
   .ds-nav-3 {
     margin-top: 15px;

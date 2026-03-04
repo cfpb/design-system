@@ -18,12 +18,11 @@
 
 ## Screenshots
 
+| Before | After  |
+| ------ | ------ |
+|        |        |
 
-## Notes
-
--
-
-## Todos
+## Notes and todos
 
 -
 
@@ -45,12 +44,8 @@
 
 ### Browsers
 
-- [ ] Chrome on desktop
-- [ ] Firefox
-- [ ] Safari on macOS
-- [ ] Edge
-- [ ] Safari on iOS
-- [ ] Chrome on Android
+Check the [current browser support cutoff list](https://cfpb.github.io/consumerfinance.gov/browser-support#current-browser-support-metrics) for browsers that are advisable
+to prioritize for testing.
 
 ### Accessibility
 

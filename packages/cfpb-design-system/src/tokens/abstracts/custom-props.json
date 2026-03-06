@@ -2321,7 +2321,7 @@
   },
   "font-stack": {
     "$type": "string",
-    "$value": "var(--cfpb-font, system-ui, sans-serif)",
+    "$value": "var(--font-stack-branded, system-ui, sans-serif)",
     "$extensions": {
       "com.figma.variableId": "VariableID:8191:7009",
       "com.figma.scopes": [

@@ -119,5 +119,5 @@
   --teal-30: #c4dddc;
   --teal-20: #d4e7e6;
   --teal-10: #f0f7f6;
-  --font-stack: var(--cfpb-font,system-ui,sans-serif);
+  --font-stack: var(--font-stack-branded,system-ui,sans-serif);
 }

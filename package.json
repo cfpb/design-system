@@ -29,6 +29,7 @@
     "copy-assets": "./scripts/fonts.sh && cp -r packages/cfpb-design-system/src/components/cfpb-icons/icons docs/_includes/",
     "after-install": "yarn copy-assets && bundle install",
     "lint": "scripts/lint.sh",
+    "lint:check": "bash scripts/lint-check.sh",
     "process-icon-svgs": "svgo -f packages/cfpb-design-system/src/components/cfpb-icons/icons --config=svgo.config.js",
     "release": "./scripts/release.sh",
     "serve-html": "http-server docs/_site",

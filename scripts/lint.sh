@@ -1,8 +1,7 @@
 #!/bin/bash
 
-set -euo pipefail
-
 if [ "${CI:-}" = "true" ]; then
+  set -euo pipefail
   PRETTIER_FLAGS=("--check")
   ESLINT_FLAGS=("")
   STYLELINT_FLAGS=("")

@@ -15,15 +15,8 @@ jobs:
             - name: Checkout the repo
               uses: actions/checkout@v6
 
-            - name: Set up Node
-              uses: actions/setup-node@v6
-              with:
-                node-version: 22
-
-            - name: Install dependencies with Yarn
-              run: |
-                corepack enable
-                yarn install --immutable
+            - name: Shared setup
+              uses:  ./.github/actions/shared-action-setup
 
             - name: Run lint
               run: CI=true yarn lint

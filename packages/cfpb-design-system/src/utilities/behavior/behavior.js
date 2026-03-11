@@ -33,13 +33,16 @@ import { contains } from '../data-hook.js';
  */
 function _findElements(behaviorSelector, baseElement) {
   baseElement = baseElement || document;
+  // eslint-disable-next-line no-useless-assignment
   let behaviorElements = [];
 
   try {
     behaviorElements = baseElement.querySelectorAll(behaviorSelector);
   } catch (error) {
     const msg = `${behaviorSelector} not found in DOM! ${error}`;
-    throw new Error(msg);
+    throw new Error(msg, {
+      cause: error,
+    });
   }
 
   if (

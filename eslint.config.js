@@ -1,4 +1,5 @@
 // Run `npx @eslint/config-inspector` to inspect the config.
+import { defineConfig } from 'eslint/config';
 
 import globals from 'globals';
 import js from '@eslint/js';
@@ -11,7 +12,7 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import { configs as eslintPluginLit } from 'eslint-plugin-lit';
 import { configs as eslintPluginWc } from 'eslint-plugin-wc';
 
-export default [
+export default defineConfig([
   {
     ignores: [
       '.yarn/',
@@ -59,7 +60,7 @@ export default [
         },
       },
       react: {
-        version: 'detect',
+        version: '19',
       },
     },
     // Some plugins are automatically included.
@@ -81,4 +82,4 @@ export default [
       radix: ['error'],
     },
   },
-];
+]);

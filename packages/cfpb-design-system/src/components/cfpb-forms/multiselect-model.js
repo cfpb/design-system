@@ -1,6 +1,3 @@
-// Undefined return value for void methods.
-let UNDEFINED;
-
 // How many options may be checked.
 export const MAX_SELECTIONS = 5;
 
@@ -74,7 +71,7 @@ function MultiselectModel(options, name, config) {
     let item;
     const cleaned = [];
 
-    let isChecked = false;
+    let isChecked;
     for (let i = 0, len = list.length; i < len; i++) {
       item = list[i];
       isChecked = isAtMaxSelections() ? false : item.defaultSelected;
@@ -209,7 +206,7 @@ function MultiselectModel(options, name, config) {
   this.filterIndices = filterIndices;
   this.clearFilter = function () {
     _filterIndices = _lastFilterIndices = [];
-    return UNDEFINED;
+    return undefined;
   };
   this.getFilterIndices = function () {
     return _filterIndices;

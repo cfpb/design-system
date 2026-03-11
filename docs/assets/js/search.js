@@ -23,7 +23,7 @@ function getHighlightedSnippet(result, item, searchTerm) {
   const rawText = (item[previewField] || '').toString();
 
   // 2. Decode the URI characters (like %0A, %7B, etc).
-  let text = '';
+  let text;
   try {
     // Replace '+' with space first, then decode.
     text = decodeURIComponent(rawText.replace(/\+/g, ' '));

@@ -29,11 +29,10 @@ const anObject = {
 };
 
 const anArray = [1, 2, 3];
-let UNDEFINED;
 
 describe('TypeCheckers isUndefined', () => {
   it('should identify undefined variables', () => {
-    expect(isUndefined(UNDEFINED)).toBe(true);
+    expect(isUndefined(undefined)).toBe(true);
   });
 
   it('should NOT return true for blank variables', () => {
@@ -55,7 +54,7 @@ describe('TypeCheckers isDefined', () => {
   });
 
   it('should NOT return true for undefined variables', () => {
-    expect(isDefined(UNDEFINED)).toBe(false);
+    expect(isDefined(undefined)).toBe(false);
   });
 });
 

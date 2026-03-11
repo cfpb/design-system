@@ -356,12 +356,10 @@ function FlyoutMenu(element, autoHideContent = true) {
       _transition.remove();
     }
 
-    let UNDEFINED;
+    _transition = undefined;
 
-    _transition = UNDEFINED;
-
-    _expandTransitionMethod = UNDEFINED;
-    _collapseTransitionMethod = UNDEFINED;
+    _expandTransitionMethod = undefined;
+    _collapseTransitionMethod = undefined;
   }
 
   /**

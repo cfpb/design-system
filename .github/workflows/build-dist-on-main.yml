@@ -46,5 +46,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Build dist [skip ci]"
+          git commit -m "Build dist assets for PR #${{ github.event.pull_request.number }} (${{ github.event.pull_request.merge_commit_sha }}) [skip ci]"
           git push origin HEAD:main

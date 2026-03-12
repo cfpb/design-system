@@ -7,7 +7,8 @@ on:
 
 jobs:
   deploy:
-    if: github.actor != 'github-actions[bot]' && github.event.head_commit.message != 'Build dist [skip ci]'
+    ## !startsWith needs to stay in sync with build-dist-on-main.yml commit message prefix
+    if: "${{ github.actor != 'github-actions[bot]' && !startsWith(github.event.head_commit.message, 'Build dist assets for PR #') }}"
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo

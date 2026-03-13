@@ -29,6 +29,7 @@
       font-size: math.div(16px, $base-font-size-px) + em !important;
     }
 
+    /*
     .o-expandable--padded {
       // h2 size.
       font-size: math.div(26px, $base-font-size-px) + em !important;
@@ -38,6 +39,7 @@
         font-size: math.div(22px, $base-font-size-px) + em !important;
       }
     }
+    */
   }
 
   //
@@ -136,6 +138,9 @@
     // Padded expandable modifier
     //
 
+    // NOTE: Padded expandle is disabled pending possible deletion.
+
+    /*
     &--padded {
       .o-expandable {
         &__header {
@@ -155,6 +160,7 @@
         }
       }
     }
+    */
 
     //
     // Expandable with a background color modifier

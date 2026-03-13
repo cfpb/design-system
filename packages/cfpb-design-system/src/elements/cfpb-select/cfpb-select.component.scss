@@ -173,19 +173,19 @@
         top: unset;
       }
     }
-  }
 
-  @media print {
-    // Hide the interactive select cues when printing
-    &__cues[aria-expanded='true'] &__cue-close,
-    &__cues[aria-expanded='false'] &__cue-open {
-      display: none;
-    } // Ensure all selects are expanded when printing.
-    // To accommodate print stylesheets that display the raw URL after links,
-    // set an enormous max height to accommodate selects that have a lot of links.
-    &__content[aria-expanded='false'] {
-      display: block;
-      max-height: 99999px !important;
+    @media print {
+      // Hide the interactive select cues when printing
+      &__cues[aria-expanded='true'] &__cue-close,
+      &__cues[aria-expanded='false'] &__cue-open {
+        display: none;
+      } // Ensure all selects are expanded when printing.
+      // To accommodate print stylesheets that display the raw URL after links,
+      // set an enormous max height to accommodate selects that have a lot of links.
+      &__content[aria-expanded='false'] {
+        display: block;
+        max-height: 99999px !important;
+      }
     }
   }
 }

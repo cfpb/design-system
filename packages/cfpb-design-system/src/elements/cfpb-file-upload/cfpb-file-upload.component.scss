@@ -8,7 +8,3 @@
 
   flex-direction: column;
 }
-
-:host::part(upload-details)[hidden='true'] {
-  display: none;
-}

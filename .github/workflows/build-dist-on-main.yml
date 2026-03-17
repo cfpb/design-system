@@ -30,6 +30,9 @@ jobs:
       - name: Shared setup
         uses:  ./.github/actions/shared-action-setup
 
+      - name: Build tokens
+        run: yarn tokens  
+
       - name: Build generated assets
         run: yarn build
 

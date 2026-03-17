@@ -14,7 +14,8 @@ export default class Preview extends Component {
 
     const { document } = this.props;
     const script = document.createElement('script');
-    script.src = '../dist/admin/main-preview.js';
+    script.type = 'module';
+    script.src = '../dist/admin-main-preview.js';
     document.head.appendChild(script);
 
     this.containerRef = React.createRef();
@@ -50,7 +51,7 @@ export default class Preview extends Component {
       // TODO: We're breaking some a11y here by making the whole page clickable.
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
       <div ref={this.containerRef} onClick={(event) => this.handleClick(event)}>
-        <ReactLiquid template={templateWithIcons} data={data} html />
+        <ReactLiquid template={template} data={data} html />
       </div>
     );
   }

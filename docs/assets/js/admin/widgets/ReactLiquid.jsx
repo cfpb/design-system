@@ -4,9 +4,6 @@ import { Liquid } from 'liquidjs';
 import { marked } from 'marked';
 import slugifyLib from 'slugify';
 import { encode } from 'html-entities';
-import icons from 'cfpb-icons';
-
-const ICON_REGEX = /{%\s+include\s+["']?\/?icons\/([\w-]+)\.svg["']?\s+%}/g;
 
 const engine = new Liquid({ dynamicPartials: false });
 
@@ -18,11 +15,7 @@ engine.registerFilter('slugify', (val) => {
 });
 engine.registerFilter('markdownify', (val) => {
   if (!val) return '';
-  const withIcons = val.replace(
-    ICON_REGEX,
-    (match, icon) => icons[`${icon}.svg`] || match,
-  );
-  return marked.parse(withIcons);
+  return marked.parse(val);
 });
 
 engine.registerFilter('xml_escape', (val) => {
@@ -46,35 +39,8 @@ export default function ReactLiquid({ template, data }) {
   const [html, setHtml] = useState('');
 
   useEffect(() => {
-    const replaceIconsInValue = (value) => {
-      if (typeof value === 'string') {
-        return value.replace(
-          ICON_REGEX,
-          (match, icon) => icons[`${icon}.svg`] || match,
-        );
-      }
-      if (Array.isArray(value)) {
-        return value.map((item) => replaceIconsInValue(item));
-      }
-      if (value && typeof value === 'object') {
-        return Object.fromEntries(
-          Object.entries(value).map(([key, val]) => [
-            key,
-            replaceIconsInValue(val),
-          ]),
-        );
-      }
-      return value;
-    };
-
-    const dataWithIcons = replaceIconsInValue(data);
-    const templateWithIcons = template.replace(
-      ICON_REGEX,
-      (match, icon) => icons[`${icon}.svg`] || match,
-    );
-
     engine
-      .parseAndRender(templateWithIcons, dataWithIcons)
+      .parseAndRender(template, data)
       .then((rendered) => setHtml(rendered))
       .catch((err) => {
         console.error('Liquid rendering error:', err);

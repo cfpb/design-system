@@ -24,7 +24,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v6
         with:
-          ## grab the full history, maybe shallow checkout is fine here?
+          ## Grab the full history, maybe shallow checkout is fine here?
           fetch-depth: 0
 
       - name: Shared setup

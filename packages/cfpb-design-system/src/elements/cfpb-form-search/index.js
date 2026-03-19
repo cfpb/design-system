@@ -93,6 +93,7 @@ export class CfpbFormSearch extends LitElement {
   }
 
   #onClear() {
+    this.value = '';
     this.#popup.value.classList.remove('show');
     this.#list.value.showAllItems();
   }
@@ -108,6 +109,11 @@ export class CfpbFormSearch extends LitElement {
     }
 
     this.value = evt.target.value;
+  }
+
+  #onEnterDown(evt) {
+    // Submit search when enter is pressed inside the input.
+    this.#onClickSearch(evt);
   }
 
   #onBlur() {
@@ -129,10 +135,8 @@ export class CfpbFormSearch extends LitElement {
     evt.preventDefault();
     if (this.disabled) return;
 
-    if (this.value !== '') {
-      this.#internals.setFormValue(this.value);
-      this.#internals.form?.requestSubmit();
-    }
+    this.#internals.setFormValue(this.value);
+    this.#internals.form?.requestSubmit();
   }
 
   render() {
@@ -152,6 +156,7 @@ export class CfpbFormSearch extends LitElement {
             ?validation=${this.validation}
             @clear=${this.#onClear}
             @input=${this.#onInput}
+            @enter-down=${this.#onEnterDown}
             @blur=${this.#onBlur}
           ></cfpb-form-search-input>
 

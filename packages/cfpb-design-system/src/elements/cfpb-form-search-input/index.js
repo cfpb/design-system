@@ -63,6 +63,17 @@ export class CfpbFormSearchInput extends LitElement {
     this.value = evt.target.value;
   }
 
+  #onKeyDown(evt) {
+    if (evt.key === 'Enter') {
+      this.dispatchEvent(
+        new CustomEvent('enter-down', {
+          bubbles: true,
+          composed: true,
+        }),
+      );
+    }
+  }
+
   #onBlur() {
     this.dispatchEvent(
       new Event('blur', {
@@ -114,6 +125,7 @@ export class CfpbFormSearchInput extends LitElement {
           aria-label=${this.ariaLabelInput}
           ${ref(this.#searchInput)}
           @input=${this.#onInput}
+          @keydown=${this.#onKeyDown}
           @blur=${this.#onBlur}
         />
         <button

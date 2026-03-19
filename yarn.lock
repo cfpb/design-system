@@ -4888,7 +4888,6 @@ __metadata:
     marked: "npm:17.0.4"
     minisearch: "npm:7.2.0"
     postcss: "npm:8.5.8"
-    postcss-replace: "npm:2.0.1"
     prettier: "npm:3.8.1"
     prop-types: "npm:15.8.1"
     react: "npm:19.2.4"
@@ -10969,7 +10968,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kind-of@npm:^6.0.0, kind-of@npm:^6.0.2, kind-of@npm:^6.0.3":
+"kind-of@npm:^6.0.0, kind-of@npm:^6.0.2":
   version: 6.0.3
   resolution: "kind-of@npm:6.0.3"
   checksum: 10c0/61cdff9623dabf3568b6445e93e31376bee1cdb93f8ba7033d86022c2a9b1791a1d9510e026e6465ebd701a6dd2f7b0808483ad8838341ac52f003f512e0b4c4
@@ -12480,13 +12479,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-path@npm:^0.11.8":
-  version: 0.11.8
-  resolution: "object-path@npm:0.11.8"
-  checksum: 10c0/73b1f33bb30a7032d8cce2e3dcffd82b80a83d8304e80b4f83b4f456165625de9907f1ca7f7441d4dfb5e73429ace1e5bf9d9315636ac0aacc76392cc21d1672
-  languageName: node
-  linkType: hard
-
 "object.assign@npm:^4.1.4, object.assign@npm:^4.1.7":
   version: 4.1.7
   resolution: "object.assign@npm:4.1.7"
@@ -13237,18 +13229,6 @@ __metadata:
   version: 0.2.3
   resolution: "postcss-media-query-parser@npm:0.2.3"
   checksum: 10c0/252c8cf24f0e9018516b0d70b7b3d6f5b52e81c4bab2164b49a4e4c1b87bb11f5dbe708c0076990665cb24c70d5fd2f3aee9c922b0f67c7c619e051801484688
-  languageName: node
-  linkType: hard
-
-"postcss-replace@npm:2.0.1":
-  version: 2.0.1
-  resolution: "postcss-replace@npm:2.0.1"
-  dependencies:
-    kind-of: "npm:^6.0.3"
-    object-path: "npm:^0.11.8"
-  peerDependencies:
-    postcss: ^8.4
-  checksum: 10c0/40b82e8e031d175cf9dab212665160ca49bc44652e8927a423de83e4c83199548415ace7afd0826410c6fd321cdbc210cc30e623692d08f6be08613d1a4f9a36
   languageName: node
   linkType: hard
 

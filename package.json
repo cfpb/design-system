@@ -80,7 +80,6 @@
     "jest-cli": "30.3.0",
     "jest-environment-jsdom": "30.3.0",
     "postcss": "8.5.8",
-    "postcss-replace": "2.0.1",
     "prettier": "3.8.1",
     "prop-types": "15.8.1",
     "release-it": "19.2.4",

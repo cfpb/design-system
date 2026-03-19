@@ -157,9 +157,11 @@ describe('<cfpb-list> tests', () => {
   });
 
   test('invalid childData logs error', async () => {
+    // eslint-disable-next-line no-console
     console.error = jest.fn();
     list.childData = 'not-json';
     await list.updateComplete;
+    // eslint-disable-next-line no-console
     expect(console.error).toHaveBeenCalled();
   });
 

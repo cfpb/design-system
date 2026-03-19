@@ -3027,18 +3027,16 @@ class bt extends $ {
   }
   /**
    * Add a tag to the light and dark DOM.
-   * @param {*} tag - The tag to add.
+   * @param {HTMLElement} tag - The tag to add.
    * @param {number} index - The position at which to add the tag.
    * @returns {boolean} false if the tag is already in the light DOM.
    */
   addTag(e, t = -1) {
-    if (!Array.from(this.children).includes(e))
-      return this.#c(e, t), !1;
-    this.#f(e, t), this.#h();
+    return Array.from(this.children).includes(e) ? (this.#f(e, t), this.#h(), !0) : (this.#c(e, t), !1);
   }
   /**
    * Add a tag to the light DOM.
-   * @param {*} tag - The tag to add.
+   * @param {HTMLElement} tag - The tag to add.
    * @param {number} index - The position at which to add the tag.
    */
   #c(e, t) {
@@ -3046,7 +3044,7 @@ class bt extends $ {
   }
   /**
    * Add a tag to the shadow DOM.
-   * @param {*} tag - The tag to add.
+   * @param {HTMLElement} tag - The tag to add.
    * @param {number} index - The position at which to add the tag.
    */
   #f(e, t) {
@@ -3073,7 +3071,7 @@ class bt extends $ {
     );
   }
   /**
-   * @param {*} tag - The tag to add.
+   * @param {HTMLElement} tag - The tag to add.
    * @returns {string} A unique ID.
    */
   #u(e) {
@@ -3082,24 +3080,24 @@ class bt extends $ {
   /**
    * Remove a filter tag from the light DOM.
    * This is private because it's called by the mutation observer.
-   * @param {*} tag - The tag to remove.
+   * @param {HTMLElement} tag - The tag to remove.
    * @returns {boolean} false if the wrapped tag was not found.
    */
   #b(e) {
     const t = this.#u(e), a = this.#a.get(t);
     if (!a) return !1;
     let i = Array.from(this.children).indexOf(e);
-    i === -1 && a.parentElement && (i = Array.from(a.parentElement.children).indexOf(a)), e.parentElement === this && e.remove(), a.parentElement && a.remove(), this.#a.delete(t), this.dispatchEvent(
+    return i === -1 && a.parentElement && (i = Array.from(a.parentElement.children).indexOf(a)), e.parentElement === this && e.remove(), a.parentElement && a.remove(), this.#a.delete(t), this.dispatchEvent(
       new CustomEvent("tag-removed", {
         detail: { target: e, index: i },
         bubbles: !0,
         composed: !0
       })
-    ), this.#h(), this.focus();
+    ), this.#h(), this.focus(), !0;
   }
   /**
    * Remove a filter tag from the light and dark DOM.
-   * @param {*} tag - The tag to remove.
+   * @param {HTMLElement} tag - The tag to remove.
    */
   removeTag(e) {
     const t = this.#g(e);
@@ -3107,8 +3105,8 @@ class bt extends $ {
   }
   /**
    * Get light and dark DOM.
-   * @param {Node} node - The tag to remove.
-   * @returns {Node|null} The tag node.
+   * @param {HTMLElement} tag - The tag to remove.
+   * @returns {HTMLElement|null} The tag node.
    */
   #g(e) {
     return e.tagName === "LI" && e.shadowRoot ? e.querySelector("cfpb-tag-filter") : this.contains(e) ? e : null;

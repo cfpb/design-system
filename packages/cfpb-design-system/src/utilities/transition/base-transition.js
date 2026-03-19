@@ -202,7 +202,7 @@ function BaseTransition(element, classes, child) {
   }
 
   /**
-   * @param {Function} initialClass - The initial state for this transition.
+   * @param {string} initialClass - The initial CSS class to set the state for this transition.
    * @returns {BaseTransition} An instance.
    */
   function init(initialClass) {

@@ -184,6 +184,7 @@ export class CfpbList extends LitElement {
 
   #applyTypeToItems() {
     if (!['plain', 'check', 'checkbox'].includes(this.type)) {
+      // eslint-disable-next-line no-console
       console.warn(`<cfpb-list>: invalid type "${this.type}".`);
       return;
     }

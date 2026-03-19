@@ -4,7 +4,7 @@
  *   - JS arrays
  *   - JSON strings
  *   - JSON-like strings with single quotes
- * @param {Array | string} input - An array or JSON string.
+ * @param {Array|string} input - An array or JSON string.
  * @param {object} options - optional settings.
  * @param {boolean} options.allowSingleQuotes - default true.
  * @returns {Array|null} Parsed array/string, or null if invalid.
@@ -20,6 +20,7 @@ export function parseChildData(input, options = {}) {
   }
 
   if (typeof input !== 'string') {
+    // eslint-disable-next-line no-console
     console.error('childData must be a string or array.');
     return null;
   }
@@ -38,12 +39,14 @@ export function parseChildData(input, options = {}) {
     const parsed = JSON.parse(text);
 
     if (!Array.isArray(parsed)) {
+      // eslint-disable-next-line no-console
       console.error('childData JSON must parse to an array.');
       return null;
     }
 
     return parsed;
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error('Failed to parse childData JSON:', err);
     return null;
   }

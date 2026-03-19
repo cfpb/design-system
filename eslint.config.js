@@ -67,6 +67,12 @@ export default defineConfig([
     // plugins: {},
     rules: {
       'jsdoc/require-hyphen-before-param-description': 'warn',
+      'jsdoc/check-tag-names': [
+        'warn',
+        {
+          definedTags: ['element', 'slot'],
+        },
+      ],
       'no-console': ['warn'],
       'no-use-before-define': ['error', 'nofunc'],
       'no-unused-vars': [

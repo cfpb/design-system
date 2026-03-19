@@ -68,7 +68,7 @@ function MaxHeightTransition(element) {
   }
 
   /**
-   * @param {Function} initialClass - The initial state for this transition.
+   * @param {string} initialClass - The initial CSS class to set the state for this transition.
    * @returns {MaxHeightTransition} An instance.
    */
   function init(initialClass) {

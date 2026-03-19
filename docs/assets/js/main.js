@@ -11,6 +11,7 @@ import {
   CfpbLabel,
   CfpbList,
   CfpbListItem,
+  CfpbTagline,
   CfpbTagFilter,
   CfpbTagTopic,
   CfpbTagGroup,
@@ -57,6 +58,7 @@ CfpbFormSearchInput.init();
 CfpbLabel.init();
 CfpbList.init();
 CfpbListItem.init();
+CfpbTagline.init();
 CfpbTagFilter.init();
 CfpbTagTopic.init();
 CfpbTagGroup.init();

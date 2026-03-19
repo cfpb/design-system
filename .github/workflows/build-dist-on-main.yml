@@ -44,7 +44,7 @@ jobs:
           
           git add -f packages/cfpb-design-system/dist
 
-          if git diff --cached --quiet: then
+          if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi

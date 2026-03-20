@@ -1,0 +1,24 @@
+name: Build check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v6
+
+      - name: Shared setup
+        uses:  ./.github/actions/shared-action-setup
+
+      - name: Build package and docs assets
+        run: yarn build
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build

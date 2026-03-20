@@ -2840,7 +2840,7 @@ const Lr = A`:root{--beige: #bea96f;--beige-30: #f0e8d8;--beige-60: #d8c8a0;--bl
 class Qt extends E {
   static styles = Lr;
   /**
-   * @property {boolean} disabled - Apply disabled styles or not.
+   * @property {boolean} isLarge - Whether to use the larger tagline appearance.
    * @returns {object} The map of properties.
    */
   static properties = {

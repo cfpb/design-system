@@ -2,7 +2,38 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.4.0](https://github.com/cfpb/design-system/compare/v4.3.2..v4.4.0) - February 17, 2026
+## [5.0.0](https://github.com/cfpb/design-system/compare/v4.4.0..v5.0.0) - March 20, 2026
+
+### PRs in this release
+
+- PR #[2530](https://github.com/cfpb/design-system/pull/2530): Bump react types, decap-cms-app, marked, cypress, glob, style-dictionary, stylelint - Ans
+- PR #[2534](https://github.com/cfpb/design-system/pull/2534): Migrate to Vite - Ans
+- PR #[2540](https://github.com/cfpb/design-system/pull/2540): Update linter patterns - Ans
+- PR #[2554](https://github.com/cfpb/design-system/pull/2554): Update marked, eslint/js, eslint, eslint-plugin-cypress, globals, postcss, sass, style-dictionary - Ans
+- PR #[2558](https://github.com/cfpb/design-system/pull/2558): Fix SCSS selector issues - Ans
+- PR #[2538](https://github.com/cfpb/design-system/pull/2538): cfpb-form-search: Submit search when enter key is pressed - Ans
+- PR #[2562](https://github.com/cfpb/design-system/pull/2562): Fix all linter warnings - Ans
+- PR #[2563](https://github.com/cfpb/design-system/pull/2563): Add `<cfpb-tagline>` - Ans
+
+### General
+
+- Lint and build files - ([1fec3c1](https://github.com/cfpb/design-system/commit/1fec3c10b8e82c3d1d9f2892a887051ae8141360)) - Ans
+- Migrate to Vite - ([05409cf](https://github.com/cfpb/design-system/commit/05409cf3d12284d5ee9fd39ca980dd41d7cc28c3)) - Ans
+- Cleanup linter issues - ([3caf85a](https://github.com/cfpb/design-system/commit/3caf85a859707f1148ea0ab94def8772e34d007a)) - Ans
+- Update linter patterns - ([1a5d3cb](https://github.com/cfpb/design-system/commit/1a5d3cb75efb628faa8f3354fdc585899c901a5c)) - Ans
+- Add error border width variable for select element (#2545)
+
+Fixing legacy select component border width in validation error state - ([4526edc](https://github.com/cfpb/design-system/commit/4526edc3197cc8941775aed89ee715cfbca5e392)) - itsmedavep
+- Update marked, eslint/js, eslint, eslint-plugin-cypress, globals, postcss, sass, style-dictionary - ([bf2a4cb](https://github.com/cfpb/design-system/commit/bf2a4cbb5c08cbb50599945c075b986de017e0e6)) - Ans
+- Fix SCSS selector issues - ([99fd138](https://github.com/cfpb/design-system/commit/99fd138d73488371e870f6e93afbaef7a5191e86)) - Ans
+- Submit search when enter key is pressed - ([e65be6a](https://github.com/cfpb/design-system/commit/e65be6a00f2dab583daf9a2a487bc3550348000f)) - Ans
+- Build dist assets for PR #2561 (5d846d2d5746f4dd9f96baa77135846a627b57e8) [skip ci] - ([cebd394](https://github.com/cfpb/design-system/commit/cebd39483d804256ac64eae38dd54a1575bbf011)) - CFPBot
+- Fix all linter warnings - ([25afd69](https://github.com/cfpb/design-system/commit/25afd6963d53b3decf62ed2eca185ccefe3a03f8)) - Ans
+- Add <cfpb-tagline> - ([186ea37](https://github.com/cfpb/design-system/commit/186ea375de5afa6379a4f023b1fd410b10cb61d2)) - Ans
+- Fix incorrect jsdoc comments - ([ffd0ed4](https://github.com/cfpb/design-system/commit/ffd0ed4ddab708af32cbe64ed6e425bf31953fd6)) - Ans
+- Fix jsdoc comment - ([f1444a3](https://github.com/cfpb/design-system/commit/f1444a35dc2b8d0c92bc2a98f469085340ef24c6)) - Ans
+
+## [4.4.0](https://github.com/cfpb/design-system/compare/v4.3.2..vv4.4.0) - February 17, 2026
 
 ### PRs in this release
 

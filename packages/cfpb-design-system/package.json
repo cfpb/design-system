@@ -2,13 +2,6 @@
   "name": "@cfpb/cfpb-design-system",
   "version": "5.2.0",
   "description": "CFPB's UI framework",
-  "files": [
-    "dist",
-    "src",
-    "README.md",
-    "LICENSE",
-    "TERMS.md"
-  ],
   "exports": {
     ".": "./src/index.js",
     "./tooltips": "./src/components/cfpb-tooltips/index.js",
@@ -16,9 +9,6 @@
     "./src/elements/abstracts/*": "./src/elements/abstracts/*",
     "./src/elements/*": "./src/elements/*",
     "./src/components/*": "./src/components/*"
-  },
-  "scripts": {
-    "prepack": "yarn --cwd ../.. build-package"
   },
   "author": {
     "name": "Consumer Financial Protection Bureau",

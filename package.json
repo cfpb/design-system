@@ -23,7 +23,8 @@
   ],
   "scripts": {
     "a11y": "lhci autorun",
-    "build": "vite build --config vite.config.packages.js && vite build --config vite.config.docs.js",
+    "build": "yarn build-package && vite build --config vite.config.docs.js",
+    "build-package": "yarn tokens && vite build --config vite.config.packages.js",
     "build-docs-watch": "vite build --config vite.config.docs.js --watch",
     "build-decap": "yarn install && yarn after-install && yarn build && bundle exec jekyll build",
     "copy-assets": "./scripts/fonts.sh && cp -r packages/cfpb-design-system/src/components/cfpb-icons/icons docs/_includes/",
@@ -34,7 +35,7 @@
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-decap": "npx decap-server",
-    "start": "concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build-docs-watch\"",
+    "start": "yarn build-package && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build-docs-watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "cy": "./scripts/cypress.sh",
     "changelog": "./scripts/changelog.sh",

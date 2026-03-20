@@ -88,3 +88,7 @@ docs/_site
 **/.jekyll-cache/
 .jekyll-metadata
 Gemfile.lock
+
+# Distributed files #
+#####################
+packages/cfpb-design-system/dist/

@@ -7,6 +7,27 @@ description: These components are custom elements (web components).
 variation_groups:
   - variations:
       - variation_is_deprecated: false
+        variation_name: Tagline
+        variation_description: A US gov branded tagline.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-tagline></cfpb-tagline>
+
+            <br>
+
+            <cfpb-tagline islarge></cfpb-tagline>
+
+            <br>
+
+            <cfpb-tagline>USA</cfpb-tagline>
+          </div>
+        variation_code_snippet: >-
+          <div>
+            <cfpb-tagline></cfpb-tagline>
+            <cfpb-tagline islarge></cfpb-tagline>
+            <cfpb-tagline>USA</cfpb-tagline>
+          </div>
+      - variation_is_deprecated: false
         variation_name: Icon and Text
         variation_description: A basic pairing of an SVG icon and text.
         variation_code_snippet_rendered: >-

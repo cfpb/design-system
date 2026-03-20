@@ -13,6 +13,7 @@ export * from './cfpb-list';
 export * from './cfpb-list-item';
 export * from './cfpb-form-search';
 export * from './cfpb-form-search-input';
+export * from './cfpb-tagline';
 export * from './cfpb-tag-filter';
 export * from './cfpb-tag-topic';
 export * from './cfpb-tag-group';

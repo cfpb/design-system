@@ -4,13 +4,13 @@ import styles from './cfpb-tagline.component.scss';
 
 /**
  * @element cfpb-icon-text
- * @slot - The main content for the text and icon.
+ * @slot - The main content for the tagline.
  */
 export class CfpbTagline extends LitElement {
   static styles = styles;
 
   /**
-   * @property {boolean} disabled - Apply disabled styles or not.
+   * @property {boolean} isLarge - Whether to use the larger tagline appearance.
    * @returns {object} The map of properties.
    */
   static properties = {

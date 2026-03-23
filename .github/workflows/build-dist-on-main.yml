@@ -17,7 +17,7 @@ concurrency:
 jobs:
   build-dist:
     # Ignore the workflow's own bot-authored dist commits
-    if: "${{ github.actor != 'github-actions[bot]' && !startsWith(github.event.head_commit.message, 'Build dist assets for commit ') }}"
+    if: github.actor != 'github-actions[bot]' && !startsWith(github.event.head_commit.message, 'Build dist assets for commit ')
     runs-on: ubuntu-latest
 
     steps:

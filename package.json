@@ -89,8 +89,7 @@
     "stylelint": "17.6.0",
     "stylelint-config-standard-scss": "17.0.0",
     "svgo": "4.0.1",
-    "vite": "8.0.3",
-    "vite-plugin-lit-css": "2.2.2"
+    "vite": "8.0.3"
   },
   "prettier": {
     "singleQuote": true

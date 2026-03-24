@@ -1,26 +1,18 @@
-import { defineConfig } from 'vite';
-import path from 'path';
-import litcss from 'vite-plugin-lit-css';
+import { defineConfig } from "vite";
+import path from "path";
 
 export default defineConfig({
   css: {
-    transformer: 'lightningcss',
+    transformer: "lightningcss",
   },
 
-  plugins: [
-    litcss({
-      include: [
-        path.resolve('packages/cfpb-design-system/src/elements/**/*.scss'),
-      ],
-      uglify: true,
-    }),
-  ],
+  // plugins: [],
 
   resolve: {
     alias: {
-      '@cfpb/cfpb-design-system': path.resolve(
+      "@cfpb/cfpb-design-system": path.resolve(
         __dirname,
-        'packages/cfpb-design-system/',
+        "packages/cfpb-design-system/",
       ),
     },
   },

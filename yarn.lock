@@ -4868,12 +4868,12 @@ __metadata:
     anchor-js: "npm:5.0.0"
     autoprefixer: "npm:10.4.27"
     concurrently: "npm:9.2.1"
-    cypress: "npm:15.12.0"
+    cypress: "npm:15.13.0"
     decap-cms-app: "npm:3.11.0"
     eslint: "npm:10.1.0"
     eslint-config-prettier: "npm:10.1.8"
     eslint-import-resolver-typescript: "npm:4.4.4"
-    eslint-plugin-cypress: "npm:6.2.0"
+    eslint-plugin-cypress: "npm:6.2.1"
     eslint-plugin-import: "npm:2.32.0"
     eslint-plugin-jsdoc: "npm:62.8.0"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
@@ -5681,9 +5681,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:15.12.0":
-  version: 15.12.0
-  resolution: "cypress@npm:15.12.0"
+"cypress@npm:15.13.0":
+  version: 15.13.0
+  resolution: "cypress@npm:15.13.0"
   dependencies:
     "@cypress/request": "npm:^3.0.10"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -5730,7 +5730,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10c0/aa11220a2da53689de9334975b6c8cbe3d5aa586542ac755c8581c80186b1a12394932d77c44fbeaf4d5f442afb357b1ccb9e66f0e8e6f778ed386131787e6fb
+  checksum: 10c0/2b6b235d93eb003c5d68e2b63a50c24f1c295f25ca008fc5ff1f60d80839a1d5e88e709e9e6e4c468492982076aaa4ace40d6ff237fdca2cc461fc9529e33f8f
   languageName: node
   linkType: hard
 
@@ -7403,14 +7403,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:6.2.0":
-  version: 6.2.0
-  resolution: "eslint-plugin-cypress@npm:6.2.0"
+"eslint-plugin-cypress@npm:6.2.1":
+  version: 6.2.1
+  resolution: "eslint-plugin-cypress@npm:6.2.1"
   dependencies:
     globals: "npm:^17.3.0"
   peerDependencies:
     eslint: ">=9"
-  checksum: 10c0/2b61c0891149359d73d339703cbdec7b08523e4f15efaeccb4b034d26f2e29246aab80e9bbafaced8a460e4066f4d79558fcaff69156dcd3e4c8b71c7d0a4e51
+  checksum: 10c0/ebfd774418062fd7e503845b5835f1fc3a3908f8833ca45eaf045e0bba5a3c4e2e2e6a903362579648a8a182fa18eb5d204f6ea60a8800f13efc962a246bffa4
   languageName: node
   linkType: hard
 

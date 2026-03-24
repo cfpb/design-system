@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "a11y": "lhci autorun",
-    "build": "vite build --config vite.config.packages.js && vite build --config vite.config.docs.js",
+    "build": "yarn sass && vite build --config vite.config.packages.js && vite build --config vite.config.docs.js",
     "build-docs-watch": "vite build --config vite.config.docs.js --watch",
     "build-decap": "yarn install && yarn after-install && yarn build && bundle exec jekyll build",
     "copy-assets": "./scripts/fonts.sh && cp -r packages/cfpb-design-system/src/components/cfpb-icons/icons docs/_includes/",
@@ -38,7 +38,8 @@
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "cy": "./scripts/cypress.sh",
     "changelog": "./scripts/changelog.sh",
-    "tokens": "style-dictionary build --config ./style-dictionary.config.js"
+    "tokens": "style-dictionary build --config ./style-dictionary.config.js",
+    "sass": "node ./scripts/sass.js"
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {

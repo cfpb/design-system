@@ -4,3 +4,4 @@ docs/_includes/*.html
 .stylelintignore
 CHANGELOG.md
 packages/cfpb-*/dist/
+packages/cfpb-*/src/elements/**/*.component.js

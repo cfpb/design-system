@@ -22,6 +22,7 @@ export default css\`${safeCss}\`;
 
   writeFileSync(outFile, js);
 
+  // Uncomment console.log below to output files generated from .scss files.
   // eslint-disable-next-line no-console
-  console.log('✅', outFile);
+  // console.log('✅', outFile);
 }

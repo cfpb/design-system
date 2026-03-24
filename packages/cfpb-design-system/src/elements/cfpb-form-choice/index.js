@@ -1,7 +1,7 @@
 import { html, LitElement } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-form-choice.component.scss';
+import styles from './cfpb-form-choice.component.js';
 import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
 
 // The validation states are error, warning, or success.

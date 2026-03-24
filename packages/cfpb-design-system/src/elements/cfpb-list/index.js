@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-list.component.scss';
+import styles from './cfpb-list.component.js';
 import { CfpbListItem } from '../cfpb-list-item';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 

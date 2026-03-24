@@ -1,0 +1,479 @@
+
+import { css } from 'lit';
+export default css`/**
+ * Do not edit directly, this file was auto-generated.
+ */
+:root {
+  --beige: #bea96f;
+  --beige-30: #f0e8d8;
+  --beige-60: #d8c8a0;
+  --black: #101820;
+  --font-stack: system-ui, sans-serif;
+  --gold: #ff9e1b;
+  --gold-10: #fff6ec;
+  --gold-20: #fff0dd;
+  --gold-30: #ffe8cb;
+  --gold-40: #ffe1b9;
+  --gold-50: #ffd8a3;
+  --gold-60: #ffce8d;
+  --gold-70: #ffc372;
+  --gold-80: #ffb858;
+  --gold-90: #ffab39;
+  --gold-dark: #dc731c;
+  --gold-mid-dark: #ed881b;
+  --gray: #5a5d61;
+  --gray-10: #e7e8e9;
+  --gray-15: #dcdddf;
+  --gray-20: #d2d3d5;
+  --gray-30: #c3c4c4;
+  --gray-40: #b4b5b6;
+  --gray-5: #f7f8f9;
+  --gray-50: #a2a3a4;
+  --gray-60: #919395;
+  --gray-70: #838588;
+  --gray-80: #75787b;
+  --gray-90: #676a6f;
+  --gray-dark: #43484e;
+  --gray-darker: #293037;
+  --gray-mid-dark: #4f5257;
+  --green: #20aa3f;
+  --green-10: #f0f8eb;
+  --green-20: #e2efd8;
+  --green-30: #d4eac6;
+  --green-40: #c7e5b3;
+  --green-50: #bae0a2;
+  --green-60: #addc91;
+  --green-70: #93cf7c;
+  --green-80: #66c368;
+  --green-90: #48b753;
+  --green-dark: #1e9642;
+  --green-mid-dark: #1fa040;
+  --navy: #254b87;
+  --navy-10: #f4f6fa;
+  --navy-20: #d3daeb;
+  --navy-30: #c3cde2;
+  --navy-40: #b3c0d9;
+  --navy-50: #9daecc;
+  --navy-60: #889cc0;
+  --navy-70: #6f88b2;
+  --navy-80: #5674a3;
+  --navy-90: #3e5f95;
+  --navy-dark: #002d72;
+  --navy-mid-dark: #123c7c;
+  --neutral: #8a6c57;
+  --neutral-10: #f8f5f2;
+  --neutral-20: #e7ddd7;
+  --neutral-30: #ddd1c9;
+  --neutral-40: #d3c5bc;
+  --neutral-50: #c6b4a9;
+  --neutral-60: #baa496;
+  --neutral-70: #ad9484;
+  --neutral-80: #a18573;
+  --neutral-90: #957865;
+  --neutral-dark: #745745;
+  --neutral-mid-dark: #7d604b;
+  --pacific: #0072ce;
+  --pacific-10: #eff8fd;
+  --pacific-20: #d6e8fa;
+  --pacific-30: #c3ddf6;
+  --pacific-40: #afd2f2;
+  --pacific-50: #96c4ed;
+  --pacific-60: #7eb7e8;
+  --pacific-70: #61a7e2;
+  --pacific-80: #4497dc;
+  --pacific-90: #2284d5;
+  --pacific-dark: #0050b4;
+  --pacific-mid-dark: #0061c1;
+  --purple: #b4267a;
+  --purple-10: #fdf3f8;
+  --purple-20: #f0d8e2;
+  --purple-30: #ebc9d9;
+  --purple-40: #e3b2cc;
+  --purple-50: #dc9cbf;
+  --purple-60: #d486b2;
+  --purple-70: #cd70a5;
+  --purple-80: #c55998;
+  --purple-90: #be438b;
+  --purple-dark: #a01b68;
+  --purple-mid-dark: #aa2071;
+  --red: #d14124;
+  --red-10: #fbefec;
+  --red-20: #f7e0d9;
+  --red-30: #f3d1c8;
+  --red-40: #f0c3b8;
+  --red-50: #ebb0a3;
+  --red-60: #e79e8e;
+  --red-70: #e28875;
+  --red-80: #dd735d;
+  --red-90: #d75a40;
+  --red-dark: #b63014;
+  --red-mid-dark: #c3381c;
+  --teal: #257675;
+  --teal-10: #f0f7f6;
+  --teal-20: #d4e7e6;
+  --teal-30: #c4dddc;
+  --teal-40: #b4d2d1;
+  --teal-50: #9ec4c3;
+  --teal-60: #89b6b5;
+  --teal-70: #70a6a5;
+  --teal-80: #579695;
+  --teal-90: #3e8685;
+  --teal-dark: #005e5d;
+  --teal-mid-dark: #126b69;
+  --white: #fff;
+}
+
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+:root {
+  --block-bg: var(--gray-5);
+  --block-border: var(--gray-40);
+  --choice-bg-default: var(--white);
+  --choice-bg-disabled: var(--gray-10);
+  --choice-bg-selected-default: var(--pacific);
+  --choice-bg-selected-disabled: var(--gray-40);
+  --choice-bg-selected-focus-default: var(--pacific);
+  --choice-border-default: var(--gray-60);
+  --choice-border-disabled: var(--gray-60);
+  --choice-border-error: var(--red);
+  --choice-border-focus-default: var(--pacific);
+  --choice-border-hover-default: var(--pacific);
+  --choice-border-success: var(--green);
+  --choice-border-warning: var(--gold);
+  --choice-label-disabled-default: var(--gray-dark);
+  --choice-outline-focus-default: var(--pacific);
+  --code-bg: var(--gray-5);
+  --content-main-border: var(--gray-40);
+  --form-alert-icon-color-default: var(--gray);
+  --form-alert-icon-color-error: var(--red);
+  --form-alert-icon-color-success: var(--green);
+  --form-alert-icon-color-warning: var(--gold);
+  --form-field-input-lg-target-bg: var(--gray-10);
+  --form-field-input-lg-target-bg-disabled: var(--gray-20);
+  --form-field-input-lg-target-bg-selected: var(--pacific-20);
+  --form-field-input-lg-target-border: var(--pacific);
+  --input-bg-default: var(--white);
+  --input-bg-disabled-default: var(--gray-10);
+  --input-border-default: var(--gray-60);
+  --input-border-disabled: var(--gray-60);
+  --input-border-error: var(--red);
+  --input-border-focus-default: var(--pacific);
+  --input-border-hover-default: var(--pacific);
+  --input-border-success: var(--green);
+  --input-border-warning: var(--gold);
+  --input-text-default: var(--black);
+  --input-text-disabled-default: var(--gray-dark);
+  --input-text-placeholder-default: var(--gray-dark);
+  --label-helper: var(--gray-dark);
+  --link-text: var(--pacific);
+  --link-text-active: var(--navy);
+  --link-text-hover: var(--pacific-dark);
+  --link-text-visited: var(--teal);
+  --link-underline: var(--pacific);
+  --link-underline-active: var(--navy);
+  --link-underline-hover: var(--pacific-dark);
+  --link-underline-visited: var(--teal);
+  --range-bg: var(--gray-10);
+  --range-bg-focused: var(--pacific-20);
+  --range-bg-track: var(--gray-80);
+  --range-border: var(--gray-40);
+  --range-border-focused: var(--pacific);
+  --select-bg-disabled-default: var(--gray-10);
+  --select-border-default: var(--gray-60);
+  --select-border-error: var(--red);
+  --select-border-focus-default: var(--pacific);
+  --select-border-hover-default: var(--pacific);
+  --select-icon-bg-default: var(--gray-10);
+  --select-text-disabled-default: var(--gray-dark);
+  --table-border: var(--gray);
+  --table-head-bg: var(--gray-5);
+  --tag-filter-bg-active-default: var(--teal-60);
+  --tag-filter-bg-default: var(--teal-20);
+  --tag-filter-bg-hover-default: var(--teal-40);
+  --tag-filter-border-default: var(--teal);
+  --tag-filter-outline-focuse-default: var(--teal-dark);
+  --text: var(--black); /** body */
+  --block-border-bottom: var(--block-border);
+  --block-border-left: var(--block-border);
+  --block-border-right: var(--block-border);
+  --block-border-top: var(--block-border);
+  --code-text: var(--text);
+  --table-head-text: var(--text);
+}
+
+/* ==========================================================================
+   Design System
+   Breakpoint variables.
+
+   NOTE: If any of the values in this file are adjusted,
+         they need to be adjusted in vars-breakpoints.js as well.
+   ========================================================================== */
+:root {
+  --font-adjust-base: 0.517;
+  --font-adjust-step: 0.0054;
+  /* Derived font-size-adjust-values */
+  --font-adjust-h1: calc(
+    var(--font-size-adjust-base) + (5 * var(--font-adjust-step))
+  );
+  --font-adjust-h2: calc(
+    var(--font-size-adjust-base) + (4 * var(--font-adjust-step))
+  );
+  --font-adjust-h3: calc(
+    var(--font-size-adjust-base) + (3 * var(--font-adjust-step))
+  );
+  --font-adjust-h4: calc(
+    var(--font-size-adjust-base) + (2 * var(--font-adjust-step))
+  );
+  --font-adjust-h5: calc(
+    var(--font-size-adjust-base) + (1 * var(--font-adjust-step))
+  );
+  --font-adjust-h6: var(--font-adjust-base);
+  --font-adjust-body: var(--font-adjust-base);
+  --select-border-width-default: 1px;
+  --select-border-width-error: 2px;
+}
+
+/* ==========================================================================
+   Design System
+   Grid mixins
+   ========================================================================== */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Design System
+   Media queries
+   ========================================================================== */
+/* ==========================================================================
+   Design System
+   Base styles
+   ========================================================================== */
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+:root {
+  --btn-bg: var(--pacific);
+  --btn-bg-active: var(--navy);
+  --btn-bg-hover: var(--pacific-dark);
+  --btn-disabled-bg: var(--gray-20);
+  --btn-disabled-divider: var(--gray-60);
+  --btn-disabled-outline: var(--gray-20);
+  --btn-disabled-text: var(--gray-dark);
+  --btn-divider: var(--pacific-60);
+  --btn-secondary-bg: var(--white);
+  --btn-secondary-bg-active: var(--pacific-20);
+  --btn-secondary-bg-hover: var(--pacific-10);
+  --btn-secondary-border: var(--pacific);
+  --btn-secondary-border-active: var(--navy);
+  --btn-secondary-border-hover: var(--pacific-dark);
+  --btn-secondary-divider: var(--pacific-60);
+  --btn-secondary-text: var(--pacific);
+  --btn-secondary-text-active: var(--navy);
+  --btn-secondary-text-hover: var(--pacific-dark);
+  --btn-text: var(--white);
+  --btn-warning-bg: var(--red-mid-dark);
+  --btn-warning-bg-active: var(--gray-dark);
+  --btn-warning-bg-hover: var(--red-dark);
+  --btn-warning-divider: var(--red-60);
+  --btn-warning-text: var(--white);
+}
+
+:host {
+  --icon-text-divider-default: var(--pacific-60);
+  --icon-text-divider-disabled: var(--gray-60);
+  --icon-text-divider: var(--icon-text-divider-default);
+}
+:host .wrapper {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.625rem;
+}
+:host .left-divider::before,
+:host .right-divider::after {
+  content: "";
+  border-left: 1px solid var(--icon-text-divider);
+  place-self: normal;
+}
+:host slot {
+  display: contents;
+}
+
+.left-divider ::slotted(svg:first-of-type) {
+  order: -1;
+}
+
+.right-divider ::slotted(svg:last-of-type) {
+  order: 1;
+}
+
+:host([disabled]) {
+  --icon-text-divider: var(--icon-text-divider-disabled) !important;
+}
+
+:host([icon-hidden]) ::slotted(svg) {
+  display: none !important;
+}
+
+:host button.a-btn::-moz-focus-inner,
+:host input.a-btn::-moz-focus-inner {
+  border: 0;
+}
+:host .a-btn {
+  line-height: 1.1875;
+  appearance: none;
+  display: flex;
+  gap: 0.625rem;
+  box-sizing: border-box;
+  padding: 0.5em 0.875em;
+  border: 0;
+  margin: 0;
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.1s;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+:host .a-btn, :host .a-btn:link, :host .a-btn:visited {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+:host .a-btn:hover, :host .a-btn.hover, :host .a-btn:focus, :host .a-btn.focus {
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-text);
+}
+:host .a-btn:focus, :host .a-btn.focus {
+  outline: 1px dotted var(--btn-bg);
+  outline-offset: 1px;
+}
+:host .a-btn:active, :host .a-btn.active {
+  background-color: var(--btn-bg-active);
+}
+:host .a-btn--secondary, :host .a-btn--secondary:link, :host .a-btn--secondary:visited {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  box-shadow: 0 0 0 1px var(--btn-secondary-border) inset;
+}
+:host .a-btn--secondary:hover, :host .a-btn--secondary.hover, :host .a-btn--secondary:focus, :host .a-btn--secondary.focus {
+  background-color: var(--btn-secondary-bg-hover);
+  color: var(--btn-secondary-text-hover);
+  box-shadow: 0 0 0 1px var(--btn-secondary-border-hover) inset;
+}
+:host .a-btn--secondary:focus, :host .a-btn--secondary.focus {
+  outline-color: var(--btn-secondary-border);
+}
+:host .a-btn--secondary:active, :host .a-btn--secondary.active {
+  background-color: var(--btn-secondary-bg-active);
+  color: var(--btn-secondary-text-active);
+  box-shadow: 0 0 0 1px var(--btn-secondary-border-active) inset;
+}
+:host .a-btn--warning, :host .a-btn--warning:link, :host .a-btn--warning:visited {
+  background-color: var(--btn-warning-bg);
+  color: var(--btn-warning-text);
+}
+:host .a-btn--warning:hover, :host .a-btn--warning.hover, :host .a-btn--warning:focus, :host .a-btn--warning.focus {
+  background-color: var(--btn-warning-bg-hover);
+}
+:host .a-btn--warning:focus, :host .a-btn--warning.focus {
+  outline-color: var(--btn-warning-bg);
+}
+:host .a-btn--warning:active, :host .a-btn--warning.active {
+  background-color: var(--btn-warning-bg-active);
+}
+:host .a-btn--disabled, :host .a-btn--disabled:link, :host .a-btn--disabled:visited, :host .a-btn--disabled:hover, :host .a-btn--disabled.hover, :host .a-btn--disabled:focus, :host .a-btn--disabled.focus, :host .a-btn--disabled:active, :host .a-btn--disabled.active, :host .a-btn[disabled], :host .a-btn[disabled]:link, :host .a-btn[disabled]:visited, :host .a-btn[disabled]:hover, :host .a-btn[disabled].hover, :host .a-btn[disabled]:focus, :host .a-btn[disabled].focus, :host .a-btn[disabled]:active, :host .a-btn[disabled].active, :host .a-btn[aria-disabled=true], :host .a-btn[aria-disabled=true]:link, :host .a-btn[aria-disabled=true]:visited, :host .a-btn[aria-disabled=true]:hover, :host .a-btn[aria-disabled=true].hover, :host .a-btn[aria-disabled=true]:focus, :host .a-btn[aria-disabled=true].focus, :host .a-btn[aria-disabled=true]:active, :host .a-btn[aria-disabled=true].active {
+  background-color: var(--btn-disabled-bg);
+  color: var(--btn-disabled-text);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+:host .a-btn--disabled:focus, :host .a-btn--disabled.focus, :host .a-btn[disabled]:focus, :host .a-btn[disabled].focus, :host .a-btn[aria-disabled=true]:focus, :host .a-btn[aria-disabled=true].focus {
+  outline-color: var(--btn-disabled-outline);
+}
+@media only screen and (max-width: 37.5em) {
+  :host .a-btn--full-on-xs {
+    width: 100%;
+  }
+}
+:host .a-btn:has(svg + span) span {
+  order: 3;
+}
+:host .a-btn:has(span + svg) svg {
+  order: 3;
+  flex: none;
+}
+:host .a-btn:not(.a-btn--hide-icon):has(svg + span)::before, :host .a-btn:not(.a-btn--hide-icon):has(span + svg)::before {
+  content: "";
+  border-left: 1px solid var(--icon-text-divider);
+  place-self: normal;
+}
+:host .a-btn--secondary:has(svg)::before {
+  border-color: var(--btn-secondary-divider) !important;
+}
+:host .a-btn--warning:has(svg)::before {
+  border-color: var(--btn-warning-divider) !important;
+}
+:host .a-btn--disabled:has(svg)::before, :host .a-btn[disabled]:has(svg)::before, :host .a-btn[aria-disabled=true]:has(svg)::before {
+  border-color: var(--btn-disabled-divider) !important;
+}
+:host .a-btn--hide-icon svg {
+  display: none;
+}
+
+:host ::slotted(ul),
+:host ::slotted(ol) {
+  display: none !important;
+}
+:host button {
+  line-height: 1.1875;
+}
+:host .o-form-search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9375rem;
+}
+@media only screen and (min-width: 37.5625em) {
+  :host .o-form-search {
+    flex-direction: row;
+    border-left: 0;
+  }
+  :host .o-form-search button[type=submit] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    flex-basis: 25%;
+  }
+}
+:host .o-form-search .container {
+  position: relative;
+  width: 100%;
+}
+:host .o-form-search .popup {
+  display: none;
+  position: absolute;
+  top: 34px;
+  z-index: 100;
+  background: white;
+  border: 1px solid var(--pacific);
+  border-top: 0;
+  width: calc(100% - 2px);
+}
+:host .o-form-search .popup::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: -1px;
+  border-bottom: 1px solid var(--pacific);
+}
+:host .o-form-search .popup.show {
+  display: block;
+}`;

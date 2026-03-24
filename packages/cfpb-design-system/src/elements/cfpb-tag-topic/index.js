@@ -1,5 +1,5 @@
 import { html, LitElement } from 'lit';
-import styles from './cfpb-tag-topic.component.scss';
+import styles from './cfpb-tag-topic.component.js';
 
 /**
  *

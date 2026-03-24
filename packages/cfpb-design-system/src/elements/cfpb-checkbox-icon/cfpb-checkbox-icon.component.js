@@ -1,0 +1,643 @@
+
+import { css } from 'lit';
+export default css`/**
+ * Do not edit directly, this file was auto-generated.
+ */
+:root {
+  --beige: #bea96f;
+  --beige-30: #f0e8d8;
+  --beige-60: #d8c8a0;
+  --black: #101820;
+  --font-stack: system-ui, sans-serif;
+  --gold: #ff9e1b;
+  --gold-10: #fff6ec;
+  --gold-20: #fff0dd;
+  --gold-30: #ffe8cb;
+  --gold-40: #ffe1b9;
+  --gold-50: #ffd8a3;
+  --gold-60: #ffce8d;
+  --gold-70: #ffc372;
+  --gold-80: #ffb858;
+  --gold-90: #ffab39;
+  --gold-dark: #dc731c;
+  --gold-mid-dark: #ed881b;
+  --gray: #5a5d61;
+  --gray-10: #e7e8e9;
+  --gray-15: #dcdddf;
+  --gray-20: #d2d3d5;
+  --gray-30: #c3c4c4;
+  --gray-40: #b4b5b6;
+  --gray-5: #f7f8f9;
+  --gray-50: #a2a3a4;
+  --gray-60: #919395;
+  --gray-70: #838588;
+  --gray-80: #75787b;
+  --gray-90: #676a6f;
+  --gray-dark: #43484e;
+  --gray-darker: #293037;
+  --gray-mid-dark: #4f5257;
+  --green: #20aa3f;
+  --green-10: #f0f8eb;
+  --green-20: #e2efd8;
+  --green-30: #d4eac6;
+  --green-40: #c7e5b3;
+  --green-50: #bae0a2;
+  --green-60: #addc91;
+  --green-70: #93cf7c;
+  --green-80: #66c368;
+  --green-90: #48b753;
+  --green-dark: #1e9642;
+  --green-mid-dark: #1fa040;
+  --navy: #254b87;
+  --navy-10: #f4f6fa;
+  --navy-20: #d3daeb;
+  --navy-30: #c3cde2;
+  --navy-40: #b3c0d9;
+  --navy-50: #9daecc;
+  --navy-60: #889cc0;
+  --navy-70: #6f88b2;
+  --navy-80: #5674a3;
+  --navy-90: #3e5f95;
+  --navy-dark: #002d72;
+  --navy-mid-dark: #123c7c;
+  --neutral: #8a6c57;
+  --neutral-10: #f8f5f2;
+  --neutral-20: #e7ddd7;
+  --neutral-30: #ddd1c9;
+  --neutral-40: #d3c5bc;
+  --neutral-50: #c6b4a9;
+  --neutral-60: #baa496;
+  --neutral-70: #ad9484;
+  --neutral-80: #a18573;
+  --neutral-90: #957865;
+  --neutral-dark: #745745;
+  --neutral-mid-dark: #7d604b;
+  --pacific: #0072ce;
+  --pacific-10: #eff8fd;
+  --pacific-20: #d6e8fa;
+  --pacific-30: #c3ddf6;
+  --pacific-40: #afd2f2;
+  --pacific-50: #96c4ed;
+  --pacific-60: #7eb7e8;
+  --pacific-70: #61a7e2;
+  --pacific-80: #4497dc;
+  --pacific-90: #2284d5;
+  --pacific-dark: #0050b4;
+  --pacific-mid-dark: #0061c1;
+  --purple: #b4267a;
+  --purple-10: #fdf3f8;
+  --purple-20: #f0d8e2;
+  --purple-30: #ebc9d9;
+  --purple-40: #e3b2cc;
+  --purple-50: #dc9cbf;
+  --purple-60: #d486b2;
+  --purple-70: #cd70a5;
+  --purple-80: #c55998;
+  --purple-90: #be438b;
+  --purple-dark: #a01b68;
+  --purple-mid-dark: #aa2071;
+  --red: #d14124;
+  --red-10: #fbefec;
+  --red-20: #f7e0d9;
+  --red-30: #f3d1c8;
+  --red-40: #f0c3b8;
+  --red-50: #ebb0a3;
+  --red-60: #e79e8e;
+  --red-70: #e28875;
+  --red-80: #dd735d;
+  --red-90: #d75a40;
+  --red-dark: #b63014;
+  --red-mid-dark: #c3381c;
+  --teal: #257675;
+  --teal-10: #f0f7f6;
+  --teal-20: #d4e7e6;
+  --teal-30: #c4dddc;
+  --teal-40: #b4d2d1;
+  --teal-50: #9ec4c3;
+  --teal-60: #89b6b5;
+  --teal-70: #70a6a5;
+  --teal-80: #579695;
+  --teal-90: #3e8685;
+  --teal-dark: #005e5d;
+  --teal-mid-dark: #126b69;
+  --white: #fff;
+}
+
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+:root {
+  --block-bg: var(--gray-5);
+  --block-border: var(--gray-40);
+  --choice-bg-default: var(--white);
+  --choice-bg-disabled: var(--gray-10);
+  --choice-bg-selected-default: var(--pacific);
+  --choice-bg-selected-disabled: var(--gray-40);
+  --choice-bg-selected-focus-default: var(--pacific);
+  --choice-border-default: var(--gray-60);
+  --choice-border-disabled: var(--gray-60);
+  --choice-border-error: var(--red);
+  --choice-border-focus-default: var(--pacific);
+  --choice-border-hover-default: var(--pacific);
+  --choice-border-success: var(--green);
+  --choice-border-warning: var(--gold);
+  --choice-label-disabled-default: var(--gray-dark);
+  --choice-outline-focus-default: var(--pacific);
+  --code-bg: var(--gray-5);
+  --content-main-border: var(--gray-40);
+  --form-alert-icon-color-default: var(--gray);
+  --form-alert-icon-color-error: var(--red);
+  --form-alert-icon-color-success: var(--green);
+  --form-alert-icon-color-warning: var(--gold);
+  --form-field-input-lg-target-bg: var(--gray-10);
+  --form-field-input-lg-target-bg-disabled: var(--gray-20);
+  --form-field-input-lg-target-bg-selected: var(--pacific-20);
+  --form-field-input-lg-target-border: var(--pacific);
+  --input-bg-default: var(--white);
+  --input-bg-disabled-default: var(--gray-10);
+  --input-border-default: var(--gray-60);
+  --input-border-disabled: var(--gray-60);
+  --input-border-error: var(--red);
+  --input-border-focus-default: var(--pacific);
+  --input-border-hover-default: var(--pacific);
+  --input-border-success: var(--green);
+  --input-border-warning: var(--gold);
+  --input-text-default: var(--black);
+  --input-text-disabled-default: var(--gray-dark);
+  --input-text-placeholder-default: var(--gray-dark);
+  --label-helper: var(--gray-dark);
+  --link-text: var(--pacific);
+  --link-text-active: var(--navy);
+  --link-text-hover: var(--pacific-dark);
+  --link-text-visited: var(--teal);
+  --link-underline: var(--pacific);
+  --link-underline-active: var(--navy);
+  --link-underline-hover: var(--pacific-dark);
+  --link-underline-visited: var(--teal);
+  --range-bg: var(--gray-10);
+  --range-bg-focused: var(--pacific-20);
+  --range-bg-track: var(--gray-80);
+  --range-border: var(--gray-40);
+  --range-border-focused: var(--pacific);
+  --select-bg-disabled-default: var(--gray-10);
+  --select-border-default: var(--gray-60);
+  --select-border-error: var(--red);
+  --select-border-focus-default: var(--pacific);
+  --select-border-hover-default: var(--pacific);
+  --select-icon-bg-default: var(--gray-10);
+  --select-text-disabled-default: var(--gray-dark);
+  --table-border: var(--gray);
+  --table-head-bg: var(--gray-5);
+  --tag-filter-bg-active-default: var(--teal-60);
+  --tag-filter-bg-default: var(--teal-20);
+  --tag-filter-bg-hover-default: var(--teal-40);
+  --tag-filter-border-default: var(--teal);
+  --tag-filter-outline-focuse-default: var(--teal-dark);
+  --text: var(--black); /** body */
+  --block-border-bottom: var(--block-border);
+  --block-border-left: var(--block-border);
+  --block-border-right: var(--block-border);
+  --block-border-top: var(--block-border);
+  --code-text: var(--text);
+  --table-head-text: var(--text);
+}
+
+/* ==========================================================================
+   Design System
+   Breakpoint variables.
+
+   NOTE: If any of the values in this file are adjusted,
+         they need to be adjusted in vars-breakpoints.js as well.
+   ========================================================================== */
+:root {
+  --font-adjust-base: 0.517;
+  --font-adjust-step: 0.0054;
+  /* Derived font-size-adjust-values */
+  --font-adjust-h1: calc(
+    var(--font-size-adjust-base) + (5 * var(--font-adjust-step))
+  );
+  --font-adjust-h2: calc(
+    var(--font-size-adjust-base) + (4 * var(--font-adjust-step))
+  );
+  --font-adjust-h3: calc(
+    var(--font-size-adjust-base) + (3 * var(--font-adjust-step))
+  );
+  --font-adjust-h4: calc(
+    var(--font-size-adjust-base) + (2 * var(--font-adjust-step))
+  );
+  --font-adjust-h5: calc(
+    var(--font-size-adjust-base) + (1 * var(--font-adjust-step))
+  );
+  --font-adjust-h6: var(--font-adjust-base);
+  --font-adjust-body: var(--font-adjust-base);
+  --select-border-width-default: 1px;
+  --select-border-width-error: 2px;
+}
+
+/* ==========================================================================
+   Design System
+   Grid mixins
+   ========================================================================== */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Design System
+   Media queries
+   ========================================================================== */
+/* ==========================================================================
+   Design System
+   Base styles
+   ========================================================================== */
+/* ==========================================================================
+   Design System
+   Utilities
+   ========================================================================== */
+.no-js .u-js-only {
+  display: none !important;
+}
+
+.u-hide-if-js {
+  display: none !important;
+}
+.no-js .u-hide-if-js {
+  display: block !important;
+}
+
+@media screen {
+  .u-print-only {
+    display: none;
+  }
+}
+
+@media print {
+  .u-screen-only {
+    display: none;
+  }
+}
+
+.u-clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* stylelint-disable-line property-no-deprecated */
+}
+
+@media only screen and (max-width: 37.5em) {
+  .u-hide-on-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 37.5625em) {
+  .u-show-on-mobile {
+    display: none;
+  }
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-right {
+  float: right;
+}
+
+.u-nowrap {
+  white-space: nowrap;
+}
+
+/* stylelint-disable selector-class-pattern */
+.u-flexible-container {
+  /* stylelint-enable */
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.u-flexible-container__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.u-flexible-container--4-3 {
+  /* stylelint-enable */
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+}
+
+/*
+Link text and underline, unless otherwise specified.
+$c: Link color.
+$v: Link visited color.
+$h: Link hover color.
+$f: Link focus color.
+$a: Link active color.
+
+// Separate out a different underline color.
+$bc: Link underline color.
+$bv: Link underline visited color.
+$bh: Link underline hover color.
+$bf: Link underline focus color.
+$ba: Link underline active color.
+*/
+/* stylelint-disable selector-class-pattern */
+/* stylelint-enable */
+.u-mt0 {
+  margin-top: 0 !important;
+}
+
+.u-mb0 {
+  margin-bottom: 0 !important;
+}
+
+.u-mt5 {
+  margin-top: 5px !important;
+}
+
+.u-mb5 {
+  margin-bottom: 5px !important;
+}
+
+.u-mt10 {
+  margin-top: 10px !important;
+}
+
+.u-mb10 {
+  margin-bottom: 10px !important;
+}
+
+.u-mt15 {
+  margin-top: 15px !important;
+}
+
+.u-mb15 {
+  margin-bottom: 15px !important;
+}
+
+.u-mt20 {
+  margin-top: 20px !important;
+}
+
+.u-mb20 {
+  margin-bottom: 20px !important;
+}
+
+.u-mt30 {
+  margin-top: 30px !important;
+}
+
+.u-mb30 {
+  margin-bottom: 30px !important;
+}
+
+.u-mt45 {
+  margin-top: 45px !important;
+}
+
+.u-mb45 {
+  margin-bottom: 45px !important;
+}
+
+.u-mt60 {
+  margin-top: 60px !important;
+}
+
+.u-mb60 {
+  margin-bottom: 60px !important;
+}
+
+.u-w100pct {
+  width: 100%;
+}
+
+.u-w90pct {
+  width: 90%;
+}
+
+.u-w80pct {
+  width: 80%;
+}
+
+.u-w70pct {
+  width: 70%;
+}
+
+.u-w60pct {
+  width: 60%;
+}
+
+.u-w50pct {
+  width: 50%;
+}
+
+.u-w40pct {
+  width: 40%;
+}
+
+.u-w30pct {
+  width: 30%;
+}
+
+.u-w20pct {
+  width: 20%;
+}
+
+.u-w10pct {
+  width: 10%;
+}
+
+.u-w75pct {
+  width: 75%;
+}
+
+.u-w65pct {
+  width: 65%;
+}
+
+.u-w25pct {
+  width: 25%;
+}
+
+.u-w15pct {
+  width: 15%;
+}
+
+.u-w66pct {
+  width: 66.6666666667%;
+}
+
+.u-w33pct {
+  width: 33.3333333333%;
+}
+
+/* stylelint-disable selector-class-pattern */
+small,
+.u-small-text {
+  /* stylelint-enable */
+  font-size: 0.875em;
+}
+small--subtle,
+.u-small-text--subtle {
+  color: var(--gray);
+}
+
+/* ==========================================================================
+   Utility classes for transitions.
+
+   Adds transitions utilty classes for transform, opacity,
+   and for the removing the transition duration.
+   ========================================================================== */
+.u-no-animation {
+  transition-duration: 0s !important;
+}
+
+.u-move-transition {
+  transition: transform 0.25s ease-out;
+}
+
+.u-move-to-origin {
+  transform: translate3d(0, 0, 0);
+}
+
+.u-move-left {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.u-move-left-2x {
+  transform: translate3d(-200%, 0, 0);
+}
+
+.u-move-left-3x {
+  transform: translate3d(-300%, 0, 0);
+}
+
+.u-move-right {
+  transform: translate3d(100%, 0, 0);
+}
+
+.u-move-up {
+  transform: translate3d(0, -100%, 0);
+}
+
+.u-alpha-transition {
+  transition: opacity 0.25s linear;
+}
+
+.u-alpha-100 {
+  opacity: 1;
+}
+
+.u-alpha-0 {
+  opacity: 0;
+}
+
+.u-max-height-transition {
+  overflow: hidden;
+  contain: paint;
+  transition: max-height 0.2s ease-out;
+}
+
+/*
+.u-max-height-default {
+  This class is kept for documentation completeness.
+  The actual max-height is set in the JavaScript,
+  so that we know what the actual height of the content is for easing purposes.
+}
+*/
+.u-max-height-zero {
+  max-height: 0 !important;
+}
+
+.u-max-height-summary {
+  /* The value set here should show 4 lines of text at our standard 16px
+     base font size. The calculation comes from the following:
+     88px = 16 * 5.5em.
+     5.5em = base-line-height (22px) * 4 / base-font-size (16px)
+  */
+  max-height: 88px !important;
+}
+
+:host {
+  --choice-border: var(--choice-border-default);
+  --choice-border-hover: var(--choice-border-hover-default);
+  --choice-bg: var(--choice-bg-default);
+  --choice-bg-selected: var(--choice-bg-selected-default);
+  --choice-border-width-addendum: 0;
+}
+:host .cfpb-checkbox-icon::before {
+  display: inline-block;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border: 1px solid var(--choice-border);
+  outline: var(--choice-border-width-addendum) solid var(--choice-border);
+  height: 1.125em;
+  width: 1.125em;
+  margin-right: 10px;
+  background-color: var(--choice-bg);
+  content: "";
+  vertical-align: top;
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+:host .checked::before {
+  --cfpb-background-icon-svg: 'approved';
+  background-size: auto 1.1875em;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+:host .disabled::before {
+  cursor: not-allowed;
+  --choice-border: var(--choice-border-disabled);
+  --choice-bg: var(--choice-bg-disabled);
+  --choice-bg-selected: var(--choice-bg-selected-disabled);
+}
+:host .checked.disabled::before {
+  --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
+}
+:host .cfpb-checkbox-icon:not(.disabled, .borderless).focus::before,
+:host .cfpb-checkbox-icon:not(.disabled, .borderless):focus::before,
+:host .cfpb-checkbox-icon:not(.disabled, .borderless).hover::before,
+:host .cfpb-checkbox-icon:not(.disabled, .borderless):hover::before {
+  cursor: pointer;
+  border-color: var(--choice-border-hover);
+  box-shadow: 0 0 0 1px var(--choice-border-hover);
+  outline-color: var(--choice-border-hover);
+}
+:host .validation-error,
+:host .validation-warning,
+:host .validation-success {
+  --choice-border-width-addendum: 1px;
+}
+:host .validation-error {
+  --choice-border: var(--choice-border-error);
+}
+:host .validation-warning {
+  --choice-border: var(--choice-border-warning);
+}
+:host .validation-success {
+  --choice-border: var(--choice-border-success);
+}
+:host .borderless::before {
+  border-color: transparent;
+  outline-color: transparent;
+  background-color: transparent;
+}`;

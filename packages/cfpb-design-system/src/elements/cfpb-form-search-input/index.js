@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-form-search-input.component.scss';
+import styles from './cfpb-form-search-input.component.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 
 import searchIcon from '../../components/cfpb-icons/icons/search.svg?raw';

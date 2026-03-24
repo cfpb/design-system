@@ -1,5 +1,5 @@
 import { html, LitElement } from 'lit';
-import styles from './cfpb-icon-text.component.scss';
+import styles from './cfpb-icon-text.component.js';
 
 /**
  * @element cfpb-icon-text

@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-expandable.component.scss';
+import styles from './cfpb-expandable.component.js';
 import expandIcon from '../../components/cfpb-icons/icons/plus-round.svg?raw';
 import collapseIcon from '../../components/cfpb-icons/icons/minus-round.svg?raw';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';

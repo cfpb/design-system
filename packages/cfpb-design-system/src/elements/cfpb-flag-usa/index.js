@@ -1,5 +1,5 @@
 import { LitElement } from 'lit';
-import styles from './cfpb-flag-usa.component.scss';
+import styles from './cfpb-flag-usa.component.js';
 
 /**
  * @element cfpb-flag-usa

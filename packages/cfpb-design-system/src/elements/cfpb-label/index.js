@@ -1,5 +1,5 @@
 import { html, LitElement } from 'lit';
-import styles from './cfpb-label.component.scss';
+import styles from './cfpb-label.component.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
 /**

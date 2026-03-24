@@ -1,7 +1,7 @@
 import { html, LitElement, nothing } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-select.component.scss';
+import styles from './cfpb-select.component.js';
 import expandIcon from '../../components/cfpb-icons/icons/down.svg?raw';
 import collapseIcon from '../../components/cfpb-icons/icons/up.svg?raw';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';

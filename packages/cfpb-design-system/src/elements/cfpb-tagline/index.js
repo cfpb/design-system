@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { CfpbFlagUsa } from '../cfpb-flag-usa';
-import styles from './cfpb-tagline.component.scss';
+import styles from './cfpb-tagline.component.js';
 
 /**
  * @element cfpb-icon-text

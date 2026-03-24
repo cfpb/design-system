@@ -1,5 +1,5 @@
 import { html, LitElement } from 'lit';
-import styles from './cfpb-tag-group.component.scss';
+import styles from './cfpb-tag-group.component.js';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 
 const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];

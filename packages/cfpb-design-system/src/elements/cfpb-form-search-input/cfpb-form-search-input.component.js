@@ -1,0 +1,481 @@
+
+import { css } from 'lit';
+export default css`/**
+ * Do not edit directly, this file was auto-generated.
+ */
+:root {
+  --beige: #bea96f;
+  --beige-30: #f0e8d8;
+  --beige-60: #d8c8a0;
+  --black: #101820;
+  --font-stack: system-ui, sans-serif;
+  --gold: #ff9e1b;
+  --gold-10: #fff6ec;
+  --gold-20: #fff0dd;
+  --gold-30: #ffe8cb;
+  --gold-40: #ffe1b9;
+  --gold-50: #ffd8a3;
+  --gold-60: #ffce8d;
+  --gold-70: #ffc372;
+  --gold-80: #ffb858;
+  --gold-90: #ffab39;
+  --gold-dark: #dc731c;
+  --gold-mid-dark: #ed881b;
+  --gray: #5a5d61;
+  --gray-10: #e7e8e9;
+  --gray-15: #dcdddf;
+  --gray-20: #d2d3d5;
+  --gray-30: #c3c4c4;
+  --gray-40: #b4b5b6;
+  --gray-5: #f7f8f9;
+  --gray-50: #a2a3a4;
+  --gray-60: #919395;
+  --gray-70: #838588;
+  --gray-80: #75787b;
+  --gray-90: #676a6f;
+  --gray-dark: #43484e;
+  --gray-darker: #293037;
+  --gray-mid-dark: #4f5257;
+  --green: #20aa3f;
+  --green-10: #f0f8eb;
+  --green-20: #e2efd8;
+  --green-30: #d4eac6;
+  --green-40: #c7e5b3;
+  --green-50: #bae0a2;
+  --green-60: #addc91;
+  --green-70: #93cf7c;
+  --green-80: #66c368;
+  --green-90: #48b753;
+  --green-dark: #1e9642;
+  --green-mid-dark: #1fa040;
+  --navy: #254b87;
+  --navy-10: #f4f6fa;
+  --navy-20: #d3daeb;
+  --navy-30: #c3cde2;
+  --navy-40: #b3c0d9;
+  --navy-50: #9daecc;
+  --navy-60: #889cc0;
+  --navy-70: #6f88b2;
+  --navy-80: #5674a3;
+  --navy-90: #3e5f95;
+  --navy-dark: #002d72;
+  --navy-mid-dark: #123c7c;
+  --neutral: #8a6c57;
+  --neutral-10: #f8f5f2;
+  --neutral-20: #e7ddd7;
+  --neutral-30: #ddd1c9;
+  --neutral-40: #d3c5bc;
+  --neutral-50: #c6b4a9;
+  --neutral-60: #baa496;
+  --neutral-70: #ad9484;
+  --neutral-80: #a18573;
+  --neutral-90: #957865;
+  --neutral-dark: #745745;
+  --neutral-mid-dark: #7d604b;
+  --pacific: #0072ce;
+  --pacific-10: #eff8fd;
+  --pacific-20: #d6e8fa;
+  --pacific-30: #c3ddf6;
+  --pacific-40: #afd2f2;
+  --pacific-50: #96c4ed;
+  --pacific-60: #7eb7e8;
+  --pacific-70: #61a7e2;
+  --pacific-80: #4497dc;
+  --pacific-90: #2284d5;
+  --pacific-dark: #0050b4;
+  --pacific-mid-dark: #0061c1;
+  --purple: #b4267a;
+  --purple-10: #fdf3f8;
+  --purple-20: #f0d8e2;
+  --purple-30: #ebc9d9;
+  --purple-40: #e3b2cc;
+  --purple-50: #dc9cbf;
+  --purple-60: #d486b2;
+  --purple-70: #cd70a5;
+  --purple-80: #c55998;
+  --purple-90: #be438b;
+  --purple-dark: #a01b68;
+  --purple-mid-dark: #aa2071;
+  --red: #d14124;
+  --red-10: #fbefec;
+  --red-20: #f7e0d9;
+  --red-30: #f3d1c8;
+  --red-40: #f0c3b8;
+  --red-50: #ebb0a3;
+  --red-60: #e79e8e;
+  --red-70: #e28875;
+  --red-80: #dd735d;
+  --red-90: #d75a40;
+  --red-dark: #b63014;
+  --red-mid-dark: #c3381c;
+  --teal: #257675;
+  --teal-10: #f0f7f6;
+  --teal-20: #d4e7e6;
+  --teal-30: #c4dddc;
+  --teal-40: #b4d2d1;
+  --teal-50: #9ec4c3;
+  --teal-60: #89b6b5;
+  --teal-70: #70a6a5;
+  --teal-80: #579695;
+  --teal-90: #3e8685;
+  --teal-dark: #005e5d;
+  --teal-mid-dark: #126b69;
+  --white: #fff;
+}
+
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+:root {
+  --block-bg: var(--gray-5);
+  --block-border: var(--gray-40);
+  --choice-bg-default: var(--white);
+  --choice-bg-disabled: var(--gray-10);
+  --choice-bg-selected-default: var(--pacific);
+  --choice-bg-selected-disabled: var(--gray-40);
+  --choice-bg-selected-focus-default: var(--pacific);
+  --choice-border-default: var(--gray-60);
+  --choice-border-disabled: var(--gray-60);
+  --choice-border-error: var(--red);
+  --choice-border-focus-default: var(--pacific);
+  --choice-border-hover-default: var(--pacific);
+  --choice-border-success: var(--green);
+  --choice-border-warning: var(--gold);
+  --choice-label-disabled-default: var(--gray-dark);
+  --choice-outline-focus-default: var(--pacific);
+  --code-bg: var(--gray-5);
+  --content-main-border: var(--gray-40);
+  --form-alert-icon-color-default: var(--gray);
+  --form-alert-icon-color-error: var(--red);
+  --form-alert-icon-color-success: var(--green);
+  --form-alert-icon-color-warning: var(--gold);
+  --form-field-input-lg-target-bg: var(--gray-10);
+  --form-field-input-lg-target-bg-disabled: var(--gray-20);
+  --form-field-input-lg-target-bg-selected: var(--pacific-20);
+  --form-field-input-lg-target-border: var(--pacific);
+  --input-bg-default: var(--white);
+  --input-bg-disabled-default: var(--gray-10);
+  --input-border-default: var(--gray-60);
+  --input-border-disabled: var(--gray-60);
+  --input-border-error: var(--red);
+  --input-border-focus-default: var(--pacific);
+  --input-border-hover-default: var(--pacific);
+  --input-border-success: var(--green);
+  --input-border-warning: var(--gold);
+  --input-text-default: var(--black);
+  --input-text-disabled-default: var(--gray-dark);
+  --input-text-placeholder-default: var(--gray-dark);
+  --label-helper: var(--gray-dark);
+  --link-text: var(--pacific);
+  --link-text-active: var(--navy);
+  --link-text-hover: var(--pacific-dark);
+  --link-text-visited: var(--teal);
+  --link-underline: var(--pacific);
+  --link-underline-active: var(--navy);
+  --link-underline-hover: var(--pacific-dark);
+  --link-underline-visited: var(--teal);
+  --range-bg: var(--gray-10);
+  --range-bg-focused: var(--pacific-20);
+  --range-bg-track: var(--gray-80);
+  --range-border: var(--gray-40);
+  --range-border-focused: var(--pacific);
+  --select-bg-disabled-default: var(--gray-10);
+  --select-border-default: var(--gray-60);
+  --select-border-error: var(--red);
+  --select-border-focus-default: var(--pacific);
+  --select-border-hover-default: var(--pacific);
+  --select-icon-bg-default: var(--gray-10);
+  --select-text-disabled-default: var(--gray-dark);
+  --table-border: var(--gray);
+  --table-head-bg: var(--gray-5);
+  --tag-filter-bg-active-default: var(--teal-60);
+  --tag-filter-bg-default: var(--teal-20);
+  --tag-filter-bg-hover-default: var(--teal-40);
+  --tag-filter-border-default: var(--teal);
+  --tag-filter-outline-focuse-default: var(--teal-dark);
+  --text: var(--black); /** body */
+  --block-border-bottom: var(--block-border);
+  --block-border-left: var(--block-border);
+  --block-border-right: var(--block-border);
+  --block-border-top: var(--block-border);
+  --code-text: var(--text);
+  --table-head-text: var(--text);
+}
+
+/* ==========================================================================
+   Design System
+   Breakpoint variables.
+
+   NOTE: If any of the values in this file are adjusted,
+         they need to be adjusted in vars-breakpoints.js as well.
+   ========================================================================== */
+:root {
+  --font-adjust-base: 0.517;
+  --font-adjust-step: 0.0054;
+  /* Derived font-size-adjust-values */
+  --font-adjust-h1: calc(
+    var(--font-size-adjust-base) + (5 * var(--font-adjust-step))
+  );
+  --font-adjust-h2: calc(
+    var(--font-size-adjust-base) + (4 * var(--font-adjust-step))
+  );
+  --font-adjust-h3: calc(
+    var(--font-size-adjust-base) + (3 * var(--font-adjust-step))
+  );
+  --font-adjust-h4: calc(
+    var(--font-size-adjust-base) + (2 * var(--font-adjust-step))
+  );
+  --font-adjust-h5: calc(
+    var(--font-size-adjust-base) + (1 * var(--font-adjust-step))
+  );
+  --font-adjust-h6: var(--font-adjust-base);
+  --font-adjust-body: var(--font-adjust-base);
+  --select-border-width-default: 1px;
+  --select-border-width-error: 2px;
+}
+
+/* ==========================================================================
+   Design System
+   Grid mixins
+   ========================================================================== */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Design System
+   Media queries
+   ========================================================================== */
+/* ==========================================================================
+   Design System
+   Base styles
+   ========================================================================== */
+.a-text-input {
+  --input-text: var(--input-text-default);
+  --input-text-disabled: var(--input-text-disabled-default);
+  --input-text-placeholder: var(--input-text-placeholder-default);
+  --input-border: var(--input-border-default);
+  --input-border-hover: var(--input-border-hover-default);
+  --input-border-focus: var(--input-border-focus-default);
+  --input-bg: var(--input-bg-default);
+  --input-bg-disabled: var(--input-bg-disabled-default);
+  appearance: none;
+  display: inline-block;
+  padding: 0.4375em;
+  border: 1px solid var(--input-border);
+  outline: 0 solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
+  box-sizing: border-box;
+}
+.a-text-input:hover, .a-text-input.hover {
+  border-color: var(--input-border-hover);
+  outline: 1px solid var(--input-border-hover);
+}
+.a-text-input:focus, .a-text-input.focus {
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 0 1px var(--input-border-focus);
+  outline: 1px dotted var(--input-border-focus);
+  outline-offset: 2px;
+}
+.a-text-input:disabled {
+  --input-border: var(--input-border-disabled);
+}
+.a-text-input:disabled, .a-text-input:disabled:hover, .a-text-input:disabled.hover, .a-text-input:disabled:focus, .a-text-input:disabled.focus {
+  color: var(--input-text-disabled);
+  background-color: var(--input-bg-disabled);
+  cursor: not-allowed;
+  border-color: var(--input-border);
+  outline: none;
+}
+.a-text-input--error, .a-text-input--warning, .a-text-input--success {
+  outline-width: 1px;
+}
+.a-text-input--error {
+  --input-border: var(--input-border-error);
+}
+.a-text-input--warning {
+  --input-border: var(--input-border-warning);
+}
+.a-text-input--success {
+  --input-border: var(--input-border-success);
+}
+
+::-webkit-search-decoration {
+  appearance: none;
+}
+
+::placeholder {
+  color: var(--input-text-placeholder);
+}
+
+input[type=date]::-webkit-datetime-edit {
+  color: var(--input-text-placeholder);
+}
+
+/* ==========================================================================
+   Design System
+   Icons
+   ========================================================================== */
+.cf-icon-svg {
+  height: 1.1875em;
+  vertical-align: middle;
+  fill: currentcolor;
+}
+.cf-icon-svg--updating, .cf-icon-svg--updating-round {
+  animation: updating-animation 1.25s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+@keyframes updating-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+html[lang=ar] .cf-icon-svg--right, html[lang=ar] .cf-icon-svg--right-round, html[lang=ar] .cf-icon-svg--left, html[lang=ar] .cf-icon-svg--left-round, html[lang=ar] .cf-icon-svg--arrow-right, html[lang=ar] .cf-icon-svg--arrow-right-round, html[lang=ar] .cf-icon-svg--arrow-left, html[lang=ar] .cf-icon-svg--arrow-left-round, html[lang=ar] .cf-icon-svg--help, html[lang=ar] .cf-icon-svg--help-round, html[lang=ar] .cf-icon-svg--book, html[lang=ar] .cf-icon-svg--book-round, html[lang=ar] .cf-icon-svg--document, html[lang=ar] .cf-icon-svg--document-round, html[lang=ar] .cf-icon-svg--edit, html[lang=ar] .cf-icon-svg--edit-round, html[lang=ar] .cf-icon-svg--paper-clip, html[lang=ar] .cf-icon-svg--paper-clip-round, html[lang=ar] .cf-icon-svg--cart, html[lang=ar] .cf-icon-svg--cart-round, html[lang=ar] .cf-icon-svg--disability, html[lang=ar] .cf-icon-svg--disability-round, html[lang=ar] .cf-icon-svg--travel, html[lang=ar] .cf-icon-svg--travel-round, html[lang=ar] .cf-icon-svg--bullhorn, html[lang=ar] .cf-icon-svg--bullhorn-round, html[lang=ar] .cf-icon-svg--chart, html[lang=ar] .cf-icon-svg--chart-round, html[lang=ar] .cf-icon-svg--list, html[lang=ar] .cf-icon-svg--list-round, html[lang=ar] .cf-icon-svg--external-link, html[lang=ar] .cf-icon-svg--external-link-round {
+  transform: scaleX(-1);
+}
+
+:host {
+  --input-border-default: var(--gray-60);
+  --input-border-disabled: var(--gray-60);
+  --input-border-success: var(--green);
+  --input-border-warning: var(--gold);
+  --input-border-error: var(--red);
+  --input-border: var(--input-border-default);
+  display: flex;
+}
+:host .o-search-input {
+  position: relative;
+  display: flex;
+  width: initial;
+  flex: 0 1 100%;
+  align-items: center;
+  min-width: 300px;
+  background: var(--white);
+  border: 1px solid var(--input-border);
+  outline: 0 solid var(--input-border);
+}
+:host .o-search-input label {
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+}
+:host .o-search-input input {
+  line-height: 1.1875;
+}
+:host .o-search-input input[type=search] {
+  font-size: 1rem;
+  width: 100%;
+  white-space: nowrap;
+  padding-left: 30px;
+  cursor: text;
+  appearance: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+:host .o-search-input button[type=reset] {
+  display: none;
+  align-self: center;
+  color: var(--gray-40);
+  font-size: 20px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  outline: 0;
+  width: 44px;
+  text-align: right;
+}
+:host .o-search-input button[type=reset] > svg {
+  width: 25px;
+  pointer-events: none;
+}
+:host .o-search-input button[type=reset]:hover {
+  color: var(--black);
+  cursor: pointer;
+}
+:host .o-search-input button[type=reset]:focus {
+  color: var(--black);
+}
+:host .o-search-input button[type=reset]:focus > svg {
+  outline: 1px dotted var(--pacific);
+}
+:host .o-search-input input[type=search]:placeholder-shown ~ button[type=reset] {
+  display: none;
+}
+:host .o-search-input input[type=search]::-webkit-search-decoration,
+:host .o-search-input input[type=search]::-webkit-search-cancel-button,
+:host .o-search-input input[type=search]::-webkit-search-results-button,
+:host .o-search-input input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+:host .o-search-input:hover, :host .o-search-input:focus-within {
+  border: 1px solid var(--pacific);
+  box-shadow: 0 0 0 1px var(--pacific);
+  outline-color: var(--pacific);
+}
+:host .o-search-input:hover input[type=search], :host .o-search-input:focus-within input[type=search] {
+  outline: none;
+  padding-right: 0;
+}
+:host .o-search-input:focus-within {
+  outline: 1px dotted var(--pacific);
+  outline-offset: 2px;
+}
+:host .o-search-input--error, :host .o-search-input--warning, :host .o-search-input--success {
+  outline-width: 1px;
+}
+:host .o-search-input--error {
+  --input-border: var(--input-border-error);
+}
+:host .o-search-input--warning {
+  --input-border: var(--input-border-warning);
+}
+:host .o-search-input--success {
+  --input-border: var(--input-border-success);
+}
+:host .o-search-input:focus-within button[type=reset], :host .o-search-input:hover button[type=reset] {
+  display: flex;
+  justify-content: flex-end;
+}
+:host .no-js .o-search-input button[type=reset] {
+  display: none !important;
+}
+
+:host([borderless]) .o-search-input {
+  border-color: transparent;
+}
+:host([borderless]) .o-search-input input {
+  padding-top: 0.3125em;
+  padding-bottom: 0.3125em;
+}
+:host([borderless]) .o-search-input:hover, :host([borderless]) .o-search-input:focus-within {
+  border-color: transparent;
+  box-shadow: 0 0 0 1px transparent;
+  outline-color: transparent;
+}
+
+:host([disabled]) {
+  --input-border: var(--input-border-disabled);
+}
+:host([disabled]) .o-search-input label,
+:host([disabled]) .o-search-input input[type=search] {
+  color: var(--input-border);
+}
+:host([disabled]) .o-search-input:hover {
+  border: 1px solid var(--input-border);
+  box-shadow: none;
+}
+:host([disabled]) .o-search-input:hover label,
+:host([disabled]) .o-search-input:hover input[type=search] {
+  cursor: not-allowed;
+}
+:host([disabled]) .o-search-input:hover button[type=reset] {
+  display: none;
+}
+:host([disabled]) .o-search-input--error:hover, :host([disabled]) .o-search-input--warning:hover, :host([disabled]) .o-search-input--success:hover {
+  outline-color: var(--input-border);
+}`;

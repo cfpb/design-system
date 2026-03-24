@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-pagination.component.scss';
+import styles from './cfpb-pagination.component.js';
 import leftIcon from '../../components/cfpb-icons/icons/left.svg?raw';
 import rightIcon from '../../components/cfpb-icons/icons/right.svg?raw';
 import { I18nService, MediaQueryService } from '../cfpb-utilities/';

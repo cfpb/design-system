@@ -2,9 +2,7 @@
    Design System
    ========================================================================== */
 
-export * from './elements/abstracts';
-
-export * from './elements/base';
+export * from './elements';
 
 export * from './components/cfpb-buttons';
 export * from './components/cfpb-expandables';
@@ -17,5 +15,3 @@ export * from './components/cfpb-tables';
 export * from './components/cfpb-typography';
 
 export * from './utilities';
-
-export * from './elements';

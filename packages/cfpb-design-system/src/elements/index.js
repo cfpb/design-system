@@ -3,6 +3,11 @@
    ========================================================================== */
 
 // TODO: aggregate and export the component subdirectories automatically.
+
+// Base styles.
+export * from './abstracts';
+
+// Component styles.
 export * from './cfpb-button';
 export * from './cfpb-form-alert';
 export * from './cfpb-expandable';

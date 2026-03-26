@@ -1,9 +1,6 @@
 import { defineConfig, mergeConfig } from 'vite';
 import baseConfig from './vite.config.base';
 import path from 'path';
-import { fileURLToPath } from 'node:url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const specificConfig = defineConfig({
   root: path.resolve(__dirname, 'docs/assets'),

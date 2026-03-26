@@ -2,8 +2,10 @@ import { html, LitElement, css, unsafeCSS, nothing } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './cfpb-select.component.scss?inline';
-import expandIcon from '../../components/cfpb-icons/icons/down.svg?raw';
-import collapseIcon from '../../components/cfpb-icons/icons/up.svg?raw';
+import {
+  downIcon as expandIcon,
+  upIcon as collapseIcon,
+} from '../../components/cfpb-icons/icons-lib.js';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
 import { SearchService } from '../cfpb-utilities/search-service.js';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';

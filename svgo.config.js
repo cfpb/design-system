@@ -1,6 +1,7 @@
 import addClassesToSVGElement from './scripts/svgo-plugin-add-classes-to-svg-element.cjs';
 
 export default {
+  multipass: true,
   plugins: [
     {
       name: 'preset-default',

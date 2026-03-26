@@ -1,6 +1,7 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icons-lib' as *;
 
 :host {
   // Theme variables.
@@ -32,7 +33,7 @@
   }
 
   .checked::before {
-    --cfpb-background-icon-svg: 'approved';
+    background-image: var(--cfpb-background-icon-svg-approved);
     background-size: auto $cf-icon-height;
     background-repeat: no-repeat;
     background-position: center 0;
@@ -47,9 +48,7 @@
   }
 
   .checked.disabled::before {
-    // RGB values are CFPB gray (#5a5d61).
-    // For some reason SVG isn't accepting hex values for the fill.
-    --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
+    background-image: var(--cfpb-background-icon-svg-approved-gray);
   }
 
   .cfpb-checkbox-icon:not(.disabled, .borderless).focus::before,

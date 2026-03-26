@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icons-lib' as *;
 
 .a-select {
   --select-border: var(--select-border-default);
@@ -74,7 +75,7 @@
     bottom: 0;
     background-color: var(--select-icon-bg-default);
 
-    --cfpb-background-icon-svg: 'down';
+    background-image: var(--cfpb-background-icon-svg-down);
 
     background-size: auto $cf-icon-height;
     background-repeat: no-repeat;
@@ -87,7 +88,7 @@
   // Unfortunately, we can't target this to apply when only
   // the select[disabled] is present and need the additional class.
   &--disabled::after {
-    --cfpb-background-icon-svg: 'down rgb(90,93,97)';
+    background-image: var(--cfpb-background-icon-svg-down-gray);
   }
 
   &--error {

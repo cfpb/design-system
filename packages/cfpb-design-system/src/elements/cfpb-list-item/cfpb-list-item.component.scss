@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icons-lib' as *;
 
 :host {
   // Theme variables.
@@ -48,7 +49,7 @@
 
 :host([checked]) {
   .checkbox::before {
-    --cfpb-background-icon-svg: 'approved';
+    background-image: var(--cfpb-background-icon-svg-approved);
 
     background-size: auto $cf-icon-height;
     background-repeat: no-repeat;

@@ -1,9 +1,11 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './cfpb-form-alert.component.scss?inline';
-import errorIcon from '../../components/cfpb-icons/icons/error-round.svg?raw';
-import warningIcon from '../../components/cfpb-icons/icons/warning-round.svg?raw';
-import successIcon from '../../components/cfpb-icons/icons/approved-round.svg?raw';
+import {
+  errorRoundIcon as errorIcon,
+  warningRoundIcon as warningIcon,
+  approvedRoundIcon as successIcon,
+} from '../../components/cfpb-icons/icons-lib.js';
 
 /**
  * @element cfpb-form-search

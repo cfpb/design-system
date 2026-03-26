@@ -3,8 +3,10 @@ import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './cfpb-form-search-input.component.scss?inline';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 
-import searchIcon from '../../components/cfpb-icons/icons/search.svg?raw';
-import clearIcon from '../../components/cfpb-icons/icons/error.svg?raw';
+import {
+  searchIcon,
+  errorIcon as clearIcon,
+} from '../../components/cfpb-icons/icons-lib.js';
 
 /**
  * @element cfpb-form-search-input

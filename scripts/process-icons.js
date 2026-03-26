@@ -39,7 +39,7 @@ function svgToDataUrl(svg) {
   const encoded = encodeURIComponent(cleaned)
     .replace(/'/g, '%27')
     .replace(/'/g, '%22');
-  return `url("data:image/svg+xml,${encoded}")`;
+  return `url('data:image/svg+xml,${encoded}')`;
 }
 
 const files = fs.readdirSync(iconsDir).filter((file) => file.endsWith('.svg'));

@@ -3,9 +3,6 @@ import baseConfig from './vite.config.base';
 import path from 'node:path';
 
 const specificConfig = defineConfig({
-  css: {
-    transformer: 'lightningcss',
-  },
   build: {
     cssCodeSplit: false,
     outDir: path.resolve('packages/cfpb-design-system/dist'),

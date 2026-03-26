@@ -1,6 +1,6 @@
 import { defineConfig, mergeConfig } from 'vite';
 import baseConfig from './vite.config.base';
-import path from 'path';
+import path from 'node:path';
 
 const specificConfig = defineConfig({
   build: {
@@ -13,9 +13,10 @@ const specificConfig = defineConfig({
       fileName: () => 'index.js',
     },
 
-    rollupOptions: {
+    rolldownOptions: {
       output: {
-        assetFileNames: 'index.css',
+        assetFileNames: (assetInfo) =>
+          assetInfo.name?.endsWith('.css') ? 'index.css' : '[name][extname]',
       },
     },
   },

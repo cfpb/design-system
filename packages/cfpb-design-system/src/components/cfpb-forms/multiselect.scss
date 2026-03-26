@@ -39,7 +39,7 @@ select.o-multiselect {
       bottom: 0;
       background-color: var(--select-icon-bg-default);
 
-      background-image: var(--cfpb-background-icon-svg-down);
+      background-image: $cfpb-background-icon-svg-down;
 
       background-size: auto $cf-icon-height;
       background-repeat: no-repeat;
@@ -92,7 +92,7 @@ select.o-multiselect {
 
     // Reverse arrow when search drop-down is open.
     .o-multiselect__header::after {
-      background-image: var(--cfpb-background-icon-svg-up);
+      background-image: $cfpb-background-icon-svg-up;
     }
   }
 

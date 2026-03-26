@@ -138,14 +138,14 @@
       }
 
       &:checked + .a-label::before {
-        background-image: var(--cfpb-background-icon-svg-approved);
+        background-image: $cfpb-background-icon-svg-approved;
 
         background-size: auto $cf-icon-height;
         background-repeat: no-repeat;
         background-position: center 0;
       }
       &:disabled:checked + .a-label::before {
-        background-image: var(--cfpb-background-icon-svg-approved-gray);
+        background-image: $cfpb-background-icon-svg-approved-gray;
       }
     }
   }

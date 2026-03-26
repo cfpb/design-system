@@ -75,7 +75,7 @@
     bottom: 0;
     background-color: var(--select-icon-bg-default);
 
-    background-image: var(--cfpb-background-icon-svg-down);
+    background-image: $cfpb-background-icon-svg-down;
 
     background-size: auto $cf-icon-height;
     background-repeat: no-repeat;
@@ -88,7 +88,7 @@
   // Unfortunately, we can't target this to apply when only
   // the select[disabled] is present and need the additional class.
   &--disabled::after {
-    background-image: var(--cfpb-background-icon-svg-down-gray);
+    background-image: $cfpb-background-icon-svg-down-gray;
   }
 
   &--error {

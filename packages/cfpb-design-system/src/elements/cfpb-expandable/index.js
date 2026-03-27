@@ -1,8 +1,10 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './cfpb-expandable.component.scss?inline';
-import expandIcon from '../../components/cfpb-icons/icons/plus-round.svg?raw';
-import collapseIcon from '../../components/cfpb-icons/icons/minus-round.svg?raw';
+import {
+  plusRoundIcon as expandIcon,
+  minusRoundIcon as collapseIcon,
+} from '../../components/cfpb-icons/icons-lib.js';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';
 import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
 

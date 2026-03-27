@@ -10,8 +10,7 @@ import { create } from './multiselect-utils.js';
 
 import * as MultiselectStyles from './multiselect.scss';
 
-import * as closeIconSrc from '../cfpb-icons/icons/error.svg?raw';
-const closeIcon = closeIconSrc.default;
+import { errorIcon as closeIcon } from '../cfpb-icons/icons-lib.js';
 
 const BASE_CLASS = 'o-multiselect';
 const CHECKBOX_INPUT_CLASS = 'a-checkbox';

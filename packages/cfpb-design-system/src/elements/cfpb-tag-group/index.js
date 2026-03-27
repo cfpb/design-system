@@ -1,5 +1,5 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-tag-group.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import styles from './cfpb-tag-group.component.scss?inline';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 
 const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
@@ -17,7 +17,9 @@ const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
  * @fires CfpbTagGroup#event:"tag-removed" - A tag was removed to the group.
  */
 export class CfpbTagGroup extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {string} childData - Structure data to create child components.

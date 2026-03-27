@@ -1,13 +1,15 @@
-import { html, LitElement } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
 import { CfpbFlagUsa } from '../cfpb-flag-usa';
-import styles from './cfpb-tagline.component.scss';
+import styles from './cfpb-tagline.component.scss?inline';
 
 /**
  * @element cfpb-icon-text
  * @slot - The main content for the tagline.
  */
 export class CfpbTagline extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {boolean} isLarge - Whether to use the larger tagline appearance.

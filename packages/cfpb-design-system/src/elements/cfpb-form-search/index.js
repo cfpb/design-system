@@ -1,5 +1,5 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-form-search.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import styles from './cfpb-form-search.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
 import { SearchService } from '../cfpb-utilities/search-service.js';
@@ -10,7 +10,9 @@ import { CfpbFormAlert } from '../cfpb-form-alert';
  * @element cfpb-form-search
  */
 export class CfpbFormSearch extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   static formAssociated = true;
 

@@ -1,20 +1,10 @@
 import { defineConfig } from 'vite';
 import path from 'path';
-import litcss from 'vite-plugin-lit-css';
 
 export default defineConfig({
   css: {
     transformer: 'lightningcss',
   },
-
-  plugins: [
-    litcss({
-      include: [
-        path.resolve('packages/cfpb-design-system/src/elements/**/*.scss'),
-      ],
-      uglify: true,
-    }),
-  ],
 
   resolve: {
     alias: {

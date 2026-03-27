@@ -1,5 +1,5 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-list-item.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import styles from './cfpb-list-item.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
 
@@ -8,7 +8,9 @@ import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
  * @slot - The text for the list item.
  */
 export class CfpbListItem extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   #checkboxIcon = createRef();
   #value;

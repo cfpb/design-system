@@ -1,6 +1,6 @@
-import { html, LitElement } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-file-upload.component.scss';
+import styles from './cfpb-file-upload.component.scss?inline';
 import { CfpbButton } from '../cfpb-button';
 
 /**
@@ -9,7 +9,9 @@ import { CfpbButton } from '../cfpb-button';
  * @slot - The main content for the upload button.
  */
 export class CfpbFileUpload extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   static properties = {
     isDetailHidden: {

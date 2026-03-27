@@ -4717,7 +4717,6 @@ __metadata:
     stylelint-config-standard-scss: "npm:17.0.0"
     svgo: "npm:4.0.1"
     vite: "npm:8.0.3"
-    vite-plugin-lit-css: "npm:2.2.2"
   languageName: unknown
   linkType: soft
 
@@ -16946,16 +16945,6 @@ __metadata:
     unist-util-stringify-position: "npm:^2.0.0"
     vfile-message: "npm:^2.0.0"
   checksum: 10c0/4816aecfedc794ba4d3131abff2032ef0e825632cfa8cd20dd9d83819ef260589924f4f3e8fa30e06da2d8e60d7ec8ef7d0af93e0483df62890738258daf098a
-  languageName: node
-  linkType: hard
-
-"vite-plugin-lit-css@npm:2.2.2":
-  version: 2.2.2
-  resolution: "vite-plugin-lit-css@npm:2.2.2"
-  peerDependencies:
-    lit: ^2.0.0 || ^3.0.0
-    vite: ^5.2.10 || ^6.0.0 || ^7.0.0
-  checksum: 10c0/1a8e12e13992dc55a7b301ad20c266d542066cc51d671e93af25b6e986dc34678e274882f17e852241a8d47fc31ccb013f704c00cdfccef03e4bdc9012d0bc13
   languageName: node
   linkType: hard
 

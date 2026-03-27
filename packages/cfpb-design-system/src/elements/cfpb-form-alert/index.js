@@ -1,6 +1,6 @@
-import { html, LitElement } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-form-alert.component.scss';
+import styles from './cfpb-form-alert.component.scss?inline';
 import errorIcon from '../../components/cfpb-icons/icons/error-round.svg?raw';
 import warningIcon from '../../components/cfpb-icons/icons/warning-round.svg?raw';
 import successIcon from '../../components/cfpb-icons/icons/approved-round.svg?raw';
@@ -10,7 +10,9 @@ import successIcon from '../../components/cfpb-icons/icons/approved-round.svg?ra
  * @slot - The label for the form input.
  */
 export class CfpbFormAlert extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {string} validation - Validation style: error, warning, success.

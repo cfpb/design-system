@@ -1,5 +1,5 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-tag-topic.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import styles from './cfpb-tag-topic.component.scss?inline';
 
 /**
  *
@@ -7,7 +7,9 @@ import styles from './cfpb-tag-topic.component.scss';
  * @slot - The content for the topic tag.
  */
 export class CfpbTagTopic extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {string} href - href attribute, if this is a topic link.

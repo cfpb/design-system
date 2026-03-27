@@ -1,5 +1,5 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-checkbox-icon.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import styles from './cfpb-checkbox-icon.component.scss?inline';
 
 // The validation states are error, warning, or success.
 const VALID_VALIDATION = ['error', 'warning', 'success'];
@@ -8,7 +8,9 @@ const VALID_VALIDATION = ['error', 'warning', 'success'];
  * @element cfpb-checkbox-icon
  */
 export class CfpbCheckboxIcon extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   #hover;
   #focus;

@@ -1,6 +1,6 @@
-import { html, LitElement } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-form-search-input.component.scss';
+import styles from './cfpb-form-search-input.component.scss?inline';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 
 import searchIcon from '../../components/cfpb-icons/icons/search.svg?raw';
@@ -10,7 +10,9 @@ import clearIcon from '../../components/cfpb-icons/icons/error.svg?raw';
  * @element cfpb-form-search-input
  */
 export class CfpbFormSearchInput extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {boolean} disabled - Whether the input is disabled or not.

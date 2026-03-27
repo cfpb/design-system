@@ -1,12 +1,14 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-icon-text.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import styles from './cfpb-icon-text.component.scss?inline';
 
 /**
  * @element cfpb-icon-text
  * @slot - The main content for the text and icon.
  */
 export class CfpbIconText extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {boolean} disabled - Apply disabled styles or not.

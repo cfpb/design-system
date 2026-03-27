@@ -1,11 +1,13 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-list.component.scss';
+import styles from './cfpb-list.component.scss?inline';
 import { CfpbListItem } from '../cfpb-list-item';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 
 export class CfpbList extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   #internalSync = false;
   #container = createRef();

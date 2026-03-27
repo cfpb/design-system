@@ -2,7 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.0.0](https://github.com/cfpb/design-system/compare/v4.4.0..v5.0.0) - March 20, 2026
+## [5.1.0](https://github.com/cfpb/design-system/compare/v5.0.0..v5.1.0) - March 27, 2026
+
+### PRs in this release
+
+- PR #[2568](https://github.com/cfpb/design-system/pull/2568): Ensure USA flag prints - Ans
+- PR #[2557](https://github.com/cfpb/design-system/pull/2557): Upgrade to Vite 8 - Ans
+- PR #[2580](https://github.com/cfpb/design-system/pull/2580): Switch to using `?inline` suffix in place of `vite-plugin-lit-css` - Ans
+
+### General
+
+- Build dist assets for PR #2566 (f140696f8b3bc8313d92ea8cbc0d53eb243d1ed7) [skip ci] - ([0773f30](https://github.com/cfpb/design-system/commit/0773f30a876f462bca7a42e460ff8486e3ea766b)) - CFPBot
+- Ensure USA flag prints - ([0acfe03](https://github.com/cfpb/design-system/commit/0acfe031a72764ac0a49263b8ff7f5db24abe025)) - Ans
+- Build dist assets for commit a16facb18c31664083597b49d14ba10b9be37548 [skip ci] - ([6abc8e3](https://github.com/cfpb/design-system/commit/6abc8e31b5cde2df8a0c35583d1812e75b2bcd25)) - CFPBot
+- Upgrade to Vite 8 - ([ed2fcbb](https://github.com/cfpb/design-system/commit/ed2fcbbc764e67102d29f1f17ac54bdce8f558a7)) - Ans
+- Replace PostCSS with LightningCSS - ([b2bf253](https://github.com/cfpb/design-system/commit/b2bf2539a9dbd7942ceac6d2854ec728cd651797)) - Ans
+- Build dist assets for commit a7302bccfbb7045031be5f68c40a2448f36b23fe [skip ci] - ([4e7d939](https://github.com/cfpb/design-system/commit/4e7d93997b44403360e61274a241838301957174)) - CFPBot
+- Switch to using `?inline` suffix in place of `vite-plugin-lit-css` - ([5d6cd48](https://github.com/cfpb/design-system/commit/5d6cd48df87ff68242ea705548ac130fc4f5c238)) - Ans
+- Fix linter errors - ([0dfffb7](https://github.com/cfpb/design-system/commit/0dfffb7b946c65cc86e9ba5b27af9f4836f4426d)) - Ans
+- Build dist assets for commit 8f675d336d789bafdd392df608ad59896d7a4c09 [skip ci] - ([8dcc40b](https://github.com/cfpb/design-system/commit/8dcc40b0f4c01873185d8185c12c73a1501495d6)) - CFPBot
+- Re-generate /dist/ - ([2be2f9c](https://github.com/cfpb/design-system/commit/2be2f9cc132242bd0e3570dc2f54cf2e1bea8506)) - Ans
+
+## [5.0.0](https://github.com/cfpb/design-system/compare/v4.4.0..vv5.0.0) - March 20, 2026
 
 ### PRs in this release
 

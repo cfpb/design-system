@@ -1,4 +1,4 @@
-import { LitElement } from 'lit';
+import { LitElement, css, unsafeCSS } from 'lit';
 import styles from './cfpb-flag-usa.component.scss?inline';
 
 /**

@@ -1,1 +1,1 @@
-import{a as e,i as t,o as n,r,t as i}from"./multiselect.js";t.init(),r.init(),e.init(),n.init(),i.init();
+import{g as e,h as t,m as n,p as r,t as i}from"./multiselect.js";n.init(),r.init(),t.init(),e.init(),i.init();

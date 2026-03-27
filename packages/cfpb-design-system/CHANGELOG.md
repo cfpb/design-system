@@ -2,7 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.1.0](https://github.com/cfpb/design-system/compare/v5.0.0..v5.1.0) - March 27, 2026
+## [5.2.0](https://github.com/cfpb/design-system/compare/v5.1.0..v5.2.0) - March 27, 2026
+
+### PRs in this release
+
+- PR #[2577](https://github.com/cfpb/design-system/pull/2577): Migrate PostCSS process-icons to node script - Ans
+
+### General
+
+- Build dist assets for commit 15fa3553f05d328468b86151b02bec0aca6d1de7 [skip ci] - ([87255df](https://github.com/cfpb/design-system/commit/87255dfd5071ee2a46fa282cb90ec8a14a999029)) - CFPBot
+- Migrate PostCSS process-icons to node script - ([e970abe](https://github.com/cfpb/design-system/commit/e970abea2e0d9b94c3b4b5d561312d9071558810)) - Ans
+- Adjust script to satisfy prettier single quotes - ([93dca9e](https://github.com/cfpb/design-system/commit/93dca9e662c860a81f503e8afd772ed07ca19b68)) - Ans
+- Convert output to sass variables - ([01c71ba](https://github.com/cfpb/design-system/commit/01c71ba2e960780bdf21183cac236f4b973d91d8)) - Ans
+- Whoops … fix unsaved var - ([820566f](https://github.com/cfpb/design-system/commit/820566ff946b4a3097bb3f940c5baee3d437da4c)) - Ans
+- Fix incorrect icons - ([7031a19](https://github.com/cfpb/design-system/commit/7031a195b93356336aa5c53ab8ee61cd0c3f0ffb)) - Ans
+- Build dist assets for commit 1a35bf1c7ee2ad62ea356bd4c7f50b5f03e49f2b [skip ci] - ([3a77238](https://github.com/cfpb/design-system/commit/3a772380cbc8c6ee6af598c0d824e6a3c7a9c7fe)) - CFPBot
+- Re-generate /dist/ - ([b88f011](https://github.com/cfpb/design-system/commit/b88f0114dca88b54d58c9d0ca72e942859873fab)) - Ans
+
+## [5.1.0](https://github.com/cfpb/design-system/compare/v5.0.0..vv5.1.0) - March 27, 2026
 
 ### PRs in this release
 

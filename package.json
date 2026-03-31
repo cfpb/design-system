@@ -38,7 +38,7 @@
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "cy": "./scripts/cypress.sh",
     "changelog": "./scripts/changelog.sh",
-    "tokens": "style-dictionary build --config ./style-dictionary.config.js"
+    "tokens": "style-dictionary build --config ./style-dictionary.config.js && yarn exec prettier --write \"packages/cfpb-design-system/src/elements/**/*.css\" && yarn exec stylelin --fix \"packages/cfpb-design-system/src/elements/**/*.css\""
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {

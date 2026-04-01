@@ -98,7 +98,12 @@ const buildFilesAndFilters = (basePath) => {
         destination,
         format: cssFormatName,
         filter: filterName,
-        options: { outputReferences: true, usesDtcg: true, selector: ':root' },
+        options: {
+          outputReferences: true,
+          sort: 'name',
+          usesDtcg: true,
+          selector: ':root',
+        },
       });
     }
   }
@@ -260,8 +265,13 @@ const cssVariablesNoSpaceCommasFormat = async ({
     : options.selector
       ? [options.selector]
       : [':root'];
-  const { outputReferences, outputReferenceFallbacks, usesDtcg, formatting } =
-    options;
+  const {
+    outputReferences,
+    outputReferenceFallbacks,
+    usesDtcg,
+    formatting,
+    sort,
+  } = options;
   const header = await fileHeader({
     file,
     formatting: formatting ? { ...formatting, prefix: undefined } : formatting,
@@ -342,6 +352,7 @@ const cssVariablesNoSpaceCommasFormat = async ({
         indentation: indentation.repeat(selector.length),
       },
       usesDtcg,
+      sort,
     }),
   );
   return (

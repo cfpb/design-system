@@ -1,0 +1,31 @@
+/*
+This fallback CSS assumes a web component that contains a <noscript> fallback,
+as well as author-supplied content, and separately has a script to swap the
+<noscript> with `<div class="fallback">` if JS is enabled, but the web component
+definition is not defined.
+
+Ex.
+
+<cfpb-example-btn hasfallback>
+  <!-- author-supplied no-js fallback -->
+  <noscript><button>Click this basic button!</button>
+
+  <!-- author-supplied slotted content -->
+  Click this fancy button!
+</cfpb-example-btn>
+*/
+
+/* 1. If JS is disabled, hide everything except <noscript> */
+[hasfallback] > :not(noscript) {
+  display: none;
+}
+
+/* 2. If JS is enabled, but web component definition is not defined, show fallback. */
+[hasfallback] > .fallback {
+  display: block;
+}
+
+/* 3. If JS is enabled and web component definition is defined, operate as normal. */
+[hasfallback]:defined > :not(noscript) {
+  display: block;
+}

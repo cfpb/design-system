@@ -13,7 +13,7 @@ variation_groups:
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 
           aliquip ex ea commodo consequat.</p>
-        variation_description: ''
+        variation_description: ""
         variation_name: Body text
         variation_implementation: >-
           #### Vertical spacing
@@ -39,8 +39,8 @@ variation_groups:
 
           We’re trying out Source Sans 3 Medium with faux bolding in place of Source Sans 3 Semi Bold, though the results of that experiment have been less predictable, so we may yet revert that decision.
         variation_specs: >-
-          | **Paragraph text style** | **Font-weight** | **Font-size** |
-          **Font-size-adjust*** | **Line-height** | **Responsive behavior at
+          | **Paragraph text style** | **Font weight** | **Font size** |
+          **Font-size-adjust*** | **Line height** | **Responsive behavior at
           <601px** |
 
           | ------------------------ | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
@@ -52,11 +52,11 @@ variation_groups:
           quis nostrud exercitation
 
           ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        variation_description: ''
+        variation_description: ""
         variation_name: Lead paragraph
         variation_specs: >-
-          | **Paragraph text style**                      | **Font-weight** |
-          **Font-size** | **Font-size-adjust*** | **Line-height** | **Responsive
+          | **Paragraph text style**                      | **Font weight** |
+          **Font size** | **Font-size-adjust*** | **Line height** | **Responsive
           behavior at <601px** |
 
           | --------------------------------------------- | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
@@ -72,13 +72,12 @@ variation_groups:
 
           | ------------------------ | --------------- | ------------- | --------------- |
 
-          | Body text                | Regular         | 11pt          | 16pt            |
-        variation_code_snippet: ''
-        variation_description:
-          Source Sans 3 Regular, 11pt / 16pt. Lorem ipsum dolor sit
-          amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.
+          | Body text                | 350 (Custom)    | 11pt          | 16pt            |
+        variation_code_snippet: ""
+        variation_description: Source Sans 3 custom weight (350), 11pt / 16pt. Lorem
+          ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
       - variation_name: Subheading
         variation_specs: >-
           | **Paragraph text style** | **Font weight** | **Font size** | **Line
@@ -86,10 +85,10 @@ variation_groups:
 
           | ------------------------ | --------------- | ------------- | --------------- |
 
-          | Subheading               | Regular         | 16pt          | 20pt            |
-        variation_code_snippet: ''
+          | Subheading               | 400 (Regular)   | 16pt          | 20pt            |
+        variation_code_snippet: ""
         variation_description: >-
-
+          
 
           <p style="font-size: 16pt; font-weight: 400; line-height:20pt">Source Sans 3 Regular, 16pt / 20pt. Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
@@ -103,12 +102,12 @@ title: Paragraphs
 description: Paragraph text should provide an efficient and pleasant experience
   on every viewport size. Readable text makes good use of alignment, spacing,
   line length and height, and contrast.
-use_cases: ''
-behavior: ''
-accessibility: ''
+use_cases: ""
+behavior: ""
+accessibility: ""
 related_items: |-
   * [Headings](https://cfpb.github.io/design-system/foundation/headings)
   * [Fonts](https://cfpb.github.io/design-system/foundation/fonts)
 last_updated: 2020-01-06T20:28:04.952Z
-research: ''
+research: ""
 ---

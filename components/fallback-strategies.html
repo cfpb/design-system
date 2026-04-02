@@ -410,6 +410,19 @@ For example, the following structure include a fallback written in a <code class
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span><span class="nt">hasfallback</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">noscript</span><span class="o">)</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span> 
 </code></pre></div></div>
 
+<p>Our earlier example then becames:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;my-custom-btn</span> <span class="na">hasfallback</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- author-supplied no-js fallback --&gt;</span>
+  <span class="nt">&lt;noscript&gt;</span>
+    <span class="nt">&lt;button&gt;</span>Click this basic button!<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/noscript&gt;</span>
+
+  <span class="c">&lt;!-- author-supplied slotted content --&gt;</span>
+  Click this fancy button!
+<span class="nt">&lt;/my-custom-btn&gt;</span> 
+</code></pre></div></div>
+
 <blockquote>
   <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
 </blockquote>
@@ -481,8 +494,8 @@ For example, the following structure include a fallback written in a <code class
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/fallback-strategies.md">
-                            <time datetime="2026-04-02 12:20:18 -0400">
-                                12:20:18 PM Apr 02, 2026
+                            <time datetime="2026-04-02 12:23:27 -0400">
+                                12:23:27 PM Apr 02, 2026
                             </time>
                         </a>
                     </section>

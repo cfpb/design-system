@@ -1,5 +1,5 @@
-@use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '../../utilities/functions' as *;
 
 :host {
   .a-label {
@@ -9,27 +9,27 @@
 
     &__helper {
       color: var(--label-helper);
-      font-size: math.div(16px, $base-font-size-px) + rem;
+      font-size: rem-from-px(16px);
       font-weight: normal;
 
       &--block {
         display: block;
 
         // Add a gap between the label helper and label.
-        margin-top: math.div(10px, $size-vi) + em;
+        margin-top: rem-from-px(10px);
       }
     }
 
     &--heading {
       display: block;
 
-      margin-bottom: math.div(10px, $size-iv) + em;
+      margin-bottom: rem-from-px(10px);
 
       @include heading-4($has-margin-bottom: false);
 
       // Add a gap between the label helper and label heading
       .a-label__helper--block {
-        margin-top: math.div(10px, $base-font-size-px) + rem;
+        margin-top: rem-from-px(10px);
       }
     }
   }

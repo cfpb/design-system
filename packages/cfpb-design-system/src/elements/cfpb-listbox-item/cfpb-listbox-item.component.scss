@@ -1,6 +1,6 @@
-@use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icons-lib' as *;
+@use '../../utilities/functions' as *;
 
 :host {
   // Theme variables.
@@ -18,7 +18,7 @@
     display: inline-grid;
 
     // 30px is width of checkbox/radio button plus the needed padding.
-    grid-template-columns: math.div(30px, $base-font-size-px) + em auto;
+    grid-template-columns: rem-from-px(30px) auto;
     vertical-align: top;
 
     // Wrap long words in narrow form fields to prevent clipping

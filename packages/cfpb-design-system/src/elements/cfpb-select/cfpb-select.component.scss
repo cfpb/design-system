@@ -1,9 +1,8 @@
-@use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/elements/base' as *;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon';
 @use '../cfpb-utilities/transition/transition.scss' as *;
+@use '../../utilities/functions' as *;
 
 :host {
   // Theme
@@ -51,7 +50,7 @@
   button {
     // This line-height settings is larger than base.scss to
     // accommodate the SVG height.
-    line-height: math.div(21px, $base-font-size-px);
+    line-height: unitless-from-px(21px);
 
     // Remove default focus ring.
     outline: none;
@@ -133,7 +132,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-      padding-left: math.div(10px, $base-font-size-px) + em;
+      padding-left: rem-from-px(10px);
 
       cursor: pointer;
     }
@@ -151,7 +150,7 @@
       padding: 0;
 
       &::after {
-        padding-bottom: math.div(15px, $base-font-size-px) + em;
+        padding-bottom: rem-from-px(15px);
         width: 100%;
       }
     }

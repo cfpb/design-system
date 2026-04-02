@@ -341,9 +341,11 @@
 
     
     <section id="description" class="u-mb30">
-        <p>In order to recognize custom HTML markup, a web browser requires JavaScript to initialize custom elements (Web Components). If a browser does not support modern web component APIs, or has JavaScript turned off, the web component markup will not render as expected. 
-This document provides an architectural framework for consistently handling fallback behavior across web components.  It aims to provide a fallback strategy that gives the author control over the fallback. If, for example, the component was run within a react environment and the author assumes JavaScript is enabled, the component will not  need a fallback.
-This document addresses handling the following states:</p>
+        <p>In order to recognize custom HTML markup, a web browser requires JavaScript to initialize custom elements (Web Components). If a browser does not support modern web component APIs, or has JavaScript turned off, the web component markup will not render as expected.</p>
+
+<p>This document provides an architectural framework for consistently handling fallback behavior across web components.  It aims to provide a fallback strategy that gives the author control over the fallback. If, for example, the component was run within a react environment and the author assumes JavaScript is enabled, the component will not  need a fallback.</p>
+
+<p>This document addresses handling the following states:</p>
 
 <ul>
   <li>
@@ -355,19 +357,26 @@ This document addresses handling the following states:</p>
 </ul>
 
 <p>Authors should decide on a component-by-component basis which of the first two fallback states they want to support, based on things like the environment the component appears in (React already assumes JS support), and the expected browser metrics of the visitors that the application is aiming to support.</p>
+
 <h2 id="the-basic-web-component---no-fallback">The basic web component - no fallback</h2>
-<p>At its most basic, a web component is a custom HTML opening and closing tag, like:
-<code class="language-plaintext highlighter-rouge">&lt;my-custom-btn&gt;&lt;/my-custom-btn&gt;</code>
-All the rendered content of this component is present in the component’s shadow DOM, and the structure is defined  in the component’s <code class="language-plaintext highlighter-rouge">.js</code> definition file.
+<p>At its most basic, a web component is a custom HTML opening and closing tag, like:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;my-custom-btn&gt;&lt;/my-custom-btn&gt;</code></p>
+
+<p>All the rendered content of this component is present in the component’s shadow DOM, and the structure is defined  in the component’s <code class="language-plaintext highlighter-rouge">.js</code> definition file.
 In modern browsers with web component support, this component will render whatever appears in the shadow DOM. In legacy browsers or with JavaScript disabled, this will be completely blank on the page.</p>
+
 <h2 id="slotted-content">Slotted content</h2>
-<p>A web component can wrap author-supplied content, which is exposed through a <code class="language-plaintext highlighter-rouge">&lt;slot&gt;</code> element in the component’s definition file.
-<code class="language-plaintext highlighter-rouge">&lt;my-custom-btn&gt;Click this fancy button!&lt;/my-custom-btn&gt;</code>
-In modern browsers with web component support, this component will incorporate the slotted content within the shadow DOM content. In legacy browsers or with JavaScript disabled, the slotted content will appear on the page.</p>
+<p>A web component can wrap author-supplied content, which is exposed through a <code class="language-plaintext highlighter-rouge">&lt;slot&gt;</code> element in the component’s definition file. Slotted content is added between the opening and closing tags:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;my-custom-btn&gt;Click this fancy button!&lt;/my-custom-btn&gt;</code></p>
+
+<p>In modern browsers with web component support, this component will incorporate the slotted content within the shadow DOM content and render the component. In legacy browsers, or with JavaScript disabled, the slotted content will appear on the page without any other content from the shadow DOM, thus functioning as a textual fallback.</p>
 
 <h2 id="fallback-content">Fallback content</h2>
-<p>While slotted content may often suffice as a fallback, for more complex components, slotted content may be too simple as an adequate replacement. We could add more markup and structure to the slotted content, but that creates clutter that needs to be handled within the shadow DOM. Because of this, slotted content is likely best for simple text strings only.
-A better approach for complex fallback content may be to provide content in a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> element within the slotted content, and then enable or disable the slotted content based on the state of web component and JavaScript support. 
+<p>While slotted content may often suffice as a fallback, for more complex components, slotted content may be too simple as an adequate replacement. We could add more markup and structure to the slotted content, but that creates clutter that needs to be handled within the shadow DOM. Because of this, slotted content is likely best for simple text strings only.</p>
+
+<p>A better approach for complex fallback content may be to provide content in a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> element within the slotted content, and then enable or disable the slotted content based on the state of web component and JavaScript support. 
 For example, the following structure include a fallback written in a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> (note the additional <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> markup for the fallback), and slotted content:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;my-custom-btn&gt;</span>
@@ -376,12 +385,12 @@ For example, the following structure include a fallback written in a <code class
     <span class="nt">&lt;button&gt;</span>Click this basic button!<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/noscript&gt;</span>
 
-  <span class="c">&lt;!-- author supplied slotted content --&gt;</span>
+  <span class="c">&lt;!-- author-supplied slotted content --&gt;</span>
   Click this fancy button!
 <span class="nt">&lt;/my-custom-btn&gt;</span> 
 </code></pre></div></div>
 
-<p>The following sections describe how this functions in the different fallback states.</p>
+<p>The following sections describe how this structure functions in the different fallback states:</p>
 
 <h3 id="js-disabled">JS disabled</h3>
 
@@ -390,13 +399,13 @@ For example, the following structure include a fallback written in a <code class
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button&gt;</span>Click this basic button!<span class="nt">&lt;/button&gt;</span> Click this fancy button! 
 </code></pre></div></div>
 
-<p>To fix this, we can provide CSS that hides everything except the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag. However, we can’t generically target all web components in CSS:</p>
+<p>This displays both pieces of content, which is not what we want. We only want to display the basic fallback button. To fix this, we can provide CSS that hides everything except the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag:</p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* This won't work for all web components! */</span> 
 <span class="nt">my-custom-btn</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">noscript</span><span class="o">)</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span> 
 </code></pre></div></div>
 
-<p>To make this more generic, we could have the author add a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag to the component’s slotted content, and, if they want to hide other content in the component, add a boolean attribute <code class="language-plaintext highlighter-rouge">hasfallback</code> or similar. Then we can make the selector more generic:</p>
+<p>However, this targets a specific web component markup tag. Unfortunately, we can’t generically target all web components in CSS. To make this more generic, we could have the author add a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag to the component’s slotted content, and, if they want to hide other content in the component, add a boolean attribute to the markup named <code class="language-plaintext highlighter-rouge">hasfallback</code>. Then we can replace the specific web component tag with a generic CSS attribute selector:</p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span><span class="nt">hasfallback</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">noscript</span><span class="o">)</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span> 
 </code></pre></div></div>
@@ -407,13 +416,13 @@ For example, the following structure include a fallback written in a <code class
 
 <h3 id="js-enabled-web-components-not-supported">JS enabled, web components not supported</h3>
 
-<p>In the case where JavaScript is available—but web component APIs are not (as is the case in legacy browsers)—we can globally check if web components are supported, and if not, we can load a polyfill, or we could just let it fall back to the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content. <em>However</em>, the problem here is that if JS is enabled, but web components are not supported, then the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content will not show! Therefore, we need to use JavaScript to turn the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag inside the web component into <code class="language-plaintext highlighter-rouge">&lt;div class="fallback"&gt;</code> or similar.</p>
+<p>In the case where JavaScript is available—but web component APIs are not (as is the case in legacy browsers)—we can globally check if web components are supported, and if not, we can load a polyfill, or we could just let it fall back to the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content. <em>However</em>, the problem here is that if JS is enabled, but web components are not supported, then the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content will not show! Therefore, we need to use JavaScript to turn the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag inside the web component into <code class="language-plaintext highlighter-rouge">&lt;div class="fallback"&gt;</code>.</p>
 
 <blockquote>
-  <p>A JS utility for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.js"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>. It can be included in a project’s JS bundle so that it is available for use.</p>
+  <p>A JS utility for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.js"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>. It can be included in a project’s JS bundle so that it is available for use globally.</p>
 </blockquote>
 
-<p>This would now show the content inside the former <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code>, <em>except</em> non-noscript tags are hidden via the CSS! So, lastly, we need to add more CSS to show the div with the <code class="language-plaintext highlighter-rouge">.fallback</code> class:</p>
+<p>Changing the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag to a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> would now show the content inside the former <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code>, <em>except</em> non-noscript tags are hidden via the CSS! So, lastly, we need to add more CSS to show the div with the <code class="language-plaintext highlighter-rouge">.fallback</code> class:</p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span><span class="nt">hasfallback</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nc">.fallback</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span> <span class="p">}</span> 
 </code></pre></div></div>
@@ -423,7 +432,7 @@ For example, the following structure include a fallback written in a <code class
 </blockquote>
 
 <h3 id="js-enabled-web-components-are-supported">JS enabled, web components are supported</h3>
-<p>If JS is enabled, the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content is hidden and it is not swapped with <code class="language-plaintext highlighter-rouge">&lt;div class="fallback"&gt;</code> and then the web component uses the author-supplied slotted content to render. However, because of the existing CSS that hides everything but the <code class="language-plaintext highlighter-rouge">noscript</code> content, that means everything will be hidden. So in this case, we add another CSS rule:</p>
+<p>If JS is enabled, the web component uses the author-supplied slotted content to render, and the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content is hidden and it is not swapped with <code class="language-plaintext highlighter-rouge">&lt;div class="fallback"&gt;</code>. However, because of the existing CSS that hides everything but the <code class="language-plaintext highlighter-rouge">noscript</code> content, that means everything will be hidden! So in this case, we add another CSS rule:</p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span><span class="nt">hasfallback</span><span class="o">]</span><span class="nd">:defined</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">noscript</span><span class="o">)</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span> <span class="p">}</span> 
 </code></pre></div></div>
@@ -472,8 +481,8 @@ For example, the following structure include a fallback written in a <code class
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/fallback-strategies.md">
-                            <time datetime="2026-04-02 11:53:45 -0400">
-                                11:53:45 AM Apr 02, 2026
+                            <time datetime="2026-04-02 12:11:26 -0400">
+                                12:11:26 PM Apr 02, 2026
                             </time>
                         </a>
                     </section>

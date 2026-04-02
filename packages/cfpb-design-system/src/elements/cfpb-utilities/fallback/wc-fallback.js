@@ -1,4 +1,17 @@
+/**
+ * This utility IIFE function can be added to a page with web components
+ * to support the display of any fallback content in `<noscript>` tags
+ * that would otherwise not appear if JavaScript was enabled, but
+ * the Web Component APIs were not supported.
+ */
 (function () {
+  /**
+   * Within a custom element (web component),
+   * convert any `<noscript>` tags into `<div class="fallback">`,
+   * so that the fallback content appears in environments where
+   * JavaScript is enabled, but web component APIs are not supported.
+   * @param {HTMLElement} el - A custom element.
+   */
   function applyFallback(el) {
     if (!el) return;
 
@@ -20,7 +33,7 @@
       noscript.style.display = 'none';
 
       /*
-    // Hide other non-fallback children (optional; fallback.css handles this).
+    // Hide other non-fallback children (optional; wc-fallback.css handles this).
     Array.from(el.children).forEach((child) => {
       if (child !== fallbackDiv && child !== noscript) {
         child.style.display = 'none';
@@ -30,17 +43,22 @@
     }
   }
 
+  /**
+   * Query the document for custom elements that have the "fallback" attribute,
+   * e.g. <my-custom-btn fallback>
+   * @param {string} selector - The CSS selector to search for on the page.
+   */
   function applyAllFallbacks(selector = '[fallback]') {
     document.querySelectorAll(selector).forEach((el) => applyFallback(el));
   }
 
-  // Web Component support detection.
+  // Check for browser support of the Web Component APIs.
   const supportsWC =
     'customElements' in window &&
     'attachShadow' in Element.prototype &&
     'content' in document.createElement('template');
 
-  // Only apply fallback globally if web components are NOT supported.
+  // Only run the fallback utility script globally if web components are NOT supported.
   if (!supportsWC) {
     document.addEventListener('DOMContentLoaded', applyAllFallbacks);
   }

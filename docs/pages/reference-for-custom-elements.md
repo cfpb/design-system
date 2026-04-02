@@ -1,5 +1,5 @@
 ---
-title: Elements
+title: Reference for custom elements
 layout: variation
 section: components
 status: Released

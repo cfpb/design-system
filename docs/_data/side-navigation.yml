@@ -52,9 +52,11 @@ first-level:
           - page: Tooltips
         third-level: []
       - heading: Web Components (beta)
-        nav-items:
-          - page: Elements
-    nav-items: []
+        third-level:
+          - heading: Custom HTML elements
+            nav-items:
+              - page: Reference for custom elements
+              - page: Fallback strategies
   - heading: Patterns
     second-level:
       - heading: Interaction patterns

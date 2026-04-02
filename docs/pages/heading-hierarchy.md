@@ -112,7 +112,7 @@ variation_groups:
           Icon height is constrained to 19px.
 
 
-          | **Heading** | **Font-weight** | **Font-size** | **Font-size-adjust*** | **Line-height** | **Responsive behavior at <601px** |
+          | **Heading** | **Font weight** | **Font size** | **Font-size-adjust*** | **Line height** | **Responsive behavior at <601px** |
 
           | ----------- | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
 
@@ -136,8 +136,8 @@ variation_groups:
         variation_code_snippet: |
           <div class="h5">eyebrow heading</div> <div class="h1">Heading 1</div>
         variation_specs: >-
-          | **Heading**     | **Font-weight** | **Font-size** |
-          **Font-size-adjust*** | **Line-height**            | **Responsive
+          | **Heading**     | **Font weight** | **Font size** |
+          **Font-size-adjust*** | **Line height**            | **Responsive
           behavior at <601px** |
 
           | --------------- | --------------- | ------------- | --------------------- | -------------------------- | --------------------------------- |
@@ -162,7 +162,7 @@ variation_groups:
           * 1px thick Gray 50 top border that spans the width of the module or column 
 
 
-          | **Heading** | **Font-weight** | **Font-size**      | **Font-size-adjust*** | **Line-height**            | **Responsive behavior at <601px** |
+          | **Heading** | **Font weight** | **Font size**      | **Font-size-adjust*** | **Line height**            | **Responsive behavior at <601px** |
 
           | ----------- | --------------- | ------------------ | --------------------- | -------------------------- | --------------------------------- |
 

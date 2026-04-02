@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Taglines - CFPB Design System</title>
+  <title>Fallback strategies - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -318,12 +318,12 @@
   <div class="ds-content">
     <section>
       <div class="h5">
-        Components
+        Web Components
       </div>
     
 
     <h1 class="component-header u-mb30">
-        Taglines
+        Fallback strategies
     </h1>
 
     
@@ -336,16 +336,74 @@
     
     <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
         
-        <li class="m-list__item">
-            <a href="#types">Types</a>
-        </li>
-        
     </ul>
     
 
     
     <section id="description" class="u-mb30">
-        <p>Taglines are short paragraphs of text with the USA flag to their left that are used in the header and footer across consumerfinance.gov.</p>
+        <p>In order to recognize custom HTML markup, a web browser requires JavaScript to initialize custom elements (Web Components). If a browser does not support modern web component APIs, or has JavaScript turned off, the web component markup will not render as expected. 
+This document provides an architectural framework for consistently handling fallback behavior across web components.  It aims to provide a fallback strategy that gives the author control over the fallback. If, for example, the component was run within a react environment and the author assumes JavaScript is enabled, the component will not  need a fallback.
+This document addresses handling the following states:</p>
+
+<ul>
+  <li>
+<strong>JS disabled</strong> (defacto no web component support)</li>
+  <li>
+<strong>JS enabled + no web component support</strong> (legacy browsers)</li>
+  <li>
+<strong>JS enabled + web component support</strong> (modern browsers)</li>
+</ul>
+
+<p>Authors should decide on a component-by-component basis which of the first two fallback states they want to support, based on things like the environment the component appears in (React already assumes JS support), and the expected browser metrics of the visitors that the application is aiming to support.</p>
+<h2 id="the-basic-web-component---no-fallback">The basic web component - no fallback</h2>
+<p>At its most basic, a web component is a custom HTML opening and closing tag, like:
+<code class="language-plaintext highlighter-rouge">&lt;my-custom-btn&gt;&lt;/my-custom-btn&gt;</code>
+All the rendered content of this component is present in the component’s shadow DOM, and the structure is defined  in the component’s <code class="language-plaintext highlighter-rouge">.js</code> definition file.
+In modern browsers with web component support, this component will render whatever appears in the shadow DOM. In legacy browsers or with JavaScript disabled, this will be completely blank on the page.</p>
+<h2 id="slotted-content">Slotted content</h2>
+<p>A web component can wrap author-supplied content, which is exposed through a <code class="language-plaintext highlighter-rouge">&lt;slot&gt;</code> element in the component’s definition file.
+<code class="language-plaintext highlighter-rouge">&lt;my-custom-btn&gt;Click this fancy button!&lt;/my-custom-btn&gt;</code>
+In modern browsers with web component support, this component will incorporate the slotted content within the shadow DOM content. In legacy browsers or with JavaScript disabled, the slotted content will appear on the page.</p>
+
+<h2 id="fallback-content">Fallback content</h2>
+<p>While slotted content may often suffice as a fallback, for more complex components, slotted content may be too simple as an adequate replacement. We could add more markup and structure to the slotted content, but that creates clutter that needs to be handled within the shadow DOM. Because of this, slotted content is likely best for simple text strings only.
+A better approach for complex fallback content may be to provide content in a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> element within the slotted content, and then enable or disable the slotted content based on the state of web component and JavaScript support. 
+For example, the following structure include a fallback written in a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> (note the additional <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> markup for the fallback), and slotted content:
+```html <my-custom-btn>
+  <!-- author-supplied no-js fallback --></my-custom-btn></p>
+<noscript>
+    <button>Click this basic button!</button>
+  </noscript>
+
+<p><!-- author supplied slotted content -->
+  Click this fancy button!
+&lt;/my-custom-btn&gt; ```
+The following sections describe how this functions in the different fallback states.</p>
+<h3 id="js-disabled-when-js-is-disabled-the-noscript-content-is-rendered-and-the-author-supplied-slotted-content-is-rendered-so-it-looks-like-this">JS disabled When JS is disabled, the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content is rendered AND the author supplied slotted content is rendered. So it looks like this:</h3>
+<p><code class="language-plaintext highlighter-rouge">html &lt;button&gt;Click this basic button!&lt;/button&gt; Click this fancy button!</code>
+To fix this, we can provide CSS that hides everything except the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag. However, we can’t generically target all web components in CSS:
+<code class="language-plaintext highlighter-rouge">css /* This won't work for all web components! */ my-custom-btn &gt; :not(noscript) { display: none; }</code>
+To make this more generic, we could have the author add a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag to the component’s slotted content, and, if they want to hide other content in the component, add a boolean attribute <code class="language-plaintext highlighter-rouge">hasfallback</code> or similar. Then we can make the selector more generic:
+<code class="language-plaintext highlighter-rouge">css [hasfallback] &gt; :not(noscript) { display: none; }</code></p>
+<blockquote>
+  <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
+  <h3 id="js-enabled-web-components-not-supported">JS enabled, web components not supported</h3>
+  <p>In the case where JavaScript is available—but web component APIs are not (as is the case in legacy browsers)—we can globally check if web components are supported, and if not, we can load a polyfill, or we could just let it fall back to the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content. <em>However</em>, the problem here is that if JS is enabled, but web components are not supported, then the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content will not show! Therefore, we need to use JavaScript to turn the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag inside the web component into <code class="language-plaintext highlighter-rouge">&lt;div class="fallback"&gt;</code> or similar.</p>
+</blockquote>
+
+<blockquote>
+  <p>A JS utility for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.js"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>. It can be included in a project’s JS bundle so that it is available for use.
+This would now show the content inside the former <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code>, <em>except</em> non-noscript tags are hidden via the CSS! So, lastly, we need to add more CSS to show the div with the <code class="language-plaintext highlighter-rouge">.fallback</code> class:
+<code class="language-plaintext highlighter-rouge">css [hasfallback] &gt; .fallback { display: block; }</code>
+CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
+</blockquote>
+
+<h3 id="js-enabled-web-components-are-supported">JS enabled, web components are supported</h3>
+<p>If JS is enabled, the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content is hidden and it is not swapped with <code class="language-plaintext highlighter-rouge">&lt;div class="fallback"&gt;</code> and then the web component uses the author-supplied slotted content to render. However, because of the existing CSS that hides everything but the <code class="language-plaintext highlighter-rouge">noscript</code> content, that means everything will be hidden. So in this case, we add another CSS rule:
+<code class="language-plaintext highlighter-rouge">css [hasfallback]:defined &gt; :not(noscript) { display: block; }</code></p>
+<blockquote>
+  <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
+</blockquote>
 
     </section>
     
@@ -353,243 +411,19 @@
     
 
     
-    
-    <section class="o-variation-group" id="types">
-
-        
-        <h2 class="o-variation-group__title">
-            Types
-        </h2>
-        
-
-        
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Standard tagline
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live__code">
-                <div class="a-tagline">
-    <span class="u-usa-flag"></span>
-    <div class="a-tagline__text">
-        An official website of the
-        <span class="u-nowrap">United States government</span>
-    </div>
-</div>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle__code">
-                <button href="#details-standard-tagline-div-class-a-tag-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-standard-tagline-div-class-a-tag-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-standard-tagline-div-class-a-tag-1">
-                <ul class="m-tabs__list">
-                    
-                    <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-standard-tagline-div-class-a-tag-html-code-snippet-1">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#details-standard-tagline-div-class-a-tag-implementation-1">
-                            Implementation
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs__panel" id="details-standard-tagline-div-class-a-tag-html-code-snippet-1">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="a-tagline"&gt;
-    &lt;span class="u-usa-flag"&gt;&lt;/span&gt;
-    &lt;div class="a-tagline__text"&gt;
-        An official website of the
-        &lt;span class="u-nowrap"&gt;United States government&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-                <section class="m-tabs__panel" id="details-standard-tagline-div-class-a-tag-implementation-1">
-                    <div>
-                        <h4 class="variation-implementation-title">Implementation details</h4>
-                        <div style="padding:40px">
-                            <p>The flag itself is a stand-alone element of <code class="language-plaintext highlighter-rouge">&lt;span class="u-usa-flag"&gt;&lt;/span&gt;</code> that uses a utility class that embeds a double-resolution flag png via a data URI.</p>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Large tagline
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live__code">
-                <div class="a-tagline a-tagline--large">
-    <span class="u-usa-flag"></span>
-    <div class="a-tagline__text">
-        An official website of the
-        <span class="u-nowrap">United States government</span>
-    </div>
-</div>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle__code">
-                <button href="#details-large-tagline-div-class-a-taglin-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-large-tagline-div-class-a-taglin-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-large-tagline-div-class-a-taglin-2">
-                <ul class="m-tabs__list">
-                    
-                    <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-large-tagline-div-class-a-taglin-html-code-snippet-2">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#details-large-tagline-div-class-a-taglin-implementation-2">
-                            Implementation
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs__panel" id="details-large-tagline-div-class-a-taglin-html-code-snippet-2">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="a-tagline a-tagline--large"&gt;
-    &lt;span class="u-usa-flag"&gt;&lt;/span&gt;
-    &lt;div class="a-tagline__text"&gt;
-        An official website of the
-        &lt;span class="u-nowrap"&gt;United States government&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-                <section class="m-tabs__panel" id="details-large-tagline-div-class-a-taglin-implementation-2">
-                    <div>
-                        <h4 class="variation-implementation-title">Implementation details</h4>
-                        <div style="padding:40px">
-                            <p>The <code class="language-plaintext highlighter-rouge">u-nowrap</code> container prevents wrapping of the “United States government” text. If the content of the tagline contains markup it needs to go inside a generic <code class="language-plaintext highlighter-rouge">div</code> container.</p>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-            
-
-        </div>
-        
-    </section>
-    
-    
 
     
+    
+        <section class="sticky-header u-mb45">
+
+            
+
+            
+
+            
+
+            
+        </section>
     
 
     
@@ -610,7 +444,7 @@
                         
                         
                         
-                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/taglines.md">
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/fallback-strategies.md">
                             <time datetime="2026-04-02 11:02:48 -0400">
                                 11:02:48 AM Apr 02, 2026
                             </time>
@@ -626,17 +460,8 @@
 
 <!-- .content__main --> 
 
-    <div class="o-editor" id="toggle-details">
-      <a class="a-btn" href="#" title="Show all details">
-        <span>Show all details</span>
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--lightbulb" viewbox="0 0 11 19"><path d="M10.328 6.83a5.9 5.9 0 0 1-1.439 3.64 2.9 2.9 0 0 0-.584 1v1.037a.95.95 0 0 1-.95.95h-3.71a.95.95 0 0 1-.95-.95V11.47a2.9 2.9 0 0 0-.584-1A5.9 5.9 0 0 1 .67 6.83a4.83 4.83 0 0 1 9.28-1.878 4.8 4.8 0 0 1 .38 1.88zm-.95 0a3.878 3.878 0 0 0-7.756 0c0 2.363 2.023 3.409 2.023 4.64v1.037h3.71V11.47c0-1.231 2.023-2.277 2.023-4.64M7.83 14.572a.475.475 0 0 1-.475.476h-3.71a.475.475 0 0 1 0-.95h3.71a.475.475 0 0 1 .475.474m-.64 1.262a.24.24 0 0 1-.078.265 2.67 2.67 0 0 1-3.274 0 .237.237 0 0 1 .145-.425h2.983a.24.24 0 0 1 .225.16z"></path></svg>
-      </a>
-    </div>
-
-    
-
     <div class="o-editor" id="edit-page">
-      <a class="a-btn" href="/design-system/updating-this-website?page=Taglines" title="Edit this page in Decap CMS">
+      <a class="a-btn" href="/design-system/updating-this-website?page=Fallback+strategies" title="Edit this page in Decap CMS">
         <span>Edit page</span>
         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--edit" viewbox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg>
       </a>
@@ -656,7 +481,7 @@
             If you see something wrong or missing,
             <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
             If you can’t make those changes yourself,
-            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Taglines%3A+Add+issue+description">file an issue</a>.
+            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Fallback%20strategies%3A+Add+issue+description">file an issue</a>.
             If you have a substantial change to an existing page, or a new standard you want to add,
             <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
         </p>

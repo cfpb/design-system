@@ -15,7 +15,7 @@ description: >-
 
   This document addresses handling the following states:
 
-   - **JS disabled** (defacto no web component support)
+   - **JS disabled** (de facto no web component support)
    - **JS enabled + no web component support** (legacy browsers)
    - **JS enabled + web component support** (modern browsers)
 

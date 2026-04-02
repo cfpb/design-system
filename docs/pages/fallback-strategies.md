@@ -166,7 +166,7 @@ description: >-
 
 
   > CSS for this use-case can be found in [`cfpb-utilities/fallback/wc-fallback.css`](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css), and can be included in a project's CSS bundle so that it is available for use.
-guidelines: ""
-behavior: ""
+guidelines: ''
+behavior: ''
 eyebrow: Web Components
 ---

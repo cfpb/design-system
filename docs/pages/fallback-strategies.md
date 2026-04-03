@@ -45,6 +45,25 @@ description: >-
 
   In modern browsers with web component support, this component will incorporate the slotted content within the shadow DOM content and render the component. In legacy browsers, or with JavaScript disabled, the slotted content will appear on the page without any other content from the shadow DOM, thus functioning as a textual fallback.
 
+  ## Dealing with the dreaded Flash Of Unstyled Content (FOUC)
+
+  One potential problem with slotted content is that it may briefly appear on the page before the web component markup is initialized, leading to an unsightly flash of unstyled content (FOUC). This may be acceptable if the slotted content is roughly the same dimensions as the initialized component. However, if the slotted content spills outside of the component boundaries (e.g. through absolute positioning), this might cause an unsightly flash. In this situation it may be best to add a standard `hidden` attribute to the slotted content, and then deal with its visibility within the component CSS/JS.
+
+
+  ```html
+
+  <my-fancy-list>
+    <ul hidden>
+     <li>Earth</li>
+     <li>Moon</li>
+    </ul>
+  </my-fancy-list>
+
+  ```
+
+
+
+  However, note that this'll negate using the slotted content as a fallback.
 
   ## Fallback content
 

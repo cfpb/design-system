@@ -35,7 +35,7 @@ variation_groups:
           ```css
 
           :root {
-            --font-stack: 'Source Sans 3 Variable', Arial, sans-serif;
+            --font-stack-branded: 'Source Sans 3 Variable', arial, sans-serif;
           }
 
           ```

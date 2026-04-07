@@ -47,13 +47,14 @@ first-level:
           - page: Summaries
           - page: Tables
           - page: Tags
-          - page: Taglines
           - page: Text inputs
           - page: Tooltips
         third-level: []
       - heading: Web Components (beta)
+        nav-items:
+          - page: Taglines
         third-level:
-          - heading: Custom HTML elements
+          - heading: Developer guidelines
             nav-items:
               - page: Reference for custom elements
               - page: Fallback strategies

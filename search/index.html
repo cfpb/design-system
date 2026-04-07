@@ -27,13 +27,7 @@
   <header role="banner" class="site-header-wrapper">
 
   <div class="m-global-eyebrow">
-    <div class="a-tagline">
-        <span class="u-usa-flag"></span>
-        <div>
-            An official website of the
-            <span class="u-nowrap">United States government</span>
-        </div>
-    </div>
+    <div class="m-global-eyebrow__container"><cfpb-tagline></cfpb-tagline></div>
 </div>
 
 
@@ -61,7 +55,7 @@
             <li><a href="/design-system/components/summaries">Summaries</a></li>
             <li><a href="/design-system/components/tables">Tables</a></li>
             <li><a href="/design-system/components/tags">Tags</a></li>
-            <li><a href="/design-system/components/taglines">Taglines</a></li>
+            <li><a href="/design-system/elements/taglines">Taglines</a></li>
             <li><a href="/design-system/components/text-inputs">Text inputs</a></li>
             <li><a href="/design-system/components/tooltips">Tooltips</a></li>
             <li><a href="/design-system/components/elements">Web Components</a></li>
@@ -6254,29 +6248,17 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 
                     'variation_name1': 'Standard tagline',
                     'variation_description1': "%0A",
-                    'variation_code_snippet1': `&lt;div class=&quot;a-tagline&quot;&gt;
-    &lt;span class=&quot;u-usa-flag&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;a-tagline__text&quot;&gt;
-        An official website of the
-        &lt;span class=&quot;u-nowrap&quot;&gt;United States government&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
+                    'variation_code_snippet1': `&lt;cfpb-tagline /&gt;`,
                 
                     'variation_name2': 'Large tagline',
                     'variation_description2': "%0A",
-                    'variation_code_snippet2': `&lt;div class=&quot;a-tagline a-tagline--large&quot;&gt;
-    &lt;span class=&quot;u-usa-flag&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;a-tagline__text&quot;&gt;
-        An official website of the
-        &lt;span class=&quot;u-nowrap&quot;&gt;United States government&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
+                    'variation_code_snippet2': `&lt;cfpb-tagline islarge /&gt;`,
                 
             
 
 
             'title': 'Taglines',
-            'description': "Taglines+are+short+paragraphs+of+text+with+the+USA+flag+to+their+left+that+are+used+in+the+header+and+footer+across+consumerfinance.gov.%0A",
+            'description': "Taglines+are+short+paragraphs+of+text+with+the+USA+flag+to+their+left+that+are+used+in+the+header+and+footer+across+consumerfinance.gov+and+other+apps.%0A",
             'use_cases': "%0A",
             'guidelines': "%0A",
             'behavior': "%0A",

@@ -4674,7 +4674,7 @@ __metadata:
     anchor-js: "npm:5.0.0"
     autoprefixer: "npm:10.4.27"
     concurrently: "npm:9.2.1"
-    cypress: "npm:15.13.0"
+    cypress: "npm:15.13.1"
     decap-cms-app: "npm:3.11.0"
     eslint: "npm:10.2.0"
     eslint-config-prettier: "npm:10.1.8"
@@ -4694,7 +4694,7 @@ __metadata:
     jest: "npm:30.3.0"
     jest-cli: "npm:30.3.0"
     jest-environment-jsdom: "npm:30.3.0"
-    liquidjs: "npm:10.25.4"
+    liquidjs: "npm:10.25.5"
     lit: "npm:3.3.2"
     marked: "npm:18.0.0"
     minisearch: "npm:7.2.0"
@@ -5486,9 +5486,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:15.13.0":
-  version: 15.13.0
-  resolution: "cypress@npm:15.13.0"
+"cypress@npm:15.13.1":
+  version: 15.13.1
+  resolution: "cypress@npm:15.13.1"
   dependencies:
     "@cypress/request": "npm:^3.0.10"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -5535,7 +5535,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10c0/2b6b235d93eb003c5d68e2b63a50c24f1c295f25ca008fc5ff1f60d80839a1d5e88e709e9e6e4c468492982076aaa4ace40d6ff237fdca2cc461fc9529e33f8f
+  checksum: 10c0/eecc539d15af2f5bfc7ab9cb5502fc1e2f9f71571dbcb392b5d99109786c63548dd4a0aa20c512beb61a0a76dee10ea6c421a79026e96fb3a9dddd59c319541d
   languageName: node
   linkType: hard
 
@@ -10962,15 +10962,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liquidjs@npm:10.25.4":
-  version: 10.25.4
-  resolution: "liquidjs@npm:10.25.4"
+"liquidjs@npm:10.25.5":
+  version: 10.25.5
+  resolution: "liquidjs@npm:10.25.5"
   dependencies:
     commander: "npm:^10.0.0"
   bin:
     liquid: bin/liquid.js
     liquidjs: bin/liquid.js
-  checksum: 10c0/0a043031b3c5311f1337516f3d9d4146d3bc2a4b0998fd3374ca35d979ad5b5d96c1e6ccbb0a0f8fd672ef091a73782af39f69ed6a6e193e0edf93f4e69bd204
+  checksum: 10c0/31544432b199aab9a2034ce95d811177f6596f0b7447e78008748b1a13a06ec2c36c1fd423accdcf04aed4f67b5023ba7236fcf9d9eb4ddee09fcdcd61e50392
   languageName: node
   linkType: hard
 

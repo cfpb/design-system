@@ -46,9 +46,9 @@
     "anchor-js": "5.0.0",
     "decap-cms-app": "3.11.0",
     "html-entities": "2.6.0",
-    "liquidjs": "10.25.2",
+    "liquidjs": "10.25.4",
     "lit": "3.3.2",
-    "marked": "17.0.5",
+    "marked": "18.0.0",
     "minisearch": "7.2.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -65,7 +65,7 @@
     "eslint": "10.2.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
-    "eslint-plugin-cypress": "6.2.2",
+    "eslint-plugin-cypress": "6.2.3",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsdoc": "62.9.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
@@ -88,7 +88,7 @@
     "stylelint": "17.6.0",
     "stylelint-config-standard-scss": "17.0.0",
     "svgo": "4.0.1",
-    "vite": "8.0.5"
+    "vite": "8.0.7"
   },
   "prettier": {
     "singleQuote": true

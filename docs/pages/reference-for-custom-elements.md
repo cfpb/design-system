@@ -894,7 +894,7 @@ variation_groups:
         variation_code_snippet_rendered: >-
           <div>
             <cfpb-form-search>
-              <ul>
+              <ul hidden>
                 <li>How do I add money to my prepaid card?</li>
                 <li>What are credit card “add-on products?”</li>
                 <li>How do I qualify for an advertised 0% auto financing?</li>
@@ -908,7 +908,7 @@ variation_groups:
           </div>
         variation_code_snippet: >-
           <cfpb-form-search>
-            <ul>
+            <ul hidden>
               <li>How do I add money to my prepaid card?</li>
               <li>What are credit card “add-on products?”</li>
               <li>How do I qualify for an advertised 0% auto financing?</li>

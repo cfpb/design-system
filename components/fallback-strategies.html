@@ -35,7 +35,7 @@
 
     <form id="search-form" action="/design-system/search" method="get">
     <cfpb-form-search id="search-box" form="search-form" name="searchQuery">
-        <ul>
+        <ul hidden>
             <li><a href="/design-system/components/alerts">Alerts</a></li>
             <li><a href="/design-system/components/banner-notification">Banner (notification)</a></li>
             <li><a href="/design-system/components/banner-us-gov">Banner (US gov)</a></li>
@@ -370,7 +370,18 @@ In modern browsers with web component support, this component will render whatev
 <p><code class="language-plaintext highlighter-rouge">&lt;my-custom-btn&gt;Click this fancy button!&lt;/my-custom-btn&gt;</code></p>
 
 <p>In modern browsers with web component support, this component will incorporate the slotted content within the shadow DOM content and render the component. In legacy browsers, or with JavaScript disabled, the slotted content will appear on the page without any other content from the shadow DOM, thus functioning as a textual fallback.</p>
+<h2 id="dealing-with-the-dreaded-flash-of-unstyled-content-fouc">Dealing with the dreaded Flash Of Unstyled Content (FOUC)</h2>
+<p>One potential problem with slotted content is that it may briefly appear on the page before the web component markup is initialized, leading to an unsightly flash of unstyled content (FOUC). This may be acceptable if the slotted content is roughly the same dimensions as the initialized component. However, if the slotted content spills outside of the component boundaries (e.g. through absolute positioning), this might cause an unsightly flash. In this situation it may be best to add a standard <code class="language-plaintext highlighter-rouge">hidden</code> attribute to the slotted content, and then deal with its visibility within the component CSS/JS.</p>
 
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;my-fancy-list&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">hidden</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;li&gt;</span>Earth<span class="nt">&lt;/li&gt;</span>
+   <span class="nt">&lt;li&gt;</span>Moon<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/my-fancy-list&gt;</span>
+</code></pre></div></div>
+
+<p>However, note that this’ll negate using the slotted content as a fallback.</p>
 <h2 id="fallback-content">Fallback content</h2>
 <p>While slotted content may often suffice as a fallback, for more complex components, slotted content may be too simple as an adequate replacement. We could add more markup and structure to the slotted content, but that creates clutter that needs to be handled within the shadow DOM. Because of this, slotted content is likely best for simple text strings only.</p>
 
@@ -492,8 +503,8 @@ For example, the following structure include a fallback written in a <code class
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/fallback-strategies.md">
-                            <time datetime="2026-04-08 10:05:37 -0400">
-                                10:05:37 AM Apr 08, 2026
+                            <time datetime="2026-04-08 10:06:38 -0400">
+                                10:06:38 AM Apr 08, 2026
                             </time>
                         </a>
                     </section>

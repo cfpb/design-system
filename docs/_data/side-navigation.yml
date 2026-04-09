@@ -47,6 +47,7 @@ first-level:
           - page: Summaries
           - page: Tables
           - page: Tags
+          - page: Taglines (legacy)
           - page: Text inputs
           - page: Tooltips
         third-level: []

@@ -382,6 +382,16 @@ In modern browsers with web component support, this component will render whatev
 </code></pre></div></div>
 
 <p>However, note that this’ll negate using the slotted content as a fallback.</p>
+<h3 id="adding-a-loading-skeleton">Adding a loading skeleton</h3>
+<p>A “loading skeleton” is a wireframe-esque box that loads in before a web component has been initialized.  This can be used to avoid a FOUC and corresponding layout shift when the component is rendered. To add a loading skeleton for a particular component, follow these steps:</p>
+
+<ol>
+  <li>Add a <code class="language-plaintext highlighter-rouge">skeleton.css</code> file to the component directory.</li>
+  <li>Add in the expected component width within a <code class="language-plaintext highlighter-rouge">&lt;component name&gt;:not(:defined) { … }</code> CSS rule.</li>
+  <li>And any media queries if the layout dimenions change across screen sizes.</li>
+  <li>Add an <code class="language-plaintext highlighter-rouge">@use</code> import for the components <code class="language-plaintext highlighter-rouge">skeleton.css</code> file to the <code class="language-plaintext highlighter-rouge">/elements/base/base.scss</code> file.</li>
+</ol>
+
 <h2 id="fallback-content">Fallback content</h2>
 <p>While slotted content may often suffice as a fallback, for more complex components, slotted content may be too simple as an adequate replacement. We could add more markup and structure to the slotted content, but that creates clutter that needs to be handled within the shadow DOM. Because of this, slotted content is likely best for simple text strings only.</p>
 
@@ -503,8 +513,8 @@ For example, the following structure include a fallback written in a <code class
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/fallback-strategies.md">
-                            <time datetime="2026-04-08 17:37:58 -0400">
-                                 5:37:58 PM Apr 08, 2026
+                            <time datetime="2026-04-09 13:00:49 -0400">
+                                 1:00:49 PM Apr 09, 2026
                             </time>
                         </a>
                     </section>

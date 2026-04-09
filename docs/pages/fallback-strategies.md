@@ -65,6 +65,18 @@ description: >-
 
   However, note that this'll negate using the slotted content as a fallback.
 
+  ### Adding a loading skeleton
+
+  A "loading skeleton" is a wireframe-esque box that loads in before a web component has been initialized. 
+  This can be used to avoid a FOUC and corresponding layout shift when the component is rendered.
+  To add a loading skeleton for a particular component, follow these steps:
+   
+   1. Add a `skeleton.css` file to the component directory.
+   2. Add in the expected component width within a `<component name>:not(:defined) { … }` CSS rule.
+   3. And any media queries if the layout dimenions change across screen sizes.
+   4. Add an `@use` import for the components `skeleton.css` file to the `/elements/base/base.scss` file.
+
+
   ## Fallback content
 
   While slotted content may often suffice as a fallback, for more complex components, slotted content may be too simple as an adequate replacement. We could add more markup and structure to the slotted content, but that creates clutter that needs to be handled within the shadow DOM. Because of this, slotted content is likely best for simple text strings only.

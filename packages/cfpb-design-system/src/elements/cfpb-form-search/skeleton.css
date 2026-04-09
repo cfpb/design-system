@@ -1,0 +1,8 @@
+cfpb-form-search:not(:defined) {
+  min-height: 35px;
+
+  /* Mobile only */
+  @media only screen and (width <= 37.5625em) {
+    min-height: 85px;
+  }
+}

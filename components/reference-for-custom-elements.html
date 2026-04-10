@@ -55,7 +55,7 @@
             <li><a href="/design-system/components/summaries">Summaries</a></li>
             <li><a href="/design-system/components/tables">Tables</a></li>
             <li><a href="/design-system/components/tags">Tags</a></li>
-            <li><a href="/design-system/elements/taglines">Taglines</a></li>
+            <li><a href="/design-system/components/taglines">Taglines</a></li>
             <li><a href="/design-system/components/text-inputs">Text inputs</a></li>
             <li><a href="/design-system/components/tooltips">Tooltips</a></li>
             <li><a href="/design-system/components/elements">Web Components</a></li>
@@ -2388,7 +2388,7 @@
             
             <div class="m-variation__name">
                 <h3>
-                    List item
+                    Listbox item
                     
                 </h3>
             </div>
@@ -2396,7 +2396,7 @@
 
             
             <div class="m-variation__description">
-                <p>A list item component.</p>
+                <p>A Listbox item component.</p>
 
             </div>
             
@@ -2405,26 +2405,26 @@
             
             <div class="a-live__code">
                 <div>
-  <cfpb-list-item disabled>Earth</cfpb-list-item>
-  <cfpb-list-item checked disabled>Jupiter</cfpb-list-item>
-  <cfpb-list-item type="checkbox">Mercury</cfpb-list-item>
-  <cfpb-list-item type="checkbox" checked>Venus</cfpb-list-item>
-  <cfpb-list-item type="check">Mars</cfpb-list-item>
-  <cfpb-list-item type="check" checked>Saturn</cfpb-list-item>
-  <cfpb-list-item type="plain">Uranus</cfpb-list-item>
-  <cfpb-list-item type="plain" checked>Pluto</cfpb-list-item>
+  <cfpb-listbox-item disabled>Earth</cfpb-listbox-item>
+  <cfpb-listbox-item checked disabled>Jupiter</cfpb-listbox-item>
+  <cfpb-listbox-item type="checkbox">Mercury</cfpb-listbox-item>
+  <cfpb-listbox-item type="checkbox" checked>Venus</cfpb-listbox-item>
+  <cfpb-listbox-item type="check">Mars</cfpb-listbox-item>
+  <cfpb-listbox-item type="check" checked>Saturn</cfpb-listbox-item>
+  <cfpb-listbox-item type="plain">Uranus</cfpb-listbox-item>
+  <cfpb-listbox-item type="plain" checked>Pluto</cfpb-listbox-item>
 
   <br>
   <hr>
   <br>
 
   <p>
-  The following section allows interacting with the list item API.
+  The following section allows interacting with the Listbox item API.
   </p>
-  <p><cfpb-list-item id="list-item-example">Ceres</cfpb-list-item></p>
+  <p><cfpb-listbox-item id="listbox-item-example">Ceres</cfpb-listbox-item></p>
   <p>
-  <label for="list-item-example-type">List item type:</label>
-  <select id="list-item-example-type">
+  <label for="listbox-item-example-type">Listbox item type:</label>
+  <select id="listbox-item-example-type">
     <option>plain</option>
     <option>check</option>
     <option>checkbox</option>
@@ -2433,23 +2433,23 @@
   </p>
 <p>
 
-  <input type="checkbox" id="list-item-example-disabled">
-  <label for="list-item-example-disabled">Disabled</label>
+  <input type="checkbox" id="listbox-item-example-disabled">
+  <label for="listbox-item-example-disabled">Disabled</label>
 
   </p>
 <p>
 
-  <input type="checkbox" id="list-item-example-hidden">
-  <label for="list-item-example-hidden">Hidden</label>
+  <input type="checkbox" id="listbox-item-example-hidden">
+  <label for="listbox-item-example-hidden">Hidden</label>
 
   </p>
   <script>
-  const listItem = document.querySelector('#list-item-example');
+  const listItem = document.querySelector('#listbox-item-example');
 
-  const typeSel = document.querySelector('#list-item-example-type');
+  const typeSel = document.querySelector('#listbox-item-example-type');
 
-  const disBtn = document.querySelector('#list-item-example-disabled');
-  const hiddenBtn = document.querySelector('#list-item-example-hidden');
+  const disBtn = document.querySelector('#listbox-item-example-disabled');
+  const hiddenBtn = document.querySelector('#listbox-item-example-hidden');
 
   typeSel.addEventListener('change', (evt) => {
     listItem.type = evt.target.value;
@@ -2475,15 +2475,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-list-item-a-list-item-component--15" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-list-item-a-list-item-component--15" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-listbox-item-a-listbox-item-comp-15" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-listbox-item-a-listbox-item-comp-15" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-list-item-a-list-item-component--15">
+            <div class="m-tabs u-hidden" id="details-listbox-item-a-listbox-item-comp-15">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-list-item-a-list-item-component--html-code-snippet-15">
+                        <a class="m-tabs__tab" href="#details-listbox-item-a-listbox-item-comp-html-code-snippet-15">
                             HTML code snippet
                         </a>
                     </li>
@@ -2495,11 +2495,11 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-list-item-a-list-item-component--html-code-snippet-15">
+                <section class="m-tabs__panel" id="details-listbox-item-a-listbox-item-comp-html-code-snippet-15">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;cfpb-list-item disabled&gt;Earth&lt;/cfpb-list-item&gt; &lt;cfpb-list-item checked disabled&gt;Jupiter&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="checkbox"&gt;Mercury&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="checkbox" checked&gt;Venus&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="check"&gt;Mars&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="check" checked&gt;Saturn&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="plain"&gt;Uranus&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type="plain" checked&gt;Pluto&lt;/cfpb-list-item&gt;</code></pre>
+                            <pre><code class="language-html">&lt;cfpb-listbox-item disabled&gt;Earth&lt;/cfpb-listbox-item&gt; &lt;cfpb-listbox-item checked disabled&gt;Jupiter&lt;/cfpb-listbox-item&gt; &lt;cfpb-listbox-item type="checkbox"&gt;Mercury&lt;/cfpb-listbox-item&gt; &lt;cfpb-listbox-item type="checkbox" checked&gt;Venus&lt;/cfpb-listbox-item&gt; &lt;cfpb-listbox-item type="check"&gt;Mars&lt;/cfpb-listbox-item&gt; &lt;cfpb-listbox-item type="check" checked&gt;Saturn&lt;/cfpb-listbox-item&gt; &lt;cfpb-listbox-item type="plain"&gt;Uranus&lt;/cfpb-listbox-item&gt; &lt;cfpb-listbox-item type="plain" checked&gt;Pluto&lt;/cfpb-listbox-item&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -2529,7 +2529,7 @@
             
             <div class="m-variation__name">
                 <h3>
-                    Lists
+                    Listboxes
                     
                 </h3>
             </div>
@@ -2537,7 +2537,7 @@
 
             
             <div class="m-variation__description">
-                <p>A list component.</p>
+                <p>A listbox component.</p>
 
             </div>
             
@@ -2546,67 +2546,67 @@
             
             <div class="a-live__code">
                 <div>
-  <cfpb-list aria-label="List of planets">
-    <cfpb-list-item>Mercury</cfpb-list-item>
-    <cfpb-list-item>Venus</cfpb-list-item>
-    <cfpb-list-item>Earth</cfpb-list-item>
-    <cfpb-list-item>Mars</cfpb-list-item>
-    <cfpb-list-item>Jupiter</cfpb-list-item>
-    <cfpb-list-item>Saturn</cfpb-list-item>
-    <cfpb-list-item>Uranus</cfpb-list-item>
-    <cfpb-list-item>Neptune</cfpb-list-item>
-  </cfpb-list>
+  <cfpb-listbox aria-label="List of planets">
+    <cfpb-listbox-item>Mercury</cfpb-listbox-item>
+    <cfpb-listbox-item>Venus</cfpb-listbox-item>
+    <cfpb-listbox-item>Earth</cfpb-listbox-item>
+    <cfpb-listbox-item>Mars</cfpb-listbox-item>
+    <cfpb-listbox-item>Jupiter</cfpb-listbox-item>
+    <cfpb-listbox-item>Saturn</cfpb-listbox-item>
+    <cfpb-listbox-item>Uranus</cfpb-listbox-item>
+    <cfpb-listbox-item>Neptune</cfpb-listbox-item>
+  </cfpb-listbox>
 
   <br><br>
 
-  <cfpb-list aria-label="List of planets" type="check">
-    <cfpb-list-item>Mercury</cfpb-list-item>
-    <cfpb-list-item>Venus</cfpb-list-item>
-    <cfpb-list-item>Earth</cfpb-list-item>
-    <cfpb-list-item checked>Mars</cfpb-list-item>
-    <cfpb-list-item>Jupiter</cfpb-list-item>
-    <cfpb-list-item>Saturn</cfpb-list-item>
-    <cfpb-list-item>Uranus</cfpb-list-item>
-    <cfpb-list-item>Neptune</cfpb-list-item>
-  </cfpb-list>
+  <cfpb-listbox aria-label="List of planets" type="check">
+    <cfpb-listbox-item>Mercury</cfpb-listbox-item>
+    <cfpb-listbox-item>Venus</cfpb-listbox-item>
+    <cfpb-listbox-item>Earth</cfpb-listbox-item>
+    <cfpb-listbox-item checked>Mars</cfpb-listbox-item>
+    <cfpb-listbox-item>Jupiter</cfpb-listbox-item>
+    <cfpb-listbox-item>Saturn</cfpb-listbox-item>
+    <cfpb-listbox-item>Uranus</cfpb-listbox-item>
+    <cfpb-listbox-item>Neptune</cfpb-listbox-item>
+  </cfpb-listbox>
 
   <br><br>
 
-  <cfpb-list aria-label="List of planets" type="checkbox">
-    <cfpb-list-item>Mercury</cfpb-list-item>
-    <cfpb-list-item>Venus</cfpb-list-item>
-    <cfpb-list-item>Earth</cfpb-list-item>
-    <cfpb-list-item checked>Mars</cfpb-list-item>
-    <cfpb-list-item>Jupiter</cfpb-list-item>
-    <cfpb-list-item>Saturn</cfpb-list-item>
-    <cfpb-list-item>Uranus</cfpb-list-item>
-    <cfpb-list-item>Neptune</cfpb-list-item>
-  </cfpb-list>
+  <cfpb-listbox aria-label="List of planets" type="checkbox">
+    <cfpb-listbox-item>Mercury</cfpb-listbox-item>
+    <cfpb-listbox-item>Venus</cfpb-listbox-item>
+    <cfpb-listbox-item>Earth</cfpb-listbox-item>
+    <cfpb-listbox-item checked>Mars</cfpb-listbox-item>
+    <cfpb-listbox-item>Jupiter</cfpb-listbox-item>
+    <cfpb-listbox-item>Saturn</cfpb-listbox-item>
+    <cfpb-listbox-item>Uranus</cfpb-listbox-item>
+    <cfpb-listbox-item>Neptune</cfpb-listbox-item>
+  </cfpb-listbox>
 
   <br>
   <hr>
   <br>
 
   <p>
-  The following section allows interacting with the list item API.
+  The following section allows interacting with the Listbox item API.
   </p>
   <p>
-    <cfpb-list id="list-example" aria-label="List of planets">
-      <cfpb-list-item>Mercury</cfpb-list-item>
-      <cfpb-list-item>Venus</cfpb-list-item>
-      <cfpb-list-item>Earth</cfpb-list-item>
-      <cfpb-list-item>Mars</cfpb-list-item>
-      <cfpb-list-item>Jupiter</cfpb-list-item>
-      <cfpb-list-item>Saturn</cfpb-list-item>
-      <cfpb-list-item>Uranus</cfpb-list-item>
-      <cfpb-list-item>Neptune</cfpb-list-item>
-    </cfpb-list>
+    <cfpb-listbox id="listbox-example" aria-label="List of planets">
+      <cfpb-listbox-item>Mercury</cfpb-listbox-item>
+      <cfpb-listbox-item>Venus</cfpb-listbox-item>
+      <cfpb-listbox-item>Earth</cfpb-listbox-item>
+      <cfpb-listbox-item>Mars</cfpb-listbox-item>
+      <cfpb-listbox-item>Jupiter</cfpb-listbox-item>
+      <cfpb-listbox-item>Saturn</cfpb-listbox-item>
+      <cfpb-listbox-item>Uranus</cfpb-listbox-item>
+      <cfpb-listbox-item>Neptune</cfpb-listbox-item>
+    </cfpb-listbox>
 
   </p>
 <p>
 
-  <label for="list-example-type">List item type:</label>
-  <select id="list-example-type">
+  <label for="listbox-example-type">Listbox item type:</label>
+  <select id="listbox-example-type">
     <option>plain</option>
     <option>check</option>
     <option>checkbox</option>
@@ -2615,57 +2615,57 @@
   </p>
 <p>
 
-  <input type="text" id="list-example-filter" aria-labelledby="list-example-filter-btn">
-  <button id="list-example-filter-btn">Filter</button>
-  <button id="list-example-show-all-btn">Show all</button>
+  <input type="text" id="listbox-example-filter" aria-labelledby="listbox-example-filter-btn">
+  <button id="listbox-example-filter-btn">Filter</button>
+  <button id="listbox-example-show-all-btn">Show all</button>
 
   </p>
 <p>
 
   </p>
 <div>
-  <b id="list-example-visible"></b>
+  <b id="listbox-example-visible"></b>
   # of visible items</div>
 
   <p>
 
   </p>
 <div>
-  <b id="list-example-checked"></b>
+  <b id="listbox-example-checked"></b>
   # of checked items</div>
 
   <p>
 
   </p>
 <div>
-  <b id="list-example-checked-visible"></b>
+  <b id="listbox-example-checked-visible"></b>
   # of checked and visible items</div>
 
   <p>
 
   <br>
 
-  <input type="checkbox" id="list-example-multi">
-  <label for="list-example-multi">Allow checking multiple</label>
+  <input type="checkbox" id="listbox-example-multi">
+  <label for="listbox-example-multi">Allow checking multiple</label>
 
   </p>
   <script>
   (function() {
-  const listEx = document.querySelector('#list-example');
+  const listEx = document.querySelector('#listbox-example');
 
-  const typeSel = document.querySelector('#list-example-type');
+  const typeSel = document.querySelector('#listbox-example-type');
 
-  const filterInput = document.querySelector('#list-example-filter')
-  const filterBtn = document.querySelector('#list-example-filter-btn');
-  const showAllBtn = document.querySelector('#list-example-show-all-btn');
+  const filterInput = document.querySelector('#listbox-example-filter')
+  const filterBtn = document.querySelector('#listbox-example-filter-btn');
+  const showAllBtn = document.querySelector('#listbox-example-show-all-btn');
 
-  const multiBtn = document.querySelector('#list-example-multi');
+  const multiBtn = document.querySelector('#listbox-example-multi');
 
-  const visInput = document.querySelector('#list-example-visible');
+  const visInput = document.querySelector('#listbox-example-visible');
 
-  const checkInput = document.querySelector('#list-example-checked');
+  const checkInput = document.querySelector('#listbox-example-checked');
 
-  const visCheckInput = document.querySelector('#list-example-checked-visible');
+  const visCheckInput = document.querySelector('#listbox-example-checked-visible');
 
   typeSel.addEventListener('change', (evt) => {
     listEx.type = evt.target.value;
@@ -2718,15 +2718,15 @@
             
 
             <div class="a-toggle__code">
-                <button href="#details-lists-a-list-component-cfpb-list-16" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-lists-a-list-component-cfpb-list-16" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-listboxes-a-listbox-component-cf-16" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-listboxes-a-listbox-component-cf-16" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-lists-a-list-component-cfpb-list-16">
+            <div class="m-tabs u-hidden" id="details-listboxes-a-listbox-component-cf-16">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-lists-a-list-component-cfpb-list-html-code-snippet-16">
+                        <a class="m-tabs__tab" href="#details-listboxes-a-listbox-component-cf-html-code-snippet-16">
                             HTML code snippet
                         </a>
                     </li>
@@ -2738,40 +2738,40 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-lists-a-list-component-cfpb-list-html-code-snippet-16">
+                <section class="m-tabs__panel" id="details-listboxes-a-listbox-component-cf-html-code-snippet-16">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;cfpb-list aria-label="List of planets"&gt;
-  &lt;cfpb-list-item&gt;Mercury&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Venus&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Earth&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Mars&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Jupiter&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Saturn&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Uranus&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Neptune&lt;/cfpb-list-item&gt;
-&lt;/cfpb-list&gt;
-&lt;cfpb-list aria-label="List of planets" type="check"&gt;
-  &lt;cfpb-list-item&gt;Mercury&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Venus&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Earth&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item checked&gt;Mars&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Jupiter&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Saturn&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Uranus&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Neptune&lt;/cfpb-list-item&gt;
-&lt;/cfpb-list&gt;
-&lt;cfpb-list aria-label="List of planets" type="checkbox"&gt;
-  &lt;cfpb-list-item&gt;Mercury&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Venus&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Earth&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item checked&gt;Mars&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Jupiter&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Saturn&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Uranus&lt;/cfpb-list-item&gt;
-  &lt;cfpb-list-item&gt;Neptune&lt;/cfpb-list-item&gt;
-&lt;/cfpb-list&gt;</code></pre>
+                            <pre><code class="language-html">&lt;cfpb-listbox aria-label="List of planets"&gt;
+  &lt;cfpb-listbox-item&gt;Mercury&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Venus&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Earth&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Mars&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Jupiter&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Saturn&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Uranus&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Neptune&lt;/cfpb-listbox-item&gt;
+&lt;/cfpb-listbox&gt;
+&lt;cfpb-listbox aria-label="List of planets" type="check"&gt;
+  &lt;cfpb-listbox-item&gt;Mercury&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Venus&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Earth&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item checked&gt;Mars&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Jupiter&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Saturn&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Uranus&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Neptune&lt;/cfpb-listbox-item&gt;
+&lt;/cfpb-listbox&gt;
+&lt;cfpb-listbox aria-label="List of planets" type="checkbox"&gt;
+  &lt;cfpb-listbox-item&gt;Mercury&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Venus&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Earth&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item checked&gt;Mars&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Jupiter&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Saturn&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Uranus&lt;/cfpb-listbox-item&gt;
+  &lt;cfpb-listbox-item&gt;Neptune&lt;/cfpb-listbox-item&gt;
+&lt;/cfpb-listbox&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -3090,8 +3090,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/reference-for-custom-elements.md">
-                            <time datetime="2026-04-10 11:10:37 -0400">
-                                11:10:37 AM Apr 10, 2026
+                            <time datetime="2026-04-10 12:49:21 -0400">
+                                12:49:21 PM Apr 10, 2026
                             </time>
                         </a>
                     </section>

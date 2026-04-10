@@ -9,8 +9,8 @@ import {
   CfpbFormSearch,
   CfpbFormSearchInput,
   CfpbLabel,
-  CfpbList,
-  CfpbListItem,
+  CfpbListbox,
+  CfpbListboxItem,
   CfpbTagline,
   CfpbTagFilter,
   CfpbTagTopic,
@@ -56,8 +56,8 @@ CfpbFormChoice.init();
 CfpbFormSearch.init();
 CfpbFormSearchInput.init();
 CfpbLabel.init();
-CfpbList.init();
-CfpbListItem.init();
+CfpbListbox.init();
+CfpbListboxItem.init();
 CfpbTagline.init();
 CfpbTagFilter.init();
 CfpbTagTopic.init();

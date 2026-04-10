@@ -115,6 +115,9 @@
       "releaseNotes": "./scripts/changelog.sh"
     }
   },
+  "resolutions": {
+    "trim": "0.0.2"
+  },
   "type": "module",
   "packageManager": "yarn@4.13.0"
 }

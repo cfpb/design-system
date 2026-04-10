@@ -10,7 +10,7 @@ import { CfpbFormSearchInput } from '../cfpb-form-search-input';
 import { SearchService } from '../cfpb-utilities/search-service.js';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';
 import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
-import { CfpbList } from '../cfpb-list';
+import { CfpbListbox } from '../cfpb-listbox';
 import { CfpbTagGroup } from '../cfpb-tag-group';
 
 import { SingleSelectEventProxy } from './single-select-event-proxy.js';
@@ -374,7 +374,7 @@ export class CfpbSelect extends LitElement {
 
   static init() {
     CfpbFormSearchInput.init();
-    CfpbList.init();
+    CfpbListbox.init();
     CfpbTagGroup.init();
 
     window.customElements.get('cfpb-select') ||

@@ -72,7 +72,7 @@ export class MultipleSelectEventProxy {
           host.isExpanded = !host.isExpanded;
           break;
       }
-    } else if (focused === 'CFPB-LIST-ITEM') {
+    } else if (focused === 'CFPB-LISTBOX-ITEM') {
       switch (evt.key) {
         case 'Tab':
           if (evt.shiftKey) {

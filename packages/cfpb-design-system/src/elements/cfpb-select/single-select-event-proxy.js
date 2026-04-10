@@ -42,7 +42,7 @@ export class SingleSelectEventProxy {
         case 'ArrowDown':
           evt.preventDefault();
           host.isExpanded = true;
-          this.list.querySelector('cfpb-list-item')?.focus();
+          this.list.querySelector('cfpb-listbox-item')?.focus();
           break;
       }
     }

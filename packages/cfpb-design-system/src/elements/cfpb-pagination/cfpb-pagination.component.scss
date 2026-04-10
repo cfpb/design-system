@@ -1,7 +1,7 @@
-@use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon' as *;
+@use '../../utilities/functions' as *;
 
 :host {
   width: 100%;
@@ -12,17 +12,17 @@
     grid-template-areas:
       'pag-btn-prev . pag-btn-next'
       'pag-form pag-form pag-form';
-    row-gap: math.div(15px, $base-font-size-px) + rem;
+    row-gap: rem-from-px(15px);
 
     &__form {
       grid-area: pag-form;
       display: flex;
       flex-flow: wrap;
       place-content: center;
-      gap: math.div(10px, $base-font-size-px) + rem;
+      gap: rem-from-px(10px);
 
-      padding: math.div(5px, $base-font-size-px) + rem;
-      border-radius: math.div(4px, $base-font-size-px) + rem;
+      padding: rem-from-px(5px);
+      border-radius: rem-from-px(4px);
       background: var(--gray-5);
       color: var(--gray);
     }
@@ -30,7 +30,7 @@
     &__current-page {
       // 45px is a magic number to provide enough room for three digits
       // and the number spinners for type="number" inputs on desktop
-      width: math.div(45px, $base-font-size-px) + rem;
+      width: rem-from-px(45px);
 
       font-weight: 500;
       text-align: right;

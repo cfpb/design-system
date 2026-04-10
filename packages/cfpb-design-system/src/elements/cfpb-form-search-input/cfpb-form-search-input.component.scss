@@ -1,7 +1,6 @@
-@use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-forms/text-input' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon' as *;
+@use '../../utilities/functions' as *;
 
 :host {
   // Theme
@@ -41,7 +40,7 @@
 
     // This line-height settings is taken from base.scss.
     input {
-      line-height: math.div(19px, $base-font-size-px);
+      line-height: unitless-from-px(19px);
     }
 
     input[type='search'] {
@@ -174,8 +173,8 @@
     border-color: transparent;
 
     input {
-      padding-top: math.div(5px, $base-font-size-px) + em;
-      padding-bottom: math.div(5px, $base-font-size-px) + em;
+      padding-top: rem-from-px(5px);
+      padding-bottom: rem-from-px(5px);
     }
 
     &:hover,

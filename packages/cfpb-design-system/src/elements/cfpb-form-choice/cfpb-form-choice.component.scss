@@ -1,6 +1,5 @@
-@use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '../../utilities/functions' as *;
 
 :host {
   .m-form-field {
@@ -20,7 +19,7 @@
     width: max-content;
 
     .a-label + .a-text-input {
-      margin-top: math.div(5px, $base-font-size-px) + em;
+      margin-top: rem-from-px(5px);
     }
 
     &--checkbox,
@@ -29,7 +28,7 @@
         display: inline-grid;
 
         // 30px is width of checkbox/radio button plus the needed padding.
-        grid-template-columns: math.div(30px, $base-font-size-px) + em auto;
+        grid-template-columns: rem-from-px(30px) auto;
         vertical-align: top;
         cursor: pointer;
 
@@ -113,8 +112,8 @@
           border: 1px solid var(--choice-border);
           outline: var(--choice-border-width-addendum) solid
             var(--choice-border);
-          height: math.div(18px, $base-font-size-px) + em;
-          width: math.div(18px, $base-font-size-px) + em;
+          height: rem-from-px(18px);
+          width: rem-from-px(18px);
           margin-right: 10px;
           background-color: var(--choice-bg);
           content: '';

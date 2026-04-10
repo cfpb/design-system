@@ -1,7 +1,7 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-button.component.scss?inline';
+import styles from './styles.component.scss?inline';
 import { CfpbIconText } from '../cfpb-icon-text';
 
 // The variants are different color themes of the button.

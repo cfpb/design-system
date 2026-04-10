@@ -1,6 +1,6 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
-import styles from './cfpb-tag-filter.component.scss?inline';
+import styles from './styles.component.scss?inline';
 import { errorIcon as icon } from '../../components/cfpb-icons/icons-lib';
 
 /**

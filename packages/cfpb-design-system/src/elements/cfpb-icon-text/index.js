@@ -1,5 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import styles from './cfpb-icon-text.component.scss?inline';
+import styles from './styles.component.scss?inline';
 
 /**
  * @element cfpb-icon-text

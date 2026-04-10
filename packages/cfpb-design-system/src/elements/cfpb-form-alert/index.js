@@ -1,6 +1,6 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-form-alert.component.scss?inline';
+import styles from './styles.component.scss?inline';
 import {
   errorRoundIcon as errorIcon,
   warningRoundIcon as warningIcon,

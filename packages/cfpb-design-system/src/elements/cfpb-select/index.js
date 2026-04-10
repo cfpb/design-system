@@ -1,7 +1,7 @@
 import { html, LitElement, css, unsafeCSS, nothing } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-select.component.scss?inline';
+import styles from './styles.component.scss?inline';
 import {
   downIcon as expandIcon,
   upIcon as collapseIcon,

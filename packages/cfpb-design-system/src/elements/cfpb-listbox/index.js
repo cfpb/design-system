@@ -1,6 +1,6 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-listbox.component.scss?inline';
+import styles from './styles.component.scss?inline';
 import { CfpbListboxItem } from '../cfpb-listbox-item';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 

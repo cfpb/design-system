@@ -1,6 +1,6 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './styles.component.scss?inline';
+import styles from './styles.component.css?inline';
 import { CfpbButton } from '../cfpb-button';
 
 /**

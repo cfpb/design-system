@@ -164,7 +164,7 @@ export class CfpbFormSearch extends LitElement {
 
           <div class="popup" ${ref(this.#popup)}>
             <cfpb-listbox .childData=${this.searchList} ${ref(this.#list)}>
-            </cfpb-list>
+            </cfpb-listbox>
           </div>
         </div>
 
@@ -179,13 +179,11 @@ export class CfpbFormSearch extends LitElement {
         </button>
       </div>
 
-      ${
-        this.isOverMaxLength
-          ? html`<cfpb-form-alert validation="error">
-              Searches are limited to ${this.maxlength} characters.
-            </cfpb-form-alert>`
-          : null
-      }`;
+      ${this.isOverMaxLength
+        ? html`<cfpb-form-alert validation="error">
+            Searches are limited to ${this.maxlength} characters.
+          </cfpb-form-alert>`
+        : null}`;
   }
 
   static init() {

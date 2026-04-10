@@ -327,7 +327,7 @@ export class CfpbSelect extends LitElement {
           data-js-hook="behavior_flyout-menu_content"
           ${ref(this.#contentDom)}
         >
-          <cfpb-list
+          <cfpb-listbox
             tabindex=${this.#noResults ? '-1' : '0'}
             @item-click=${this.#onItemClick}
             ?multiple=${this.multiple}
@@ -338,7 +338,7 @@ export class CfpbSelect extends LitElement {
               : 'Choose an item…'}
             ${ref(this.#list)}
           >
-          </cfpb-list>
+          </cfpb-listbox>
           <div class=${this.#noResults ? 'no-results' : 'u-hidden'}>
             No results found
           </div>

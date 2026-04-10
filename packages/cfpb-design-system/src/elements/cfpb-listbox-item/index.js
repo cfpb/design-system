@@ -1,13 +1,13 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import styles from './cfpb-list-item.component.scss?inline';
+import styles from './cfpb-listbox-item.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
 
 /**
- * @element cfpb-list-item.
+ * @element cfpb-listbox-item.
  * @slot - The text for the list item.
  */
-export class CfpbListItem extends LitElement {
+export class CfpbListboxItem extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
@@ -208,8 +208,8 @@ export class CfpbListItem extends LitElement {
   static init() {
     CfpbCheckboxIcon.init();
 
-    if (!window.customElements.get('cfpb-list-item')) {
-      window.customElements.define('cfpb-list-item', CfpbListItem);
+    if (!window.customElements.get('cfpb-listbox-item')) {
+      window.customElements.define('cfpb-listbox-item', CfpbListboxItem);
     }
   }
 }

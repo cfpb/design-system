@@ -1,15 +1,15 @@
 import { jest } from '@jest/globals';
-import { CfpbList } from './index';
+import { CfpbListbox } from './index';
 
 beforeAll(() => {
-  CfpbList.init();
+  CfpbListbox.init();
 });
 
-describe('<cfpb-list> tests', () => {
+describe('<cfpb-listbox> tests', () => {
   let list;
 
   beforeEach(() => {
-    list = document.createElement('cfpb-list');
+    list = document.createElement('cfpb-listbox');
     document.body.appendChild(list);
   });
 
@@ -123,7 +123,7 @@ describe('<cfpb-list> tests', () => {
 
     const container = list.shadowRoot.querySelector('div');
     container.focus();
-    expect(document.activeElement.tagName).toBe('CFPB-LIST');
+    expect(document.activeElement.tagName).toBe('CFPB-LISTBOX');
 
     // ArrowDown → first visible
     container.dispatchEvent(
@@ -141,7 +141,7 @@ describe('<cfpb-list> tests', () => {
     container.dispatchEvent(
       new KeyboardEvent('keydown', { key: 'ArrowUp', bubbles: true }),
     );
-    expect(document.activeElement.tagName).toBe('CFPB-LIST');
+    expect(document.activeElement.tagName).toBe('CFPB-LISTBOX');
   });
 
   test('showAllItems unhides all items', async () => {
@@ -173,21 +173,21 @@ describe('<cfpb-list> tests', () => {
     list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
     await list.updateComplete;
     list.focusItemAt(-1);
-    expect(document.activeElement.tagName).toBe('CFPB-LIST');
+    expect(document.activeElement.tagName).toBe('CFPB-LISTBOX');
   });
 
   test('focusItemAt(null) focuses the container', async () => {
     list.childData = JSON.stringify([{ value: 'A' }]);
     await list.updateComplete;
     list.focusItemAt(null);
-    expect(document.activeElement.tagName).toBe('CFPB-LIST');
+    expect(document.activeElement.tagName).toBe('CFPB-LISTBOX');
   });
 
   test('focusItemAt(undefined) focuses the container', async () => {
     list.childData = JSON.stringify([{ value: 'A' }]);
     await list.updateComplete;
     list.focusItemAt(undefined);
-    expect(document.activeElement.tagName).toBe('CFPB-LIST');
+    expect(document.activeElement.tagName).toBe('CFPB-LISTBOX');
   });
 
   test('ArrowDown from container focuses first visible item', async () => {

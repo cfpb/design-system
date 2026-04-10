@@ -3,7 +3,7 @@ import styles from './cfpb-form-search.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
 import { SearchService } from '../cfpb-utilities/search-service.js';
-import { CfpbList } from '../cfpb-list';
+import { CfpbListbox } from '../cfpb-listbox';
 import { CfpbFormAlert } from '../cfpb-form-alert';
 
 /**
@@ -163,7 +163,7 @@ export class CfpbFormSearch extends LitElement {
           ></cfpb-form-search-input>
 
           <div class="popup" ${ref(this.#popup)}>
-            <cfpb-list .childData=${this.searchList} ${ref(this.#list)}>
+            <cfpb-listbox .childData=${this.searchList} ${ref(this.#list)}>
             </cfpb-list>
           </div>
         </div>
@@ -179,16 +179,18 @@ export class CfpbFormSearch extends LitElement {
         </button>
       </div>
 
-      ${this.isOverMaxLength
-        ? html`<cfpb-form-alert validation="error">
-            Searches are limited to ${this.maxlength} characters.
-          </cfpb-form-alert>`
-        : null}`;
+      ${
+        this.isOverMaxLength
+          ? html`<cfpb-form-alert validation="error">
+              Searches are limited to ${this.maxlength} characters.
+            </cfpb-form-alert>`
+          : null
+      }`;
   }
 
   static init() {
     CfpbFormSearchInput.init();
-    CfpbList.init();
+    CfpbListbox.init();
     CfpbFormAlert.init();
 
     window.customElements.get('cfpb-form-search') ||

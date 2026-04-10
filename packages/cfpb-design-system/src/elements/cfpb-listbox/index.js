@@ -1,10 +1,10 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-list.component.scss?inline';
-import { CfpbListItem } from '../cfpb-list-item';
+import styles from './cfpb-listbox.component.scss?inline';
+import { CfpbListboxItem } from '../cfpb-listbox-item';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 
-export class CfpbList extends LitElement {
+export class CfpbListbox extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
@@ -84,7 +84,7 @@ export class CfpbList extends LitElement {
 
     let firstChecked = null;
     itemsArray.forEach((data) => {
-      const item = document.createElement('cfpb-list-item');
+      const item = document.createElement('cfpb-listbox-item');
       item.textContent = data.value ?? '';
       if ('disabled' in data) item.disabled = data.disabled;
       if ('hidden' in data) item.hidden = data.hidden;
@@ -109,7 +109,7 @@ export class CfpbList extends LitElement {
   // -------------------------
   #syncItems() {
     // Collect items.
-    this.#items = [...this.querySelectorAll('cfpb-list-item')];
+    this.#items = [...this.querySelectorAll('cfpb-listbox-item')];
 
     // Ensure each item has a type.
     this.#items.forEach((item) => {
@@ -187,7 +187,7 @@ export class CfpbList extends LitElement {
   #applyTypeToItems() {
     if (!['plain', 'check', 'checkbox'].includes(this.type)) {
       // eslint-disable-next-line no-console
-      console.warn(`<cfpb-list>: invalid type "${this.type}".`);
+      console.warn(`<cfpb-listbox>: invalid type "${this.type}".`);
       return;
     }
     this.#items.forEach((item) => (item.type = this.type));
@@ -372,9 +372,10 @@ export class CfpbList extends LitElement {
   }
 
   static init() {
-    CfpbListItem.init();
-    if (!window.customElements.get('cfpb-list')) {
-      window.customElements.define('cfpb-list', CfpbList);
+    CfpbListboxItem.init();
+
+    if (!window.customElements.get('cfpb-listbox')) {
+      window.customElements.define('cfpb-listbox', CfpbListbox);
     }
   }
 }

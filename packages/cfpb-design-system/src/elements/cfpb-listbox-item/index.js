@@ -1,5 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import styles from './cfpb-listbox-item.component.scss?inline';
+import styles from './styles.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
 

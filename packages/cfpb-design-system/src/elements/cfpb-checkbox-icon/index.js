@@ -1,5 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import styles from './cfpb-checkbox-icon.component.scss?inline';
+import styles from './styles.component.scss?inline';
 
 // The validation states are error, warning, or success.
 const VALID_VALIDATION = ['error', 'warning', 'success'];

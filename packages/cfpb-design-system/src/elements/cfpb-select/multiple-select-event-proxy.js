@@ -11,7 +11,7 @@ export class MultipleSelectEventProxy {
   }
 
   onBlur() {
-    // In multiselect, blur happens when inside the list, so we ignore any
+    // In multiselect, blur happens when inside the listbox, so we ignore any
     // blur actions.
   }
 

@@ -1,6 +1,6 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-expandable.component.scss?inline';
+import styles from './styles.component.scss?inline';
 import {
   plusRoundIcon as expandIcon,
   minusRoundIcon as collapseIcon,

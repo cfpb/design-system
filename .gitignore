@@ -88,3 +88,4 @@ docs/_site
 **/.jekyll-cache/
 .jekyll-metadata
 Gemfile.lock
+storybook-static/design-system/fonts/source-sans-3-latin-wght-normal.woff2

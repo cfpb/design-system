@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "packages/cfpb-design-system/src/elements/cfpb-tagline/index.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CfpbTagline",
+          "slots": [
+            {
+              "description": "Official U.S. government website tagline component.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "init",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "isLarge",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "isLarge",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "isLarge",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "isLarge"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cfpb-tagline",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CfpbTagline",
+          "declaration": {
+            "name": "CfpbTagline",
+            "module": "src/my-element.js"
+          }
+        }
+      ]
+    }
+  ]
+}

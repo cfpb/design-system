@@ -265,6 +265,177 @@ collections:
         widget: 'markdown'
         minimal: true
         required: false
+  - label: 'Storybook pilot pages'
+    name: 'storybook-pages'
+    identifier_field: 'title'
+    preview_path: 'storybook/{{section}}/{{slug}}'
+    label_singular: 'Storybook pilot page'
+    folder: 'storybook/content/pages/'
+    create: true
+    slug: '{{slug}}'
+    extension: 'mdx'
+    format: 'frontmatter'
+    fields:
+      - name: 'title'
+        label: 'Page title'
+        widget: 'string-with-instructions'
+      - name: 'slug'
+        label: 'Slug'
+        widget: 'string-trimmed'
+        hint: 'Used for the filename and Storybook route. Keep this stable once a page is in use.'
+      - name: 'section'
+        label: 'Website section'
+        widget: 'select'
+        required: true
+        options:
+          - label: 'Foundation'
+            value: 'foundation'
+          - label: 'Components'
+            value: 'components'
+          - label: 'Patterns'
+            value: 'patterns'
+          - label: 'Pages'
+            value: 'pages'
+          - label: 'Development'
+            value: 'development'
+          - label: 'Guidelines'
+            value: 'guidelines'
+      - name: 'jumplinks'
+        label: 'Custom jump links'
+        widget: 'string'
+        hint: 'Enter jump links separated by commas'
+        required: false
+      - name: 'eyebrow'
+        label: 'Eyebrow'
+        widget: 'string'
+        required: false
+      - name: 'status'
+        label: 'Implementation status'
+        widget: 'select'
+        required: false
+        options:
+          - label: 'Legacy'
+            value: 'Legacy'
+          - label: 'Proposed'
+            value: 'Proposed'
+          - label: 'Beta'
+            value: 'Beta'
+          - label: 'Released'
+            value: 'Released'
+      - name: 'description'
+        label: 'Description'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'variation_groups'
+        label: 'Variation groups'
+        widget: 'list'
+        required: false
+        fields:
+          - name: 'variation_group_name'
+            label: 'Variation group name'
+            widget: 'string-trimmed'
+            required: false
+          - name: 'variation_group_description'
+            label: 'Variation group description'
+            widget: 'markdown'
+            required: false
+            minimal: true
+          - name: 'variations'
+            label: 'Variations'
+            widget: 'list'
+            required: false
+            fields:
+              - name: 'variation_name'
+                label: 'Variation name'
+                widget: 'string-trimmed'
+                required: false
+              - name: 'variation_is_deprecated'
+                label: 'Is this variation deprecated?'
+                widget: 'boolean'
+                required: false
+                default: false
+              - name: 'variation_description'
+                label: 'Variation description'
+                widget: 'markdown'
+                required: false
+                minimal: true
+              - name: 'variation_code_snippet'
+                label: 'Variation code snippet'
+                widget: 'text'
+                required: false
+              - name: 'variation_code_snippet_rendered'
+                label: 'Variation code snippet rendered'
+                hint: 'Optional alternate markup to render instead of the main code snippet.'
+                widget: 'text'
+                required: false
+              - name: 'variation_jinja_code_snippet'
+                label: 'Variation Jinja links or snippet'
+                required: false
+                widget: 'markdown'
+                minimal: true
+              - name: 'variation_implementation'
+                label: 'Implementation details'
+                required: false
+                widget: 'markdown'
+                minimal: true
+              - name: 'variation_specs'
+                label: 'Optional specs'
+                required: false
+                widget: 'markdown'
+                minimal: true
+      - name: 'use_cases'
+        label: 'Use cases'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'guidelines'
+        label: 'Guidelines'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'behavior'
+        label: 'Behavior'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'restrictions'
+        label: 'Restrictions'
+        widget: 'list'
+        required: false
+        fields:
+          - name: 'restrictions_do'
+            label: 'Do'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'restrictions_do_not'
+            label: 'Do not'
+            widget: 'markdown'
+            minimal: true
+            required: false
+      - name: 'accessibility'
+        label: 'Accessibility'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'research'
+        label: 'Research'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'related_items'
+        label: 'Related items'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'last_updated'
+        label: 'Last updated'
+        widget: 'datetime'
+        required: false
+      - name: 'body'
+        widget: 'hidden'
+        required: false
   - label: 'Special pages'
     name: 'special-pages'
     folder: 'docs/special-pages/'

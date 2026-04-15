@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './styles.component.scss?inline';
 import { CfpbListboxItem } from '../cfpb-listbox-item';
@@ -373,9 +374,6 @@ export class CfpbListbox extends LitElement {
 
   static init() {
     CfpbListboxItem.init();
-
-    if (!window.customElements.get('cfpb-listbox')) {
-      window.customElements.define('cfpb-listbox', CfpbListbox);
-    }
+    defineComponent('cfpb-listbox', CfpbListbox);
   }
 }

@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
 
 /**
@@ -72,7 +73,6 @@ export class CfpbIconText extends LitElement {
   }
 
   static init() {
-    window.customElements.get('cfpb-icon-text') ||
-      window.customElements.define('cfpb-icon-text', CfpbIconText);
+    defineComponent('cfpb-icon-text', CfpbIconText);
   }
 }

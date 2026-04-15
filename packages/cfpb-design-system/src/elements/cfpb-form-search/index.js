@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
@@ -190,8 +191,6 @@ export class CfpbFormSearch extends LitElement {
     CfpbFormSearchInput.init();
     CfpbListbox.init();
     CfpbFormAlert.init();
-
-    window.customElements.get('cfpb-form-search') ||
-      window.customElements.define('cfpb-form-search', CfpbFormSearch);
+    defineComponent('cfpb-form-search', CfpbFormSearch);
   }
 }

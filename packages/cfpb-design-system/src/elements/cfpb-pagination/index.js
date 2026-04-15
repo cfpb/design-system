@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { CfpbIcon } from '../cfpb-icon';
 import { I18nService, MediaQueryService } from '../cfpb-utilities/';
@@ -202,8 +203,6 @@ export class CfpbPagination extends LitElement {
   static init() {
     CfpbIcon.init();
     I18nService.init();
-
-    window.customElements.get('cfpb-pagination') ||
-      window.customElements.define('cfpb-pagination', CfpbPagination);
+    defineComponent('cfpb-pagination', CfpbPagination);
   }
 }

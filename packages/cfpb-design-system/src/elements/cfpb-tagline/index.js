@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import { CfpbFlagUsa } from '../cfpb-flag-usa';
 import styles from './styles.component.scss?inline';
 
@@ -46,8 +47,6 @@ export class CfpbTagline extends LitElement {
 
   static init() {
     CfpbFlagUsa.init();
-
-    globalThis.customElements.get('cfpb-tagline') ??
-      globalThis.customElements.define('cfpb-tagline', CfpbTagline);
+    defineComponent('cfpb-tagline', CfpbTagline);
   }
 }

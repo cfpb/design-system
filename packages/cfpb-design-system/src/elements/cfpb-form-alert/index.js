@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { CfpbIcon } from '../cfpb-icon';
 
@@ -60,8 +61,6 @@ export class CfpbFormAlert extends LitElement {
 
   static init() {
     CfpbIcon.init();
-
-    window.customElements.get('cfpb-form-alert') ||
-      window.customElements.define('cfpb-form-alert', CfpbFormAlert);
+    defineComponent('cfpb-form-alert', CfpbFormAlert);
   }
 }

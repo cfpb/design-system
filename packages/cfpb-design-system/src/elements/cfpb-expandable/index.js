@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { CfpbIcon } from '../cfpb-icon';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';
@@ -120,8 +121,6 @@ export class CfpbExpandable extends LitElement {
 
   static init() {
     CfpbIcon.init();
-
-    window.customElements.get('cfpb-expandable') ||
-      window.customElements.define('cfpb-expandable', CfpbExpandable);
+    defineComponent('cfpb-expandable', CfpbExpandable);
   }
 }

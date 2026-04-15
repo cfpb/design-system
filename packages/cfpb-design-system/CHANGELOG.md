@@ -2,7 +2,76 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.2.0](https://github.com/cfpb/design-system/compare/v5.1.0..v5.2.0) - March 27, 2026
+## [5.3.0](https://github.com/cfpb/design-system/compare/v5.2.0..v5.3.0) - April 15, 2026
+
+### PRs in this release
+
+- PR #[2581](https://github.com/cfpb/design-system/pull/2581): Remove unneeded SASS imports from `cfpb-list.component.scss` - Ans
+- PR #[2422](https://github.com/cfpb/design-system/pull/2422): Add global wc-fallback script and styles - Ans
+- PR #[2588](https://github.com/cfpb/design-system/pull/2588): Add WC fallback documentation - Ans
+- PR #[2604](https://github.com/cfpb/design-system/pull/2604): Remove legacy tagline and move tagline under web component heading - Ans
+- PR #[2611](https://github.com/cfpb/design-system/pull/2611): Add loading skeleton architecture - Ans
+- PR #[2616](https://github.com/cfpb/design-system/pull/2616): Re-add legacy taglines - Ans
+- PR #[2618](https://github.com/cfpb/design-system/pull/2618): Change `cfpb-list` to `cfpb-listbox` - Ans
+- PR #[2595](https://github.com/cfpb/design-system/pull/2595): Centralize px ⮕ rem calculation in a function - Ans
+- PR #[2574](https://github.com/cfpb/design-system/pull/2574): Consolidate elements JS imports - Ans
+- PR #[2619](https://github.com/cfpb/design-system/pull/2619): Move component styles to generic file naming - Ans
+- PR #[2621](https://github.com/cfpb/design-system/pull/2621): Fix missed cfpb-listbox change - Ans
+- PR #[2626](https://github.com/cfpb/design-system/pull/2626): Bump autoprefixer, eslint-plugin-cypress, globals, prettier, release-it, stylelint - Ans
+- PR #[2623](https://github.com/cfpb/design-system/pull/2623): Add `cfpb-icon` - Ans
+
+### General
+
+- Build dist assets for commit e468d916310bc7783a8eba86f7ce3cf607844359 [skip ci] - ([946a775](https://github.com/cfpb/design-system/commit/946a775c9bc79968fee20ec66bd2233cc6ad5725)) - CFPBot
+- Remove unneeded imports - ([e6ee8e5](https://github.com/cfpb/design-system/commit/e6ee8e57e2a13cfa00a407c93e925a4488ae2c19)) - Ans
+- Build dist assets for commit 6e2951311faa8d1048bef4d54fb18d2cb2e82e7f [skip ci] - ([b0707ca](https://github.com/cfpb/design-system/commit/b0707cab03d217f953a4be623e0ec9177ce640c9)) - CFPBot
+- Stabilize emitted token name ordering (#2583)
+
+* changes to token transformation so token names appear in a stable ordering
+
+Update to style dictionary config so that the generated css custom props names have a stable ordering (alpha sorted)
+
+Update to yarn tokens so that it runs prettier and stylelint after generating the css
+
+* Update package.json
+
+fixing typo stylelin -> stylelint
+
+* regenerated tokens with yarn tokens
+
+* update to funnel all linting through common path
+
+This simplifies things to use scripts/lint.sh directly.
+
+It will lint all files but allows for changes to the buildpath in style dictionary config. - ([46ddc26](https://github.com/cfpb/design-system/commit/46ddc26cb896c81525929f020a59033f027647c1)) - itsmedavep
+- Add global wc-fallback script and styles - ([4536d2f](https://github.com/cfpb/design-system/commit/4536d2fea56dd3123566ac5bf82060b24c0155dd)) - Ans
+- Add WC fallback documentation - ([9b434e5](https://github.com/cfpb/design-system/commit/9b434e5186d79d12b021e1fe73a4235802ca22dd)) - Ans
+- Font stack improvements (#2550)
+
+* update font-stack so that we don't redefine it thus removing the need for doing important
+
+* change from cfpb-font to font-stack-branded
+
+* regen tokens after token changes in main and build dist again
+
+* Update JSON to include font-stack-branded
+
+* update to variables page to reflect changes for new font stack - ([f4cc757](https://github.com/cfpb/design-system/commit/f4cc757f325781851378d87c41b0f4f069e85374)) - itsmedavep
+- Remove legacy tagline - ([ee27c9b](https://github.com/cfpb/design-system/commit/ee27c9bc292e4eea20e6ddf9ccb403515971ff34)) - Ans
+- Add loading skeleton architecture - ([78294da](https://github.com/cfpb/design-system/commit/78294dac1f4ad2eb322f16151a890a4aaf083165)) - Ans
+- Re-add legacy taglines - ([0ecc06e](https://github.com/cfpb/design-system/commit/0ecc06e6dbf6771f09531cf199cb747e904dcda6)) - Ans
+- Change `cfpb-list` to `cfpb-listbox` - ([7c52999](https://github.com/cfpb/design-system/commit/7c529990893ebb84d66c2df56649e688a8c8a4e7)) - Ans
+- Standardize on REM | centralize px to rem calc in a function - ([0614e76](https://github.com/cfpb/design-system/commit/0614e76546f7bb4e2211022ecfcb6a5b1aa1b99c)) - Ans
+- Consolidate elements JS imports - ([872df41](https://github.com/cfpb/design-system/commit/872df411930d9e6e3c1fe41ae3de75bbe75dbe2d)) - Ans
+- Move component styles to generic file naming - ([c004f63](https://github.com/cfpb/design-system/commit/c004f6384b831e381b00cf28910efae58e97952c)) - Ans
+- Remove cfpb-file-upload SCSS cruft - ([1ba29bc](https://github.com/cfpb/design-system/commit/1ba29bcc2d2e0fca430e04fd315d50750c6f2244)) - Ans
+- Fix missed cfpb-listbox change - ([f4c8d18](https://github.com/cfpb/design-system/commit/f4c8d18e3f84e8705eaae81636c2aa2747490fa7)) - Ans
+- Bump autoprefixer, eslint-plugin-cypress, globals, prettier, release-it, stylelint - ([1ef5df8](https://github.com/cfpb/design-system/commit/1ef5df8733da2a385271fc728ae7f1464b35e249)) - Ans
+- Add `cfpb-icon` - ([7b8d674](https://github.com/cfpb/design-system/commit/7b8d674cc410a636e689af26fcab151635474ec4)) - Ans
+- Add code comment - ([8da00bd](https://github.com/cfpb/design-system/commit/8da00bd37835c168ba1dceb69e7a2257baa40313)) - Ans
+- Add animating icon - ([64216ee](https://github.com/cfpb/design-system/commit/64216eec3a7a0948fbb0b4c20128d615bc30240e)) - Ans
+
+## [5.2.0](https://github.com/cfpb/design-system/compare/v5.1.0..vv5.2.0) - March 27, 2026
 
 ### PRs in this release
 

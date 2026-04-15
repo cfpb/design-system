@@ -2,7 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.3.0](https://github.com/cfpb/design-system/compare/v5.2.0..v5.3.0) - April 15, 2026
+## [5.3.1](https://github.com/cfpb/design-system/compare/v5.3.0..v5.3.1) - April 15, 2026
+
+### PRs in this release
+
+- PR #[2628](https://github.com/cfpb/design-system/pull/2628): Move all init code to a shared `defineComponent` method - Ans
+- PR #[2629](https://github.com/cfpb/design-system/pull/2629): Update postcss to 8.5.10 | Correct element jsdoc comments - Ans
+
+### General
+
+- Move all init code to a shared `defineComponent` method - ([af29a2d](https://github.com/cfpb/design-system/commit/af29a2d59d22bd64e7fc7cf8039dab9bd84ecdc5)) - Ans
+- Lint files - ([2b7c2fa](https://github.com/cfpb/design-system/commit/2b7c2faa577fc7da7c5eba12e15a206086ff5bc1)) - Ans
+- Correct element jsdoc comments - ([8deb929](https://github.com/cfpb/design-system/commit/8deb929c74b219aee290bb6824a4f359b3cbc61a)) - Ans
+
+## [5.3.0](https://github.com/cfpb/design-system/compare/v5.2.0..vv5.3.0) - April 15, 2026
 
 ### PRs in this release
 

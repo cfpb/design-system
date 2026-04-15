@@ -5,6 +5,10 @@ import styles from './styles.component.scss?inline';
 import { CfpbListboxItem } from '../cfpb-listbox-item';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 
+/**
+ * @element cfpb-listbox.
+ * @slot - Slot for the list of items in the list box.
+ */
 export class CfpbListbox extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}

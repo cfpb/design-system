@@ -7,8 +7,9 @@ import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
 
 /**
  *
- * @element cfpb-button
- * @slot - The main content for the button.
+ * @element cfpb-expandable
+ * @slot header - The header content for the expandable.
+ * @slot content - The content within the expandable.
  */
 export class CfpbExpandable extends LitElement {
   static styles = css`

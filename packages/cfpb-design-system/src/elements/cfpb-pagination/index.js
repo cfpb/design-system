@@ -6,8 +6,8 @@ import { I18nService, MediaQueryService } from '../cfpb-utilities/';
 
 /**
  *
- * @element cfpb-button
- * @slot - The main content for the button.
+ * @element cfpb-pagination
+ * @slot - Slot for passing in i18n (internationalization) service strings via a <template>.
  */
 export class CfpbPagination extends LitElement {
   #mediaService;

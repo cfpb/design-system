@@ -18,6 +18,7 @@ export class CfpbIcon extends LitElement {
   static properties = {
     name: { type: String },
     color: { type: String },
+    spin: { type: Boolean, attribute: true },
   };
 
   render() {

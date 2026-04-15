@@ -34,6 +34,13 @@ variation_groups:
             <p>Color set by `color` style set on parent element:</p>
 
             <span style="color:blue;"><cfpb-icon name="bank-round" /></span>
+
+            <br>
+            <br>
+
+            <p>Animate icons by adding the `spin` attribute:</p>
+
+            <cfpb-icon name="update" spin />
           </div>
         variation_code_snippet: >-
           <div>

@@ -1,12 +1,7 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './styles.component.scss?inline';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-
-import {
-  searchIcon,
-  errorIcon as clearIcon,
-} from '../../components/cfpb-icons/icons-lib.js';
+import { CfpbIcon } from '../cfpb-icon';
 
 /**
  * @element cfpb-form-search-input
@@ -113,7 +108,7 @@ export class CfpbFormSearchInput extends LitElement {
           class="o-search-input__input-label"
           aria-label=${this.label}
         >
-          ${unsafeSVG(searchIcon)}
+          <cfpb-icon name="search"></cfpb-icon>
         </label>
         <input
           id="search-text"
@@ -138,13 +133,15 @@ export class CfpbFormSearchInput extends LitElement {
           title=${this.ariaLabelButton}
           @click=${this.#onClickClear}
         >
-          ${unsafeSVG(clearIcon)}
+          <cfpb-icon name="error"></cfpb-icon>
         </button>
       </div>
     `;
   }
 
   static init() {
+    CfpbIcon.init();
+
     window.customElements.get('cfpb-form-search-input') ||
       window.customElements.define(
         'cfpb-form-search-input',

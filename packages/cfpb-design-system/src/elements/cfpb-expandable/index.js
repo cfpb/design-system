@@ -1,10 +1,6 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './styles.component.scss?inline';
-import {
-  plusRoundIcon as expandIcon,
-  minusRoundIcon as collapseIcon,
-} from '../../components/cfpb-icons/icons-lib.js';
+import { CfpbIcon } from '../cfpb-icon';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';
 import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
 
@@ -103,11 +99,11 @@ export class CfpbExpandable extends LitElement {
           <slot name="header" class="o-expandable__label"></slot>
           <span class="o-expandable__cues">
             <span class="o-expandable__cue-open" role="img" aria-label="Show">
-              ${unsafeSVG(expandIcon)}
+              <cfpb-icon name="plus-round" color="pacific"></cfpb-icon>
               <span class="u-visually-hidden">Show</span>
             </span>
             <span class="o-expandable__cue-close" role="img" aria-label="Hide">
-              ${unsafeSVG(collapseIcon)}
+              <cfpb-icon name="minus-round" color="pacific"></cfpb-icon>
               <span class="u-visually-hidden">Hide</span>
             </span>
           </span>
@@ -123,6 +119,8 @@ export class CfpbExpandable extends LitElement {
   }
 
   static init() {
+    CfpbIcon.init();
+
     window.customElements.get('cfpb-expandable') ||
       window.customElements.define('cfpb-expandable', CfpbExpandable);
   }

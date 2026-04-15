@@ -72,9 +72,8 @@
 
       // Set the touch target minimum for iOS.
       width: 44px;
-      text-align: right;
 
-      > svg {
+      > cfpb-icon {
         // Set width of SVG width to create a box for the focus rectangle.
         width: 25px;
 
@@ -95,7 +94,7 @@
       // Put the focus rectangle on the icon
       // because the button touch target is larger and would be lop-sided if
       // we put the rectangle on the button.
-      > svg {
+      > cfpb-icon {
         outline: 1px dotted var(--pacific);
       }
     }

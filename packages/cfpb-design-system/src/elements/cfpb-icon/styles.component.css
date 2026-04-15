@@ -1,0 +1,48 @@
+/*
+The icons work like this:
+- Nest an `img` tag inside a `span` tag.
+- Load an SVG icon into the `img` tag.
+- Load the same SVG icon into a CSS `mask-image` in the `span` tag.
+- Set the `background-color` on the masked `span` to change the icon color.
+*/
+:host {
+  --icon-mask-image-url: '';
+
+  /* 
+  The SVG height is scaled to match the rendered text height, 
+  calculated by dividing the rendered height by the assigned 
+  font size (19/16 = 1.1875em)
+  */
+  height: 1.1875em;
+  vertical-align: middle;
+  display: inline-block;
+  color: var(--icon-color-default, inherit);
+
+  span {
+    line-height: 0;
+    mask-image: var(--icon-mask-image-url);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    display: inline-block;
+    background-color: currentcolor;
+  }
+
+  img {
+    height: 1.1875em;
+    opacity: 0;
+  }
+}
+
+:host([spin]) {
+  animation: spin-animation 1.25s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}

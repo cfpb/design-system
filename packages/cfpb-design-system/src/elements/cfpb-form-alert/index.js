@@ -1,11 +1,6 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './styles.component.scss?inline';
-import {
-  errorRoundIcon as errorIcon,
-  warningRoundIcon as warningIcon,
-  approvedRoundIcon as successIcon,
-} from '../../components/cfpb-icons/icons-lib.js';
+import { CfpbIcon } from '../cfpb-icon';
 
 /**
  * @element cfpb-form-search
@@ -30,11 +25,21 @@ export class CfpbFormAlert extends LitElement {
   }
 
   get icon() {
-    let icon = errorIcon;
+    let icon = {
+      name: 'error',
+      colorVar: 'form-alert-icon-color-error',
+    };
+
     if (this.validation === 'warning') {
-      icon = warningIcon;
+      icon = {
+        name: 'warning',
+        colorVar: 'form-alert-icon-color-warning',
+      };
     } else if (this.validation === 'success') {
-      icon = successIcon;
+      icon = {
+        name: 'approved',
+        colorVar: 'form-alert-icon-color-success',
+      };
     }
 
     return icon;
@@ -45,12 +50,17 @@ export class CfpbFormAlert extends LitElement {
       class="a-form-alert a-form-alert--${this.validation}"
       role="alert"
     >
-      ${unsafeSVG(this.icon)}
+      <cfpb-icon
+        name="${this.icon.name}-round"
+        color="${this.icon.colorVar}"
+      ></cfpb-icon>
       <div class="a-form-alert__text"><slot></slot></div>
     </div>`;
   }
 
   static init() {
+    CfpbIcon.init();
+
     window.customElements.get('cfpb-form-alert') ||
       window.customElements.define('cfpb-form-alert', CfpbFormAlert);
   }

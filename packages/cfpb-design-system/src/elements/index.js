@@ -7,12 +7,16 @@
 // Base styles.
 export * from './abstracts';
 
+// Shared config.
+export * from './cfpb-utilities/shared-config';
+
 // Component styles.
 export * from './cfpb-button';
 export * from './cfpb-form-alert';
 export * from './cfpb-expandable';
 export * from './cfpb-form-choice';
 export * from './cfpb-file-upload';
+export * from './cfpb-icon';
 export * from './cfpb-label';
 export * from './cfpb-listbox';
 export * from './cfpb-listbox-item';

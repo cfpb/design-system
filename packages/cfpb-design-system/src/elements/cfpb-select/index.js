@@ -1,11 +1,7 @@
 import { html, LitElement, css, unsafeCSS, nothing } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './styles.component.scss?inline';
-import {
-  downIcon as expandIcon,
-  upIcon as collapseIcon,
-} from '../../components/cfpb-icons/icons-lib.js';
+import { CfpbIcon } from '../cfpb-icon';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
 import { SearchService } from '../cfpb-utilities/search-service.js';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';
@@ -314,11 +310,11 @@ export class CfpbSelect extends LitElement {
           @click=${this.#onClick}
         >
           <span class="o-select__cue-open" role="img" aria-label="Show">
-            ${unsafeSVG(expandIcon)}
+            <cfpb-icon name="down"></cfpb-icon>
             <span class="u-visually-hidden">Show</span>
           </span>
           <span class="o-select__cue-close" role="img" aria-label="Hide">
-            ${unsafeSVG(collapseIcon)}
+            <cfpb-icon name="up"></cfpb-icon>
             <span class="u-visually-hidden">Hide</span>
           </span>
         </button>
@@ -373,6 +369,7 @@ export class CfpbSelect extends LitElement {
   }
 
   static init() {
+    CfpbIcon.init();
     CfpbFormSearchInput.init();
     CfpbListbox.init();
     CfpbTagGroup.init();

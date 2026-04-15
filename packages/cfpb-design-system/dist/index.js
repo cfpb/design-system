@@ -2098,7 +2098,7 @@ var Ht = class e extends L {
 
           <div class="popup" ${z(this.#t)}>
             <cfpb-listbox .childData=${this.searchList} ${z(this.#e)}>
-            </cfpb-list>
+            </cfpb-listbox>
           </div>
         </div>
 
@@ -2114,8 +2114,8 @@ var Ht = class e extends L {
       </div>
 
       ${this.isOverMaxLength ? M`<cfpb-form-alert validation="error">
-              Searches are limited to ${this.maxlength} characters.
-            </cfpb-form-alert>` : null}`;
+            Searches are limited to ${this.maxlength} characters.
+          </cfpb-form-alert>` : null}`;
 	}
 	static init() {
 		Gt.init(), Ht.init(), pt.init(), window.customElements.get("cfpb-form-search") || window.customElements.define("cfpb-form-search", e);
@@ -2614,7 +2614,7 @@ var Ht = class e extends L {
           data-js-hook="behavior_flyout-menu_content"
           ${z(this.#o)}
         >
-          <cfpb-list
+          <cfpb-listbox
             tabindex=${this.#f ? "-1" : "0"}
             @item-click=${this.#b}
             ?multiple=${this.multiple}
@@ -2623,7 +2623,7 @@ var Ht = class e extends L {
             aria-label=${this.ariaLabelList ? this.ariaLabelList : "Choose an item…"}
             ${z(this.#l)}
           >
-          </cfpb-list>
+          </cfpb-listbox>
           <div class=${this.#f ? "no-results" : "u-hidden"}>
             No results found
           </div>

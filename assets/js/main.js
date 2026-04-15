@@ -1,6 +1,7 @@
 import { toggleAllDetails, toggleDetails } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
 import {
+  setSharedConfig,
   CfpbButton,
   CfpbExpandable,
   CfpbFileUpload,
@@ -8,6 +9,7 @@ import {
   CfpbFormChoice,
   CfpbFormSearch,
   CfpbFormSearchInput,
+  CfpbIcon,
   CfpbLabel,
   CfpbListbox,
   CfpbListboxItem,
@@ -48,6 +50,10 @@ anchors.remove(`
   #search-results h3
 `);
 
+setSharedConfig({
+  iconPath: '/design-system/admin/icons/',
+});
+
 CfpbButton.init();
 CfpbExpandable.init();
 CfpbFileUpload.init();
@@ -55,6 +61,7 @@ CfpbFormAlert.init();
 CfpbFormChoice.init();
 CfpbFormSearch.init();
 CfpbFormSearchInput.init();
+CfpbIcon.init();
 CfpbLabel.init();
 CfpbListbox.init();
 CfpbListboxItem.init();

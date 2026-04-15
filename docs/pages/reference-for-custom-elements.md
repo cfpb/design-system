@@ -57,6 +57,10 @@ variation_groups:
             <cfpb-icon name="error-round" color="red-60" />
             <cfpb-icon name="error-round" color="gold-40" />
             <cfpb-icon name="error-round" color="green-20" />
+
+            <br>
+
+            <cfpb-icon name="update" spin />
           </div>
       - variation_is_deprecated: false
         variation_name: Tagline

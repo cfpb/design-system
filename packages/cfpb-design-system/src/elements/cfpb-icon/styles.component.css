@@ -1,6 +1,18 @@
+/*
+The icons work like this:
+- Nest an `img` tag inside a `span` tag.
+- Load an SVG icon into the `img` tag.
+- Load the same SVG icon into a CSS `mask-image` in the `span` tag.
+- Set the `background-color` on the masked `span` to change the icon color.
+*/
 :host {
   --icon-mask-image-url: '';
 
+  /* 
+  The SVG height is scaled to match the rendered text height, 
+  calculated by dividing the rendered height by the assigned 
+  font size (19/16 = 1.1875em)
+  */
   height: 1.1875em;
   vertical-align: middle;
   display: inline-block;

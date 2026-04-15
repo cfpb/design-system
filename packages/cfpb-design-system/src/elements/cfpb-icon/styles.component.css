@@ -1,0 +1,22 @@
+:host {
+  --icon-mask-image-url: '';
+
+  height: 1.1875em;
+  vertical-align: middle;
+  display: inline-block;
+  color: var(--icon-color-default, inherit);
+
+  span {
+    line-height: 0.875; /* 14px */
+    mask-image: var(--icon-mask-image-url);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    display: inline-block;
+    background-color: currentcolor;
+  }
+
+  img {
+    height: 1.1875em;
+    opacity: 0;
+  }
+}

@@ -1,35 +1,13 @@
-@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon' as *;
 @use '../../utilities/functions' as *;
 
 :host {
   .a-form-alert {
-    // Theme
-    --form-alert-icon-color: var(--form-alert-icon-color-default);
-
     margin-top: rem-from-px(15px);
     display: flex;
     gap: rem-from-px(5px);
 
-    .cf-icon-svg {
-      color: var(--form-alert-icon-color);
-      flex: none;
-      margin-top: rem-from-px(1px);
-    }
-
     &__text {
       display: block;
-    }
-
-    &--success .cf-icon-svg {
-      --form-alert-icon-color: var(--form-alert-icon-color-success);
-    }
-
-    &--warning .cf-icon-svg {
-      --form-alert-icon-color: var(--form-alert-icon-color-warning);
-    }
-
-    &--error .cf-icon-svg {
-      --form-alert-icon-color: var(--form-alert-icon-color-error);
     }
   }
 }

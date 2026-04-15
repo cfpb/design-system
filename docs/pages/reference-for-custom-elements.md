@@ -7,6 +7,51 @@ description: These components are custom elements (web components).
 variation_groups:
   - variations:
       - variation_is_deprecated: false
+        variation_name: Icons
+        variation_description: Lazy-loaded icons that are included via a `name` property, and colorized via `color` keyword property.
+        variation_code_snippet_rendered: >-
+          <div>
+
+            <p>Color set via property on component:</p>
+
+            <cfpb-icon name="approved" />
+            <cfpb-icon name="approved" color="gray" />
+            <cfpb-icon name="approved" color="red" />
+            <cfpb-icon name="approved" color="gold" />
+            <cfpb-icon name="approved" color="green" />
+
+            <br>
+
+            <cfpb-icon name="error-round" />
+            <cfpb-icon name="error-round" color="gray-80" />
+            <cfpb-icon name="error-round" color="red-60" />
+            <cfpb-icon name="error-round" color="gold-40" />
+            <cfpb-icon name="error-round" color="green-20" />
+
+            <br>
+            <br>
+
+            <p>Color set by `color` style set on parent element:</p>
+
+            <span style="color:blue;"><cfpb-icon name="bank-round" /></span>
+          </div>
+        variation_code_snippet: >-
+          <div>
+            <cfpb-icon name="approved" />
+            <cfpb-icon name="approved" color="gray" />
+            <cfpb-icon name="approved" color="red" />
+            <cfpb-icon name="approved" color="gold" />
+            <cfpb-icon name="approved" color="green" />
+
+            <br>
+
+            <cfpb-icon name="error-round" />
+            <cfpb-icon name="error-round" color="gray-80" />
+            <cfpb-icon name="error-round" color="red-60" />
+            <cfpb-icon name="error-round" color="gold-40" />
+            <cfpb-icon name="error-round" color="green-20" />
+          </div>
+      - variation_is_deprecated: false
         variation_name: Tagline
         variation_description: A US gov branded tagline.
         variation_code_snippet_rendered: >-

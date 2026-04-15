@@ -1,7 +1,6 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import styles from './styles.component.scss?inline';
-import { leftIcon, rightIcon } from '../../components/cfpb-icons/icons-lib.js';
+import { CfpbIcon } from '../cfpb-icon';
 import { I18nService, MediaQueryService } from '../cfpb-utilities/';
 
 /**
@@ -153,7 +152,7 @@ export class CfpbPagination extends LitElement {
           ?disabled=${this.isAtMin}
           @click=${() => this.#goto(this.currentPage - 1)}
         >
-          ${unsafeSVG(leftIcon)} ${trans('next')}
+          <cfpb-icon name="left" color="white"></cfpb-icon> ${trans('next')}
         </cfpb-button>
 
         <form
@@ -193,13 +192,15 @@ export class CfpbPagination extends LitElement {
           ?disabled=${this.isAtMax}
           @click=${() => this.#goto(this.currentPage + 1)}
         >
-          ${trans('previous')} ${unsafeSVG(rightIcon)}
+          ${trans('previous')}
+          <cfpb-icon name="right" color="white"></cfpb-icon>
         </cfpb-button>
       </nav>
     `;
   }
 
   static init() {
+    CfpbIcon.init();
     I18nService.init();
 
     window.customElements.get('cfpb-pagination') ||

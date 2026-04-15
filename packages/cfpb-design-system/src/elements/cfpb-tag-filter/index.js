@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import styles from './styles.component.scss?inline';
 import { errorIcon as icon } from '../../components/cfpb-icons/icons-lib';
@@ -64,8 +65,6 @@ export class CfpbTagFilter extends LitElement {
   }
 
   static init() {
-    // Initialize parent file upload.
-    window.customElements.get('cfpb-tag-filter') ||
-      window.customElements.define('cfpb-tag-filter', CfpbTagFilter);
+    defineComponent('cfpb-tag-filter', CfpbTagFilter);
   }
 }

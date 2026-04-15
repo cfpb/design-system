@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
 
 /**
@@ -67,8 +68,6 @@ export class CfpbTagTopic extends LitElement {
   }
 
   static init() {
-    // Initialize parent file upload.
-    window.customElements.get('cfpb-tag-topic') ||
-      window.customElements.define('cfpb-tag-topic', CfpbTagTopic);
+    defineComponent('cfpb-tag-topic', CfpbTagTopic);
   }
 }

@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
@@ -207,9 +208,6 @@ export class CfpbListboxItem extends LitElement {
 
   static init() {
     CfpbCheckboxIcon.init();
-
-    if (!window.customElements.get('cfpb-listbox-item')) {
-      window.customElements.define('cfpb-listbox-item', CfpbListboxItem);
-    }
+    defineComponent('cfpb-listbox-item', CfpbListboxItem);
   }
 }

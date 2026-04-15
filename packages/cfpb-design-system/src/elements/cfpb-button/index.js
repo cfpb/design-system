@@ -1,4 +1,5 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './styles.component.scss?inline';
@@ -175,8 +176,6 @@ export class CfpbButton extends LitElement {
 
   static init() {
     CfpbIconText.init();
-
-    window.customElements.get('cfpb-button') ||
-      window.customElements.define('cfpb-button', CfpbButton);
+    defineComponent('cfpb-button', CfpbButton);
   }
 }

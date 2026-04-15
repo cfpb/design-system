@@ -1,6 +1,7 @@
 import { html, LitElement, css, unsafeCSS, nothing } from 'lit';
-import { ref, createRef } from 'lit/directives/ref.js';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
+import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbIcon } from '../cfpb-icon';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
 import { SearchService } from '../cfpb-utilities/search-service.js';
@@ -373,8 +374,6 @@ export class CfpbSelect extends LitElement {
     CfpbFormSearchInput.init();
     CfpbListbox.init();
     CfpbTagGroup.init();
-
-    window.customElements.get('cfpb-select') ||
-      window.customElements.define('cfpb-select', CfpbSelect);
+    defineComponent('cfpb-select', CfpbSelect);
   }
 }

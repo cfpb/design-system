@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './styles.component.scss?inline';
@@ -169,8 +170,6 @@ export class CfpbFormChoice extends LitElement {
 
   static init() {
     CfpbCheckboxIcon.init();
-
-    window.customElements.get('cfpb-form-choice') ||
-      window.customElements.define('cfpb-form-choice', CfpbFormChoice);
+    defineComponent('cfpb-form-choice', CfpbFormChoice);
   }
 }

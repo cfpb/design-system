@@ -39,3 +39,14 @@ export function setSharedConfig(userConfig) {
 export function getSharedConfig() {
   return config;
 }
+
+/**
+ * Check if a custom element is registered, and if not, define it on the globalThis (window).
+ * @param {string} tag - A custom element's tag as it appears in markup.
+ * @param {HTMLElement} constructor - A custom element constructor.
+ */
+export function defineComponent(tag, constructor) {
+  if (!globalThis.customElements.get(tag)) {
+    globalThis.customElements.define(tag, constructor);
+  }
+}

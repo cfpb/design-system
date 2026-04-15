@@ -1,4 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
@@ -53,7 +54,6 @@ export class CfpbLabel extends LitElement {
   }
 
   static init() {
-    window.customElements.get('cfpb-label') ||
-      window.customElements.define('cfpb-label', CfpbLabel);
+    defineComponent('cfpb-label', CfpbLabel);
   }
 }

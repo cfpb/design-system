@@ -9,6 +9,7 @@ import { CfpbFormAlert } from '../cfpb-form-alert';
 
 /**
  * @element cfpb-form-search
+ * @slot - Slot for list of autocomplete items.
  */
 export class CfpbFormSearch extends LitElement {
   static styles = css`

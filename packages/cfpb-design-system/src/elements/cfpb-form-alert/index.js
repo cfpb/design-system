@@ -4,8 +4,8 @@ import styles from './styles.component.scss?inline';
 import { CfpbIcon } from '../cfpb-icon';
 
 /**
- * @element cfpb-form-search
- * @slot - The label for the form input.
+ * @element cfpb-form-alert
+ * @slot - The text for the form alert.
  */
 export class CfpbFormAlert extends LitElement {
   static styles = css`

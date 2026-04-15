@@ -4,7 +4,7 @@ import { CfpbFlagUsa } from '../cfpb-flag-usa';
 import styles from './styles.component.scss?inline';
 
 /**
- * @element cfpb-icon-text
+ * @element cfpb-tagline
  * @slot - The main content for the tagline.
  */
 export class CfpbTagline extends LitElement {

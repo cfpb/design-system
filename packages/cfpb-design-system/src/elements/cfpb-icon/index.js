@@ -1,5 +1,8 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
-import { defineComponent , getSharedConfig } from '../cfpb-utilities/shared-config';
+import {
+  defineComponent,
+  getSharedConfig,
+} from '../cfpb-utilities/shared-config';
 import styles from './styles.component.css?inline';
 
 /**

@@ -35,7 +35,13 @@ export class CfpbIcon extends LitElement {
     }
 
     return html`<span style="--icon-mask-image-url:url('${iconPath}')">
-      <img src="${iconPath}" loading="lazy" decoding="async" />
+      <img
+        src="${iconPath}"
+        loading="lazy"
+        decoding="async"
+        alt=""
+        aria-hidden="true"
+      />
     </span>`;
   }
 

@@ -4917,8 +4917,7 @@ __metadata:
     autoprefixer: "npm:10.5.0"
     concurrently: "npm:9.2.1"
     cypress: "npm:15.13.1"
-    decap-cms-app: "npm:3.12.0"
-    decap-cms-widget-richtext: "npm:3.2.0"
+    decap-cms-app: "npm:3.12.1"
     eslint: "npm:10.2.0"
     eslint-config-prettier: "npm:10.1.8"
     eslint-import-resolver-typescript: "npm:4.4.4"
@@ -5927,9 +5926,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-app@npm:3.12.0":
-  version: 3.12.0
-  resolution: "decap-cms-app@npm:3.12.0"
+"decap-cms-app@npm:3.12.1":
+  version: 3.12.1
+  resolution: "decap-cms-app@npm:3.12.1"
   dependencies:
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
@@ -5967,6 +5966,7 @@ __metadata:
     decap-cms-widget-number: "npm:^3.2.0"
     decap-cms-widget-object: "npm:^3.5.0"
     decap-cms-widget-relation: "npm:^3.5.2"
+    decap-cms-widget-richtext: "npm:^3.2.0"
     decap-cms-widget-select: "npm:^3.3.0"
     decap-cms-widget-string: "npm:^3.2.0"
     decap-cms-widget-text: "npm:^3.2.0"
@@ -5978,7 +5978,7 @@ __metadata:
   peerDependencies:
     react: ^19.1.0
     react-dom: ^19.1.0
-  checksum: 10c0/a814e41ab6081194c222a6a574adf5f156b94b486dabb07d13ed12636e25e5f490b25bfac2b17674629f2b25f704ac3622b9716fbdb4763abb9d5b44c7e64d22
+  checksum: 10c0/09899f4df6a870902a73d3cf9781cf30c750be025e9b45544ec21e7edc7c0c05cb9f88ef0a3a696774ef99676c2a3f4dd432738bf74cdbbb879d293ff87bf694
   languageName: node
   linkType: hard
 
@@ -6569,7 +6569,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-widget-richtext@npm:3.2.0":
+"decap-cms-widget-richtext@npm:^3.2.0":
   version: 3.2.0
   resolution: "decap-cms-widget-richtext@npm:3.2.0"
   dependencies:

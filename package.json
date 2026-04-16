@@ -44,8 +44,7 @@
   "dependencies": {
     "@types/react": "19.2.14",
     "anchor-js": "5.0.0",
-    "decap-cms-app": "3.12.0",
-    "decap-cms-widget-richtext": "3.2.0",
+    "decap-cms-app": "3.12.1",
     "html-entities": "2.6.0",
     "liquidjs": "10.25.5",
     "lit": "3.3.2",

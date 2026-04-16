@@ -5,7 +5,8 @@
   --choice-border: var(--choice-border-default);
   --choice-border-hover: var(--choice-border-hover-default);
   --choice-bg: var(--choice-bg-default);
-  --choice-bg-selected: var(--choice-bg-selected-default);
+  --choice-mark: var(--choice-mark-default);
+  --choice-mark-disabled: var(--choice-mark-disabled-default);
 
   // Private variables.
   --choice-border-width-addendum: 0;
@@ -31,7 +32,6 @@
 
     --choice-border: var(--choice-border-disabled);
     --choice-bg: var(--choice-bg-disabled);
-    --choice-bg-selected: var(--choice-bg-selected-disabled);
   }
 
   :not(.checked) cfpb-icon {
@@ -39,7 +39,7 @@
   }
 
   .checked.disabled cfpb-icon {
-    color: var(--choice-border-disabled);
+    color: var(--choice-mark-disabled);
   }
 
   .cfpb-checkbox-icon:not(.disabled, .borderless).focus,

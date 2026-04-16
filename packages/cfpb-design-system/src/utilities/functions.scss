@@ -15,6 +15,10 @@ See https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@functio
   @return calc(($px / $base) * 1rem);
 }
 
+@function em-from-px($px, $base: $base-font-size-px) {
+  @return calc(($px / $base) * 1em);
+}
+
 @function unitless-from-px($px, $base: $base-font-size-px) {
   @return calc($px / $base);
 }

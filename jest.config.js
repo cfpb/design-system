@@ -11,8 +11,7 @@ export default {
   ],
   coverageDirectory: '<rootDir>/test/unit-test-coverage',
   moduleNameMapper: {
-    '\\.(svg)$': '<rootDir>/test/util/mocks/file-mock.js',
-    '\\.(scss)$': '<rootDir>/test/util/mocks/file-mock.js',
+    '\\.(svg|scss|css)$': '<rootDir>/test/util/mocks/file-mock.js',
   },
   testEnvironmentOptions: {
     url: 'http://localhost',

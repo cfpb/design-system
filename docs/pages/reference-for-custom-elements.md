@@ -33,7 +33,7 @@ variation_groups:
 
             <p>Color set by `color` style set on parent element:</p>
 
-            <span style="color:blue;"><cfpb-icon name="bank-round" /></span>
+            <span style="color:blue;"><cfpb-icon name="github-square" /></span>
 
             <br>
             <br>

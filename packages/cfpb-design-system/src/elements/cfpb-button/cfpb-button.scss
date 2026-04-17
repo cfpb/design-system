@@ -1,8 +1,6 @@
 @use 'sass:math';
 @use './vars' as *;
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/elements/cfpb-icon-text/styles.component'
-  as *;
 
 :host {
   //
@@ -168,51 +166,6 @@
       // Mobile only.
       @include respond-to-max($bp-xs-max) {
         width: 100%;
-      }
-    }
-
-    // Set either the text or icon as the last item in the button.
-    &:has(svg + span) {
-      span {
-        order: 3;
-      }
-    }
-
-    &:has(span + svg) {
-      svg {
-        order: 3;
-
-        // Prevent icon from shrinking when button wraps.
-        flex: none;
-      }
-    }
-
-    // Handle button with icon divider logic.
-    &:not(.a-btn--hide-icon):has(svg + span)::before,
-    &:not(.a-btn--hide-icon):has(span + svg)::before {
-      @include u-btn-divider;
-    }
-
-    // Handle different coloring in divider.
-    &--secondary:has(svg)::before {
-      border-color: var(--btn-secondary-divider) !important;
-    }
-
-    &--warning:has(svg)::before {
-      border-color: var(--btn-warning-divider) !important;
-    }
-
-    &--disabled:has(svg)::before,
-    &[disabled]:has(svg)::before,
-    &[aria-disabled='true']:has(svg)::before {
-      border-color: var(--btn-disabled-divider) !important;
-    }
-
-    // Hide the icon if the a-btn--hide-icon modifier is set.
-    // Useful for showing and hiding a loading icon, for example.
-    &--hide-icon {
-      svg {
-        display: none;
       }
     }
   }

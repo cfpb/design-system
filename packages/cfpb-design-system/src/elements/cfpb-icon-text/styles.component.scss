@@ -34,20 +34,15 @@
   }
 }
 
-.left-divider ::slotted(svg:first-of-type) {
+.left-divider cfpb-icon:first-of-type {
   order: -1;
 }
 
-.right-divider ::slotted(svg:last-of-type) {
+.right-divider cfpb-icon:last-of-type {
   order: 1;
 }
 
 :host([disabled]) {
   // !important is set so that disabled divider color overrides all other color.
   --icon-text-divider: var(--icon-text-divider-disabled) !important;
-}
-
-// Hide SVG if user calls hideIcon()
-:host([icon-hidden]) ::slotted(svg) {
-  display: none !important;
 }

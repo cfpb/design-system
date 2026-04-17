@@ -92,30 +92,30 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text>{% include icons/download.svg %} Icon on left</cfpb-icon-text>
+            <cfpb-icon-text iconleft="download">Icon on left</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text>Icon on right {% include icons/download.svg %}</cfpb-icon-text>
+            <cfpb-icon-text iconright="download">Icon on right</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text>{% include icons/bank.svg %} Icon on both sides {% include icons/download.svg %}</cfpb-icon-text>
+            <cfpb-icon-text iconleft="bank" iconright="download">Icon on both sides</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text disabled>Disabled state {% include icons/download.svg %}</cfpb-icon-text>
+            <cfpb-icon-text disabled iconright="download">Disabled state</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text style="--icon-text-divider: var(--red-60)">{% include icons/warning.svg %} Warning state</cfpb-icon-text>
+            <cfpb-icon-text style="--icon-text-divider: var(--red-60)" iconleft="warning">Warning state</cfpb-icon-text>
 
             <br><hr><br>
 
             <p>
             The following section allows interacting with the API.
             </p>
-            <p><cfpb-icon-text id="icon-text-example">{% include icons/bank.svg %} Example icon-text component {% include icons/download.svg %}</cfpb-icon-text></p>
+            <p><cfpb-icon-text id="icon-text-example" iconleft="bank" iconright="download">Example icon-text component</cfpb-icon-text></p>
             <p>
 
             <input type="checkbox" id="icon-text-example-warning" />
@@ -131,6 +131,11 @@ variation_groups:
             <input type="checkbox" id="icon-text-example-icon-hidden" />
             <label for="icon-text-example-icon-hidden">Hide icon</label>
 
+            </p><p>
+
+            <input type="checkbox" id="icon-text-example-icon-animate" />
+            <label for="icon-text-example-icon-animate">Animate icon</label>
+
             </p>
             <script>
             (function(){
@@ -140,6 +145,8 @@ variation_groups:
             const disBtn = document.querySelector('#icon-text-example-disabled');
 
             const hiddenBtn = document.querySelector('#icon-text-example-icon-hidden');
+
+            const animateBtn = document.querySelector('#icon-text-example-icon-animate');
 
             warBtn.addEventListener('click', () => {
               if (iconTextEx.hasAttribute('style')) {
@@ -154,17 +161,25 @@ variation_groups:
             });
 
             hiddenBtn.addEventListener('click', () => {
-              iconTextEx.iconHidden = !iconTextEx.iconHidden;
+              if (iconTextEx.iconLeft) iconTextEx.iconLeft = null;
+              else iconTextEx.iconLeft = 'bank';
+              if (iconTextEx.iconRight) iconTextEx.iconRight = null;
+              else iconTextEx.iconRight = 'download';
+            });
+
+            animateBtn.addEventListener('click', () => {
+              iconTextEx.isIconLeftSpin = !iconTextEx.isIconLeftSpin;
+              iconTextEx.isIconRightSpin = !iconTextEx.isIconRightSpin;
             });
             })();
             </script>
           </div>
         variation_code_snippet: >-
           <cfpb-icon-text>No icon</cfpb-icon-text>
-          <cfpb-icon-text>{% include icons/download.svg %} Icon on left</cfpb-icon-text>
-          <cfpb-icon-text>Icon on right {% include icons/download.svg %}</cfpb-icon-text>
-          <cfpb-icon-text>{% include icons/bank.svg %} Icon on both sides {% include icons/download.svg %}</cfpb-icon-text>
-          <cfpb-icon-text disabled>Disabled state {% include icons/download.svg %}</cfpb-icon-text>
+          <cfpb-icon-text iconleft="download">Icon on left</cfpb-icon-text>
+          <cfpb-icon-text iconright="download">Icon on right</cfpb-icon-text>
+          <cfpb-icon-text iconleft="bank" iconright="download">Icon on both sides</cfpb-icon-text>
+          <cfpb-icon-text disabled iconright="download">Disabled state</cfpb-icon-text>
       - variation_is_deprecated: false
         variation_name: Button
         variation_description: A basic button in web component syntax.
@@ -186,11 +201,11 @@ variation_groups:
 
             <br>
 
-            <cfpb-button>This is a button with an icon {% include icons/download.svg %}</cfpb-button>
+            <cfpb-button iconright="download">This is a button with an icon</cfpb-button>
 
             <br>
 
-            <cfpb-button disabled>This is a disabled button with an icon {% include icons/download.svg %}</cfpb-button>
+            <cfpb-button disabled iconright="download">This is a disabled button with an icon</cfpb-button>
 
             <br>
             <hr>
@@ -198,7 +213,7 @@ variation_groups:
             <p>
             The following section allows interacting with the API.
             </p>
-            <p><cfpb-button id="btn-example">{% include icons/updating.svg %} Example button</cfpb-button></p>
+            <p><cfpb-button id="btn-example" iconleft="update" iconleftspin>Example button</cfpb-button></p>
 
             <p>
             <label for="btn-example-variant">Button type:</label>
@@ -271,8 +286,8 @@ variation_groups:
             });
 
             hidBtn.addEventListener('click',()=>{
-              if (hidBtn.checked) btnEx.hideIcon();
-              else btnEx.showIcon();
+              if (hidBtn.checked) btnEx.iconLeft = null;
+              else btnEx.iconLeft = 'update';
             });
 
             linkBtn.addEventListener('click',()=>{

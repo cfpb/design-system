@@ -152,8 +152,9 @@ export class CfpbPagination extends LitElement {
           ?flush-right=${!this.#isMobile}
           ?disabled=${this.isAtMin}
           @click=${() => this.#goto(this.currentPage - 1)}
+          iconleft="left"
         >
-          <cfpb-icon name="left" color="white"></cfpb-icon> ${trans('next')}
+          ${trans('next')}
         </cfpb-button>
 
         <form
@@ -192,9 +193,9 @@ export class CfpbPagination extends LitElement {
           ?flush-left=${!this.#isMobile}
           ?disabled=${this.isAtMax}
           @click=${() => this.#goto(this.currentPage + 1)}
+          iconright="right"
         >
           ${trans('previous')}
-          <cfpb-icon name="right" color="white"></cfpb-icon>
         </cfpb-button>
       </nav>
     `;

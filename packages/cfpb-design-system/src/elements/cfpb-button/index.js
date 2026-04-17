@@ -27,6 +27,10 @@ export class CfpbButton extends LitElement {
    * @property {boolean} disabled - Whether the button is disabled or not.
    * @property {string} variant
    *   The button variant: primary, secondary, or warning.
+   * @property {string} iconLeft - The name of the icon on the left.
+   * @property {string} iconRight - The name of the icon on the right.
+   * @property {string} isIconLeftSpin - Whether the left icon spins or not.
+   * @property {string} isIconRightSpin - Whether the right icon spins or not.
    * @property {boolean} fullOnMobile - Whether to be width 100% on mobile.
    * @property {boolean} flushLeft - Whether button is not rounded on left.
    * @property {boolean} flushRight - Whether button is not rounded on right.
@@ -38,6 +42,10 @@ export class CfpbButton extends LitElement {
     href: { type: String },
     disabled: { type: Boolean, reflect: true },
     variant: { type: String },
+    iconLeft: { type: String },
+    iconRight: { type: String },
+    isIconLeftSpin: { type: Boolean, attribute: 'iconleftspin' },
+    isIconRightSpin: { type: Boolean, attribute: 'iconrightspin' },
     fullOnMobile: {
       type: Boolean,
       attribute: 'full-on-mobile',
@@ -70,6 +78,8 @@ export class CfpbButton extends LitElement {
     this.disabled = false;
     this.fullOnMobile = false;
     this.styleAsLink = false;
+    this.iconLeftSpin = false;
+    this.iconRightSpin = false;
   }
 
   /**
@@ -138,6 +148,10 @@ export class CfpbButton extends LitElement {
         ${ref(this.#iconTextDom)}
         ?disabled=${this.disabled}
         style="--icon-text-divider: var(${this.dividerColorVar})"
+        iconleft=${this.iconLeft}
+        iconright=${this.iconRight}
+        ?iconleftspin=${this.isIconLeftSpin}
+        ?iconrightspin=${this.isIconRightSpin}
       >
         <slot></slot>
       </cfpb-icon-text>

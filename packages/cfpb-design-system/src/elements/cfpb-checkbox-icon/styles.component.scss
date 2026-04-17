@@ -1,30 +1,25 @@
-@use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/utilities' as *;
-@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icons-lib' as *;
+@use '../../utilities/functions' as *;
 
 :host {
   // Theme variables.
   --choice-border: var(--choice-border-default);
   --choice-border-hover: var(--choice-border-hover-default);
   --choice-bg: var(--choice-bg-default);
-  --choice-bg-selected: var(--choice-bg-selected-default);
+  --choice-mark: var(--choice-mark-default);
+  --choice-mark-disabled: var(--choice-mark-disabled-default);
 
   // Private variables.
   --choice-border-width-addendum: 0;
 
-  .cfpb-checkbox-icon::before {
-    display: inline-block;
-    grid-row-start: 1;
-    grid-row-end: 3;
+  .cfpb-checkbox-icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     border: 1px solid var(--choice-border);
     outline: var(--choice-border-width-addendum) solid var(--choice-border);
-    height: math.div(18px, $base-font-size-px) + em;
-    width: math.div(18px, $base-font-size-px) + em;
-    margin-right: 10px;
+    height: em-from-px(18px);
+    width: em-from-px(18px);
     background-color: var(--choice-bg);
-    content: '';
-    vertical-align: top;
 
     // Offset so that the checkbox/radio fits within focused area.
     position: relative;
@@ -32,29 +27,25 @@
     left: 1px;
   }
 
-  .checked::before {
-    background-image: $cfpb-background-icon-svg-approved;
-    background-size: auto $cf-icon-height;
-    background-repeat: no-repeat;
-    background-position: center 0;
-  }
-
-  .disabled::before {
+  .disabled {
     cursor: not-allowed;
 
     --choice-border: var(--choice-border-disabled);
     --choice-bg: var(--choice-bg-disabled);
-    --choice-bg-selected: var(--choice-bg-selected-disabled);
   }
 
-  .checked.disabled::before {
-    background-image: $cfpb-background-icon-svg-approved-gray;
+  :not(.checked) cfpb-icon {
+    display: none;
   }
 
-  .cfpb-checkbox-icon:not(.disabled, .borderless).focus::before,
-  .cfpb-checkbox-icon:not(.disabled, .borderless):focus::before,
-  .cfpb-checkbox-icon:not(.disabled, .borderless).hover::before,
-  .cfpb-checkbox-icon:not(.disabled, .borderless):hover::before {
+  .checked.disabled cfpb-icon {
+    color: var(--choice-mark-disabled);
+  }
+
+  .cfpb-checkbox-icon:not(.disabled, .borderless).focus,
+  .cfpb-checkbox-icon:not(.disabled, .borderless):focus,
+  .cfpb-checkbox-icon:not(.disabled, .borderless).hover,
+  .cfpb-checkbox-icon:not(.disabled, .borderless):hover {
     cursor: pointer;
     border-color: var(--choice-border-hover);
     box-shadow: 0 0 0 1px var(--choice-border-hover);
@@ -79,7 +70,7 @@
     --choice-border: var(--choice-border-success);
   }
 
-  .borderless::before {
+  .borderless {
     border-color: transparent;
     outline-color: transparent;
     background-color: transparent;

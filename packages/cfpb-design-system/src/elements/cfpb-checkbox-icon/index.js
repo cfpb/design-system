@@ -1,6 +1,7 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { defineComponent } from '../cfpb-utilities/shared-config';
 import styles from './styles.component.scss?inline';
+import { CfpbIcon } from '../cfpb-icon';
 
 // The validation states are error, warning, or success.
 const VALID_VALIDATION = ['error', 'warning', 'success'];
@@ -90,15 +91,14 @@ export class CfpbCheckboxIcon extends LitElement {
 
   render() {
     return html`
-      <div
-        class=${this.#computeClassString()}
-        ?disabled=${this.disabled}
-        aria-hidden="true"
-      ></div>
+      <span class=${this.#computeClassString()} ?disabled=${this.disabled}>
+        <cfpb-icon name="approved"></cfpb-icon>
+      </span>
     `;
   }
 
   static init() {
+    CfpbIcon.init();
     defineComponent('cfpb-checkbox-icon', CfpbCheckboxIcon);
   }
 }

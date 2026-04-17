@@ -355,7 +355,6 @@ variation_groups:
             <label for="checkbox-icon-example-disabled">Disabled</label>
 
             </p>
-
             <script>
             (function(){
             const iconEx = document.querySelector('#checkbox-icon-example');

@@ -2938,8 +2938,9 @@ var Jt = Be(qt), Yt = ":root{--beige:#bea96f;--beige-30:#f0e8d8;--beige-60:#d8c8
           ?flush-right=${!this.#t}
           ?disabled=${this.isAtMin}
           @click=${() => this.#s(this.currentPage - 1)}
+          iconleft="left"
         >
-          <cfpb-icon name="left" color="white"></cfpb-icon> ${e("next")}
+          ${e("next")}
         </cfpb-button>
 
         <form
@@ -2978,9 +2979,9 @@ var Jt = Be(qt), Yt = ":root{--beige:#bea96f;--beige-30:#f0e8d8;--beige-60:#d8c8
           ?flush-left=${!this.#t}
           ?disabled=${this.isAtMax}
           @click=${() => this.#s(this.currentPage + 1)}
+          iconright="right"
         >
           ${e("previous")}
-          <cfpb-icon name="right" color="white"></cfpb-icon>
         </cfpb-button>
       </nav>
     `;

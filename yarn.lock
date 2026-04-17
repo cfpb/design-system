@@ -4916,8 +4916,8 @@ __metadata:
     anchor-js: "npm:5.0.0"
     autoprefixer: "npm:10.5.0"
     concurrently: "npm:9.2.1"
-    cypress: "npm:15.13.1"
-    decap-cms-app: "npm:3.12.1"
+    cypress: "npm:15.14.0"
+    decap-cms-app: "npm:3.12.2"
     eslint: "npm:10.2.0"
     eslint-config-prettier: "npm:10.1.8"
     eslint-import-resolver-typescript: "npm:4.4.4"
@@ -4938,7 +4938,7 @@ __metadata:
     jest-environment-jsdom: "npm:30.3.0"
     liquidjs: "npm:10.25.5"
     lit: "npm:3.3.2"
-    marked: "npm:18.0.0"
+    marked: "npm:18.0.1"
     minisearch: "npm:7.2.0"
     postcss: "npm:8.5.10"
     prettier: "npm:3.8.3"
@@ -5744,9 +5744,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:15.13.1":
-  version: 15.13.1
-  resolution: "cypress@npm:15.13.1"
+"cypress@npm:15.14.0":
+  version: 15.14.0
+  resolution: "cypress@npm:15.14.0"
   dependencies:
     "@cypress/request": "npm:^3.0.10"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -5793,7 +5793,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10c0/eecc539d15af2f5bfc7ab9cb5502fc1e2f9f71571dbcb392b5d99109786c63548dd4a0aa20c512beb61a0a76dee10ea6c421a79026e96fb3a9dddd59c319541d
+  checksum: 10c0/117301c5553a2da07bcafdc7c9faaf7821610f8bbac5c449ddd14f6ce05029d8d3028e8c598d356f4b2f6c54deb8dcf4034a78a939b8b30f9039800c402cbaff
   languageName: node
   linkType: hard
 
@@ -5926,9 +5926,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-app@npm:3.12.1":
-  version: 3.12.1
-  resolution: "decap-cms-app@npm:3.12.1"
+"decap-cms-app@npm:3.12.2":
+  version: 3.12.2
+  resolution: "decap-cms-app@npm:3.12.2"
   dependencies:
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
@@ -5946,7 +5946,7 @@ __metadata:
     decap-cms-backend-gitlab: "npm:^3.4.0"
     decap-cms-backend-proxy: "npm:^3.3.0"
     decap-cms-backend-test: "npm:^3.2.1"
-    decap-cms-core: "npm:^3.12.0"
+    decap-cms-core: "npm:^3.13.0"
     decap-cms-editor-component-image: "npm:^3.3.0"
     decap-cms-lib-auth: "npm:^3.0.6"
     decap-cms-lib-util: "npm:^3.5.0"
@@ -5966,7 +5966,7 @@ __metadata:
     decap-cms-widget-number: "npm:^3.2.0"
     decap-cms-widget-object: "npm:^3.5.0"
     decap-cms-widget-relation: "npm:^3.5.2"
-    decap-cms-widget-richtext: "npm:^3.2.0"
+    decap-cms-widget-richtext: "npm:^3.2.1"
     decap-cms-widget-select: "npm:^3.3.0"
     decap-cms-widget-string: "npm:^3.2.0"
     decap-cms-widget-text: "npm:^3.2.0"
@@ -5978,7 +5978,7 @@ __metadata:
   peerDependencies:
     react: ^19.1.0
     react-dom: ^19.1.0
-  checksum: 10c0/09899f4df6a870902a73d3cf9781cf30c750be025e9b45544ec21e7edc7c0c05cb9f88ef0a3a696774ef99676c2a3f4dd432738bf74cdbbb879d293ff87bf694
+  checksum: 10c0/ae9c437dcc2cc111dc96761eaddd4d1caefba31132b1e622942d4db43ecf45b746f57dcd11d900cb534b6e9a2c0d4e8dd06a458d45e13fd2147da8edc77f02ae
   languageName: node
   linkType: hard
 
@@ -6184,9 +6184,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-core@npm:^3.12.0":
-  version: 3.12.0
-  resolution: "decap-cms-core@npm:3.12.0"
+"decap-cms-core@npm:^3.13.0":
+  version: 3.13.0
+  resolution: "decap-cms-core@npm:3.13.0"
   dependencies:
     "@iarna/toml": "npm:2.2.5"
     "@reduxjs/toolkit": "npm:^1.9.1"
@@ -6250,7 +6250,7 @@ __metadata:
     react: ^19.1.0
     react-dom: ^19.1.0
     react-immutable-proptypes: ^2.1.0
-  checksum: 10c0/8a4a0ada1c79f819d0e8b9b44419a029a7065d9ac5ddc60e99aa8d89624f2e8617b97f8a362488ebba2b97a586649cf110b13d761d47c4a244ef0f6b5178b123
+  checksum: 10c0/8d76bba20c59cf112c0e60990517ad5e392639c15f393b97c50d47e0555627ba9c345095a5c807c7be844320dfdb1e3e729cff0f7af392d66a5517499dfcd902
   languageName: node
   linkType: hard
 
@@ -6569,9 +6569,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-widget-richtext@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "decap-cms-widget-richtext@npm:3.2.0"
+"decap-cms-widget-richtext@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "decap-cms-widget-richtext@npm:3.2.1"
   dependencies:
     "@platejs/basic-nodes": "npm:^49.0.0"
     "@platejs/link": "npm:^50.2.7"
@@ -6580,6 +6580,7 @@ __metadata:
     class-variance-authority: "npm:^0.7.0"
     dompurify: "npm:^3.4.0"
     lucide-react: "npm:^0.331.0"
+    mdast-util-to-string: "npm:^2.0.0"
     platejs: "npm:^49.2.21"
     rehype-parse: "npm:^6.0.0"
     rehype-remark: "npm:^8.0.0"
@@ -6601,7 +6602,7 @@ __metadata:
     react: ^19.1.0
     react-dom: ^19.1.0
     react-immutable-proptypes: ^2.1.0
-  checksum: 10c0/085b7c0a60ecff3ba72537443799e7121d6457fa4ca0887176bae12eb905a2fb8a5956a42d5a1a46b48e3804bb1425abf455680f3a333ebafa1dd515ae3f8e75
+  checksum: 10c0/2548af594e65ce41688440ea38500805d3113a8705cdd7645b8c74e47b049281495b58265582f3b2c1ecf5184e68b24eca79412b21de2102ef8e3f86af4e169c
   languageName: node
   linkType: hard
 
@@ -11701,12 +11702,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:18.0.0":
-  version: 18.0.0
-  resolution: "marked@npm:18.0.0"
+"marked@npm:18.0.1":
+  version: 18.0.1
+  resolution: "marked@npm:18.0.1"
   bin:
     marked: bin/marked.js
-  checksum: 10c0/4a2ce60b9fd96a3092405e10c616a5cdf5375d031da1d44d3aa9d790971851fbca20628efd28db28cc91e84e18b9f5b95ec1e6fd1124a85d94abb1b6f6b409ae
+  checksum: 10c0/30ddea15ed8c9d0b294a30427052aeaf32897fed5aa7b86f78c4d80d17ceff4e4f753b057db4b10675908e7ee8989b74ef492b22aee4318484fad341d2eae95b
   languageName: node
   linkType: hard
 

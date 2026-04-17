@@ -2,7 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.3.1](https://github.com/cfpb/design-system/compare/v5.3.0..v5.3.1) - April 15, 2026
+## [5.3.2](https://github.com/cfpb/design-system/compare/v5.3.1..v5.3.2) - April 17, 2026
+
+### PRs in this release
+
+- PR #[2632](https://github.com/cfpb/design-system/pull/2632): Make cfpb-icons always presentational - Ans
+- PR #[2633](https://github.com/cfpb/design-system/pull/2633): Migrate cfpb-checkbox-icon to use cfpb-icon - Ans
+- PR #[2636](https://github.com/cfpb/design-system/pull/2636): Migrate cfpb-icon-text and cfpb-button to use cfpb-icon - Ans
+- PR #[2638](https://github.com/cfpb/design-system/pull/2638): Fix outdated stylesheet name - Ans
+
+### General
+
+- Make cfpb-icons always presentational - ([daa75e0](https://github.com/cfpb/design-system/commit/daa75e0a4546827b002e73a8f46197b430ff9925)) - Ans
+- Migrate cfpb-checkbox-icon to use cfpb-icon - ([750f1b4](https://github.com/cfpb/design-system/commit/750f1b4cee104c19596490ef3dfdc1786659acb8)) - Ans
+- Adjust checkmark styles - ([8c5c290](https://github.com/cfpb/design-system/commit/8c5c290c4f54732d7a442fc496d9d1fca556a490)) - Ans
+- Update to abstracts/vars.json and generated .css
+
+Generated css styles got reshuffled due to name sorting - ([b2acf09](https://github.com/cfpb/design-system/commit/b2acf09b5043e93f7150fd687238830e74cd5bfd)) - itsmedavep
+- Migrate cfpb-icon-text to use cfpb-icon - ([9ae2ee6](https://github.com/cfpb/design-system/commit/9ae2ee6e231c34d0c0c27b50f12c99067ae20c60)) - Ans
+- Migrate cfpb-pagination to use cfpb-button icon update - ([063f377](https://github.com/cfpb/design-system/commit/063f3772a1a105f3148fa852bdf76e0886bcbd73)) - Ans
+- Fix outdated stylesheet name - ([c165201](https://github.com/cfpb/design-system/commit/c165201f1da69b39c870da7801f6abf25ffa25f1)) - Ans
+
+## [5.3.1](https://github.com/cfpb/design-system/compare/v5.3.0..vv5.3.1) - April 15, 2026
 
 ### PRs in this release
 

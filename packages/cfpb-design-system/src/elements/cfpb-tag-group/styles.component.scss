@@ -2,6 +2,8 @@
 @use '../../utilities/functions' as *;
 
 :host {
+  container-type: inline-size;
+
   // Tag group sets the spacing between tags.
   ul {
     // Remove list ul bullets styles.
@@ -14,7 +16,7 @@
     }
 
     // Tablet and above.
-    @include respond-to-min($bp-sm-min) {
+    @container (min-width: #{$bp-sm-min}) {
       display: flex;
       gap: rem-from-px(15px);
       flex-wrap: wrap;

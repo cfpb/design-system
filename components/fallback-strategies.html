@@ -361,6 +361,7 @@
 <p>Authors should decide on a component-by-component basis which of the first two fallback states they want to support, based on things like the environment the component appears in (React already assumes JS support), and the expected browser metrics of the visitors that the application is aiming to support.</p>
 
 <h2 id="the-basic-web-component---no-fallback">The basic web component - no fallback</h2>
+
 <p>At its most basic, a web component is a custom HTML opening and closing tag, like:</p>
 
 <p><code class="language-plaintext highlighter-rouge">&lt;my-custom-btn&gt;&lt;/my-custom-btn&gt;</code></p>
@@ -369,12 +370,15 @@
 In modern browsers with web component support, this component will render whatever appears in the shadow DOM. In legacy browsers or with JavaScript disabled, this will be completely blank on the page.</p>
 
 <h2 id="slotted-content">Slotted content</h2>
+
 <p>A web component can wrap author-supplied content, which is exposed through a <code class="language-plaintext highlighter-rouge">&lt;slot&gt;</code> element in the component’s definition file. Slotted content is added between the opening and closing tags:</p>
 
 <p><code class="language-plaintext highlighter-rouge">&lt;my-custom-btn&gt;Click this fancy button!&lt;/my-custom-btn&gt;</code></p>
 
 <p>In modern browsers with web component support, this component will incorporate the slotted content within the shadow DOM content and render the component. In legacy browsers, or with JavaScript disabled, the slotted content will appear on the page without any other content from the shadow DOM, thus functioning as a textual fallback.</p>
+
 <h2 id="dealing-with-the-dreaded-flash-of-unstyled-content-fouc">Dealing with the dreaded Flash Of Unstyled Content (FOUC)</h2>
+
 <p>One potential problem with slotted content is that it may briefly appear on the page before the web component markup is initialized, leading to an unsightly flash of unstyled content (FOUC). This may be acceptable if the slotted content is roughly the same dimensions as the initialized component. However, if the slotted content spills outside of the component boundaries (e.g. through absolute positioning), this might cause an unsightly flash. In this situation it may be best to add a standard <code class="language-plaintext highlighter-rouge">hidden</code> attribute to the slotted content, and then deal with its visibility within the component CSS/JS.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;my-fancy-list&gt;</span>
@@ -386,7 +390,9 @@ In modern browsers with web component support, this component will render whatev
 </code></pre></div></div>
 
 <p>However, note that this’ll negate using the slotted content as a fallback.</p>
+
 <h3 id="adding-a-loading-skeleton">Adding a loading skeleton</h3>
+
 <p>A “loading skeleton” is a wireframe-esque box that loads in before a web component has been initialized.  This can be used to avoid a FOUC and corresponding layout shift when the component is rendered. To add a loading skeleton for a particular component, follow these steps:</p>
 
 <ol>
@@ -397,6 +403,7 @@ In modern browsers with web component support, this component will render whatev
 </ol>
 
 <h2 id="fallback-content">Fallback content</h2>
+
 <p>While slotted content may often suffice as a fallback, for more complex components, slotted content may be too simple as an adequate replacement. We could add more markup and structure to the slotted content, but that creates clutter that needs to be handled within the shadow DOM. Because of this, slotted content is likely best for simple text strings only.</p>
 
 <p>A better approach for complex fallback content may be to provide content in a <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> element within the slotted content, and then enable or disable the slotted content based on the state of web component and JavaScript support. 
@@ -455,7 +462,7 @@ For example, the following structure include a fallback written in a <code class
 <p>In the case where JavaScript is available—but web component APIs are not (as is the case in legacy browsers)—we can globally check if web components are supported, and if not, we can load a polyfill, or we could just let it fall back to the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content. <em>However</em>, the problem here is that if JS is enabled, but web components are not supported, then the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content will not show! Therefore, we need to use JavaScript to turn the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag inside the web component into <code class="language-plaintext highlighter-rouge">&lt;div class="fallback"&gt;</code>.</p>
 
 <blockquote>
-  <p>A JS utility for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.js"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>. It can be included in a project’s JS bundle so that it is available for use globally.</p>
+  <p>A JS utility for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.js"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.js</code></a>. It can be included in a project’s JS bundle so that it is available for use globally.</p>
 </blockquote>
 
 <p>Changing the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag to a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> would now show the content inside the former <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code>, <em>except</em> non-noscript tags are hidden via the CSS! So, lastly, we need to add more CSS to show the div with the <code class="language-plaintext highlighter-rouge">.fallback</code> class:</p>
@@ -468,6 +475,7 @@ For example, the following structure include a fallback written in a <code class
 </blockquote>
 
 <h3 id="js-enabled-web-components-are-supported">JS enabled, web components are supported</h3>
+
 <p>If JS is enabled, the web component uses the author-supplied slotted content to render, and the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content is hidden and it is not swapped with <code class="language-plaintext highlighter-rouge">&lt;div class="fallback"&gt;</code>. However, because of the existing CSS that hides everything but the <code class="language-plaintext highlighter-rouge">noscript</code> content, that means everything will be hidden! So in this case, we add another CSS rule:</p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span><span class="nt">hasfallback</span><span class="o">]</span><span class="nd">:defined</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">noscript</span><span class="o">)</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span> <span class="p">}</span> 
@@ -476,6 +484,40 @@ For example, the following structure include a fallback written in a <code class
 <blockquote>
   <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
 </blockquote>
+
+<h2 id="summary">Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>JS enabled</th>
+      <th>JS disabled</th>
+      <th>Handle FOUC</th>
+      <th>Handle layout shift</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>WC APIs supported</strong></td>
+      <td>No fallback needed. Do not provide <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> or <code class="language-plaintext highlighter-rouge">hasfallback</code> attribute. E.g. WC is used in a React app.</td>
+      <td>Provide <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content and <code class="language-plaintext highlighter-rouge">hasfallback</code> attribute on the WC tag and include <code class="language-plaintext highlighter-rouge">wc-fallback.css</code> in the CSS bundle.</td>
+      <td>Consider adding <code class="language-plaintext highlighter-rouge">hidden</code> attribute to slotted content, if content exceeds component bounds.</td>
+      <td>Provide <code class="language-plaintext highlighter-rouge">skeleton.css</code> file for the component that targets <code class="language-plaintext highlighter-rouge">:defined</code> selector.</td>
+    </tr>
+    <tr>
+      <td><strong>WC APIs unsupported</strong></td>
+      <td>Use a WC API polyfill, OR provide <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag in slotted content and add <code class="language-plaintext highlighter-rouge">hasfallback</code> attribute to WC tag, and include <code class="language-plaintext highlighter-rouge">wc-fallback.js</code> in the JS bundle.</td>
+      <td>Provide <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content and <code class="language-plaintext highlighter-rouge">hasfallback</code> attribute on the WC tag and include <code class="language-plaintext highlighter-rouge">wc-fallback.css</code> in the CSS bundle.</td>
+      <td>Style fallback content as needed.</td>
+      <td>Style fallback content as needed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>JS = JavaScript</strong></p>
+
+<p><strong>WC = Web Component APIs</strong></p>
 
     </section>
     
@@ -517,8 +559,8 @@ For example, the following structure include a fallback written in a <code class
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/fallback-strategies.md">
-                            <time datetime="2026-04-21 10:19:51 -0400">
-                                10:19:51 AM Apr 21, 2026
+                            <time datetime="2026-04-21 13:58:52 -0400">
+                                 1:58:52 PM Apr 21, 2026
                             </time>
                         </a>
                     </section>

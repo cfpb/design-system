@@ -1,0 +1,23 @@
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+
+#search-results {
+  list-style: none;
+  margin-top: 15px;
+}
+
+#search-results li {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dotted var(--gray-20);
+}
+
+#search-results li:first-child {
+  border-top: none;
+}
+
+// Tablet and above.
+@include respond-to-min($bp-sm-min) {
+  #search-results {
+    padding-left: 0;
+  }
+}

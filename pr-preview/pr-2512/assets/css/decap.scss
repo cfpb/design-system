@@ -1,0 +1,28 @@
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+
+.o-editor {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  z-index: 100;
+
+  &#toggle-details {
+    bottom: 105px;
+  }
+
+  // Hide the admin buttons when printing
+  @media print {
+    display: none;
+  }
+}
+
+// Don't show the toggle code button in the Decap CMS preview pane
+.frame-content #toggle-code {
+  display: none;
+}
+
+// By default the preview pane doesn't have any padding.
+.frame-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}

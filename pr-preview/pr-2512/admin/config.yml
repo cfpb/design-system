@@ -1,0 +1,283 @@
+backend:
+  name: github
+  repo: cfpb/design-system
+  branch: main
+  auth_scope: public_repo
+  squash_merges: true
+  commit_messages:
+    create: Create "{{slug}}" page
+    update: Update "{{slug}}" page
+    delete: Delete "{{slug}}" page
+
+# When running locally, try to use a local proxy server instead of GitHub, if
+# one is running (yarn serve-decap, which uses decap-server).
+local_backend: true
+
+site_url: https://cfpb.github.io/design-system
+logo_url: https://cfpb.github.io/design-system/assets/img/cfpb-cms-logo.png
+publish_mode: editorial_workflow
+media_folder: docs/images/uploads
+public_folder: /design-system/images/uploads
+pull_request_url: https://github.com/cfpb/design-system/pulls
+
+collections:
+  - label: 'Navigation'
+    name: 'navigation'
+    files:
+      - label: 'Side navigation'
+        name: 'side-navigation'
+        file: 'docs/_data/side-navigation.yml'
+        fields:
+          - label: 'First-level nav headings'
+            name: first-level
+            widget: list
+            fields:
+              - label: 'Heading'
+                name: heading
+                widget: 'select'
+                required: true
+                options:
+                  - label: 'Foundation'
+                    value: 'Foundation'
+                  - label: 'Components'
+                    value: 'Components'
+                  - label: 'Patterns'
+                    value: 'Patterns'
+                  - label: 'Pages'
+                    value: 'Pages'
+                  - label: 'Development'
+                    value: 'Development'
+                  - label: 'Guidelines'
+                    value: 'Guidelines'
+              - label: 'Second-level nav headings'
+                name: second-level
+                widget: list
+                required: false
+                fields:
+                  - label: 'Heading'
+                    name: heading
+                    widget: string
+                  - label: 'Second-level nav items'
+                    name: nav-items
+                    widget: list
+                    fields:
+                      - label: 'Design System page'
+                        name: 'page'
+                        widget: 'relation'
+                        options_length: 999
+                        collection: 'pages'
+                        search_fields: ['title']
+                        value_field: 'title'
+                        display_fields: ['title']
+                  - label: 'Third-level nav headings'
+                    name: third-level
+                    widget: list
+                    required: false
+                    fields:
+                      - label: 'Heading'
+                        name: heading
+                        widget: string
+                      - label: 'Third-level nav items'
+                        name: nav-items
+                        widget: list
+                        fields:
+                          - label: 'Design System page'
+                            name: 'page'
+                            widget: 'relation'
+                            options_length: 999
+                            collection: 'pages'
+                            search_fields: ['title']
+                            value_field: 'title'
+                            display_fields: ['title']
+              - label: 'First-level nav items'
+                name: nav-items
+                widget: list
+                fields:
+                  - label: 'Design System page'
+                    name: 'page'
+                    widget: 'relation'
+                    options_length: 999
+                    collection: 'pages'
+                    search_fields: ['title']
+                    value_field: 'title'
+                    display_fields: ['title']
+  - label: 'Design System pages'
+    name: 'pages'
+    identifier_field: 'title'
+    preview_path: '{{section}}/{{title}}'
+    label_singular: 'Design System page'
+    folder: 'docs/pages/'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - name: 'title'
+        label: 'Page title'
+        widget: 'string-with-instructions'
+      - name: 'collection_name'
+        value: 'pages'
+        default: 'pages'
+        widget: 'hidden'
+      - name: 'layout'
+        value: 'variation'
+        default: 'variation'
+        widget: 'hidden'
+      - name: 'section'
+        label: 'Website section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Foundation'
+            value: 'foundation'
+          - label: 'Components'
+            value: 'components'
+          - label: 'Patterns'
+            value: 'patterns'
+          - label: 'Pages'
+            value: 'pages'
+          - label: 'Development'
+            value: 'development'
+          - label: 'Guidelines'
+            value: 'guidelines'
+      - name: 'jumplinks'
+        label: 'Custom jump links'
+        widget: 'string'
+        hint: 'Enter jump links separated by commas'
+        required: false
+      - name: 'status'
+        label: 'Implementation status'
+        widget: 'select'
+        required: false
+        options:
+          - label: 'Legacy'
+            value: 'Legacy'
+          - label: 'Proposed'
+            value: 'Proposed'
+          - label: 'Beta'
+            value: 'Beta'
+          - label: 'Released'
+            value: 'Released'
+      - name: 'description'
+        label: 'Description'
+        hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
+        widget: 'markdown'
+        minimal: true
+      - name: 'variation_groups'
+        label: 'Variation groups'
+        widget: 'list'
+        required: false
+        fields:
+          - name: 'variation_group_name'
+            label: 'Variation group name'
+            widget: 'string-trimmed'
+            required: false
+          - name: 'variation_group_description'
+            label: 'Variation group description'
+            widget: 'markdown'
+            required: false
+            minimal: true
+          - name: 'variations'
+            label: 'Variations'
+            widget: 'list'
+            required: false
+            fields:
+              - name: 'variation_name'
+                label: 'Variation name'
+                widget: 'string-trimmed'
+                required: false
+              - name: 'variation_is_deprecated'
+                label: 'Is this variation deprecated?'
+                widget: 'boolean'
+                required: false
+                default: false
+              - name: 'variation_description'
+                label: 'Variation description'
+                widget: 'markdown'
+                required: false
+                minimal: true
+              - name: 'variation_code_snippet'
+                label: 'Variation code snippet'
+                widget: 'text'
+                required: false
+              - name: 'variation_code_snippet_rendered'
+                label: 'Variation code snippet rendered'
+                hint: 'This code snippet is optional and will be rendered in place of the above code snippet. Use it if you want to secretly include some JS in order to get the snippet to properly render.'
+                widget: 'text'
+                required: false
+              - name: 'variation_jinja_code_snippet'
+                label: 'Variation Jinja links or snippet'
+                hint: 'Use this field to add links to Jinja2 templates in consumerfinance.gov.'
+                required: false
+                widget: 'markdown'
+                minimal: true
+              - name: 'variation_implementation'
+                label: 'Implementation details'
+                required: false
+                widget: 'markdown'
+                minimal: true
+              - name: 'variation_specs'
+                label: 'Optional specs'
+                required: false
+                widget: 'markdown'
+                minimal: true
+      - name: 'use_cases'
+        label: 'Use cases'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'guidelines'
+        label: 'Guidelines'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'behavior'
+        label: 'Behavior'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'restrictions'
+        label: 'Restrictions'
+        widget: 'list'
+        required: false
+        fields:
+          - name: 'restrictions_do'
+            label: 'Do'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'restrictions_do_not'
+            label: 'Do not'
+            widget: 'markdown'
+            minimal: true
+            required: false
+      - name: 'accessibility'
+        label: 'Accessibility'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'research'
+        label: 'Research'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'related_items'
+        label: 'Related items'
+        widget: 'markdown'
+        minimal: true
+        required: false
+  - label: 'Special pages'
+    name: 'special-pages'
+    folder: 'docs/special-pages/'
+    identifier_field: 'title'
+    fields:
+      - name: 'title'
+        label: 'Page title'
+        widget: 'string-with-instructions'
+      - name: 'collection_name'
+        value: 'special-pages'
+        default: 'special-pages'
+        widget: 'hidden'
+      - name: 'description'
+        label: "Markdown for the page's body"
+        widget: 'text'
+        required: true

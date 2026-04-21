@@ -76,7 +76,7 @@ details[open] summary::after {
 }
 
 // Set padding for main content blocks.
-.m-global-eyebrow .a-tagline,
+.m-global-eyebrow .m-global-eyebrow__container,
 .site-header,
 .ds-footer {
   max-width: 1170px;
@@ -150,7 +150,8 @@ main {
   }
   .m-global-eyebrow,
   .ds-footer {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

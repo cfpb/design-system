@@ -17,7 +17,7 @@ const _toString = Object.prototype.toString;
  * @kind function
  * @description
  * Determines if a reference is undefined.
- * @param {*} value - Reference to check.
+ * @param {unknown} value - Reference to check.
  * @returns {boolean} True if `value` is undefined.
  */
 function isUndefined(value) {
@@ -29,7 +29,7 @@ function isUndefined(value) {
  * @kind function
  * @description
  * Determines if a reference is defined.
- * @param {*} value - Reference to check.
+ * @param {unknown} value - Reference to check.
  * @returns {boolean} True if `value` is defined.
  */
 function isDefined(value) {
@@ -43,7 +43,7 @@ function isDefined(value) {
  * Determines if a reference is an `Object`.
  * Unlike `typeof` in JavaScript, `null`s are not
  * considered to be objects. Note that JavaScript arrays are objects.
- * @param {*} value - Reference to check.
+ * @param {unknown} value - Reference to check.
  * @returns {boolean} True if `value` is an `Object` but not `null`.
  */
 function isObject(value) {
@@ -56,7 +56,7 @@ function isObject(value) {
  * @kind function
  * @description
  * Determines if a reference is a `String`.
- * @param {*} value - Reference to check.
+ * @param {unknown} value - Reference to check.
  * @returns {boolean} True if `value` is a `String`.
  */
 function isString(value) {
@@ -75,7 +75,7 @@ function isString(value) {
  * [`isFinite'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
  *                      Reference/Global_Objects/isFinite)
  * method.
- * @param {*} value - Reference to check.
+ * @param {unknown} value - Reference to check.
  * @returns {boolean} True if `value` is a `Number`.
  */
 function isNumber(value) {
@@ -87,7 +87,7 @@ function isNumber(value) {
  * @kind function
  * @description
  * Determines if a value is a date.
- * @param {*} value - Reference to check.
+ * @param {unknown} value - Reference to check.
  * @returns {boolean} True if `value` is a `Date`.
  */
 function isDate(value) {
@@ -99,7 +99,7 @@ function isDate(value) {
  * @kind function
  * @description
  * Determines if a reference is an `Array`.
- * @param {*} value - Reference to check.
+ * @param {unknown} value - Reference to check.
  * @returns {boolean} True if `value` is an `Array`.
  */
 const isArray =
@@ -113,7 +113,7 @@ const isArray =
  * @kind function
  * @description
  * Determines if a reference is a `Function`.
- * @param {*} value - Reference to check.
+ * @param {unknown} value - Reference to check.
  * @returns {boolean} True if `value` is a `Function`.
  */
 function isFunction(value) {
@@ -127,7 +127,7 @@ function isFunction(value) {
  * @kind function
  * @description
  * Determines if a reference is empty.
- * @param {*} value - Reference to check.
+ * @param {unknown} value - Reference to check.
  * @returns {boolean} True if `value` is empty.
  */
 function isEmpty(value) {

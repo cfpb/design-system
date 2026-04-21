@@ -1,5 +1,6 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-tag-group.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
+import styles from './styles.component.scss?inline';
 import { parseChildData } from '../cfpb-utilities/parse-child-data';
 
 const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
@@ -12,12 +13,14 @@ const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
  *   The tag group has a list of tags in the lightDOM that gets re-written
  *   inside an unordered list in the shadowDOM so that it is read out
  *   as a list of items in VoiceOver.
- * @attribute {string} lang - The element's language.
- * @fires addtag - A tag was added to the group.
- * @fires removetag - A tag was removed from the group.
+ * @fires CfpbTagGroup#event:"tag-added" - A tag was added to the group.
+ * @fires CfpbTagGroup#event:"tag-click" - A tag was clicked.
+ * @fires CfpbTagGroup#event:"tag-removed" - A tag was removed to the group.
  */
 export class CfpbTagGroup extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {string} childData - Structure data to create child components.
@@ -198,7 +201,7 @@ export class CfpbTagGroup extends LitElement {
 
   /**
    * Add a tag to the light and dark DOM.
-   * @param {*} tag - The tag to add.
+   * @param {HTMLElement} tag - The tag to add.
    * @param {number} index - The position at which to add the tag.
    * @returns {boolean} false if the tag is already in the light DOM.
    */
@@ -213,11 +216,12 @@ export class CfpbTagGroup extends LitElement {
     this.#insertIntoShadowDom(tag, index);
 
     this.#refreshTagList();
+    return true;
   }
 
   /**
    * Add a tag to the light DOM.
-   * @param {*} tag - The tag to add.
+   * @param {HTMLElement} tag - The tag to add.
    * @param {number} index - The position at which to add the tag.
    */
   #insertIntoLightDom(tag, index) {
@@ -230,7 +234,7 @@ export class CfpbTagGroup extends LitElement {
 
   /**
    * Add a tag to the shadow DOM.
-   * @param {*} tag - The tag to add.
+   * @param {HTMLElement} tag - The tag to add.
    * @param {number} index - The position at which to add the tag.
    */
   #insertIntoShadowDom(tag, index) {
@@ -273,7 +277,7 @@ export class CfpbTagGroup extends LitElement {
   }
 
   /**
-   * @param {*} tag - The tag to add.
+   * @param {HTMLElement} tag - The tag to add.
    * @returns {string} A unique ID.
    */
   #tagIdentifier(tag) {
@@ -283,7 +287,7 @@ export class CfpbTagGroup extends LitElement {
   /**
    * Remove a filter tag from the light DOM.
    * This is private because it's called by the mutation observer.
-   * @param {*} tag - The tag to remove.
+   * @param {HTMLElement} tag - The tag to remove.
    * @returns {boolean} false if the wrapped tag was not found.
    */
   #removeTagNode(tag) {
@@ -322,11 +326,12 @@ export class CfpbTagGroup extends LitElement {
 
     this.#refreshTagList();
     this.focus();
+    return true;
   }
 
   /**
    * Remove a filter tag from the light and dark DOM.
-   * @param {*} tag - The tag to remove.
+   * @param {HTMLElement} tag - The tag to remove.
    */
   removeTag(tag) {
     // Support passing in either light DOM <tag> or shadow DOM <li> if needed
@@ -339,18 +344,18 @@ export class CfpbTagGroup extends LitElement {
 
   /**
    * Get light and dark DOM.
-   * @param {Node} node - The tag to remove.
-   * @returns {Node|null} The tag node.
+   * @param {HTMLElement} tag - The tag to remove.
+   * @returns {HTMLElement|null} The tag node.
    */
-  #getLightDomTag(node) {
+  #getLightDomTag(tag) {
     // If node is a wrapped shadow DOM <li>, get the orignal tag inside it.
-    if (node.tagName === 'LI' && node.shadowRoot) {
+    if (tag.tagName === 'LI' && tag.shadowRoot) {
       // unlikely scenario if you don't expose shadow nodes externally.
-      return node.querySelector('cfpb-tag-filter');
+      return tag.querySelector('cfpb-tag-filter');
     }
 
     // If node is already a light DOM tag or child <cfpb-tag-group>, return it.
-    if (this.contains(node)) return node;
+    if (this.contains(tag)) return tag;
 
     return null;
   }
@@ -360,7 +365,6 @@ export class CfpbTagGroup extends LitElement {
   }
 
   static init() {
-    window.customElements.get('cfpb-tag-group') ||
-      window.customElements.define('cfpb-tag-group', CfpbTagGroup);
+    defineComponent('cfpb-tag-group', CfpbTagGroup);
   }
 }

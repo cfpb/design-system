@@ -47,14 +47,18 @@ first-level:
           - page: Summaries
           - page: Tables
           - page: Tags
-          - page: Taglines
+          - page: Taglines (legacy)
           - page: Text inputs
           - page: Tooltips
         third-level: []
       - heading: Web Components (beta)
         nav-items:
-          - page: Elements
-    nav-items: []
+          - page: Taglines
+        third-level:
+          - heading: Developer guidelines
+            nav-items:
+              - page: Reference for custom elements
+              - page: Fallback strategies
   - heading: Patterns
     second-level:
       - heading: Interaction patterns

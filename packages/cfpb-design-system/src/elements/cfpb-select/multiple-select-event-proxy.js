@@ -11,7 +11,7 @@ export class MultipleSelectEventProxy {
   }
 
   onBlur() {
-    // In multiselect, blur happens when inside the list, so we ignore any
+    // In multiselect, blur happens when inside the listbox, so we ignore any
     // blur actions.
   }
 
@@ -72,7 +72,7 @@ export class MultipleSelectEventProxy {
           host.isExpanded = !host.isExpanded;
           break;
       }
-    } else if (focused === 'CFPB-LIST-ITEM') {
+    } else if (focused === 'CFPB-LISTBOX-ITEM') {
       switch (evt.key) {
         case 'Tab':
           if (evt.shiftKey) {

@@ -7,11 +7,12 @@ const specificConfig = defineConfig({
   base: '/dist/',
 
   build: {
+    modulePreload: false,
     cssCodeSplit: false,
     outDir: path.resolve(__dirname, 'docs/dist'),
     emptyOutDir: true,
 
-    rollupOptions: {
+    rolldownOptions: {
       input: {
         main: path.resolve(__dirname, 'docs/assets/js/main.js'),
         'admin-decap-cms': path.resolve(
@@ -24,12 +25,13 @@ const specificConfig = defineConfig({
         ),
         interstitial: path.resolve(__dirname, 'docs/assets/js/interstitial.js'),
         search: path.resolve(__dirname, 'docs/assets/js/search.js'),
-        styles: path.resolve(__dirname, 'docs/assets/css/main.scss'),
+        styles: path.resolve(__dirname, 'docs/assets/js/styles.js'),
       },
       output: {
         entryFileNames: '[name].js',
         chunkFileNames: '[name].js',
-        assetFileNames: 'index.css',
+        assetFileNames: (assetInfo) =>
+          assetInfo.name?.endsWith('.css') ? 'index.css' : '[name][extname]',
       },
     },
   },

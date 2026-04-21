@@ -18,6 +18,8 @@
   --choice-border-success: var(--green);
   --choice-border-warning: var(--gold);
   --choice-label-disabled-default: var(--gray-dark);
+  --choice-mark-default: var(--black);
+  --choice-mark-disabled-default: var(--gray-60);
   --choice-outline-focus-default: var(--pacific);
   --code-bg: var(--gray-5);
   --content-main-border: var(--gray-40);
@@ -64,12 +66,7 @@
   --select-text-disabled-default: var(--gray-dark);
   --table-border: var(--gray);
   --table-head-bg: var(--gray-5);
-  --tag-filter-bg-active-default: var(--teal-60);
-  --tag-filter-bg-default: var(--teal-20);
-  --tag-filter-bg-hover-default: var(--teal-40);
-  --tag-filter-border-default: var(--teal);
-  --tag-filter-outline-focuse-default: var(--teal-dark);
-  --text: var(--black); /** body */
+  --text: var(--black);
   --block-border-bottom: var(--block-border);
   --block-border-left: var(--block-border);
   --block-border-right: var(--block-border);

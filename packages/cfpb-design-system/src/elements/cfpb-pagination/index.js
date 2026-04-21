@@ -1,21 +1,22 @@
-import { html, LitElement } from 'lit';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-pagination.component.scss';
-import leftIcon from '../../components/cfpb-icons/icons/left.svg?raw';
-import rightIcon from '../../components/cfpb-icons/icons/right.svg?raw';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
+import styles from './styles.component.scss?inline';
+import { CfpbIcon } from '../cfpb-icon';
 import { I18nService, MediaQueryService } from '../cfpb-utilities/';
 
 /**
  *
- * @element cfpb-button
- * @slot - The main content for the button.
+ * @element cfpb-pagination
+ * @slot - Slot for passing in i18n (internationalization) service strings via a <template>.
  */
 export class CfpbPagination extends LitElement {
   #mediaService;
   #isMobile;
   #i18n;
 
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {number} currentPage - The currently selected page.
@@ -151,8 +152,9 @@ export class CfpbPagination extends LitElement {
           ?flush-right=${!this.#isMobile}
           ?disabled=${this.isAtMin}
           @click=${() => this.#goto(this.currentPage - 1)}
+          iconleft="left"
         >
-          ${unsafeSVG(leftIcon)} ${trans('next')}
+          ${trans('next')}
         </cfpb-button>
 
         <form
@@ -191,17 +193,17 @@ export class CfpbPagination extends LitElement {
           ?flush-left=${!this.#isMobile}
           ?disabled=${this.isAtMax}
           @click=${() => this.#goto(this.currentPage + 1)}
+          iconright="right"
         >
-          ${trans('previous')} ${unsafeSVG(rightIcon)}
+          ${trans('previous')}
         </cfpb-button>
       </nav>
     `;
   }
 
   static init() {
+    CfpbIcon.init();
     I18nService.init();
-
-    window.customElements.get('cfpb-pagination') ||
-      window.customElements.define('cfpb-pagination', CfpbPagination);
+    defineComponent('cfpb-pagination', CfpbPagination);
   }
 }

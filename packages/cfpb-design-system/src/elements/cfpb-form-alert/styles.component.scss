@@ -1,0 +1,14 @@
+@use '../../utilities/functions' as *;
+
+:host {
+  .a-form-alert {
+    margin-top: rem-from-px(15px);
+    display: flex;
+    align-items: center;
+    gap: rem-from-px(5px);
+
+    &__text {
+      display: block;
+    }
+  }
+}

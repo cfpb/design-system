@@ -1,7 +1,8 @@
-import { html, LitElement } from 'lit';
+import { html, LitElement, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-button.component.scss';
+import styles from './styles.component.scss?inline';
 import { CfpbIconText } from '../cfpb-icon-text';
 
 // The variants are different color themes of the button.
@@ -16,7 +17,9 @@ const VALID_TYPES = ['button', 'submit', 'reset'];
  * @slot - The main content for the button.
  */
 export class CfpbButton extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {string} type - The button type: button, submit, or reset.
@@ -24,6 +27,10 @@ export class CfpbButton extends LitElement {
    * @property {boolean} disabled - Whether the button is disabled or not.
    * @property {string} variant
    *   The button variant: primary, secondary, or warning.
+   * @property {string} iconLeft - The name of the icon on the left.
+   * @property {string} iconRight - The name of the icon on the right.
+   * @property {string} isIconLeftSpin - Whether the left icon spins or not.
+   * @property {string} isIconRightSpin - Whether the right icon spins or not.
    * @property {boolean} fullOnMobile - Whether to be width 100% on mobile.
    * @property {boolean} flushLeft - Whether button is not rounded on left.
    * @property {boolean} flushRight - Whether button is not rounded on right.
@@ -35,6 +42,10 @@ export class CfpbButton extends LitElement {
     href: { type: String },
     disabled: { type: Boolean, reflect: true },
     variant: { type: String },
+    iconLeft: { type: String },
+    iconRight: { type: String },
+    isIconLeftSpin: { type: Boolean, attribute: 'iconleftspin' },
+    isIconRightSpin: { type: Boolean, attribute: 'iconrightspin' },
     fullOnMobile: {
       type: Boolean,
       attribute: 'full-on-mobile',
@@ -67,6 +78,8 @@ export class CfpbButton extends LitElement {
     this.disabled = false;
     this.fullOnMobile = false;
     this.styleAsLink = false;
+    this.iconLeftSpin = false;
+    this.iconRightSpin = false;
   }
 
   /**
@@ -135,6 +148,10 @@ export class CfpbButton extends LitElement {
         ${ref(this.#iconTextDom)}
         ?disabled=${this.disabled}
         style="--icon-text-divider: var(${this.dividerColorVar})"
+        iconleft=${this.iconLeft}
+        iconright=${this.iconRight}
+        ?iconleftspin=${this.isIconLeftSpin}
+        ?iconrightspin=${this.isIconRightSpin}
       >
         <slot></slot>
       </cfpb-icon-text>
@@ -173,8 +190,6 @@ export class CfpbButton extends LitElement {
 
   static init() {
     CfpbIconText.init();
-
-    window.customElements.get('cfpb-button') ||
-      window.customElements.define('cfpb-button', CfpbButton);
+    defineComponent('cfpb-button', CfpbButton);
   }
 }

@@ -2,7 +2,179 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.4.0](https://github.com/cfpb/design-system/compare/v4.3.2..v4.4.0) - February 17, 2026
+## [5.3.2](https://github.com/cfpb/design-system/compare/v5.3.1..v5.3.2) - April 17, 2026
+
+### PRs in this release
+
+- PR #[2632](https://github.com/cfpb/design-system/pull/2632): Make cfpb-icons always presentational - Ans
+- PR #[2633](https://github.com/cfpb/design-system/pull/2633): Migrate cfpb-checkbox-icon to use cfpb-icon - Ans
+- PR #[2636](https://github.com/cfpb/design-system/pull/2636): Migrate cfpb-icon-text and cfpb-button to use cfpb-icon - Ans
+- PR #[2638](https://github.com/cfpb/design-system/pull/2638): Fix outdated stylesheet name - Ans
+
+### General
+
+- Make cfpb-icons always presentational - ([daa75e0](https://github.com/cfpb/design-system/commit/daa75e0a4546827b002e73a8f46197b430ff9925)) - Ans
+- Migrate cfpb-checkbox-icon to use cfpb-icon - ([750f1b4](https://github.com/cfpb/design-system/commit/750f1b4cee104c19596490ef3dfdc1786659acb8)) - Ans
+- Adjust checkmark styles - ([8c5c290](https://github.com/cfpb/design-system/commit/8c5c290c4f54732d7a442fc496d9d1fca556a490)) - Ans
+- Update to abstracts/vars.json and generated .css
+
+Generated css styles got reshuffled due to name sorting - ([b2acf09](https://github.com/cfpb/design-system/commit/b2acf09b5043e93f7150fd687238830e74cd5bfd)) - itsmedavep
+- Migrate cfpb-icon-text to use cfpb-icon - ([9ae2ee6](https://github.com/cfpb/design-system/commit/9ae2ee6e231c34d0c0c27b50f12c99067ae20c60)) - Ans
+- Migrate cfpb-pagination to use cfpb-button icon update - ([063f377](https://github.com/cfpb/design-system/commit/063f3772a1a105f3148fa852bdf76e0886bcbd73)) - Ans
+- Fix outdated stylesheet name - ([c165201](https://github.com/cfpb/design-system/commit/c165201f1da69b39c870da7801f6abf25ffa25f1)) - Ans
+
+## [5.3.1](https://github.com/cfpb/design-system/compare/v5.3.0..vv5.3.1) - April 15, 2026
+
+### PRs in this release
+
+- PR #[2628](https://github.com/cfpb/design-system/pull/2628): Move all init code to a shared `defineComponent` method - Ans
+- PR #[2629](https://github.com/cfpb/design-system/pull/2629): Update postcss to 8.5.10 | Correct element jsdoc comments - Ans
+
+### General
+
+- Move all init code to a shared `defineComponent` method - ([af29a2d](https://github.com/cfpb/design-system/commit/af29a2d59d22bd64e7fc7cf8039dab9bd84ecdc5)) - Ans
+- Lint files - ([2b7c2fa](https://github.com/cfpb/design-system/commit/2b7c2faa577fc7da7c5eba12e15a206086ff5bc1)) - Ans
+- Correct element jsdoc comments - ([8deb929](https://github.com/cfpb/design-system/commit/8deb929c74b219aee290bb6824a4f359b3cbc61a)) - Ans
+
+## [5.3.0](https://github.com/cfpb/design-system/compare/v5.2.0..vv5.3.0) - April 15, 2026
+
+### PRs in this release
+
+- PR #[2581](https://github.com/cfpb/design-system/pull/2581): Remove unneeded SASS imports from `cfpb-list.component.scss` - Ans
+- PR #[2422](https://github.com/cfpb/design-system/pull/2422): Add global wc-fallback script and styles - Ans
+- PR #[2588](https://github.com/cfpb/design-system/pull/2588): Add WC fallback documentation - Ans
+- PR #[2604](https://github.com/cfpb/design-system/pull/2604): Remove legacy tagline and move tagline under web component heading - Ans
+- PR #[2611](https://github.com/cfpb/design-system/pull/2611): Add loading skeleton architecture - Ans
+- PR #[2616](https://github.com/cfpb/design-system/pull/2616): Re-add legacy taglines - Ans
+- PR #[2618](https://github.com/cfpb/design-system/pull/2618): Change `cfpb-list` to `cfpb-listbox` - Ans
+- PR #[2595](https://github.com/cfpb/design-system/pull/2595): Centralize px ⮕ rem calculation in a function - Ans
+- PR #[2574](https://github.com/cfpb/design-system/pull/2574): Consolidate elements JS imports - Ans
+- PR #[2619](https://github.com/cfpb/design-system/pull/2619): Move component styles to generic file naming - Ans
+- PR #[2621](https://github.com/cfpb/design-system/pull/2621): Fix missed cfpb-listbox change - Ans
+- PR #[2626](https://github.com/cfpb/design-system/pull/2626): Bump autoprefixer, eslint-plugin-cypress, globals, prettier, release-it, stylelint - Ans
+- PR #[2623](https://github.com/cfpb/design-system/pull/2623): Add `cfpb-icon` - Ans
+
+### General
+
+- Build dist assets for commit e468d916310bc7783a8eba86f7ce3cf607844359 [skip ci] - ([946a775](https://github.com/cfpb/design-system/commit/946a775c9bc79968fee20ec66bd2233cc6ad5725)) - CFPBot
+- Remove unneeded imports - ([e6ee8e5](https://github.com/cfpb/design-system/commit/e6ee8e57e2a13cfa00a407c93e925a4488ae2c19)) - Ans
+- Build dist assets for commit 6e2951311faa8d1048bef4d54fb18d2cb2e82e7f [skip ci] - ([b0707ca](https://github.com/cfpb/design-system/commit/b0707cab03d217f953a4be623e0ec9177ce640c9)) - CFPBot
+- Stabilize emitted token name ordering (#2583)
+
+* changes to token transformation so token names appear in a stable ordering
+
+Update to style dictionary config so that the generated css custom props names have a stable ordering (alpha sorted)
+
+Update to yarn tokens so that it runs prettier and stylelint after generating the css
+
+* Update package.json
+
+fixing typo stylelin -> stylelint
+
+* regenerated tokens with yarn tokens
+
+* update to funnel all linting through common path
+
+This simplifies things to use scripts/lint.sh directly.
+
+It will lint all files but allows for changes to the buildpath in style dictionary config. - ([46ddc26](https://github.com/cfpb/design-system/commit/46ddc26cb896c81525929f020a59033f027647c1)) - itsmedavep
+- Add global wc-fallback script and styles - ([4536d2f](https://github.com/cfpb/design-system/commit/4536d2fea56dd3123566ac5bf82060b24c0155dd)) - Ans
+- Add WC fallback documentation - ([9b434e5](https://github.com/cfpb/design-system/commit/9b434e5186d79d12b021e1fe73a4235802ca22dd)) - Ans
+- Font stack improvements (#2550)
+
+* update font-stack so that we don't redefine it thus removing the need for doing important
+
+* change from cfpb-font to font-stack-branded
+
+* regen tokens after token changes in main and build dist again
+
+* Update JSON to include font-stack-branded
+
+* update to variables page to reflect changes for new font stack - ([f4cc757](https://github.com/cfpb/design-system/commit/f4cc757f325781851378d87c41b0f4f069e85374)) - itsmedavep
+- Remove legacy tagline - ([ee27c9b](https://github.com/cfpb/design-system/commit/ee27c9bc292e4eea20e6ddf9ccb403515971ff34)) - Ans
+- Add loading skeleton architecture - ([78294da](https://github.com/cfpb/design-system/commit/78294dac1f4ad2eb322f16151a890a4aaf083165)) - Ans
+- Re-add legacy taglines - ([0ecc06e](https://github.com/cfpb/design-system/commit/0ecc06e6dbf6771f09531cf199cb747e904dcda6)) - Ans
+- Change `cfpb-list` to `cfpb-listbox` - ([7c52999](https://github.com/cfpb/design-system/commit/7c529990893ebb84d66c2df56649e688a8c8a4e7)) - Ans
+- Standardize on REM | centralize px to rem calc in a function - ([0614e76](https://github.com/cfpb/design-system/commit/0614e76546f7bb4e2211022ecfcb6a5b1aa1b99c)) - Ans
+- Consolidate elements JS imports - ([872df41](https://github.com/cfpb/design-system/commit/872df411930d9e6e3c1fe41ae3de75bbe75dbe2d)) - Ans
+- Move component styles to generic file naming - ([c004f63](https://github.com/cfpb/design-system/commit/c004f6384b831e381b00cf28910efae58e97952c)) - Ans
+- Remove cfpb-file-upload SCSS cruft - ([1ba29bc](https://github.com/cfpb/design-system/commit/1ba29bcc2d2e0fca430e04fd315d50750c6f2244)) - Ans
+- Fix missed cfpb-listbox change - ([f4c8d18](https://github.com/cfpb/design-system/commit/f4c8d18e3f84e8705eaae81636c2aa2747490fa7)) - Ans
+- Bump autoprefixer, eslint-plugin-cypress, globals, prettier, release-it, stylelint - ([1ef5df8](https://github.com/cfpb/design-system/commit/1ef5df8733da2a385271fc728ae7f1464b35e249)) - Ans
+- Add `cfpb-icon` - ([7b8d674](https://github.com/cfpb/design-system/commit/7b8d674cc410a636e689af26fcab151635474ec4)) - Ans
+- Add code comment - ([8da00bd](https://github.com/cfpb/design-system/commit/8da00bd37835c168ba1dceb69e7a2257baa40313)) - Ans
+- Add animating icon - ([64216ee](https://github.com/cfpb/design-system/commit/64216eec3a7a0948fbb0b4c20128d615bc30240e)) - Ans
+
+## [5.2.0](https://github.com/cfpb/design-system/compare/v5.1.0..vv5.2.0) - March 27, 2026
+
+### PRs in this release
+
+- PR #[2577](https://github.com/cfpb/design-system/pull/2577): Migrate PostCSS process-icons to node script - Ans
+
+### General
+
+- Build dist assets for commit 15fa3553f05d328468b86151b02bec0aca6d1de7 [skip ci] - ([87255df](https://github.com/cfpb/design-system/commit/87255dfd5071ee2a46fa282cb90ec8a14a999029)) - CFPBot
+- Migrate PostCSS process-icons to node script - ([e970abe](https://github.com/cfpb/design-system/commit/e970abea2e0d9b94c3b4b5d561312d9071558810)) - Ans
+- Adjust script to satisfy prettier single quotes - ([93dca9e](https://github.com/cfpb/design-system/commit/93dca9e662c860a81f503e8afd772ed07ca19b68)) - Ans
+- Convert output to sass variables - ([01c71ba](https://github.com/cfpb/design-system/commit/01c71ba2e960780bdf21183cac236f4b973d91d8)) - Ans
+- Whoops … fix unsaved var - ([820566f](https://github.com/cfpb/design-system/commit/820566ff946b4a3097bb3f940c5baee3d437da4c)) - Ans
+- Fix incorrect icons - ([7031a19](https://github.com/cfpb/design-system/commit/7031a195b93356336aa5c53ab8ee61cd0c3f0ffb)) - Ans
+- Build dist assets for commit 1a35bf1c7ee2ad62ea356bd4c7f50b5f03e49f2b [skip ci] - ([3a77238](https://github.com/cfpb/design-system/commit/3a772380cbc8c6ee6af598c0d824e6a3c7a9c7fe)) - CFPBot
+- Re-generate /dist/ - ([b88f011](https://github.com/cfpb/design-system/commit/b88f0114dca88b54d58c9d0ca72e942859873fab)) - Ans
+
+## [5.1.0](https://github.com/cfpb/design-system/compare/v5.0.0..vv5.1.0) - March 27, 2026
+
+### PRs in this release
+
+- PR #[2568](https://github.com/cfpb/design-system/pull/2568): Ensure USA flag prints - Ans
+- PR #[2557](https://github.com/cfpb/design-system/pull/2557): Upgrade to Vite 8 - Ans
+- PR #[2580](https://github.com/cfpb/design-system/pull/2580): Switch to using `?inline` suffix in place of `vite-plugin-lit-css` - Ans
+
+### General
+
+- Build dist assets for PR #2566 (f140696f8b3bc8313d92ea8cbc0d53eb243d1ed7) [skip ci] - ([0773f30](https://github.com/cfpb/design-system/commit/0773f30a876f462bca7a42e460ff8486e3ea766b)) - CFPBot
+- Ensure USA flag prints - ([0acfe03](https://github.com/cfpb/design-system/commit/0acfe031a72764ac0a49263b8ff7f5db24abe025)) - Ans
+- Build dist assets for commit a16facb18c31664083597b49d14ba10b9be37548 [skip ci] - ([6abc8e3](https://github.com/cfpb/design-system/commit/6abc8e31b5cde2df8a0c35583d1812e75b2bcd25)) - CFPBot
+- Upgrade to Vite 8 - ([ed2fcbb](https://github.com/cfpb/design-system/commit/ed2fcbbc764e67102d29f1f17ac54bdce8f558a7)) - Ans
+- Replace PostCSS with LightningCSS - ([b2bf253](https://github.com/cfpb/design-system/commit/b2bf2539a9dbd7942ceac6d2854ec728cd651797)) - Ans
+- Build dist assets for commit a7302bccfbb7045031be5f68c40a2448f36b23fe [skip ci] - ([4e7d939](https://github.com/cfpb/design-system/commit/4e7d93997b44403360e61274a241838301957174)) - CFPBot
+- Switch to using `?inline` suffix in place of `vite-plugin-lit-css` - ([5d6cd48](https://github.com/cfpb/design-system/commit/5d6cd48df87ff68242ea705548ac130fc4f5c238)) - Ans
+- Fix linter errors - ([0dfffb7](https://github.com/cfpb/design-system/commit/0dfffb7b946c65cc86e9ba5b27af9f4836f4426d)) - Ans
+- Build dist assets for commit 8f675d336d789bafdd392df608ad59896d7a4c09 [skip ci] - ([8dcc40b](https://github.com/cfpb/design-system/commit/8dcc40b0f4c01873185d8185c12c73a1501495d6)) - CFPBot
+- Re-generate /dist/ - ([2be2f9c](https://github.com/cfpb/design-system/commit/2be2f9cc132242bd0e3570dc2f54cf2e1bea8506)) - Ans
+
+## [5.0.0](https://github.com/cfpb/design-system/compare/v4.4.0..vv5.0.0) - March 20, 2026
+
+### PRs in this release
+
+- PR #[2530](https://github.com/cfpb/design-system/pull/2530): Bump react types, decap-cms-app, marked, cypress, glob, style-dictionary, stylelint - Ans
+- PR #[2534](https://github.com/cfpb/design-system/pull/2534): Migrate to Vite - Ans
+- PR #[2540](https://github.com/cfpb/design-system/pull/2540): Update linter patterns - Ans
+- PR #[2554](https://github.com/cfpb/design-system/pull/2554): Update marked, eslint/js, eslint, eslint-plugin-cypress, globals, postcss, sass, style-dictionary - Ans
+- PR #[2558](https://github.com/cfpb/design-system/pull/2558): Fix SCSS selector issues - Ans
+- PR #[2538](https://github.com/cfpb/design-system/pull/2538): cfpb-form-search: Submit search when enter key is pressed - Ans
+- PR #[2562](https://github.com/cfpb/design-system/pull/2562): Fix all linter warnings - Ans
+- PR #[2563](https://github.com/cfpb/design-system/pull/2563): Add `<cfpb-tagline>` - Ans
+
+### General
+
+- Lint and build files - ([1fec3c1](https://github.com/cfpb/design-system/commit/1fec3c10b8e82c3d1d9f2892a887051ae8141360)) - Ans
+- Migrate to Vite - ([05409cf](https://github.com/cfpb/design-system/commit/05409cf3d12284d5ee9fd39ca980dd41d7cc28c3)) - Ans
+- Cleanup linter issues - ([3caf85a](https://github.com/cfpb/design-system/commit/3caf85a859707f1148ea0ab94def8772e34d007a)) - Ans
+- Update linter patterns - ([1a5d3cb](https://github.com/cfpb/design-system/commit/1a5d3cb75efb628faa8f3354fdc585899c901a5c)) - Ans
+- Add error border width variable for select element (#2545)
+
+Fixing legacy select component border width in validation error state - ([4526edc](https://github.com/cfpb/design-system/commit/4526edc3197cc8941775aed89ee715cfbca5e392)) - itsmedavep
+- Update marked, eslint/js, eslint, eslint-plugin-cypress, globals, postcss, sass, style-dictionary - ([bf2a4cb](https://github.com/cfpb/design-system/commit/bf2a4cbb5c08cbb50599945c075b986de017e0e6)) - Ans
+- Fix SCSS selector issues - ([99fd138](https://github.com/cfpb/design-system/commit/99fd138d73488371e870f6e93afbaef7a5191e86)) - Ans
+- Submit search when enter key is pressed - ([e65be6a](https://github.com/cfpb/design-system/commit/e65be6a00f2dab583daf9a2a487bc3550348000f)) - Ans
+- Build dist assets for PR #2561 (5d846d2d5746f4dd9f96baa77135846a627b57e8) [skip ci] - ([cebd394](https://github.com/cfpb/design-system/commit/cebd39483d804256ac64eae38dd54a1575bbf011)) - CFPBot
+- Fix all linter warnings - ([25afd69](https://github.com/cfpb/design-system/commit/25afd6963d53b3decf62ed2eca185ccefe3a03f8)) - Ans
+- Add <cfpb-tagline> - ([186ea37](https://github.com/cfpb/design-system/commit/186ea375de5afa6379a4f023b1fd410b10cb61d2)) - Ans
+- Fix incorrect jsdoc comments - ([ffd0ed4](https://github.com/cfpb/design-system/commit/ffd0ed4ddab708af32cbe64ed6e425bf31953fd6)) - Ans
+- Fix jsdoc comment - ([f1444a3](https://github.com/cfpb/design-system/commit/f1444a35dc2b8d0c92bc2a98f469085340ef24c6)) - Ans
+
+## [4.4.0](https://github.com/cfpb/design-system/compare/v4.3.2..vv4.4.0) - February 17, 2026
 
 ### PRs in this release
 

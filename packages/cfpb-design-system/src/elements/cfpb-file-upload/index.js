@@ -1,6 +1,7 @@
-import { html, LitElement } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-file-upload.component.scss';
+import styles from './styles.component.css?inline';
 import { CfpbButton } from '../cfpb-button';
 
 /**
@@ -9,7 +10,9 @@ import { CfpbButton } from '../cfpb-button';
  * @slot - The main content for the upload button.
  */
 export class CfpbFileUpload extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   static properties = {
     isDetailHidden: {
@@ -99,11 +102,7 @@ export class CfpbFileUpload extends LitElement {
   }
 
   static init() {
-    // Initialize internal button.
     CfpbButton.init();
-
-    // Initialize parent file upload.
-    window.customElements.get('cfpb-file-upload') ||
-      window.customElements.define('cfpb-file-upload', CfpbFileUpload);
+    defineComponent('cfpb-file-upload', CfpbFileUpload);
   }
 }

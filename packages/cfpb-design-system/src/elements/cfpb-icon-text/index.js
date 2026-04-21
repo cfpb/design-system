@@ -1,76 +1,70 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-icon-text.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
+import styles from './styles.component.scss?inline';
+import { CfpbIcon } from '../cfpb-icon';
 
 /**
  * @element cfpb-icon-text
  * @slot - The main content for the text and icon.
  */
 export class CfpbIconText extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {boolean} disabled - Apply disabled styles or not.
+   * @property {string} iconLeft - The name of the icon on the left.
+   * @property {string} iconRight - The name of the icon on the right.
+   * @property {string} isIconLeftSpin - Whether the left icon spins or not.
+   * @property {string} isIconRightSpin - Whether the right icon spins or not.
    * @returns {object} The map of properties.
    */
   static properties = {
     disabled: { type: Boolean, reflect: true },
-    iconHidden: { type: Boolean, reflect: true, attribute: 'icon-hidden' },
+    iconLeft: { type: String },
+    iconRight: { type: String },
+    isIconLeftSpin: { type: Boolean, attribute: 'iconleftspin' },
+    isIconRightSpin: { type: Boolean, attribute: 'iconrightspin' },
   };
 
   constructor() {
     super();
     this.disabled = false;
-    this.iconHidden = false;
+    this.isIconLeftSpin = false;
+    this.isIconRightSpin = false;
   }
 
-  firstUpdated() {
-    const slot = this.shadowRoot.querySelector('slot');
-    this.#updateDividers();
-
-    // Handle dynamically added/removed nodes.
-    slot.addEventListener('slotchange', () => this.#updateDividers());
-  }
-
-  updated(changedProps) {
-    if (changedProps.has('iconHidden')) {
-      this.#updateDividers();
-    }
-  }
-
-  #updateDividers() {
-    const wrapper = this.shadowRoot.querySelector('.wrapper');
-    const slot = this.shadowRoot.querySelector('slot');
-    const nodes = slot.assignedNodes({ flatten: true }).filter((node) => {
-      return (
-        node.nodeType === Node.ELEMENT_NODE ||
-        (node.nodeType === Node.TEXT_NODE && node.textContent.trim())
-      );
-    });
-
-    const showLeft =
-      !this.iconHidden && nodes[0]?.tagName?.toLowerCase() === 'svg';
-    const showRight =
-      !this.iconHidden &&
-      nodes[nodes.length - 1]?.tagName?.toLowerCase() === 'svg';
-
-    wrapper.classList.toggle('left-divider', showLeft);
-    wrapper.classList.toggle('right-divider', showRight);
-  }
-
-  hideIcon() {
-    this.iconHidden = true;
-  }
-
-  showIcon() {
-    this.iconHidden = false;
+  #computeClassString() {
+    return [
+      'wrapper',
+      this.iconLeft && 'left-divider',
+      this.iconRight && 'right-divider',
+    ]
+      .filter(Boolean)
+      .join(' ');
   }
 
   render() {
-    return html`<span class="wrapper"><slot></slot></span>`;
+    return html`<span class=${this.#computeClassString()}>
+      ${this.iconLeft
+        ? html`<cfpb-icon
+            name="${this.iconLeft}"
+            ?spin=${this.isIconLeftSpin}
+          ></cfpb-icon>`
+        : ''}
+      <slot></slot>
+      ${this.iconRight
+        ? html`<cfpb-icon
+            name="${this.iconRight}"
+            ?spin=${this.isIconRightSpin}
+          ></cfpb-icon>`
+        : ''}
+    </span>`;
   }
 
   static init() {
-    window.customElements.get('cfpb-icon-text') ||
-      window.customElements.define('cfpb-icon-text', CfpbIconText);
+    CfpbIcon.init();
+    defineComponent('cfpb-icon-text', CfpbIconText);
   }
 }

@@ -1,0 +1,7 @@
+cfpb-tagline:not(:defined) {
+  min-height: 16.5px;
+}
+
+cfpb-tagline[islarge]:not(:defined) {
+  min-height: 22px;
+}

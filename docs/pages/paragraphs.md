@@ -39,8 +39,8 @@ variation_groups:
 
           We’re trying out Source Sans 3 Medium with faux bolding in place of Source Sans 3 Semi Bold, though the results of that experiment have been less predictable, so we may yet revert that decision.
         variation_specs: >-
-          | **Paragraph text style** | **Font-weight** | **Font-size** |
-          **Font-size-adjust*** | **Line-height** | **Responsive behavior at
+          | **Paragraph text style** | **Font weight** | **Font size** |
+          **Font-size-adjust*** | **Line height** | **Responsive behavior at
           <601px** |
 
           | ------------------------ | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
@@ -55,8 +55,8 @@ variation_groups:
         variation_description: ''
         variation_name: Lead paragraph
         variation_specs: >-
-          | **Paragraph text style**                      | **Font-weight** |
-          **Font-size** | **Font-size-adjust*** | **Line-height** | **Responsive
+          | **Paragraph text style**                      | **Font weight** |
+          **Font size** | **Font-size-adjust*** | **Line height** | **Responsive
           behavior at <601px** |
 
           | --------------------------------------------- | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
@@ -72,13 +72,13 @@ variation_groups:
 
           | ------------------------ | --------------- | ------------- | --------------- |
 
-          | Body text                | Regular         | 11pt          | 16pt            |
+          | Body text                | 350 (Custom)    | 11pt          | 16pt            |
         variation_code_snippet: ''
         variation_description:
-          Source Sans 3 Regular, 11pt / 16pt. Lorem ipsum dolor sit
-          amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.
+          Source Sans 3 custom weight (350), 11pt / 16pt. Lorem
+          ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
       - variation_name: Subheading
         variation_specs: >-
           | **Paragraph text style** | **Font weight** | **Font size** | **Line
@@ -86,7 +86,7 @@ variation_groups:
 
           | ------------------------ | --------------- | ------------- | --------------- |
 
-          | Subheading               | Regular         | 16pt          | 20pt            |
+          | Subheading               | 400 (Regular)   | 16pt          | 20pt            |
         variation_code_snippet: ''
         variation_description: >-
 

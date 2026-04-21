@@ -1,0 +1,24 @@
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+
+/*
+The native CSS implementation of the below would look like:
+
+@function --rem-from-px(--px <length>, --base <length>: 16px) returns <length> {
+  result: calc((var(--px) / var(--base)) * 1rem);
+}
+
+This can be swapped in when browser coverage is added to Firefox and Safari
+See https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function
+*/
+
+@function rem-from-px($px, $base: $base-font-size-px) {
+  @return calc(($px / $base) * 1rem);
+}
+
+@function em-from-px($px, $base: $base-font-size-px) {
+  @return calc(($px / $base) * 1em);
+}
+
+@function unitless-from-px($px, $base: $base-font-size-px) {
+  @return calc($px / $base);
+}

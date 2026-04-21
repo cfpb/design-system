@@ -1,16 +1,16 @@
-import { html, LitElement } from 'lit';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-form-alert.component.scss';
-import errorIcon from '../../components/cfpb-icons/icons/error-round.svg?raw';
-import warningIcon from '../../components/cfpb-icons/icons/warning-round.svg?raw';
-import successIcon from '../../components/cfpb-icons/icons/approved-round.svg?raw';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
+import styles from './styles.component.scss?inline';
+import { CfpbIcon } from '../cfpb-icon';
 
 /**
- * @element cfpb-form-search
- * @slot - The label for the form input.
+ * @element cfpb-form-alert
+ * @slot - The text for the form alert.
  */
 export class CfpbFormAlert extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {string} validation - Validation style: error, warning, success.
@@ -26,11 +26,21 @@ export class CfpbFormAlert extends LitElement {
   }
 
   get icon() {
-    let icon = errorIcon;
+    let icon = {
+      name: 'error',
+      colorVar: 'form-alert-icon-color-error',
+    };
+
     if (this.validation === 'warning') {
-      icon = warningIcon;
+      icon = {
+        name: 'warning',
+        colorVar: 'form-alert-icon-color-warning',
+      };
     } else if (this.validation === 'success') {
-      icon = successIcon;
+      icon = {
+        name: 'approved',
+        colorVar: 'form-alert-icon-color-success',
+      };
     }
 
     return icon;
@@ -41,13 +51,16 @@ export class CfpbFormAlert extends LitElement {
       class="a-form-alert a-form-alert--${this.validation}"
       role="alert"
     >
-      ${unsafeSVG(this.icon)}
+      <cfpb-icon
+        name="${this.icon.name}-round"
+        color="${this.icon.colorVar}"
+      ></cfpb-icon>
       <div class="a-form-alert__text"><slot></slot></div>
     </div>`;
   }
 
   static init() {
-    window.customElements.get('cfpb-form-alert') ||
-      window.customElements.define('cfpb-form-alert', CfpbFormAlert);
+    CfpbIcon.init();
+    defineComponent('cfpb-form-alert', CfpbFormAlert);
   }
 }

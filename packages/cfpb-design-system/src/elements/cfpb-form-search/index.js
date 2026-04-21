@@ -1,16 +1,20 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-form-search.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
+import styles from './styles.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
 import { SearchService } from '../cfpb-utilities/search-service.js';
-import { CfpbList } from '../cfpb-list';
+import { CfpbListbox } from '../cfpb-listbox';
 import { CfpbFormAlert } from '../cfpb-form-alert';
 
 /**
  * @element cfpb-form-search
+ * @slot - Slot for list of autocomplete items.
  */
 export class CfpbFormSearch extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   static formAssociated = true;
 
@@ -93,6 +97,7 @@ export class CfpbFormSearch extends LitElement {
   }
 
   #onClear() {
+    this.value = '';
     this.#popup.value.classList.remove('show');
     this.#list.value.showAllItems();
   }
@@ -108,6 +113,11 @@ export class CfpbFormSearch extends LitElement {
     }
 
     this.value = evt.target.value;
+  }
+
+  #onEnterDown(evt) {
+    // Submit search when enter is pressed inside the input.
+    this.#onClickSearch(evt);
   }
 
   #onBlur() {
@@ -129,10 +139,8 @@ export class CfpbFormSearch extends LitElement {
     evt.preventDefault();
     if (this.disabled) return;
 
-    if (this.value !== '') {
-      this.#internals.setFormValue(this.value);
-      this.#internals.form?.requestSubmit();
-    }
+    this.#internals.setFormValue(this.value);
+    this.#internals.form?.requestSubmit();
   }
 
   render() {
@@ -152,12 +160,13 @@ export class CfpbFormSearch extends LitElement {
             ?validation=${this.validation}
             @clear=${this.#onClear}
             @input=${this.#onInput}
+            @enter-down=${this.#onEnterDown}
             @blur=${this.#onBlur}
           ></cfpb-form-search-input>
 
           <div class="popup" ${ref(this.#popup)}>
-            <cfpb-list .childData=${this.searchList} ${ref(this.#list)}>
-            </cfpb-list>
+            <cfpb-listbox .childData=${this.searchList} ${ref(this.#list)}>
+            </cfpb-listbox>
           </div>
         </div>
 
@@ -181,10 +190,8 @@ export class CfpbFormSearch extends LitElement {
 
   static init() {
     CfpbFormSearchInput.init();
-    CfpbList.init();
+    CfpbListbox.init();
     CfpbFormAlert.init();
-
-    window.customElements.get('cfpb-form-search') ||
-      window.customElements.define('cfpb-form-search', CfpbFormSearch);
+    defineComponent('cfpb-form-search', CfpbFormSearch);
   }
 }

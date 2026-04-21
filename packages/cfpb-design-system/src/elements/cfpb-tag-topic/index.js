@@ -1,5 +1,6 @@
-import { html, LitElement } from 'lit';
-import styles from './cfpb-tag-topic.component.scss';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
+import styles from './styles.component.scss?inline';
 
 /**
  *
@@ -7,7 +8,9 @@ import styles from './cfpb-tag-topic.component.scss';
  * @slot - The content for the topic tag.
  */
 export class CfpbTagTopic extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {string} href - href attribute, if this is a topic link.
@@ -65,8 +68,6 @@ export class CfpbTagTopic extends LitElement {
   }
 
   static init() {
-    // Initialize parent file upload.
-    window.customElements.get('cfpb-tag-topic') ||
-      window.customElements.define('cfpb-tag-topic', CfpbTagTopic);
+    defineComponent('cfpb-tag-topic', CfpbTagTopic);
   }
 }

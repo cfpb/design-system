@@ -4,9 +4,10 @@ const searchStore = window.searchStore;
 
 /**
  * Extracts a snippet, decodes URI components, and highlights the match.
- * @param result
- * @param item
- * @param searchTerm
+ * @param {Array} result - a list of matched results.
+ * @param {object} item - A document from the search store list.
+ * @param {string} searchTerm - The term that was searched for.
+ * @returns {string} The matched string wrapped in <mark> markup.
  */
 function getHighlightedSnippet(result, item, searchTerm) {
   // 1. Determine the best field to use for the preview
@@ -63,10 +64,10 @@ function getHighlightedSnippet(result, item, searchTerm) {
 }
 
 /**
- * @param elm - the HTML element into which to write the results.
- * @param results - a list of matched results.
- * @param term - the search term the user entered.
- * @param store
+ * @param {HTMLElement} elm - the HTML element into which to write the results.
+ * @param {Array} results - a list of matched results.
+ * @param {string} term - the search term the user entered.
+ * @param {Array} store - list of documents to search.
  */
 function displaySearchResults(elm, results, term, store) {
   let resultsString = `<p>${results.length} result${results.length !== 1 ? 's' : ''} for '${term}'</p>`;
@@ -91,7 +92,8 @@ function displaySearchResults(elm, results, term, store) {
 }
 
 /**
- * @param store - array of documents to search.
+ * @param {Array} store - list of documents to search.
+ * @returns {MiniSearch} MiniSearch instance.
  */
 function initializeSearchIndex(store) {
   // Ensure we use the fields defined in your store.

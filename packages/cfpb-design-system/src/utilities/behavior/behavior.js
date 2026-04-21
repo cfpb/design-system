@@ -1,3 +1,7 @@
+/**
+ * @typedef {(options: unknown) => void} EventCallback
+ */
+
 /* ==========================================================================
    Dom Behaviors
    Behaviors are functionality that can be shared between different pieces
@@ -59,7 +63,7 @@ function _findElements(behaviorSelector, baseElement) {
  * @param {( string|HTMLElement|Array|NodeList )} behaviorElement - Used to
  *   query dom for elements.
  * @param {string} event - Event type to add to element.
- * @param {Function} eventHandler - Callback for event.
+ * @param {EventCallback} eventHandler - Callback for event.
  * @param {HTMLElement} baseElement - Containing element
  *   for the behavior element.
  * @returns {Array|NodeList} if it exists in the dom, null otherwise.

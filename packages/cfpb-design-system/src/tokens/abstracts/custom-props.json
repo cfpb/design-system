@@ -2321,9 +2321,21 @@
   },
   "font-stack": {
     "$type": "string",
-    "$value": "system-ui,sans-serif",
+    "$value": "var(--font-stack-branded, system-ui, sans-serif)",
     "$extensions": {
       "com.figma.variableId": "VariableID:8191:7009",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.type": "string",
+      "com.figma.isOverride": true
+    }
+  },
+  "font-stack-branded": {
+    "$type": "string",
+    "$value": "initial",
+    "$extensions": {
+      "com.figma.variableId": "VariableID:9617:2",
       "com.figma.scopes": [
         "ALL_SCOPES"
       ],

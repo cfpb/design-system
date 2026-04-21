@@ -95,7 +95,7 @@ use_cases: Use the banner notification to communicate important information
   or product level information. Use the inline notification instead when calling
   out specific page content or when alerting users to information that is
   specific to an immediate task.
-related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
+related_items: "[Notifications](https://cfpb.github.io/design-system/component\
   s/notifications)"
 redirect_from:
   - /components/banners

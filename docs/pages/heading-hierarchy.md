@@ -20,11 +20,11 @@ variation_groups:
         variation_jinja_code_snippet: ''
         variation_name: ''
         variation_specs: >-
-          | **Heading** | **Font-weight**   | **Font-size** |
-          **Font-size-adjust*** | **Line-height**             |  **Responsive
+          | **Heading** | **Font weight**   | **Font size** |
+          **Font-size-adjust*** | **Line height**             |  **Responsive
           behavior at < 601px** |
 
-          | ----- | ----- | ----- | ----- | ----- | ----- |
+          | ----------- | ----------------- | ------------- | --------------------- | --------------------------- | ----------------------------------- |
 
           | **Display** | 400 (Regular)     | 48px          | 0.517                 | 60px                        | Drops to H1                         |
 
@@ -67,13 +67,13 @@ variation_groups:
         variation_specs: |-
           | **Heading** | **Font weight** | **Font size** | **Line height** |
           | ----------- | --------------- | ------------- | --------------- |
-          | **Display** | Medium          | 60pt          | 66pt            |
-          | **H1**      | Regular         | 38pt          | 40pt            |
-          | **H2**      | Regular         | 26pt          | 28pt            |
-          | **H3**      | Semi Bold       | 16pt          | 18pt            |
-          | **H4**      | Medium          | 14pt          | 16pt            |
-          | **H5**      | Semi Bold       | 10pt all caps | 12pt            |
-          | **H6**      | Medium          | 12pt          | 14pt            |
+          | **Display** | 500 (Medium)    | 60pt          | 66pt            |
+          | **H1**      | 400 (Regular)   | 38pt          | 40pt            |
+          | **H2**      | 400 (Regular)   | 26pt          | 28pt            |
+          | **H3**      | 600 (Semi Bold) | 16pt          | 18pt            |
+          | **H4**      | 500 (Medium)    | 14pt          | 16pt            |
+          | **H5**      | 600 (Semi Bold) | 10pt all caps | 12pt            |
+          | **H6**      | 500 (Medium)    | 12pt          | 14pt            |
     variation_group_description: >+
       This hierarchy should serve as a basis for 8.5 x 11” documents, but
       appropriate scaling should be explored for content of larger or smaller
@@ -114,7 +114,7 @@ variation_groups:
           Icon height is constrained to 19px.
 
 
-          | **Heading** | **Font-weight** | **Font-size** | **Font-size-adjust*** | **Line-height** | **Responsive behavior at <601px** |
+          | **Heading** | **Font weight** | **Font size** | **Font-size-adjust*** | **Line height** | **Responsive behavior at <601px** |
 
           | ----------- | --------------- | ------------- | --------------------- | --------------- | --------------------------------- |
 
@@ -138,8 +138,8 @@ variation_groups:
         variation_code_snippet: |
           <div class="h5">eyebrow heading</div> <div class="h1">Heading 1</div>
         variation_specs: >-
-          | **Heading**     | **Font-weight** | **Font-size** |
-          **Font-size-adjust*** | **Line-height**            | **Responsive
+          | **Heading**     | **Font weight** | **Font size** |
+          **Font-size-adjust*** | **Line height**            | **Responsive
           behavior at <601px** |
 
           | --------------- | --------------- | ------------- | --------------------- | -------------------------- | --------------------------------- |
@@ -165,7 +165,7 @@ variation_groups:
           * 1px thick Gray 50 top border that spans the width of the module or column 
 
 
-          | **Heading** | **Font-weight** | **Font-size**      | **Font-size-adjust*** | **Line-height**            | **Responsive behavior at <601px** |
+          | **Heading** | **Font weight** | **Font size**      | **Font-size-adjust*** | **Line height**            | **Responsive behavior at <601px** |
 
           | ----------- | --------------- | ------------------ | --------------------- | -------------------------- | --------------------------------- |
 

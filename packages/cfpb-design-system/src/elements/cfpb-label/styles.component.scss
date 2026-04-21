@@ -1,0 +1,36 @@
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '../../utilities/functions' as *;
+
+:host {
+  .a-label {
+    slot {
+      display: inline-block;
+    }
+
+    &__helper {
+      color: var(--label-helper);
+      font-size: rem-from-px(16px);
+      font-weight: normal;
+
+      &--block {
+        display: block;
+
+        // Add a gap between the label helper and label.
+        margin-top: rem-from-px(10px);
+      }
+    }
+
+    &--heading {
+      display: block;
+
+      margin-bottom: rem-from-px(10px);
+
+      @include heading-4($has-margin-bottom: false);
+
+      // Add a gap between the label helper and label heading
+      .a-label__helper--block {
+        margin-top: rem-from-px(10px);
+      }
+    }
+  }
+}

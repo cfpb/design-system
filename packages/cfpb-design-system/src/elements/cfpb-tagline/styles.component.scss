@@ -1,0 +1,37 @@
+@use '../../utilities/functions' as *;
+
+:host {
+  .a-tagline {
+    font-size: rem-from-px(12px);
+
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    column-gap: 10px;
+
+    &__text {
+      // Needed for browsers with legacy/no grid support (e.g. IE11).
+      display: inline-block;
+    }
+
+    & cfpb-flag-usa {
+      margin-top: 1px;
+    }
+
+    &--large {
+      font-size: rem-from-px(16px);
+
+      & cfpb-flag-usa {
+        margin-top: 4px;
+      }
+    }
+
+    @media print {
+      // Force the background USA flag image in the tagline to be visible when printing.
+      print-color-adjust: exact;
+    }
+  }
+
+  .u-nowrap {
+    white-space: nowrap;
+  }
+}

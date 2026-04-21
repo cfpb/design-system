@@ -1,16 +1,16 @@
-import { html, LitElement } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import { ref, createRef } from 'lit/directives/ref.js';
-import styles from './cfpb-form-search-input.component.scss';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-
-import searchIcon from '../../components/cfpb-icons/icons/search.svg?raw';
-import clearIcon from '../../components/cfpb-icons/icons/error.svg?raw';
+import styles from './styles.component.scss?inline';
+import { CfpbIcon } from '../cfpb-icon';
 
 /**
  * @element cfpb-form-search-input
  */
 export class CfpbFormSearchInput extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {boolean} disabled - Whether the input is disabled or not.
@@ -63,6 +63,17 @@ export class CfpbFormSearchInput extends LitElement {
     this.value = evt.target.value;
   }
 
+  #onKeyDown(evt) {
+    if (evt.key === 'Enter') {
+      this.dispatchEvent(
+        new CustomEvent('enter-down', {
+          bubbles: true,
+          composed: true,
+        }),
+      );
+    }
+  }
+
   #onBlur() {
     this.dispatchEvent(
       new Event('blur', {
@@ -98,7 +109,7 @@ export class CfpbFormSearchInput extends LitElement {
           class="o-search-input__input-label"
           aria-label=${this.label}
         >
-          ${unsafeSVG(searchIcon)}
+          <cfpb-icon name="search"></cfpb-icon>
         </label>
         <input
           id="search-text"
@@ -114,6 +125,7 @@ export class CfpbFormSearchInput extends LitElement {
           aria-label=${this.ariaLabelInput}
           ${ref(this.#searchInput)}
           @input=${this.#onInput}
+          @keydown=${this.#onKeyDown}
           @blur=${this.#onBlur}
         />
         <button
@@ -122,17 +134,14 @@ export class CfpbFormSearchInput extends LitElement {
           title=${this.ariaLabelButton}
           @click=${this.#onClickClear}
         >
-          ${unsafeSVG(clearIcon)}
+          <cfpb-icon name="error"></cfpb-icon>
         </button>
       </div>
     `;
   }
 
   static init() {
-    window.customElements.get('cfpb-form-search-input') ||
-      window.customElements.define(
-        'cfpb-form-search-input',
-        CfpbFormSearchInput,
-      );
+    CfpbIcon.init();
+    defineComponent('cfpb-form-search-input', CfpbFormSearchInput);
   }
 }

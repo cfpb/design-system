@@ -29,7 +29,7 @@
     "copy-assets": "./scripts/fonts.sh && cp -r packages/cfpb-design-system/src/components/cfpb-icons/icons docs/_includes/",
     "after-install": "yarn copy-assets",
     "lint": "scripts/lint.sh",
-    "process-icon-svgs": "svgo -f packages/cfpb-design-system/src/components/cfpb-icons/icons --config=svgo.config.js",
+    "process-icon-svgs": "svgo -f packages/cfpb-design-system/src/components/cfpb-icons/icons --config=svgo.config.js && node scripts/process-icons.js",
     "release": "./scripts/release.sh",
     "serve-html": "http-server docs/_site",
     "serve-eleventy": "eleventy --serve --port=4000",
@@ -39,61 +39,59 @@
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "cy": "./scripts/cypress.sh",
     "changelog": "./scripts/changelog.sh",
-    "tokens": "style-dictionary build --config ./style-dictionary.config.js"
+    "tokens": "style-dictionary build --config ./style-dictionary.config.js && yarn lint \"packages/cfpb-design-system/src/elements/**/*.css\""
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@types/react": "19.2.14",
     "anchor-js": "5.0.0",
-    "decap-cms-app": "3.10.1",
+    "decap-cms-app": "3.12.2",
     "html-entities": "2.6.0",
-    "liquidjs": "10.25.0",
+    "liquidjs": "10.25.6",
     "lit": "3.3.2",
     "markdown-it": "^14.1.0",
-    "marked": "17.0.4",
+    "marked": "18.0.2",
     "minisearch": "7.2.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "slugify": "1.6.8"
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "slugify": "1.6.9"
   },
   "devDependencies": {
     "@cfpb/browserslist-config": "0.0.6",
     "@csstools/postcss-sass": "5.1.1",
     "@eslint/js": "10.0.1",
     "@lhci/cli": "0.15.1",
-    "autoprefixer": "10.4.27",
+    "autoprefixer": "10.5.0",
     "concurrently": "9.2.1",
-    "cypress": "15.12.0",
-    "eslint": "10.0.3",
+    "cypress": "15.14.0",
+    "eslint": "10.2.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
-    "eslint-plugin-cypress": "6.2.0",
+    "eslint-plugin-cypress": "6.3.1",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jsdoc": "62.8.0",
+    "eslint-plugin-jsdoc": "62.9.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-lit": "2.2.1",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-wc": "3.1.0",
     "git-cliff": "2.12.0",
     "glob": "13.0.6",
-    "globals": "17.4.0",
+    "globals": "17.5.0",
     "http-server": "14.1.1",
     "jest": "30.3.0",
     "jest-cli": "30.3.0",
     "jest-environment-jsdom": "30.3.0",
-    "postcss": "8.5.8",
-    "postcss-replace": "2.0.1",
-    "prettier": "3.8.1",
+    "postcss": "8.5.10",
+    "prettier": "3.8.3",
     "prop-types": "15.8.1",
-    "release-it": "19.2.4",
-    "sass": "1.98.0",
-    "style-dictionary": "5.3.3",
-    "stylelint": "17.4.0",
+    "release-it": "20.0.0",
+    "sass": "1.99.0",
+    "style-dictionary": "5.4.0",
+    "stylelint": "17.8.0",
     "stylelint-config-standard-scss": "17.0.0",
     "svgo": "4.0.1",
-    "vite": "7.3.1",
-    "vite-plugin-lit-css": "2.2.2"
+    "vite": "8.0.9"
   },
   "prettier": {
     "singleQuote": true
@@ -120,6 +118,9 @@
       "releaseNotes": "./scripts/changelog.sh"
     }
   },
+  "resolutions": {
+    "trim": "0.0.2"
+  },
   "type": "module",
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.13.0"
 }

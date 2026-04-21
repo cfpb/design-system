@@ -104,7 +104,7 @@ variation_groups:
                       m-notification--warning">
               {% include icons/warning-round.svg %}
               <div class="m-notification__content">
-                  <div class="m-notification__message">No results found.</div>
+                  <div class="m-notification__message">No results found</div>
                   <p class="m-notification__explanation">
                       This is an optional explanation of the warning.
                   </p>
@@ -135,7 +135,7 @@ variation_groups:
                       m-notification--error">
               {% include icons/error-round.svg %}
               <div class="m-notification__content">
-                  <div class="m-notification__message">Page not found.</div>
+                  <div class="m-notification__message">Page not found</div>
                   <p class="m-notification__explanation">
                       This is an optional explanation of the error.
                   </p>

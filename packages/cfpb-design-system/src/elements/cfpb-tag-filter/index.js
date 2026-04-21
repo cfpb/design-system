@@ -1,7 +1,8 @@
-import { html, LitElement } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
-import styles from './cfpb-tag-filter.component.scss';
-import icon from '../../components/cfpb-icons/icons/error.svg?raw';
+import styles from './styles.component.scss?inline';
+import { errorIcon as icon } from '../../components/cfpb-icons/icons-lib';
 
 /**
  *
@@ -9,7 +10,9 @@ import icon from '../../components/cfpb-icons/icons/error.svg?raw';
  * @slot - The content for the filter tag.
  */
 export class CfpbTagFilter extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   /**
    * @property {string} for - Associate the label with an ID elsewhere.
@@ -62,8 +65,6 @@ export class CfpbTagFilter extends LitElement {
   }
 
   static init() {
-    // Initialize parent file upload.
-    window.customElements.get('cfpb-tag-filter') ||
-      window.customElements.define('cfpb-tag-filter', CfpbTagFilter);
+    defineComponent('cfpb-tag-filter', CfpbTagFilter);
   }
 }

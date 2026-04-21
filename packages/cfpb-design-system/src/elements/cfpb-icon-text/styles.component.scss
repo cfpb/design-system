@@ -1,0 +1,48 @@
+@use '../../utilities/functions' as *;
+
+@mixin u-btn-divider() {
+  content: '';
+  border-left: 1px solid var(--icon-text-divider);
+  place-self: normal;
+}
+
+:host {
+  // Theme variables.
+  --icon-text-divider-default: var(--pacific-60);
+  --icon-text-divider-disabled: var(--gray-60);
+
+  // Private variables.
+  --icon-text-divider: var(--icon-text-divider-default);
+
+  .wrapper {
+    // This prevents the child button from having an empty gap after the button.
+    display: flex;
+    width: fit-content;
+    align-items: center;
+
+    gap: rem-from-px(10px);
+  }
+
+  .left-divider::before,
+  .right-divider::after {
+    @include u-btn-divider;
+  }
+
+  // Shine the slot contents through to the wrapper's flexbox items.
+  slot {
+    display: contents;
+  }
+}
+
+.left-divider cfpb-icon:first-of-type {
+  order: -1;
+}
+
+.right-divider cfpb-icon:last-of-type {
+  order: 1;
+}
+
+:host([disabled]) {
+  // !important is set so that disabled divider color overrides all other color.
+  --icon-text-divider: var(--icon-text-divider-disabled) !important;
+}

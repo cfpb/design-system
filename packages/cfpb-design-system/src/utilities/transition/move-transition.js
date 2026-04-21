@@ -25,7 +25,7 @@ function MoveTransition(element) {
   const _baseTransition = new BaseTransition(element, CLASSES, this);
 
   /**
-   * @param {Function} initialClass - The initial state for this transition.
+   * @param {string} initialClass - The initial CSS class to set the state for this transition.
    * @returns {MoveTransition} An instance.
    */
   function init(initialClass) {

@@ -1,14 +1,13 @@
-import { html, LitElement, nothing } from 'lit';
+import { html, LitElement, css, unsafeCSS, nothing } from 'lit';
+import { defineComponent } from '../cfpb-utilities/shared-config';
+import styles from './styles.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import styles from './cfpb-select.component.scss';
-import expandIcon from '../../components/cfpb-icons/icons/down.svg?raw';
-import collapseIcon from '../../components/cfpb-icons/icons/up.svg?raw';
+import { CfpbIcon } from '../cfpb-icon';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
 import { SearchService } from '../cfpb-utilities/search-service.js';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';
 import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
-import { CfpbList } from '../cfpb-list';
+import { CfpbListbox } from '../cfpb-listbox';
 import { CfpbTagGroup } from '../cfpb-tag-group';
 
 import { SingleSelectEventProxy } from './single-select-event-proxy.js';
@@ -20,7 +19,9 @@ import { MultipleSelectEventProxy } from './multiple-select-event-proxy.js';
  * @slot - The main content for the select.
  */
 export class CfpbSelect extends LitElement {
-  static styles = styles;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 
   #eventProxy;
   #flyoutMenu;
@@ -310,11 +311,11 @@ export class CfpbSelect extends LitElement {
           @click=${this.#onClick}
         >
           <span class="o-select__cue-open" role="img" aria-label="Show">
-            ${unsafeSVG(expandIcon)}
+            <cfpb-icon name="down"></cfpb-icon>
             <span class="u-visually-hidden">Show</span>
           </span>
           <span class="o-select__cue-close" role="img" aria-label="Hide">
-            ${unsafeSVG(collapseIcon)}
+            <cfpb-icon name="up"></cfpb-icon>
             <span class="u-visually-hidden">Hide</span>
           </span>
         </button>
@@ -323,7 +324,7 @@ export class CfpbSelect extends LitElement {
           data-js-hook="behavior_flyout-menu_content"
           ${ref(this.#contentDom)}
         >
-          <cfpb-list
+          <cfpb-listbox
             tabindex=${this.#noResults ? '-1' : '0'}
             @item-click=${this.#onItemClick}
             ?multiple=${this.multiple}
@@ -334,7 +335,7 @@ export class CfpbSelect extends LitElement {
               : 'Choose an item…'}
             ${ref(this.#list)}
           >
-          </cfpb-list>
+          </cfpb-listbox>
           <div class=${this.#noResults ? 'no-results' : 'u-hidden'}>
             No results found
           </div>
@@ -369,11 +370,10 @@ export class CfpbSelect extends LitElement {
   }
 
   static init() {
+    CfpbIcon.init();
     CfpbFormSearchInput.init();
-    CfpbList.init();
+    CfpbListbox.init();
     CfpbTagGroup.init();
-
-    window.customElements.get('cfpb-select') ||
-      window.customElements.define('cfpb-select', CfpbSelect);
+    defineComponent('cfpb-select', CfpbSelect);
   }
 }

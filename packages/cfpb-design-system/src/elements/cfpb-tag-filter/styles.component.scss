@@ -1,0 +1,52 @@
+@use '../../utilities/functions' as *;
+
+:host {
+  button {
+    // This line-height isn't 19 or 22, as 20 creates a 30px high tag.
+    line-height: unitless-from-px(20px);
+
+    // Filter tags appear in filtered contexts, often as part of multiselects.
+    font-size: rem-from-px(16px);
+
+    display: flex;
+    gap: rem-from-px(10px);
+    align-items: center;
+
+    border: 1px solid var(--teal);
+    padding: 4px 6px;
+    background-color: var(--teal-20);
+    border-radius: rem-from-px(3px);
+    color: var(--black);
+    text-align: left;
+    min-width: fit-content;
+
+    &:hover {
+      background-color: var(--teal-40);
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 1px dotted var(--teal);
+      outline-offset: 1px;
+    }
+
+    &:active {
+      background-color: var(--teal-60);
+    }
+  }
+
+  svg {
+    pointer-events: none;
+
+    // Prevent flexbox from squishing icon when tag text is long.
+    flex: none;
+
+    height: rem-from-px(19px);
+  }
+
+  // If the contents are wrapped in a label, negate the label's display.
+  label {
+    display: contents;
+    pointer-events: none;
+  }
+}

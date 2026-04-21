@@ -1,0 +1,33 @@
+/*
+This file defines a "loading skeleton", which is a wireframe-esque box that loads 
+in before a web component has been initialized. 
+
+Each component that has a loading skeleton also has a file similar to this one, 
+which defines the dimensions of the box that should load. 
+
+Having a loading skeleton avoids a layout shift when the component is actually 
+initialized and rendered.
+*/
+*:not(:defined) {
+  display: block;
+  width: 100%;
+
+  box-shadow: 0 0 3px rgb(90, 93, 97, 10%) inset;
+  border-radius: 4px;
+
+  animation: pulse-background 1.5s infinite;
+}
+
+@keyframes pulse-background {
+  0% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: rgb(90, 93, 97, 5%);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}

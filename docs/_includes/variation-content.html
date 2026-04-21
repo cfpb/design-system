@@ -359,14 +359,14 @@
     {% endif %}
 
     {%
-        if url != '/index'
-        and url != 'search/index'
-        and url != 'foundation/index'
-        and url != 'components/index'
-        and url != 'patterns/index'
-        and url != 'pages/index'
-        and url != 'development/index'
-        and url != 'guidelines/index'
+        if page.url != '/'
+        and page.url != '/search/'
+        and page.url != '/foundation/'
+        and page.url != '/components/'
+        and page.url != '/patterns/'
+        and page.url != '/pages/'
+        and page.url != '/development/'
+        and page.url != '/guidelines/'
     %}
         <section class="content-l u-mb45">
             <div class="content-l__col content-l__col-1">

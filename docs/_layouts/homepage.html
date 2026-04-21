@@ -2,8 +2,12 @@
 layout: default
 ---
 
-<main class="content" id="main" role="main">
-  <div class="wrapper">{% include generic-content.html %}</div>
+<main id="main" role="main">
+  {% include "sidebar.html" %}
+
+  <div class="ds-content">
+    {% include "generic-content.html" %} {{ content }}
+  </div>
   <div class="o-editor" id="edit-page">
     <a
       class="a-btn"
@@ -13,7 +17,7 @@ layout: default
       title="Edit this page in Decap CMS"
     >
       <span>Edit page</span>
-      {% include icons/edit.svg %}
+      {% include "icons/edit.svg" %}
     </a>
   </div>
 </main>

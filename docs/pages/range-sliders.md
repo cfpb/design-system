@@ -18,8 +18,7 @@ variation_groups:
         variation_specs: ''
     variation_group_name: Types
     variation_group_description:
-      Range sliders can have optional `min`, `max` and
-      `step`
+      Range sliders can have optional `min`, `max` and `step`
       [attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#additional_attributes)
       to restrict the user's selection.
 guidelines: ''

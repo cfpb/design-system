@@ -34,7 +34,7 @@ here's what you'd do:
 1. `cd design-system`
 1. `git checkout main && git pull` to ensure you're on the latest changes (this step is not necessary when cloning for the first time).
 1. `yarn install` to install dependencies and set up [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
-1. `yarn after-install` to copy assets and configure Ruby dependencies.
+1. `yarn after-install` to copy assets.
 1. `git checkout -b button-fix` to create a new branch for your changes.
 1. Edit file(s) in `/packages/cfpb-design-system/src/components/cfpb-buttons` however you want.
 1. Copy `/packages/cfpb-design-system/` into `node_modules/@cfpb/cfpb-design-system/` in your consumerfinance.gov or other repo.
@@ -54,7 +54,7 @@ and file a pull request by clicking the link to compare changes across forks.
 ### Updating Documentation
 
 The Design System's website lives in this repository's `docs/` directory and is
-powered by Decap CMS and Jekyll.
+powered by Decap CMS and Eleventy.
 To edit any page of the website, click the edit button at the bottom right of
 the page.
 You'll need to be added as a contributor to this repository in order to

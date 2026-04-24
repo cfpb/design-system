@@ -2255,7 +2255,8 @@ var Jt = Be(qt), Yt = ":root{--beige:#bea96f;--beige-30:#f0e8d8;--beige-60:#d8c8
 		}));
 	}
 	#t() {
-		this.value = this.shadowRoot.querySelector("slot").assignedNodes({ flatten: !0 }).map((e) => e.textContent.trim()).join(" ");
+		let e = this.shadowRoot.querySelector("slot");
+		this.value = e.assignedNodes({ flatten: !0 }).map((e) => e.textContent.trim()).join(" ");
 	}
 	render() {
 		let e = this.for === "" ? j`<slot @slotchange=${this.#t}></slot>` : j`<label for=${this.for}><slot></slot></label>`;

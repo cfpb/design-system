@@ -1,10 +1,5 @@
 @use '../../utilities/functions' as *;
-
-@mixin u-btn-divider() {
-  content: '';
-  border-left: 1px solid var(--icon-text-divider);
-  place-self: normal;
-}
+@use './mixins.scss' as *;
 
 :host {
   // Theme variables.

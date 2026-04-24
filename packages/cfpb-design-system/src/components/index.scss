@@ -1,0 +1,64 @@
+/* ===============================
+   Design System
+   Legacy components
+   =============================== */
+
+// Buttons
+@forward 'cfpb-buttons/vars';
+@forward 'cfpb-buttons/button';
+@forward 'cfpb-buttons/button-group';
+
+// Expandables
+@forward 'cfpb-expandables/vars';
+@forward 'cfpb-expandables/expandable';
+@forward 'cfpb-expandables/expandable-group';
+@forward 'cfpb-expandables/summary';
+@forward 'cfpb-expandables/summary-minimal';
+
+// Forms
+@forward 'cfpb-forms/form';
+@forward 'cfpb-forms/form-alert';
+@forward 'cfpb-forms/form-field';
+@forward 'cfpb-forms/label';
+@forward 'cfpb-forms/multiselect';
+@forward 'cfpb-forms/range';
+@forward 'cfpb-forms/search-input';
+@forward 'cfpb-forms/select';
+@forward 'cfpb-forms/tag';
+@forward 'cfpb-forms/text-input';
+
+// Icons
+@forward 'cfpb-icons/icon';
+
+// Layout
+@forward 'cfpb-layout/card-group';
+@forward 'cfpb-layout/card';
+@forward 'cfpb-layout/email-signup';
+@forward 'cfpb-layout/featured-content-module';
+@forward 'cfpb-layout/hero';
+@forward 'cfpb-layout/layout';
+@forward 'cfpb-layout/text-introduction';
+@forward 'cfpb-layout/well';
+
+// Nofifications
+@forward 'cfpb-notifications/vars';
+@forward 'cfpb-notifications/banner';
+@forward 'cfpb-notifications/notification';
+
+// Pagination
+@forward 'cfpb-pagination/vars';
+@forward 'cfpb-pagination/pagination';
+
+// Tables
+@forward 'cfpb-tables/vars';
+@forward 'cfpb-tables/table';
+
+// Typography
+@forward 'cfpb-typography/vars';
+@forward 'cfpb-typography/date';
+@forward 'cfpb-typography/link';
+@forward 'cfpb-typography/list';
+@forward 'cfpb-typography/meta-header';
+@forward 'cfpb-typography/pull-quote';
+@forward 'cfpb-typography/slug-header';
+@forward 'cfpb-typography/tagline';

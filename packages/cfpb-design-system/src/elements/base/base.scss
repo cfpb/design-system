@@ -1,8 +1,5 @@
 @use 'sass:math';
-@use '../abstracts' as *;
-@use '../cfpb-utilities/skeleton' as *;
-@use '../cfpb-tagline/skeleton' as *;
-@use '../cfpb-form-search/skeleton' as *;
+@use '../abstracts/api' as *;
 
 /* ==========================================================================
    Design System

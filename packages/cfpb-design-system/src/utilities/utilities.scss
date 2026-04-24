@@ -1,6 +1,6 @@
 @use 'sass:math';
-@use 'sass:string';
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts/api' as *;
+@use '.mixins' as *;
 
 /* ==========================================================================
    Design System
@@ -44,39 +44,8 @@
   }
 }
 
-//
-// Clearfix
-//
-
-@mixin u-clearfix {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-
 .u-clearfix {
   @include u-clearfix;
-}
-
-//
-// Visually hidden
-//
-@mixin u-visually-hidden() {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  border: 0;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-
-  // `clip` is deprecated, but retained for safety in making sure that this
-  // utility works as expected for screenreaders. Comma-separated syntax is
-  // not used because space-separated is more backward-compatible,
-  // per https://developer.mozilla.org/en-US/docs/Web/CSS/clip
-  clip: rect(0 0 0 0); /* stylelint-disable-line property-no-deprecated */
 }
 
 .u-visually-hidden {
@@ -109,14 +78,6 @@
   display: none !important;
 }
 
-//
-// Hide an element while retaining its layout.
-//
-
-@mixin u-invisible() {
-  visibility: hidden;
-}
-
 .u-invisible {
   @include u-invisible;
 }
@@ -137,20 +98,6 @@
   white-space: nowrap;
 }
 
-//
-// Flexible proportional containers
-//
-
-/* stylelint-disable selector-class-pattern */
-@mixin u-flexible-container-mixin($width: 16, $height: 9) {
-  /* stylelint-enable */
-  $ratio: math.div($height, $width) * 100;
-
-  position: relative;
-  padding-bottom: string.unquote('#{$ratio}%');
-  height: 0;
-}
-
 .u-flexible-container {
   @include u-flexible-container-mixin;
 
@@ -164,130 +111,6 @@
 
   &--4-3 {
     @include u-flexible-container-mixin(4, 3);
-  }
-}
-
-//
-// Link mixins
-//
-
-/*
-Link text and underline, unless otherwise specified.
-$c: Link color.
-$v: Link visited color.
-$h: Link hover color.
-$f: Link focus color.
-$a: Link active color.
-
-// Separate out a different underline color.
-$bc: Link underline color.
-$bv: Link underline visited color.
-$bh: Link underline hover color.
-$bf: Link underline focus color.
-$ba: Link underline active color.
-*/
-/* stylelint-disable selector-class-pattern */
-@mixin u-link-colors(
-  $c: '',
-  $v: '',
-  $h: '',
-  $f: '',
-  $a: '',
-  $bc: '',
-  $bv: '',
-  $bh: '',
-  $bf: '',
-  $ba: ''
-) {
-  @if $c !=
-    '' and
-    $v !=
-    '' and
-    $h !=
-    '' and
-    $f !=
-    '' and
-    $a !=
-    '' and
-    $bc !=
-    '' and
-    $bv !=
-    '' and
-    $bh !=
-    '' and
-    $bf !=
-    '' and
-    $ba !=
-    ''
-  {
-    @include u-link-colors-base($c, $v, $h, $f, $a, $bc, $bv, $bh, $bf, $ba);
-  } @else if $c != '' and $v != '' and $h != '' and $f != '' and $a != '' {
-    @include u-link-colors-base($c, $v, $h, $f, $a, $c, $v, $h, $f, $a);
-  } @else if $c != '' and $v != '' {
-    @include u-link-colors-base($c, $c, $v, $v, $c, $c, $c, $v, $v, $c);
-  } @else if $c != '' {
-    @include u-link-colors-base($c, $c, $c, $c, $c, $c, $c, $c, $c, $c);
-  } @else {
-    @include u-link-colors-base;
-  }
-}
-
-@mixin u-link-colors-base(
-  $c: $link-text,
-  $v: $link-text-visited,
-  $h: $link-text-hover,
-  $f: $link-text,
-  $a: $link-text-active,
-  $bc: $link-underline,
-  $bv: $link-underline-visited,
-  $bh: $link-underline-hover,
-  $bf: $link-underline,
-  $ba: $link-underline-active
-) {
-  color: $c;
-  text-decoration-color: $bc;
-
-  &:visited,
-  &.visited {
-    text-decoration-color: $bv;
-    color: $v;
-  }
-
-  &:hover,
-  &.hover {
-    text-decoration-color: $bh;
-    color: $h;
-  }
-
-  &:focus,
-  &.focus {
-    text-decoration-color: $bf;
-    color: $f;
-  }
-
-  &:active,
-  &.active {
-    text-decoration-color: $ba;
-    color: $a;
-  }
-}
-/* stylelint-enable */
-
-// Turn off the default bottom `border` on the default and `:hover` states.
-@mixin u-link-no-border() {
-  text-decoration-line: none !important;
-}
-
-// Turn off the default bottom `border` on the default state,
-// but force a bottom border on the `:hover` state.
-@mixin u-link-hover-border() {
-  text-decoration-line: none !important;
-
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus {
-    text-decoration-line: underline !important;
   }
 }
 
@@ -425,15 +248,6 @@ $ba: Link underline active color.
 
 .u-w33pct {
   width: math.div(1, 3) * 100%;
-}
-
-//
-// Small text utility
-//
-/* stylelint-disable selector-class-pattern */
-@mixin u-small-text($context: $base-font-size-px) {
-  /* stylelint-enable */
-  font-size: math.div(14px, $context) + em;
 }
 
 small,

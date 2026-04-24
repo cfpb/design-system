@@ -1,49 +1,7 @@
 @use 'sass:math';
-@use './vars' as *;
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
-
-/*
-  Link text and underline.
-  $v: Link link and visited color.
-  $h: Link hover color.
-  $f: Link focus color.
-  $a: Link active color.
-  */
-@mixin u-btn-link-states($selector, $v, $h, $f, $a) {
-  #{$selector} {
-    &,
-    &:link,
-    &:visited {
-      text-decoration-color: $v;
-      background-color: transparent;
-      color: $v;
-    }
-
-    &:hover,
-    &.hover {
-      text-decoration-color: $h;
-      text-decoration-style: solid;
-      background-color: transparent;
-      color: $h;
-      box-shadow: none; // Added by secondary variant.
-    }
-
-    &:focus,
-    &.focus {
-      background-color: transparent;
-      outline: 1px dotted $f;
-      color: $f;
-    }
-
-    &:active,
-    &.active {
-      text-decoration-color: $a;
-      text-decoration-style: solid;
-      background-color: transparent;
-      color: $a;
-    }
-  }
-}
+@use './vars.host' as *;
+@use '.mixins' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts/api' as *;
 
 :host {
   //

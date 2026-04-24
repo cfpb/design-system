@@ -1,6 +1,7 @@
 // style-dictionary.config.js — ESM
 // Summary:
-// - Builds one CSS file per token JSON under packages/cfpb-design-system/src/tokens.
+// - Builds one :root CSS file and one :host CSS file
+//   per token JSON under packages/cfpb-design-system/src/tokens
 // - Uses DTCG $type for transforms; names are full-path kebab-case.
 // - Prefers hex colors, emits CSS v4 rgba() only when RGBA is present and hex is absent.
 // - Preserves Figma alias metadata as var(--...) with collision checks.
@@ -103,6 +104,17 @@ const buildFilesAndFilters = (basePath) => {
           sort: 'name',
           usesDtcg: true,
           selector: ':root',
+        },
+      });
+      files.push({
+        destination: destination.replace(/\.css$/, '.host.css'),
+        format: cssFormatName,
+        filter: filterName,
+        options: {
+          outputReferences: true,
+          sort: 'name',
+          usesDtcg: true,
+          selector: ':host',
         },
       });
     }
@@ -278,8 +290,6 @@ const cssVariablesNoSpaceCommasFormat = async ({
     options,
   });
   const indentation = formatting?.indentation || '  ';
-  const nestInSelector = (content, currentSelector, indent) =>
-    `${indent}${currentSelector} {\n${content}\n${indent}}`;
   const aliasInfoByName = new Map();
   if (outputReferences && usesDtcg) {
     for (const token of dictionary.allTokens) {
@@ -355,6 +365,8 @@ const cssVariablesNoSpaceCommasFormat = async ({
       sort,
     }),
   );
+  const nestInSelector = (content, currentSelector, indent) =>
+    `${indent}${currentSelector} {\n${content}\n${indent}}`;
   return (
     header +
     selector

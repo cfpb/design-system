@@ -228,7 +228,7 @@ description: >
 
 
   **WC = Web Component APIs**
-guidelines: ""
-behavior: ""
+guidelines: ''
+behavior: ''
 eyebrow: Web Components
 ---

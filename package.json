@@ -46,7 +46,7 @@
     "anchor-js": "5.0.0",
     "decap-cms-app": "3.12.2",
     "html-entities": "2.6.0",
-    "liquidjs": "10.25.6",
+    "liquidjs": "10.25.7",
     "lit": "3.3.2",
     "marked": "18.0.2",
     "minisearch": "7.2.0",
@@ -61,7 +61,7 @@
     "@lhci/cli": "0.15.1",
     "autoprefixer": "10.5.0",
     "concurrently": "9.2.1",
-    "cypress": "15.14.0",
+    "cypress": "15.14.1",
     "eslint": "10.2.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
@@ -82,13 +82,13 @@
     "postcss": "8.5.10",
     "prettier": "3.8.3",
     "prop-types": "15.8.1",
-    "release-it": "20.0.0",
+    "release-it": "20.0.1",
     "sass": "1.99.0",
     "style-dictionary": "5.4.0",
-    "stylelint": "17.8.0",
+    "stylelint": "17.9.0",
     "stylelint-config-standard-scss": "17.0.0",
     "svgo": "4.0.1",
-    "vite": "8.0.9"
+    "vite": "8.0.10"
   },
   "prettier": {
     "singleQuote": true

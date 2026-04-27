@@ -1,5 +1,5 @@
 @use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts/api' as *;
 
 .a-date {
   color: $date;

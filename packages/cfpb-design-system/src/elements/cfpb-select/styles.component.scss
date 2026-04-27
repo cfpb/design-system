@@ -1,5 +1,5 @@
-@use '@cfpb/cfpb-design-system/src/elements/base' as *;
-@use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '@cfpb/cfpb-design-system/src/elements/cfpb-utilities/shadow-utilities'
+  as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon';
 @use '../cfpb-utilities/transition/transition.css' as *;
 @use '../../utilities/functions' as *;

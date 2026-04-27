@@ -1,6 +1,5 @@
-@use '@cfpb/cfpb-design-system/src/elements/base' as *;
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts/api' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/mixins' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-typography/mixins' as *;
 @use '../../utilities/functions' as *;
 

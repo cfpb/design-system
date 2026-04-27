@@ -1,6 +1,7 @@
 @use 'sass:math';
-@use './vars' as *;
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use './vars.host' as *;
+@use '@cfpb/cfpb-design-system/src/elements/abstracts/api' as *;
+@use '@cfpb/cfpb-design-system/src/elements/cfpb-icon-text/mixins' as *;
 
 :host {
   //

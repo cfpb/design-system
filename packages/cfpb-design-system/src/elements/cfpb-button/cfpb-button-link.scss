@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './vars.host' as *;
-@use '.mixins' as *;
+@use './mixins' as *;
 @use '@cfpb/cfpb-design-system/src/elements/abstracts/api' as *;
 
 :host {

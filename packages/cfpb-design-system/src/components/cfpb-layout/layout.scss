@@ -114,6 +114,23 @@
 // Set up standard multi-column content area layouts.
 // Desktop and above.
 @include respond-to-min($bp-med-min) {
+  // Equal-height columns so the main/sidebar divider (::after on .content__main)
+  // spans the full height of the taller column. Plain inline-block columns only
+  // grow to their own content height, so the vertical rule would stop early.
+  .content--1-3 .wrapper,
+  .content--2-1 .wrapper {
+    align-items: stretch;
+    display: flex;
+  }
+
+  .content--1-3 .wrapper > .content__main,
+  .content--1-3 .wrapper > .content__sidebar,
+  .content--2-1 .wrapper > .content__main,
+  .content--2-1 .wrapper > .content__sidebar {
+    display: block;
+    margin-right: 0;
+  }
+
   .content {
     &--1-3 {
       .content__sidebar {
@@ -136,8 +153,15 @@
     &--2-1 {
       .content__main {
         @include u-grid-column(8);
+        position: relative;
         &::after {
+          content: '';
+          border-right: 1px solid var(--content-main-border);
+          position: absolute;
+          top: math.div(($grid-gutter-width * 1.5), $base-font-size-px) + em;
+          bottom: 0;
           right: math.div(($grid-gutter-width * -1), $base-font-size-px) + em;
+          width: 0;
         }
       }
       .content__sidebar {

@@ -17,7 +17,7 @@ describe('<cfpb-listbox> tests', () => {
     document.body.innerHTML = '';
   });
 
-  test('renders childData and sets checked state (single)', async () => {
+  it('renders childData and sets checked state (single)', async () => {
     list.childData = JSON.stringify([
       { value: 'A', checked: true },
       { value: 'B', checked: true },
@@ -33,7 +33,7 @@ describe('<cfpb-listbox> tests', () => {
     expect(list.checkedItems).toEqual([list.items[0]]);
   });
 
-  test('multiple selection mode allows multiple checked items', async () => {
+  it('multiple selection mode allows multiple checked items', async () => {
     list.multiple = true;
     list.childData = JSON.stringify([
       { value: 'A', checked: true },
@@ -57,7 +57,7 @@ describe('<cfpb-listbox> tests', () => {
     expect(list.checkedItems).toEqual([list.items[1]]);
   });
 
-  test('item-click toggles single selection', async () => {
+  it('item-click toggles single selection', async () => {
     list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
     await list.updateComplete;
 
@@ -79,7 +79,7 @@ describe('<cfpb-listbox> tests', () => {
     expect(list.checkedItems).toEqual([]);
   });
 
-  test('replaces prior click listeners on items', async () => {
+  it('replaces prior click listeners on items', async () => {
     list.childData = JSON.stringify([{ value: 'X' }]);
     await list.updateComplete;
 
@@ -95,7 +95,7 @@ describe('<cfpb-listbox> tests', () => {
     expect(listenerSpy).toHaveBeenCalled();
   });
 
-  test('filterItems hides items and sets focused index', async () => {
+  it('filterItems hides items and sets focused index', async () => {
     list.childData = JSON.stringify([
       { value: 'A' },
       { value: 'B' },
@@ -111,7 +111,7 @@ describe('<cfpb-listbox> tests', () => {
     expect(list.items[2].hidden).toBe(true);
   });
 
-  test('arrow keys skip hidden items', async () => {
+  it('arrow keys skip hidden items', async () => {
     list.childData = JSON.stringify([
       { value: 'A' },
       { value: 'B' },
@@ -144,7 +144,7 @@ describe('<cfpb-listbox> tests', () => {
     expect(document.activeElement.tagName).toBe('CFPB-LISTBOX');
   });
 
-  test('showAllItems unhides all items', async () => {
+  it('showAllItems unhides all items', async () => {
     list.childData = JSON.stringify([
       { value: 'A', hidden: true },
       { value: 'B', hidden: true },
@@ -156,7 +156,7 @@ describe('<cfpb-listbox> tests', () => {
     expect(list.visibleItems.length).toBe(2);
   });
 
-  test('invalid childData logs error', async () => {
+  it('invalid childData logs error', async () => {
     // eslint-disable-next-line no-console
     console.error = jest.fn();
     list.childData = 'not-json';
@@ -169,28 +169,28 @@ describe('<cfpb-listbox> tests', () => {
   // focusItemAt sentinel tests
   // -------------------------------
 
-  test('focusItemAt(-1) focuses the container', async () => {
+  it('focusItemAt(-1) focuses the container', async () => {
     list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
     await list.updateComplete;
     list.focusItemAt(-1);
     expect(document.activeElement.tagName).toBe('CFPB-LISTBOX');
   });
 
-  test('focusItemAt(null) focuses the container', async () => {
+  it('focusItemAt(null) focuses the container', async () => {
     list.childData = JSON.stringify([{ value: 'A' }]);
     await list.updateComplete;
     list.focusItemAt(null);
     expect(document.activeElement.tagName).toBe('CFPB-LISTBOX');
   });
 
-  test('focusItemAt(undefined) focuses the container', async () => {
+  it('focusItemAt(undefined) focuses the container', async () => {
     list.childData = JSON.stringify([{ value: 'A' }]);
     await list.updateComplete;
     list.focusItemAt(undefined);
     expect(document.activeElement.tagName).toBe('CFPB-LISTBOX');
   });
 
-  test('ArrowDown from container focuses first visible item', async () => {
+  it('ArrowDown from container focuses first visible item', async () => {
     list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
     await list.updateComplete;
 
@@ -202,7 +202,7 @@ describe('<cfpb-listbox> tests', () => {
     expect(document.activeElement.value).toBe('A');
   });
 
-  test('ArrowUp from container focuses last visible item', async () => {
+  it('ArrowUp from container focuses last visible item', async () => {
     list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
     await list.updateComplete;
 

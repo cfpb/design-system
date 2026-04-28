@@ -1,5 +1,5 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
-import { defineComponent } from '../cfpb-utilities/shared-config';
+import { defineComponent } from '../utilities/shared-config';
 import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './styles.component.scss?inline';

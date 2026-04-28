@@ -1,9 +1,9 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { defineComponent } from '../cfpb-utilities/shared-config';
+import { defineComponent } from '../utilities/shared-config';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './styles.component.scss?inline';
 import { CfpbListboxItem } from '../cfpb-listbox-item';
-import { parseChildData } from '../cfpb-utilities/parse-child-data';
+import { parseChildData } from '../utilities/parse-child-data';
 
 /**
  * @element cfpb-listbox.

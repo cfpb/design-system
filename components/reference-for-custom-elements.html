@@ -625,6 +625,10 @@
 
   <br>
 
+  <cfpb-icon-text no-divider iconleft="bank">Icon, but no divider</cfpb-icon-text>
+
+  <br>
+
   <cfpb-icon-text iconleft="download">Icon on left</cfpb-icon-text>
 
   <br>
@@ -670,6 +674,12 @@
   </p>
 <p>
 
+  <input type="checkbox" id="icon-text-example-no-divider">
+  <label for="icon-text-example-no-divider">No divider</label>
+
+  </p>
+<p>
+
   <input type="checkbox" id="icon-text-example-icon-animate">
   <label for="icon-text-example-icon-animate">Animate icon</label>
 
@@ -682,6 +692,8 @@
   const disBtn = document.querySelector('#icon-text-example-disabled');
 
   const hiddenBtn = document.querySelector('#icon-text-example-icon-hidden');
+
+  const noDivBtn = document.querySelector('#icon-text-example-no-divider');
 
   const animateBtn = document.querySelector('#icon-text-example-icon-animate');
 
@@ -702,6 +714,10 @@
     else iconTextEx.iconLeft = 'bank';
     if (iconTextEx.iconRight) iconTextEx.iconRight = null;
     else iconTextEx.iconRight = 'download';
+  });
+
+  noDivBtn.addEventListener('click', () => {
+    iconTextEx.noDivider = !iconTextEx.noDivider;
   });
 
   animateBtn.addEventListener('click', () => {
@@ -3236,8 +3252,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/reference-for-custom-elements.md">
-                            <time datetime="2026-04-28 16:03:51 -0400">
-                                 4:03:51 PM Apr 28, 2026
+                            <time datetime="2026-05-01 19:13:53 -0400">
+                                 7:13:53 PM May 01, 2026
                             </time>
                         </a>
                     </section>

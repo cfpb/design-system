@@ -18,6 +18,7 @@ export class CfpbIconText extends LitElement {
    * @property {string} iconRight - The name of the icon on the right.
    * @property {string} isIconLeftSpin - Whether the left icon spins or not.
    * @property {string} isIconRightSpin - Whether the right icon spins or not.
+   * @property {boolean} noDivider - If true, don't render a divider.
    * @returns {object} The map of properties.
    */
   static properties = {
@@ -26,6 +27,7 @@ export class CfpbIconText extends LitElement {
     iconRight: { type: String },
     isIconLeftSpin: { type: Boolean, attribute: 'iconleftspin' },
     isIconRightSpin: { type: Boolean, attribute: 'iconrightspin' },
+    noDivider: { type: Boolean, attribute: 'no-divider', reflect: true },
   };
 
   constructor() {

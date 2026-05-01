@@ -92,6 +92,10 @@ variation_groups:
 
             <br>
 
+            <cfpb-icon-text no-divider iconleft="bank">Icon, but no divider</cfpb-icon-text>
+
+            <br>
+
             <cfpb-icon-text iconleft="download">Icon on left</cfpb-icon-text>
 
             <br>
@@ -133,6 +137,11 @@ variation_groups:
 
             </p><p>
 
+            <input type="checkbox" id="icon-text-example-no-divider" />
+            <label for="icon-text-example-no-divider">No divider</label>
+
+            </p><p>
+
             <input type="checkbox" id="icon-text-example-icon-animate" />
             <label for="icon-text-example-icon-animate">Animate icon</label>
 
@@ -145,6 +154,8 @@ variation_groups:
             const disBtn = document.querySelector('#icon-text-example-disabled');
 
             const hiddenBtn = document.querySelector('#icon-text-example-icon-hidden');
+
+            const noDivBtn = document.querySelector('#icon-text-example-no-divider');
 
             const animateBtn = document.querySelector('#icon-text-example-icon-animate');
 
@@ -165,6 +176,10 @@ variation_groups:
               else iconTextEx.iconLeft = 'bank';
               if (iconTextEx.iconRight) iconTextEx.iconRight = null;
               else iconTextEx.iconRight = 'download';
+            });
+
+            noDivBtn.addEventListener('click', () => {
+              iconTextEx.noDivider = !iconTextEx.noDivider;
             });
 
             animateBtn.addEventListener('click', () => {

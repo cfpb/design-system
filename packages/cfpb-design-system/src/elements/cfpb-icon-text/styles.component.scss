@@ -20,17 +20,24 @@
     width: fit-content;
     align-items: center;
 
+    gap: rem-from-px(5px);
+  }
+
+  // Shine the slot contents through to the wrapper's flexbox items.
+  slot {
+    display: contents;
+  }
+}
+
+// Add divider.
+:host(:not([no-divider])) {
+  .wrapper {
     gap: rem-from-px(10px);
   }
 
   .left-divider::before,
   .right-divider::after {
     @include u-btn-divider;
-  }
-
-  // Shine the slot contents through to the wrapper's flexbox items.
-  slot {
-    display: contents;
   }
 }
 

@@ -14,47 +14,52 @@ export class CfpbFileUpload extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
+  #fileInput = createRef();
+
   static properties = {
+    accept: { type: String, reflect: true }, // The accepted file types.
     isDetailHidden: {
       type: Boolean,
-      attribute: 'hidden', // Maps 'hidden' to 'isDetailHidden' property.
-      reflect: true, // Reflects the property change back to the attribute.
+      state: true, // Internal property.
     },
-    fileName: { type: String }, // The file name.
-    accept: { type: String }, // The accepted file types.
-    value: { type: String }, // The raw file name.
-    files: { type: FileList }, // A FileList object.
+    fileName: { type: String, state: true }, // An internal file name.
+    files: { type: FileList, state: true }, // An internal FileList object.
   };
 
   constructor() {
     super();
-    this.#hideDetails();
-  }
 
-  #fileInput = createRef();
-  #fileDetails = createRef();
-
-  #getUploadName(fileName) {
-    let uploadName = fileName;
-    if (uploadName.indexOf('\\') > -1) {
-      const uploadNameParts = uploadName.split('\\');
-      uploadName = uploadNameParts[uploadNameParts.length - 1];
-    }
-
-    return uploadName;
+    // Hide the details.
+    this.isDetailHidden = true;
+    this.fileName = '';
+    this.files = null;
   }
 
   #showDetails() {
-    this.fileName = this.#getUploadName(this.#fileInput.value.value);
-    this.value = this.#fileInput.value.value;
-    this.files = this.#fileInput.value.files;
+    const input = this.#fileInput.value;
+    const files = input.files;
+
+    if (!files?.length) {
+      this.#hideDetails();
+      return;
+    }
+
+    this.fileName = files[0].name;
+    this.files = files;
     this.isDetailHidden = false;
+
+    this.dispatchEvent(
+      new CustomEvent('file-change', {
+        detail: { files },
+        bubbles: true,
+        composed: true,
+      }),
+    );
   }
 
   #hideDetails() {
     this.fileName = '';
-    this.value = '';
-    this.files = {};
+    this.files = null;
     this.isDetailHidden = true;
   }
 
@@ -80,16 +85,11 @@ export class CfpbFileUpload extends LitElement {
         class="a-btn a-btn--secondary"
         type="file"
         hidden
-        accept=${this.accept}
-        @input=${() => this.#checkStatus()}
-        @cancel=${() => this.#checkStatus()}
+        accept=${this.accept ?? ''}
+        @change=${() => this.#checkStatus()}
         ${ref(this.#fileInput)}
       />
-      <div
-        part="upload-details"
-        ?hidden=${this.isDetailHidden}
-        ${ref(this.#fileDetails)}
-      >
+      <div part="upload-details" ?hidden=${this.isDetailHidden}>
         <h4>File added</h4>
         <ul>
           <li>${this.fileName}</li>

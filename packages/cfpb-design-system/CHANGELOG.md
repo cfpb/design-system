@@ -2,7 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.3.2](https://github.com/cfpb/design-system/compare/v5.3.1..v5.3.2) - April 17, 2026
+## [5.3.3](https://github.com/cfpb/design-system/compare/v5.3.2..v5.3.3) - May  5, 2026
+
+### PRs in this release
+
+- PR #[2644](https://github.com/cfpb/design-system/pull/2644): Bump liquidjs, cypress, release-it, stylelint, vite - Ans
+- PR #[2647](https://github.com/cfpb/design-system/pull/2647): Bump eslint-plugin-cypress, git-cliff, postcss, styelint - Ans
+- PR #[2650](https://github.com/cfpb/design-system/pull/2650): cfpb-icon-text: add property to hide divider - Ans
+- PR #[2653](https://github.com/cfpb/design-system/pull/2653): cfpb-file-upload fixes/adjustments and add initial unit test - Ans
+
+### General
+
+- Re-generate assets - ([725952c](https://github.com/cfpb/design-system/commit/725952c5e897df7c5c0371923e3ba938a18b3abd)) - Ans
+- Standardize listbox jest test on `it(…)` - ([a1da9c3](https://github.com/cfpb/design-system/commit/a1da9c35811ac35f0ea88e242afb7835c0d7338a)) - Ans
+- Add `noDivider` property - ([eb77769](https://github.com/cfpb/design-system/commit/eb77769007f3079a64374d63b7efffaf4cd2ed35)) - Ans
+- Update reference-for-custom-elements.md - ([d157079](https://github.com/cfpb/design-system/commit/d1570799459d77dae03984da6108fd267176bc83)) - Ans
+- Cfpb-file-upload fixes/adjustments and add initial unit test - ([15d5c07](https://github.com/cfpb/design-system/commit/15d5c077ebc48461281379c78fc81223eea70026)) - Ans
+- Re-generate assets - ([5e23c50](https://github.com/cfpb/design-system/commit/5e23c50d20d5ee0b02f50f31400f63decaaf22f7)) - Ans
+
+## [5.3.2](https://github.com/cfpb/design-system/compare/v5.3.1..vv5.3.2) - April 17, 2026
 
 ### PRs in this release
 

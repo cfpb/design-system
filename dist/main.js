@@ -136,7 +136,7 @@ import{a as e,i as t,r as n,t as r,u as i}from"./tabs.js";import{a,c as o,d as s
       </div>
     `}static init(){bt.init(),C(`cfpb-form-choice`,e)}},wt=`:host{flex-direction:column;width:fit-content;display:flex}`,Tt=class e extends G{static styles=A`
     ${k(wt)}
-  `;static properties={isDetailHidden:{type:Boolean,attribute:`hidden`,reflect:!0},fileName:{type:String},accept:{type:String},value:{type:String},files:{type:FileList}};constructor(){super(),this.#i()}#e=K();#t=K();#n(e){let t=e;if(t.indexOf(`\\`)>-1){let e=t.split(`\\`);t=e[e.length-1]}return t}#r(){this.fileName=this.#n(this.#e.value.value),this.value=this.#e.value.value,this.files=this.#e.value.files,this.isDetailHidden=!1}#i(){this.fileName=``,this.value=``,this.files={},this.isDetailHidden=!0}#a(){this.#e.value.value==``?this.#i():this.#r()}render(){return U`
+  `;#e=K();static properties={accept:{type:String,reflect:!0},isDetailHidden:{type:Boolean,state:!0},fileName:{type:String,state:!0},files:{type:FileList,state:!0}};constructor(){super(),this.isDetailHidden=!0,this.fileName=``,this.files=null}#t(){let e=this.#e.value.files;if(!e?.length){this.#n();return}this.fileName=e[0].name,this.files=e,this.isDetailHidden=!1,this.dispatchEvent(new CustomEvent(`file-change`,{detail:{files:e},bubbles:!0,composed:!0}))}#n(){this.fileName=``,this.files=null,this.isDetailHidden=!0}#r(){this.#e.value.value==``?this.#n():this.#t()}render(){return U`
       <cfpb-button
         variant="secondary"
         @click=${()=>{this.#e.value.click()}}
@@ -147,16 +147,11 @@ import{a as e,i as t,r as n,t as r,u as i}from"./tabs.js";import{a,c as o,d as s
         class="a-btn a-btn--secondary"
         type="file"
         hidden
-        accept=${this.accept}
-        @input=${()=>this.#a()}
-        @cancel=${()=>this.#a()}
+        accept=${this.accept??``}
+        @change=${()=>this.#r()}
         ${q(this.#e)}
       />
-      <div
-        part="upload-details"
-        ?hidden=${this.isDetailHidden}
-        ${q(this.#t)}
-      >
+      <div part="upload-details" ?hidden=${this.isDetailHidden}>
         <h4>File added</h4>
         <ul>
           <li>${this.fileName}</li>

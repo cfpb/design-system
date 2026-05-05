@@ -1486,38 +1486,45 @@ var bt = class e extends I {
 	static styles = g`
     ${h(Ot)}
   `;
+	#e = L();
 	static properties = {
-		isDetailHidden: {
-			type: Boolean,
-			attribute: "hidden",
+		accept: {
+			type: String,
 			reflect: !0
 		},
-		fileName: { type: String },
-		accept: { type: String },
-		value: { type: String },
-		files: { type: FileList }
+		isDetailHidden: {
+			type: Boolean,
+			state: !0
+		},
+		fileName: {
+			type: String,
+			state: !0
+		},
+		files: {
+			type: FileList,
+			state: !0
+		}
 	};
 	constructor() {
-		super(), this.#i();
+		super(), this.isDetailHidden = !0, this.fileName = "", this.files = null;
 	}
-	#e = L();
-	#t = L();
-	#n(e) {
-		let t = e;
-		if (t.indexOf("\\") > -1) {
-			let e = t.split("\\");
-			t = e[e.length - 1];
+	#t() {
+		let e = this.#e.value.files;
+		if (!e?.length) {
+			this.#n();
+			return;
 		}
-		return t;
+		this.fileName = e[0].name, this.files = e, this.isDetailHidden = !1, this.dispatchEvent(new CustomEvent("file-change", {
+			detail: { files: e },
+			bubbles: !0,
+			composed: !0
+		}));
+	}
+	#n() {
+		this.fileName = "", this.files = null, this.isDetailHidden = !0;
 	}
 	#r() {
-		this.fileName = this.#n(this.#e.value.value), this.value = this.#e.value.value, this.files = this.#e.value.files, this.isDetailHidden = !1;
-	}
-	#i() {
-		this.fileName = "", this.value = "", this.files = {}, this.isDetailHidden = !0;
-	}
-	#a() {
-		this.#e.value.value == "" ? this.#i() : this.#r();
+		this.#e.value.value == "" ? this.#n() : this.#t();
 	}
 	render() {
 		return j`
@@ -1533,16 +1540,11 @@ var bt = class e extends I {
         class="a-btn a-btn--secondary"
         type="file"
         hidden
-        accept=${this.accept}
-        @input=${() => this.#a()}
-        @cancel=${() => this.#a()}
+        accept=${this.accept ?? ""}
+        @change=${() => this.#r()}
         ${R(this.#e)}
       />
-      <div
-        part="upload-details"
-        ?hidden=${this.isDetailHidden}
-        ${R(this.#t)}
-      >
+      <div part="upload-details" ?hidden=${this.isDetailHidden}>
         <h4>File added</h4>
         <ul>
           <li>${this.fileName}</li>

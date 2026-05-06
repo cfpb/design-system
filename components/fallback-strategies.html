@@ -454,7 +454,7 @@ For example, the following structure include a fallback written in a <code class
 </code></pre></div></div>
 
 <blockquote>
-  <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
+  <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
 </blockquote>
 
 <h3 id="js-enabled-web-components-not-supported">JS enabled, web components not supported</h3>
@@ -462,7 +462,7 @@ For example, the following structure include a fallback written in a <code class
 <p>In the case where JavaScript is available—but web component APIs are not (as is the case in legacy browsers)—we can globally check if web components are supported, and if not, we can load a polyfill, or we could just let it fall back to the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content. <em>However</em>, the problem here is that if JS is enabled, but web components are not supported, then the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> content will not show! Therefore, we need to use JavaScript to turn the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag inside the web component into <code class="language-plaintext highlighter-rouge">&lt;div class="fallback"&gt;</code>.</p>
 
 <blockquote>
-  <p>A JS utility for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.js"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.js</code></a>. It can be included in a project’s JS bundle so that it is available for use globally.</p>
+  <p>A JS utility for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/utilities/fallback/wc-fallback.js"><code class="language-plaintext highlighter-rouge">utilities/fallback/wc-fallback.js</code></a>. It can be included in a project’s JS bundle so that it is available for use globally.</p>
 </blockquote>
 
 <p>Changing the <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code> tag to a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> would now show the content inside the former <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code>, <em>except</em> non-noscript tags are hidden via the CSS! So, lastly, we need to add more CSS to show the div with the <code class="language-plaintext highlighter-rouge">.fallback</code> class:</p>
@@ -471,7 +471,7 @@ For example, the following structure include a fallback written in a <code class
 </code></pre></div></div>
 
 <blockquote>
-  <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
+  <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
 </blockquote>
 
 <h3 id="js-enabled-web-components-are-supported">JS enabled, web components are supported</h3>
@@ -482,7 +482,7 @@ For example, the following structure include a fallback written in a <code class
 </code></pre></div></div>
 
 <blockquote>
-  <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">cfpb-utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
+  <p>CSS for this use-case can be found in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/utilities/fallback/wc-fallback.css"><code class="language-plaintext highlighter-rouge">utilities/fallback/wc-fallback.css</code></a>, and can be included in a project’s CSS bundle so that it is available for use.</p>
 </blockquote>
 
 <h2 id="summary">Summary</h2>
@@ -559,8 +559,8 @@ For example, the following structure include a fallback written in a <code class
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/fallback-strategies.md">
-                            <time datetime="2026-05-05 09:55:39 -0400">
-                                 9:55:39 AM May 05, 2026
+                            <time datetime="2026-05-06 13:47:26 -0400">
+                                 1:47:26 PM May 06, 2026
                             </time>
                         </a>
                     </section>

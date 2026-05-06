@@ -1,7 +1,7 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { defineComponent } from '../cfpb-utilities/shared-config';
+import { defineComponent } from '../utilities/shared-config';
 import styles from './styles.component.scss?inline';
-import { parseChildData } from '../cfpb-utilities/parse-child-data';
+import { parseChildData } from '../utilities/parse-child-data';
 
 const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
 

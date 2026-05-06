@@ -1,10 +1,10 @@
 import { html, LitElement, css, unsafeCSS, nothing } from 'lit';
-import { defineComponent } from '../cfpb-utilities/shared-config';
+import { defineComponent } from '../utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbIcon } from '../cfpb-icon';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
-import { SearchService } from '../cfpb-utilities/search-service.js';
+import { SearchService } from '../utilities/search-service.js';
 import { MaxHeightTransition } from '../../utilities/transition/max-height-transition';
 import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
 import { CfpbListbox } from '../cfpb-listbox';

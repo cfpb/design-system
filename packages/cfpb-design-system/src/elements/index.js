@@ -8,7 +8,7 @@
 export * from './abstracts';
 
 // Shared config.
-export * from './cfpb-utilities/shared-config';
+export * from './utilities/shared-config';
 
 // Component styles.
 export * from './cfpb-button';

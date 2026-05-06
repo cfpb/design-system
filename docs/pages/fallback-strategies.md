@@ -170,7 +170,7 @@ description: >
   ```
 
 
-  > CSS for this use-case can be found in [`cfpb-utilities/fallback/wc-fallback.css`](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css), and can be included in a project's CSS bundle so that it is available for use.
+  > CSS for this use-case can be found in [`utilities/fallback/wc-fallback.css`](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/utilities/fallback/wc-fallback.css), and can be included in a project's CSS bundle so that it is available for use.
 
 
   ### JS enabled, web components not supported
@@ -179,7 +179,7 @@ description: >
   In the case where JavaScript is available—but web component APIs are not (as is the case in legacy browsers)—we can globally check if web components are supported, and if not, we can load a polyfill, or we could just let it fall back to the `<noscript>` content. *However*, the problem here is that if JS is enabled, but web components are not supported, then the `<noscript>` content will not show! Therefore, we need to use JavaScript to turn the `<noscript>` tag inside the web component into `<div class="fallback">`.
 
 
-  > A JS utility for this use-case can be found in [`cfpb-utilities/fallback/wc-fallback.js`](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.js). It can be included in a project's JS bundle so that it is available for use globally.
+  > A JS utility for this use-case can be found in [`utilities/fallback/wc-fallback.js`](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/utilities/fallback/wc-fallback.js). It can be included in a project's JS bundle so that it is available for use globally.
 
 
   Changing the `<noscript>` tag to a `<div>` would now show the content inside the former `<noscript>`, *except* non-noscript tags are hidden via the CSS! So, lastly, we need to add more CSS to show the div with the `.fallback` class:
@@ -192,7 +192,7 @@ description: >
   ```
 
 
-  > CSS for this use-case can be found in [`cfpb-utilities/fallback/wc-fallback.css`](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css), and can be included in a project's CSS bundle so that it is available for use.
+  > CSS for this use-case can be found in [`utilities/fallback/wc-fallback.css`](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/utilities/fallback/wc-fallback.css), and can be included in a project's CSS bundle so that it is available for use.
 
 
   ### JS enabled, web components are supported
@@ -208,7 +208,7 @@ description: >
   ```
 
 
-  > CSS for this use-case can be found in [`cfpb-utilities/fallback/wc-fallback.css`](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/cfpb-utilities/fallback/wc-fallback.css), and can be included in a project's CSS bundle so that it is available for use.
+  > CSS for this use-case can be found in [`utilities/fallback/wc-fallback.css`](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/elements/utilities/fallback/wc-fallback.css), and can be included in a project's CSS bundle so that it is available for use.
 
 
   ## Summary

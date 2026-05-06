@@ -1,5 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { defineComponent } from '../cfpb-utilities/shared-config';
+import { defineComponent } from '../utilities/shared-config';
 import { CfpbFlagUsa } from '../cfpb-flag-usa';
 import styles from './styles.component.scss?inline';
 

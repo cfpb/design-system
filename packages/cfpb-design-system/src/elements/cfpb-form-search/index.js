@@ -1,9 +1,9 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { defineComponent } from '../cfpb-utilities/shared-config';
+import { defineComponent } from '../utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
-import { SearchService } from '../cfpb-utilities/search-service.js';
+import { SearchService } from '../utilities/search-service.js';
 import { CfpbListbox } from '../cfpb-listbox';
 import { CfpbFormAlert } from '../cfpb-form-alert';
 

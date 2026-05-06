@@ -1715,7 +1715,7 @@ var bt = class e extends I {
 	}
 };
 //#endregion
-//#region packages/cfpb-design-system/src/elements/cfpb-utilities/parse-child-data.js
+//#region packages/cfpb-design-system/src/elements/utilities/parse-child-data.js
 function It(e, t = {}) {
 	let { allowSingleQuotes: n = !0 } = t;
 	if (!e) return null;

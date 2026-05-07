@@ -8,5 +8,8 @@ export default defineConfig({
     include: ['packages/**/*.spec.js'],
     // Handle the CSS imports that are in JS files:
     css: true,
+    coverage: {
+      reportsDirectory: './test/unit-test-coverage',
+    },
   },
 });

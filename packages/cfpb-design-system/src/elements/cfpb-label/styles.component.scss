@@ -1,5 +1,5 @@
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
-@use '../../utilities/functions' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 :host {
   .a-label {

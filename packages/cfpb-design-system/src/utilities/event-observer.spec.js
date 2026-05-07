@@ -1,4 +1,3 @@
-import { jest } from '@jest/globals';
 import { EventObserver } from './event-observer.js';
 
 const HTML_SNIPPET = '<!DOCTYPE html>';
@@ -11,8 +10,8 @@ describe('EventObserver', () => {
   beforeEach(() => {
     mockEvent = { events: {} };
     mockEvent = Object.assign(mockEvent, new EventObserver());
-    spy1 = jest.fn();
-    spy2 = jest.fn();
+    spy1 = vi.fn();
+    spy2 = vi.fn();
     document.body.innerHTML = HTML_SNIPPET;
   });
 

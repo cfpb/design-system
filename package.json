@@ -35,7 +35,7 @@
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-decap": "npx decap-server",
     "start": "concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build-docs-watch\"",
-    "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
+    "test": "vitest run",
     "cy": "./scripts/cypress.sh",
     "changelog": "./scripts/changelog.sh",
     "tokens": "style-dictionary build --config ./style-dictionary.config.js && yarn lint \"packages/cfpb-design-system/src/elements/**/*.css\""
@@ -59,6 +59,9 @@
     "@csstools/postcss-sass": "5.1.1",
     "@eslint/js": "10.0.1",
     "@lhci/cli": "0.15.1",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/user-event": "14.6.1",
+    "@vitest/coverage-v8": "4.1.5",
     "autoprefixer": "10.5.0",
     "concurrently": "9.2.1",
     "cypress": "15.14.2",
@@ -71,14 +74,13 @@
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-lit": "2.2.1",
     "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-vitest-globals": "1.6.1",
     "eslint-plugin-wc": "3.1.0",
     "git-cliff": "2.13.1",
     "glob": "13.0.6",
     "globals": "17.6.0",
     "http-server": "14.1.1",
-    "jest": "30.3.0",
-    "jest-cli": "30.3.0",
-    "jest-environment-jsdom": "30.3.0",
+    "jsdom": "29.1.1",
     "postcss": "8.5.14",
     "prettier": "3.8.3",
     "prop-types": "15.8.1",
@@ -88,7 +90,8 @@
     "stylelint": "17.11.0",
     "stylelint-config-standard-scss": "17.0.0",
     "svgo": "4.0.1",
-    "vite": "8.0.11"
+    "vite": "8.0.11",
+    "vitest": "4.1.5"
   },
   "prettier": {
     "singleQuote": true

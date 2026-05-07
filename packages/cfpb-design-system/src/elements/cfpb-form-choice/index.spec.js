@@ -1,5 +1,7 @@
-import { jest } from '@jest/globals';
+import userEvent from '@testing-library/user-event';
 import { CfpbFormChoice } from './index.js';
+
+const user = userEvent.setup();
 
 describe('<cfpb-form-choice>', () => {
   let elm;
@@ -31,12 +33,12 @@ describe('<cfpb-form-choice>', () => {
   });
 
   it('dispatches the correct event', async () => {
-    const inputMockHandler = jest.fn();
-    const changeMockHandler = jest.fn();
+    const inputMockHandler = vi.fn();
+    const changeMockHandler = vi.fn();
     elm.addEventListener('input', inputMockHandler);
     elm.addEventListener('change', changeMockHandler);
 
-    elm.shadowRoot.querySelector('label').click();
+    await user.click(elm.shadowRoot.querySelector('label'));
 
     expect(inputMockHandler).toHaveBeenCalledTimes(1);
     expect(inputMockHandler.mock.calls[0][0].target).toBe(elm);

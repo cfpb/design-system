@@ -11,6 +11,7 @@ import pluginCypress from 'eslint-plugin-cypress';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import { configs as eslintPluginLit } from 'eslint-plugin-lit';
 import { configs as eslintPluginWc } from 'eslint-plugin-wc';
+import vitestGlobals from 'eslint-plugin-vitest-globals';
 
 export default defineConfig([
   {
@@ -30,6 +31,7 @@ export default defineConfig([
   pluginCypress.configs.recommended,
   eslintPluginLit['flat/recommended'],
   eslintPluginWc['flat/recommended'],
+  vitestGlobals.configs['flat/recommended'],
 
   // Prettier always last
   eslintConfigPrettier,
@@ -44,7 +46,6 @@ export default defineConfig([
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.jest,
       },
     },
     settings: {

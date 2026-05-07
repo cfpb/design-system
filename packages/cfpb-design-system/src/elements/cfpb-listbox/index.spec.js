@@ -1,4 +1,3 @@
-import { jest } from '@jest/globals';
 import { CfpbListbox } from './index';
 
 beforeAll(() => {
@@ -61,7 +60,7 @@ describe('<cfpb-listbox> tests', () => {
     list.childData = JSON.stringify([{ value: 'A' }, { value: 'B' }]);
     await list.updateComplete;
 
-    const clickSpy = jest.fn();
+    const clickSpy = vi.fn();
     list.addEventListener('item-click', clickSpy);
 
     list.items[0].checked = true;
@@ -83,7 +82,7 @@ describe('<cfpb-listbox> tests', () => {
     list.childData = JSON.stringify([{ value: 'X' }]);
     await list.updateComplete;
 
-    const listenerSpy = jest.fn();
+    const listenerSpy = vi.fn();
     list.addEventListener('item-click', listenerSpy);
 
     const event = new CustomEvent('item-click', {
@@ -158,7 +157,7 @@ describe('<cfpb-listbox> tests', () => {
 
   it('invalid childData logs error', async () => {
     // eslint-disable-next-line no-console
-    console.error = jest.fn();
+    console.error = vi.fn();
     list.childData = 'not-json';
     await list.updateComplete;
     // eslint-disable-next-line no-console

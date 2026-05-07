@@ -1,6 +1,6 @@
 @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/elements/cfpb-button/cfpb-button' as *;
-@use '../../utilities/functions' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 :host {
   // Hide light DOM content.

@@ -1,5 +1,7 @@
-import { jest } from '@jest/globals';
+import userEvent from '@testing-library/user-event';
 import { CfpbTagFilter } from './index.js';
+
+const user = userEvent.setup();
 
 describe('<cfpb-tag-filter>', () => {
   let elm;
@@ -32,10 +34,10 @@ describe('<cfpb-tag-filter>', () => {
   });
 
   it('dispatches the correct event', async () => {
-    const mockHandler = jest.fn();
+    const mockHandler = vi.fn();
     elm.addEventListener('tag-click', mockHandler);
 
-    elm.shadowRoot.querySelector('button').click();
+    await user.click(elm.shadowRoot.querySelector('button'));
 
     expect(mockHandler).toHaveBeenCalledTimes(1);
     expect(mockHandler.mock.calls[0][0].detail.target).toBe(elm);

@@ -1,6 +1,6 @@
 @use '@cfpb/cfpb-design-system/src/components/cfpb-forms/text-input' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon' as *;
-@use '../../utilities/functions' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 :host {
   // Theme

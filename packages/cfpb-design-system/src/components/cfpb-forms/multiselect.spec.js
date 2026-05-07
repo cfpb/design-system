@@ -1,4 +1,7 @@
+import userEvent from '@testing-library/user-event';
 import { Multiselect } from './multiselect.js';
+
+const user = userEvent.setup();
 
 let multiselect;
 let selectDom;
@@ -85,11 +88,11 @@ describe('Multiselect', () => {
   });
 
   describe('interactions', () => {
-    it('should highlight the first item when keying down', function () {
+    it('should highlight the first item when keying down', async () => {
       multiselect.init();
       const search = document.querySelector('#test-select');
-      search.click();
-      window.simulateEvent('keydown', search, { key: 'ArrowDown' });
+      await user.click(search);
+      await user.keyboard('{ArrowDown}');
 
       expect(document.activeElement.id).toBe('test-select-debt-collection');
       expect(document.activeElement.value).toBe('Debt collection');

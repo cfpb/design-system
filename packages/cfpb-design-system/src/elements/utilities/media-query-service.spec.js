@@ -1,4 +1,3 @@
-import { jest } from '@jest/globals';
 import { MediaQueryService } from './media-query-service';
 
 describe('MediaQueryService', () => {
@@ -13,7 +12,7 @@ describe('MediaQueryService', () => {
     listeners = {};
     mediaQueryState = {};
 
-    mockMatchMedia = jest.fn().mockImplementation((query) => {
+    mockMatchMedia = vi.fn().mockImplementation((query) => {
       const key = query;
       mediaQueryState[key] = mediaQueryState[key] ?? false;
 
@@ -25,8 +24,8 @@ describe('MediaQueryService', () => {
             listeners[key] = cb;
           }
         },
-        removeEventListener: jest.fn(),
-        dispatchEvent: jest.fn(),
+        removeEventListener: vi.fn(),
+        dispatchEvent: vi.fn(),
       };
     });
 
@@ -86,7 +85,7 @@ describe('MediaQueryService', () => {
       test: { min: 100 },
     });
 
-    const mockHandler = jest.fn();
+    const mockHandler = vi.fn();
     mqs.addEventListener('change', mockHandler);
 
     simulateResize('(min-width: 100px)', false);
@@ -104,13 +103,13 @@ describe('MediaQueryService', () => {
   });
 
   it('destroy removes all listeners', () => {
-    const removeListenerMock = jest.fn();
+    const removeListenerMock = vi.fn();
 
-    window.matchMedia = jest.fn().mockImplementation((query) => {
+    window.matchMedia = vi.fn().mockImplementation((query) => {
       return {
         matches: false,
         media: query,
-        addEventListener: jest.fn(),
+        addEventListener: vi.fn(),
         removeEventListener: removeListenerMock,
       };
     });

@@ -1,5 +1,3 @@
-env:
-  jest: true
 rules:
   wrap-iife: 0
   no-process-env: 0

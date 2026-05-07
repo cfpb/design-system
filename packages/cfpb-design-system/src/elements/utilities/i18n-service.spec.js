@@ -1,4 +1,4 @@
-import { describe, jest } from '@jest/globals';
+import { vi } from 'vitest';
 import { I18nService } from './i18n-service';
 
 I18nService.init();
@@ -6,14 +6,14 @@ I18nService.init();
 describe('I18Service', () => {
   let elm;
   beforeEach(() => {
-    jest.useFakeTimers();
+    vi.useFakeTimers();
     elm = document.createElement('i18n-service');
     document.body.appendChild(elm);
   });
 
   afterEach(() => {
     document.body.removeChild(elm);
-    jest.useRealTimers();
+    vi.useRealTimers();
   });
 
   xdescribe('connectedCallback and template parsing', () => {
@@ -24,7 +24,7 @@ describe('I18Service', () => {
       });
       elm.connectedCallback();
       // We expect requestAnimationFrame to schedule the dispatch: flush it.
-      await jest.runOnlyPendingTimers();
+      await vi.runOnlyPendingTimers();
     });
 
     it('dispatches parse-error when JSON is invalid', async () => {
@@ -39,7 +39,7 @@ describe('I18Service', () => {
       });
 
       elm.connectedCallback();
-      await jest.runOnlyPendingTimers();
+      await vi.runOnlyPendingTimers();
     });
 
     it('dispatches invalid-format when JSON is an array or not object', async () => {
@@ -53,7 +53,7 @@ describe('I18Service', () => {
       });
 
       elm.connectedCallback();
-      await jest.runOnlyPendingTimers();
+      await vi.runOnlyPendingTimers();
     });
 
     it('parses valid JSON and sets default language', () => {
@@ -67,7 +67,7 @@ describe('I18Service', () => {
       elm.appendChild(tpl);
 
       elm.connectedCallback();
-      jest.runOnlyPendingTimers();
+      vi.runOnlyPendingTimers();
 
       expect(elm.language).toBe('en');
       expect(elm.availableLanguages).toEqual(['en', 'es']);
@@ -93,7 +93,7 @@ describe('I18Service', () => {
         expect(evt.detail.message).toMatch(/Unsupported language/);
       });
       elm.connectedCallback();
-      await jest.runOnlyPendingTimers();
+      await vi.runOnlyPendingTimers();
 
       elm.language = 'de';
       expect(elm.language).toBe('en');
@@ -101,7 +101,7 @@ describe('I18Service', () => {
 
     it('switching to valid language dispatches i18n-change event', async () => {
       elm.connectedCallback();
-      await jest.runOnlyPendingTimers();
+      await vi.runOnlyPendingTimers();
 
       elm.addEventListener('i18n-change', (evt) => {
         expect(evt.detail.language).toBe('es');
@@ -113,8 +113,8 @@ describe('I18Service', () => {
 
     it('assigning the same language does not re-dispatch change', async () => {
       elm.connectedCallback();
-      await jest.runOnlyPendingTimers();
-      const spy = jest.fn();
+      await vi.runOnlyPendingTimers();
+      const spy = vi.fn();
 
       elm.addEventListener('i18n-change', spy);
       elm.language = 'es';
@@ -137,7 +137,7 @@ describe('I18Service', () => {
 
     it('returns correct translation for existing key', async () => {
       elm.connectedCallback();
-      await jest.runOnlyPendingTimers();
+      await vi.runOnlyPendingTimers();
 
       expect(elm.translate('hello')).toBe('Hello');
       elm.language = 'es';

@@ -1,4 +1,7 @@
+import userEvent from '@testing-library/user-event';
 import { Expandable, ExpandableGroup } from './index.js';
+
+const user = userEvent.setup();
 
 const HTML_SNIPPET = `
 <div class="o-expandable-group"
@@ -157,18 +160,18 @@ describe('standard Expandable', () => {
   });
 
   describe('interactions', () => {
-    it('should expand on click', () => {
-      window.simulateEvent('click', targetDom1);
+    it('should expand on click', async () => {
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
     });
 
-    it('should go back to initial state on second click', () => {
-      window.simulateEvent('click', targetDom1);
+    it('should go back to initial state on second click', async () => {
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
-      window.simulateEvent('click', targetDom1);
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
@@ -208,56 +211,56 @@ describe('accordion Expandables', () => {
   });
 
   describe('interactions', () => {
-    it('should expand on a click', () => {
-      window.simulateEvent('click', targetDom1);
+    it('should expand on a click', async () => {
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
     });
 
-    it('should collapse on a second click', () => {
-      window.simulateEvent('click', targetDom1);
+    it('should collapse on a second click', async () => {
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
-      window.simulateEvent('click', targetDom1);
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
     });
 
-    it('should expand on a third click', () => {
-      window.simulateEvent('click', targetDom1);
+    it('should expand on a third click', async () => {
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
-      window.simulateEvent('click', targetDom1);
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
-      window.simulateEvent('click', targetDom1);
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
     });
 
-    it('should swap the expanded expandable', () => {
-      window.simulateEvent('click', targetDom1);
+    it('should swap the expanded expandable', async () => {
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
-      window.simulateEvent('click', targetDom2);
+      await user.click(targetDom2);
       fireTransitionEnd(contentDom2);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
       expect(targetDom2.getAttribute('aria-expanded')).toBe('true');
     });
 
-    it('should swap the expanded expandable when reactivated', () => {
-      window.simulateEvent('click', targetDom1);
+    it('should swap the expanded expandable when reactivated', async () => {
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
 
-      window.simulateEvent('click', targetDom2);
+      await user.click(targetDom2);
       fireTransitionEnd(contentDom1);
       fireTransitionEnd(contentDom2);
 
-      window.simulateEvent('click', targetDom1);
+      await user.click(targetDom1);
       fireTransitionEnd(contentDom1);
       fireTransitionEnd(contentDom2);
 

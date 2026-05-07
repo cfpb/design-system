@@ -18,4 +18,4 @@ jobs:
       uses:  ./.github/actions/shared-action-setup
 
     - name: Run unit tests
-      run: yarn jest
+      run: yarn test

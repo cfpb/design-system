@@ -1,8 +1,6 @@
 @use '@cfpb/cfpb-design-system/src/elements/base' as *;
-@use '@cfpb/cfpb-design-system/src/utilities' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 @use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon';
-@use '../utilities/transition/transition.css' as *;
-@use '../../utilities/functions' as *;
 
 :host {
   // Theme

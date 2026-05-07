@@ -1,4 +1,3 @@
-import { beforeAll } from '@jest/globals';
 import { create } from './multiselect-utils.js';
 
 describe('create', () => {

@@ -1,7 +1,9 @@
-import { jest } from '@jest/globals';
+import userEvent from '@testing-library/user-event';
 import { CfpbTagFilter } from '../cfpb-tag-filter';
 import { CfpbTagTopic } from '../cfpb-tag-topic';
 import { CfpbTagGroup } from './index.js';
+
+const user = userEvent.setup();
 
 describe('<cfpb-tag-group>', () => {
   let elm;
@@ -40,8 +42,8 @@ describe('<cfpb-tag-group>', () => {
   });
 
   it('dispatches the correct events', async () => {
-    const mockAddedHandler = jest.fn();
-    const mockRemoveHandler = jest.fn();
+    const mockAddedHandler = vi.fn();
+    const mockRemoveHandler = vi.fn();
     elm.addEventListener('tag-added', mockAddedHandler);
     elm.addEventListener('tag-removed', mockRemoveHandler);
 
@@ -64,10 +66,11 @@ describe('<cfpb-tag-group>', () => {
       ),
     ).toBe(true);
 
-    elm.shadowRoot
-      .querySelector('cfpb-tag-filter')
-      .shadowRoot.querySelector('button')
-      .click();
+    await user.click(
+      elm.shadowRoot
+        .querySelector('cfpb-tag-filter')
+        .shadowRoot.querySelector('button'),
+    );
 
     expect(mockRemoveHandler).toHaveBeenCalledTimes(1);
     expect(

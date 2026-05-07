@@ -57,7 +57,7 @@ const HTML_SNIPPET = `
     </div>
 </div>
 
-<div class="o-expandable" id="test-subject-two">
+<div class="o-expandable" id="test-subject-three">
     <button class="o-expandable__header"
             title="Expand content">
         <span class="o-expandable__label">
@@ -92,6 +92,29 @@ let targetDom1;
 let targetDom2;
 let contentDom1;
 let contentDom2;
+
+/**
+ * Simulate a transtitionend event.
+ * @param {HTMLElement} elm - The element to fire the event.
+ */
+function fireTransitionEnd(elm) {
+  ['transitionend', 'webkitTransitionEnd'].forEach((type) => {
+    const event = new Event(type, {
+      bubbles: true,
+      cancelable: true,
+    });
+
+    Object.defineProperty(event, 'propertyName', {
+      value: 'max-height',
+    });
+
+    Object.defineProperty(event, 'target', {
+      value: elm,
+    });
+
+    elm.dispatchEvent(event);
+  });
+}
 
 describe('standard Expandable', () => {
   beforeEach(() => {
@@ -129,36 +152,24 @@ describe('standard Expandable', () => {
     });
 
     it('should return label text', () => {
-      expect(expandable.getLabelText() === 'Expandable Header 3');
+      expect(expandable.getLabelText()).toEqual('Expandable Header 3');
     });
   });
 
   describe('interactions', () => {
     it('should expand on click', () => {
       window.simulateEvent('click', targetDom1);
-
-      /* The transitionend event should fire on its own,
-         but for some reason the transitionend event is not firing within JSDom.
-         In a future JSDom update this should be revisited.
-         See https://github.com/jsdom/jsdom/issues/1781
-      */
-      const event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('should go back to initial state on second click', () => {
       window.simulateEvent('click', targetDom1);
-      let event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       window.simulateEvent('click', targetDom1);
-      event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
     });
@@ -199,57 +210,40 @@ describe('accordion Expandables', () => {
   describe('interactions', () => {
     it('should expand on a click', () => {
       window.simulateEvent('click', targetDom1);
-
-      const event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('should collapse on a second click', () => {
       window.simulateEvent('click', targetDom1);
-      let event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       window.simulateEvent('click', targetDom1);
-      event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
     });
 
     it('should expand on a third click', () => {
       window.simulateEvent('click', targetDom1);
-      let event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       window.simulateEvent('click', targetDom1);
-      event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       window.simulateEvent('click', targetDom1);
-      event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('should swap the expanded expandable', () => {
       window.simulateEvent('click', targetDom1);
-      let event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       window.simulateEvent('click', targetDom2);
-      event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom2.dispatchEvent(event);
+      fireTransitionEnd(contentDom2);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
       expect(targetDom2.getAttribute('aria-expanded')).toBe('true');
@@ -257,25 +251,15 @@ describe('accordion Expandables', () => {
 
     it('should swap the expanded expandable when reactivated', () => {
       window.simulateEvent('click', targetDom1);
-      let event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
 
       window.simulateEvent('click', targetDom2);
-      event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
-      event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom2.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
+      fireTransitionEnd(contentDom2);
 
       window.simulateEvent('click', targetDom1);
-      event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom1.dispatchEvent(event);
-      event = new Event('transitionend');
-      event.propertyName = 'max-height';
-      contentDom2.dispatchEvent(event);
+      fireTransitionEnd(contentDom1);
+      fireTransitionEnd(contentDom2);
 
       expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
       expect(targetDom2.getAttribute('aria-expanded')).toBe('false');

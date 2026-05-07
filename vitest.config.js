@@ -10,6 +10,8 @@ export default defineConfig({
     css: true,
     coverage: {
       reportsDirectory: './test/unit-test-coverage',
+      include: ['**/packages/**/src/**/*.js'],
+      exclude: ['**/*.{scss,css}'],
     },
   },
 });

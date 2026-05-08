@@ -9,23 +9,21 @@ layout: default
     {% include variation-content.html %} {% if page.variation_groups.size > 0 %}
 
     <div class="o-editor" id="toggle-details">
-      <a class="a-btn" href="#" title="Show all details">
-        <span>Show all details</span>
-        {% include icons/lightbulb.svg %}
-      </a>
+      <cfpb-button iconright="lightbulb" title="Show all details">
+        Show all details
+      </cfpb-button>
     </div>
 
     {% endif %}
 
     <div class="o-editor" id="edit-page">
-      <a
-        class="a-btn"
+      <cfpb-button
         href="/design-system/updating-this-website?page={{ page.title | url_encode }}"
+        iconright="edit"
         title="Edit this page in Decap CMS"
       >
-        <span>Edit page</span>
-        {% include icons/edit.svg %}
-      </a>
+        Edit page
+      </cfpb-button>
     </div>
   </div>
 </main>

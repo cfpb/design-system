@@ -94,8 +94,8 @@ if (tabsContainerDom.length > 0) {
     tabsInst.init();
   }
 }
-const toggleAllBtn = document.querySelector('#toggle-details');
-const toggleBtns = document.querySelectorAll('.a-toggle__code button');
+const toggleAllBtn = document.querySelector('#toggle-details cfpb-button');
+const toggleBtns = document.querySelectorAll('.a-toggle__code cfpb-button');
 
 /**
  * @param {MouseEvent} event - The mouse event object from the click.

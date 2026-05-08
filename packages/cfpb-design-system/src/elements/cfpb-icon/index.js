@@ -26,9 +26,9 @@ export class CfpbIcon extends LitElement {
     const iconPath = `${getSharedConfig().iconPath + this.name}.svg`;
 
     if (this.color) {
-      this.style.setProperty('--icon-color-default', `var(--${this.color})`);
+      this.style.setProperty('--icon-color', `var(--${this.color})`);
     } else {
-      this.style.removeProperty('--icon-color-default');
+      this.style.removeProperty('--icon-color');
     }
 
     return html`<span style="--icon-mask-image-url:url('${iconPath}')">

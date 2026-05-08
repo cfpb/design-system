@@ -4,6 +4,8 @@ import styles from './styles.component.scss?inline';
 import { CfpbIcon } from '../cfpb-icon';
 
 /**
+ * This component represents a piece of text accompanied by an icon,
+ * which may or may not have a divider.
  * @element cfpb-icon-text
  * @slot - The main content for the text and icon.
  */
@@ -14,20 +16,40 @@ export class CfpbIconText extends LitElement {
 
   /**
    * @property {boolean} disabled - Apply disabled styles or not.
+   * @property {boolean} dividerColor - The color of the divider between the icon/text.
    * @property {string} iconLeft - The name of the icon on the left.
    * @property {string} iconRight - The name of the icon on the right.
    * @property {string} isIconLeftSpin - Whether the left icon spins or not.
    * @property {string} isIconRightSpin - Whether the right icon spins or not.
-   * @property {boolean} noDivider - If true, don't render a divider.
+   * @property {boolean} hasDivider - If true, render a divider.
+   * @property {boolean} mobileUnderline - If true render an underline at mobile.
+   * @property {boolean} displayInline - Whether it is display inline or block.
    * @returns {object} The map of properties.
    */
   static properties = {
     disabled: { type: Boolean, reflect: true },
+    dividerColor: { type: String, attribute: 'divider-color', reflect: true },
     iconLeft: { type: String },
     iconRight: { type: String },
     isIconLeftSpin: { type: Boolean, attribute: 'iconleftspin' },
     isIconRightSpin: { type: Boolean, attribute: 'iconrightspin' },
-    noDivider: { type: Boolean, attribute: 'no-divider', reflect: true },
+    hasDivider: { type: Boolean, attribute: 'has-divider', reflect: true },
+    styleAsLink: { type: Boolean, attribute: 'style-as-link', reflect: true },
+    mobileUnderline: {
+      type: Boolean,
+      attribute: 'mobile-underline',
+      reflect: true,
+    },
+    displayInline: {
+      type: Boolean,
+      attribute: 'display-inline',
+      reflect: true,
+    },
+    mobileIconAlignEnd: {
+      type: Boolean,
+      attribute: 'mobile-icon-align-end',
+      reflect: true,
+    },
   };
 
   constructor() {
@@ -37,30 +59,34 @@ export class CfpbIconText extends LitElement {
     this.isIconRightSpin = false;
   }
 
-  #computeClassString() {
-    return [
-      'wrapper',
-      this.iconLeft && 'left-divider',
-      this.iconRight && 'right-divider',
-    ]
-      .filter(Boolean)
-      .join(' ');
+  updated(changed) {
+    if (changed.has('dividerColor')) {
+      if (this.dividerColor) {
+        this.style.setProperty(
+          '--icon-text-divider',
+          `var(--${this.dividerColor})`,
+        );
+      } else {
+        this.style.removeProperty('--icon-text-divider');
+      }
+    }
   }
 
   render() {
-    return html`<span class=${this.#computeClassString()}>
+    return html`<span class="wrap">
       ${this.iconLeft
         ? html`<cfpb-icon
-            name="${this.iconLeft}"
-            ?spin=${this.isIconLeftSpin}
-          ></cfpb-icon>`
+              name="${this.iconLeft}"
+              ?spin=${this.isIconLeftSpin}
+            ></cfpb-icon
+            ><span class="div"></span>`
         : ''}
-      <slot></slot>
-      ${this.iconRight
-        ? html`<cfpb-icon
-            name="${this.iconRight}"
-            ?spin=${this.isIconRightSpin}
-          ></cfpb-icon>`
+      <span class="text"><slot></slot></span>${this.iconRight
+        ? html` <span class="div"></span
+            ><cfpb-icon
+              name="${this.iconRight}"
+              ?spin=${this.isIconRightSpin}
+            ></cfpb-icon>`
         : ''}
     </span>`;
   }

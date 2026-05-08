@@ -16,7 +16,7 @@ The icons work like this:
   height: 1.1875em;
   vertical-align: middle;
   display: inline-block;
-  color: var(--icon-color-default, inherit);
+  color: var(--icon-color, inherit);
 
   span {
     line-height: 0;

@@ -92,7 +92,7 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text no-divider iconleft="bank">Icon, but no divider</cfpb-icon-text>
+            <cfpb-icon-text has-divider iconleft="bank">Icon, but no divider</cfpb-icon-text>
 
             <br>
 
@@ -112,14 +112,22 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text style="--icon-text-divider: var(--red-60)" iconleft="warning">Warning state</cfpb-icon-text>
+            <cfpb-icon-text divider-color="red-60" iconleft="warning">Warning state</cfpb-icon-text>
+
+            <br>
+
+            <cfpb-icon-text style-as-link has-divider iconright="external-link">Style as standard link</cfpb-icon-text>
+
+            <br>
+
+            <cfpb-icon-text style-as-link has-divider display-inline mobile-underline iconright="external-link">Style as inline link</cfpb-icon-text>
 
             <br><hr><br>
 
             <p>
             The following section allows interacting with the API.
             </p>
-            <p><cfpb-icon-text id="icon-text-example" iconleft="bank" iconright="download">Example icon-text component</cfpb-icon-text></p>
+            <p><cfpb-icon-text id="icon-text-example" iconright="download" has-divider>Example icon-text component</cfpb-icon-text></p>
             <p>
 
             <input type="checkbox" id="icon-text-example-warning" />
@@ -132,18 +140,43 @@ variation_groups:
 
             </p><p>
 
-            <input type="checkbox" id="icon-text-example-icon-hidden" />
-            <label for="icon-text-example-icon-hidden">Hide icon</label>
+            <input type="checkbox" id="icon-text-example-icon-start" />
+            <label for="icon-text-example-icon-start">Start icon</label>
 
             </p><p>
 
-            <input type="checkbox" id="icon-text-example-no-divider" />
-            <label for="icon-text-example-no-divider">No divider</label>
+            <input type="checkbox" id="icon-text-example-icon-end" checked />
+            <label for="icon-text-example-icon-end">End icon</label>
+
+            </p><p>
+
+            <input type="checkbox" id="icon-text-example-has-divider" checked />
+            <label for="icon-text-example-has-divider">Has a divider</label>
 
             </p><p>
 
             <input type="checkbox" id="icon-text-example-icon-animate" />
             <label for="icon-text-example-icon-animate">Animate icon</label>
+
+            </p><p>
+
+            <input type="checkbox" id="icon-text-example-link" />
+            <label for="icon-text-example-link">Style as link</label>
+
+            </p><p>
+
+            <input type="checkbox" id="icon-text-example-underline" />
+            <label for="icon-text-example-underline">Underline at mobile</label>
+
+            </p><p>
+
+            <input type="checkbox" id="icon-text-example-icon-right" />
+            <label for="icon-text-example-icon-right">Align icon to right at mobile</label>
+
+            </p><p>
+
+            <input type="checkbox" id="icon-text-example-inline" />
+            <label for="icon-text-example-inline">Display inline</label>
 
             </p>
             <script>
@@ -152,18 +185,20 @@ variation_groups:
 
             const warBtn = document.querySelector('#icon-text-example-warning');
             const disBtn = document.querySelector('#icon-text-example-disabled');
-
-            const hiddenBtn = document.querySelector('#icon-text-example-icon-hidden');
-
-            const noDivBtn = document.querySelector('#icon-text-example-no-divider');
-
+            const iconStartBtn = document.querySelector('#icon-text-example-icon-start');
+            const iconEndBtn = document.querySelector('#icon-text-example-icon-end');
+            const hasDivBtn = document.querySelector('#icon-text-example-has-divider');
             const animateBtn = document.querySelector('#icon-text-example-icon-animate');
+            const linkBtn = document.querySelector('#icon-text-example-link');
+            const underlineBtn = document.querySelector('#icon-text-example-underline');
+            const iconRightBtn = document.querySelector('#icon-text-example-icon-right');
+            const inlineBtn = document.querySelector('#icon-text-example-inline');
 
             warBtn.addEventListener('click', () => {
-              if (iconTextEx.hasAttribute('style')) {
-                iconTextEx.removeAttribute('style');
+              if (iconTextEx.hasAttribute('divider-color')) {
+                iconTextEx.removeAttribute('divider-color');
               } else {
-                iconTextEx.setAttribute('style', '--icon-text-divider: var(--red-60)');
+                iconTextEx.dividerColor = 'red-60';
               }
             });
 
@@ -171,21 +206,40 @@ variation_groups:
               iconTextEx.disabled = !iconTextEx.disabled;
             });
 
-            hiddenBtn.addEventListener('click', () => {
+            iconStartBtn.addEventListener('click', () => {
               if (iconTextEx.iconLeft) iconTextEx.iconLeft = null;
               else iconTextEx.iconLeft = 'bank';
+            });
+
+            iconEndBtn.addEventListener('click', () => {
               if (iconTextEx.iconRight) iconTextEx.iconRight = null;
               else iconTextEx.iconRight = 'download';
             });
 
-            noDivBtn.addEventListener('click', () => {
-              iconTextEx.noDivider = !iconTextEx.noDivider;
+            hasDivBtn.addEventListener('click', () => {
+              iconTextEx.hasDivider = !iconTextEx.hasDivider;
             });
 
             animateBtn.addEventListener('click', () => {
               iconTextEx.isIconLeftSpin = !iconTextEx.isIconLeftSpin;
               iconTextEx.isIconRightSpin = !iconTextEx.isIconRightSpin;
             });
+
+            linkBtn.addEventListener('click', () => {
+              iconTextEx.styleAsLink = !iconTextEx.styleAsLink;
+            })
+
+            underlineBtn.addEventListener('click', () => {
+              iconTextEx.mobileUnderline = !iconTextEx.mobileUnderline;
+            })
+
+            iconRightBtn.addEventListener('click', () => {
+              iconTextEx.mobileIconAlignEnd = !iconTextEx.mobileIconAlignEnd;
+            })
+
+            inlineBtn.addEventListener('click', () => {
+              iconTextEx.displayInline = !iconTextEx.displayInline;
+            })
             })();
             </script>
           </div>
@@ -228,7 +282,7 @@ variation_groups:
             <p>
             The following section allows interacting with the API.
             </p>
-            <p><cfpb-button id="btn-example" iconleft="update" iconleftspin>Example button</cfpb-button></p>
+            <p><cfpb-button id="btn-example" iconright="update" iconrightspin>Example button</cfpb-button></p>
 
             <p>
             <label for="btn-example-variant">Button type:</label>

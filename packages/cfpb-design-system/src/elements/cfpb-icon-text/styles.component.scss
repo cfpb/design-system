@@ -1,10 +1,5 @@
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
-
-@mixin u-btn-divider() {
-  content: '';
-  border-left: 1px solid var(--icon-text-divider);
-  place-self: normal;
-}
 
 :host {
   // Theme variables.
@@ -14,42 +9,111 @@
   // Private variables.
   --icon-text-divider: var(--icon-text-divider-default);
 
-  .wrapper {
-    // This prevents the child button from having an empty gap after the button.
+  .wrap {
     display: flex;
-    width: fit-content;
     align-items: center;
 
     gap: rem-from-px(5px);
   }
 
-  // Shine the slot contents through to the wrapper's flexbox items.
+  .div {
+    width: 1px;
+    background: var(--icon-text-divider);
+    align-self: stretch;
+  }
+
+  // Shine the slot contents through to the wrap's flexbox items.
   slot {
     display: contents;
   }
 }
 
-// Add divider.
-:host(:not([no-divider])) {
-  .wrapper {
-    gap: rem-from-px(10px);
-  }
-
-  .left-divider::before,
-  .right-divider::after {
-    @include u-btn-divider;
+// Display inline
+:host([display-inline]) {
+  .wrap {
+    display: inline;
   }
 }
 
-.left-divider cfpb-icon:first-of-type {
-  order: -1;
+// Hide divider.
+:host(:not([has-divider])) {
+  .div {
+    display: none;
+  }
 }
 
-.right-divider cfpb-icon:last-of-type {
-  order: 1;
+:host(:not([mobile-icon-align-end])) {
+  .wrap {
+    // This prevents the child button from having an empty gap after the button.
+    width: fit-content;
+  }
+}
+
+// Mobile only.
+@include respond-to-max($bp-xs-max) {
+  // Push the icon to the far right on mobile.
+  :host([mobile-icon-align-end]) {
+    .wrap {
+      justify-content: right;
+    }
+    .text {
+      width: 100%;
+    }
+  }
+
+  // Show an underline at mobile.
+  :host(:not([mobile-underline])) {
+    .text {
+      text-decoration: none !important;
+    }
+  }
 }
 
 :host([disabled]) {
   // !important is set so that disabled divider color overrides all other color.
   --icon-text-divider: var(--icon-text-divider-disabled) !important;
+}
+
+:host(:not([disabled])[style-as-link]) {
+  .text {
+    color: var(--link-text);
+
+    text-decoration-color: var(--link-underline);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-style: dotted;
+    text-underline-offset: 4.5px;
+
+    // See https://github.com/cfpb/consumerfinance.gov/pull/8252
+    overflow-wrap: break-word;
+  }
+
+  // Note: The class definitions below are only for use in
+  // demonstrating link states. Do not use in production.
+
+  :visited .text,
+  .visited .text {
+    text-decoration-color: var(--link-underline-visited);
+    color: var(--link-text-visited);
+  }
+
+  :hover .text,
+  .hover .text {
+    text-decoration-style: solid;
+    text-decoration-color: var(--link-underline-hover);
+    color: var(--link-text-hover);
+  }
+
+  :focus .text,
+  .focus-visible .text {
+    outline: thin dotted;
+    outline-offset: 1px;
+  }
+
+  :active .text,
+  .active .text {
+    text-decoration-style: solid;
+    text-decoration-color: var(--link-underline-active);
+    color: var(--link-text-active);
+  }
 }

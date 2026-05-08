@@ -106,11 +106,11 @@ export class CfpbButton extends LitElement {
   get dividerColorVar() {
     switch (this.variant) {
       case 'warning':
-        return '--btn-warning-divider';
+        return 'btn-warning-divider';
       case 'secondary':
-        return '--btn-secondary-divider';
+        return 'btn-secondary-divider';
       default:
-        return '--btn-divider';
+        return 'btn-divider';
     }
   }
 
@@ -147,7 +147,7 @@ export class CfpbButton extends LitElement {
       <cfpb-icon-text
         ${ref(this.#iconTextDom)}
         ?disabled=${this.disabled}
-        style="--icon-text-divider: var(${this.dividerColorVar})"
+        dividerColor="${this.dividerColorVar}"
         iconleft=${this.iconLeft}
         iconright=${this.iconRight}
         ?iconleftspin=${this.isIconLeftSpin}

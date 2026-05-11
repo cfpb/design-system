@@ -16,24 +16,24 @@ export class CfpbIconText extends LitElement {
 
   /**
    * @property {boolean} disabled - Apply disabled styles or not.
-   * @property {boolean} dividerColor - The color of the divider between the icon/text.
+   * @property {boolean} divColor - The color of the divider between the icon/text.
    * @property {string} iconLeft - The name of the icon on the left.
    * @property {string} iconRight - The name of the icon on the right.
    * @property {string} isIconLeftSpin - Whether the left icon spins or not.
    * @property {string} isIconRightSpin - Whether the right icon spins or not.
-   * @property {boolean} hasDivider - If true, render a divider.
+   * @property {boolean} hasDiv - If true, render a divider.
    * @property {boolean} mobileUnderline - If true render an underline at mobile.
    * @property {boolean} displayInline - Whether it is display inline or block.
    * @returns {object} The map of properties.
    */
   static properties = {
     disabled: { type: Boolean, reflect: true },
-    dividerColor: { type: String, attribute: 'divider-color', reflect: true },
+    divColor: { type: String, attribute: 'div-color', reflect: true },
     iconLeft: { type: String },
     iconRight: { type: String },
     isIconLeftSpin: { type: Boolean, attribute: 'iconleftspin' },
     isIconRightSpin: { type: Boolean, attribute: 'iconrightspin' },
-    hasDivider: { type: Boolean, attribute: 'has-divider', reflect: true },
+    hasDiv: { type: Boolean, attribute: 'has-div', reflect: true },
     styleAsLink: { type: Boolean, attribute: 'style-as-link', reflect: true },
     mobileUnderline: {
       type: Boolean,
@@ -60,14 +60,14 @@ export class CfpbIconText extends LitElement {
   }
 
   updated(changed) {
-    if (changed.has('dividerColor')) {
-      if (this.dividerColor) {
+    if (changed.has('divColor')) {
+      if (this.divColor) {
         this.style.setProperty(
-          '--icon-text-divider',
-          `var(--${this.dividerColor})`,
+          '--icon-text-div-color',
+          `var(--${this.divColor})`,
         );
       } else {
-        this.style.removeProperty('--icon-text-divider');
+        this.style.removeProperty('--icon-text-div-color');
       }
     }
   }

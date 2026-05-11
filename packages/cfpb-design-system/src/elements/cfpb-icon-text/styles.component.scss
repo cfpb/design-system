@@ -3,11 +3,11 @@
 
 :host {
   // Theme variables.
-  --icon-text-divider-default: var(--pacific-60);
-  --icon-text-divider-disabled: var(--gray-60);
+  --icon-text-div-color-default: var(--pacific-60);
+  --icon-text-div-color-disabled: var(--gray-60);
 
   // Private variables.
-  --icon-text-divider: var(--icon-text-divider-default);
+  --icon-text-div-color: var(--icon-text-div-color-default);
 
   .wrap {
     display: flex;
@@ -18,7 +18,7 @@
 
   .div {
     width: 1px;
-    background: var(--icon-text-divider);
+    background: var(--icon-text-div-color);
     align-self: stretch;
   }
 
@@ -36,7 +36,7 @@
 }
 
 // Hide divider.
-:host(:not([has-divider])) {
+:host(:not([has-div])) {
   .div {
     display: none;
   }
@@ -71,7 +71,7 @@
 
 :host([disabled]) {
   // !important is set so that disabled divider color overrides all other color.
-  --icon-text-divider: var(--icon-text-divider-disabled) !important;
+  --icon-text-div-color: var(--icon-text-div-color-disabled) !important;
 }
 
 :host(:not([disabled])[style-as-link]) {

@@ -61,16 +61,16 @@ describe('Decap CMS', () => {
       getIframeBody().find('.frame-content').should('include.text', '😄');
     });
 
-    it('should support switching between the various "show details" tabs', () => {
+    it('should support switching between the various "SHOW DETAILS" tabs', () => {
       cy.viewport(2000, 1200);
       // Wait for the editor to load
       cy.get('label').contains('Page title').should('be.visible');
       getIframeBody()
-        .find('button')
-        .contains('Show details')
+        .find('cfpb-button')
+        .contains('SHOW DETAILS')
         .should('be.visible');
       getIframeBody().find('.m-tabs').should('have.css', 'display', 'none');
-      getIframeBody().find('button').contains('Show details').click();
+      getIframeBody().find('cfpb-button').contains('SHOW DETAILS').click();
       getIframeBody().find('a').contains('Implementation').should('be.visible');
       getIframeBody().find('a').contains('Implementation').click();
       getIframeBody().find('.m-tabs').should('not.have.css', 'display', 'none');

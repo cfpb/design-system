@@ -201,7 +201,7 @@ description: >-
       <h3>Ready to edit the <span data-interstitial-page-name></span> page?</h3>
 
       <p>
-        <a href="/design-system/admin" class="a-btn" data-interstitial-redirect-button>Continue to Decap CMS</a>
+        <cfpb-button href="/design-system/admin" data-interstitial-redirect-button>Continue to Decap CMS</cfpb-button>
       </p>
   </div>
 
@@ -225,7 +225,8 @@ description: >-
 
 
   <p>
-        <a href="/design-system/admin/#/collections/pages/new" class="a-btn" title="Create a new page for this website in Decap CMS">Create new page</a>
+        <cfpb-button href="/design-system/admin/#/collections/pages/new" title="Create a new page for this website in Decap CMS">
+        Create new page</cfpb-button>
   </p>
 
 
@@ -238,7 +239,7 @@ description: >-
 
 
   <p>
-        <a href="/design-system/admin/#/collections/navigation/entries/side-navigation" class="a-btn" title="Edit the side navigation">Edit the side navigation</a>
+        <cfpb-button href="/design-system/admin/#/collections/navigation/entries/side-navigation" title="Edit the side navigation">Edit the side navigation</cfpb-button>
   </p>
 
 

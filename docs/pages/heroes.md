@@ -90,7 +90,7 @@ variation_groups:
           illustration](https://www.consumerfinance.gov/owning-a-home/) and
           [hero with bleeding
           illustration](https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/).
-          Click on the "show details" link below for implementation details and
+          Click on the "SHOW DETAILS" link below for implementation details and
           production specs. '
         variation_name: Hero with illustration
         variation_specs: >-

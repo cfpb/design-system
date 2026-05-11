@@ -45,11 +45,11 @@ function toggleDetails(button, document = window.document, state) {
  */
 function toggleAllDetails(toggleBtn) {
   if (isShowingAllDetails) {
-    toggleBtn.querySelector('.a-btn span').innerHTML = 'Show all details';
+    toggleBtn.textContent = 'Show all details';
     toggleBtn.setAttribute('title', 'Show all details');
     window.localStorage.setItem('toggleState', 'show');
   } else {
-    toggleBtn.querySelector('.a-btn span').innerHTML = 'Hide all details';
+    toggleBtn.textContent = 'Hide all details';
     toggleBtn.setAttribute('title', 'Hide all details');
     window.localStorage.setItem('toggleState', 'hide');
   }
@@ -57,7 +57,7 @@ function toggleAllDetails(toggleBtn) {
   const codeEls = document.querySelectorAll('.a-toggle__code');
   let buttonElm;
   for (let i = 0, len = codeEls.length; i < len; i++) {
-    buttonElm = codeEls[i].querySelector('button:not(.u-hidden)');
+    buttonElm = codeEls[i].querySelector('cfpb-button:not(.u-hidden)');
     toggleDetails(
       buttonElm,
       window.document,

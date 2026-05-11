@@ -1,4 +1,4 @@
-describe('The "show details" toggling feature', () => {
+describe('The "SHOW DETAILS" toggling feature', () => {
   const components = [
     'alerts',
     'banner-notification',
@@ -53,21 +53,21 @@ describe('The "show details" toggling feature', () => {
 
       cy.log('should hide snippet tabs by default');
       // Show details button.
-      cy.get('button').contains('Show details').should('be.visible');
+      cy.get('cfpb-button').contains('SHOW DETAILS').should('be.visible');
 
       // Hide details button.
-      cy.get('button').contains('Hide details').should('not.be.visible');
+      cy.get('cfpb-button').contains('HIDE DETAILS').should('not.be.visible');
 
       // Detail tabs.
       cy.get('.m-tabs').should('not.be.visible');
 
       cy.log('should show code snippets when toggle button is clicked');
       // Show details button.
-      cy.get('button').contains('Show details').click();
-      cy.get('button').contains('Show details').should('not.be.visible');
+      cy.get('cfpb-button').contains('SHOW DETAILS').click();
+      cy.get('cfpb-button').contains('SHOW DETAILS').should('not.be.visible');
 
       // Hide details button.
-      cy.get('button').contains('Hide details').should('be.visible');
+      cy.get('cfpb-button').contains('HIDE DETAILS').should('be.visible');
 
       // Detail tabs.
       cy.get('.m-tabs').should('be.visible');
@@ -76,8 +76,8 @@ describe('The "show details" toggling feature', () => {
         'should re-hide code snippets when toggle button is clicked again',
       );
       // Hide details button.
-      cy.get('button').contains('Hide details').click();
-      cy.get('button').contains('Hide details').should('not.be.visible');
+      cy.get('cfpb-button').contains('HIDE DETAILS').click();
+      cy.get('cfpb-button').contains('HIDE DETAILS').should('not.be.visible');
 
       // Detail tabs.
       cy.get('.m-tabs').should('not.be.visible');

@@ -92,42 +92,42 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text has-divider iconleft="bank">Icon, but no divider</cfpb-icon-text>
+            <cfpb-icon-text iconleft="bank">Icon, but no divider</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text iconleft="download">Icon on left</cfpb-icon-text>
+            <cfpb-icon-text has-div iconleft="download">Icon on left</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text iconright="download">Icon on right</cfpb-icon-text>
+            <cfpb-icon-text has-div iconright="download">Icon on right</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text iconleft="bank" iconright="download">Icon on both sides</cfpb-icon-text>
+            <cfpb-icon-text has-div iconleft="bank" iconright="download">Icon on both sides</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text disabled iconright="download">Disabled state</cfpb-icon-text>
+            <cfpb-icon-text has-div disabled iconright="download">Disabled state</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text divider-color="red-60" iconleft="warning">Warning state</cfpb-icon-text>
+            <cfpb-icon-text has-div div-color="red-60" iconleft="warning">Warning state</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text style-as-link has-divider iconright="external-link">Style as standard link</cfpb-icon-text>
+            <cfpb-icon-text has-div style-as-link iconright="external-link">Style as standard link</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text style-as-link has-divider display-inline mobile-underline iconright="external-link">Style as inline link</cfpb-icon-text>
+            <cfpb-icon-text style-as-link display-inline mobile-underline iconright="external-link">Style as inline link</cfpb-icon-text>
 
             <br><hr><br>
 
             <p>
             The following section allows interacting with the API.
             </p>
-            <p><cfpb-icon-text id="icon-text-example" iconright="download" has-divider>Example icon-text component</cfpb-icon-text></p>
+            <p><cfpb-icon-text id="icon-text-example" iconright="download" has-div>Example icon-text component</cfpb-icon-text></p>
             <p>
 
             <input type="checkbox" id="icon-text-example-warning" />
@@ -150,8 +150,8 @@ variation_groups:
 
             </p><p>
 
-            <input type="checkbox" id="icon-text-example-has-divider" checked />
-            <label for="icon-text-example-has-divider">Has a divider</label>
+            <input type="checkbox" id="icon-text-example-has-div" checked />
+            <label for="icon-text-example-has-div">Has a divider</label>
 
             </p><p>
 
@@ -187,7 +187,7 @@ variation_groups:
             const disBtn = document.querySelector('#icon-text-example-disabled');
             const iconStartBtn = document.querySelector('#icon-text-example-icon-start');
             const iconEndBtn = document.querySelector('#icon-text-example-icon-end');
-            const hasDivBtn = document.querySelector('#icon-text-example-has-divider');
+            const hasDivBtn = document.querySelector('#icon-text-example-has-div');
             const animateBtn = document.querySelector('#icon-text-example-icon-animate');
             const linkBtn = document.querySelector('#icon-text-example-link');
             const underlineBtn = document.querySelector('#icon-text-example-underline');
@@ -195,10 +195,10 @@ variation_groups:
             const inlineBtn = document.querySelector('#icon-text-example-inline');
 
             warBtn.addEventListener('click', () => {
-              if (iconTextEx.hasAttribute('divider-color')) {
-                iconTextEx.removeAttribute('divider-color');
+              if (iconTextEx.hasAttribute('div-color')) {
+                iconTextEx.removeAttribute('div-color');
               } else {
-                iconTextEx.dividerColor = 'red-60';
+                iconTextEx.divColor = 'red-60';
               }
             });
 
@@ -217,7 +217,7 @@ variation_groups:
             });
 
             hasDivBtn.addEventListener('click', () => {
-              iconTextEx.hasDivider = !iconTextEx.hasDivider;
+              iconTextEx.hasDiv = !iconTextEx.hasDiv;
             });
 
             animateBtn.addEventListener('click', () => {

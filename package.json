@@ -119,7 +119,8 @@
     }
   },
   "resolutions": {
-    "trim": "0.0.2"
+    "trim": "0.0.2",
+    "minimatch": "7.4.8"
   },
   "type": "module",
   "packageManager": "yarn@4.13.0"

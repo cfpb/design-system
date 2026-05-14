@@ -1,22 +1,22 @@
 name: Lint check
 
 on: 
-    pull_request:
-        branches: [main]
+  pull_request:
+    branches: [main]
 
 permissions: 
-    contents: read
+  contents: read
 
 jobs:
-    lint:
-        runs-on: ubuntu-latest
-        
-        steps:
-            - name: Checkout the repo
-              uses: actions/checkout@v6
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-            - name: Shared setup
-              uses:  ./.github/actions/shared-action-setup
+      - name: Shared setup
+        uses:  ./.github/actions/shared-action-setup
 
-            - name: Run lint
-              run: CI=true yarn lint
+      - name: Run lint
+        run: CI=true yarn lint

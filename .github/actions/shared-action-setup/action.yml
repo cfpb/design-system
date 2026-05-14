@@ -2,19 +2,23 @@ name: "Shared action - setup"
 runs:
   using: "composite"
   steps:
-    - name: Set up Node
-      uses: actions/setup-node@v6
-      with:
-        node-version: 25
-
     - name: Set up Ruby for Jekyll
-      uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@6aaa311d81eba98ae12eaffbcb63296ace0efcde # v1
       with:
         ruby-version: 3.4.3
+
+    - name: Enable Corepack
+      shell: bash
+      run: corepack enable
+
+    - name: Set up Node
+      uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
+      with:
+        node-version: 26
+        cache: yarn
 
     - name: Install dependencies with Yarn
       shell: bash
       run: |
-        corepack enable
-        yarn install
-        yarn after-install
+        yarn install --immutable
+        yarn run after-install

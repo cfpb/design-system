@@ -21,7 +21,7 @@ git checkout "$main_branch"
 git worktree add "$target_dir" "$target_branch"
 
 # Install dependencies
-yarn install
+yarn install --immutable --immutable-cache
 yarn after-install
 
 # Build the design system website

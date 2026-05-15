@@ -1,6 +1,8 @@
 // style-dictionary.config.js — ESM
 // Summary:
-// - Builds one CSS file per token JSON under packages/cfpb-design-system/src/tokens.
+// - Builds one CSS file per token JSON, mirroring the directory structure.
+// - Uses token filename to generate css selectors in resulting CSS.
+// - (EG: packages/cfpb-design-system/src/tokens/elements/cfpb-button/vars.host.json -> packages/cfpb-design-system/src/elements/cfpb-button/vars.css with :host selector )
 // - Uses DTCG $type for transforms; names are full-path kebab-case.
 // - Prefers hex colors, emits CSS v4 rgba() only when RGBA is present and hex is absent.
 // - Preserves Figma alias metadata as var(--...) with collision checks.
@@ -22,6 +24,7 @@ const tokenBase = path.resolve(baseDir, 'tokens');
 const cssFormatName = 'css/variables-no-space-commas';
 const hexPattern = /^#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
 const rgbaPattern = /^rgba\(/i;
+const hostTokenFilePattern = /\.host\.json$/;
 
 const toPosix = (fsPath) => fsPath.split(path.sep).join('/');
 const toAbsPosix = (fsPath) =>
@@ -83,7 +86,8 @@ const buildFilesAndFilters = (basePath) => {
     for (const jsonFile of jsonFiles) {
       const fullPathAbsPosix = toAbsPosix(path.join(dirPath, jsonFile));
       const relDir = path.relative(basePath, dirPath);
-      const cssFileName = `${path.basename(jsonFile, '.json')}.css`;
+      const selector = hostTokenFilePattern.test(jsonFile) ? ':host' : ':root';
+      const cssFileName = `${path.basename(jsonFile, '.json').replace(/\.host$/, '')}.css`;
       const destination =
         relDir === '' ? cssFileName : `${toPosix(relDir)}/${cssFileName}`;
       const filterName = `filter__${(relDir || '_').replace(
@@ -102,7 +106,7 @@ const buildFilesAndFilters = (basePath) => {
           outputReferences: true,
           sort: 'name',
           usesDtcg: true,
-          selector: ':root',
+          selector,
         },
       });
     }
@@ -414,7 +418,7 @@ export default {
   platforms: {
     css: {
       transformGroup: 'css/without-group',
-      buildPath: `${baseDir}/elements/`,
+      buildPath: `${baseDir}/`,
       files,
     },
   },

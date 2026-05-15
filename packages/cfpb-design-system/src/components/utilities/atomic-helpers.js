@@ -9,8 +9,8 @@
    - Atom
    ========================================================================= */
 
-import { add, contains } from './data-hook.js';
-import { STATE_PREFIX } from './standard-type.js';
+import { add, contains } from '../../utilities/data-hook.js';
+import { STATE_PREFIX } from '../../utilities/standard-type.js';
 
 /**
  * @constant

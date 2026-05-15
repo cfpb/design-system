@@ -8,7 +8,7 @@ import {
   isArray,
   isFunction,
   isEmpty,
-} from './type-checkers.js';
+} from '../components/utilities/type-checkers.js';
 
 const blankVar = '';
 const aString = 'bar';

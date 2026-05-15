@@ -5,7 +5,7 @@
 // TODO: aggregate and export the component subdirectories automatically.
 
 // Base styles.
-export * from './abstracts';
+export * from '../abstracts';
 
 // Shared config.
 export * from './utilities/shared-config';

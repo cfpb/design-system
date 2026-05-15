@@ -1,7 +1,9 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/elements/base' as *;
-@use '@cfpb/cfpb-design-system/src/utilities/index' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/base' as *;
+@use '@cfpb/cfpb-design-system/src/elements/utilities/shadow-utilities' as *;
+@use '@cfpb/cfpb-design-system/src/elements/utilities/transition/transition'
+  as *;
 
 :host {
   // Theme

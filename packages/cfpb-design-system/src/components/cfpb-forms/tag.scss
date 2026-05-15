@@ -1,7 +1,8 @@
 @use 'sass:math';
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
-@use '@cfpb/cfpb-design-system/src/components/cfpb-typography/mixins' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-typography/mixins-typography'
+  as *;
 
 // Filter tags appear in filtered contexts, often as part of multiselects.
 .a-tag-filter {

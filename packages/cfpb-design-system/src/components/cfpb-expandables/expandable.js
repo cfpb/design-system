@@ -10,7 +10,7 @@ import {
   MaxHeightTransition,
   EventObserver,
   FlyoutMenu,
-} from '../../utilities';
+} from '../utilities/';
 
 import * as ExpandableStyles from './expandable.scss';
 

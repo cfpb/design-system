@@ -2,6 +2,9 @@
    Design System
    ========================================================================== */
 
+import './base/custom-props.css';
+import './base/vars.css';
+
 export * from './elements';
 
 export * from './components/cfpb-buttons';

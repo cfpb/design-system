@@ -1,9 +1,9 @@
-@use '@cfpb/cfpb-design-system/src/utilities/mixins' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/mixins-utilities' as *;
 
 .u-hidden {
   display: none !important;
 }
 
 .u-visually-hidden {
-  @include visually-hidden;
+  @include u-visually-hidden;
 }

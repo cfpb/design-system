@@ -107,9 +107,9 @@ description: >-
   // Adjust paths to the package as necessary.
 
 
-  @use 'node_modules/@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+  @use 'node_modules/@cfpb/cfpb-design-system/src/abstracts' as *;
 
-  @use 'node_modules/@cfpb/cfpb-design-system/src/elements/base' as *;
+  @use 'node_modules/@cfpb/cfpb-design-system/src/base' as *;
 
   @use 'node_modules/@cfpb/cfpb-design-system/dist/index.css' as *;
 
@@ -126,7 +126,7 @@ description: >-
 
   ```scss
 
-  @use 'node_modules/@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+  @use 'node_modules/@cfpb/cfpb-design-system/src/abstracts' as *;
 
   ```
 
@@ -161,7 +161,7 @@ description: >-
 
   ```scss
 
-  @use 'node_modules/@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+  @use 'node_modules/@cfpb/cfpb-design-system/src/abstracts' as *;
 
   ```
 

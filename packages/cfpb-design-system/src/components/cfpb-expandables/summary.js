@@ -8,7 +8,7 @@ import {
   EventObserver,
   MOBILE,
   viewportIsIn,
-} from '../../utilities';
+} from '../utilities';
 
 import * as SummaryStyles from './summary.scss';
 

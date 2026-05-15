@@ -1,7 +1,6 @@
 @use 'sass:math';
-@use 'sass:string';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/utilities/mixins-utilities' as *;
+@use './mixins-utilities' as *;
 
 /* ==========================================================================
    Design System
@@ -49,6 +48,9 @@
   @include u-clearfix;
 }
 
+//
+// Visually hidden
+//
 .u-visually-hidden {
   @include u-visually-hidden;
 }
@@ -251,6 +253,9 @@
   width: math.div(1, 3) * 100%;
 }
 
+//
+// Small text utility
+//
 small,
 .u-small-text {
   @include u-small-text;

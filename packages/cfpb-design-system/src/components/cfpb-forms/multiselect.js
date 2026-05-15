@@ -4,7 +4,7 @@ import {
   setInitFlag,
   isMobileUserAgent,
   instantiateAll,
-} from '../../utilities';
+} from '../utilities';
 import MultiselectModel, { MAX_SELECTIONS } from './multiselect-model.js';
 import { create } from './multiselect-utils.js';
 

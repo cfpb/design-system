@@ -2,7 +2,7 @@
    Expandable Organism
    ========================================================================== */
 
-import { checkDom, setInitFlag, instantiateAll } from '../../utilities';
+import { checkDom, setInitFlag, instantiateAll } from '../utilities';
 import { Expandable } from './expandable.js';
 
 import * as ExpandableGroupStyles from './expandable-group.scss';

@@ -23,7 +23,7 @@ variation_groups:
 
           ```scss
 
-          @use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+          @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
           ```
       - variation_name: Font stack

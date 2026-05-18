@@ -2,7 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.3.3](https://github.com/cfpb/design-system/compare/v5.3.2..v5.3.3) - May  5, 2026
+## [5.4.0](https://github.com/cfpb/design-system/compare/v5.3.3..v5.4.0) - May 18, 2026
+
+### PRs in this release
+
+- PR #[2655](https://github.com/cfpb/design-system/pull/2655): Move `cfpb-utilities` to `utilities` - Ans
+- PR #[2657](https://github.com/cfpb/design-system/pull/2657): Update expandable.spec.js - Ans
+- PR #[2659](https://github.com/cfpb/design-system/pull/2659): SCSS: Add missing utility forwards - Ans
+- PR #[2658](https://github.com/cfpb/design-system/pull/2658): Migrate from Jest to Vitest - Ans
+- PR #[2662](https://github.com/cfpb/design-system/pull/2662): cfpb-icon-text: add more options - Ans
+- PR #[2667](https://github.com/cfpb/design-system/pull/2667): cfpb-icon-text: Fix divider - Ans
+- PR #[2679](https://github.com/cfpb/design-system/pull/2679): cfpb-icon-text: Adjust divider and underline behavior, plus add inline option - Ans
+
+### General
+
+- Move `cfpb-utilities` to `utilities` - ([06b9234](https://github.com/cfpb/design-system/commit/06b92346c3ac7a5a23700f649b738710207d26b1)) - Ans
+- Update expandable.spec.js - ([13d247a](https://github.com/cfpb/design-system/commit/13d247a39c1841d1054008fb0f7f47a9b7aa8638)) - Ans
+- Add missing utility forwards - ([25a151e](https://github.com/cfpb/design-system/commit/25a151ebb23752137320911a2d8dff077c26fb4d)) - Ans
+- Migrate to Vitest - ([f90c73c](https://github.com/cfpb/design-system/commit/f90c73c7d71c1bf5d2462184d77e7541004bf24b)) - Ans
+- Improve handling of appearance - ([dc96f84](https://github.com/cfpb/design-system/commit/dc96f84fa83f985c7f8b5a3fc8559bbd4f925f5f)) - Ans
+- Fix divider - ([8ef091f](https://github.com/cfpb/design-system/commit/8ef091f77389a9a3e55c1fa0a4522261cfdb12ba)) - Ans
+- Adjust divider properties - ([b46fe91](https://github.com/cfpb/design-system/commit/b46fe914989c62c240b23beb4bd99e10b2a2221d)) - Ans
+- Adjust underline behavior - ([552a9b1](https://github.com/cfpb/design-system/commit/552a9b192e24d9a911b5c8d96643aef473b23c91)) - Ans
+- More button link adjustments - ([b023d45](https://github.com/cfpb/design-system/commit/b023d459d9a744d91263b9deeeb1941ce130bb3d)) - Ans
+
+## [5.3.3](https://github.com/cfpb/design-system/compare/v5.3.2..vv5.3.3) - May  5, 2026
 
 ### PRs in this release
 

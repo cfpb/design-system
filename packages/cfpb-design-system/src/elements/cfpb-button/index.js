@@ -152,6 +152,8 @@ export class CfpbButton extends LitElement {
         iconright=${this.iconRight}
         ?iconleftspin=${this.isIconLeftSpin}
         ?iconrightspin=${this.isIconRightSpin}
+        ?has-div=${!this.styleAsLink}
+        ?has-underline=${this.styleAsLink ? 'tablet-up' : ''}
       >
         <slot></slot>
       </cfpb-icon-text>

@@ -78,11 +78,9 @@ variation_groups:
             <cfpb-tagline>USA</cfpb-tagline>
           </div>
         variation_code_snippet: >-
-          <div>
-            <cfpb-tagline></cfpb-tagline>
-            <cfpb-tagline islarge></cfpb-tagline>
-            <cfpb-tagline>USA</cfpb-tagline>
-          </div>
+          <cfpb-tagline></cfpb-tagline>
+          <cfpb-tagline islarge></cfpb-tagline>
+          <cfpb-tagline>USA</cfpb-tagline>
       - variation_is_deprecated: false
         variation_name: Icon and Text
         variation_description: A basic pairing of an SVG icon and text.
@@ -116,11 +114,11 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text has-div style-as-link iconright="external-link">Style as standard link</cfpb-icon-text>
+            <cfpb-icon-text has-underline="tablet-up" iconright="external-link">Style as standard link</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text style-as-link display-inline mobile-underline iconright="external-link">Style as inline link</cfpb-icon-text>
+            <cfpb-icon-text inline has-underline="all" iconright="external-link">Style as inline link</cfpb-icon-text>
 
             <br><hr><br>
 
@@ -160,16 +158,6 @@ variation_groups:
 
             </p><p>
 
-            <input type="checkbox" id="icon-text-example-link" />
-            <label for="icon-text-example-link">Style as link</label>
-
-            </p><p>
-
-            <input type="checkbox" id="icon-text-example-underline" />
-            <label for="icon-text-example-underline">Underline at mobile</label>
-
-            </p><p>
-
             <input type="checkbox" id="icon-text-example-icon-right" />
             <label for="icon-text-example-icon-right">Align icon to right at mobile</label>
 
@@ -177,6 +165,15 @@ variation_groups:
 
             <input type="checkbox" id="icon-text-example-inline" />
             <label for="icon-text-example-inline">Display inline</label>
+
+            </p><p>
+
+            <label for="icon-text-example-underline">Has undeline at screen size:</label>
+            <select id="icon-text-example-underline">
+              <option>none</option>
+              <option>all</option>
+              <option>tablet-up</option>
+            </select>
 
             </p>
             <script>
@@ -189,10 +186,14 @@ variation_groups:
             const iconEndBtn = document.querySelector('#icon-text-example-icon-end');
             const hasDivBtn = document.querySelector('#icon-text-example-has-div');
             const animateBtn = document.querySelector('#icon-text-example-icon-animate');
-            const linkBtn = document.querySelector('#icon-text-example-link');
-            const underlineBtn = document.querySelector('#icon-text-example-underline');
             const iconRightBtn = document.querySelector('#icon-text-example-icon-right');
             const inlineBtn = document.querySelector('#icon-text-example-inline');
+
+            const underlineSel = document.querySelector('#icon-text-example-underline');
+            underlineSel.addEventListener('change',()=>{
+              if (underlineSel.value === 'none') iconTextEx.removeAttribute('has-underline');
+              else iconTextEx.hasUnderline = underlineSel.value;
+            });
 
             warBtn.addEventListener('click', () => {
               if (iconTextEx.hasAttribute('div-color')) {
@@ -225,21 +226,14 @@ variation_groups:
               iconTextEx.isIconRightSpin = !iconTextEx.isIconRightSpin;
             });
 
-            linkBtn.addEventListener('click', () => {
-              iconTextEx.styleAsLink = !iconTextEx.styleAsLink;
-            })
-
-            underlineBtn.addEventListener('click', () => {
-              iconTextEx.mobileUnderline = !iconTextEx.mobileUnderline;
-            })
-
             iconRightBtn.addEventListener('click', () => {
               iconTextEx.mobileIconAlignEnd = !iconTextEx.mobileIconAlignEnd;
             })
-
+            
             inlineBtn.addEventListener('click', () => {
-              iconTextEx.displayInline = !iconTextEx.displayInline;
+              iconTextEx.inline = !iconTextEx.inline;
             })
+
             })();
             </script>
           </div>
@@ -258,15 +252,35 @@ variation_groups:
 
             <br>
 
-            <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
+            <cfpb-button style-as-link full-on-mobile>This is a button link</cfpb-button>
 
             <br>
 
-            <cfpb-button disabled>This is a disabled button link</cfpb-button>
+            <cfpb-button href="#" full-on-mobile>This is a link styled as button</cfpb-button>
 
             <br>
 
-            <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
+            <cfpb-button disabled>This is a disabled button</cfpb-button>
+
+            <br>
+
+            <cfpb-button style-as-link disabled href="#">This is a disabled button link</cfpb-button>
+
+            <br>
+
+            <cfpb-button style-as-link>This is a button styled as a link</cfpb-button>
+
+            <br>
+
+            <cfpb-button href="#">This is a link styled as a button</cfpb-button>
+
+            <br>
+
+            <cfpb-button style-as-link iconright="download">This is a button styled as a link with an icon</cfpb-button>
+
+            <br>
+
+            <cfpb-button href="#" iconright="download">This is a link styled as a button with an icon</cfpb-button>
 
             <br>
 
@@ -304,6 +318,11 @@ variation_groups:
 
             </p><p>
 
+            <input type="checkbox" id="btn-example-link" />
+            <label for="btn-example-link">Link style</label>
+
+            </p><p>
+
             <input type="checkbox" id="btn-example-disabled" />
             <label for="btn-example-disabled">Disabled</label>
 
@@ -311,11 +330,6 @@ variation_groups:
 
             <input type="checkbox" id="btn-example-hidden" />
             <label for="btn-example-hidden">Hide icon</label>
-
-            </p><p>
-
-            <input type="checkbox" id="btn-example-link" />
-            <label for="btn-example-link">Link style</label>
 
             </p><p>
 
@@ -355,12 +369,14 @@ variation_groups:
             });
 
             hidBtn.addEventListener('click',()=>{
-              if (hidBtn.checked) btnEx.iconLeft = null;
-              else btnEx.iconLeft = 'update';
+              if (hidBtn.checked) btnEx.iconRight = null;
+              else btnEx.iconRight = 'update';
             });
 
             linkBtn.addEventListener('click',()=>{
               btnEx.styleAsLink = !btnEx.styleAsLink;
+              if (hidBtn.checked) btnEx.iconRight = null;
+              else btnEx.iconRight = 'update';
             });
 
             fullBtn.addEventListener('click',()=>{
@@ -375,6 +391,7 @@ variation_groups:
           <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
           <cfpb-button disabled>This is a disabled button link</cfpb-button>
           <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
+          <cfpb-button style-as-link href="#" iconright="download">This is a button styled as a link with an icon</cfpb-button>
       - variation_is_deprecated: false
         variation_name: File upload
         variation_description: >-

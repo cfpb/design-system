@@ -53,7 +53,7 @@
   .a-btn--link {
     // Remove any border and background add by primary and secondary button.
     box-shadow: none;
-    background-color: transparent;
+    background-color: transparent !important;
 
     // Padding added so the focus rectangle falls below the underline.
     padding: 1.5px 0;
@@ -62,16 +62,6 @@
     text-decoration-thickness: 1px;
     text-decoration-style: dotted;
     text-underline-offset: 4.5px;
-
-    &:has(svg) {
-      // Button links should be closer to their icon.
-      gap: math.div(5px, $base-font-size-px) + rem;
-
-      // Button links shouldn't have a divider.
-      &::before {
-        display: none;
-      }
-    }
   }
 
   @include u-btn-link-states(

@@ -10,10 +10,13 @@
   --icon-text-div-color: var(--icon-text-div-color-default);
 
   .wrap {
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
-    gap: rem-from-px(5px);
+    // Fix issue where inline-flex changes the height if there's a starting icon.
+    vertical-align: top;
+
+    gap: rem-from-px(10px);
   }
 
   .div {
@@ -22,16 +25,26 @@
     align-self: stretch;
   }
 
+  .text {
+    // See https://github.com/cfpb/consumerfinance.gov/pull/8252
+    overflow-wrap: break-word;
+  }
+
   // Shine the slot contents through to the wrap's flexbox items.
   slot {
     display: contents;
   }
 }
 
-// Display inline
-:host([display-inline]) {
+:host([inline]) {
   .wrap {
     display: inline;
+  }
+
+  cfpb-icon {
+    // Slight offset to match inline and flex position of icon.
+    top: -1px;
+    position: relative;
   }
 }
 
@@ -52,8 +65,9 @@
 // Mobile only.
 @include respond-to-max($bp-xs-max) {
   // Push the icon to the far right on mobile.
-  :host([mobile-icon-align-end]) {
+  :host(:not([inline])[mobile-icon-align-end]) {
     .wrap {
+      display: flex;
       justify-content: right;
     }
     .text {
@@ -62,7 +76,7 @@
   }
 
   // Show an underline at mobile.
-  :host(:not([mobile-underline])) {
+  :host([has-underline-desktop]) {
     .text {
       text-decoration: none !important;
     }
@@ -74,46 +88,12 @@
   --icon-text-div-color: var(--icon-text-div-color-disabled) !important;
 }
 
-:host(:not([disabled])[style-as-link]) {
+:host(:not([disabled])[has-underline]),
+:host(:not([disabled])[has-underline-desktop]) {
   .text {
-    color: var(--link-text);
-
-    text-decoration-color: var(--link-underline);
     text-decoration-line: underline;
     text-decoration-thickness: 1px;
     text-decoration-style: dotted;
     text-underline-offset: 4.5px;
-
-    // See https://github.com/cfpb/consumerfinance.gov/pull/8252
-    overflow-wrap: break-word;
-  }
-
-  // Note: The class definitions below are only for use in
-  // demonstrating link states. Do not use in production.
-
-  :visited .text,
-  .visited .text {
-    text-decoration-color: var(--link-underline-visited);
-    color: var(--link-text-visited);
-  }
-
-  :hover .text,
-  .hover .text {
-    text-decoration-style: solid;
-    text-decoration-color: var(--link-underline-hover);
-    color: var(--link-text-hover);
-  }
-
-  :focus .text,
-  .focus-visible .text {
-    outline: thin dotted;
-    outline-offset: 1px;
-  }
-
-  :active .text,
-  .active .text {
-    text-decoration-style: solid;
-    text-decoration-color: var(--link-underline-active);
-    color: var(--link-text-active);
   }
 }

@@ -78,11 +78,9 @@ variation_groups:
             <cfpb-tagline>USA</cfpb-tagline>
           </div>
         variation_code_snippet: >-
-          <div>
-            <cfpb-tagline></cfpb-tagline>
-            <cfpb-tagline islarge></cfpb-tagline>
-            <cfpb-tagline>USA</cfpb-tagline>
-          </div>
+          <cfpb-tagline></cfpb-tagline>
+          <cfpb-tagline islarge></cfpb-tagline>
+          <cfpb-tagline>USA</cfpb-tagline>
       - variation_is_deprecated: false
         variation_name: Icon and Text
         variation_description: A basic pairing of an SVG icon and text.
@@ -116,11 +114,11 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text has-div style-as-link iconright="external-link">Style as standard link</cfpb-icon-text>
+            <cfpb-icon-text has-underline-desktop iconright="external-link">Style as standard link</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text style-as-link display-inline mobile-underline iconright="external-link">Style as inline link</cfpb-icon-text>
+            <cfpb-icon-text inline has-underline iconright="external-link">Style as inline link</cfpb-icon-text>
 
             <br><hr><br>
 
@@ -160,13 +158,13 @@ variation_groups:
 
             </p><p>
 
-            <input type="checkbox" id="icon-text-example-link" />
-            <label for="icon-text-example-link">Style as link</label>
+            <input type="checkbox" id="icon-text-example-underline" />
+            <label for="icon-text-example-underline">Has underline</label>
 
             </p><p>
 
-            <input type="checkbox" id="icon-text-example-underline" />
-            <label for="icon-text-example-underline">Underline at mobile</label>
+            <input type="checkbox" id="icon-text-example-link" />
+            <label for="icon-text-example-link">Has underline at desktop</label>
 
             </p><p>
 
@@ -225,21 +223,22 @@ variation_groups:
               iconTextEx.isIconRightSpin = !iconTextEx.isIconRightSpin;
             });
 
-            linkBtn.addEventListener('click', () => {
-              iconTextEx.styleAsLink = !iconTextEx.styleAsLink;
+            underlineBtn.addEventListener('click', () => {
+              iconTextEx.hasUnderline = !iconTextEx.hasUnderline;
             })
 
-            underlineBtn.addEventListener('click', () => {
-              iconTextEx.mobileUnderline = !iconTextEx.mobileUnderline;
+            linkBtn.addEventListener('click', () => {
+              iconTextEx.hasUnderlineDesktop = !iconTextEx.hasUnderlineDesktop;
             })
 
             iconRightBtn.addEventListener('click', () => {
               iconTextEx.mobileIconAlignEnd = !iconTextEx.mobileIconAlignEnd;
             })
-
+            
             inlineBtn.addEventListener('click', () => {
-              iconTextEx.displayInline = !iconTextEx.displayInline;
+              iconTextEx.inline = !iconTextEx.inline;
             })
+
             })();
             </script>
           </div>
@@ -258,15 +257,35 @@ variation_groups:
 
             <br>
 
-            <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
+            <cfpb-button style-as-link full-on-mobile>This is a button link</cfpb-button>
 
             <br>
 
-            <cfpb-button disabled>This is a disabled button link</cfpb-button>
+            <cfpb-button href="#" full-on-mobile>This is a link styled as button</cfpb-button>
 
             <br>
 
-            <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
+            <cfpb-button disabled>This is a disabled button</cfpb-button>
+
+            <br>
+
+            <cfpb-button disabled href="#">This is a disabled button link</cfpb-button>
+
+            <br>
+
+            <cfpb-button style-as-link>This is a button styled as a link</cfpb-button>
+
+            <br>
+
+            <cfpb-button href="#">This is a link styled as a button</cfpb-button>
+
+            <br>
+
+            <cfpb-button style-as-link iconright="download">This is a button styled as a link with an icon</cfpb-button>
+
+            <br>
+
+            <cfpb-button href="#" iconright="download">This is a link styled as a button with an icon</cfpb-button>
 
             <br>
 
@@ -339,7 +358,7 @@ variation_groups:
             const fullBtn = document.querySelector('#btn-example-full');
 
             variantSel.addEventListener('change',()=>{
-              btnEx.variant = variantSel.value;
+              btnEx.linkVariant = variantSel.value;
             });
 
             flushLeft.addEventListener('click',()=>{
@@ -355,8 +374,8 @@ variation_groups:
             });
 
             hidBtn.addEventListener('click',()=>{
-              if (hidBtn.checked) btnEx.iconLeft = null;
-              else btnEx.iconLeft = 'update';
+              if (hidBtn.checked) btnEx.iconRight = null;
+              else btnEx.iconRight = 'update';
             });
 
             linkBtn.addEventListener('click',()=>{
@@ -372,9 +391,10 @@ variation_groups:
           </div>
         variation_code_snippet: >-
           <cfpb-button>This is a button</cfpb-button>
-          <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
+          <cfpb-button full-on-mobile><a href="#">This is a button link</a></cfpb-button>
           <cfpb-button disabled>This is a disabled button link</cfpb-button>
-          <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
+          <cfpb-button style-as-link><a href="#">This is a button styled as a link</a></cfpb-button>
+          <cfpb-button style-as-link iconright="download"><a href="#">This is a button styled as a link with an icon</a></cfpb-button>
       - variation_is_deprecated: false
         variation_name: File upload
         variation_description: >-

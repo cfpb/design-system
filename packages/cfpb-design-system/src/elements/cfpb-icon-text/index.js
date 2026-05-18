@@ -22,8 +22,8 @@ export class CfpbIconText extends LitElement {
    * @property {string} isIconLeftSpin - Whether the left icon spins or not.
    * @property {string} isIconRightSpin - Whether the right icon spins or not.
    * @property {boolean} hasDiv - If true, render a divider.
+   * @property {boolean} hasUnderline - If true, render an underline below the text (like a link).
    * @property {boolean} mobileUnderline - If true render an underline at mobile.
-   * @property {boolean} displayInline - Whether it is display inline or block.
    * @returns {object} The map of properties.
    */
   static properties = {
@@ -34,20 +34,19 @@ export class CfpbIconText extends LitElement {
     isIconLeftSpin: { type: Boolean, attribute: 'iconleftspin' },
     isIconRightSpin: { type: Boolean, attribute: 'iconrightspin' },
     hasDiv: { type: Boolean, attribute: 'has-div', reflect: true },
-    styleAsLink: { type: Boolean, attribute: 'style-as-link', reflect: true },
-    mobileUnderline: {
+    hasUnderline: { type: Boolean, attribute: 'has-underline', reflect: true },
+    hasUnderlineDesktop: {
       type: Boolean,
-      attribute: 'mobile-underline',
-      reflect: true,
-    },
-    displayInline: {
-      type: Boolean,
-      attribute: 'display-inline',
+      attribute: 'has-underline-desktop',
       reflect: true,
     },
     mobileIconAlignEnd: {
       type: Boolean,
       attribute: 'mobile-icon-align-end',
+      reflect: true,
+    },
+    inline: {
+      type: Boolean,
       reflect: true,
     },
   };

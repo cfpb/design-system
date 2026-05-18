@@ -75,8 +75,8 @@
     }
   }
 
-  // Show an underline at mobile.
-  :host([has-underline-desktop]) {
+  // Hide the underline at mobile.
+  :host([has-underline='tablet-up']) {
     .text {
       text-decoration: none !important;
     }
@@ -89,7 +89,7 @@
 }
 
 :host(:not([disabled])[has-underline]),
-:host(:not([disabled])[has-underline-desktop]) {
+:host(:not([disabled])[has-underline='tablet-up']) {
   .text {
     text-decoration-line: underline;
     text-decoration-thickness: 1px;

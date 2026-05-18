@@ -114,11 +114,11 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text has-underline-desktop iconright="external-link">Style as standard link</cfpb-icon-text>
+            <cfpb-icon-text has-underline="tablet-up" iconright="external-link">Style as standard link</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text inline has-underline iconright="external-link">Style as inline link</cfpb-icon-text>
+            <cfpb-icon-text inline has-underline="all" iconright="external-link">Style as inline link</cfpb-icon-text>
 
             <br><hr><br>
 
@@ -158,16 +158,6 @@ variation_groups:
 
             </p><p>
 
-            <input type="checkbox" id="icon-text-example-underline" />
-            <label for="icon-text-example-underline">Has underline</label>
-
-            </p><p>
-
-            <input type="checkbox" id="icon-text-example-link" />
-            <label for="icon-text-example-link">Has underline at desktop</label>
-
-            </p><p>
-
             <input type="checkbox" id="icon-text-example-icon-right" />
             <label for="icon-text-example-icon-right">Align icon to right at mobile</label>
 
@@ -175,6 +165,15 @@ variation_groups:
 
             <input type="checkbox" id="icon-text-example-inline" />
             <label for="icon-text-example-inline">Display inline</label>
+
+            </p><p>
+
+            <label for="icon-text-example-underline">Has undeline at screen size:</label>
+            <select id="icon-text-example-underline">
+              <option>none</option>
+              <option>all</option>
+              <option>tablet-up</option>
+            </select>
 
             </p>
             <script>
@@ -187,10 +186,14 @@ variation_groups:
             const iconEndBtn = document.querySelector('#icon-text-example-icon-end');
             const hasDivBtn = document.querySelector('#icon-text-example-has-div');
             const animateBtn = document.querySelector('#icon-text-example-icon-animate');
-            const linkBtn = document.querySelector('#icon-text-example-link');
-            const underlineBtn = document.querySelector('#icon-text-example-underline');
             const iconRightBtn = document.querySelector('#icon-text-example-icon-right');
             const inlineBtn = document.querySelector('#icon-text-example-inline');
+
+            const underlineSel = document.querySelector('#icon-text-example-underline');
+            underlineSel.addEventListener('change',()=>{
+              if (underlineSel.value === 'none') iconTextEx.removeAttribute('has-underline');
+              else iconTextEx.hasUnderline = underlineSel.value;
+            });
 
             warBtn.addEventListener('click', () => {
               if (iconTextEx.hasAttribute('div-color')) {
@@ -222,14 +225,6 @@ variation_groups:
               iconTextEx.isIconLeftSpin = !iconTextEx.isIconLeftSpin;
               iconTextEx.isIconRightSpin = !iconTextEx.isIconRightSpin;
             });
-
-            underlineBtn.addEventListener('click', () => {
-              iconTextEx.hasUnderline = !iconTextEx.hasUnderline;
-            })
-
-            linkBtn.addEventListener('click', () => {
-              iconTextEx.hasUnderlineDesktop = !iconTextEx.hasUnderlineDesktop;
-            })
 
             iconRightBtn.addEventListener('click', () => {
               iconTextEx.mobileIconAlignEnd = !iconTextEx.mobileIconAlignEnd;
@@ -333,11 +328,6 @@ variation_groups:
 
             </p><p>
 
-            <input type="checkbox" id="btn-example-link" />
-            <label for="btn-example-link">Link style</label>
-
-            </p><p>
-
             <input type="checkbox" id="btn-example-full" />
             <label for="btn-example-full">Full on mobile</label>
 
@@ -354,7 +344,6 @@ variation_groups:
 
             const disBtn = document.querySelector('#btn-example-disabled');
             const hidBtn = document.querySelector('#btn-example-hidden');
-            const linkBtn = document.querySelector('#btn-example-link');
             const fullBtn = document.querySelector('#btn-example-full');
 
             variantSel.addEventListener('change',()=>{
@@ -376,10 +365,6 @@ variation_groups:
             hidBtn.addEventListener('click',()=>{
               if (hidBtn.checked) btnEx.iconRight = null;
               else btnEx.iconRight = 'update';
-            });
-
-            linkBtn.addEventListener('click',()=>{
-              btnEx.styleAsLink = !btnEx.styleAsLink;
             });
 
             fullBtn.addEventListener('click',()=>{

@@ -2,15 +2,14 @@
    Expandable Organism
    ========================================================================== */
 
+import { checkDom, setInitFlag, instantiateAll } from '../utilities/';
+
 import {
   add as addDataHook,
-  checkDom,
-  setInitFlag,
-  instantiateAll,
   MaxHeightTransition,
   EventObserver,
   FlyoutMenu,
-} from '../utilities/';
+} from '../../utilities';
 
 import * as ExpandableStyles from './expandable.scss';
 

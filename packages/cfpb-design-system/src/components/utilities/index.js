@@ -2,14 +2,6 @@
    Design System - Components
    ========================================================================== */
 
-export { add, contains } from '../../utilities/data-hook.js';
-
-export { EventObserver } from '../../utilities/event-observer.js';
-
-export { FlyoutMenu } from '../../utilities/behavior/flyout-menu.js';
-
-export { MaxHeightTransition } from '../../utilities/transition/max-height-transition.js';
-
 export { checkDom, instantiateAll, setInitFlag } from './atomic-helpers.js';
 
 export {
@@ -19,8 +11,6 @@ export {
   getBreakpointState,
   viewportIsIn,
 } from './breakpoint-state.js';
-
-export { isMobileUserAgent } from './media-helpers.js';
 
 export {
   isUndefined,
@@ -33,6 +23,8 @@ export {
   isFunction,
   isEmpty,
 } from './type-checkers.js';
+
+export { isMobileUserAgent } from './media-helpers.js';
 
 export { AlphaTransition } from './transition/alpha-transition.js';
 export { MoveTransition } from './transition/move-transition.js';

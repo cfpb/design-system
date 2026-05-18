@@ -1,6 +1,6 @@
-@use 'custom-props';
-@use 'vars';
-@use 'font-adjust';
-@forward 'normalize';
 @forward 'base';
+@forward 'custom-props';
+@forward 'font-adjust';
 @forward 'mixins-font';
+@forward 'normalize';
+@forward 'vars';

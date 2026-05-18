@@ -1,10 +1,11 @@
 import {
-  EventObserver,
   checkDom,
   setInitFlag,
   isMobileUserAgent,
   instantiateAll,
 } from '../utilities';
+
+import { EventObserver } from '../../utilities';
 import MultiselectModel, { MAX_SELECTIONS } from './multiselect-model.js';
 import { create } from './multiselect-utils.js';
 

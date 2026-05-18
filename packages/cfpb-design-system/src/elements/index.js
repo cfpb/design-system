@@ -4,11 +4,11 @@
 
 // TODO: aggregate and export the component subdirectories automatically.
 
-// Base styles.
+// Breakpoints.
 export * from '../abstracts';
 
-// Shared config.
-export * from './utilities/shared-config';
+// Utilities exports. Includes shared config.
+export * from './utilities';
 
 // Component styles.
 export * from './cfpb-button';

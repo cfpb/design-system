@@ -3,6 +3,7 @@
    ========================================================================== */
 
 import './base/custom-props.css';
+import './base/font-adjust.css';
 import './base/vars.css';
 
 export * from './elements';
@@ -16,5 +17,6 @@ export * from './components/cfpb-notifications';
 export * from './components/cfpb-pagination';
 export * from './components/cfpb-tables';
 export * from './components/cfpb-typography';
+export * from './components/utilities';
 
 export * from './utilities';

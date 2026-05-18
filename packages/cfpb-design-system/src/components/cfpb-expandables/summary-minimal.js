@@ -1,12 +1,11 @@
+import { checkDom, instantiateAll, setInitFlag } from '../utilities';
+
 import {
   add as addDataHook,
-  checkDom,
-  instantiateAll,
-  setInitFlag,
   FlyoutMenu,
   MaxHeightTransition,
   EventObserver,
-} from '../utilities';
+} from '../../utilities';
 
 import * as SummaryMinimalStyles from './summary-minimal.scss';
 

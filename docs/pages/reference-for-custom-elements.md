@@ -82,6 +82,50 @@ variation_groups:
           <cfpb-tagline islarge></cfpb-tagline>
           <cfpb-tagline>USA</cfpb-tagline>
       - variation_is_deprecated: false
+        variation_name: Link
+        variation_description: A standard link.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-link><a href="#">This is a link</a></cfpb-link>
+
+            <br>
+
+            <cfpb-link link-variant="nav-left"><a href="#">This is a link</a></cfpb-link>
+
+            <br>
+
+            <cfpb-link link-variant="nav-right"><a href="#">This is a link</a></cfpb-link>
+
+            <br>
+            
+            <cfpb-link link-variant="download"><a href="#">This is a link</a></cfpb-link>
+
+            <br>
+            
+            <cfpb-link link-variant="external"><a href="#">This is a link</a></cfpb-link>
+
+            <br>
+
+            <cfpb-link no-top-border><a href="#">No top border</a></cfpb-link>
+
+            <br>
+
+            <cfpb-link><a>No href</a></cfpb-link>
+
+            <br>
+
+            <cfpb-link style-as-button><a href="#">Link styled as a button</a></cfpb-link>
+
+          </div>
+        variation_code_snippet: >-
+          <cfpb-link href="#">This is a link</cfpb-link>
+          <cfpb-link href="#" iconleft="left">This is a link</cfpb-link>
+          <cfpb-link href="#" iconright="right">This is a link</cfpb-link>
+          <cfpb-link href="#" iconright="download">This is a link</cfpb-link>
+          <cfpb-link href="#" iconright="external-link">This is a link</cfpb-link>
+          <cfpb-link href="#" no-top-border>No top border</cfpb-link>
+          <cfpb-link>No href</cfpb-link>
+      - variation_is_deprecated: false
         variation_name: Icon and Text
         variation_description: A basic pairing of an SVG icon and text.
         variation_code_snippet_rendered: >-
@@ -264,7 +308,7 @@ variation_groups:
 
             <br>
 
-            <cfpb-button style-as-link disabled href="#">This is a disabled button link</cfpb-button>
+            <cfpb-button disabled href="#">This is a disabled button link</cfpb-button>
 
             <br>
 
@@ -388,10 +432,10 @@ variation_groups:
           </div>
         variation_code_snippet: >-
           <cfpb-button>This is a button</cfpb-button>
-          <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
+          <cfpb-button full-on-mobile><a href="#">This is a button link</a></cfpb-button>
           <cfpb-button disabled>This is a disabled button link</cfpb-button>
-          <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
-          <cfpb-button style-as-link href="#" iconright="download">This is a button styled as a link with an icon</cfpb-button>
+          <cfpb-button style-as-link><a href="#">This is a button styled as a link</a></cfpb-button>
+          <cfpb-button style-as-link iconright="download"><a href="#">This is a button styled as a link with an icon</a></cfpb-button>
       - variation_is_deprecated: false
         variation_name: File upload
         variation_description: >-

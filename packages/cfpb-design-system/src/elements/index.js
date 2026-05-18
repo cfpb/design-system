@@ -18,6 +18,7 @@ export * from './cfpb-form-choice';
 export * from './cfpb-file-upload';
 export * from './cfpb-icon';
 export * from './cfpb-label';
+export * from './cfpb-link';
 export * from './cfpb-listbox';
 export * from './cfpb-listbox-item';
 export * from './cfpb-form-search';

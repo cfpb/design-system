@@ -1,0 +1,5 @@
+@use './mixin-link/styles.component.scss' as *;
+@use '../../utilities/functions' as *;
+
+//@include u-jump-link('a-link--jump', 'a-link__text');
+//@include u-jump-link-group('a-link--jump');

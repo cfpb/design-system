@@ -4,6 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './styles.component.scss?inline';
 import { CfpbIconText } from '../cfpb-icon-text';
+import { MixinLink } from '../cfpb-link/mixin-link';
 
 // The variants are different color themes of the button.
 const VALID_VARIANTS = ['primary', 'secondary', 'warning'];
@@ -16,7 +17,7 @@ const VALID_TYPES = ['button', 'submit', 'reset'];
  * @element cfpb-button
  * @slot - The main content for the button.
  */
-export class CfpbButton extends LitElement {
+export class CfpbButton extends MixinLink(LitElement) {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
@@ -165,17 +166,9 @@ export class CfpbButton extends LitElement {
 
     // Link button form.
     if (this.href) {
-      return html`
-        <a
-          class=${classes}
-          href=${this.disabled ? undefined : this.href}
-          role="button"
-          aria-disabled=${String(this.disabled)}
-          tabindex=${this.disabled ? -1 : 0}
-        >
-          ${this.#renderTextAndIcon()}
-        </a>
-      `;
+      if (this.styleAsLink) {
+        return this.renderLink(html`<slot></slot>`);
+      }
     }
 
     // Button form.

@@ -4,7 +4,6 @@ import { classMap } from 'lit/directives/class-map.js';
 import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './styles.component.scss?inline';
 import { CfpbIconText } from '../cfpb-icon-text';
-import { MixinLink } from '../cfpb-link/mixin-link';
 
 // The variants are different color themes of the button.
 const VALID_VARIANTS = ['primary', 'secondary', 'warning'];
@@ -17,14 +16,13 @@ const VALID_TYPES = ['button', 'submit', 'reset'];
  * @element cfpb-button
  * @slot - The main content for the button.
  */
-export class CfpbButton extends MixinLink(LitElement) {
+export class CfpbButton extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
   /**
    * @property {string} type - The button type: button, submit, or reset.
-   * @property {string} href - The URL to link to (makes the button a link).
    * @property {boolean} disabled - Whether the button is disabled or not.
    * @property {string} variant
    *   The button variant: primary, secondary, or warning.
@@ -40,7 +38,6 @@ export class CfpbButton extends MixinLink(LitElement) {
    */
   static properties = {
     type: { type: String },
-    href: { type: String },
     disabled: { type: Boolean, reflect: true },
     variant: { type: String },
     iconLeft: { type: String },
@@ -81,13 +78,6 @@ export class CfpbButton extends MixinLink(LitElement) {
     this.styleAsLink = false;
     this.iconLeftSpin = false;
     this.iconRightSpin = false;
-  }
-
-  /**
-   * @returns {boolean} True if it has an icon, false otherwise.
-   */
-  hasIcon() {
-    return this.#iconTextDom.value?.hasIcon();
   }
 
   /**
@@ -163,13 +153,6 @@ export class CfpbButton extends MixinLink(LitElement) {
 
   render() {
     const classes = classMap(this.#btnClass);
-
-    // Link button form.
-    if (this.href) {
-      if (this.styleAsLink) {
-        return this.renderLink(html`<slot></slot>`);
-      }
-    }
 
     // Button form.
     return html`

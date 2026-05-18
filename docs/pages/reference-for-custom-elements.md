@@ -108,14 +108,6 @@ variation_groups:
 
             <cfpb-link no-top-border><a href="#">No top border</a></cfpb-link>
 
-            <br>
-
-            <cfpb-link><a>No href</a></cfpb-link>
-
-            <br>
-
-            <cfpb-link style-as-button><a href="#">Link styled as a button</a></cfpb-link>
-
           </div>
         variation_code_snippet: >-
           <cfpb-link href="#">This is a link</cfpb-link>
@@ -296,19 +288,27 @@ variation_groups:
 
             <br>
 
-            <cfpb-button style-as-link full-on-mobile>This is a button link</cfpb-button>
+            <cfpb-button type="submit">This is a submit button</cfpb-button>
 
             <br>
 
-            <cfpb-button href="#" full-on-mobile>This is a link styled as button</cfpb-button>
+            <cfpb-button type="reset">This is a reset button</cfpb-button>
 
             <br>
 
-            <cfpb-button disabled>This is a disabled button</cfpb-button>
+            <cfpb-button variant="secondary">This is a secondary button</cfpb-button>
 
             <br>
 
-            <cfpb-button disabled href="#">This is a disabled button link</cfpb-button>
+            <cfpb-button variant="warning">This is a warning button</cfpb-button>
+
+            <br>
+
+            <cfpb-button disabled>This is a disabled primary button</cfpb-button>
+
+            <br>
+
+            <cfpb-button disabled>This is a disabled secondary button</cfpb-button>
 
             <br>
 
@@ -316,7 +316,7 @@ variation_groups:
 
             <br>
 
-            <cfpb-button href="#">This is a link styled as a button</cfpb-button>
+            <cfpb-button style-as-link disabled>This is a disabled button styled as a link</cfpb-button>
 
             <br>
 

@@ -264,7 +264,7 @@ variation_groups:
 
             <br>
 
-            <cfpb-button disabled href="#">This is a disabled button link</cfpb-button>
+            <cfpb-button style-as-link disabled href="#">This is a disabled button link</cfpb-button>
 
             <br>
 
@@ -318,6 +318,11 @@ variation_groups:
 
             </p><p>
 
+            <input type="checkbox" id="btn-example-link" />
+            <label for="btn-example-link">Link style</label>
+
+            </p><p>
+
             <input type="checkbox" id="btn-example-disabled" />
             <label for="btn-example-disabled">Disabled</label>
 
@@ -344,10 +349,11 @@ variation_groups:
 
             const disBtn = document.querySelector('#btn-example-disabled');
             const hidBtn = document.querySelector('#btn-example-hidden');
+            const linkBtn = document.querySelector('#btn-example-link');
             const fullBtn = document.querySelector('#btn-example-full');
 
             variantSel.addEventListener('change',()=>{
-              btnEx.linkVariant = variantSel.value;
+              btnEx.variant = variantSel.value;
             });
 
             flushLeft.addEventListener('click',()=>{
@@ -367,6 +373,12 @@ variation_groups:
               else btnEx.iconRight = 'update';
             });
 
+            linkBtn.addEventListener('click',()=>{
+              btnEx.styleAsLink = !btnEx.styleAsLink;
+              if (hidBtn.checked) btnEx.iconRight = null;
+              else btnEx.iconRight = 'update';
+            });
+
             fullBtn.addEventListener('click',()=>{
               btnEx.fullOnMobile = !btnEx.fullOnMobile;
             });
@@ -376,10 +388,10 @@ variation_groups:
           </div>
         variation_code_snippet: >-
           <cfpb-button>This is a button</cfpb-button>
-          <cfpb-button full-on-mobile><a href="#">This is a button link</a></cfpb-button>
+          <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
           <cfpb-button disabled>This is a disabled button link</cfpb-button>
-          <cfpb-button style-as-link><a href="#">This is a button styled as a link</a></cfpb-button>
-          <cfpb-button style-as-link iconright="download"><a href="#">This is a button styled as a link with an icon</a></cfpb-button>
+          <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
+          <cfpb-button style-as-link href="#" iconright="download">This is a button styled as a link with an icon</cfpb-button>
       - variation_is_deprecated: false
         variation_name: File upload
         variation_description: >-

@@ -50,6 +50,10 @@
 
 // Hide divider.
 :host(:not([has-div])) {
+  .wrap {
+    gap: rem-from-px(5px);
+  }
+
   .div {
     display: none;
   }

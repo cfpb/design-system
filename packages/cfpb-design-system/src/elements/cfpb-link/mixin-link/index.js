@@ -1,9 +1,16 @@
 import { html, css, unsafeCSS } from 'lit';
+import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbIconText } from '../../cfpb-icon-text';
 import styles from './styles.component.scss?inline';
 
 export const MixinLink = (superClass) =>
   class extends superClass {
+    static styles = css`
+      ${unsafeCSS(styles)}
+    `;
+
+    #anchorRef = createRef();
+
     /**
      * @property {string} linkText - The text of the slotted link.
      * @property {object} linkAttributes - The attributes on the slotted link.
@@ -29,10 +36,6 @@ export const MixinLink = (superClass) =>
       'nav-right',
     ]);
 
-    static styles = css`
-      ${unsafeCSS(styles)}
-    `;
-
     constructor() {
       super();
       this.linkText = '';
@@ -42,6 +45,7 @@ export const MixinLink = (superClass) =>
     willUpdate(changed) {
       if (changed.has('linkVariant')) {
         if (!this.constructor.variants.has(this.linkVariant)) {
+          // eslint-disable-next-line no-console
           console.warn(`Invalid link variant "${this.linkVariant}"`);
 
           this.linkVariant = undefined;
@@ -70,6 +74,7 @@ export const MixinLink = (superClass) =>
       const anchor = this.#slottedAnchor;
 
       if (!anchor) {
+        // eslint-disable-next-line no-console
         console.warn(`${this.tagName.toLowerCase()} expects a slotted <a>`);
         return;
       }
@@ -98,6 +103,8 @@ export const MixinLink = (superClass) =>
         case 'external':
           return 'external-link';
       }
+
+      return '';
     }
 
     renderLink() {
@@ -105,12 +112,7 @@ export const MixinLink = (superClass) =>
       return html`
         <slot></slot>
 
-        <a
-          ${Object.entries(this.linkAttributes).map(
-            ([name, value]) => html`${name}="${value}"`,
-          )}
-          @click=${this.#handleClick}
-        >
+        <a ${ref(this.#anchorRef)} @click=${this.#handleClick}>
           <cfpb-icon-text
             iconLeft=${this.#iconLeft}
             iconRight=${this.#iconRight}
@@ -123,7 +125,7 @@ export const MixinLink = (superClass) =>
     }
 
     updated() {
-      const anchor = this.renderRoot.querySelector('a');
+      const anchor = this.#anchorRef.value;
 
       if (!anchor) return;
 

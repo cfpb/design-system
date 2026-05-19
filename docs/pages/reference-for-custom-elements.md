@@ -108,6 +108,16 @@ variation_groups:
 
             <cfpb-link no-top-border><a href="#">No top border</a></cfpb-link>
 
+            <br>
+
+            <cfpb-link><a href="#">Item 1</a></cfpb-link>
+            <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
+            <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+
+            <br>
+
+            <cfpb-link inline><a href="#">Inline link</a></cfpb-link>
+
           </div>
         variation_code_snippet: >-
           <cfpb-link href="#">This is a link</cfpb-link>
@@ -150,11 +160,11 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text has-underline="tablet-up" iconright="external-link">Style as standard link</cfpb-icon-text>
+            <cfpb-icon-text underline="tablet-up" iconright="external-link">Style as standard link</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text inline has-underline="all" iconright="external-link">Style as inline link</cfpb-icon-text>
+            <cfpb-icon-text inline underline="all" iconright="external-link">Style as inline link</cfpb-icon-text>
 
             <br><hr><br>
 
@@ -227,8 +237,8 @@ variation_groups:
 
             const underlineSel = document.querySelector('#icon-text-example-underline');
             underlineSel.addEventListener('change',()=>{
-              if (underlineSel.value === 'none') iconTextEx.removeAttribute('has-underline');
-              else iconTextEx.hasUnderline = underlineSel.value;
+              if (underlineSel.value === 'none') iconTextEx.removeAttribute('underline');
+              else iconTextEx.underline = underlineSel.value;
             });
 
             warBtn.addEventListener('click', () => {

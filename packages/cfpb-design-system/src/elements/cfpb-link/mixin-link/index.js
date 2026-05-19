@@ -53,10 +53,8 @@ export const MixinLink = (superClass) =>
       }
     }
 
-    firstUpdated(...args) {
-      if (super.firstUpdated) {
-        super.firstUpdated(args);
-      }
+    firstUpdated(changedProperties) {
+      super.firstUpdated?.(changedProperties);
 
       this.#extractAnchorData();
 
@@ -74,6 +72,7 @@ export const MixinLink = (superClass) =>
       const anchor = this.#slottedAnchor;
 
       if (!anchor) {
+        // this.tagName will be retrieved from the class implementing the mixin.
         // eslint-disable-next-line no-console
         console.warn(`${this.tagName.toLowerCase()} expects a slotted <a>`);
         return;
@@ -107,17 +106,23 @@ export const MixinLink = (superClass) =>
       return '';
     }
 
+    get #underline() {
+      if (!this.linkAttributes.href) return '';
+      return this.inline ? 'all' : 'tablet-up';
+    }
+
     renderLink() {
       // Empty slot is fallback content.
       return html`
         <slot></slot>
 
-        <a ${ref(this.#anchorRef)} @click=${this.#handleClick}>
+        <a ${ref(this.#anchorRef)}>
           <cfpb-icon-text
             iconLeft=${this.#iconLeft}
             iconRight=${this.#iconRight}
-            ?has-underline-desktop=${this.linkAttributes.href}
+            .underline=${this.#underline}
             ?mobile-icon-align-end=${this.linkVariant === 'nav-right'}
+            ?inline=${this.inline}
             >${this.linkText}</cfpb-icon-text
           >
         </a>
@@ -132,12 +137,5 @@ export const MixinLink = (superClass) =>
       Object.entries(this.linkAttributes).forEach(([name, value]) => {
         anchor.setAttribute(name, value);
       });
-    }
-
-    #handleClick(evt) {
-      if (this.disabled) {
-        evt.preventDefault();
-        evt.stopPropagation();
-      }
     }
   };

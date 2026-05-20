@@ -196,8 +196,7 @@
       @include heading-4(
         $has-margin-bottom,
         $has-margin-top,
-        $is-responsive: false,
-        $font-weight: $font-weight
+        $is-responsive: false
       );
     }
   }

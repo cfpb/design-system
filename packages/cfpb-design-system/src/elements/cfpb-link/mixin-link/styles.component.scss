@@ -1,0 +1,109 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
+
+slot {
+  display: none;
+}
+
+a[href] {
+  cursor: pointer;
+
+  &:visited,
+  &.visited {
+    color: var(--link-text-visited);
+  }
+
+  &:hover,
+  &.hover {
+    color: var(--link-text-hover);
+  }
+
+  &:active,
+  &.active {
+    color: var(--link-text-active);
+  }
+}
+
+a {
+  // Remove underline from links, since that's supplied by the internal cfpb-icon-text.
+  text-decoration-line: none;
+
+  font-weight: 500;
+  display: inline;
+
+  &:focus-visible,
+  &.focus {
+    outline: thin dotted;
+    outline-offset: 1px;
+  }
+}
+
+:host {
+  // Inherit the pointer cursor from the internal <a>.
+  cursor: inherit;
+}
+
+:host(:not([inline])) a {
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    display: block;
+
+    box-sizing: border-box;
+    padding-top: math.div(10px, $base-font-size-px) + em;
+    padding-bottom: math.div(10px, $base-font-size-px) + em;
+
+    text-decoration: none;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+
+    &:hover {
+      border-top-style: solid;
+      border-bottom-style: solid;
+    }
+
+    // We create a faux focus rectangle in the ::after pseudoelement to better
+    // control the positioning of the focus rectangle, which would overwise
+    // overlap the top border of the jumplink when it appears in a group.
+    &:focus-visible {
+      position: relative;
+      outline: none;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        outline: 1px dotted var(--gray);
+        outline-offset: 2px;
+      }
+    }
+  }
+}
+
+:host([no-top-border]) a {
+  border-top: none !important;
+  position: relative;
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    &:hover::before {
+      position: absolute;
+      top: -1px;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      border-top: 1px solid currentcolor;
+    }
+  }
+}
+
+:host a:not([href]) {
+  border: none;
+  text-decoration: none;
+}

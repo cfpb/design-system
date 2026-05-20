@@ -83,13 +83,6 @@ export class CfpbButton extends LitElement {
   }
 
   /**
-   * @returns {boolean} True if it has an icon, false otherwise.
-   */
-  hasIcon() {
-    return this.#iconTextDom.value?.hasIcon();
-  }
-
-  /**
    * Hide any icon in the slot.
    */
   hideIcon() {
@@ -153,7 +146,7 @@ export class CfpbButton extends LitElement {
         ?iconleftspin=${this.isIconLeftSpin}
         ?iconrightspin=${this.isIconRightSpin}
         ?has-div=${!this.styleAsLink}
-        ?has-underline=${this.styleAsLink ? 'tablet-up' : ''}
+        ?underline=${this.styleAsLink ? 'tablet-up' : ''}
       >
         <slot></slot>
       </cfpb-icon-text>

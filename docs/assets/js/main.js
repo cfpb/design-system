@@ -11,6 +11,7 @@ import {
   CfpbFormSearchInput,
   CfpbIcon,
   CfpbLabel,
+  CfpbLink,
   CfpbListbox,
   CfpbListboxItem,
   CfpbTagline,
@@ -63,6 +64,7 @@ CfpbFormSearch.init();
 CfpbFormSearchInput.init();
 CfpbIcon.init();
 CfpbLabel.init();
+CfpbLink.init();
 CfpbListbox.init();
 CfpbListboxItem.init();
 CfpbTagline.init();

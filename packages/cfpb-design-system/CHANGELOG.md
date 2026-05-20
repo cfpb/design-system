@@ -2,7 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.4.0](https://github.com/cfpb/design-system/compare/v5.3.3..v5.4.0) - May 18, 2026
+## [5.5.0](https://github.com/cfpb/design-system/compare/v5.4.0..v5.5.0) - May 20, 2026
+
+### PRs in this release
+
+- PR #[2681](https://github.com/cfpb/design-system/pull/2681): Add `cfpb-link` - Ans
+
+### General
+
+- Add `cfpb-link` - ([32209a6](https://github.com/cfpb/design-system/commit/32209a6ca8feff7ddd3f1ad2931ed35662d84dfd)) - Ans
+- Remove mixin from button (for now) - ([ca8cd84](https://github.com/cfpb/design-system/commit/ca8cd84cbe8e41f16105600f39753124b9a1ecc0)) - Ans
+- Fix linter issues - ([9e3c89f](https://github.com/cfpb/design-system/commit/9e3c89f95d67bac35e966927a8abff3598d1dd68)) - Ans
+- Refactor cfpb-link - ([addb858](https://github.com/cfpb/design-system/commit/addb8583f8d865fa95cb40092770f7a9eb0dede8)) - Ans
+- Re-add href property to button - ([73d9d3a](https://github.com/cfpb/design-system/commit/73d9d3acbf689189166de63375dcf7a66e77d4f7)) - Ans
+- Create index.scss - ([cbc71ca](https://github.com/cfpb/design-system/commit/cbc71cae3d39831ea53b18d1bd9ee61dee005497)) - Ans
+
+## [5.4.0](https://github.com/cfpb/design-system/compare/v5.3.3..vv5.4.0) - May 18, 2026
 
 ### PRs in this release
 

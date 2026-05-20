@@ -23,6 +23,7 @@ export class CfpbButton extends LitElement {
 
   /**
    * @property {string} type - The button type: button, submit, or reset.
+   * @property {string} href - The URL to link to (makes the button a link).
    * @property {boolean} disabled - Whether the button is disabled or not.
    * @property {string} variant
    *   The button variant: primary, secondary, or warning.
@@ -38,6 +39,7 @@ export class CfpbButton extends LitElement {
    */
   static properties = {
     type: { type: String },
+    href: { type: String },
     disabled: { type: Boolean, reflect: true },
     variant: { type: String },
     iconLeft: { type: String },
@@ -153,6 +155,21 @@ export class CfpbButton extends LitElement {
 
   render() {
     const classes = classMap(this.#btnClass);
+
+    // Link button form.
+    if (this.href) {
+      return html`
+        <a
+          class=${classes}
+          href=${this.disabled ? undefined : this.href}
+          role="button"
+          aria-disabled=${String(this.disabled)}
+          tabindex=${this.disabled ? -1 : 0}
+        >
+          ${this.#renderTextAndIcon()}
+        </a>
+      `;
+    }
 
     // Button form.
     return html`

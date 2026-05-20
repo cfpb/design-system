@@ -442,10 +442,10 @@ variation_groups:
           </div>
         variation_code_snippet: >-
           <cfpb-button>This is a button</cfpb-button>
-          <cfpb-button full-on-mobile>This is a button link</cfpb-button>
+          <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
           <cfpb-button disabled>This is a disabled button link</cfpb-button>
-          <cfpb-button style-as-link>This is a button styled as a link</cfpb-button>
-          <cfpb-button style-as-link iconright="download">This is a button styled as a link with an icon</cfpb-button>
+          <cfpb-button href="#" style-as-link>This is a button styled as a link</cfpb-button>
+          <cfpb-button href="#" style-as-link iconright="download">This is a button styled as a link with an icon</cfpb-button>
       - variation_is_deprecated: false
         variation_name: File upload
         variation_description: >-

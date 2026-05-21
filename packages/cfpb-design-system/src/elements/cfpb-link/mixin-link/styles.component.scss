@@ -9,6 +9,8 @@ slot {
 a[href] {
   cursor: pointer;
 
+  color: var(--link-text);
+
   &:visited,
   &.visited {
     color: var(--link-text-visited);

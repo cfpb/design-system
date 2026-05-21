@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.5.0](https://github.com/cfpb/design-system/compare/v5.4.0..v5.5.0) - May 20, 2026
+## [5.5.1](https://github.com/cfpb/design-system/compare/v5.5.0..v5.5.1) - May 21, 2026
+
+### PRs in this release
+
+- PR #[2683](https://github.com/cfpb/design-system/pull/2683): Fixes issue where heading-3 was not increasing font-weight at mobile - Ans
+
+### General
+
+- Fixes issue where heading-3 was not increasing font-weight at mobile - ([b82c882](https://github.com/cfpb/design-system/commit/b82c882f281cd5159e91725745dfb92311c128d0)) - Ans
+- Re-generate assets - ([fc2bc54](https://github.com/cfpb/design-system/commit/fc2bc54ec051dc4d0d4d669dabacc1d364032c77)) - Ans
+
+## [5.5.0](https://github.com/cfpb/design-system/compare/v5.4.0..vv5.5.0) - May 20, 2026
 
 ### PRs in this release
 

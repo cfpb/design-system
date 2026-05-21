@@ -1,8 +1,7 @@
+import { checkDom, instantiateAll, setInitFlag } from '../utilities';
+
 import {
   add as addDataHook,
-  checkDom,
-  instantiateAll,
-  setInitFlag,
   FlyoutMenu,
   MaxHeightTransition,
   EventObserver,

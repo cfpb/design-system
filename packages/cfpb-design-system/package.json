@@ -6,11 +6,15 @@
     ".": "./src/index.js",
     "./tooltips": "./src/components/cfpb-tooltips/index.js",
     "./icons/": "./src/components/cfpb-icons/icons/",
-    "./src/elements/abstracts/*": "./src/elements/abstracts/*",
-    "./src/elements/base/*": "./src/elements/base/*",
+    "./src/_abstracts": "./src/abstracts/index.scss",
+    "./src/abstracts/*": "./src/abstracts/*",
+    "./src/_base": "./src/base/index.scss",
+    "./src/base/*": "./src/base/*",
     "./src/elements/utilities/*": "./src/elements/utilities/*",
     "./src/elements/*": "./src/elements/*",
+    "./src/_components": "./src/components/index.scss",
     "./src/components/*": "./src/components/*",
+    "./src/_utilities": "./src/utilities/index.scss",
     "./src/utilities/*": "./src/utilities/*"
   },
   "author": {

@@ -1,5 +1,5 @@
-import { BaseTransition } from '../transition/base-transition.js';
-import { EventObserver } from '../event-observer.js';
+import { BaseTransition } from '../../../utilities/transition/base-transition.js';
+import { EventObserver } from '../../../utilities/event-observer.js';
 
 // Exported constants.
 const CLASSES = {

@@ -1,6 +1,5 @@
 @use 'sass:math';
-@use './vars.scss' as *;
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 //
 // Default button
@@ -15,7 +14,7 @@ input.a-btn::-moz-focus-inner {
 
 @mixin legacy-u-btn-divider() {
   content: '';
-  border-left: 1px solid $btn-divider;
+  border-left: 1px solid var(--btn-divider);
   order: 2;
   place-self: normal;
 }
@@ -45,21 +44,21 @@ input.a-btn::-moz-focus-inner {
   &,
   &:link,
   &:visited {
-    background-color: $btn-bg;
-    color: $btn-text;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
   }
 
   &:hover,
   &.hover,
   &:focus,
   &.focus {
-    background-color: $btn-bg-hover;
-    color: $btn-text;
+    background-color: var(--btn-bg-hover);
+    color: var(--btn-text);
   }
 
   &:focus,
   &.focus {
-    outline: 1px dotted $btn-bg;
+    outline: 1px dotted var(--btn-bg);
 
     // The outline-offset property is not supported everywhere (e.g. IE)
     // but it adds a nice touch in browsers where it is.
@@ -68,7 +67,7 @@ input.a-btn::-moz-focus-inner {
 
   &:active,
   &.active {
-    background-color: $btn-bg-active;
+    background-color: var(--btn-bg-active);
   }
 
   //
@@ -79,30 +78,30 @@ input.a-btn::-moz-focus-inner {
     &,
     &:link,
     &:visited {
-      background-color: $btn-secondary-bg;
-      color: $btn-secondary-text;
-      box-shadow: 0 0 0 1px $btn-secondary-border inset;
+      background-color: var(--btn-secondary-bg);
+      color: var(--btn-secondary-text);
+      box-shadow: 0 0 0 1px var(--btn-secondary-border) inset;
     }
 
     &:hover,
     &.hover,
     &:focus,
     &.focus {
-      background-color: $btn-secondary-bg-hover;
-      color: $btn-secondary-text-hover;
-      box-shadow: 0 0 0 1px $btn-secondary-border-hover inset;
+      background-color: var(--btn-secondary-bg-hover);
+      color: var(--btn-secondary-text-hover);
+      box-shadow: 0 0 0 1px var(--btn-secondary-border-hover) inset;
     }
 
     &:focus,
     &.focus {
-      outline-color: $btn-secondary-border;
+      outline-color: var(--btn-secondary-border);
     }
 
     &:active,
     &.active {
-      background-color: $btn-secondary-bg-active;
-      color: $btn-secondary-text-active;
-      box-shadow: 0 0 0 1px $btn-secondary-border-active inset;
+      background-color: var(--btn-secondary-bg-active);
+      color: var(--btn-secondary-text-active);
+      box-shadow: 0 0 0 1px var(--btn-secondary-border-active) inset;
     }
   }
 
@@ -114,25 +113,25 @@ input.a-btn::-moz-focus-inner {
     &,
     &:link,
     &:visited {
-      background-color: $btn-warning-bg;
-      color: $btn-warning-text;
+      background-color: var(--btn-warning-bg);
+      color: var(--btn-warning-text);
     }
 
     &:hover,
     &.hover,
     &:focus,
     &.focus {
-      background-color: $btn-warning-bg-hover;
+      background-color: var(--btn-warning-bg-hover);
     }
 
     &:focus,
     &.focus {
-      outline-color: $btn-warning-bg;
+      outline-color: var(--btn-warning-bg);
     }
 
     &:active,
     &.active {
-      background-color: $btn-warning-bg-active;
+      background-color: var(--btn-warning-bg-active);
     }
   }
 
@@ -152,15 +151,15 @@ input.a-btn::-moz-focus-inner {
     &.focus,
     &:active,
     &.active {
-      background-color: $btn-disabled-bg;
-      color: $btn-disabled-text;
+      background-color: var(--btn-disabled-bg);
+      color: var(--btn-disabled-text);
       cursor: default; // Fallback for IE/Opera
       cursor: not-allowed;
     }
 
     &:focus,
     &.focus {
-      outline-color: $btn-disabled-outline;
+      outline-color: var(--btn-disabled-outline);
     }
   }
 
@@ -198,17 +197,17 @@ input.a-btn::-moz-focus-inner {
 
   // Handle different coloring in divider.
   &--secondary:has(svg)::before {
-    border-color: $btn-secondary-divider !important;
+    border-color: var(--btn-secondary-divider) !important;
   }
 
   &--warning:has(svg)::before {
-    border-color: $btn-warning-divider !important;
+    border-color: var(--btn-warning-divider) !important;
   }
 
   &--disabled:has(svg)::before,
   &[disabled]:has(svg)::before,
   &[aria-disabled='true']:has(svg)::before {
-    border-color: $btn-disabled-divider !important;
+    border-color: var(--btn-disabled-divider) !important;
   }
 
   // Hide the icon if the a-btn--hide-icon modifier is set.

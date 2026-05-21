@@ -1,5 +1,5 @@
-@use '@cfpb/cfpb-design-system/src/components/cfpb-forms/text-input' as *;
-@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/icon' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts/mixins-text-input' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 :host {
@@ -44,6 +44,7 @@
     }
 
     input[type='search'] {
+      @include u-text-input-base;
       font-size: 1rem;
       width: 100%;
       white-space: nowrap;
@@ -165,6 +166,10 @@
   .no-js .o-search-input button[type='reset'] {
     display: none !important;
   }
+}
+
+::placeholder {
+  color: var(--input-text-placeholder-default);
 }
 
 :host([borderless]) {

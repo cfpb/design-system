@@ -1,0 +1,61 @@
+/* =======================================================================
+   Design System
+   Legacy components
+   ======================================================================= */
+
+// Buttons.
+@forward 'components/cfpb-buttons/button';
+@forward 'components/cfpb-buttons/button-group';
+@forward 'components/cfpb-buttons/button-link';
+
+// Expandables.
+@forward 'components/cfpb-expandables/vars';
+@forward 'components/cfpb-expandables/expandable';
+@forward 'components/cfpb-expandables/expandable-group';
+@forward 'components/cfpb-expandables/summary';
+@forward 'components/cfpb-expandables/summary-minimal';
+
+// Forms.
+@forward 'components/cfpb-forms/form';
+@forward 'components/cfpb-forms/form-alert';
+@forward 'components/cfpb-forms/form-field';
+@forward 'components/cfpb-forms/label';
+@forward 'components/cfpb-forms/multiselect';
+@forward 'components/cfpb-forms/range';
+@forward 'components/cfpb-forms/search-input';
+@forward 'components/cfpb-forms/select';
+@forward 'components/cfpb-forms/tag';
+@forward 'components/cfpb-forms/text-input';
+
+// Layout.
+@forward 'components/cfpb-layout/card-group';
+@forward 'components/cfpb-layout/card';
+@forward 'components/cfpb-layout/email-signup';
+@forward 'components/cfpb-layout/featured-content-module';
+@forward 'components/cfpb-layout/hero';
+@forward 'components/cfpb-layout/layout';
+@forward 'components/cfpb-layout/text-introduction';
+@forward 'components/cfpb-layout/well';
+
+// Notifications.
+@forward 'components/cfpb-notifications/vars';
+@forward 'components/cfpb-notifications/banner';
+@forward 'components/cfpb-notifications/notification';
+
+// Pagination.
+@forward 'components/cfpb-pagination/vars';
+@forward 'components/cfpb-pagination/pagination';
+
+// Tables.
+@forward 'components/cfpb-tables/vars';
+@forward 'components/cfpb-tables/table';
+
+// Typography.
+@forward 'components/cfpb-typography/vars';
+@forward 'components/cfpb-typography/date';
+@forward 'components/cfpb-typography/link';
+@forward 'components/cfpb-typography/list';
+@forward 'components/cfpb-typography/meta-header';
+@forward 'components/cfpb-typography/pull-quote';
+@forward 'components/cfpb-typography/slug-header';
+@forward 'components/cfpb-typography/tagline';

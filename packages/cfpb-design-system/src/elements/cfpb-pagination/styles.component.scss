@@ -1,6 +1,7 @@
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/elements/utilities/shadow-utilities' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/icon' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
-@use '@cfpb/cfpb-design-system/src/components/cfpb-icons/icon' as *;
 
 :host {
   width: 100%;

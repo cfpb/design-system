@@ -1,6 +1,6 @@
 import { checkDom, instantiateAll, setInitFlag } from './atomic-helpers.js';
-import { Expandable } from '../components/cfpb-expandables';
-import { Multiselect } from '../components/cfpb-forms';
+import { Expandable } from '../cfpb-expandables';
+import { Multiselect } from '../cfpb-forms';
 
 let containerDom;
 let componentDom;

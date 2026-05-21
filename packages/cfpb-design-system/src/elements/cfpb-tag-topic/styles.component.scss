@@ -1,7 +1,8 @@
-@use '@cfpb/cfpb-design-system/src/elements/base' as *;
-@use '@cfpb/cfpb-design-system/src/elements/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/utilities/index' as *;
-@use '@cfpb/cfpb-design-system/src/components/cfpb-typography/mixins' as *;
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/mixins-utilities' as *;
+@use '@cfpb/cfpb-design-system/src/components/cfpb-typography/mixins-typography'
+  as *;
+@use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
 
 :host {
   // Topic tags

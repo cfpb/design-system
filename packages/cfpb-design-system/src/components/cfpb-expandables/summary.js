@@ -1,15 +1,17 @@
 import {
-  add as addDataHook,
   checkDom,
   instantiateAll,
   setInitFlag,
+  MOBILE,
+  viewportIsIn,
+} from '../utilities';
+
+import {
+  add as addDataHook,
   FlyoutMenu,
   MaxHeightTransition,
   EventObserver,
-  MOBILE,
-  viewportIsIn,
 } from '../../utilities';
-
 import * as SummaryStyles from './summary.scss';
 
 const BASE_CLASS = 'o-summary';

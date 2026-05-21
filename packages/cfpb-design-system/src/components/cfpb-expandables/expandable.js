@@ -2,11 +2,10 @@
    Expandable Organism
    ========================================================================== */
 
+import { checkDom, setInitFlag, instantiateAll } from '../utilities/';
+
 import {
   add as addDataHook,
-  checkDom,
-  setInitFlag,
-  instantiateAll,
   MaxHeightTransition,
   EventObserver,
   FlyoutMenu,

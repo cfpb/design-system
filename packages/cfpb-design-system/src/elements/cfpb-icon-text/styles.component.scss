@@ -8,32 +8,6 @@
 
   // Private variables.
   --icon-text-div-color: var(--icon-text-div-color-default);
-
-  .wrap {
-    display: inline-flex;
-    align-items: center;
-
-    // Fix issue where inline-flex changes the height if there's a starting icon.
-    vertical-align: top;
-
-    gap: rem-from-px(10px);
-  }
-
-  .div {
-    width: 1px;
-    background: var(--icon-text-div-color);
-    align-self: stretch;
-  }
-
-  .text {
-    // See https://github.com/cfpb/consumerfinance.gov/pull/8252
-    overflow-wrap: break-word;
-  }
-
-  // Shine the slot contents through to the wrap's flexbox items.
-  slot {
-    display: contents;
-  }
 }
 
 :host([inline]) {
@@ -100,11 +74,38 @@
     text-decoration-style: dotted;
     text-underline-offset: 4.5px;
   }
+}
 
-  .wrap:hover {
-    .text {
-      text-decoration-style: solid;
-      text-decoration-color: var(--link-underline-hover);
-    }
+// Keep LVHFA order.
+:host(:not([disabled])[underline='all']:hover),
+:host(:not([disabled])[underline='tablet-up']:hover) {
+  .text {
+    text-decoration-style: solid;
   }
+}
+
+.wrap {
+  display: inline-flex;
+  align-items: center;
+
+  // Fix issue where inline-flex changes the height if there's a starting icon.
+  vertical-align: top;
+
+  gap: rem-from-px(10px);
+}
+
+.div {
+  width: 1px;
+  background: var(--icon-text-div-color);
+  align-self: stretch;
+}
+
+.text {
+  // See https://github.com/cfpb/consumerfinance.gov/pull/8252
+  overflow-wrap: break-word;
+}
+
+// Shine the slot contents through to the wrap's flexbox items.
+slot {
+  display: contents;
 }

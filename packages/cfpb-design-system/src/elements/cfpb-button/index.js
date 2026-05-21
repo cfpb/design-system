@@ -136,20 +136,22 @@ export class CfpbButton extends LitElement {
   }
 
   #renderTextAndIcon() {
+    const underlineType = this.styleAsLink ? 'all' : '';
+
     return html`
       <cfpb-icon-text
         ${ref(this.#iconTextDom)}
         ?disabled=${this.disabled}
-        dividerColor="${this.dividerColorVar}"
+        div-color="${this.dividerColorVar}"
         iconleft=${this.iconLeft}
         iconright=${this.iconRight}
         ?iconleftspin=${this.isIconLeftSpin}
         ?iconrightspin=${this.isIconRightSpin}
         ?has-div=${!this.styleAsLink}
-        ?underline=${this.styleAsLink ? 'tablet-up' : ''}
-      >
-        <slot></slot>
-      </cfpb-icon-text>
+        .underline=${underlineType}
+        ?inline=${this.styleAsLink}
+        ><slot></slot
+      ></cfpb-icon-text>
     `;
   }
 

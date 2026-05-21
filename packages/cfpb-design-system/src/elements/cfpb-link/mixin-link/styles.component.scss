@@ -2,26 +2,58 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
 
+:host([no-top-border]) a {
+  border-top: none !important;
+  position: relative;
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    &:hover::before {
+      position: absolute;
+      top: -1px;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      border-top: 1px solid currentcolor;
+    }
+  }
+}
+
+:host a:not([href]) {
+  border: none;
+  text-decoration: none;
+}
+
 slot {
   display: none;
 }
 
 a[href] {
-  cursor: pointer;
+  color: var(--link-text);
 
   &:visited,
   &.visited {
     color: var(--link-text-visited);
+    cfpb-icon-text {
+      text-decoration-color: var(--link-underline-visited);
+    }
   }
 
   &:hover,
   &.hover {
     color: var(--link-text-hover);
+    cfpb-icon-text {
+      text-decoration-color: var(--link-underline-hover);
+    }
   }
 
   &:active,
   &.active {
     color: var(--link-text-active);
+    cfpb-icon-text {
+      text-decoration-color: var(--link-underline-active);
+    }
   }
 }
 
@@ -83,27 +115,4 @@ a {
       }
     }
   }
-}
-
-:host([no-top-border]) a {
-  border-top: none !important;
-  position: relative;
-
-  // Mobile only.
-  @include respond-to-max($bp-xs-max) {
-    &:hover::before {
-      position: absolute;
-      top: -1px;
-      content: '';
-      display: block;
-      height: 1px;
-      width: 100%;
-      border-top: 1px solid currentcolor;
-    }
-  }
-}
-
-:host a:not([href]) {
-  border: none;
-  text-decoration: none;
 }

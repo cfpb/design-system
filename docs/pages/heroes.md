@@ -38,14 +38,14 @@ variation_groups:
                    }
                   .m-hero__image {
                       background-image:
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png');
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png');
                       background-image: -webkit-image-set(
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png') 1x,
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png') 2x
                       );
                       background-image: image-set(
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png') 1x,
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png') 2x
                       );
                       padding-bottom: 41.4893617%;
                   }
@@ -72,14 +72,14 @@ variation_groups:
                    }
                   #hero1 .m-hero__image {
                       background-image:
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png');
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png');
                       background-image: -webkit-image-set(
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png') 1x,
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png') 2x
                       );
                       background-image: image-set(
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
-                          url('/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png') 1x,
+                          url('/design-system/images/uploads/design_system_illustration_hero_example.png') 2x
                       );
                       padding-bottom: 41.4893617%;
                   }

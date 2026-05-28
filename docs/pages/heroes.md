@@ -218,14 +218,14 @@ variation_groups:
           <style>
               .m-hero__image {
                   background-image:
-                      url('https://dummyimage.com/600x250/addc91/101820');
+                      url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg');
                   background-image: -webkit-image-set(
-                      url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                      url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                      url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg') 1x,
+                      url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg') 2x
                   );
                   background-image: image-set(
-                      url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                      url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                      url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg') 1x,
+                      url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg') 2x
                   );
                   padding-bottom: 41.6666667%;
               }
@@ -264,14 +264,14 @@ variation_groups:
               <style>
                   #hero4 .m-hero__image {
                       background-image:
-                          url('https://dummyimage.com/600x250/addc91/101820');
+                          url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg');
                       background-image: -webkit-image-set(
-                          url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                          url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                          url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg') 1x,
+                          url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg') 2x
                       );
                       background-image: image-set(
-                          url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                          url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                          url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg') 1x,
+                          url('/design-system/images/uploads/design_system_photo_hero_sm_example.jpg') 2x
                       );
                       padding-bottom: 41.6666667%;
                   }

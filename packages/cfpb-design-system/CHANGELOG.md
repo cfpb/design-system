@@ -2,7 +2,41 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.5.1](https://github.com/cfpb/design-system/compare/v5.5.0..v5.5.1) - May 21, 2026
+## [5.6.0](https://github.com/cfpb/design-system/compare/v5.5.1..v5.6.0) - June  2, 2026
+
+### PRs in this release
+
+- PR #[2687](https://github.com/cfpb/design-system/pull/2687): Fix missing underlines and erroneous link colors - Ans
+- PR #[2686](https://github.com/cfpb/design-system/pull/2686): Change hero heading selector to use h1 if there is no subhead - Ans
+
+### General
+
+- Reorg css and clean up generated package css (#2680)
+
+* stubbing in plumbing for reorg
+
+The concept model changed here. Now `src/abstracts` are the sass helpers only while `src/base` now becomes global css. That means that custom-props.css and vars.css have moved to `src/base` instead of being in abstracts.
+
+The purpose of that was to tease apart our :root level css from our sass helpers so that consumers would no longer import :root css when all they wanted was our helpers. This should functionally reduce duplication in consuming projects.
+
+Additionally these changes will remove `:root` duplication in our css package with the idea to hook all of this up and keep `:host` styles from leaking into our css package.
+
+moved `elements/abstracts` -> `src/abstracts`
+moved `elements/base` -> `src/base`
+moved several mixins into their own dedicated files to further reduce potential css duplication
+moved `custom-props.css` and `vars.css` in `src/base`
+created and/or renamed mixin files to start with the prefix `mixins-...` so that they are located next to one another in the directory
+moved files in `src/utilities` that were only consumed by legacy components into `src/components/utitlies` and files that were consumbed by WCs into `src/elements/utilities` and left flies that were used by both in `src/utilities`
+
+* hooking up the new imports and structure
+
+* Clean up of missed files - ([6aa5dbc](https://github.com/cfpb/design-system/commit/6aa5dbcb75cef58371cfea19ecb4a4048cff8d81)) - itsmedavep
+- Fix missing underlines and erroneous link colors - ([6b5eccd](https://github.com/cfpb/design-system/commit/6b5eccd5e3e87565515f70e3a8f2af776411d24c)) - Ans
+- Refactor style architecture - ([0e4d4eb](https://github.com/cfpb/design-system/commit/0e4d4ebf3be1ef5dddb57e9f1c5705f6d9c8b1d7)) - Ans
+- Fix directory path in components/index.scss and removed @forward elements in src/index.scss (#2688) - ([2ed2aa4](https://github.com/cfpb/design-system/commit/2ed2aa411e05eff667f0aef841cf795e1e307ad9)) - itsmedavep
+- Change hero heading selector to use h1 if there is no subhead - ([6f912e0](https://github.com/cfpb/design-system/commit/6f912e0d61798221a35a6424f40a46bc68b6f6a9)) - Ans
+
+## [5.5.1](https://github.com/cfpb/design-system/compare/v5.5.0..vv5.5.1) - May 21, 2026
 
 ### PRs in this release
 

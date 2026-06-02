@@ -121,7 +121,8 @@
   "resolutions": {
     "trim": ">=0.0.2",
     "minimatch": ">=7.4.8",
-    "qs": ">=6.14.2"
+    "qs": ">=6.14.2",
+    "uuid": ">=13.0.1"
   },
   "type": "module",
   "packageManager": "yarn@4.16.0"

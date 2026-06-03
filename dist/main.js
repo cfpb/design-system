@@ -253,7 +253,7 @@ import{a as e,i as t,r as n,t as r,u as i}from"./tabs.js";import{a,c as o,d as s
           name=${this.name}
           .value=${this.value}
           ?disabled=${this.disabled}
-          class="a-text-input a-text-input__full"
+          class="a-text-input"
           placeholder=${this.placeholder}
           title=${this.title}
           autocomplete="off"

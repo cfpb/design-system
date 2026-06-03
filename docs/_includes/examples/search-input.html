@@ -9,7 +9,7 @@
         id="example-search-text"
         name="example-search-text"
         value=""
-        class="a-text-input a-text-input__full"
+        class="a-text-input"
         placeholder="Enter your search term(s)"
         title="Enter your search term(s)"
         autocomplete="off"
@@ -18,7 +18,11 @@
       />
       <button
         type="reset"
-        onclick="document.getElementById('example-search-text').setAttribute('value','')"
+        onclick="
+          document
+            .getElementById('example-search-text')
+            .setAttribute('value', '')
+        "
         aria-label="Clear search"
         title="Clear search"
       >

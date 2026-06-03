@@ -117,7 +117,7 @@ export class CfpbFormSearchInput extends LitElement {
           name=${this.name}
           .value=${this.value}
           ?disabled=${this.disabled}
-          class="a-text-input a-text-input__full"
+          class="a-text-input"
           placeholder=${this.placeholder}
           title=${this.title}
           autocomplete="off"

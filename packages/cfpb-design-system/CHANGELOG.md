@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.6.0](https://github.com/cfpb/design-system/compare/v5.5.1..v5.6.0) - June  2, 2026
+## [5.6.1](https://github.com/cfpb/design-system/compare/v5.6.0..v5.6.1) - June  3, 2026
+
+### PRs in this release
+
+- PR #[2693](https://github.com/cfpb/design-system/pull/2693): Remove legacy `a-text-input__full` - Ans
+
+### General
+
+- Remove legacy `a-text-input__full` - ([875ca74](https://github.com/cfpb/design-system/commit/875ca74b50f65b5e6a9308e7a82bade9ba2b9bd4)) - Ans
+
+## [5.6.0](https://github.com/cfpb/design-system/compare/v5.5.1..vv5.6.0) - June  2, 2026
 
 ### PRs in this release
 

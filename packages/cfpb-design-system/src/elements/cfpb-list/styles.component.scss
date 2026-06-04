@@ -1,5 +1,5 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 :host {
   // Tag group sets the spacing between tags.
@@ -18,11 +18,8 @@
       display: flex;
       gap: rem-from-px(15px);
       flex-wrap: wrap;
-
-      &[stacked] {
-        flex-direction: column;
-        width: fit-content;
-      }
+      flex-direction: column;
+      width: fit-content;
     }
 
     &:has(cfpb-tag-filter) {
@@ -38,5 +35,24 @@
 
     // This is needed for right-to-left (RTL) lists.
     padding-right: 0;
+  }
+}
+
+:host([horizontal]) {
+  ul {
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      flex-direction: initial;
+      width: initial;
+    }
+  }
+}
+
+:host([compact]) {
+  ul {
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      gap: rem-from-px(5px);
+    }
   }
 }

@@ -35,7 +35,7 @@ describe('<cfpb-tag-filter>', () => {
 
   it('dispatches the correct event', async () => {
     const mockHandler = vi.fn();
-    elm.addEventListener('tag-click', mockHandler);
+    elm.addEventListener('item-click', mockHandler);
 
     await user.click(elm.shadowRoot.querySelector('button'));
 

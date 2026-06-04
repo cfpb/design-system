@@ -812,7 +812,7 @@ variation_groups:
           Tag element for topics.
         variation_code_snippet_rendered: >-
           <div>
-          <cfpb-tag-group stacked>
+          <cfpb-list>
             <cfpb-tag-topic>
               Option 1
             </cfpb-tag-topic>
@@ -822,10 +822,10 @@ variation_groups:
             <cfpb-tag-topic href="#">
               Option 3
             </cfpb-tag-topic>
-          </cfpb-tag-group>
+          </cfpb-list>
           </div>
         variation_code_snippet: >-
-          <cfpb-tag-group stacked>
+          <cfpb-list>
             <cfpb-tag-topic>
               Option 1
             </cfpb-tag-topic>
@@ -835,7 +835,7 @@ variation_groups:
             <cfpb-tag-topic href="#">
               Option 3
             </cfpb-tag-topic>
-          </cfpb-tag-group>
+          </cfpb-list>
       - variation_is_deprecated: false
         variation_name: Filter tag
         variation_description: >-
@@ -856,7 +856,7 @@ variation_groups:
           A group of filter Tag elements.
         variation_code_snippet_rendered: >-
           <div>
-            <cfpb-tag-group id="tag-group-example">
+            <cfpb-list horizontal id="tag-group-example">
               <cfpb-tag-filter>
                 Option 1
               </cfpb-tag-filter>
@@ -866,7 +866,7 @@ variation_groups:
               <cfpb-tag-filter>
                 Option 3
               </cfpb-tag-filter>
-            </cfpb-tag-group>
+            </cfpb-list>
 
             <br>
             <hr>
@@ -906,8 +906,8 @@ variation_groups:
             <script>
             const tagGroup = document.querySelector('#tag-group-example');
             const textArea = document.querySelector('#tag-group-events');
-            tagGroup.addEventListener('tag-added', (evt)=> textArea.value += 'tag-added: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
-            tagGroup.addEventListener('tag-removed', (evt)=> textArea.value +=  'tag-removed: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
+            tagGroup.addEventListener('item-added', (evt)=> textArea.value += 'item-added: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
+            tagGroup.addEventListener('item-removed', (evt)=> textArea.value +=  'item-removed: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
 
             const btnAdd = document.querySelector('#add-tag');
             const btnRemove = document.querySelector('#remove-tag');
@@ -945,7 +945,7 @@ variation_groups:
             </script>
           </div>
         variation_code_snippet: >-
-          <cfpb-tag-group>
+          <cfpb-list horizontal>
             <cfpb-tag-filter>
               Option 1
             </cfpb-tag-filter>
@@ -955,7 +955,7 @@ variation_groups:
             <cfpb-tag-filter>
               Option 3
             </cfpb-tag-filter>
-          </cfpb-tag-group>
+          </cfpb-list>
       - variation_is_deprecated: false
         variation_name: Label
         variation_description: >-

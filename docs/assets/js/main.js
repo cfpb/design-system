@@ -17,7 +17,7 @@ import {
   CfpbTagline,
   CfpbTagFilter,
   CfpbTagTopic,
-  CfpbTagGroup,
+  CfpbList,
   CfpbPagination,
   CfpbSelect,
   Expandable,
@@ -70,7 +70,7 @@ CfpbListboxItem.init();
 CfpbTagline.init();
 CfpbTagFilter.init();
 CfpbTagTopic.init();
-CfpbTagGroup.init();
+CfpbList.init();
 CfpbSelect.init();
 CfpbPagination.init();
 Summary.init();

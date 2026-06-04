@@ -1,21 +1,22 @@
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 import { CfpbTagFilter } from '../cfpb-tag-filter';
 import { CfpbTagTopic } from '../cfpb-tag-topic';
-import { CfpbTagGroup } from './index.js';
+import { CfpbList } from './index.js';
 
 const user = userEvent.setup();
 
-describe('<cfpb-tag-group>', () => {
+describe('<cfpb-list>', () => {
   let elm;
 
   beforeEach(async () => {
-    CfpbTagGroup.init();
+    CfpbList.init();
     CfpbTagTopic.init();
     CfpbTagFilter.init();
-    elm = document.createElement('cfpb-tag-group');
+    elm = document.createElement('cfpb-list');
     document.body.appendChild(elm);
 
-    await customElements.whenDefined('cfpb-tag-group');
+    await customElements.whenDefined('cfpb-list');
     await elm.updateComplete;
   });
 
@@ -44,8 +45,8 @@ describe('<cfpb-tag-group>', () => {
   it('dispatches the correct events', async () => {
     const mockAddedHandler = vi.fn();
     const mockRemoveHandler = vi.fn();
-    elm.addEventListener('tag-added', mockAddedHandler);
-    elm.addEventListener('tag-removed', mockRemoveHandler);
+    elm.addEventListener('item-added', mockAddedHandler);
+    elm.addEventListener('item-removed', mockRemoveHandler);
 
     const slottedContent = document.createElement('cfpb-tag-filter');
     slottedContent.textContent = 'Earth';
@@ -54,7 +55,7 @@ describe('<cfpb-tag-group>', () => {
 
     // Wait for MutationObserver render to settle.
     await new Promise((resolve) => {
-      elm.addEventListener('tag-added', () => {
+      elm.addEventListener('item-added', () => {
         resolve();
       });
     });
@@ -81,7 +82,7 @@ describe('<cfpb-tag-group>', () => {
   });
 
   it('adds tags to internal list', async () => {
-    expect(elm.tagList.length).toBe(0);
+    expect(elm.items.length).toBe(0);
 
     let slottedContent = document.createElement('cfpb-tag-filter');
     slottedContent.textContent = 'Earth';
@@ -90,20 +91,20 @@ describe('<cfpb-tag-group>', () => {
 
     // Wait for MutationObserver render to settle.
     await new Promise((resolve) => {
-      elm.addEventListener('tag-added', () => {
+      elm.addEventListener('item-added', () => {
         resolve();
       });
     });
 
-    expect(elm.tagList.length).toBe(1);
+    expect(elm.items.length).toBe(1);
 
     slottedContent = document.createElement('cfpb-tag-filter');
     slottedContent.textContent = 'Mars';
     elm.appendChild(slottedContent);
     await elm.updateComplete;
 
-    expect(elm.tagList.length).toBe(2);
-    expect(elm.tagList[1].isEqualNode(slottedContent)).toBe(true);
+    expect(elm.items.length).toBe(2);
+    expect(elm.items[1].isEqualNode(slottedContent)).toBe(true);
   });
 
   it('adds class to remove border on topic tag groups', async () => {
@@ -119,20 +120,20 @@ describe('<cfpb-tag-group>', () => {
 
     // Wait for MutationObserver render to settle.
     await new Promise((resolve) => {
-      elm.addEventListener('tag-added', () => {
+      elm.addEventListener('item-added', () => {
         resolve();
       });
     });
 
-    await elm.tagList[0].updateComplete;
+    await elm.items[0].updateComplete;
 
     expect(
-      elm.tagList[0].shadowRoot
+      elm.items[0].shadowRoot
         .querySelector('a')
         .classList.contains('a-tag-topic--no-top-border'),
     ).toBe(false);
     expect(
-      elm.tagList[1].shadowRoot
+      elm.items[1].shadowRoot
         .querySelector('a')
         .classList.contains('a-tag-topic--no-top-border'),
     ).toBe(true);
@@ -149,15 +150,31 @@ describe('<cfpb-tag-group>', () => {
 
     // Wait for MutationObserver render to settle.
     await new Promise((resolve) => {
-      elm.addEventListener('tag-added', () => {
+      elm.addEventListener('item-added', () => {
         resolve();
       });
     });
 
-    expect(elm.tagList[0].isEqualNode(marsContent)).toBe(true);
+    expect(elm.items[0].isEqualNode(marsContent)).toBe(true);
 
     elm.removeTag(marsContent, 0);
 
-    expect(elm.tagList[0].isEqualNode(earthContent)).toBe(true);
+    expect(elm.items[0].isEqualNode(earthContent)).toBe(true);
+  });
+
+  it('renders childData', async () => {
+    expect(elm.items.length).toBe(0);
+
+    const data = JSON.stringify([
+      { tagName: 'cfpb-tag-filter', text: 'A' },
+      { tagName: 'cfpb-tag-filter', text: 'B' },
+      { tagName: 'cfpb-tag-filter', text: 'C' },
+      { tagName: 'cfpb-tag-topic', text: 'D', href: '#' },
+    ]);
+    elm.childData = data;
+
+    await new Promise(requestAnimationFrame);
+
+    expect(elm.items.length).toBe(4);
   });
 });

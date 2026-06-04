@@ -1779,7 +1779,7 @@
             <!-- Live code example -->
             
             <div class="a-live__code">
-                <div> <cfpb-tag-group stacked>
+                <div> <cfpb-list>
   <cfpb-tag-topic>
     Option 1
   </cfpb-tag-topic>
@@ -1789,7 +1789,7 @@
   <cfpb-tag-topic href="#">
     Option 3
   </cfpb-tag-topic>
-</cfpb-tag-group> </div>
+</cfpb-list> </div>
             </div>
             
 
@@ -1825,7 +1825,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;cfpb-tag-group stacked&gt;
+                            <pre><code class="language-html">&lt;cfpb-list&gt;
   &lt;cfpb-tag-topic&gt;
     Option 1
   &lt;/cfpb-tag-topic&gt;
@@ -1835,7 +1835,7 @@
   &lt;cfpb-tag-topic href="#"&gt;
     Option 3
   &lt;/cfpb-tag-topic&gt;
-&lt;/cfpb-tag-group&gt;</code></pre>
+&lt;/cfpb-list&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1970,7 +1970,7 @@
             
             <div class="a-live__code">
                 <div>
-  <cfpb-tag-group id="tag-group-example">
+  <cfpb-list horizontal id="tag-group-example">
     <cfpb-tag-filter>
       Option 1
     </cfpb-tag-filter>
@@ -1980,7 +1980,7 @@
     <cfpb-tag-filter>
       Option 3
     </cfpb-tag-filter>
-  </cfpb-tag-group>
+  </cfpb-list>
 
   <br>
   <hr>
@@ -2023,8 +2023,8 @@
   <script>
   const tagGroup = document.querySelector('#tag-group-example');
   const textArea = document.querySelector('#tag-group-events');
-  tagGroup.addEventListener('tag-added', (evt)=> textArea.value += 'tag-added: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
-  tagGroup.addEventListener('tag-removed', (evt)=> textArea.value +=  'tag-removed: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
+  tagGroup.addEventListener('item-added', (evt)=> textArea.value += 'item-added: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
+  tagGroup.addEventListener('item-removed', (evt)=> textArea.value +=  'item-removed: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
 
   const btnAdd = document.querySelector('#add-tag');
   const btnRemove = document.querySelector('#remove-tag');
@@ -2096,7 +2096,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;cfpb-tag-group&gt;
+                            <pre><code class="language-html">&lt;cfpb-list horizontal&gt;
   &lt;cfpb-tag-filter&gt;
     Option 1
   &lt;/cfpb-tag-filter&gt;
@@ -2106,7 +2106,7 @@
   &lt;cfpb-tag-filter&gt;
     Option 3
   &lt;/cfpb-tag-filter&gt;
-&lt;/cfpb-tag-group&gt;</code></pre>
+&lt;/cfpb-list&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -3447,8 +3447,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/reference-for-custom-elements.md">
-                            <time datetime="2026-06-03 10:43:48 -0400">
-                                10:43:48 AM Jun 03, 2026
+                            <time datetime="2026-06-04 10:57:27 -0400">
+                                10:57:27 AM Jun 04, 2026
                             </time>
                         </a>
                     </section>

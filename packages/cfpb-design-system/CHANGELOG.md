@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.6.1](https://github.com/cfpb/design-system/compare/v5.6.0..v5.6.1) - June  3, 2026
+## [5.6.2](https://github.com/cfpb/design-system/compare/v5.6.1..v5.6.2) - June  4, 2026
+
+### PRs in this release
+
+- PR #[2694](https://github.com/cfpb/design-system/pull/2694): Replace cfpb-tag-group with cfpb-list - Ans
+- PR #[2695](https://github.com/cfpb/design-system/pull/2695): Move normalize CSS to first loading order - Ans
+
+### General
+
+- Replace cfpb-tag-group with cfpb-list - ([0017b3b](https://github.com/cfpb/design-system/commit/0017b3b31675af72e20650c4b9a24a8efe2832cc)) - Ans
+- Move normalize CSS to first loading order - ([b35a08b](https://github.com/cfpb/design-system/commit/b35a08b2928420c1d6feeca4900e75fdd3e50159)) - Ans
+
+## [5.6.1](https://github.com/cfpb/design-system/compare/v5.6.0..vv5.6.1) - June  3, 2026
 
 ### PRs in this release
 

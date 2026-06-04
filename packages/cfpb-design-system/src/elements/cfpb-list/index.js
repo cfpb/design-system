@@ -3,48 +3,60 @@ import { defineComponent } from '../utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { parseChildData } from '../utilities/parse-child-data';
 
-const SUPPORTED_TAG_LIST = ['CFPB-TAG-FILTER', 'CFPB-TAG-TOPIC'];
+const SUPPORTED_TAG_LIST = [
+  'CFPB-TAG-FILTER',
+  'CFPB-TAG-TOPIC',
+  'CFPB-LIST-ITEM',
+];
 
 /**
- * @element cfpb-tag-group.
- * @description A group of tags (filter or topic tags) that can be added and
- *   removed.
+ * @element cfpb-list.
+ * @description A list of items (filter or topic tags, or list-items),
+ *   which can be added and removed.
  *
- *   The tag group has a list of tags in the lightDOM that gets re-written
+ *   The list of items in the lightDOM gets re-written
  *   inside an unordered list in the shadowDOM so that it is read out
  *   as a list of items in VoiceOver.
- * @fires CfpbTagGroup#event:"tag-added" - A tag was added to the group.
- * @fires CfpbTagGroup#event:"tag-click" - A tag was clicked.
- * @fires CfpbTagGroup#event:"tag-removed" - A tag was removed to the group.
+ * @fires CfpbList#event:"item-added" - A tag was added to the group.
+ * @fires CfpbList#event:"item-click" - A tag was clicked.
+ * @fires CfpbList#event:"item-removed" - A tag was removed to the group.
  */
-export class CfpbTagGroup extends LitElement {
+export class CfpbList extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
+  #items = [];
+
   /**
    * @property {string} childData - Structure data to create child components.
-   * @property {boolean} stacked - Whether to stack the tags vertically.
-   * @property {Array} tagList - List of the tags in the tag group.
+   * @property {Array} items - List of the tags in the tag group.
    * @returns {object} The map of properties.
    */
   static properties = {
     childData: { type: String, attribute: 'childdata' },
-    stacked: { type: Boolean, reflect: true },
-    tagList: { type: Array },
   };
+
+  get items() {
+    return [...this.renderRoot.querySelectorAll('ul li > *')];
+  }
 
   // Private properties.
   #observer;
   #initialized = false;
-  #tagMap;
+  #itemMap;
+
+  // When we insert items from the lightDOM to the shadowDOM,
+  // we clone the node, so this is to keep track of the source node,
+  // which is useful if it is removed.
+  #cloneToSource = new WeakMap();
 
   constructor() {
     super();
     this.childData = '';
-    this.stacked = false;
-    this.tagList = [];
+    this.isHorizontal = false;
     this.#observer = new MutationObserver(this.#onMutation.bind(this));
+    this.#itemMap = new Map();
   }
 
   connectedCallback() {
@@ -80,10 +92,10 @@ export class CfpbTagGroup extends LitElement {
   }
 
   async focus() {
-    // Wait for tagList to update.
+    // Wait for items to update.
     await this.updateComplete;
 
-    const firstChild = this.tagList[0];
+    const firstChild = this.#items[0];
     if (firstChild) firstChild.focus();
   }
 
@@ -96,7 +108,7 @@ export class CfpbTagGroup extends LitElement {
       const tag = document.createElement(data.tagName);
       // e.g. 'cfpb-tag-filter' or 'cfpb-tag-topic'
       if (data.text) tag.textContent = data.text;
-      if (data.href) tag.href = data.href;
+      if (data.href) tag.setAttribute('href', data.href);
       // any other props from `data`
       this.addTag(tag, index);
     });
@@ -107,11 +119,11 @@ export class CfpbTagGroup extends LitElement {
    */
   #clearAllTags() {
     // Remove shadow DOM wrappers.
-    if (this.#tagMap) {
-      this.#tagMap.forEach((wrapped) => {
+    if (this.#itemMap) {
+      this.#itemMap.forEach((wrapped) => {
         if (wrapped.parentElement) wrapped.remove();
       });
-      this.#tagMap.clear();
+      this.#itemMap.clear();
     }
 
     // Remove light DOM tags.
@@ -119,8 +131,8 @@ export class CfpbTagGroup extends LitElement {
       if (SUPPORTED_TAG_LIST.includes(child.tagName)) child.remove();
     });
 
-    // Reset tagList
-    this.tagList = [];
+    // Reset items
+    this.#items = [];
   }
 
   /**
@@ -177,17 +189,17 @@ export class CfpbTagGroup extends LitElement {
   }
 
   /**
-   * Refresh the tagList property from the DOM list.
+   * Refresh the items property from the DOM list.
    */
   #refreshTagList() {
-    this.tagList = [...this.renderRoot.querySelectorAll('ul li > *')];
+    this.#items = this.items;
 
     // Iterate over the list, and if there are topic tag links adjacent to each
     // other, then we set the siblingOfJumpLink property, which adjusts the
     // styles for adjacent jumplinks so that the borders aren't doubled up.
-    if (this.tagList.length > 0) {
+    if (this.#items.length > 0) {
       let lastItemIsLink = false;
-      this.tagList.forEach((item) => {
+      this.#items.forEach((item) => {
         if (lastItemIsLink) {
           item.siblingOfJumpLink = true;
           lastItemIsLink = false;
@@ -216,6 +228,7 @@ export class CfpbTagGroup extends LitElement {
     this.#insertIntoShadowDom(tag, index);
 
     this.#refreshTagList();
+
     return true;
   }
 
@@ -239,6 +252,8 @@ export class CfpbTagGroup extends LitElement {
    */
   #insertIntoShadowDom(tag, index) {
     const cloned = tag.cloneNode(true);
+    this.#cloneToSource.set(cloned, tag);
+
     const wrapped = document.createElement('li');
     wrapped.appendChild(cloned);
 
@@ -252,9 +267,9 @@ export class CfpbTagGroup extends LitElement {
       ul.insertBefore(wrapped, ul.children[index]);
     }
 
-    cloned.addEventListener('tag-click', () => {
+    cloned.addEventListener('item-click', () => {
       this.dispatchEvent(
-        new CustomEvent('tag-click', {
+        new CustomEvent('item-click', {
           detail: { target: cloned, index: actualIndex },
           bubbles: true,
           composed: true,
@@ -263,12 +278,10 @@ export class CfpbTagGroup extends LitElement {
       this.#removeTagNode(cloned);
     });
 
-    this.#tagMap ??= new Map();
-    const id = this.#tagIdentifier(tag);
-    this.#tagMap.set(id, wrapped);
+    this.#itemMap.set(tag, wrapped);
 
     this.dispatchEvent(
-      new CustomEvent('tag-added', {
+      new CustomEvent('item-added', {
         detail: { target: tag, index: actualIndex },
         bubbles: true,
         composed: true,
@@ -277,27 +290,19 @@ export class CfpbTagGroup extends LitElement {
   }
 
   /**
-   * @param {HTMLElement} tag - The tag to add.
-   * @returns {string} A unique ID.
-   */
-  #tagIdentifier(tag) {
-    return `${tag.tagName}::${tag.textContent.trim()}`;
-  }
-
-  /**
-   * Remove a filter tag from the light DOM.
+   * Remove an item from the light DOM.
    * This is private because it's called by the mutation observer.
-   * @param {HTMLElement} tag - The tag to remove.
+   * @param {HTMLElement} node - The node to remove.
    * @returns {boolean} false if the wrapped tag was not found.
    */
-  #removeTagNode(tag) {
-    const id = this.#tagIdentifier(tag);
-    const wrapped = this.#tagMap.get(id);
+  #removeTagNode(node) {
+    const source = this.#cloneToSource.get(node) || node;
+    const wrapped = this.#itemMap.get(source);
 
     if (!wrapped) return false;
 
     // Try getting the index from the light DOM.
-    let index = Array.from(this.children).indexOf(tag);
+    let index = Array.from(this.children).indexOf(node);
 
     // If not found (e.g. manually removed via DevTools), fallback to shadow DOM.
     if (index === -1 && wrapped.parentElement) {
@@ -306,19 +311,19 @@ export class CfpbTagGroup extends LitElement {
     }
 
     // Remove from light DOM and shadow DOM.
-    if (tag.parentElement === this) {
-      tag.remove();
+    if (node.parentElement === this) {
+      node.remove();
     }
 
     if (wrapped.parentElement) {
       wrapped.remove();
     }
 
-    this.#tagMap.delete(id);
+    this.#itemMap.delete(node);
 
     this.dispatchEvent(
-      new CustomEvent('tag-removed', {
-        detail: { target: tag, index: index },
+      new CustomEvent('item-removed', {
+        detail: { target: node, index: index },
         bubbles: true,
         composed: true,
       }),
@@ -354,17 +359,17 @@ export class CfpbTagGroup extends LitElement {
       return tag.querySelector('cfpb-tag-filter');
     }
 
-    // If node is already a light DOM tag or child <cfpb-tag-group>, return it.
+    // If node is already a light DOM tag or child <cfpb-list>, return it.
     if (this.contains(tag)) return tag;
 
     return null;
   }
 
   render() {
-    return html`<ul ?stacked=${this.stacked}></ul>`;
+    return html`<ul></ul>`;
   }
 
   static init() {
-    defineComponent('cfpb-tag-group', CfpbTagGroup);
+    defineComponent('cfpb-list', CfpbList);
   }
 }

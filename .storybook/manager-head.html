@@ -1,0 +1,55 @@
+<link
+  rel="stylesheet"
+  href="../packages/cfpb-design-system/src/base/custom-props.css"
+/>
+<link rel="stylesheet" href="/.storybook/preview.scss" />
+
+<style type="text/css">
+  .sidebar-container * {
+    font-size: 1rem;
+  }
+
+  div.sidebar-item[data-selected='true'],
+  button.sidebar-item {
+    background-color: var(--teal);
+    color: var(--white);
+  }
+
+  div.sidebar-item[data-selected='true']:hover,
+  button.sidebar-item:hover svg {
+    background-color: var(--gray) !important;
+    color: var(--white) !important;
+  }
+
+  /* Sidebar hover */
+  div.sidebar-item[data-selected='false']:hover,
+  button.sidebar-item:hover {
+    background-color: var(--gray);
+    color: var(--white);
+  }
+
+  /* Sidebar hover/selected icons */
+  div.sidebar-item[data-selected='false']:hover svg,
+  button.sidebar-item:hover svg {
+    color: var(--white);
+  }
+
+  /* Sidebar icons */
+  .sidebar-item svg {
+    color: var(--black);
+  }
+
+  /* Brand logo sizing */
+  .sidebar-header a img,
+  .sidebar-header img {
+    height: 40px;
+    width: auto;
+    max-height: 40px;
+    max-width: none;
+  }
+
+  /* Hides the three-dot context menu button in the sidebar */
+  button[data-testid='context-menu'] {
+    display: none !important;
+  }
+</style>

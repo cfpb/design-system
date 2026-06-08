@@ -63,6 +63,13 @@ export default defineConfig([
       react: {
         version: '19',
       },
+      jsdoc: {
+        structuredTags: {
+          fires: {
+            name: 'text',
+          },
+        },
+      },
     },
     // Some plugins are automatically included.
     // plugins: {},

@@ -8,32 +8,6 @@
   --list-item-border-focus: var(--pacific);
 
   display: block;
-
-  .container {
-    display: block;
-    padding: 6.5px 10px;
-  }
-
-  .checkbox {
-    display: inline-grid;
-
-    // 30px is width of checkbox/radio button plus the needed padding.
-    grid-template-columns: rem-from-px(30px) auto;
-    vertical-align: top;
-
-    // Wrap long words in narrow form fields to prevent clipping
-    overflow-wrap: anywhere;
-  }
-
-  .selectable {
-    cursor: pointer;
-
-    &:hover {
-      background: var(--list-item-bg-hover);
-      transition: background-color 0.2s;
-      cursor: pointer;
-    }
-  }
 }
 
 // Remove default focus ring.
@@ -67,4 +41,30 @@
 
 :host([hidden]) {
   display: none;
+}
+
+.container {
+  display: block;
+  padding: 6.5px 10px;
+}
+
+.checkbox {
+  display: inline-grid;
+
+  // 30px is width of checkbox/radio button plus the needed padding.
+  grid-template-columns: rem-from-px(30px) auto;
+  vertical-align: top;
+
+  // Wrap long words in narrow form fields to prevent clipping
+  overflow-wrap: anywhere;
+}
+
+.selectable {
+  cursor: pointer;
+
+  &:hover {
+    background: var(--list-item-bg-hover);
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
 }

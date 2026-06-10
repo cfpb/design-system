@@ -1,14 +1,12 @@
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
-:host {
-  .a-form-alert {
-    margin-top: rem-from-px(15px);
-    display: flex;
-    align-items: center;
-    gap: rem-from-px(5px);
+.a-form-alert {
+  margin-top: rem-from-px(15px);
+  display: flex;
+  align-items: center;
+  gap: rem-from-px(5px);
 
-    &__text {
-      display: block;
-    }
+  &__text {
+    display: block;
   }
 }

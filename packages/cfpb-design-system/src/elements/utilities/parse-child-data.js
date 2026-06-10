@@ -11,7 +11,6 @@
  */
 export function parseChildData(input, options = {}) {
   const { allowSingleQuotes = true } = options;
-
   if (!input) return null;
 
   // Already an array - most desirable case.

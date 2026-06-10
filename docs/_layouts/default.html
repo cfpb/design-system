@@ -49,9 +49,8 @@
       </cfpb-button>
     </div>
 
-    {% include header.html %} {% include redirect-banner.html %} {{ content }}
-    {% if page.url != 'search/index' and page.url != '/index' %} {% include
-    footer.html %} {% endif %}
+    {% include header.html %} {{ content }} {% if page.url != 'search/index' and
+    page.url != '/index' %} {% include footer.html %} {% endif %}
     <script
       type="module"
       src="{{ '/dist/main.js' | relative_url }}"

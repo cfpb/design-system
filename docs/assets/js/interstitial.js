@@ -30,11 +30,9 @@ if (page && window.PAGES_ALLOWED[page]) {
     pageNames[i].textContent = `"${page}"`;
   }
   document
-    .querySelector('[data-interstitial-notification]')
-    .classList.add('m-notification--visible');
-  document
     .querySelector('[data-interstitial-next-step]')
     .classList.remove('u-hidden');
+
   document
     .querySelector('[data-interstitial-redirect-button]')
     .setAttribute('href', window.PAGES_ALLOWED[page]);

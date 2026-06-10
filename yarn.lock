@@ -223,12 +223,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bundled-es-modules/deepmerge@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "@bundled-es-modules/deepmerge@npm:4.3.1"
+"@bundled-es-modules/deepmerge@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "@bundled-es-modules/deepmerge@npm:4.3.2"
   dependencies:
     deepmerge: "npm:^4.3.1"
-  checksum: 10c0/50493fb741d588aa358edc5e844cbf31493cb64aca0a5ca0d33d73f61eb9eb853f7038074429343afbe199e614a6be8400abfd31909f9e5f14a53a4cff39b894
+  checksum: 10c0/e868004dc4474b68efdd83306a13402aeb5ff748542397549ff2d8f922ce51f657792e115b28bfe31245a6fe591cb7a76f944e55ef51baf621366cca6af6f5dc
   languageName: node
   linkType: hard
 
@@ -317,6 +317,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@csstools/css-calc@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "@csstools/css-calc@npm:3.2.1"
+  peerDependencies:
+    "@csstools/css-parser-algorithms": ^4.0.0
+    "@csstools/css-tokenizer": ^4.0.0
+  checksum: 10c0/0191c8d1cd4dffa0d3b6bfd1e78a721934b1d7a6c972966e4fdaa72208c6789e8ff443ee81764a32f1e6107825695b5524ef2b4dc1681b5b29230f2a1277e5df
+  languageName: node
+  linkType: hard
+
 "@csstools/css-color-parser@npm:^4.1.0":
   version: 4.1.0
   resolution: "@csstools/css-color-parser@npm:4.1.0"
@@ -348,6 +358,18 @@ __metadata:
     css-tree:
       optional: true
   checksum: 10c0/3b8a686710a46bb460f9d560d52ce0de315828e6d452002b692013e95fbf53669d7a71e28c9b6b1333fa9f37f058fad93e5db3b8516444907713cb9aad299ce1
+  languageName: node
+  linkType: hard
+
+"@csstools/css-syntax-patches-for-csstree@npm:^1.1.4":
+  version: 1.1.5
+  resolution: "@csstools/css-syntax-patches-for-csstree@npm:1.1.5"
+  peerDependencies:
+    css-tree: ^3.2.1
+  peerDependenciesMeta:
+    css-tree:
+      optional: true
+  checksum: 10c0/a31f0cfb74e2b5ce8a283c47969a202fc3b23c3ee05c6b6beab7f5c14d89c50b82533e446df74f7df0bf88bf23810ed59431353db26e00d5b013995c1ebf07a2
   languageName: node
   linkType: hard
 
@@ -2741,12 +2763,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.2.16":
-  version: 19.2.16
-  resolution: "@types/react@npm:19.2.16"
+"@types/react@npm:19.2.17":
+  version: 19.2.17
+  resolution: "@types/react@npm:19.2.17"
   dependencies:
     csstype: "npm:^3.2.2"
-  checksum: 10c0/96f2850b67c5aa4a695bc32eb06c7609acdda1c0c597ace21ad24a5b9e2ccbccd97c0643253579fd629789a422a3694b4bbcb26e5fc6aec5f0357820bf0ee81c
+  checksum: 10c0/bc2c4af96b3e480604424de70d5ebda90c5f4b485df471858c0bc2d7d70364b606ec3c4d8579f94f01aa0c6c0591f56bcf14cba5689f5eea4b74250ccdc3a232
   languageName: node
   linkType: hard
 
@@ -4183,7 +4205,7 @@ __metadata:
     "@lhci/cli": "npm:0.15.1"
     "@testing-library/dom": "npm:10.4.1"
     "@testing-library/user-event": "npm:14.6.1"
-    "@types/react": "npm:19.2.16"
+    "@types/react": "npm:19.2.17"
     "@vitest/coverage-v8": "npm:4.1.8"
     anchor-js: "npm:5.0.0"
     autoprefixer: "npm:10.5.0"
@@ -4195,7 +4217,7 @@ __metadata:
     eslint-import-resolver-typescript: "npm:4.4.5"
     eslint-plugin-cypress: "npm:6.4.1"
     eslint-plugin-import: "npm:2.32.0"
-    eslint-plugin-jsdoc: "npm:63.0.1"
+    eslint-plugin-jsdoc: "npm:63.0.2"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-lit: "npm:2.3.1"
     eslint-plugin-react: "npm:7.37.5"
@@ -4209,7 +4231,7 @@ __metadata:
     jsdom: "npm:29.1.1"
     liquidjs: "npm:10.27.0"
     lit: "npm:3.3.3"
-    marked: "npm:18.0.4"
+    marked: "npm:18.0.5"
     minisearch: "npm:7.2.0"
     postcss: "npm:8.5.15"
     prettier: "npm:3.8.3"
@@ -4219,8 +4241,8 @@ __metadata:
     release-it: "npm:20.2.0"
     sass: "npm:1.100.0"
     slugify: "npm:1.6.9"
-    style-dictionary: "npm:5.4.2"
-    stylelint: "npm:17.12.0"
+    style-dictionary: "npm:5.4.3"
+    stylelint: "npm:17.13.0"
     stylelint-config-standard-scss: "npm:17.0.0"
     svgo: "npm:4.0.1"
     vite: "npm:8.0.16"
@@ -6729,9 +6751,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:63.0.1":
-  version: 63.0.1
-  resolution: "eslint-plugin-jsdoc@npm:63.0.1"
+"eslint-plugin-jsdoc@npm:63.0.2":
+  version: 63.0.2
+  resolution: "eslint-plugin-jsdoc@npm:63.0.2"
   dependencies:
     "@es-joy/jsdoccomment": "npm:~0.87.0"
     "@es-joy/resolve.exports": "npm:1.2.0"
@@ -6744,12 +6766,12 @@ __metadata:
     html-entities: "npm:^2.6.0"
     object-deep-merge: "npm:^2.0.1"
     parse-imports-exports: "npm:^0.2.4"
-    semver: "npm:^7.8.1"
+    semver: "npm:^7.8.2"
     spdx-expression-parse: "npm:^4.0.0"
     to-valid-identifier: "npm:^1.0.0"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
-  checksum: 10c0/a55d147ea935d94465e222e3cfdae1d11ce4e8c7f10ab0b412f3959d24e8fe9c50837e0fdd59b70267ca6ad5c52c6c0fc5fef2b91938e59d7d568bc34b481d35
+  checksum: 10c0/66252ae3fcba03d3c1e438d8b653c873064e8e59b78f8984df64c645681db156db3899ecba058a473cdd158d7a56d8b5ededfddab1a5fc37942d92c1d33a41b6
   languageName: node
   linkType: hard
 
@@ -10430,12 +10452,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:18.0.4":
-  version: 18.0.4
-  resolution: "marked@npm:18.0.4"
+"marked@npm:18.0.5":
+  version: 18.0.5
+  resolution: "marked@npm:18.0.5"
   bin:
     marked: bin/marked.js
-  checksum: 10c0/f54dcbb39d3acdcd0356f7629b42811eec56db5f6daef7404e582cdf800f5b598b681f9f8a187e7f51262e37c607f5e0cd9880e56b5c8160a49c3f7828e9e459
+  checksum: 10c0/22763935a0a243c41851b010a086ea85a09951e379948b6aa629b6cecdcd66e3a5e8c4acac2f6b29c183c20609d3e5102495270207dfd5f4c46ddd773a4ddb9b
   languageName: node
   linkType: hard
 
@@ -12249,17 +12271,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.14":
-  version: 8.5.14
-  resolution: "postcss@npm:8.5.14"
-  dependencies:
-    nanoid: "npm:^3.3.11"
-    picocolors: "npm:^1.1.1"
-    source-map-js: "npm:^1.2.1"
-  checksum: 10c0/48138207cf5ef5581be1bfe2cb65ccfe0ac75e43888ba045afc8ed6043d7b56aeb3b9a9fe5b353ff554be943cd0cc15d826ccb991525159175971e5ee8ab0237
-  languageName: node
-  linkType: hard
-
 "postcss@npm:^8.5.8":
   version: 8.5.8
   resolution: "postcss@npm:8.5.8"
@@ -13949,12 +13960,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.8.1":
-  version: 7.8.1
-  resolution: "semver@npm:7.8.1"
+"semver@npm:^7.8.2":
+  version: 7.8.2
+  resolution: "semver@npm:7.8.2"
   bin:
     semver: bin/semver.js
-  checksum: 10c0/92d6871d6347e1f99d0ba396a70f2545ccf2a032cda3d378fa0699edf7506b5c6d266aed55c8b88e72bd91a30d2351e4f39db479375374430fcdc4b58f4e3c1a
+  checksum: 10c0/8e8c193fa75b938e5b3ccf6707c6447e4b34f73e493e72b03f3185393489f45e049144052f624217c346d6c6e0a301dda8eeab2f14413e337218ecb1cbd2de16
   languageName: node
   linkType: hard
 
@@ -14806,11 +14817,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:5.4.2":
-  version: 5.4.2
-  resolution: "style-dictionary@npm:5.4.2"
+"style-dictionary@npm:5.4.3":
+  version: 5.4.3
+  resolution: "style-dictionary@npm:5.4.3"
   dependencies:
-    "@bundled-es-modules/deepmerge": "npm:^4.3.1"
+    "@bundled-es-modules/deepmerge": "npm:^4.3.2"
     "@bundled-es-modules/glob": "npm:^13.0.6"
     "@bundled-es-modules/memfs": "npm:^4.17.0"
     "@zip.js/zip.js": "npm:^2.7.44"
@@ -14825,7 +14836,7 @@ __metadata:
     tinycolor2: "npm:^1.6.0"
   bin:
     style-dictionary: bin/style-dictionary.js
-  checksum: 10c0/98727ffe0de021fe74c4fe0d43587ff3b319776022ff7ed0e0135072f3dfcb376bbbf2222a2e93daea39dcf3b0409d7ce72c9f0be03182a3402e88aa9755165f
+  checksum: 10c0/82ed27f05fc58eaacb549d6b6837603eaef43b19ab7f8e4f8e8d816bd933b39e11f01bfca04d3ac07cc5de5e663177658a1d7419f29dd1c41405849951afd685
   languageName: node
   linkType: hard
 
@@ -14909,13 +14920,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:17.12.0":
-  version: 17.12.0
-  resolution: "stylelint@npm:17.12.0"
+"stylelint@npm:17.13.0":
+  version: 17.13.0
+  resolution: "stylelint@npm:17.13.0"
   dependencies:
-    "@csstools/css-calc": "npm:^3.2.0"
+    "@csstools/css-calc": "npm:^3.2.1"
     "@csstools/css-parser-algorithms": "npm:^4.0.0"
-    "@csstools/css-syntax-patches-for-csstree": "npm:^1.1.3"
+    "@csstools/css-syntax-patches-for-csstree": "npm:^1.1.4"
     "@csstools/css-tokenizer": "npm:^4.0.0"
     "@csstools/media-query-list-parser": "npm:^5.0.0"
     "@csstools/selector-resolve-nested": "npm:^4.0.0"
@@ -14939,7 +14950,7 @@ __metadata:
     micromatch: "npm:^4.0.8"
     normalize-path: "npm:^3.0.0"
     picocolors: "npm:^1.1.1"
-    postcss: "npm:^8.5.14"
+    postcss: "npm:^8.5.15"
     postcss-safe-parser: "npm:^7.0.1"
     postcss-selector-parser: "npm:^7.1.1"
     postcss-value-parser: "npm:^4.2.0"
@@ -14950,7 +14961,7 @@ __metadata:
     write-file-atomic: "npm:^7.0.1"
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: 10c0/fdc066ebf923168cfaf2927f3d2b222fd0cf12722610c2d80fbd395714ccfa108e9319f5fccb422fa4dff5d08f39543ed6ad1f1511172de4709364f09b4ea177
+  checksum: 10c0/07b8e640099c042a5ee807303f79d065998304410ec94e18c419a22e5695bebfe9b2ca10a760630eff9d71f108b2404da8ab7eaba2559686ba99f688b747820b
   languageName: node
   linkType: hard
 

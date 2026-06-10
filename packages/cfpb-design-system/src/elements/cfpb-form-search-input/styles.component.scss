@@ -89,8 +89,11 @@
     cursor: pointer;
   }
 
-  // This line-height settings is taken from base.scss.
   input {
+    // We need to override the user agent stylesheet for form controls (button, input, select, textarea).
+    font: inherit;
+
+    // This line-height settings is taken from base.scss.
     line-height: unitless-from-px(19px);
   }
 

@@ -1,6 +1,9 @@
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 button {
+  // We need to override the user agent stylesheet for form controls (button, input, select, textarea).
+  font: inherit;
+
   // This line-height isn't 19 or 22, as 20 creates a 30px high tag.
   line-height: unitless-from-px(20px);
 

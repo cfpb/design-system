@@ -1,171 +1,169 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
-:host {
-  //
-  // Default button
-  //
+//
+// Default button
+//
 
-  button.a-btn::-moz-focus-inner,
-  input.a-btn::-moz-focus-inner {
-    // Fixes inconsistent button.btn height in Firefox.
-    // Helps with inconsistent input.btn height in Firefox but not completely.
-    border: 0;
+button.a-btn::-moz-focus-inner,
+input.a-btn::-moz-focus-inner {
+  // Fixes inconsistent button.btn height in Firefox.
+  // Helps with inconsistent input.btn height in Firefox but not completely.
+  border: 0;
+}
+
+.a-btn {
+  line-height: math.div(19px, $base-font-size-px);
+  appearance: none;
+  display: flex;
+  gap: math.div(10px, $base-font-size-px) + rem;
+
+  box-sizing: border-box;
+  padding: math.div($btn-v-padding, $btn-font-size) + em
+    math.div($btn-h-padding, $btn-font-size) + em;
+  border: 0;
+  margin: 0;
+  border-radius: math.div($btn-border-radius-size, $btn-font-size) + em;
+  cursor: pointer;
+  font-size: math.div($btn-font-size, $base-font-size-px) + em;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.1s;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+
+  &,
+  &:link,
+  &:visited {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
   }
 
-  .a-btn {
-    line-height: math.div(19px, $base-font-size-px);
-    appearance: none;
-    display: flex;
-    gap: math.div(10px, $base-font-size-px) + rem;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    background-color: var(--btn-bg-hover);
+    color: var(--btn-text);
+  }
 
-    box-sizing: border-box;
-    padding: math.div($btn-v-padding, $btn-font-size) + em
-      math.div($btn-h-padding, $btn-font-size) + em;
-    border: 0;
-    margin: 0;
-    border-radius: math.div($btn-border-radius-size, $btn-font-size) + em;
-    cursor: pointer;
-    font-size: math.div($btn-font-size, $base-font-size-px) + em;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.1s;
-    width: fit-content;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
+  &:focus,
+  &.focus {
+    outline: 1px dotted var(--btn-bg);
 
+    // The outline-offset property is not supported everywhere (e.g. IE)
+    // but it adds a nice touch in browsers where it is.
+    outline-offset: 1px;
+  }
+
+  &:active,
+  &.active {
+    background-color: var(--btn-bg-active);
+  }
+
+  //
+  // Secondary button
+  //
+
+  &--secondary {
     &,
     &:link,
     &:visited {
-      background-color: var(--btn-bg);
-      color: var(--btn-text);
+      background-color: var(--btn-secondary-bg);
+      color: var(--btn-secondary-text);
+      box-shadow: 0 0 0 1px var(--btn-secondary-border) inset;
     }
 
     &:hover,
     &.hover,
     &:focus,
     &.focus {
-      background-color: var(--btn-bg-hover);
-      color: var(--btn-text);
+      background-color: var(--btn-secondary-bg-hover);
+      color: var(--btn-secondary-text-hover);
+      box-shadow: 0 0 0 1px var(--btn-secondary-border-hover) inset;
     }
 
     &:focus,
     &.focus {
-      outline: 1px dotted var(--btn-bg);
-
-      // The outline-offset property is not supported everywhere (e.g. IE)
-      // but it adds a nice touch in browsers where it is.
-      outline-offset: 1px;
+      outline-color: var(--btn-secondary-border);
     }
 
     &:active,
     &.active {
-      background-color: var(--btn-bg-active);
+      background-color: var(--btn-secondary-bg-active);
+      color: var(--btn-secondary-text-active);
+      box-shadow: 0 0 0 1px var(--btn-secondary-border-active) inset;
+    }
+  }
+
+  //
+  // Destructive action button
+  //
+
+  &--warning {
+    &,
+    &:link,
+    &:visited {
+      background-color: var(--btn-warning-bg);
+      color: var(--btn-warning-text);
     }
 
-    //
-    // Secondary button
-    //
-
-    &--secondary {
-      &,
-      &:link,
-      &:visited {
-        background-color: var(--btn-secondary-bg);
-        color: var(--btn-secondary-text);
-        box-shadow: 0 0 0 1px var(--btn-secondary-border) inset;
-      }
-
-      &:hover,
-      &.hover,
-      &:focus,
-      &.focus {
-        background-color: var(--btn-secondary-bg-hover);
-        color: var(--btn-secondary-text-hover);
-        box-shadow: 0 0 0 1px var(--btn-secondary-border-hover) inset;
-      }
-
-      &:focus,
-      &.focus {
-        outline-color: var(--btn-secondary-border);
-      }
-
-      &:active,
-      &.active {
-        background-color: var(--btn-secondary-bg-active);
-        color: var(--btn-secondary-text-active);
-        box-shadow: 0 0 0 1px var(--btn-secondary-border-active) inset;
-      }
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      background-color: var(--btn-warning-bg-hover);
     }
 
-    //
-    // Destructive action button
-    //
-
-    &--warning {
-      &,
-      &:link,
-      &:visited {
-        background-color: var(--btn-warning-bg);
-        color: var(--btn-warning-text);
-      }
-
-      &:hover,
-      &.hover,
-      &:focus,
-      &.focus {
-        background-color: var(--btn-warning-bg-hover);
-      }
-
-      &:focus,
-      &.focus {
-        outline-color: var(--btn-warning-bg);
-      }
-
-      &:active,
-      &.active {
-        background-color: var(--btn-warning-bg-active);
-      }
+    &:focus,
+    &.focus {
+      outline-color: var(--btn-warning-bg);
     }
 
-    //
-    // Disabled button
-    //
+    &:active,
+    &.active {
+      background-color: var(--btn-warning-bg-active);
+    }
+  }
 
-    &--disabled,
-    &[disabled],
-    &[aria-disabled='true'] {
-      &,
-      &:link,
-      &:visited,
-      &:hover,
-      &.hover,
-      &:focus,
-      &.focus,
-      &:active,
-      &.active {
-        background-color: var(--btn-disabled-bg);
-        color: var(--btn-disabled-text);
-        box-shadow: none; // Added by secondary variant.
-        cursor: not-allowed;
-      }
+  //
+  // Disabled button
+  //
 
-      &:focus,
-      &.focus {
-        outline-color: var(--btn-disabled-outline);
-      }
+  &--disabled,
+  &[disabled],
+  &[aria-disabled='true'] {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: var(--btn-disabled-bg);
+      color: var(--btn-disabled-text);
+      box-shadow: none; // Added by secondary variant.
+      cursor: not-allowed;
     }
 
-    //
-    // Full width button on x-small screens
-    //
-    &--full-on-xs {
-      // Mobile only.
-      @include respond-to-max($bp-xs-max) {
-        width: 100%;
-      }
+    &:focus,
+    &.focus {
+      outline-color: var(--btn-disabled-outline);
+    }
+  }
+
+  //
+  // Full width button on x-small screens
+  //
+  &--full-on-xs {
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      width: 100%;
     }
   }
 }

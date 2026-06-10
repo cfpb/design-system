@@ -71,8 +71,18 @@
   }
 }
 
-slot {
-  display: none;
+a {
+  // Remove underline from links, since that's supplied by the internal cfpb-icon-text.
+  text-decoration-line: none;
+
+  font-weight: 500;
+  display: inline;
+
+  &:focus-visible,
+  &.focus {
+    outline: thin dotted;
+    outline-offset: 1px;
+  }
 }
 
 a[href] {
@@ -103,16 +113,6 @@ a[href] {
   }
 }
 
-a {
-  // Remove underline from links, since that's supplied by the internal cfpb-icon-text.
-  text-decoration-line: none;
-
-  font-weight: 500;
-  display: inline;
-
-  &:focus-visible,
-  &.focus {
-    outline: thin dotted;
-    outline-offset: 1px;
-  }
+slot {
+  display: none;
 }

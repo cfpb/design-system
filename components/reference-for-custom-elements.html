@@ -477,7 +477,183 @@
 
   &lt;br&gt;
 
-  &lt;cfpb-icon name="update" spin /&gt;
+  &lt;cfpb-icon name="update" spin /&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Form-level alerts
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Alerts draw a user’s attention to a change in the status of a form or page. Form-level alerts reflect a user or system action and appear below the form title. Field-level alerts appear inline with input fields and can highlight successful submissions, errors that need to be corrected, or details to know before submitting a form.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-alert message="Information alert"></cfpb-alert>
+
+  <br>
+
+  <cfpb-alert message="Information alert">
+    <span>You can also add an explanation to the alert.</span>
+  </cfpb-alert>
+
+  <br>
+
+  <cfpb-alert message="Information alert">
+    <cfpb-list compact>
+      <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
+      <cfpb-link link-variant="external" no-top-border><a href="/">This is a link below the explanation</a></cfpb-link>
+    </cfpb-list>
+  </cfpb-alert>
+
+  <br>
+
+  <cfpb-alert message="Information alert">
+    <span>You can also add an explanation to the alert.</span>
+    <cfpb-list compact>
+      <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
+      <cfpb-link link-variant="external" no-top-border><a href="/">This is a link below the explanation</a></cfpb-link>
+    </cfpb-list>
+  </cfpb-alert>
+
+  <br>
+
+  <cfpb-alert status="error" message="Page not found">
+    <span>This is an optional explanation of the error.</span>
+  </cfpb-alert>
+
+  <br>
+
+  <cfpb-alert status="success" message="11 results">
+    <span>This is an optional explanation of the success message.</span>
+  </cfpb-alert>
+  
+  <br>
+
+  <cfpb-alert status="warning" message="No results found">
+    <span>This is an optional explanation of the warning.</span>
+  </cfpb-alert>
+
+  <br>
+
+  <cfpb-alert status="loading" message="Loading…"></cfpb-alert>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <cfpb-button href="#details-form-level-alerts-alerts-draw-a--2" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-form-level-alerts-alerts-draw-a--2" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-form-level-alerts-alerts-draw-a--2">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-form-level-alerts-alerts-draw-a--html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-form-level-alerts-alerts-draw-a--html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div&gt;
+  &lt;cfpb-alert message="Information alert" /&gt;
+
+  &lt;br&gt;
+
+  &lt;cfpb-alert message="Information alert"&gt;
+    &lt;span&gt;You can also add an explanation to the alert.&lt;/span&gt;
+  &lt;/cfpb-alert&gt;
+
+  &lt;br&gt;
+
+  &lt;cfpb-alert message="Information alert"&gt;
+    &lt;span&gt;
+      You can also add an explanation to the alert.
+    &lt;/span&gt;
+    &lt;cfpb-list&gt;
+      &lt;cfpb-link&gt;&lt;a href="/"&gt;This is a link below the explanation&lt;/a&gt;&lt;/cfpb-link&gt;
+      &lt;cfpb-link link-variant="external"&gt;&lt;a href="/"&gt;This is a link below the explanation&lt;/a&gt;&lt;/cfpb-link&gt;
+    &lt;/cfpb-list&gt;
+  &lt;/cfpb-alert&gt;
+
+  &lt;br&gt;
+
+  &lt;cfpb-alert status="error" message="Page not found"&gt;
+    &lt;span&gt;This is an optional explanation of the error.&lt;/span&gt;
+    &lt;cfpb-list&gt;
+      &lt;cfpb-link&gt;&lt;a href="/"&gt;This is a link below the explanation&lt;/a&gt;&lt;/cfpb-link&gt;
+      &lt;cfpb-link link-variant="external"&gt;&lt;a href="/"&gt;This is a link below the explanation&lt;/a&gt;&lt;/cfpb-link&gt;
+    &lt;/cfpb-list&gt;
+  &lt;/cfpb-alert&gt;
+
+  &lt;br&gt;
+
+  &lt;cfpb-alert status="success" message="11 results"&gt;
+    &lt;span&gt;This is an optional explanation of the success message.&lt;/span&gt;
+  &lt;/cfpb-alert&gt;
+  
+  &lt;br&gt;
+
+  &lt;cfpb-alert status="warning" message="No results found"&gt;
+    &lt;span&gt;This is an optional explanation of the warning.&lt;/span&gt;
+  &lt;/cfpb-alert&gt;
+
+  &lt;br&gt;
+
+  &lt;cfpb-alert status="loading" message="Loading…" /&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                     </div>
@@ -546,15 +722,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-tagline-a-us-gov-branded-tagline-2" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-tagline-a-us-gov-branded-tagline-2" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-tagline-a-us-gov-branded-tagline-3" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-tagline-a-us-gov-branded-tagline-3" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-tagline-a-us-gov-branded-tagline-2">
+            <div class="m-tabs u-hidden" id="details-tagline-a-us-gov-branded-tagline-3">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-tagline-a-us-gov-branded-tagline-html-code-snippet-2">
+                        <a class="m-tabs__tab" href="#details-tagline-a-us-gov-branded-tagline-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -566,7 +742,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-tagline-a-us-gov-branded-tagline-html-code-snippet-2">
+                <section class="m-tabs__panel" id="details-tagline-a-us-gov-branded-tagline-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -661,15 +837,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-link-a-standard-link-cfpb-link-h-3" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-link-a-standard-link-cfpb-link-h-3" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-link-a-standard-link-cfpb-link-h-4" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-link-a-standard-link-cfpb-link-h-4" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-link-a-standard-link-cfpb-link-h-3">
+            <div class="m-tabs u-hidden" id="details-link-a-standard-link-cfpb-link-h-4">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-link-a-standard-link-cfpb-link-h-html-code-snippet-3">
+                        <a class="m-tabs__tab" href="#details-link-a-standard-link-cfpb-link-h-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
@@ -681,7 +857,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-link-a-standard-link-cfpb-link-h-html-code-snippet-3">
+                <section class="m-tabs__panel" id="details-link-a-standard-link-cfpb-link-h-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -903,15 +1079,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-icon-and-text-a-basic-pairing-of-4" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-icon-and-text-a-basic-pairing-of-4" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-icon-and-text-a-basic-pairing-of-5" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-icon-and-text-a-basic-pairing-of-5" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-icon-and-text-a-basic-pairing-of-4">
+            <div class="m-tabs u-hidden" id="details-icon-and-text-a-basic-pairing-of-5">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-icon-and-text-a-basic-pairing-of-html-code-snippet-4">
+                        <a class="m-tabs__tab" href="#details-icon-and-text-a-basic-pairing-of-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
@@ -923,7 +1099,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-icon-and-text-a-basic-pairing-of-html-code-snippet-4">
+                <section class="m-tabs__panel" id="details-icon-and-text-a-basic-pairing-of-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1137,15 +1313,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-button-a-basic-button-in-web-com-5" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-button-a-basic-button-in-web-com-5" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-button-a-basic-button-in-web-com-6" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-button-a-basic-button-in-web-com-6" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-button-a-basic-button-in-web-com-5">
+            <div class="m-tabs u-hidden" id="details-button-a-basic-button-in-web-com-6">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-button-a-basic-button-in-web-com-html-code-snippet-5">
+                        <a class="m-tabs__tab" href="#details-button-a-basic-button-in-web-com-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
@@ -1157,7 +1333,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-button-a-basic-button-in-web-com-html-code-snippet-5">
+                <section class="m-tabs__panel" id="details-button-a-basic-button-in-web-com-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1221,15 +1397,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-file-upload-allows-files-to-be-s-6" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-file-upload-allows-files-to-be-s-6" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-file-upload-allows-files-to-be-s-7" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-file-upload-allows-files-to-be-s-7" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-file-upload-allows-files-to-be-s-6">
+            <div class="m-tabs u-hidden" id="details-file-upload-allows-files-to-be-s-7">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-file-upload-allows-files-to-be-s-html-code-snippet-6">
+                        <a class="m-tabs__tab" href="#details-file-upload-allows-files-to-be-s-html-code-snippet-7">
                             HTML code snippet
                         </a>
                     </li>
@@ -1241,7 +1417,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-file-upload-allows-files-to-be-s-html-code-snippet-6">
+                <section class="m-tabs__panel" id="details-file-upload-allows-files-to-be-s-html-code-snippet-7">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1447,15 +1623,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-checkbox-a-checkbox-component-cf-7" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-checkbox-a-checkbox-component-cf-7" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-checkbox-a-checkbox-component-cf-8" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-checkbox-a-checkbox-component-cf-8" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-checkbox-a-checkbox-component-cf-7">
+            <div class="m-tabs u-hidden" id="details-checkbox-a-checkbox-component-cf-8">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-checkbox-a-checkbox-component-cf-html-code-snippet-7">
+                        <a class="m-tabs__tab" href="#details-checkbox-a-checkbox-component-cf-html-code-snippet-8">
                             HTML code snippet
                         </a>
                     </li>
@@ -1467,7 +1643,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-checkbox-a-checkbox-component-cf-html-code-snippet-7">
+                <section class="m-tabs__panel" id="details-checkbox-a-checkbox-component-cf-html-code-snippet-8">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1680,15 +1856,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-radio-button-a-radio-button-comp-8" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-radio-button-a-radio-button-comp-8" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-radio-button-a-radio-button-comp-9" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-radio-button-a-radio-button-comp-9" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-radio-button-a-radio-button-comp-8">
+            <div class="m-tabs u-hidden" id="details-radio-button-a-radio-button-comp-9">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-radio-button-a-radio-button-comp-html-code-snippet-8">
+                        <a class="m-tabs__tab" href="#details-radio-button-a-radio-button-comp-html-code-snippet-9">
                             HTML code snippet
                         </a>
                     </li>
@@ -1700,7 +1876,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-radio-button-a-radio-button-comp-html-code-snippet-8">
+                <section class="m-tabs__panel" id="details-radio-button-a-radio-button-comp-html-code-snippet-9">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1734,6 +1910,132 @@
 &lt;cfpb-form-choice type="radio" large validation="error"&gt;
   Gold
 &lt;/cfpb-form-choice&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    List
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A list element.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-list>
+    <cfpb-link><a href="#">Item 1</a></cfpb-link>
+    <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
+    <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+  </cfpb-list>
+
+  <br>
+  <br>
+
+  Compact variant:
+  <br>
+  <br>
+
+  <cfpb-list compact>
+    <cfpb-link><a href="#">Item 1</a></cfpb-link>
+    <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
+    <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+  </cfpb-list>
+
+  <br>
+  <br>
+
+  Horizontal variant:
+  <br>
+  <br>
+
+  <cfpb-list horizontal>
+    <cfpb-list-item>Item 1</cfpb-list-item>
+    <cfpb-list-item>Item 2</cfpb-list-item>
+    <cfpb-list-item>Item 3</cfpb-list-item>
+  </cfpb-list>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <cfpb-button href="#details-list-a-list-element-cfpb-list-cf-10" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-list-a-list-element-cfpb-list-cf-10" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-list-a-list-element-cfpb-list-cf-10">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-list-a-list-element-cfpb-list-cf-html-code-snippet-10">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-list-a-list-element-cfpb-list-cf-html-code-snippet-10">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-list&gt;
+  &lt;cfpb-link&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/cfpb-link&gt;
+  &lt;cfpb-link no-top-border&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/cfpb-link&gt;
+  &lt;cfpb-link no-top-border&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/cfpb-link&gt;
+&lt;/cfpb-list&gt; &lt;cfpb-list compact&gt;
+  &lt;cfpb-link&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/cfpb-link&gt;
+  &lt;cfpb-link no-top-border&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/cfpb-link&gt;
+  &lt;cfpb-link no-top-border&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/cfpb-link&gt;
+&lt;/cfpb-list&gt; &lt;cfpb-list horizontal&gt;
+  &lt;cfpb-list-item&gt;Item 1&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item&gt;Item 2&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item&gt;Item 3&lt;/cfpb-list-item&gt;
+&lt;/cfpb-list&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1801,15 +2103,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-topic-tag-tag-element-for-topics-9" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-topic-tag-tag-element-for-topics-9" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-topic-tag-tag-element-for-topics-11" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-topic-tag-tag-element-for-topics-11" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-topic-tag-tag-element-for-topics-9">
+            <div class="m-tabs u-hidden" id="details-topic-tag-tag-element-for-topics-11">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-topic-tag-tag-element-for-topics-html-code-snippet-9">
+                        <a class="m-tabs__tab" href="#details-topic-tag-tag-element-for-topics-html-code-snippet-11">
                             HTML code snippet
                         </a>
                     </li>
@@ -1821,7 +2123,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-topic-tag-tag-element-for-topics-html-code-snippet-9">
+                <section class="m-tabs__panel" id="details-topic-tag-tag-element-for-topics-html-code-snippet-11">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1897,15 +2199,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-filter-tag-tag-element-for-filte-10" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-filter-tag-tag-element-for-filte-10" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-filter-tag-tag-element-for-filte-12" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-filter-tag-tag-element-for-filte-12" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-filter-tag-tag-element-for-filte-10">
+            <div class="m-tabs u-hidden" id="details-filter-tag-tag-element-for-filte-12">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-filter-tag-tag-element-for-filte-html-code-snippet-10">
+                        <a class="m-tabs__tab" href="#details-filter-tag-tag-element-for-filte-html-code-snippet-12">
                             HTML code snippet
                         </a>
                     </li>
@@ -1917,7 +2219,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-filter-tag-tag-element-for-filte-html-code-snippet-10">
+                <section class="m-tabs__panel" id="details-filter-tag-tag-element-for-filte-html-code-snippet-12">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2015,6 +2317,23 @@
   <button id="remove-tag">Remove tag</button>
   </p>
   <br>
+
+  <p>
+  <label>
+    JSON childData array:
+    <br>
+    <textarea id="tag-json-data" rows="4" style="width:100%">
+  [{ "tagName": "cfpb-tag-filter", "text": "A" },
+  { "tagName": "cfpb-tag-filter", "text": "B" },
+  { "tagName": "cfpb-tag-filter", "text": "C" },
+  { "tagName": "cfpb-tag-topic", "text": "D", "href": "#" }]
+    </textarea>
+  </label>
+  </p>
+<p>
+  <button id="add-tag-json">Add JSON</button>
+  </p>
+
   <label>
   <p>Events dispatched:<br>
   <textarea id="tag-group-events" style="width:100%"></textarea>
@@ -2031,6 +2350,9 @@
   const tagName = document.querySelector('#add-tag-name');
   const tagIndex = document.querySelector('#add-tag-index');
   const tagType = document.querySelector('#tag-type');
+
+  const tagJson = document.querySelector('#tag-json-data');
+  const btnAddJson = document.querySelector('#add-tag-json');
 
   btnAdd.addEventListener('click',()=>{
     let tag;
@@ -2059,6 +2381,10 @@
     });
     tagGroup.removeTag(tag);
   });
+
+  btnAddJson.addEventListener('click',()=>{
+    tagGroup.childData = tagJson.value;
+  });
   </script>
 </div>
             </div>
@@ -2072,15 +2398,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-filter-tag-group-a-group-of-filt-11" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-filter-tag-group-a-group-of-filt-11" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-filter-tag-group-a-group-of-filt-13" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-filter-tag-group-a-group-of-filt-13" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-filter-tag-group-a-group-of-filt-11">
+            <div class="m-tabs u-hidden" id="details-filter-tag-group-a-group-of-filt-13">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-filter-tag-group-a-group-of-filt-html-code-snippet-11">
+                        <a class="m-tabs__tab" href="#details-filter-tag-group-a-group-of-filt-html-code-snippet-13">
                             HTML code snippet
                         </a>
                     </li>
@@ -2092,7 +2418,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-filter-tag-group-a-group-of-filt-html-code-snippet-11">
+                <section class="m-tabs__panel" id="details-filter-tag-group-a-group-of-filt-html-code-snippet-13">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2186,15 +2512,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-label-a-label-component-cfpb-lab-12" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-label-a-label-component-cfpb-lab-12" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-label-a-label-component-cfpb-lab-14" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-label-a-label-component-cfpb-lab-14" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-label-a-label-component-cfpb-lab-12">
+            <div class="m-tabs u-hidden" id="details-label-a-label-component-cfpb-lab-14">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-label-a-label-component-cfpb-lab-html-code-snippet-12">
+                        <a class="m-tabs__tab" href="#details-label-a-label-component-cfpb-lab-html-code-snippet-14">
                             HTML code snippet
                         </a>
                     </li>
@@ -2206,7 +2532,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-label-a-label-component-cfpb-lab-html-code-snippet-12">
+                <section class="m-tabs__panel" id="details-label-a-label-component-cfpb-lab-html-code-snippet-14">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2356,15 +2682,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-search-input-a-search-input-comp-13" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-search-input-a-search-input-comp-13" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-search-input-a-search-input-comp-15" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-search-input-a-search-input-comp-15" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-search-input-a-search-input-comp-13">
+            <div class="m-tabs u-hidden" id="details-search-input-a-search-input-comp-15">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-search-input-a-search-input-comp-html-code-snippet-13">
+                        <a class="m-tabs__tab" href="#details-search-input-a-search-input-comp-html-code-snippet-15">
                             HTML code snippet
                         </a>
                     </li>
@@ -2376,7 +2702,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-search-input-a-search-input-comp-html-code-snippet-13">
+                <section class="m-tabs__panel" id="details-search-input-a-search-input-comp-html-code-snippet-15">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2456,15 +2782,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-search-widget-a-search-widget-co-14" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-search-widget-a-search-widget-co-14" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-search-widget-a-search-widget-co-16" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-search-widget-a-search-widget-co-16" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-search-widget-a-search-widget-co-14">
+            <div class="m-tabs u-hidden" id="details-search-widget-a-search-widget-co-16">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-search-widget-a-search-widget-co-html-code-snippet-14">
+                        <a class="m-tabs__tab" href="#details-search-widget-a-search-widget-co-html-code-snippet-16">
                             HTML code snippet
                         </a>
                     </li>
@@ -2476,7 +2802,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-search-widget-a-search-widget-co-html-code-snippet-14">
+                <section class="m-tabs__panel" id="details-search-widget-a-search-widget-co-html-code-snippet-16">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2553,15 +2879,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-form-level-alert-a-form-level-al-15" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-form-level-alert-a-form-level-al-15" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-form-level-alert-a-form-level-al-17" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-form-level-alert-a-form-level-al-17" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-form-level-alert-a-form-level-al-15">
+            <div class="m-tabs u-hidden" id="details-form-level-alert-a-form-level-al-17">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-form-level-alert-a-form-level-al-html-code-snippet-15">
+                        <a class="m-tabs__tab" href="#details-form-level-alert-a-form-level-al-html-code-snippet-17">
                             HTML code snippet
                         </a>
                     </li>
@@ -2573,7 +2899,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-form-level-alert-a-form-level-al-html-code-snippet-15">
+                <section class="m-tabs__panel" id="details-form-level-alert-a-form-level-al-html-code-snippet-17">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2664,15 +2990,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-pagination-a-pagination-componen-16" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-pagination-a-pagination-componen-16" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-pagination-a-pagination-componen-18" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-pagination-a-pagination-componen-18" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-pagination-a-pagination-componen-16">
+            <div class="m-tabs u-hidden" id="details-pagination-a-pagination-componen-18">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-pagination-a-pagination-componen-html-code-snippet-16">
+                        <a class="m-tabs__tab" href="#details-pagination-a-pagination-componen-html-code-snippet-18">
                             HTML code snippet
                         </a>
                     </li>
@@ -2684,7 +3010,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-pagination-a-pagination-componen-html-code-snippet-16">
+                <section class="m-tabs__panel" id="details-pagination-a-pagination-componen-html-code-snippet-18">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2832,15 +3158,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-listbox-item-a-listbox-item-comp-17" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-listbox-item-a-listbox-item-comp-17" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-listbox-item-a-listbox-item-comp-19" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-listbox-item-a-listbox-item-comp-19" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-listbox-item-a-listbox-item-comp-17">
+            <div class="m-tabs u-hidden" id="details-listbox-item-a-listbox-item-comp-19">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-listbox-item-a-listbox-item-comp-html-code-snippet-17">
+                        <a class="m-tabs__tab" href="#details-listbox-item-a-listbox-item-comp-html-code-snippet-19">
                             HTML code snippet
                         </a>
                     </li>
@@ -2852,7 +3178,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-listbox-item-a-listbox-item-comp-html-code-snippet-17">
+                <section class="m-tabs__panel" id="details-listbox-item-a-listbox-item-comp-html-code-snippet-19">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -3075,15 +3401,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-listboxes-a-listbox-component-cf-18" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-listboxes-a-listbox-component-cf-18" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-listboxes-a-listbox-component-cf-20" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-listboxes-a-listbox-component-cf-20" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-listboxes-a-listbox-component-cf-18">
+            <div class="m-tabs u-hidden" id="details-listboxes-a-listbox-component-cf-20">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-listboxes-a-listbox-component-cf-html-code-snippet-18">
+                        <a class="m-tabs__tab" href="#details-listboxes-a-listbox-component-cf-html-code-snippet-20">
                             HTML code snippet
                         </a>
                     </li>
@@ -3095,7 +3421,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-listboxes-a-listbox-component-cf-html-code-snippet-18">
+                <section class="m-tabs__panel" id="details-listboxes-a-listbox-component-cf-html-code-snippet-20">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -3247,15 +3573,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-select-list-a-select-list-compon-19" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-select-list-a-select-list-compon-19" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-select-list-a-select-list-compon-21" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-select-list-a-select-list-compon-21" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-select-list-a-select-list-compon-19">
+            <div class="m-tabs u-hidden" id="details-select-list-a-select-list-compon-21">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-select-list-a-select-list-compon-html-code-snippet-19">
+                        <a class="m-tabs__tab" href="#details-select-list-a-select-list-compon-html-code-snippet-21">
                             HTML code snippet
                         </a>
                     </li>
@@ -3267,7 +3593,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-select-list-a-select-list-compon-html-code-snippet-19">
+                <section class="m-tabs__panel" id="details-select-list-a-select-list-compon-html-code-snippet-21">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -3368,15 +3694,15 @@
             
 
             <div class="a-toggle__code">
-                <cfpb-button href="#details-expandables-an-expandable-compon-20" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
-                <cfpb-button href="#details-expandables-an-expandable-compon-20" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
+                <cfpb-button href="#details-expandables-an-expandable-compon-22" style-as-link data-toggle-details="show">SHOW DETAILS</cfpb-button>
+                <cfpb-button href="#details-expandables-an-expandable-compon-22" style-as-link class="u-hidden" data-toggle-details="hide">HIDE DETAILS</cfpb-button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-expandables-an-expandable-compon-20">
+            <div class="m-tabs u-hidden" id="details-expandables-an-expandable-compon-22">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-expandables-an-expandable-compon-html-code-snippet-20">
+                        <a class="m-tabs__tab" href="#details-expandables-an-expandable-compon-html-code-snippet-22">
                             HTML code snippet
                         </a>
                     </li>
@@ -3388,7 +3714,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-expandables-an-expandable-compon-html-code-snippet-20">
+                <section class="m-tabs__panel" id="details-expandables-an-expandable-compon-html-code-snippet-22">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -3447,8 +3773,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/reference-for-custom-elements.md">
-                            <time datetime="2026-06-10 12:37:18 -0400">
-                                12:37:18 PM Jun 10, 2026
+                            <time datetime="2026-06-10 12:44:41 -0400">
+                                12:44:41 PM Jun 10, 2026
                             </time>
                         </a>
                     </section>

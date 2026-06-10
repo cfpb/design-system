@@ -20,6 +20,10 @@
   --select-border-hover: var(--select-border-hover-default);
   --select-border-focus: var(--select-border-focus-default);
 
+  display: flex;
+  gap: rem-from-px(15px);
+  flex-direction: column;
+
   // Hide light DOM content.
   ::slotted(ul),
   ::slotted(ol) {

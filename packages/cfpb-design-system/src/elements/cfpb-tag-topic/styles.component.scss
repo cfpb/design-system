@@ -18,8 +18,6 @@
     $is-gold: true
   );
 
-  // @include u-jump-link-group($jump-link-class: 'a-tag-topic');
-
   // Mobile only.
   @include respond-to-max($bp-xs-max) {
     // Handle the borders of jump links that are adjacent in a list.

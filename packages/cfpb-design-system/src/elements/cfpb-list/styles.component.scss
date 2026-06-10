@@ -4,6 +4,8 @@
 :host {
   // Tag group sets the spacing between tags.
   ul {
+    margin: 0;
+
     // Remove list ul bullets styles.
     padding-left: 0;
     list-style-type: none;
@@ -13,19 +15,17 @@
       display: contents;
     }
 
-    // Tablet and above.
-    @include respond-to-min($bp-sm-min) {
-      display: flex;
-      gap: rem-from-px(15px);
-      flex-wrap: wrap;
-      flex-direction: column;
-      width: fit-content;
-    }
+    display: flex;
+    gap: rem-from-px(15px);
+    flex-wrap: wrap;
+    flex-direction: column;
 
-    &:has(cfpb-tag-filter) {
-      display: flex;
-      gap: rem-from-px(15px);
-      flex-wrap: wrap;
+    &:has(cfpb-tag-topic),
+    &:has(cfpb-link) {
+      // Mobile only.
+      @include respond-to-max($bp-xs-max) {
+        gap: 0;
+      }
     }
   }
 
@@ -40,11 +40,8 @@
 
 :host([horizontal]) {
   ul {
-    // Tablet and above.
-    @include respond-to-min($bp-sm-min) {
-      flex-direction: initial;
-      width: initial;
-    }
+    flex-direction: row;
+    width: fit-content;
   }
 }
 

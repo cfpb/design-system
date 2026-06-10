@@ -7,6 +7,7 @@ const SUPPORTED_TAG_LIST = [
   'CFPB-TAG-FILTER',
   'CFPB-TAG-TOPIC',
   'CFPB-LIST-ITEM',
+  'CFPB-LINK',
 ];
 
 /**
@@ -17,6 +18,7 @@ const SUPPORTED_TAG_LIST = [
  *   The list of items in the lightDOM gets re-written
  *   inside an unordered list in the shadowDOM so that it is read out
  *   as a list of items in VoiceOver.
+ * @slot - Slot for the list of items in the list.
  * @fires CfpbList#event:"item-added" - A tag was added to the group.
  * @fires CfpbList#event:"item-click" - A tag was clicked.
  * @fires CfpbList#event:"item-removed" - A tag was removed to the group.
@@ -54,7 +56,6 @@ export class CfpbList extends LitElement {
   constructor() {
     super();
     this.childData = '';
-    this.isHorizontal = false;
     this.#observer = new MutationObserver(this.#onMutation.bind(this));
     this.#itemMap = new Map();
   }
@@ -319,7 +320,7 @@ export class CfpbList extends LitElement {
       wrapped.remove();
     }
 
-    this.#itemMap.delete(node);
+    this.#itemMap.delete(source);
 
     this.dispatchEvent(
       new CustomEvent('item-removed', {

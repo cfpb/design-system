@@ -61,7 +61,109 @@ variation_groups:
             <br>
 
             <cfpb-icon name="update" spin />
+      - variation_is_deprecated: false
+        variation_name: Form-level alerts
+        variation_description: Alerts draw a user’s attention to a change in the status of a form or page. Form-level alerts reflect a user or system action and appear below the form title. Field-level alerts appear inline with input fields and can highlight successful submissions, errors that need to be corrected, or details to know before submitting a form.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-alert message="Information alert" />
+
+            <br>
+
+            <cfpb-alert message="Information alert">
+              <span>You can also add an explanation to the alert.</span>
+            </cfpb-alert>
+
+            <br>
+
+            <cfpb-alert message="Information alert">
+              <cfpb-list compact>
+                <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
+                <cfpb-link link-variant="external" no-top-border><a href="/">This is a link below the explanation</a></cfpb-link>
+              </cfpb-list>
+            </cfpb-alert>
+
+            <br>
+
+            <cfpb-alert message="Information alert">
+              <span>You can also add an explanation to the alert.</span>
+              <cfpb-list compact>
+                <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
+                <cfpb-link link-variant="external" no-top-border><a href="/">This is a link below the explanation</a></cfpb-link>
+              </cfpb-list>
+            </cfpb-alert>
+
+            <br>
+
+            <cfpb-alert status="error" message="Page not found">
+              <span>This is an optional explanation of the error.</span>
+            </cfpb-alert>
+
+            <br>
+
+            <cfpb-alert status="success" message="11 results">
+              <span>This is an optional explanation of the success message.</span>
+            </cfpb-alert>
+            
+            <br>
+
+            <cfpb-alert status="warning" message="No results found">
+              <span>This is an optional explanation of the warning.</span>
+            </cfpb-alert>
+
+            <br>
+
+            <cfpb-alert status="loading" message="Loading…" />
           </div>
+        variation_code_snippet: >-
+          <div>
+            <cfpb-alert message="Information alert" />
+
+            <br>
+
+            <cfpb-alert message="Information alert">
+              <span>You can also add an explanation to the alert.</span>
+            </cfpb-alert>
+
+            <br>
+
+            <cfpb-alert message="Information alert">
+              <span>
+                You can also add an explanation to the alert.
+              </span>
+              <cfpb-list>
+                <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
+                <cfpb-link link-variant="external"><a href="/">This is a link below the explanation</a></cfpb-link>
+              </cfpb-list>
+            </cfpb-alert>
+
+            <br>
+
+            <cfpb-alert status="error" message="Page not found">
+              <span>This is an optional explanation of the error.</span>
+              <cfpb-list>
+                <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
+                <cfpb-link link-variant="external"><a href="/">This is a link below the explanation</a></cfpb-link>
+              </cfpb-list>
+            </cfpb-alert>
+
+            <br>
+
+            <cfpb-alert status="success" message="11 results">
+              <span>This is an optional explanation of the success message.</span>
+            </cfpb-alert>
+            
+            <br>
+
+            <cfpb-alert status="warning" message="No results found">
+              <span>This is an optional explanation of the warning.</span>
+            </cfpb-alert>
+
+            <br>
+
+            <cfpb-alert status="loading" message="Loading…" />
+          </div>
+
       - variation_is_deprecated: false
         variation_name: Tagline
         variation_description: A US gov branded tagline.
@@ -805,7 +907,60 @@ variation_groups:
           <cfpb-form-choice type="radio" large validation="error">
             Gold
           </cfpb-form-choice>
+      - variation_is_deprecated: false
+        variation_name: List
+        variation_description: >-
+          A list element.
+        variation_code_snippet_rendered: >-
+          <div>
+            <cfpb-list>
+              <cfpb-link><a href="#">Item 1</a></cfpb-link>
+              <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
+              <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+            </cfpb-list>
 
+            <br>
+            <br>
+
+            Compact variant:
+            <br>
+            <br>
+
+            <cfpb-list compact>
+              <cfpb-link><a href="#">Item 1</a></cfpb-link>
+              <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
+              <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+            </cfpb-list>
+
+            <br>
+            <br>
+
+            Horizontal variant:
+            <br>
+            <br>
+
+            <cfpb-list horizontal>
+              <cfpb-list-item>Item 1</cfpb-list-item>
+              <cfpb-list-item>Item 2</cfpb-list-item>
+              <cfpb-list-item>Item 3</cfpb-list-item>
+            </cfpb-list>
+          </div>
+        variation_code_snippet: >-
+          <cfpb-list>
+            <cfpb-link><a href="#">Item 1</a></cfpb-link>
+            <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
+            <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+          </cfpb-list>
+          <cfpb-list compact>
+            <cfpb-link><a href="#">Item 1</a></cfpb-link>
+            <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
+            <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+          </cfpb-list>
+          <cfpb-list horizontal>
+            <cfpb-list-item>Item 1</cfpb-list-item>
+            <cfpb-list-item>Item 2</cfpb-list-item>
+            <cfpb-list-item>Item 3</cfpb-list-item>
+          </cfpb-list>
       - variation_is_deprecated: false
         variation_name: Topic tag
         variation_description: >-
@@ -898,6 +1053,22 @@ variation_groups:
             <button id="remove-tag">Remove tag</button>
             </p>
             <br>
+
+            <p>
+            <label>
+              JSON childData array:
+              <br>
+              <textarea id="tag-json-data" rows="4" style="width:100%">
+            [{ "tagName": "cfpb-tag-filter", "text": "A" },
+            { "tagName": "cfpb-tag-filter", "text": "B" },
+            { "tagName": "cfpb-tag-filter", "text": "C" },
+            { "tagName": "cfpb-tag-topic", "text": "D", "href": "#" }]
+              </textarea>
+            </label>
+            </p><p>
+            <button id="add-tag-json">Add JSON</button>
+            </p>
+
             <label>
             <p>Events dispatched:<br>
             <textarea id="tag-group-events" style="width:100%"></textarea>
@@ -914,6 +1085,9 @@ variation_groups:
             const tagName = document.querySelector('#add-tag-name');
             const tagIndex = document.querySelector('#add-tag-index');
             const tagType = document.querySelector('#tag-type');
+
+            const tagJson = document.querySelector('#tag-json-data');
+            const btnAddJson = document.querySelector('#add-tag-json');
 
             btnAdd.addEventListener('click',()=>{
               let tag;
@@ -941,6 +1115,10 @@ variation_groups:
                 if (item.textContent.trim() === tagName.value) tag = item;
               });
               tagGroup.removeTag(tag);
+            });
+
+            btnAddJson.addEventListener('click',()=>{
+              tagGroup.childData = tagJson.value;
             });
             </script>
           </div>

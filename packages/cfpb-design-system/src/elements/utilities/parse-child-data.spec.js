@@ -18,6 +18,12 @@ describe('parseChildData', () => {
     expect(result).toEqual([{ text: 'a' }, { text: 'b' }]);
   });
 
+  it('parses a stringified JSON string into array', () => {
+    const json = JSON.stringify([{ text: 'a' }, { text: 'b' }]);
+    const result = parseChildData(json);
+    expect(result).toEqual([{ text: 'a' }, { text: 'b' }]);
+  });
+
   it('parses JSON-like string with single quotes when allowSingleQuotes=true', () => {
     const jsonLike = "[{'text':'a'},{'text':'b'}]";
     const result = parseChildData(jsonLike, { allowSingleQuotes: true });
@@ -25,8 +31,24 @@ describe('parseChildData', () => {
   });
 
   it('throws error / returns null for invalid JSON', () => {
-    const invalid = '[{text:a},{text:b}]';
-    const result = parseChildData(invalid);
+    // Unquoted key/values.
+    let invalid = '[{text:a},{text:b}]';
+    let result = parseChildData(invalid);
+    expect(result).toBeNull();
+
+    // Empty string.
+    invalid = '   ';
+    result = parseChildData(invalid);
+    expect(result).toBeNull();
+
+    // Empty argument.
+    invalid = undefined;
+    result = parseChildData(invalid);
+    expect(result).toBeNull();
+
+    // Not a string passed.
+    invalid = {};
+    result = parseChildData(invalid);
     expect(result).toBeNull();
   });
 

@@ -17,20 +17,6 @@ The icons work like this:
   vertical-align: middle;
   display: inline-block;
   color: var(--icon-color, inherit);
-
-  span {
-    line-height: 0;
-    mask-image: var(--icon-mask-image-url);
-    mask-position: center;
-    mask-repeat: no-repeat;
-    display: inline-block;
-    background-color: currentcolor;
-  }
-
-  img {
-    height: 1.1875em;
-    opacity: 0;
-  }
 }
 
 :host([spin]) {
@@ -45,4 +31,18 @@ The icons work like this:
   100% {
     transform: rotate(359deg);
   }
+}
+
+span {
+  line-height: 0;
+  mask-image: var(--icon-mask-image-url);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  display: inline-block;
+  background-color: currentcolor;
+}
+
+img {
+  height: 1.1875em;
+  opacity: 0;
 }

@@ -1,43 +1,6 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
-:host {
-  // Tag group sets the spacing between tags.
-  ul {
-    margin: 0;
-
-    // Remove list ul bullets styles.
-    padding-left: 0;
-    list-style-type: none;
-
-    li {
-      margin-bottom: 0;
-      display: contents;
-    }
-
-    display: flex;
-    gap: rem-from-px(15px);
-    flex-wrap: wrap;
-    flex-direction: column;
-
-    &:has(cfpb-tag-topic),
-    &:has(cfpb-link) {
-      // Mobile only.
-      @include respond-to-max($bp-xs-max) {
-        gap: 0;
-      }
-    }
-  }
-
-  // Right-to-left (RTL) adjustments for arabic pages.
-  html[lang='ar'] {
-    direction: rtl;
-
-    // This is needed for right-to-left (RTL) lists.
-    padding-right: 0;
-  }
-}
-
 :host([horizontal]) {
   ul {
     flex-direction: row;
@@ -52,4 +15,39 @@
       gap: rem-from-px(5px);
     }
   }
+}
+
+// Tag group sets the spacing between tags.
+ul {
+  margin: 0;
+
+  // Remove list ul bullets styles.
+  padding-left: 0;
+  list-style-type: none;
+
+  li {
+    margin-bottom: 0;
+    display: contents;
+  }
+
+  display: flex;
+  gap: rem-from-px(15px);
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  &:has(cfpb-tag-topic),
+  &:has(cfpb-link) {
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      gap: 0;
+    }
+  }
+}
+
+// Right-to-left (RTL) adjustments for arabic pages.
+html[lang='ar'] {
+  direction: rtl;
+
+  // This is needed for right-to-left (RTL) lists.
+  padding-right: 0;
 }

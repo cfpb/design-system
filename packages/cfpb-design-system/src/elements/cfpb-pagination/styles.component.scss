@@ -5,63 +5,63 @@
 
 :host {
   width: 100%;
+}
 
-  .m-pagination {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas:
-      'pag-btn-prev . pag-btn-next'
-      'pag-form pag-form pag-form';
-    row-gap: rem-from-px(15px);
+.m-pagination {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    'pag-btn-prev . pag-btn-next'
+    'pag-form pag-form pag-form';
+  row-gap: rem-from-px(15px);
 
-    &__form {
-      grid-area: pag-form;
-      display: flex;
-      flex-flow: wrap;
-      place-content: center;
-      gap: rem-from-px(10px);
+  &__form {
+    grid-area: pag-form;
+    display: flex;
+    flex-flow: wrap;
+    place-content: center;
+    gap: rem-from-px(10px);
 
-      padding: rem-from-px(5px);
-      border-radius: rem-from-px(4px);
-      background: var(--gray-5);
-      color: var(--gray);
-    }
+    padding: rem-from-px(5px);
+    border-radius: rem-from-px(4px);
+    background: var(--gray-5);
+    color: var(--gray);
+  }
 
-    &__current-page {
-      // 45px is a magic number to provide enough room for three digits
-      // and the number spinners for type="number" inputs on desktop
-      width: rem-from-px(45px);
+  &__current-page {
+    // 45px is a magic number to provide enough room for three digits
+    // and the number spinners for type="number" inputs on desktop
+    width: rem-from-px(45px);
 
-      font-weight: 500;
-      text-align: right;
-    }
+    font-weight: 500;
+    text-align: right;
+  }
 
-    &__label {
-      display: contents;
-      white-space: nowrap;
-    }
+  &__label {
+    display: contents;
+    white-space: nowrap;
+  }
+
+  &__btn-prev {
+    grid-area: pag-btn-prev;
+    z-index: 1;
+  }
+  &__btn-next {
+    grid-area: pag-btn-next;
+    z-index: 1;
+  }
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    grid-template-areas: 'pag-btn-prev pag-form pag-btn-next';
 
     &__btn-prev {
-      grid-area: pag-btn-prev;
-      z-index: 1;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
     &__btn-next {
-      grid-area: pag-btn-next;
-      z-index: 1;
-    }
-
-    // Tablet and above.
-    @include respond-to-min($bp-sm-min) {
-      grid-template-areas: 'pag-btn-prev pag-form pag-btn-next';
-
-      &__btn-prev {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-      &__btn-next {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 }

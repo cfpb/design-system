@@ -44,7 +44,7 @@
   "dependencies": {
     "@types/react": "19.2.17",
     "anchor-js": "5.0.0",
-    "decap-cms-app": "3.13.0",
+    "decap-cms-app": "3.14.0",
     "html-entities": "2.6.0",
     "liquidjs": "10.27.0",
     "lit": "3.3.3",
@@ -86,7 +86,7 @@
     "prop-types": "15.8.1",
     "release-it": "20.2.0",
     "sass": "1.100.0",
-    "style-dictionary": "5.4.3",
+    "style-dictionary": "5.4.4",
     "stylelint": "17.13.0",
     "stylelint-config-standard-scss": "17.0.0",
     "svgo": "4.0.1",

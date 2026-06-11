@@ -34,10 +34,8 @@ import {
 } from '@cfpb/cfpb-design-system';
 import { Tooltip } from '@cfpb/cfpb-design-system/src/components/cfpb-tooltips/index.js';
 import Tabs from './tabs.js';
-import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
 
-redirectBanner.init();
 sidebar.init();
 
 const anchors = new AnchorJS();

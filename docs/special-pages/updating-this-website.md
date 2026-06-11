@@ -5,18 +5,9 @@ section: updating-this-website
 collection_name: special-pages
 is_interstitial: true
 description: >-
-  <div id="notification"
-       class="m-notification
-              m-notification--warning"
-       data-interstitial-notification>
-      {% include icons/information-round.svg %}
-      <div class="m-notification__content">
-          <div class="m-notification__message">Before you edit <span data-interstitial-page-name>a page</span>, familiarize yourself with the process.</div>
-          <p class="m-notification__explanation">
-              When you're ready to start editing, continue to Decap CMS.
-          </p>
-      </div>
-  </div>
+  <cfpb-alert status="warning" message="Before you edit, familiarize yourself with the process.">
+    <span>When you're ready to start editing <span data-interstitial-page-name>a page</span>, continue to Decap CMS.</span>
+  </cfpb-alert>
 
 
   <div>&nbsp;</div>

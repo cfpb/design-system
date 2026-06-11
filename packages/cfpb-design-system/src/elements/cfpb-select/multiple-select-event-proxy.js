@@ -32,7 +32,7 @@ export class MultipleSelectEventProxy {
 
   async onTagClick(evt, host, tagGroup) {
     const remaining =
-      this.tagGroup.tagList.filter((tag) => tag !== evt.detail.target) ?? [];
+      this.tagGroup.items.filter((tag) => tag !== evt.detail.target) ?? [];
 
     host.optionList = host.optionList.map((item) => ({
       ...item,

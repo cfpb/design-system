@@ -2798,7 +2798,7 @@ var on = Xe(an), sn = ".cf-icon-svg{vertical-align:middle;fill:currentColor;heig
 		t.optionList = this.list.childData ?? [], e.currentTarget.focusItemAt(e.detail.index);
 	}
 	async onTagClick(e, t, n) {
-		let r = this.tagGroup.tagList.filter((t) => t !== e.detail.target) ?? [];
+		let r = this.tagGroup.items.filter((t) => t !== e.detail.target) ?? [];
 		t.optionList = t.optionList.map((e) => ({
 			...e,
 			checked: r.some((t) => t.value === e.value)

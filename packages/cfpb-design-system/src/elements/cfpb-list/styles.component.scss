@@ -5,6 +5,14 @@
   ul {
     flex-direction: row;
     width: fit-content;
+
+    &:has(cfpb-link:not([inline])) {
+      // Mobile only.
+      @include respond-to-max($bp-xs-max) {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -31,12 +39,18 @@ ul {
   }
 
   display: flex;
-  gap: rem-from-px(15px);
+  gap: rem-from-px(10px);
   flex-wrap: wrap;
   flex-direction: column;
 
+  // Increase gap if the list item is a filter tag.
+  &:has(cfpb-tag-filter) {
+    gap: rem-from-px(15px);
+  }
+
+  // Remove gap if list item is a standard (jump) link.
   &:has(cfpb-tag-topic),
-  &:has(cfpb-link) {
+  &:has(cfpb-link:not([inline])) {
     // Mobile only.
     @include respond-to-max($bp-xs-max) {
       gap: 0;

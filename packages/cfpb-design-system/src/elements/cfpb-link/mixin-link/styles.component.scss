@@ -7,7 +7,7 @@
   cursor: inherit;
 }
 
-:host([no-top-border]) a {
+:host([no-top-border]:not([inline])) a {
   border-top: none !important;
   position: relative;
 

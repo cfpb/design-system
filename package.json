@@ -93,9 +93,6 @@
     "vite": "8.0.16",
     "vitest": "4.1.8"
   },
-  "prettier": {
-    "singleQuote": true
-  },
   "release-it": {
     "git": {
       "requireBranch": "main",

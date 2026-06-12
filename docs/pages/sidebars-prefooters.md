@@ -279,18 +279,18 @@ variation_groups:
               </div>
           </div>
         variation_is_deprecated: true
-guidelines: ''
+guidelines: ""
 eyebrow: Layout
 title: Main content and sidebars
 description: |+
   A set of HTML and CSS layout helpers.
 
-use_cases: ''
-behavior: ''
-accessibility: ''
+use_cases: ""
+behavior: ""
+accessibility: ""
 related_items: |-
   * [Blocks](https://cfpb.github.io/design-system/development/blocks)
   * [Grid](https://cfpb.github.io/design-system/foundation/grid)
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

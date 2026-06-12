@@ -1,11 +1,7 @@
 ---
-title: Main content and sidebars
 layout: variation
 section: development
-status: Released
-description: |+
-  A set of HTML and CSS layout helpers.
-
+status: Legacy
 variation_groups:
   - variations:
       - variation_code_snippet: |-
@@ -31,6 +27,7 @@ variation_groups:
 
           Inline styling is for demonstration purposes only; do not include it in your markup.
         variation_name: Main content and sidebar
+        variation_is_deprecated: true
       - variation_name: Left-hand sidebar layout
         variation_description: >-
           Add a class of `.content__L-R` to `main.content` to determine the
@@ -66,6 +63,7 @@ variation_groups:
                   Footer
               </div>
           </footer>
+        variation_is_deprecated: true
       - variation_code_snippet: >-
           <main class="content content--2-1" role="main">
               <div class="content__line"></div>
@@ -104,6 +102,7 @@ variation_groups:
 
           Inline styling is for demonstration purposes only; do not include it in your markup.
         variation_name: Right-hand sidebar layout
+        variation_is_deprecated: true
     variation_group_name: Main content and sidebar
   - variation_group_name: Modifiers
     variations:
@@ -138,6 +137,7 @@ variation_groups:
                   Footer
               </div>
           </footer>
+        variation_is_deprecated: true
       - variation_name: Flush top modifier (only on small screens)
         variation_description: >+
           Add a class of `.content--flush-top-on-small` to `.content__main` or
@@ -162,6 +162,7 @@ variation_groups:
                   Footer
               </div>
           </footer>
+        variation_is_deprecated: true
       - variation_name: Flush all modifier (only on small screens)
         variation_description: >+
           Add a class of `.content--flush-all-on-small` to `.content__main` or
@@ -188,6 +189,7 @@ variation_groups:
                   Footer
               </div>
           </footer>
+        variation_is_deprecated: true
   - variation_group_name: Custom content layouts
     variations:
       - variation_name: Grid with content
@@ -276,15 +278,19 @@ variation_groups:
                   </div>
               </div>
           </div>
-use_cases: ''
-guidelines: ''
-behavior: ''
-accessibility: ''
-research: ''
-related_items: >-
-  * [Blocks](https://cfpb.github.io/design-system/development/blocks)
+        variation_is_deprecated: true
+guidelines: ""
+eyebrow: Layout
+title: Main content and sidebars
+description: |+
+  A set of HTML and CSS layout helpers.
 
+use_cases: ""
+behavior: ""
+accessibility: ""
+related_items: |-
+  * [Blocks](https://cfpb.github.io/design-system/development/blocks)
   * [Grid](https://cfpb.github.io/design-system/foundation/grid)
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Layout
+research: ""
 ---

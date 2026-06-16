@@ -222,7 +222,7 @@ variation_groups:
 
             <br>
 
-            <cfpb-link size="h4" colorTheme="dark" borders="none"><a href="#">h4 link</a></cfpb-link>
+            <cfpb-link size="h4" color-theme="dark" borders="none"><a href="#">h4 link</a></cfpb-link>
 
           </div>
         variation_code_snippet: >-

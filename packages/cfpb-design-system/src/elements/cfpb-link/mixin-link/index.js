@@ -26,7 +26,7 @@ export const MixinLink = (superClass) =>
       linkAttributes: { type: Object, state: true },
       linkVariant: { type: String, reflect: true, attribute: 'link-variant' },
       size: { type: String, reflect: true },
-      colorTheme: { type: String, reflect: true },
+      colorTheme: { type: String, reflect: true, attribute: 'color-theme' },
       borders: {
         type: String,
         reflect: true,

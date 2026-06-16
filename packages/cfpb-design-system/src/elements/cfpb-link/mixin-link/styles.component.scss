@@ -80,7 +80,7 @@
   }
 }
 
-:host([colorTheme='dark']) {
+:host([color-theme='dark']) {
   a {
     @include u-link-colors(
       var(--black),

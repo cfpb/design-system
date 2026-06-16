@@ -61,6 +61,13 @@
   }
 }
 
+// Hide the underline at all screen sizes.
+:host([underline='none']) {
+  .text {
+    text-decoration: none;
+  }
+}
+
 :host([disabled]) {
   // !important is set so that disabled divider color overrides all other color.
   --icon-text-div-color: var(--icon-text-div-color-disabled) !important;
@@ -76,11 +83,23 @@
   }
 }
 
-// Keep LVHFA order.
+// Keep LVHFA (Link, Visited, Hover, Focus, and Active) order.
 :host(:not([disabled])[underline='all']:hover),
 :host(:not([disabled])[underline='tablet-up']:hover) {
   .text {
     text-decoration-style: solid;
+  }
+}
+
+// Tablet and above.
+@include respond-to-min($bp-sm-min) {
+  :host(:not([disabled])[underline='none']:hover) {
+    .text {
+      text-decoration-line: underline;
+      text-decoration-thickness: 1px;
+      text-decoration-style: solid;
+      text-underline-offset: 4.5px;
+    }
   }
 }
 

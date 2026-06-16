@@ -15,15 +15,20 @@ export const MixinLink = (superClass) =>
      * @property {string} linkText - The text of the slotted link.
      * @property {object} linkAttributes - The attributes on the slotted link.
      * @property {string} linkVariant - The configuration of the link.
+     * @property {string} size - The size of link, for example, h4. When omitted it's standard link size.
+     * @property {string} colorTheme - The color theme of the link. Takes 'dark'.
+     * @property {boolean} borders - Takes 'none' for no top/bottom border, or 'no-top' for no top border.
+     * @property {boolean} inline - Whether the link is an inline link.
      * @returns {object} The map of properties.
      */
     static properties = {
       linkText: { type: String, state: true },
       linkAttributes: { type: Object, state: true },
       linkVariant: { type: String, reflect: true, attribute: 'link-variant' },
-      noTopBorder: {
-        type: Boolean,
-        attribute: 'no-top-border',
+      size: { type: String, reflect: true },
+      colorTheme: { type: String, reflect: true, attribute: 'color-theme' },
+      borders: {
+        type: String,
         reflect: true,
       },
       inline: { type: Boolean, reflect: true },
@@ -108,7 +113,9 @@ export const MixinLink = (superClass) =>
 
     get #underline() {
       if (!this.linkAttributes.href) return '';
-      return this.inline ? 'all' : 'tablet-up';
+      if (this.inline) return 'all';
+      if (this.borders === 'none') return 'none';
+      return 'tablet-up';
     }
 
     renderLink() {

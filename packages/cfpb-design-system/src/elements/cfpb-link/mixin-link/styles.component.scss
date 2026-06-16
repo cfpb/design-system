@@ -1,13 +1,14 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/mixins-utilities' as *;
 
 :host {
   // Inherit the pointer cursor from the internal <a>.
   cursor: inherit;
 }
 
-:host([no-top-border]:not([inline])) a {
+:host([borders='no-top']:not([inline])) a {
   border-top: none !important;
   position: relative;
 
@@ -68,6 +69,26 @@
         outline-offset: 2px;
       }
     }
+  }
+}
+
+:host([size='h4']) {
+  a {
+    // h4 size = 18px.
+    font-size: math.div($size-iv, $base-font-size-px) + em;
+    font-size-adjust: var(--font-adjust-h4);
+  }
+}
+
+:host([colorTheme='dark']) {
+  a {
+    @include u-link-colors(
+      var(--black),
+      var(--black),
+      var(--black),
+      var(--black),
+      var(--black)
+    );
   }
 }
 

@@ -22,7 +22,8 @@ export class CfpbIconText extends LitElement {
    * @property {string} isIconLeftSpin - Whether the left icon spins or not.
    * @property {string} isIconRightSpin - Whether the right icon spins or not.
    * @property {boolean} hasDiv - If true, render a divider.
-   * @property {boolean} underline - "all" for all screen sizes, "tablet-up", for tablet and above.
+   * @property {boolean} underline -
+   *   "all" for all screen sizes, "tablet-up", for tablet and above, "none", for only on hover on tablet and above.
    * @property {boolean} mobileUnderline - If true render an underline at mobile.
    * @returns {object} The map of properties.
    */

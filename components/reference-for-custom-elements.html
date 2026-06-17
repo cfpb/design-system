@@ -524,9 +524,9 @@
   <br>
 
   <cfpb-alert message="Information alert">
-    <cfpb-list compact>
+    <cfpb-list gap="compact">
       <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
-      <cfpb-link link-variant="external" borders="no-top"><a href="/">This is a link below the explanation</a></cfpb-link>
+      <cfpb-link link-variant="external"><a href="/">This is a link below the explanation</a></cfpb-link>
     </cfpb-list>
   </cfpb-alert>
 
@@ -534,9 +534,9 @@
 
   <cfpb-alert message="Information alert">
     <span>You can also add an explanation to the alert.</span>
-    <cfpb-list compact>
+    <cfpb-list gap="compact">
       <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
-      <cfpb-link link-variant="external" borders="no-top"><a href="/">This is a link below the explanation</a></cfpb-link>
+      <cfpb-link link-variant="external"><a href="/">This is a link below the explanation</a></cfpb-link>
     </cfpb-list>
   </cfpb-alert>
 
@@ -802,21 +802,19 @@
 
   <br>
 
-  <cfpb-link borders="no-top"><a href="#">No top border</a></cfpb-link>
-
-  <br>
-
   <cfpb-link><a href="#">Item 1</a></cfpb-link>
-  <cfpb-link borders="no-top"><a href="#">Item 2</a></cfpb-link>
-  <cfpb-link borders="no-top"><a href="#">Item 3</a></cfpb-link>
+  <cfpb-link><a href="#">Item 2</a></cfpb-link>
+  <cfpb-link><a href="#">Item 3</a></cfpb-link>
 
   <br>
 
   <cfpb-link inline><a href="#">Inline link</a></cfpb-link>
 
   <br>
+  <br>
 
-  <cfpb-link size="h4" color-theme="dark" borders="none"><a href="#">h4 link</a></cfpb-link>
+  <cfpb-link size="h4" color-theme="dark" no-underline><a href="#">h4 link</a></cfpb-link>
+  <cfpb-link size="h4" color-theme="dark" no-underline><a href="#">h4 link</a></cfpb-link>
 
 </div>
             </div>
@@ -854,7 +852,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;cfpb-link href="#"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link href="#" iconleft="left"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link href="#" iconright="right"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link href="#" iconright="download"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link href="#" iconright="external-link"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link href="#" borders="no-top"&gt;No top border&lt;/cfpb-link&gt; &lt;cfpb-link&gt;No href&lt;/cfpb-link&gt;</code></pre>
+                            <pre><code class="language-html">&lt;cfpb-link href="#"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link href="#" iconleft="left"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link href="#" iconright="right"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link href="#" iconright="download"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link href="#" iconright="external-link"&gt;This is a link&lt;/cfpb-link&gt; &lt;cfpb-link&gt;No href&lt;/cfpb-link&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -929,11 +927,11 @@
 
   <br>
 
-  <cfpb-icon-text underline="tablet-up" iconright="external-link">Style as standard link</cfpb-icon-text>
+  <cfpb-icon-text underline="tablet-up" iconright="external-link">Style as standard link (desktop underline)</cfpb-icon-text>
 
   <br>
 
-  <cfpb-icon-text inline underline="all" iconright="external-link">Style as inline link</cfpb-icon-text>
+  <cfpb-icon-text inline underline="all" iconright="external-link">Style as inline link (always underline)</cfpb-icon-text>
 
   <br>
 
@@ -1956,8 +1954,8 @@
                 <div>
   <cfpb-list>
     <cfpb-link><a href="#">Item 1</a></cfpb-link>
-    <cfpb-link borders="no-top"><a href="#">Item 2</a></cfpb-link>
-    <cfpb-link borders="no-top"><a href="#">Item 3</a></cfpb-link>
+    <cfpb-link><a href="#">Item 2</a></cfpb-link>
+    <cfpb-link><a href="#">Item 3</a></cfpb-link>
   </cfpb-list>
 
   <br>
@@ -1967,10 +1965,10 @@
   <br>
   <br>
 
-  <cfpb-list compact>
+  <cfpb-list gap="compact">
     <cfpb-link><a href="#">Item 1</a></cfpb-link>
-    <cfpb-link borders="no-top"><a href="#">Item 2</a></cfpb-link>
-    <cfpb-link borders="no-top"><a href="#">Item 3</a></cfpb-link>
+    <cfpb-link><a href="#">Item 2</a></cfpb-link>
+    <cfpb-link><a href="#">Item 3</a></cfpb-link>
   </cfpb-list>
 
   <br>
@@ -1984,6 +1982,19 @@
     <cfpb-list-item>Item 1</cfpb-list-item>
     <cfpb-list-item>Item 2</cfpb-list-item>
     <cfpb-list-item>Item 3</cfpb-list-item>
+  </cfpb-list>
+
+  <br>
+  <br>
+
+  Wide variant:
+  <br>
+  <br>
+
+  <cfpb-list gap="wide" horizontal>
+    <cfpb-link><a href="#">Item 1</a></cfpb-link>
+    <cfpb-link><a href="#">Item 2</a></cfpb-link>
+    <cfpb-link><a href="#">Item 3</a></cfpb-link>
   </cfpb-list>
 
   <br>
@@ -2006,9 +2017,10 @@
 
   <cfpb-list horizontal>
     <cfpb-link><a href="#">Item 1</a></cfpb-link>
-    <cfpb-link borders="no-top"><a href="#">Item 2</a></cfpb-link>
-    <cfpb-link borders="no-top"><a href="#">Item 3</a></cfpb-link>
+    <cfpb-link><a href="#">Item 2</a></cfpb-link>
+    <cfpb-link><a href="#">Item 3</a></cfpb-link>
   </cfpb-list>
+
 </div>
             </div>
             
@@ -2047,12 +2059,12 @@
                         <div class="source-code">
                             <pre><code class="language-html">&lt;cfpb-list&gt;
   &lt;cfpb-link&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/cfpb-link&gt;
-  &lt;cfpb-link borders="no-top"&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/cfpb-link&gt;
-  &lt;cfpb-link borders="no-top"&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/cfpb-link&gt;
-&lt;/cfpb-list&gt; &lt;cfpb-list compact&gt;
+  &lt;cfpb-link&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/cfpb-link&gt;
+  &lt;cfpb-link&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/cfpb-link&gt;
+&lt;/cfpb-list&gt; &lt;cfpb-list gap="compact"&gt;
   &lt;cfpb-link&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/cfpb-link&gt;
-  &lt;cfpb-link borders="no-top"&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/cfpb-link&gt;
-  &lt;cfpb-link borders="no-top"&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/cfpb-link&gt;
+  &lt;cfpb-link&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/cfpb-link&gt;
+  &lt;cfpb-link&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/cfpb-link&gt;
 &lt;/cfpb-list&gt; &lt;cfpb-list horizontal&gt;
   &lt;cfpb-list-item&gt;Item 1&lt;/cfpb-list-item&gt;
   &lt;cfpb-list-item&gt;Item 2&lt;/cfpb-list-item&gt;
@@ -3795,8 +3807,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/reference-for-custom-elements.md">
-                            <time datetime="2026-06-16 13:54:02 -0400">
-                                 1:54:02 PM Jun 16, 2026
+                            <time datetime="2026-06-17 17:42:19 -0400">
+                                 5:42:19 PM Jun 17, 2026
                             </time>
                         </a>
                     </section>

@@ -17,7 +17,7 @@ export const MixinLink = (superClass) =>
      * @property {string} linkVariant - The configuration of the link.
      * @property {string} size - The size of link, for example, h4. When omitted it's standard link size.
      * @property {string} colorTheme - The color theme of the link. Takes 'dark'.
-     * @property {boolean} borders - Takes 'none' for no top/bottom border, or 'no-top' for no top border.
+     * @property {boolean} noUnderline - Remove underline (other than hover).
      * @property {boolean} inline - Whether the link is an inline link.
      * @returns {object} The map of properties.
      */
@@ -27,9 +27,10 @@ export const MixinLink = (superClass) =>
       linkVariant: { type: String, reflect: true, attribute: 'link-variant' },
       size: { type: String, reflect: true },
       colorTheme: { type: String, reflect: true, attribute: 'color-theme' },
-      borders: {
-        type: String,
+      noUnderline: {
+        type: Boolean,
         reflect: true,
+        attribute: 'no-underline',
       },
       inline: { type: Boolean, reflect: true },
     };
@@ -45,6 +46,20 @@ export const MixinLink = (superClass) =>
       super();
       this.linkText = '';
       this.linkAttributes = {};
+    }
+
+    connectedCallback() {
+      super.connectedCallback();
+
+      const prev = this.previousElementSibling;
+
+      const isAdjacentLink =
+        prev?.tagName === this.tagName && !this.inline && !prev.inline;
+
+      if (isAdjacentLink) {
+        this.style.setProperty('--cfpb-link-border-top-width', '0');
+        this.style.setProperty('--cfpb-link-border-top-hover-width', '1px');
+      }
     }
 
     willUpdate(changed) {
@@ -114,7 +129,7 @@ export const MixinLink = (superClass) =>
     get #underline() {
       if (!this.linkAttributes.href) return '';
       if (this.inline) return 'all';
-      if (this.borders === 'none') return 'none';
+      if (this.noUnderline) return 'none';
       return 'tablet-up';
     }
 

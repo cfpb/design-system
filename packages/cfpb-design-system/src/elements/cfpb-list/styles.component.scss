@@ -1,6 +1,10 @@
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
+:host {
+  --cfpb-list-gap: 10px;
+}
+
 :host([horizontal]) {
   ul {
     flex-direction: row;
@@ -16,11 +20,20 @@
   }
 }
 
-:host([compact]) {
+:host([gap='compact']) {
   ul {
     // Tablet and above.
     @include respond-to-min($bp-sm-min) {
-      gap: rem-from-px(5px);
+      --cfpb-list-gap: 5px;
+    }
+  }
+}
+
+:host([gap='wide']) {
+  ul {
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      --cfpb-list-gap: 30px;
     }
   }
 }
@@ -39,13 +52,13 @@ ul {
   }
 
   display: flex;
-  gap: rem-from-px(10px);
+  gap: rem-from-px(var(--cfpb-list-gap));
   flex-wrap: wrap;
   flex-direction: column;
 
   // Increase gap if the list item is a filter tag.
   &:has(cfpb-tag-filter) {
-    gap: rem-from-px(15px);
+    --cfpb-list-gap: 15px;
   }
 
   // Remove gap if list item is a standard (jump) link.
@@ -53,7 +66,7 @@ ul {
   &:has(cfpb-link:not([inline])) {
     // Mobile only.
     @include respond-to-max($bp-xs-max) {
-      gap: 0;
+      --cfpb-list-gap: 0;
     }
   }
 }

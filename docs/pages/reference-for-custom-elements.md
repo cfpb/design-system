@@ -77,9 +77,9 @@ variation_groups:
             <br>
 
             <cfpb-alert message="Information alert">
-              <cfpb-list compact>
+              <cfpb-list gap="compact">
                 <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
-                <cfpb-link link-variant="external" no-top-border><a href="/">This is a link below the explanation</a></cfpb-link>
+                <cfpb-link link-variant="external"><a href="/">This is a link below the explanation</a></cfpb-link>
               </cfpb-list>
             </cfpb-alert>
 
@@ -87,9 +87,9 @@ variation_groups:
 
             <cfpb-alert message="Information alert">
               <span>You can also add an explanation to the alert.</span>
-              <cfpb-list compact>
+              <cfpb-list gap="compact">
                 <cfpb-link><a href="/">This is a link below the explanation</a></cfpb-link>
-                <cfpb-link link-variant="external" no-top-border><a href="/">This is a link below the explanation</a></cfpb-link>
+                <cfpb-link link-variant="external"><a href="/">This is a link below the explanation</a></cfpb-link>
               </cfpb-list>
             </cfpb-alert>
 
@@ -208,17 +208,19 @@ variation_groups:
 
             <br>
 
-            <cfpb-link no-top-border><a href="#">No top border</a></cfpb-link>
-
-            <br>
-
             <cfpb-link><a href="#">Item 1</a></cfpb-link>
-            <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
-            <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+            <cfpb-link><a href="#">Item 2</a></cfpb-link>
+            <cfpb-link><a href="#">Item 3</a></cfpb-link>
 
             <br>
 
             <cfpb-link inline><a href="#">Inline link</a></cfpb-link>
+
+            <br>
+            <br>
+
+            <cfpb-link size="h4" color-theme="dark" no-underline><a href="#">h4 link</a></cfpb-link>
+            <cfpb-link size="h4" color-theme="dark" no-underline><a href="#">h4 link</a></cfpb-link>
 
           </div>
         variation_code_snippet: >-
@@ -227,7 +229,6 @@ variation_groups:
           <cfpb-link href="#" iconright="right">This is a link</cfpb-link>
           <cfpb-link href="#" iconright="download">This is a link</cfpb-link>
           <cfpb-link href="#" iconright="external-link">This is a link</cfpb-link>
-          <cfpb-link href="#" no-top-border>No top border</cfpb-link>
           <cfpb-link>No href</cfpb-link>
       - variation_is_deprecated: false
         variation_name: Icon and Text
@@ -262,11 +263,15 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text underline="tablet-up" iconright="external-link">Style as standard link</cfpb-icon-text>
+            <cfpb-icon-text underline="tablet-up" iconright="external-link">Style as standard link (desktop underline)</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text inline underline="all" iconright="external-link">Style as inline link</cfpb-icon-text>
+            <cfpb-icon-text inline underline="all" iconright="external-link">Style as inline link (always underline)</cfpb-icon-text>
+
+            <br>
+
+            <cfpb-icon-text underline="none" iconright="external-link">No underline</cfpb-icon-text>
 
             <br><hr><br>
 
@@ -316,8 +321,9 @@ variation_groups:
 
             </p><p>
 
-            <label for="icon-text-example-underline">Has undeline at screen size:</label>
+            <label for="icon-text-example-underline">Has underline at screen size:</label>
             <select id="icon-text-example-underline">
+              <option>---</option>
               <option>none</option>
               <option>all</option>
               <option>tablet-up</option>
@@ -339,7 +345,7 @@ variation_groups:
 
             const underlineSel = document.querySelector('#icon-text-example-underline');
             underlineSel.addEventListener('change',()=>{
-              if (underlineSel.value === 'none') iconTextEx.removeAttribute('underline');
+              if (underlineSel.value === '---') iconTextEx.removeAttribute('underline');
               else iconTextEx.underline = underlineSel.value;
             });
 
@@ -915,8 +921,8 @@ variation_groups:
           <div>
             <cfpb-list>
               <cfpb-link><a href="#">Item 1</a></cfpb-link>
-              <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
-              <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+              <cfpb-link><a href="#">Item 2</a></cfpb-link>
+              <cfpb-link><a href="#">Item 3</a></cfpb-link>
             </cfpb-list>
 
             <br>
@@ -926,10 +932,10 @@ variation_groups:
             <br>
             <br>
 
-            <cfpb-list compact>
+            <cfpb-list gap="compact">
               <cfpb-link><a href="#">Item 1</a></cfpb-link>
-              <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
-              <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+              <cfpb-link><a href="#">Item 2</a></cfpb-link>
+              <cfpb-link><a href="#">Item 3</a></cfpb-link>
             </cfpb-list>
 
             <br>
@@ -943,6 +949,19 @@ variation_groups:
               <cfpb-list-item>Item 1</cfpb-list-item>
               <cfpb-list-item>Item 2</cfpb-list-item>
               <cfpb-list-item>Item 3</cfpb-list-item>
+            </cfpb-list>
+
+            <br>
+            <br>
+
+            Wide variant:
+            <br>
+            <br>
+
+            <cfpb-list gap="wide" horizontal>
+              <cfpb-link><a href="#">Item 1</a></cfpb-link>
+              <cfpb-link><a href="#">Item 2</a></cfpb-link>
+              <cfpb-link><a href="#">Item 3</a></cfpb-link>
             </cfpb-list>
 
             <br>
@@ -965,20 +984,21 @@ variation_groups:
 
             <cfpb-list horizontal>
               <cfpb-link><a href="#">Item 1</a></cfpb-link>
-              <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
-              <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+              <cfpb-link><a href="#">Item 2</a></cfpb-link>
+              <cfpb-link><a href="#">Item 3</a></cfpb-link>
             </cfpb-list>
+
           </div>
         variation_code_snippet: >-
           <cfpb-list>
             <cfpb-link><a href="#">Item 1</a></cfpb-link>
-            <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
-            <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+            <cfpb-link><a href="#">Item 2</a></cfpb-link>
+            <cfpb-link><a href="#">Item 3</a></cfpb-link>
           </cfpb-list>
-          <cfpb-list compact>
+          <cfpb-list gap="compact">
             <cfpb-link><a href="#">Item 1</a></cfpb-link>
-            <cfpb-link no-top-border><a href="#">Item 2</a></cfpb-link>
-            <cfpb-link no-top-border><a href="#">Item 3</a></cfpb-link>
+            <cfpb-link><a href="#">Item 2</a></cfpb-link>
+            <cfpb-link><a href="#">Item 3</a></cfpb-link>
           </cfpb-list>
           <cfpb-list horizontal>
             <cfpb-list-item>Item 1</cfpb-list-item>

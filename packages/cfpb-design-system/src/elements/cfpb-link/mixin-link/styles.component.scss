@@ -1,26 +1,30 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/mixins-utilities' as *;
 
 :host {
   // Inherit the pointer cursor from the internal <a>.
   cursor: inherit;
-}
 
-:host([no-top-border]:not([inline])) a {
-  border-top: none !important;
-  position: relative;
+  --cfpb-link-border-top-width: 1px;
+  --cfpb-link-border-top-hover-width: 0;
+
+  a {
+    border-top-width: var(--cfpb-link-border-top-width) !important;
+    position: relative;
+  }
 
   // Mobile only.
   @include respond-to-max($bp-xs-max) {
-    &:hover::before {
+    a:hover::before {
       position: absolute;
-      top: -1px;
+      top: calc(-1 * var(--cfpb-link-border-top-hover-width));
       content: '';
       display: block;
-      height: 1px;
+      height: var(--cfpb-link-border-top-hover-width);
       width: 100%;
-      border-top: 1px solid currentcolor;
+      border-top: var(--cfpb-link-border-top-hover-width) solid currentcolor;
     }
   }
 }
@@ -42,7 +46,7 @@
     text-decoration: none;
     border-top-style: dotted;
     border-bottom-style: dotted;
-    border-top-width: 1px;
+    border-top-width: var(--cfpb-link-border-top-width);
     border-bottom-width: 1px;
 
     &:hover {
@@ -68,6 +72,26 @@
         outline-offset: 2px;
       }
     }
+  }
+}
+
+:host([size='h4']) {
+  a {
+    // h4 size = 18px.
+    font-size: math.div($size-iv, $base-font-size-px) + em;
+    font-size-adjust: var(--font-adjust-h4);
+  }
+}
+
+:host([color-theme='dark']) {
+  a {
+    @include u-link-colors(
+      var(--black),
+      var(--black),
+      var(--black),
+      var(--black),
+      var(--black)
+    );
   }
 }
 

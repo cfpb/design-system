@@ -928,6 +928,23 @@ variation_groups:
             <br>
             <br>
 
+            Columns variant:
+            <br>
+            <br>
+
+            <cfpb-list break-at="2">
+              <cfpb-link><a href="#">Item 1</a></cfpb-link>
+              <cfpb-link><a href="#">Item 2</a></cfpb-link>
+              <cfpb-link><a href="#">Item 3</a></cfpb-link>
+              <cfpb-link><a href="#">Item 4</a></cfpb-link>
+              <cfpb-link><a href="#">Item 5</a></cfpb-link>
+              <cfpb-link><a href="#">Item 6</a></cfpb-link>
+              <cfpb-link><a href="#">Item 7</a></cfpb-link>
+            </cfpb-list>
+
+            <br>
+            <br>
+
             Compact variant:
             <br>
             <br>

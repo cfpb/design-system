@@ -2,7 +2,85 @@
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 :host {
-  --cfpb-list-gap: 10px;
+  --cfpb-list-column-gap: 10;
+  --cfpb-list-row-gap: 10;
+}
+
+:host([gap='compact']) {
+  ul {
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      --cfpb-list-column-gap: 5;
+    }
+  }
+}
+
+:host([gap='wide']) {
+  ul {
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      --cfpb-list-column-gap: 30;
+    }
+  }
+}
+
+:host([break-at]) {
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    ul {
+      position: relative;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-auto-flow: column;
+      column-gap: 60px;
+      row-gap: rem-from-px(var(--cfpb-list-column-gap), 16);
+
+      // Masonry layouts are still an experimental technology.
+      grid-template-rows: masonry;
+
+      // We likely can replace this divider code with column-rule in the future,
+      // but that's not yet supported in Firefox for grid layouts.
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(66.666% - 10px);
+        width: 1px;
+        background: var(--gray-40);
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+:host(:not([break-at])) {
+  ul {
+    display: flex;
+    column-gap: rem-from-px(var(--cfpb-list-column-gap), 16);
+    row-gap: rem-from-px(var(--cfpb-list-row-gap), 16);
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    // Increase gap if the list item is a filter tag.
+    &:has(cfpb-tag-filter) {
+      --cfpb-list-column-gap: 15;
+    }
+
+    // Remove gap if list item is a standard (jump) link.
+    &:has(cfpb-tag-topic),
+    &:has(cfpb-link:not([inline])) {
+      // Mobile only.
+      @include respond-to-max($bp-xs-max) {
+        --cfpb-list-row-gap: 0;
+      }
+    }
+
+    li {
+      display: contents;
+      margin-bottom: 0;
+    }
+  }
 }
 
 :host([horizontal]) {
@@ -20,24 +98,6 @@
   }
 }
 
-:host([gap='compact']) {
-  ul {
-    // Tablet and above.
-    @include respond-to-min($bp-sm-min) {
-      --cfpb-list-gap: 5px;
-    }
-  }
-}
-
-:host([gap='wide']) {
-  ul {
-    // Tablet and above.
-    @include respond-to-min($bp-sm-min) {
-      --cfpb-list-gap: 30px;
-    }
-  }
-}
-
 // Tag group sets the spacing between tags.
 ul {
   margin: 0;
@@ -45,30 +105,6 @@ ul {
   // Remove list ul bullets styles.
   padding-left: 0;
   list-style-type: none;
-
-  li {
-    margin-bottom: 0;
-    display: contents;
-  }
-
-  display: flex;
-  gap: rem-from-px(var(--cfpb-list-gap));
-  flex-wrap: wrap;
-  flex-direction: column;
-
-  // Increase gap if the list item is a filter tag.
-  &:has(cfpb-tag-filter) {
-    --cfpb-list-gap: 15px;
-  }
-
-  // Remove gap if list item is a standard (jump) link.
-  &:has(cfpb-tag-topic),
-  &:has(cfpb-link:not([inline])) {
-    // Mobile only.
-    @include respond-to-max($bp-xs-max) {
-      --cfpb-list-gap: 0;
-    }
-  }
 }
 
 // Right-to-left (RTL) adjustments for arabic pages.

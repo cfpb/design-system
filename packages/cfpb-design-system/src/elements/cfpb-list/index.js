@@ -32,11 +32,14 @@ export class CfpbList extends LitElement {
 
   /**
    * @property {string} childData - Structure data to create child components.
-   * @property {Array} items - List of the tags in the tag group.
+   * @property {Number} breakAt - The item number to break into a second column at.
+   * @property {string} colorTheme - The color theme of the link. Takes 'dark'.
    * @returns {object} The map of properties.
    */
   static properties = {
     childData: { type: String, attribute: 'childdata' },
+    breakAt: { type: Number, attribute: 'break-at' },
+    colorTheme: { type: String, reflect: true, attribute: 'color-theme' },
   };
 
   get items() {
@@ -266,6 +269,23 @@ export class CfpbList extends LitElement {
       actualIndex = ul.children.length - 1;
     } else {
       ul.insertBefore(wrapped, ul.children[index]);
+    }
+
+    // If we're inserting links, pass through any color-theme attribute.
+    if (this.colorTheme && cloned.tagName === 'CFPB-LINK') {
+      cloned.colorTheme = this.colorTheme;
+    }
+
+    // If break-at attribute is set, break across two columns.
+    if (this.breakAt) {
+      const totalCols = 2;
+      const row =
+        actualIndex < this.breakAt
+          ? actualIndex + 1
+          : actualIndex - this.breakAt + 1;
+      const column = actualIndex < this.breakAt ? 1 : totalCols;
+
+      wrapped.style = `grid-area: ${row} / ${column}`;
     }
 
     cloned.addEventListener('item-click', () => {

@@ -18,6 +18,7 @@ export const MixinLink = (superClass) =>
      * @property {string} size - The size of link, for example, h4. When omitted it's standard link size.
      * @property {string} colorTheme - The color theme of the link. Takes 'dark'.
      * @property {boolean} noUnderline - Remove underline (other than hover).
+     * @property {boolean} noTopBorder - Remove the top border on mobile.
      * @property {boolean} inline - Whether the link is an inline link.
      * @returns {object} The map of properties.
      */
@@ -31,6 +32,11 @@ export const MixinLink = (superClass) =>
         type: Boolean,
         reflect: true,
         attribute: 'no-underline',
+      },
+      noTopBorder: {
+        type: Boolean,
+        reflect: true,
+        attribute: 'no-top-border',
       },
       inline: { type: Boolean, reflect: true },
     };
@@ -57,9 +63,13 @@ export const MixinLink = (superClass) =>
         prev?.tagName === this.tagName && !this.inline && !prev.inline;
 
       if (isAdjacentLink) {
-        this.style.setProperty('--cfpb-link-border-top-width', '0');
-        this.style.setProperty('--cfpb-link-border-top-hover-width', '1px');
+        this.#removeTopBorder();
       }
+    }
+
+    #removeTopBorder() {
+      this.style.setProperty('--cfpb-link-border-top-width', '0');
+      this.style.setProperty('--cfpb-link-border-top-hover-width', '1px');
     }
 
     willUpdate(changed) {
@@ -70,6 +80,15 @@ export const MixinLink = (superClass) =>
 
           this.linkVariant = undefined;
         }
+      }
+
+      // This is currently only used when two link lists are adjacent.
+      // In the future, we may want a way to pass a break-at attribute
+      // to a cfpb-list and bread a single list into columns.
+      // However, this needs to wait till masonry layouts are supported.
+      // See https://github.com/cfpb/design-system/tree/ans_list_columns
+      if (changed.has('noTopBorder')) {
+        this.#removeTopBorder();
       }
     }
 

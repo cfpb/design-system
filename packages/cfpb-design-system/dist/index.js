@@ -759,10 +759,17 @@ var Ue = ".cf-icon-svg{vertical-align:middle;fill:currentColor;height:1.1875em}.
     ${y(Ge)}
   `;
 	#e = [];
-	static properties = { childData: {
-		type: String,
-		attribute: "childdata"
-	} };
+	static properties = {
+		childData: {
+			type: String,
+			attribute: "childdata"
+		},
+		colorTheme: {
+			type: String,
+			reflect: !0,
+			attribute: "color-theme"
+		}
+	};
 	get items() {
 		return [...this.renderRoot.querySelectorAll("ul li > *")];
 	}
@@ -851,7 +858,7 @@ var Ue = ".cf-icon-svg{vertical-align:middle;fill:currentColor;height:1.1875em}.
 		let r = document.createElement("li");
 		r.appendChild(n);
 		let i = this.shadowRoot.querySelector("ul"), a = t;
-		t === -1 || t >= i.children.length ? (i.appendChild(r), a = i.children.length - 1) : i.insertBefore(r, i.children[t]), n.addEventListener("item-click", () => {
+		t === -1 || t >= i.children.length ? (i.appendChild(r), a = i.children.length - 1) : i.insertBefore(r, i.children[t]), this.colorTheme && n.tagName === "CFPB-LINK" && (n.colorTheme = this.colorTheme), n.addEventListener("item-click", () => {
 			this.dispatchEvent(new CustomEvent("item-click", {
 				detail: {
 					target: n,
@@ -1993,6 +2000,11 @@ var kt = class e extends I {
 			reflect: !0,
 			attribute: "no-underline"
 		},
+		noTopBorder: {
+			type: Boolean,
+			reflect: !0,
+			attribute: "no-top-border"
+		},
 		inline: {
 			type: Boolean,
 			reflect: !0
@@ -2010,19 +2022,22 @@ var kt = class e extends I {
 	connectedCallback() {
 		super.connectedCallback();
 		let e = this.previousElementSibling;
-		e?.tagName === this.tagName && !this.inline && !e.inline && (this.style.setProperty("--cfpb-link-border-top-width", "0"), this.style.setProperty("--cfpb-link-border-top-hover-width", "1px"));
+		e?.tagName === this.tagName && !this.inline && !e.inline && this.#t();
+	}
+	#t() {
+		this.style.setProperty("--cfpb-link-border-top-width", "0"), this.style.setProperty("--cfpb-link-border-top-hover-width", "1px");
 	}
 	willUpdate(e) {
-		e.has("linkVariant") && (this.constructor.variants.has(this.linkVariant) || (console.warn(`Invalid link variant "${this.linkVariant}"`), this.linkVariant = void 0));
+		e.has("linkVariant") && (this.constructor.variants.has(this.linkVariant) || (console.warn(`Invalid link variant "${this.linkVariant}"`), this.linkVariant = void 0)), e.has("noTopBorder") && this.#t();
 	}
 	firstUpdated(e) {
-		super.firstUpdated?.(e), this.#n(), ft.init();
+		super.firstUpdated?.(e), this.#r(), ft.init();
 	}
-	get #t() {
+	get #n() {
 		return (this.renderRoot.querySelector("slot")?.assignedElements({ flatten: !0 }) ?? []).find((e) => e instanceof HTMLAnchorElement) ?? null;
 	}
-	#n() {
-		let e = this.#t;
+	#r() {
+		let e = this.#n;
 		if (!e) {
 			console.warn(`${this.tagName.toLowerCase()} expects a slotted <a>`);
 			return;
@@ -2036,10 +2051,10 @@ var kt = class e extends I {
 		];
 		this.linkAttributes = Object.fromEntries([...e.attributes].filter((e) => !t.includes(e.name)).map((e) => [e.name, e.value]));
 	}
-	get #r() {
+	get #i() {
 		return this.linkVariant === "nav-left" ? "left" : "";
 	}
-	get #i() {
+	get #a() {
 		switch (this.linkVariant) {
 			case "nav-right": return "right";
 			case "download": return "download";
@@ -2047,7 +2062,7 @@ var kt = class e extends I {
 		}
 		return "";
 	}
-	get #a() {
+	get #o() {
 		return this.linkAttributes.href ? this.inline ? "all" : this.noUnderline ? "none" : "tablet-up" : "";
 	}
 	renderLink() {
@@ -2056,9 +2071,9 @@ var kt = class e extends I {
 
         <a ${z(this.#e)}>
           <cfpb-icon-text
-            iconLeft=${this.#r}
-            iconRight=${this.#i}
-            .underline=${this.#a}
+            iconLeft=${this.#i}
+            iconRight=${this.#a}
+            .underline=${this.#o}
             ?mobile-icon-align-end=${this.linkVariant === "nav-right"}
             ?inline=${this.inline}
             >${this.linkText}</cfpb-icon-text

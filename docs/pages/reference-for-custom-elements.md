@@ -924,6 +924,11 @@ variation_groups:
               <cfpb-link><a href="#">Item 2</a></cfpb-link>
               <cfpb-link><a href="#">Item 3</a></cfpb-link>
             </cfpb-list>
+            <cfpb-list>
+              <cfpb-link no-top-border><a href="#">Item 1</a></cfpb-link>
+              <cfpb-link><a href="#">Item 2</a></cfpb-link>
+              <cfpb-link><a href="#">Item 3</a></cfpb-link>
+            </cfpb-list>
 
             <br>
             <br>

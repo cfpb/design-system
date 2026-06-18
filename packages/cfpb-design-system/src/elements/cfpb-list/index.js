@@ -32,11 +32,12 @@ export class CfpbList extends LitElement {
 
   /**
    * @property {string} childData - Structure data to create child components.
-   * @property {Array} items - List of the tags in the tag group.
+   * @property {string} colorTheme - The color theme of the link. Takes 'dark'.
    * @returns {object} The map of properties.
    */
   static properties = {
     childData: { type: String, attribute: 'childdata' },
+    colorTheme: { type: String, reflect: true, attribute: 'color-theme' },
   };
 
   get items() {
@@ -266,6 +267,11 @@ export class CfpbList extends LitElement {
       actualIndex = ul.children.length - 1;
     } else {
       ul.insertBefore(wrapped, ul.children[index]);
+    }
+
+    // If we're inserting links, pass through any color-theme attribute.
+    if (this.colorTheme && cloned.tagName === 'CFPB-LINK') {
+      cloned.colorTheme = this.colorTheme;
     }
 
     cloned.addEventListener('item-click', () => {

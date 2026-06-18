@@ -218,9 +218,26 @@ export class CfpbSelect extends LitElement {
     });
   }
 
+  willUpdate(changedProps) {
+    if (changedProps.has('multiple')) {
+      const previousMultiple = changedProps.get('multiple');
+
+      if (previousMultiple && !this.multiple) {
+        this.#normalizeSingleSelection();
+      }
+    }
+  }
+
   updated(changedProps) {
     if (changedProps.has('multiple')) {
+      const previousMultiple = changedProps.get('multiple');
+
       this.#eventProxy = this.#createEventProxy();
+
+      if (previousMultiple && !this.multiple && this.#displayLabel.value) {
+        this.#displayLabel.value.textContent =
+          this.optionList.find((item) => item.checked)?.value ?? '';
+      }
     }
 
     if (changedProps.has('isExpanded')) {
@@ -242,6 +259,21 @@ export class CfpbSelect extends LitElement {
         }
       }
     }
+  }
+
+  #normalizeSingleSelection() {
+    const selectedValues =
+      this.#list.value?.checkedItems?.map((item) => item.value) ??
+      this.optionList
+        .filter((item) => item.checked)
+        .map((item) => item.value);
+
+    const selectedValue = selectedValues.at(-1) ?? '';
+
+    this.optionList = this.optionList.map((item) => ({
+      ...item,
+      checked: item.value === selectedValue,
+    }));
   }
 
   #createEventProxy() {

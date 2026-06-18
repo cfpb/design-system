@@ -2,7 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.6.2](https://github.com/cfpb/design-system/compare/v5.6.1..v5.6.2) - June  4, 2026
+## [5.7.0](https://github.com/cfpb/design-system/compare/v5.6.2..v5.7.0) - June 18, 2026
+
+### PRs in this release
+
+- PR #[2624](https://github.com/cfpb/design-system/pull/2624): Add `cfpb-alert` - Ans
+- PR #[2697](https://github.com/cfpb/design-system/pull/2697): Remove unnecessary :host wrapping - Ans
+- PR #[2701](https://github.com/cfpb/design-system/pull/2701): Fix form control default styling - Ans
+- PR #[2702](https://github.com/cfpb/design-system/pull/2702): Fix multiselect bug - Ans
+- PR #[2711](https://github.com/cfpb/design-system/pull/2711): List improvements - Ans
+- PR #[2713](https://github.com/cfpb/design-system/pull/2713): Refactor link border and underline attribute, add size and colorTheme attribute. - Ans
+- PR #[2715](https://github.com/cfpb/design-system/pull/2715): Add gap attribute to lists | Migrate `borders` to `no-underline` in links - Ans
+- PR #[2720](https://github.com/cfpb/design-system/pull/2720): Add passthrough `colorTheme` to cfpb-list and `no-top-border` to link mixin - Ans
+
+### General
+
+- Add `cfpb-alert`, `cfpb-list`, `cfpb-list-item` - ([c106163](https://github.com/cfpb/design-system/commit/c1061630dc021b7f26543fd99e89872456154d93)) - Ans
+- Remove unnecessary :host wrapping - ([ee45e47](https://github.com/cfpb/design-system/commit/ee45e470f8b3be8f44860164500195c18c63dfd8)) - Ans
+- Fix form control default styling - ([ac27349](https://github.com/cfpb/design-system/commit/ac27349385120d4a60a32fcdf12bc43e1e2ad7d5)) - Ans
+- Fix multiselect bug - ([33cccbd](https://github.com/cfpb/design-system/commit/33cccbd031e0a5e5f57e17305dd43d2b622cffde)) - Ans
+- Link improvements - ([21cd33c](https://github.com/cfpb/design-system/commit/21cd33c65aa3e6789f1c3ee371667d530fab1674)) - Ans
+- Refactor link border and underline attribute, add colorTheme attribute. - ([7be6b77](https://github.com/cfpb/design-system/commit/7be6b77cf9be8b535e10c2b60865b8aa8be7ffc9)) - Ans
+- Update attribute from `colortheme` to `color-theme` - ([14a190d](https://github.com/cfpb/design-system/commit/14a190d3930e0283f427096dadfe8864b8b4fa19)) - Ans
+- Add gap attribute to lists | Migrate `borders` to `no-underline` in links - ([4022c56](https://github.com/cfpb/design-system/commit/4022c56cfcb4eb9a20b9ade382f148482b246d5e)) - Ans
+- Add passthrough `colorTheme` to cfpb-list and `no-top-border` to link mixin - ([178b326](https://github.com/cfpb/design-system/commit/178b326a50ec393e55ec0ad378b5dae0b347c526)) - Ans
+
+## [5.6.2](https://github.com/cfpb/design-system/compare/v5.6.1..vv5.6.2) - June  4, 2026
 
 ### PRs in this release
 

@@ -458,7 +458,7 @@ variation_groups:
             <p>
             The following section allows interacting with the API.
             </p>
-            <p><cfpb-button id="btn-example" iconright="update" iconrightspin>Example button</cfpb-button></p>
+            <p><cfpb-button id="btn-example" iconright="update" icon-right-spin>Example button</cfpb-button></p>
 
             <p>
             <label for="btn-example-variant">Button type:</label>

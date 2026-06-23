@@ -50,3 +50,42 @@ export function defineComponent(tag, constructor) {
     globalThis.customElements.define(tag, constructor);
   }
 }
+
+/**
+ * Map and manage theme properties to custom CSS variables.
+ *
+ * For example, given the component `<cfpb-icon-text>`
+ * with a theme property of `divColor` for setting the divider color,
+ * the following should exist:
+ *
+ * Component name: cfpb-icon-text
+ * CSS variable: --icon-text-div-color
+ * Attribute: div-color
+ * Property: divColor
+ *
+ * @param {HTMLElement} element - A custom element.
+ * @param {Map<PropertyKey, unknown>} changed - Map of changed properties with old values.
+ */
+export function applyThemeProperties(element, changed) {
+  const themeProps = element.constructor.themeProperties ?? [];
+
+  const prefix = element.tagName.toLowerCase().replace(/^cfpb-/, '');
+
+  for (const prop of themeProps) {
+    if (!changed.has(prop)) {
+      continue;
+    }
+
+    const suffix = prop.replace(/[A-Z]/g, (map) => `-${map.toLowerCase()}`);
+
+    const cssVar = `--${prefix}-${suffix}`;
+
+    const value = element[prop];
+
+    if (value) {
+      element.style.setProperty(cssVar, `var(--${value})`);
+    } else {
+      element.style.removeProperty(cssVar);
+    }
+  }
+}

@@ -2,11 +2,11 @@
 @use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
 
 :host {
-  // Theme variables.
+  /* Private variables. */
   --icon-text-div-color-default: var(--pacific-60);
   --icon-text-div-color-disabled: var(--gray-60);
 
-  // Private variables.
+  /* Theme variables. */
   --icon-text-div-color: var(--icon-text-div-color-default);
 }
 

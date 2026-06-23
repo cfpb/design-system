@@ -42,10 +42,10 @@ export class CfpbButton extends LitElement {
     href: { type: String },
     disabled: { type: Boolean, reflect: true },
     variant: { type: String },
-    iconLeft: { type: String },
-    iconRight: { type: String },
-    isIconLeftSpin: { type: Boolean, attribute: 'iconleftspin' },
-    isIconRightSpin: { type: Boolean, attribute: 'iconrightspin' },
+    iconLeft: { type: String, attribute: 'icon-left' },
+    iconRight: { type: String, attribute: 'icon-right' },
+    isIconLeftSpin: { type: Boolean, attribute: 'icon-left-spin' },
+    isIconRightSpin: { type: Boolean, attribute: 'icon-right-spin' },
     fullOnMobile: {
       type: Boolean,
       attribute: 'full-on-mobile',
@@ -143,10 +143,10 @@ export class CfpbButton extends LitElement {
         ${ref(this.#iconTextDom)}
         ?disabled=${this.disabled}
         div-color="${this.dividerColorVar}"
-        iconleft=${this.iconLeft}
-        iconright=${this.iconRight}
-        ?iconleftspin=${this.isIconLeftSpin}
-        ?iconrightspin=${this.isIconRightSpin}
+        icon-left=${this.iconLeft}
+        icon-right=${this.iconRight}
+        ?icon-left-spin=${this.isIconLeftSpin}
+        ?icon-right-spin=${this.isIconRightSpin}
         ?has-div=${!this.styleAsLink}
         .underline=${underlineType}
         ?inline=${this.styleAsLink}

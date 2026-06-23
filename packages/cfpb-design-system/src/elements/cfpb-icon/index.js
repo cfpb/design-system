@@ -1,5 +1,9 @@
 import { html, LitElement, css, unsafeCSS } from 'lit';
-import { defineComponent, getSharedConfig } from '../utilities/shared-config';
+import {
+  applyThemeProperties,
+  defineComponent,
+  getSharedConfig,
+} from '../utilities/shared-config';
 import styles from './styles.component.css?inline';
 
 /**
@@ -10,26 +14,26 @@ export class CfpbIcon extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
+  static themeProperties = ['color'];
+
   /**
-   * @property {boolean} name - The name of the icon.
    * @property {boolean} color - The color of the icon.
+   * @property {boolean} name - The name of the icon.
    * @returns {object} The map of properties.
    */
   static properties = {
-    name: { type: String },
     color: { type: String },
+    name: { type: String },
     spin: { type: Boolean, attribute: true },
   };
+
+  updated(changed) {
+    applyThemeProperties(this, changed);
+  }
 
   render() {
     if (!this.name) return null;
     const iconPath = `${getSharedConfig().iconPath + this.name}.svg`;
-
-    if (this.color) {
-      this.style.setProperty('--icon-color', `var(--${this.color})`);
-    } else {
-      this.style.removeProperty('--icon-color');
-    }
 
     return html`<span style="--icon-mask-image-url:url('${iconPath}')">
       <img

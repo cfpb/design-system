@@ -159,8 +159,8 @@ export const MixinLink = (superClass) =>
 
         <a ${ref(this.#anchorRef)}>
           <cfpb-icon-text
-            iconLeft=${this.#iconLeft}
-            iconRight=${this.#iconRight}
+            icon-left=${this.#iconLeft}
+            icon-right=${this.#iconRight}
             .underline=${this.#underline}
             ?mobile-icon-align-end=${this.linkVariant === 'nav-right'}
             ?inline=${this.inline}

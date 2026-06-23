@@ -1,34 +1,63 @@
-@use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
-$notification-bg: var(--gray-5);
-$notification-bg-success: var(--green-10);
-$notification-bg-warning: var(--gold-10);
-$notification-bg-error: var(--red-10);
-$notification-border: var(--gray-40);
-$notification-border-success: var(--green);
-$notification-border-warning: var(--gold);
-$notification-border-error: var(--red);
-$notification-icon: var(--gray);
-$notification-icon-success: var(--green);
-$notification-icon-warning: var(--gold);
-$notification-icon-error: var(--red);
-
 :host {
   // Theme
-  --alert-icon-color: var(--gray);
+  --alert-bg-default: var(--gray-5);
+  --alert-bg-success: var(--green-10);
+  --alert-bg-warning: var(--gold-10);
+  --alert-bg-error: var(--red-10);
+  --alert-border-default: var(--gray-40);
+  --alert-border-success: var(--green);
+  --alert-border-warning: var(--gold);
+  --alert-border-error: var(--red);
+  --alert-icon-color-default: var(--gray);
   --alert-icon-color-success: var(--green);
   --alert-icon-color-warning: var(--gold);
   --alert-icon-color-error: var(--red);
   --alert-icon-color-loading: var(--gray);
+  --alert-bg: var(--alert-bg-default);
+  --alert-border: var(--alert-border-default);
+  --alert-icon-color: var(--alert-icon-color-default);
+}
+
+:host([status='success']) {
+  --alert-bg: var(--alert-bg-success);
+  --alert-border: var(--alert-border-success);
+  --alert-icon-color: var(--alert-icon-color-success);
+}
+
+:host([status='warning']) {
+  --alert-bg: var(--alert-bg-warning);
+  --alert-border: var(--alert-border-warning);
+  --alert-icon-color: var(--alert-icon-color-warning);
+}
+
+:host([status='error']) {
+  --alert-bg: var(--alert-bg-error);
+  --alert-border: var(--alert-border-error);
+  --alert-icon-color: var(--alert-icon-color-error);
+}
+
+:host([status]) {
+  // Set accessible colors for links in alert notificiations.
+  a {
+    // Colors for :link, :visited, :hover, :focus, :active.
+    @include u-link-colors(
+      var(--pacific-mid-dark),
+      var(--teal),
+      var(--pacific-dark),
+      var(--pacific-mid-dark),
+      var(--navy-dark)
+    );
+  }
 }
 
 ::slotted(*) {
   display: block;
 
-  margin-top: math.div(5px, $base-font-size-px) + rem;
-  margin-bottom: math.div(15px, $base-font-size-px) + rem;
+  margin-top: rem-from-px(5px);
+  margin-bottom: rem-from-px(15px);
 
   @include respond-to-min($bp-sm-min) {
     // Remove default margin between explanation and list of links.
@@ -37,107 +66,60 @@ $notification-icon-error: var(--red);
 }
 
 ::slotted(cfpb-list) {
-  margin-top: math.div(15px, $base-font-size-px) + rem;
+  margin-top: rem-from-px(15px);
 
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {
-    margin-top: math.div(5px, $base-font-size-px) + rem;
+    margin-top: rem-from-px(5px);
   }
 }
 
-//
-//  Notification
-//
-
-.m-notification {
-  padding: math.div(15px, $base-font-size-px) + rem;
-  background: $notification-bg;
-  border: 1px solid $notification-border;
-
-  & > cfpb-icon {
-    flex: none;
-    fill: $notification-icon;
-  }
-
-  &--success {
-    background: $notification-bg-success;
-    border-color: $notification-border-success;
-
-    & > cfpb-icon {
-      fill: $notification-icon-success;
-    }
-  }
-
-  &--warning {
-    background: $notification-bg-warning;
-    border-color: $notification-border-warning;
-
-    & > cfpb-icon {
-      fill: $notification-icon-warning;
-    }
-  }
-
-  &--error {
-    background: $notification-bg-error;
-    border-color: $notification-border-error;
-
-    & > cfpb-icon {
-      fill: $notification-icon-error;
-    }
-  }
-
-  // Set accessible colors for links in alert notificiations.
-  &--success,
-  &--warning,
-  &--error {
-    & a {
-      // Colors for :link, :visited, :hover, :focus, :active.
-      @include u-link-colors(
-        var(--pacific-mid-dark),
-        var(--teal),
-        var(--pacific-dark),
-        var(--pacific-mid-dark),
-        var(--navy-dark)
-      );
-    }
-  }
-
-  display: flex;
-  gap: math.div(5px, $base-font-size-px) + rem;
-
-  &__content {
-    max-width: 41.875rem;
-  }
+cfpb-icon {
+  flex: none;
+  color: var(--alert-icon-color);
 
   // Only adding left padding if an icon is present.
-  cfpb-icon + &__content {
+  & + .content {
     flex-grow: 1;
-  }
-
-  &__message {
-    font-size: math.div(16px, $base-font-size-px) + rem;
-    line-height: 1.25;
-    font-weight: 500;
-
-    // Tablet and above.
-    @include respond-to-min($bp-sm-min) {
-      // h4 size
-      font-size: math.div(18px, $base-font-size-px) + rem;
-    }
   }
 
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {
     // Make adjustments to the icon, explanation, and links if at non-mobile.
     // Increase the icon size.
-    cfpb-icon {
-      font-size: math.div(18px, $base-font-size-px) + rem;
-    }
+    font-size: rem-from-px(18px);
   }
 }
 
+.container {
+  display: flex;
+  gap: rem-from-px(5px);
+
+  padding: rem-from-px(15px);
+  background: var(--alert-bg);
+  border: 1px solid var(--alert-border);
+}
+
+.content {
+  max-width: 41.875rem;
+}
+
+.message {
+  font-size: rem-from-px(16px);
+  line-height: 1.25;
+  font-weight: 500;
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    // h4 size
+    font-size: rem-from-px(18px);
+  }
+}
+
+// TODO: migrate this to web component layout.
 // Handle right-to-left (RTL) adjustments.
-html[lang='ar'] .m-notification {
+
+/* html[lang='ar'] .m-notification {
   cfpb-icon + .m-notification__content {
     padding-left: initial;
     padding-right: math.div(25px, $base-font-size-px) + rem;
@@ -146,4 +128,4 @@ html[lang='ar'] .m-notification {
   .m-list {
     padding-right: 0;
   }
-}
+} */

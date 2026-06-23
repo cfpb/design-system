@@ -1,5 +1,8 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { defineComponent } from '../utilities/shared-config';
+import {
+  applyThemeProperties,
+  defineComponent,
+} from '../utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { CfpbIcon } from '../cfpb-icon';
 
@@ -14,9 +17,11 @@ export class CfpbIconText extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
+  static themeProperties = ['divColor'];
+
   /**
-   * @property {boolean} disabled - Apply disabled styles or not.
    * @property {boolean} divColor - The color of the divider between the icon/text.
+   * @property {boolean} disabled - Apply disabled styles or not.
    * @property {string} iconLeft - The name of the icon on the left.
    * @property {string} iconRight - The name of the icon on the right.
    * @property {string} isIconLeftSpin - Whether the left icon spins or not.
@@ -28,12 +33,12 @@ export class CfpbIconText extends LitElement {
    * @returns {object} The map of properties.
    */
   static properties = {
-    disabled: { type: Boolean, reflect: true },
     divColor: { type: String, attribute: 'div-color', reflect: true },
-    iconLeft: { type: String },
-    iconRight: { type: String },
-    isIconLeftSpin: { type: Boolean, attribute: 'iconleftspin' },
-    isIconRightSpin: { type: Boolean, attribute: 'iconrightspin' },
+    disabled: { type: Boolean, reflect: true },
+    iconLeft: { type: String, attribute: 'icon-left' },
+    iconRight: { type: String, attribute: 'icon-right' },
+    isIconLeftSpin: { type: Boolean, attribute: 'icon-left-spin' },
+    isIconRightSpin: { type: Boolean, attribute: 'icon-right-spin' },
     hasDiv: { type: Boolean, attribute: 'has-div', reflect: true },
     underline: { type: String, attribute: 'underline', reflect: true },
     mobileIconAlignEnd: {
@@ -55,16 +60,7 @@ export class CfpbIconText extends LitElement {
   }
 
   updated(changed) {
-    if (changed.has('divColor')) {
-      if (this.divColor) {
-        this.style.setProperty(
-          '--icon-text-div-color',
-          `var(--${this.divColor})`,
-        );
-      } else {
-        this.style.removeProperty('--icon-text-div-color');
-      }
-    }
+    applyThemeProperties(this, changed);
   }
 
   render() {

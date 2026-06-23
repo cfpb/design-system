@@ -152,7 +152,7 @@ export class CfpbPagination extends LitElement {
           ?flush-right=${!this.#isMobile}
           ?disabled=${this.isAtMin}
           @click=${() => this.#goto(this.currentPage - 1)}
-          iconleft="left"
+          icon-left="left"
         >
           ${trans('next')}
         </cfpb-button>

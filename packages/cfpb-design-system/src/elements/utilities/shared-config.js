@@ -62,9 +62,8 @@ export function defineComponent(tag, constructor) {
  * CSS variable: --icon-text-div-color
  * Attribute: div-color
  * Property: divColor
- *
  * @param {HTMLElement} element - A custom element.
- * @param {Map<PropertyKey, unknown>} changed - Map of changed properties with old values.
+ * @param {Map} changed - Map of changed properties with old values.
  */
 export function applyThemeProperties(element, changed) {
   const themeProps = element.constructor.themeProperties ?? [];

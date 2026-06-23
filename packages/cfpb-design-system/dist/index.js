@@ -1101,8 +1101,14 @@ var ot = (e) => {
 			type: Boolean,
 			reflect: !0
 		},
-		iconLeft: { type: String },
-		iconRight: { type: String },
+		iconLeft: {
+			type: String,
+			attribute: "icon-left"
+		},
+		iconRight: {
+			type: String,
+			attribute: "icon-right"
+		},
 		isIconLeftSpin: {
 			type: Boolean,
 			attribute: "icon-left-spin"
@@ -1174,8 +1180,14 @@ var ot = (e) => {
 			reflect: !0
 		},
 		variant: { type: String },
-		iconLeft: { type: String },
-		iconRight: { type: String },
+		iconLeft: {
+			type: String,
+			attribute: "icon-left"
+		},
+		iconRight: {
+			type: String,
+			attribute: "icon-right"
+		},
 		isIconLeftSpin: {
 			type: Boolean,
 			attribute: "icon-left-spin"
@@ -1242,8 +1254,8 @@ var ot = (e) => {
         ${B(this.#e)}
         ?disabled=${this.disabled}
         div-color="${this.dividerColorVar}"
-        iconleft=${this.iconLeft}
-        iconright=${this.iconRight}
+        icon-left=${this.iconLeft}
+        icon-right=${this.iconRight}
         ?icon-left-spin=${this.isIconLeftSpin}
         ?icon-right-spin=${this.isIconRightSpin}
         ?has-div=${!this.styleAsLink}
@@ -3175,7 +3187,7 @@ var on = Xe(an), sn = ".cf-icon-svg{vertical-align:middle;fill:currentColor;heig
           ?flush-right=${!this.#t}
           ?disabled=${this.isAtMin}
           @click=${() => this.#s(this.currentPage - 1)}
-          iconleft="left"
+          icon-left="left"
         >
           ${e("next")}
         </cfpb-button>

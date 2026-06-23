@@ -225,10 +225,10 @@ variation_groups:
           </div>
         variation_code_snippet: >-
           <cfpb-link href="#">This is a link</cfpb-link>
-          <cfpb-link href="#" iconleft="left">This is a link</cfpb-link>
-          <cfpb-link href="#" iconright="right">This is a link</cfpb-link>
-          <cfpb-link href="#" iconright="download">This is a link</cfpb-link>
-          <cfpb-link href="#" iconright="external-link">This is a link</cfpb-link>
+          <cfpb-link href="#" icon-left="left">This is a link</cfpb-link>
+          <cfpb-link href="#" icon-right="right">This is a link</cfpb-link>
+          <cfpb-link href="#" icon-right="download">This is a link</cfpb-link>
+          <cfpb-link href="#" icon-right="external-link">This is a link</cfpb-link>
           <cfpb-link>No href</cfpb-link>
       - variation_is_deprecated: false
         variation_name: Icon and Text
@@ -239,46 +239,46 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text iconleft="bank">Icon, but no divider</cfpb-icon-text>
+            <cfpb-icon-text icon-left="bank">Icon, but no divider</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text has-div iconleft="download">Icon on left</cfpb-icon-text>
+            <cfpb-icon-text has-div icon-left="download">Icon on left</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text has-div iconright="download">Icon on right</cfpb-icon-text>
+            <cfpb-icon-text has-div icon-right="download">Icon on right</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text has-div iconleft="bank" iconright="download">Icon on both sides</cfpb-icon-text>
+            <cfpb-icon-text has-div icon-left="bank" icon-right="download">Icon on both sides</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text has-div disabled iconright="download">Disabled state</cfpb-icon-text>
+            <cfpb-icon-text has-div disabled icon-right="download">Disabled state</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text has-div div-color="red-60" iconleft="warning">Warning state</cfpb-icon-text>
+            <cfpb-icon-text has-div div-color="red-60" icon-left="warning">Warning state</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text underline="tablet-up" iconright="external-link">Style as standard link (desktop underline)</cfpb-icon-text>
+            <cfpb-icon-text underline="tablet-up" icon-right="external-link">Style as standard link (desktop underline)</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text inline underline="all" iconright="external-link">Style as inline link (always underline)</cfpb-icon-text>
+            <cfpb-icon-text inline underline="all" icon-right="external-link">Style as inline link (always underline)</cfpb-icon-text>
 
             <br>
 
-            <cfpb-icon-text underline="none" iconright="external-link">No underline</cfpb-icon-text>
+            <cfpb-icon-text underline="none" icon-right="external-link">No underline</cfpb-icon-text>
 
             <br><hr><br>
 
             <p>
             The following section allows interacting with the API.
             </p>
-            <p><cfpb-icon-text id="icon-text-example" iconright="download" has-div>Example icon-text component</cfpb-icon-text></p>
+            <p><cfpb-icon-text id="icon-text-example" icon-right="download" has-div>Example icon-text component</cfpb-icon-text></p>
             <p>
 
             <input type="checkbox" id="icon-text-example-warning" />
@@ -393,10 +393,10 @@ variation_groups:
           </div>
         variation_code_snippet: >-
           <cfpb-icon-text>No icon</cfpb-icon-text>
-          <cfpb-icon-text iconleft="download">Icon on left</cfpb-icon-text>
-          <cfpb-icon-text iconright="download">Icon on right</cfpb-icon-text>
-          <cfpb-icon-text iconleft="bank" iconright="download">Icon on both sides</cfpb-icon-text>
-          <cfpb-icon-text disabled iconright="download">Disabled state</cfpb-icon-text>
+          <cfpb-icon-text icon-left="download">Icon on left</cfpb-icon-text>
+          <cfpb-icon-text icon-right="download">Icon on right</cfpb-icon-text>
+          <cfpb-icon-text icon-left="bank" icon-right="download">Icon on both sides</cfpb-icon-text>
+          <cfpb-icon-text disabled icon-right="download">Disabled state</cfpb-icon-text>
       - variation_is_deprecated: false
         variation_name: Button
         variation_description: A basic button in web component syntax.
@@ -438,19 +438,19 @@ variation_groups:
 
             <br>
 
-            <cfpb-button style-as-link iconright="download">This is a button styled as a link with an icon</cfpb-button>
+            <cfpb-button style-as-link icon-right="download">This is a button styled as a link with an icon</cfpb-button>
 
             <br>
 
-            <cfpb-button href="#" iconright="download">This is a link styled as a button with an icon</cfpb-button>
+            <cfpb-button href="#" icon-right="download">This is a link styled as a button with an icon</cfpb-button>
 
             <br>
 
-            <cfpb-button iconright="download">This is a button with an icon</cfpb-button>
+            <cfpb-button icon-right="download">This is a button with an icon</cfpb-button>
 
             <br>
 
-            <cfpb-button disabled iconright="download">This is a disabled button with an icon</cfpb-button>
+            <cfpb-button disabled icon-right="download">This is a disabled button with an icon</cfpb-button>
 
             <br>
             <hr>
@@ -458,7 +458,7 @@ variation_groups:
             <p>
             The following section allows interacting with the API.
             </p>
-            <p><cfpb-button id="btn-example" iconright="update" icon-right-spin>Example button</cfpb-button></p>
+            <p><cfpb-button id="btn-example" icon-right="update" icon-right-spin>Example button</cfpb-button></p>
 
             <p>
             <label for="btn-example-variant">Button type:</label>
@@ -553,7 +553,7 @@ variation_groups:
           <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
           <cfpb-button disabled>This is a disabled button link</cfpb-button>
           <cfpb-button href="#" style-as-link>This is a button styled as a link</cfpb-button>
-          <cfpb-button href="#" style-as-link iconright="download">This is a button styled as a link with an icon</cfpb-button>
+          <cfpb-button href="#" style-as-link icon-right="download">This is a button styled as a link with an icon</cfpb-button>
       - variation_is_deprecated: false
         variation_name: File upload
         variation_description: >-

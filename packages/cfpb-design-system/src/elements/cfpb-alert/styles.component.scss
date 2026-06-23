@@ -7,18 +7,15 @@
   --alert-bg-success: var(--green-10);
   --alert-bg-warning: var(--gold-10);
   --alert-bg-error: var(--red-10);
-
   --alert-border-default: var(--gray-40);
   --alert-border-success: var(--green);
   --alert-border-warning: var(--gold);
   --alert-border-error: var(--red);
-
   --alert-icon-color-default: var(--gray);
   --alert-icon-color-success: var(--green);
   --alert-icon-color-warning: var(--gold);
   --alert-icon-color-error: var(--red);
   --alert-icon-color-loading: var(--gray);
-
   --alert-bg: var(--alert-bg-default);
   --alert-border: var(--alert-border-default);
   --alert-icon-color: var(--alert-icon-color-default);
@@ -121,7 +118,8 @@ cfpb-icon {
 
 // TODO: migrate this to web component layout.
 // Handle right-to-left (RTL) adjustments.
-/*html[lang='ar'] .m-notification {
+
+/* html[lang='ar'] .m-notification {
   cfpb-icon + .m-notification__content {
     padding-left: initial;
     padding-right: math.div(25px, $base-font-size-px) + rem;
@@ -130,4 +128,4 @@ cfpb-icon {
   .m-list {
     padding-right: 0;
   }
-}*/
+} */

@@ -286,12 +286,12 @@ export class CfpbSelect extends LitElement {
               ${ref(this.#tagGroup)}
               horizontal
               .childData=${this.optionList
-              .filter((item) => {
-                return item.checked;
-              })
-              .map((item) => {
-                return { text: item.value, tagName: 'cfpb-tag-filter' };
-              })}
+                .filter((item) => {
+                  return item.checked;
+                })
+                .map((item) => {
+                  return { text: item.value, tagName: 'cfpb-tag-filter' };
+                })}
               @item-click=${this.#onTagClick}
             >
             </cfpb-list>`

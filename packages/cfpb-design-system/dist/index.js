@@ -1146,15 +1146,15 @@ var ot = (e) => {
 	render() {
 		return M`<span class="wrap">
       ${this.iconLeft ? M`<cfpb-icon
-              name="${this.iconLeft}"
-              ?spin=${this.isIconLeftSpin}
-            ></cfpb-icon
-            ><span class="div"></span>` : ""}
+                name="${this.iconLeft}"
+                ?spin=${this.isIconLeftSpin}
+              ></cfpb-icon
+              ><span class="div"></span>` : ""}
       <span class="text"><slot></slot></span>${this.iconRight ? M` <span class="div"></span
-            ><cfpb-icon
-              name="${this.iconRight}"
-              ?spin=${this.isIconRightSpin}
-            ></cfpb-icon>` : ""}
+              ><cfpb-icon
+                name="${this.iconRight}"
+                ?spin=${this.isIconRightSpin}
+              ></cfpb-icon>` : ""}
     </span>`;
 	}
 	static init() {
@@ -2039,7 +2039,7 @@ var kt = class e extends L {
 			reflect: !0
 		}
 	};
-	static variants = new Set([
+	static variants = /* @__PURE__ */ new Set([
 		"external",
 		"download",
 		"nav-left",
@@ -2683,8 +2683,8 @@ var kt = class e extends L {
       </div>
 
       ${this.isOverMaxLength ? M`<cfpb-form-alert validation="error">
-            Searches are limited to ${this.maxlength} characters.
-          </cfpb-form-alert>` : null}`;
+              Searches are limited to ${this.maxlength} characters.
+            </cfpb-form-alert>` : null}`;
 	}
 	static init() {
 		Qt.init(), Yt.init(), _t.init(), p("cfpb-form-search", e);
@@ -3019,15 +3019,15 @@ var on = Xe(an), sn = ".cf-icon-svg{vertical-align:middle;fill:currentColor;heig
       <slot @slotchange=${this.#m}></slot>
 
       ${this.multiple ? M`<cfpb-list
-            ${B(this.#c)}
-            horizontal
-            .childData=${this.optionList.filter((e) => e.checked).map((e) => ({
+              ${B(this.#c)}
+              horizontal
+              .childData=${this.optionList.filter((e) => e.checked).map((e) => ({
 			text: e.value,
 			tagName: "cfpb-tag-filter"
 		}))}
-            @item-click=${this.#x}
-          >
-          </cfpb-list>` : P}
+              @item-click=${this.#x}
+            >
+            </cfpb-list>` : P}
 
       <div
         class="o-select"

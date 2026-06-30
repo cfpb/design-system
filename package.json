@@ -55,7 +55,7 @@
     "slugify": "1.6.9"
   },
   "devDependencies": {
-    "@cfpb/browserslist-config": "0.0.6",
+    "@cfpb/browserslist-config": "0.0.7",
     "@csstools/postcss-sass": "5.1.1",
     "@eslint/js": "10.0.1",
     "@lhci/cli": "0.15.1",

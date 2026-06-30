@@ -65,20 +65,24 @@ export class CfpbIconText extends LitElement {
 
   render() {
     return html`<span class="wrap">
-      ${this.iconLeft
-        ? html`<cfpb-icon
-              name="${this.iconLeft}"
-              ?spin=${this.isIconLeftSpin}
-            ></cfpb-icon
-            ><span class="div"></span>`
-        : ''}
-      <span class="text"><slot></slot></span>${this.iconRight
-        ? html` <span class="div"></span
-            ><cfpb-icon
-              name="${this.iconRight}"
-              ?spin=${this.isIconRightSpin}
-            ></cfpb-icon>`
-        : ''}
+      ${
+        this.iconLeft
+          ? html`<cfpb-icon
+                name="${this.iconLeft}"
+                ?spin=${this.isIconLeftSpin}
+              ></cfpb-icon
+              ><span class="div"></span>`
+          : ''
+      }
+      <span class="text"><slot></slot></span>${
+        this.iconRight
+          ? html` <span class="div"></span
+              ><cfpb-icon
+                name="${this.iconRight}"
+                ?spin=${this.isIconRightSpin}
+              ></cfpb-icon>`
+          : ''
+      }
     </span>`;
   }
 

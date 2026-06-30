@@ -80,7 +80,7 @@ function FlyoutMenu(element, autoHideContent = true) {
     let triggerParent;
     let isSubTrigger;
     // Iterate backwards ensuring that length is an UInt32.
-    for (let i = triggers.length >>> 0; i--; ) {
+    for (let i = triggers.length >>> 0; i--;) {
       isSubTrigger = false;
       trigger = triggers[i];
       triggerParent = trigger.parentElement;

@@ -280,21 +280,23 @@ export class CfpbSelect extends LitElement {
       <!--Light DOM content-->
       <slot @slotchange=${this.#onSlotChange}></slot>
 
-      ${this.multiple
-        ? html`<cfpb-list
-            ${ref(this.#tagGroup)}
-            horizontal
-            .childData=${this.optionList
-              .filter((item) => {
-                return item.checked;
-              })
-              .map((item) => {
-                return { text: item.value, tagName: 'cfpb-tag-filter' };
-              })}
-            @item-click=${this.#onTagClick}
-          >
-          </cfpb-list>`
-        : nothing}
+      ${
+        this.multiple
+          ? html`<cfpb-list
+              ${ref(this.#tagGroup)}
+              horizontal
+              .childData=${this.optionList
+                .filter((item) => {
+                  return item.checked;
+                })
+                .map((item) => {
+                  return { text: item.value, tagName: 'cfpb-tag-filter' };
+                })}
+              @item-click=${this.#onTagClick}
+            >
+            </cfpb-list>`
+          : nothing
+      }
 
       <div
         class="o-select"
@@ -331,9 +333,9 @@ export class CfpbSelect extends LitElement {
             ?multiple=${this.multiple}
             .childData=${this.optionList}
             type=${this.multiple ? 'checkbox' : 'check'}
-            aria-label=${this.ariaLabelList
-              ? this.ariaLabelList
-              : 'Choose an item…'}
+            aria-label=${
+              this.ariaLabelList ? this.ariaLabelList : 'Choose an item…'
+            }
             ${ref(this.#list)}
           >
           </cfpb-listbox>

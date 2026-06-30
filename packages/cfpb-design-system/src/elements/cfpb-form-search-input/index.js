@@ -100,9 +100,9 @@ export class CfpbFormSearchInput extends LitElement {
   render() {
     return html`
       <div
-        class="o-search-input ${this.validation
-          ? `o-search-input--${this.validation}`
-          : ''}"
+        class="o-search-input ${
+          this.validation ? `o-search-input--${this.validation}` : ''
+        }"
       >
         <label
           for="search-text"

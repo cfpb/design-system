@@ -181,11 +181,13 @@ export class CfpbFormSearch extends LitElement {
         </button>
       </div>
 
-      ${this.isOverMaxLength
-        ? html`<cfpb-form-alert validation="error">
-            Searches are limited to ${this.maxlength} characters.
-          </cfpb-form-alert>`
-        : null}`;
+      ${
+        this.isOverMaxLength
+          ? html`<cfpb-form-alert validation="error">
+              Searches are limited to ${this.maxlength} characters.
+            </cfpb-form-alert>`
+          : null
+      }`;
   }
 
   static init() {

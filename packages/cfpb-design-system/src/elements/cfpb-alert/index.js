@@ -46,21 +46,11 @@ export class CfpbAlert extends LitElement {
 
   get icon() {
     const map = {
-      info: {
-        name: 'warning-round',
-      },
-      warning: {
-        name: 'warning-round',
-      },
-      success: {
-        name: 'approved-round',
-      },
-      error: {
-        name: 'error-round',
-      },
-      loading: {
-        name: 'update',
-      },
+      info: 'warning-round',
+      warning: 'warning-round',
+      success: 'approved-round',
+      error: 'error-round',
+      loading: 'update',
     };
 
     return map[this.status] || map.info;
@@ -70,7 +60,7 @@ export class CfpbAlert extends LitElement {
     return html`
       <div class="container" role="alert">
         <cfpb-icon
-          name=${this.icon.name}
+          name=${this.icon}
           ?spin=${this.status === 'loading'}
         ></cfpb-icon>
         <div class="content">

@@ -1154,7 +1154,7 @@ variation_groups:
               }
               tag.innerHTML = tagName.value;
               const index = tagIndex.value === '' ? -1 : Number(tagIndex.value);
-              tagGroup.addTag(tag, index);
+              tagGroup.addItem(tag, index);
             });
 
             btnRemove.addEventListener('click',()=>{
@@ -1163,7 +1163,7 @@ variation_groups:
               tags.forEach((item) => {
                 if (item.textContent.trim() === tagName.value) tag = item;
               });
-              tagGroup.removeTag(tag);
+              tagGroup.removeItem(tag);
             });
 
             btnAddJson.addEventListener('click',()=>{

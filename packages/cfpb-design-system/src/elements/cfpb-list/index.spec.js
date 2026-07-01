@@ -142,11 +142,11 @@ describe('<cfpb-list>', () => {
   it('adds and removes at chosen indices', async () => {
     const earthContent = document.createElement('cfpb-tag-filter');
     earthContent.textContent = 'Earth';
-    elm.addTag(earthContent);
+    elm.addItem(earthContent);
 
     const marsContent = document.createElement('cfpb-tag-filter');
     marsContent.textContent = 'Mars';
-    elm.addTag(marsContent, 0);
+    elm.addItem(marsContent, 0);
 
     // Wait for MutationObserver render to settle.
     await new Promise((resolve) => {
@@ -157,7 +157,7 @@ describe('<cfpb-list>', () => {
 
     expect(elm.items[0].isEqualNode(marsContent)).toBe(true);
 
-    elm.removeTag(marsContent, 0);
+    elm.removeItem(marsContent, 0);
 
     expect(elm.items[0].isEqualNode(earthContent)).toBe(true);
   });

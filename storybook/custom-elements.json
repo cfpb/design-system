@@ -4,189 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "packages/cfpb-design-system/src/elements/index.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "../abstracts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./utilities"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-alert"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-button"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-form-alert"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-expandable"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-form-choice"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-file-upload"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-icon"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-label"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-link"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-list"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-list-item"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-listbox"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-listbox-item"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-form-search"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-form-search-input"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-tagline"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-tag-filter"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-tag-topic"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-select"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./cfpb-pagination"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "packages/cfpb-design-system/src/elements/cfpb-alert/index.js",
       "declarations": [
         {
@@ -200,6 +17,15 @@
             }
           ],
           "members": [
+            {
+              "kind": "field",
+              "name": "themeProperties",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "['iconColor', 'border', 'bg']"
+            },
             {
               "kind": "field",
               "name": "icon",
@@ -232,9 +58,57 @@
               },
               "default": "'Alert'",
               "attribute": "message"
+            },
+            {
+              "kind": "field",
+              "name": "bg",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "bg"
+            },
+            {
+              "kind": "field",
+              "name": "border",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "border"
+            },
+            {
+              "kind": "field",
+              "name": "iconColor",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "icon-color"
             }
           ],
           "attributes": [
+            {
+              "name": "bg",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "bg"
+            },
+            {
+              "name": "border",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "border"
+            },
+            {
+              "name": "icon-color",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "iconColor"
+            },
             {
               "name": "status",
               "type": {
@@ -407,7 +281,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "attribute": "iconleftspin"
+              "attribute": "icon-left-spin"
             },
             {
               "kind": "field",
@@ -417,7 +291,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "attribute": "iconrightspin"
+              "attribute": "icon-right-spin"
             },
             {
               "kind": "field",
@@ -435,7 +309,7 @@
               "type": {
                 "text": "string"
               },
-              "attribute": "iconLeft"
+              "attribute": "icon-left"
             },
             {
               "kind": "field",
@@ -444,7 +318,7 @@
               "type": {
                 "text": "string"
               },
-              "attribute": "iconRight"
+              "attribute": "icon-right"
             },
             {
               "kind": "field",
@@ -500,21 +374,21 @@
               "fieldName": "variant"
             },
             {
-              "name": "iconLeft",
+              "name": "icon-left",
               "type": {
                 "text": "string"
               },
               "fieldName": "iconLeft"
             },
             {
-              "name": "iconRight",
+              "name": "icon-right",
               "type": {
                 "text": "string"
               },
               "fieldName": "iconRight"
             },
             {
-              "name": "iconleftspin",
+              "name": "icon-left-spin",
               "type": {
                 "text": "boolean"
               },
@@ -522,7 +396,7 @@
               "fieldName": "isIconLeftSpin"
             },
             {
-              "name": "iconrightspin",
+              "name": "icon-right-spin",
               "type": {
                 "text": "boolean"
               },
@@ -761,6 +635,113 @@
     },
     {
       "kind": "javascript-module",
+      "path": "packages/cfpb-design-system/src/elements/cfpb-expandable/index.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CfpbExpandable",
+          "slots": [
+            {
+              "description": "The header content for the expandable.",
+              "name": "header"
+            },
+            {
+              "description": "The content within the expandable.",
+              "name": "content"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "#flyoutMenu",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#transition",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "init",
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isExpanded",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "open",
+              "reflects": true
+            }
+          ],
+          "events": [
+            {
+              "name": "expandbegin",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "The expandable started expanding."
+            },
+            {
+              "name": "expandend",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "The expandable finshed expanding."
+            },
+            {
+              "name": "collapsebegin",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "The expandables started collapsing."
+            },
+            {
+              "name": "collapseend",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "The expandables finished collapsing."
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "isExpanded"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cfpb-expandable",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-expandable/index.js"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CfpbExpandable",
+          "declaration": {
+            "name": "CfpbExpandable",
+            "module": "packages/cfpb-design-system/src/elements/cfpb-expandable/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "packages/cfpb-design-system/src/elements/cfpb-file-upload/index.js",
       "declarations": [
         {
@@ -900,113 +881,6 @@
           "declaration": {
             "name": "CfpbFileUpload",
             "module": "packages/cfpb-design-system/src/elements/cfpb-file-upload/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "packages/cfpb-design-system/src/elements/cfpb-expandable/index.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "CfpbExpandable",
-          "slots": [
-            {
-              "description": "The header content for the expandable.",
-              "name": "header"
-            },
-            {
-              "description": "The content within the expandable.",
-              "name": "content"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "#flyoutMenu",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "#transition",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isExpanded",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "attribute": "open",
-              "reflects": true
-            }
-          ],
-          "events": [
-            {
-              "name": "expandbegin",
-              "type": {
-                "text": "CustomEvent"
-              },
-              "description": "The expandable started expanding."
-            },
-            {
-              "name": "expandend",
-              "type": {
-                "text": "CustomEvent"
-              },
-              "description": "The expandable finshed expanding."
-            },
-            {
-              "name": "collapsebegin",
-              "type": {
-                "text": "CustomEvent"
-              },
-              "description": "The expandables started collapsing."
-            },
-            {
-              "name": "collapseend",
-              "type": {
-                "text": "CustomEvent"
-              },
-              "description": "The expandables finished collapsing."
-            }
-          ],
-          "attributes": [
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "fieldName": "isExpanded"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cfpb-expandable",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-expandable/index.js"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "CfpbExpandable",
-          "declaration": {
-            "name": "CfpbExpandable",
-            "module": "packages/cfpb-design-system/src/elements/cfpb-expandable/index.js"
           }
         }
       ]
@@ -1389,6 +1263,313 @@
     },
     {
       "kind": "javascript-module",
+      "path": "packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CfpbFormSearchInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#searchInput",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#onInput",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "#onKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "#onBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#onClickClear",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "type": {
+                "text": "focus() => void"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "init",
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Search'",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Search'",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "maxlength",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "75",
+              "attribute": "maxlength",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "placeholder"
+            },
+            {
+              "kind": "field",
+              "name": "ariaLabelInput",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Search input'",
+              "attribute": "aria-label-input"
+            },
+            {
+              "kind": "field",
+              "name": "ariaLabelButton",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Clear search'",
+              "attribute": "aria-label-button"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "borderless",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "borderless",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "validation",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "validation",
+              "reflects": true
+            }
+          ],
+          "events": [
+            {
+              "name": "enter-down",
+              "type": {
+                "text": "CustomEvent"
+              }
+            },
+            {
+              "name": "blur",
+              "type": {
+                "text": "Event"
+              }
+            },
+            {
+              "name": "clear",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "validation",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "validation"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Search'",
+              "fieldName": "label"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "name"
+            },
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Search'",
+              "fieldName": "title"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "value"
+            },
+            {
+              "name": "maxlength",
+              "type": {
+                "text": "number"
+              },
+              "default": "75",
+              "fieldName": "maxlength"
+            },
+            {
+              "name": "placeholder",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "placeholder"
+            },
+            {
+              "name": "aria-label-input",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Search input'",
+              "fieldName": "ariaLabelInput"
+            },
+            {
+              "name": "aria-label-button",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Clear search'",
+              "fieldName": "ariaLabelButton"
+            },
+            {
+              "name": "borderless",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "borderless"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cfpb-form-search-input",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CfpbFormSearchInput",
+          "declaration": {
+            "name": "CfpbFormSearchInput",
+            "module": "packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "packages/cfpb-design-system/src/elements/cfpb-form-search/index.js",
       "declarations": [
         {
@@ -1704,401 +1885,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "CfpbFormSearchInput",
-          "members": [
-            {
-              "kind": "field",
-              "name": "#searchInput",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "#onInput",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "evt"
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "#onKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "evt"
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "#onBlur",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "#onClickClear",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "evt"
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "type": {
-                "text": "focus() => void"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Search'",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "title",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Search'",
-              "attribute": "title"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "maxlength",
-              "privacy": "public",
-              "type": {
-                "text": "number"
-              },
-              "default": "75",
-              "attribute": "maxlength",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "placeholder",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "attribute": "placeholder"
-            },
-            {
-              "kind": "field",
-              "name": "ariaLabelInput",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Search input'",
-              "attribute": "aria-label-input"
-            },
-            {
-              "kind": "field",
-              "name": "ariaLabelButton",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Clear search'",
-              "attribute": "aria-label-button"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "borderless",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "borderless",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "validation",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "validation",
-              "reflects": true
-            }
-          ],
-          "events": [
-            {
-              "name": "enter-down",
-              "type": {
-                "text": "CustomEvent"
-              }
-            },
-            {
-              "name": "blur",
-              "type": {
-                "text": "Event"
-              }
-            },
-            {
-              "name": "clear",
-              "type": {
-                "text": "CustomEvent"
-              }
-            }
-          ],
-          "attributes": [
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "validation",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "validation"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Search'",
-              "fieldName": "label"
-            },
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "fieldName": "name"
-            },
-            {
-              "name": "title",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Search'",
-              "fieldName": "title"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "fieldName": "value"
-            },
-            {
-              "name": "maxlength",
-              "type": {
-                "text": "number"
-              },
-              "default": "75",
-              "fieldName": "maxlength"
-            },
-            {
-              "name": "placeholder",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "fieldName": "placeholder"
-            },
-            {
-              "name": "aria-label-input",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Search input'",
-              "fieldName": "ariaLabelInput"
-            },
-            {
-              "name": "aria-label-button",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Clear search'",
-              "fieldName": "ariaLabelButton"
-            },
-            {
-              "name": "borderless",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "borderless"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cfpb-form-search-input",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "CfpbFormSearchInput",
-          "declaration": {
-            "name": "CfpbFormSearchInput",
-            "module": "packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "packages/cfpb-design-system/src/elements/cfpb-icon/index.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "CfpbIcon",
-          "members": [
-            {
-              "kind": "method",
-              "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "color",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "color"
-            },
-            {
-              "kind": "field",
-              "name": "spin",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "attribute": "spin"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "name"
-            },
-            {
-              "name": "color",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "color"
-            },
-            {
-              "name": "spin",
-              "type": {
-                "text": "boolean"
-              },
-              "fieldName": "spin"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cfpb-icon",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-icon/index.js"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "CfpbIcon",
-          "declaration": {
-            "name": "CfpbIcon",
-            "module": "packages/cfpb-design-system/src/elements/cfpb-icon/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "packages/cfpb-design-system/src/elements/cfpb-icon-text/index.js",
       "declarations": [
         {
@@ -2112,6 +1898,15 @@
             }
           ],
           "members": [
+            {
+              "kind": "field",
+              "name": "themeProperties",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "['divColor']"
+            },
             {
               "kind": "method",
               "name": "init",
@@ -2139,7 +1934,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "attribute": "iconleftspin"
+              "attribute": "icon-left-spin"
             },
             {
               "kind": "field",
@@ -2149,7 +1944,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "attribute": "iconrightspin"
+              "attribute": "icon-right-spin"
             },
             {
               "kind": "field",
@@ -2168,7 +1963,7 @@
               "type": {
                 "text": "string"
               },
-              "attribute": "iconLeft"
+              "attribute": "icon-left"
             },
             {
               "kind": "field",
@@ -2177,7 +1972,7 @@
               "type": {
                 "text": "string"
               },
-              "attribute": "iconRight"
+              "attribute": "icon-right"
             },
             {
               "kind": "field",
@@ -2222,6 +2017,13 @@
           ],
           "attributes": [
             {
+              "name": "div-color",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "divColor"
+            },
+            {
               "name": "disabled",
               "type": {
                 "text": "boolean"
@@ -2230,28 +2032,21 @@
               "fieldName": "disabled"
             },
             {
-              "name": "div-color",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "divColor"
-            },
-            {
-              "name": "iconLeft",
+              "name": "icon-left",
               "type": {
                 "text": "string"
               },
               "fieldName": "iconLeft"
             },
             {
-              "name": "iconRight",
+              "name": "icon-right",
               "type": {
                 "text": "string"
               },
               "fieldName": "iconRight"
             },
             {
-              "name": "iconleftspin",
+              "name": "icon-left-spin",
               "type": {
                 "text": "boolean"
               },
@@ -2259,7 +2054,7 @@
               "fieldName": "isIconLeftSpin"
             },
             {
-              "name": "iconrightspin",
+              "name": "icon-right-spin",
               "type": {
                 "text": "boolean"
               },
@@ -2311,6 +2106,103 @@
           "declaration": {
             "name": "CfpbIconText",
             "module": "packages/cfpb-design-system/src/elements/cfpb-icon-text/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "packages/cfpb-design-system/src/elements/cfpb-icon/index.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CfpbIcon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "themeProperties",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "['color']"
+            },
+            {
+              "kind": "method",
+              "name": "init",
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "color"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "spin",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "spin"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "color"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "name"
+            },
+            {
+              "name": "spin",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "spin"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cfpb-icon",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-icon/index.js"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CfpbIcon",
+          "declaration": {
+            "name": "CfpbIcon",
+            "module": "packages/cfpb-design-system/src/elements/cfpb-icon/index.js"
           }
         }
       ]
@@ -2457,7 +2349,7 @@
                 "text": "object"
               },
               "static": true,
-              "default": "{ linkText: { type: String, state: true }, linkAttributes: { type: Object, state: true }, linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, noTopBorder: { type: Boolean, attribute: 'no-top-border', reflect: true, }, inline: { type: Boolean, reflect: true }, }",
+              "default": "{ linkText: { type: String, state: true }, linkAttributes: { type: Object, state: true }, linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, size: { type: String, reflect: true }, colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, inline: { type: Boolean, reflect: true }, }",
               "return": {
                 "type": {
                   "text": "object"
@@ -2473,6 +2365,15 @@
               "name": "variants",
               "static": true,
               "default": "new Set([ 'external', 'download', 'nav-left', 'nav-right', ])",
+              "inheritedFrom": {
+                "name": "MixinLink",
+                "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "#removeTopBorder",
+              "privacy": "private",
               "inheritedFrom": {
                 "name": "MixinLink",
                 "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
@@ -2582,6 +2483,48 @@
             },
             {
               "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "size",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "MixinLink",
+                "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "colorTheme",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "color-theme",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "MixinLink",
+                "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "noUnderline",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "no-underline",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "MixinLink",
+                "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "noTopBorder",
               "privacy": "public",
               "type": {
@@ -2658,6 +2601,39 @@
               }
             },
             {
+              "name": "size",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "size",
+              "inheritedFrom": {
+                "name": "MixinLink",
+                "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+              }
+            },
+            {
+              "name": "color-theme",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "colorTheme",
+              "inheritedFrom": {
+                "name": "MixinLink",
+                "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+              }
+            },
+            {
+              "name": "no-underline",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "noUnderline",
+              "inheritedFrom": {
+                "name": "MixinLink",
+                "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+              }
+            },
+            {
               "name": "no-top-border",
               "type": {
                 "text": "boolean"
@@ -2690,6 +2666,287 @@
           "declaration": {
             "name": "CfpbLink",
             "module": "packages/cfpb-design-system/src/elements/cfpb-link/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js",
+      "declarations": [
+        {
+          "kind": "mixin",
+          "description": "",
+          "name": "MixinLink",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "static": true,
+              "default": "css` ${unsafeCSS(styles)} `"
+            },
+            {
+              "kind": "field",
+              "name": "#anchorRef",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "properties",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ linkText: { type: String, state: true }, linkAttributes: { type: Object, state: true }, linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, size: { type: String, reflect: true }, colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, inline: { type: Boolean, reflect: true }, }",
+              "return": {
+                "type": {
+                  "text": "object"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "variants",
+              "static": true,
+              "default": "new Set([ 'external', 'download', 'nav-left', 'nav-right', ])"
+            },
+            {
+              "kind": "method",
+              "name": "#removeTopBorder",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#slottedAnchor",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "#extractAnchorData",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#iconLeft",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "#iconRight",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "#underline",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "renderLink"
+            },
+            {
+              "kind": "field",
+              "name": "linkText",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "linkText"
+            },
+            {
+              "kind": "field",
+              "name": "linkAttributes",
+              "privacy": "public",
+              "type": {
+                "text": "object"
+              },
+              "default": "{}",
+              "attribute": "linkAttributes"
+            },
+            {
+              "kind": "field",
+              "name": "linkVariant",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "link-variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "colorTheme",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "color-theme",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "noUnderline",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "no-underline",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "noTopBorder",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "no-top-border",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "inline",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "inline",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "linkText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "linkText"
+            },
+            {
+              "name": "linkAttributes",
+              "type": {
+                "text": "object"
+              },
+              "default": "{}",
+              "fieldName": "linkAttributes"
+            },
+            {
+              "name": "link-variant",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "linkVariant"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "size"
+            },
+            {
+              "name": "color-theme",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "colorTheme"
+            },
+            {
+              "name": "no-underline",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "noUnderline"
+            },
+            {
+              "name": "no-top-border",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "noTopBorder"
+            },
+            {
+              "name": "inline",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "inline"
+            }
+          ],
+          "parameters": [
+            {
+              "name": "superClass"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MixinLink",
+          "declaration": {
+            "name": "MixinLink",
+            "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "packages/cfpb-design-system/src/elements/cfpb-list-item/index.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CfpbListItem",
+          "slots": [
+            {
+              "description": "The content for the topic tag.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "init",
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cfpb-list-item.",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-list-item/index.js"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CfpbListItem",
+          "declaration": {
+            "name": "CfpbListItem",
+            "module": "packages/cfpb-design-system/src/elements/cfpb-list-item/index.js"
           }
         }
       ]
@@ -2771,7 +3028,7 @@
               "kind": "method",
               "name": "#clearAllTags",
               "privacy": "private",
-              "description": "Remove all previous tags from shadow DOM and light DOM."
+              "description": "Remove all previous items from shadow DOM and light DOM."
             },
             {
               "kind": "method",
@@ -2786,13 +3043,13 @@
               "parameters": [
                 {
                   "name": "tagName",
-                  "description": "The name of a supported custom element tag.",
+                  "description": "The name of a supported custom element item.",
                   "type": {
                     "text": "string"
                   }
                 }
               ],
-              "description": "Whether a particular node tagName is supported as a tag of this tag group.",
+              "description": "Whether a particular node tagName is supported as a item of this item group.",
               "return": {
                 "type": {
                   "text": "boolean"
@@ -2850,11 +3107,11 @@
             },
             {
               "kind": "method",
-              "name": "addTag",
+              "name": "addItem",
               "parameters": [
                 {
-                  "name": "tag",
-                  "description": "The tag to add.",
+                  "name": "item",
+                  "description": "The item to add.",
                   "type": {
                     "text": "HTMLElement"
                   }
@@ -2862,20 +3119,20 @@
                 {
                   "name": "index",
                   "default": "-1",
-                  "description": "The position at which to add the tag.",
+                  "description": "The position at which to add the item.",
                   "type": {
                     "text": "number"
                   }
                 }
               ],
-              "description": "Add a tag to the light and dark DOM.",
+              "description": "Add a item to the light and dark DOM.",
               "return": {
                 "type": {
                   "text": "boolean"
                 }
               },
               "type": {
-                "text": "addTag(tag: HTMLElement, index: number = -1) => boolean"
+                "text": "addItem(item: HTMLElement, index: number = -1) => boolean"
               }
             },
             {
@@ -2884,21 +3141,21 @@
               "privacy": "private",
               "parameters": [
                 {
-                  "name": "tag",
-                  "description": "The tag to add.",
+                  "name": "item",
+                  "description": "The item to add.",
                   "type": {
                     "text": "HTMLElement"
                   }
                 },
                 {
                   "name": "index",
-                  "description": "The position at which to add the tag.",
+                  "description": "The position at which to add the item.",
                   "type": {
                     "text": "number"
                   }
                 }
               ],
-              "description": "Add a tag to the light DOM."
+              "description": "Add a item to the light DOM."
             },
             {
               "kind": "method",
@@ -2906,25 +3163,25 @@
               "privacy": "private",
               "parameters": [
                 {
-                  "name": "tag",
-                  "description": "The tag to add.",
+                  "name": "item",
+                  "description": "The item to add.",
                   "type": {
                     "text": "HTMLElement"
                   }
                 },
                 {
                   "name": "index",
-                  "description": "The position at which to add the tag.",
+                  "description": "The position at which to add the item.",
                   "type": {
                     "text": "number"
                   }
                 }
               ],
-              "description": "Add a tag to the shadow DOM."
+              "description": "Add a item to the shadow DOM."
             },
             {
               "kind": "method",
-              "name": "#removeTagNode",
+              "name": "#removeItemNode",
               "privacy": "private",
               "parameters": [
                 {
@@ -2944,19 +3201,19 @@
             },
             {
               "kind": "method",
-              "name": "removeTag",
+              "name": "removeItem",
               "parameters": [
                 {
-                  "name": "tag",
-                  "description": "The tag to remove.",
+                  "name": "item",
+                  "description": "The item to remove.",
                   "type": {
                     "text": "HTMLElement"
                   }
                 }
               ],
-              "description": "Remove a filter tag from the light and dark DOM.",
+              "description": "Remove a filter item from the light and dark DOM.",
               "type": {
-                "text": "removeTag(tag: HTMLElement) => void"
+                "text": "removeItem(item: HTMLElement) => void"
               }
             },
             {
@@ -2965,8 +3222,8 @@
               "privacy": "private",
               "parameters": [
                 {
-                  "name": "tag",
-                  "description": "The tag to remove.",
+                  "name": "item",
+                  "description": "The item to remove.",
                   "type": {
                     "text": "HTMLElement"
                   }
@@ -2996,6 +3253,16 @@
               },
               "default": "''",
               "attribute": "childdata"
+            },
+            {
+              "kind": "field",
+              "name": "colorTheme",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "color-theme",
+              "reflects": true
             }
           ],
           "events": [
@@ -3004,21 +3271,21 @@
               "type": {
                 "text": "CustomEvent"
               },
-              "description": "A tag was clicked."
+              "description": "An item was clicked."
             },
             {
               "name": "item-added",
               "type": {
                 "text": "CustomEvent"
               },
-              "description": "A tag was added to the group."
+              "description": "An item was added to the group."
             },
             {
               "name": "item-removed",
               "type": {
                 "text": "CustomEvent"
               },
-              "description": "A tag was removed to the group."
+              "description": "An item was removed to the group."
             }
           ],
           "attributes": [
@@ -3029,6 +3296,13 @@
               },
               "default": "''",
               "fieldName": "childData"
+            },
+            {
+              "name": "color-theme",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "colorTheme"
             }
           ],
           "superclass": {
@@ -3053,19 +3327,92 @@
     },
     {
       "kind": "javascript-module",
-      "path": "packages/cfpb-design-system/src/elements/cfpb-list-item/index.js",
+      "path": "packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "CfpbListItem",
+          "name": "CfpbListboxItem",
           "slots": [
             {
-              "description": "The content for the topic tag.",
+              "description": "The text for the list item.",
               "name": ""
             }
           ],
           "members": [
+            {
+              "kind": "field",
+              "name": "#checkboxIcon",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#value",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#inList",
+              "privacy": "private",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "method",
+              "name": "#toggleChecked",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#onClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#onKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "#onMouseOver",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#onMouseLeave",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "value"
+            },
+            {
+              "kind": "method",
+              "name": "#chooseRender",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#renderPlain",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#renderCheck",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#renderCheckbox",
+              "privacy": "private"
+            },
             {
               "kind": "method",
               "name": "init",
@@ -3073,24 +3420,128 @@
               "type": {
                 "text": "init() => void"
               }
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "'plain'",
+              "attribute": "type",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "checked",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hidden",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "hidden",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "href"
+            }
+          ],
+          "events": [
+            {
+              "name": "item-click",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "type",
+              "type": {
+                "text": "string"
+              },
+              "default": "'plain'",
+              "fieldName": "type"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "checked"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "hidden",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "hidden"
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "href"
             }
           ],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-list-item.",
+          "tagName": "cfpb-listbox-item.",
           "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-list-item/index.js"
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js"
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "CfpbListItem",
+          "name": "CfpbListboxItem",
           "declaration": {
-            "name": "CfpbListItem",
-            "module": "packages/cfpb-design-system/src/elements/cfpb-list-item/index.js"
+            "name": "CfpbListboxItem",
+            "module": "packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js"
           }
         }
       ]
@@ -3433,227 +3884,6 @@
           "declaration": {
             "name": "CfpbListbox",
             "module": "packages/cfpb-design-system/src/elements/cfpb-listbox/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "CfpbListboxItem",
-          "slots": [
-            {
-              "description": "The text for the list item.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "#checkboxIcon",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "#value",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "#inList",
-              "privacy": "private",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "method",
-              "name": "#toggleChecked",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "#onClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "#onKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "evt"
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "#onMouseOver",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "#onMouseLeave",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "value"
-            },
-            {
-              "kind": "method",
-              "name": "#chooseRender",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "#renderPlain",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "#renderCheck",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "#renderCheckbox",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "type",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "'plain'",
-              "attribute": "type",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "checked",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "checked",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "hidden",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "hidden",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "attribute": "href"
-            }
-          ],
-          "events": [
-            {
-              "name": "item-click",
-              "type": {
-                "text": "CustomEvent"
-              }
-            }
-          ],
-          "attributes": [
-            {
-              "name": "type",
-              "type": {
-                "text": "string"
-              },
-              "default": "'plain'",
-              "fieldName": "type"
-            },
-            {
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "checked"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "hidden",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "hidden"
-            },
-            {
-              "name": "href",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "fieldName": "href"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cfpb-listbox-item.",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "CfpbListboxItem",
-          "declaration": {
-            "name": "CfpbListboxItem",
-            "module": "packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js"
           }
         }
       ]
@@ -4741,181 +4971,183 @@
     },
     {
       "kind": "javascript-module",
-      "path": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js",
-      "declarations": [
-        {
-          "kind": "mixin",
-          "description": "",
-          "name": "MixinLink",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "static": true,
-              "default": "css` ${unsafeCSS(styles)} `"
-            },
-            {
-              "kind": "field",
-              "name": "#anchorRef",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "properties",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{ linkText: { type: String, state: true }, linkAttributes: { type: Object, state: true }, linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, noTopBorder: { type: Boolean, attribute: 'no-top-border', reflect: true, }, inline: { type: Boolean, reflect: true }, }",
-              "return": {
-                "type": {
-                  "text": "object"
-                }
-              }
-            },
-            {
-              "kind": "field",
-              "name": "variants",
-              "static": true,
-              "default": "new Set([ 'external', 'download', 'nav-left', 'nav-right', ])"
-            },
-            {
-              "kind": "field",
-              "name": "#slottedAnchor",
-              "privacy": "private",
-              "readonly": true
-            },
-            {
-              "kind": "method",
-              "name": "#extractAnchorData",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "#iconLeft",
-              "privacy": "private",
-              "readonly": true
-            },
-            {
-              "kind": "field",
-              "name": "#iconRight",
-              "privacy": "private",
-              "readonly": true
-            },
-            {
-              "kind": "field",
-              "name": "#underline",
-              "privacy": "private",
-              "readonly": true
-            },
-            {
-              "kind": "method",
-              "name": "renderLink"
-            },
-            {
-              "kind": "field",
-              "name": "linkText",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "attribute": "linkText"
-            },
-            {
-              "kind": "field",
-              "name": "linkAttributes",
-              "privacy": "public",
-              "type": {
-                "text": "object"
-              },
-              "default": "{}",
-              "attribute": "linkAttributes"
-            },
-            {
-              "kind": "field",
-              "name": "linkVariant",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "link-variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "noTopBorder",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "attribute": "no-top-border",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "inline",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "attribute": "inline",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "linkText",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "fieldName": "linkText"
-            },
-            {
-              "name": "linkAttributes",
-              "type": {
-                "text": "object"
-              },
-              "default": "{}",
-              "fieldName": "linkAttributes"
-            },
-            {
-              "name": "link-variant",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "linkVariant"
-            },
-            {
-              "name": "no-top-border",
-              "type": {
-                "text": "boolean"
-              },
-              "fieldName": "noTopBorder"
-            },
-            {
-              "name": "inline",
-              "type": {
-                "text": "boolean"
-              },
-              "fieldName": "inline"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "superClass"
-            }
-          ]
-        }
-      ],
+      "path": "packages/cfpb-design-system/src/elements/index.js",
+      "declarations": [],
       "exports": [
         {
           "kind": "js",
-          "name": "MixinLink",
+          "name": "*",
           "declaration": {
-            "name": "MixinLink",
-            "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+            "name": "*",
+            "package": "../abstracts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./utilities"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-alert"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-button"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-form-alert"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-expandable"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-form-choice"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-file-upload"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-icon"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-label"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-link"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-list"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-list-item"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-listbox"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-listbox-item"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-form-search"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-form-search-input"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-tagline"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-tag-filter"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-tag-topic"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-select"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cfpb-pagination"
           }
         }
       ]

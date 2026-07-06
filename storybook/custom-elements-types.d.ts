@@ -1,26 +1,26 @@
-import type { CfpbAlert } from "../packages/cfpb-design-system/src/elements/cfpb-alert/index.js";
-import type { CfpbButton } from "../packages/cfpb-design-system/src/elements/cfpb-button/index.js";
-import type { CfpbCheckboxIcon } from "../packages/cfpb-design-system/src/elements/cfpb-checkbox-icon/index.js";
-import type { CfpbFileUpload } from "../packages/cfpb-design-system/src/elements/cfpb-file-upload/index.js";
-import type { CfpbExpandable } from "../packages/cfpb-design-system/src/elements/cfpb-expandable/index.js";
-import type { CfpbFlagUsa } from "../packages/cfpb-design-system/src/elements/cfpb-flag-usa/index.js";
-import type { CfpbFormAlert } from "../packages/cfpb-design-system/src/elements/cfpb-form-alert/index.js";
-import type { CfpbFormChoice } from "../packages/cfpb-design-system/src/elements/cfpb-form-choice/index.js";
-import type { CfpbFormSearch } from "../packages/cfpb-design-system/src/elements/cfpb-form-search/index.js";
-import type { CfpbFormSearchInput } from "../packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js";
-import type { CfpbIcon } from "../packages/cfpb-design-system/src/elements/cfpb-icon/index.js";
-import type { CfpbIconText } from "../packages/cfpb-design-system/src/elements/cfpb-icon-text/index.js";
-import type { CfpbLabel } from "../packages/cfpb-design-system/src/elements/cfpb-label/index.js";
-import type { CfpbLink } from "../packages/cfpb-design-system/src/elements/cfpb-link/index.js";
-import type { CfpbList } from "../packages/cfpb-design-system/src/elements/cfpb-list/index.js";
-import type { CfpbListItem } from "../packages/cfpb-design-system/src/elements/cfpb-list-item/index.js";
-import type { CfpbListbox } from "../packages/cfpb-design-system/src/elements/cfpb-listbox/index.js";
-import type { CfpbListboxItem } from "../packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js";
-import type { CfpbPagination } from "../packages/cfpb-design-system/src/elements/cfpb-pagination/index.js";
-import type { CfpbSelect } from "../packages/cfpb-design-system/src/elements/cfpb-select/index.js";
-import type { CfpbTagFilter } from "../packages/cfpb-design-system/src/elements/cfpb-tag-filter/index.js";
-import type { CfpbTagTopic } from "../packages/cfpb-design-system/src/elements/cfpb-tag-topic/index.js";
-import type { CfpbTagline } from "../packages/cfpb-design-system/src/elements/cfpb-tagline/index.js";
+import type { CfpbAlert } from '../packages/cfpb-design-system/src/elements/cfpb-alert/index.js';
+import type { CfpbButton } from '../packages/cfpb-design-system/src/elements/cfpb-button/index.js';
+import type { CfpbCheckboxIcon } from '../packages/cfpb-design-system/src/elements/cfpb-checkbox-icon/index.js';
+import type { CfpbExpandable } from '../packages/cfpb-design-system/src/elements/cfpb-expandable/index.js';
+import type { CfpbFileUpload } from '../packages/cfpb-design-system/src/elements/cfpb-file-upload/index.js';
+import type { CfpbFlagUsa } from '../packages/cfpb-design-system/src/elements/cfpb-flag-usa/index.js';
+import type { CfpbFormAlert } from '../packages/cfpb-design-system/src/elements/cfpb-form-alert/index.js';
+import type { CfpbFormChoice } from '../packages/cfpb-design-system/src/elements/cfpb-form-choice/index.js';
+import type { CfpbFormSearchInput } from '../packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js';
+import type { CfpbFormSearch } from '../packages/cfpb-design-system/src/elements/cfpb-form-search/index.js';
+import type { CfpbIconText } from '../packages/cfpb-design-system/src/elements/cfpb-icon-text/index.js';
+import type { CfpbIcon } from '../packages/cfpb-design-system/src/elements/cfpb-icon/index.js';
+import type { CfpbLabel } from '../packages/cfpb-design-system/src/elements/cfpb-label/index.js';
+import type { CfpbLink } from '../packages/cfpb-design-system/src/elements/cfpb-link/index.js';
+import type { CfpbListItem } from '../packages/cfpb-design-system/src/elements/cfpb-list-item/index.js';
+import type { CfpbList } from '../packages/cfpb-design-system/src/elements/cfpb-list/index.js';
+import type { CfpbListboxItem } from '../packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js';
+import type { CfpbListbox } from '../packages/cfpb-design-system/src/elements/cfpb-listbox/index.js';
+import type { CfpbPagination } from '../packages/cfpb-design-system/src/elements/cfpb-pagination/index.js';
+import type { CfpbSelect } from '../packages/cfpb-design-system/src/elements/cfpb-select/index.js';
+import type { CfpbTagFilter } from '../packages/cfpb-design-system/src/elements/cfpb-tag-filter/index.js';
+import type { CfpbTagTopic } from '../packages/cfpb-design-system/src/elements/cfpb-tag-topic/index.js';
+import type { CfpbTagline } from '../packages/cfpb-design-system/src/elements/cfpb-tagline/index.js';
 
 /**
  * This type can be used to create scoped tags for your components.
@@ -41,10 +41,12 @@ import type { CfpbTagline } from "../packages/cfpb-design-system/src/elements/cf
  * @deprecated Runtime scoped elements result in duplicate types and can confusing for developers. It is recommended to use the `prefix` and `suffix` options to generate new types instead.
  */
 export type ScopedElements<
-  Prefix extends string = "",
-  Suffix extends string = "",
+  Prefix extends string = '',
+  Suffix extends string = '',
 > = {
-  [Key in keyof CustomElements as `${Prefix}${Key}${Suffix}`]: CustomElements[Key];
+  [
+    Key in keyof CustomElements as `${Prefix}${Key}${Suffix}`
+  ]: CustomElements[Key];
 };
 
 type BaseProps<T extends HTMLElement> = {
@@ -57,7 +59,7 @@ type BaseProps<T extends HTMLElement> = {
   /** Takes an object where the key is the class name(s) and the value is a boolean expression. When true, the class is applied, and when false, it is removed. */
   classList?: Record<string, boolean | undefined>;
   /** Specifies the text direction of the element. */
-  dir?: "ltr" | "rtl";
+  dir?: 'ltr' | 'rtl';
   /** Contains a space-separated list of the part names of the element that should be exposed on the host element. */
   exportparts?: string;
   /** For <label> and <output>, lets you associate the label with some control. */
@@ -85,29 +87,45 @@ type BaseProps<T extends HTMLElement> = {
   /** Specifies the tooltip text for the element. */
   title?: string;
   /** Passing 'no' excludes the element content from being translated. */
-  translate?: "yes" | "no";
+  translate?: 'yes' | 'no';
   /** The popover global attribute is used to designate an element as a popover element. */
-  popover?: "auto" | "hint" | "manual";
+  popover?: 'auto' | 'hint' | 'manual';
   /** Turns an element element into a popover control button; takes the ID of the popover element to control as its value. */
-  popovertarget?: "top" | "bottom" | "left" | "right" | "auto";
+  popovertarget?: 'top' | 'bottom' | 'left' | 'right' | 'auto';
   /** Specifies the action to be performed on a popover element being controlled by a control element. */
-  popovertargetaction?: "show" | "hide" | "toggle";
+  popovertargetaction?: 'show' | 'hide' | 'toggle';
 };
 
 type BaseEvents = {};
 
 export type CfpbAlertProps = {
   /**  */
-  status?: CfpbAlert["status"];
+  bg?: CfpbAlert['bg'];
   /**  */
-  message?: CfpbAlert["message"];
+  border?: CfpbAlert['border'];
+  /**  */
+  'icon-color'?: CfpbAlert['iconColor'];
+  /**  */
+  iconColor?: CfpbAlert['iconColor'];
+  /**  */
+  status?: CfpbAlert['status'];
+  /**  */
+  message?: CfpbAlert['message'];
 };
 
 export type CfpbAlertSolidJsProps = {
   /**  */
-  "prop:status"?: CfpbAlert["status"];
+  'prop:bg'?: CfpbAlert['bg'];
   /**  */
-  "prop:message"?: CfpbAlert["message"];
+  'prop:border'?: CfpbAlert['border'];
+  /**  */
+  'attr:icon-color'?: CfpbAlert['iconColor'];
+  /**  */
+  'prop:iconColor'?: CfpbAlert['iconColor'];
+  /**  */
+  'prop:status'?: CfpbAlert['status'];
+  /**  */
+  'prop:message'?: CfpbAlert['message'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -117,80 +135,88 @@ export type CfpbAlertSolidJsProps = {
 
 export type CfpbButtonProps = {
   /**  */
-  type?: CfpbButton["type"];
+  type?: CfpbButton['type'];
   /**  */
-  href?: CfpbButton["href"];
+  href?: CfpbButton['href'];
   /**  */
-  disabled?: CfpbButton["disabled"];
+  disabled?: CfpbButton['disabled'];
   /**  */
-  variant?: CfpbButton["variant"];
+  variant?: CfpbButton['variant'];
   /**  */
-  iconLeft?: CfpbButton["iconLeft"];
+  'icon-left'?: CfpbButton['iconLeft'];
   /**  */
-  iconRight?: CfpbButton["iconRight"];
+  iconLeft?: CfpbButton['iconLeft'];
   /**  */
-  iconleftspin?: CfpbButton["isIconLeftSpin"];
+  'icon-right'?: CfpbButton['iconRight'];
   /**  */
-  isIconLeftSpin?: CfpbButton["isIconLeftSpin"];
+  iconRight?: CfpbButton['iconRight'];
   /**  */
-  iconrightspin?: CfpbButton["isIconRightSpin"];
+  'icon-left-spin'?: CfpbButton['isIconLeftSpin'];
   /**  */
-  isIconRightSpin?: CfpbButton["isIconRightSpin"];
+  isIconLeftSpin?: CfpbButton['isIconLeftSpin'];
   /**  */
-  "full-on-mobile"?: CfpbButton["fullOnMobile"];
+  'icon-right-spin'?: CfpbButton['isIconRightSpin'];
   /**  */
-  fullOnMobile?: CfpbButton["fullOnMobile"];
+  isIconRightSpin?: CfpbButton['isIconRightSpin'];
   /**  */
-  "flush-left"?: CfpbButton["flushLeft"];
+  'full-on-mobile'?: CfpbButton['fullOnMobile'];
   /**  */
-  flushLeft?: CfpbButton["flushLeft"];
+  fullOnMobile?: CfpbButton['fullOnMobile'];
   /**  */
-  "flush-right"?: CfpbButton["flushRight"];
+  'flush-left'?: CfpbButton['flushLeft'];
   /**  */
-  flushRight?: CfpbButton["flushRight"];
+  flushLeft?: CfpbButton['flushLeft'];
   /**  */
-  "style-as-link"?: CfpbButton["styleAsLink"];
+  'flush-right'?: CfpbButton['flushRight'];
   /**  */
-  styleAsLink?: CfpbButton["styleAsLink"];
+  flushRight?: CfpbButton['flushRight'];
+  /**  */
+  'style-as-link'?: CfpbButton['styleAsLink'];
+  /**  */
+  styleAsLink?: CfpbButton['styleAsLink'];
 };
 
 export type CfpbButtonSolidJsProps = {
   /**  */
-  "prop:type"?: CfpbButton["type"];
+  'prop:type'?: CfpbButton['type'];
   /**  */
-  "prop:href"?: CfpbButton["href"];
+  'prop:href'?: CfpbButton['href'];
   /**  */
-  "prop:disabled"?: CfpbButton["disabled"];
+  'prop:disabled'?: CfpbButton['disabled'];
   /**  */
-  "prop:variant"?: CfpbButton["variant"];
+  'prop:variant'?: CfpbButton['variant'];
   /**  */
-  "prop:iconLeft"?: CfpbButton["iconLeft"];
+  'attr:icon-left'?: CfpbButton['iconLeft'];
   /**  */
-  "prop:iconRight"?: CfpbButton["iconRight"];
+  'prop:iconLeft'?: CfpbButton['iconLeft'];
   /**  */
-  "bool:iconleftspin"?: CfpbButton["isIconLeftSpin"];
+  'attr:icon-right'?: CfpbButton['iconRight'];
   /**  */
-  "prop:isIconLeftSpin"?: CfpbButton["isIconLeftSpin"];
+  'prop:iconRight'?: CfpbButton['iconRight'];
   /**  */
-  "bool:iconrightspin"?: CfpbButton["isIconRightSpin"];
+  'bool:icon-left-spin'?: CfpbButton['isIconLeftSpin'];
   /**  */
-  "prop:isIconRightSpin"?: CfpbButton["isIconRightSpin"];
+  'prop:isIconLeftSpin'?: CfpbButton['isIconLeftSpin'];
   /**  */
-  "bool:full-on-mobile"?: CfpbButton["fullOnMobile"];
+  'bool:icon-right-spin'?: CfpbButton['isIconRightSpin'];
   /**  */
-  "prop:fullOnMobile"?: CfpbButton["fullOnMobile"];
+  'prop:isIconRightSpin'?: CfpbButton['isIconRightSpin'];
   /**  */
-  "bool:flush-left"?: CfpbButton["flushLeft"];
+  'bool:full-on-mobile'?: CfpbButton['fullOnMobile'];
   /**  */
-  "prop:flushLeft"?: CfpbButton["flushLeft"];
+  'prop:fullOnMobile'?: CfpbButton['fullOnMobile'];
   /**  */
-  "bool:flush-right"?: CfpbButton["flushRight"];
+  'bool:flush-left'?: CfpbButton['flushLeft'];
   /**  */
-  "prop:flushRight"?: CfpbButton["flushRight"];
+  'prop:flushLeft'?: CfpbButton['flushLeft'];
   /**  */
-  "bool:style-as-link"?: CfpbButton["styleAsLink"];
+  'bool:flush-right'?: CfpbButton['flushRight'];
   /**  */
-  "prop:styleAsLink"?: CfpbButton["styleAsLink"];
+  'prop:flushRight'?: CfpbButton['flushRight'];
+  /**  */
+  'bool:style-as-link'?: CfpbButton['styleAsLink'];
+  /**  */
+  'prop:styleAsLink'?: CfpbButton['styleAsLink'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -200,56 +226,24 @@ export type CfpbButtonSolidJsProps = {
 
 export type CfpbCheckboxIconProps = {
   /**  */
-  borderless?: CfpbCheckboxIcon["borderless"];
+  borderless?: CfpbCheckboxIcon['borderless'];
   /**  */
-  checked?: CfpbCheckboxIcon["checked"];
+  checked?: CfpbCheckboxIcon['checked'];
   /**  */
-  disabled?: CfpbCheckboxIcon["disabled"];
+  disabled?: CfpbCheckboxIcon['disabled'];
   /**  */
-  validation?: CfpbCheckboxIcon["validation"];
+  validation?: CfpbCheckboxIcon['validation'];
 };
 
 export type CfpbCheckboxIconSolidJsProps = {
   /**  */
-  "prop:borderless"?: CfpbCheckboxIcon["borderless"];
+  'prop:borderless'?: CfpbCheckboxIcon['borderless'];
   /**  */
-  "prop:checked"?: CfpbCheckboxIcon["checked"];
+  'prop:checked'?: CfpbCheckboxIcon['checked'];
   /**  */
-  "prop:disabled"?: CfpbCheckboxIcon["disabled"];
+  'prop:disabled'?: CfpbCheckboxIcon['disabled'];
   /**  */
-  "prop:validation"?: CfpbCheckboxIcon["validation"];
-
-  /** Set the innerHTML of the element */
-  innerHTML?: string;
-  /** Set the textContent of the element */
-  textContent?: string | number;
-};
-
-export type CfpbFileUploadProps = {
-  /**  */
-  accept?: CfpbFileUpload["accept"];
-  /**  */
-  isDetailHidden?: CfpbFileUpload["isDetailHidden"];
-  /**  */
-  fileName?: CfpbFileUpload["fileName"];
-  /**  */
-  files?: CfpbFileUpload["files"];
-
-  /**  */
-  "onfile-change"?: (e: CustomEvent) => void;
-};
-
-export type CfpbFileUploadSolidJsProps = {
-  /**  */
-  "prop:accept"?: CfpbFileUpload["accept"];
-  /**  */
-  "prop:isDetailHidden"?: CfpbFileUpload["isDetailHidden"];
-  /**  */
-  "prop:fileName"?: CfpbFileUpload["fileName"];
-  /**  */
-  "prop:files"?: CfpbFileUpload["files"];
-  /**  */
-  "on:file-change"?: (e: CustomEvent) => void;
+  'prop:validation'?: CfpbCheckboxIcon['validation'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -259,9 +253,9 @@ export type CfpbFileUploadSolidJsProps = {
 
 export type CfpbExpandableProps = {
   /**  */
-  open?: CfpbExpandable["isExpanded"];
+  open?: CfpbExpandable['isExpanded'];
   /**  */
-  isExpanded?: CfpbExpandable["isExpanded"];
+  isExpanded?: CfpbExpandable['isExpanded'];
 
   /** The expandable started expanding. */
   onexpandbegin?: (e: CustomEvent) => void;
@@ -275,17 +269,49 @@ export type CfpbExpandableProps = {
 
 export type CfpbExpandableSolidJsProps = {
   /**  */
-  "bool:open"?: CfpbExpandable["isExpanded"];
+  'bool:open'?: CfpbExpandable['isExpanded'];
   /**  */
-  "prop:isExpanded"?: CfpbExpandable["isExpanded"];
+  'prop:isExpanded'?: CfpbExpandable['isExpanded'];
   /** The expandable started expanding. */
-  "on:expandbegin"?: (e: CustomEvent) => void;
+  'on:expandbegin'?: (e: CustomEvent) => void;
   /** The expandable finshed expanding. */
-  "on:expandend"?: (e: CustomEvent) => void;
+  'on:expandend'?: (e: CustomEvent) => void;
   /** The expandables started collapsing. */
-  "on:collapsebegin"?: (e: CustomEvent) => void;
+  'on:collapsebegin'?: (e: CustomEvent) => void;
   /** The expandables finished collapsing. */
-  "on:collapseend"?: (e: CustomEvent) => void;
+  'on:collapseend'?: (e: CustomEvent) => void;
+
+  /** Set the innerHTML of the element */
+  innerHTML?: string;
+  /** Set the textContent of the element */
+  textContent?: string | number;
+};
+
+export type CfpbFileUploadProps = {
+  /**  */
+  accept?: CfpbFileUpload['accept'];
+  /**  */
+  isDetailHidden?: CfpbFileUpload['isDetailHidden'];
+  /**  */
+  fileName?: CfpbFileUpload['fileName'];
+  /**  */
+  files?: CfpbFileUpload['files'];
+
+  /**  */
+  'onfile-change'?: (e: CustomEvent) => void;
+};
+
+export type CfpbFileUploadSolidJsProps = {
+  /**  */
+  'prop:accept'?: CfpbFileUpload['accept'];
+  /**  */
+  'prop:isDetailHidden'?: CfpbFileUpload['isDetailHidden'];
+  /**  */
+  'prop:fileName'?: CfpbFileUpload['fileName'];
+  /**  */
+  'prop:files'?: CfpbFileUpload['files'];
+  /**  */
+  'on:file-change'?: (e: CustomEvent) => void;
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -304,12 +330,12 @@ export type CfpbFlagUsaSolidJsProps = {
 
 export type CfpbFormAlertProps = {
   /**  */
-  validation?: CfpbFormAlert["validation"];
+  validation?: CfpbFormAlert['validation'];
 };
 
 export type CfpbFormAlertSolidJsProps = {
   /**  */
-  "prop:validation"?: CfpbFormAlert["validation"];
+  'prop:validation'?: CfpbFormAlert['validation'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -319,19 +345,19 @@ export type CfpbFormAlertSolidJsProps = {
 
 export type CfpbFormChoiceProps = {
   /**  */
-  checked?: CfpbFormChoice["checked"];
+  checked?: CfpbFormChoice['checked'];
   /**  */
-  disabled?: CfpbFormChoice["disabled"];
+  disabled?: CfpbFormChoice['disabled'];
   /**  */
-  large?: CfpbFormChoice["large"];
+  large?: CfpbFormChoice['large'];
   /**  */
-  validation?: CfpbFormChoice["validation"];
+  validation?: CfpbFormChoice['validation'];
   /**  */
-  type?: CfpbFormChoice["type"];
+  type?: CfpbFormChoice['type'];
   /**  */
-  name?: CfpbFormChoice["name"];
+  name?: CfpbFormChoice['name'];
   /**  */
-  value?: CfpbFormChoice["value"];
+  value?: CfpbFormChoice['value'];
 
   /**  */
   onchange?: (e: Event) => void;
@@ -341,86 +367,23 @@ export type CfpbFormChoiceProps = {
 
 export type CfpbFormChoiceSolidJsProps = {
   /**  */
-  "prop:checked"?: CfpbFormChoice["checked"];
+  'prop:checked'?: CfpbFormChoice['checked'];
   /**  */
-  "prop:disabled"?: CfpbFormChoice["disabled"];
+  'prop:disabled'?: CfpbFormChoice['disabled'];
   /**  */
-  "prop:large"?: CfpbFormChoice["large"];
+  'prop:large'?: CfpbFormChoice['large'];
   /**  */
-  "prop:validation"?: CfpbFormChoice["validation"];
+  'prop:validation'?: CfpbFormChoice['validation'];
   /**  */
-  "prop:type"?: CfpbFormChoice["type"];
+  'prop:type'?: CfpbFormChoice['type'];
   /**  */
-  "prop:name"?: CfpbFormChoice["name"];
+  'prop:name'?: CfpbFormChoice['name'];
   /**  */
-  "prop:value"?: CfpbFormChoice["value"];
+  'prop:value'?: CfpbFormChoice['value'];
   /**  */
-  "on:change"?: (e: Event) => void;
+  'on:change'?: (e: Event) => void;
   /**  */
-  "on:input"?: (e: Event) => void;
-
-  /** Set the innerHTML of the element */
-  innerHTML?: string;
-  /** Set the textContent of the element */
-  textContent?: string | number;
-};
-
-export type CfpbFormSearchProps = {
-  /**  */
-  disabled?: CfpbFormSearch["disabled"];
-  /**  */
-  validation?: CfpbFormSearch["validation"];
-  /**  */
-  label?: CfpbFormSearch["label"];
-  /**  */
-  name?: CfpbFormSearch["name"];
-  /**  */
-  title?: CfpbFormSearch["title"];
-  /**  */
-  value?: CfpbFormSearch["value"];
-  /**  */
-  maxlength?: CfpbFormSearch["maxlength"];
-  /**  */
-  placeholder?: CfpbFormSearch["placeholder"];
-  /**  */
-  "aria-label-input"?: CfpbFormSearch["ariaLabelInput"];
-  /**  */
-  ariaLabelInput?: CfpbFormSearch["ariaLabelInput"];
-  /**  */
-  "aria-label-button"?: CfpbFormSearch["ariaLabelButton"];
-  /**  */
-  ariaLabelButton?: CfpbFormSearch["ariaLabelButton"];
-  /**  */
-  searchList?: CfpbFormSearch["searchList"];
-};
-
-export type CfpbFormSearchSolidJsProps = {
-  /**  */
-  "prop:disabled"?: CfpbFormSearch["disabled"];
-  /**  */
-  "prop:validation"?: CfpbFormSearch["validation"];
-  /**  */
-  "prop:label"?: CfpbFormSearch["label"];
-  /**  */
-  "prop:name"?: CfpbFormSearch["name"];
-  /**  */
-  "prop:title"?: CfpbFormSearch["title"];
-  /**  */
-  "prop:value"?: CfpbFormSearch["value"];
-  /**  */
-  "prop:maxlength"?: CfpbFormSearch["maxlength"];
-  /**  */
-  "prop:placeholder"?: CfpbFormSearch["placeholder"];
-  /**  */
-  "attr:aria-label-input"?: CfpbFormSearch["ariaLabelInput"];
-  /**  */
-  "prop:ariaLabelInput"?: CfpbFormSearch["ariaLabelInput"];
-  /**  */
-  "attr:aria-label-button"?: CfpbFormSearch["ariaLabelButton"];
-  /**  */
-  "prop:ariaLabelButton"?: CfpbFormSearch["ariaLabelButton"];
-  /**  */
-  "prop:searchList"?: CfpbFormSearch["searchList"];
+  'on:input'?: (e: Event) => void;
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -430,34 +393,34 @@ export type CfpbFormSearchSolidJsProps = {
 
 export type CfpbFormSearchInputProps = {
   /**  */
-  disabled?: CfpbFormSearchInput["disabled"];
+  disabled?: CfpbFormSearchInput['disabled'];
   /**  */
-  validation?: CfpbFormSearchInput["validation"];
+  validation?: CfpbFormSearchInput['validation'];
   /**  */
-  label?: CfpbFormSearchInput["label"];
+  label?: CfpbFormSearchInput['label'];
   /**  */
-  name?: CfpbFormSearchInput["name"];
+  name?: CfpbFormSearchInput['name'];
   /**  */
-  title?: CfpbFormSearchInput["title"];
+  title?: CfpbFormSearchInput['title'];
   /**  */
-  value?: CfpbFormSearchInput["value"];
+  value?: CfpbFormSearchInput['value'];
   /**  */
-  maxlength?: CfpbFormSearchInput["maxlength"];
+  maxlength?: CfpbFormSearchInput['maxlength'];
   /**  */
-  placeholder?: CfpbFormSearchInput["placeholder"];
+  placeholder?: CfpbFormSearchInput['placeholder'];
   /**  */
-  "aria-label-input"?: CfpbFormSearchInput["ariaLabelInput"];
+  'aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'];
   /**  */
-  ariaLabelInput?: CfpbFormSearchInput["ariaLabelInput"];
+  ariaLabelInput?: CfpbFormSearchInput['ariaLabelInput'];
   /**  */
-  "aria-label-button"?: CfpbFormSearchInput["ariaLabelButton"];
+  'aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'];
   /**  */
-  ariaLabelButton?: CfpbFormSearchInput["ariaLabelButton"];
+  ariaLabelButton?: CfpbFormSearchInput['ariaLabelButton'];
   /**  */
-  borderless?: CfpbFormSearchInput["borderless"];
+  borderless?: CfpbFormSearchInput['borderless'];
 
   /**  */
-  "onenter-down"?: (e: CustomEvent) => void;
+  'onenter-down'?: (e: CustomEvent) => void;
   /**  */
   onblur?: (e: Event) => void;
   /**  */
@@ -466,37 +429,37 @@ export type CfpbFormSearchInputProps = {
 
 export type CfpbFormSearchInputSolidJsProps = {
   /**  */
-  "prop:disabled"?: CfpbFormSearchInput["disabled"];
+  'prop:disabled'?: CfpbFormSearchInput['disabled'];
   /**  */
-  "prop:validation"?: CfpbFormSearchInput["validation"];
+  'prop:validation'?: CfpbFormSearchInput['validation'];
   /**  */
-  "prop:label"?: CfpbFormSearchInput["label"];
+  'prop:label'?: CfpbFormSearchInput['label'];
   /**  */
-  "prop:name"?: CfpbFormSearchInput["name"];
+  'prop:name'?: CfpbFormSearchInput['name'];
   /**  */
-  "prop:title"?: CfpbFormSearchInput["title"];
+  'prop:title'?: CfpbFormSearchInput['title'];
   /**  */
-  "prop:value"?: CfpbFormSearchInput["value"];
+  'prop:value'?: CfpbFormSearchInput['value'];
   /**  */
-  "prop:maxlength"?: CfpbFormSearchInput["maxlength"];
+  'prop:maxlength'?: CfpbFormSearchInput['maxlength'];
   /**  */
-  "prop:placeholder"?: CfpbFormSearchInput["placeholder"];
+  'prop:placeholder'?: CfpbFormSearchInput['placeholder'];
   /**  */
-  "attr:aria-label-input"?: CfpbFormSearchInput["ariaLabelInput"];
+  'attr:aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'];
   /**  */
-  "prop:ariaLabelInput"?: CfpbFormSearchInput["ariaLabelInput"];
+  'prop:ariaLabelInput'?: CfpbFormSearchInput['ariaLabelInput'];
   /**  */
-  "attr:aria-label-button"?: CfpbFormSearchInput["ariaLabelButton"];
+  'attr:aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'];
   /**  */
-  "prop:ariaLabelButton"?: CfpbFormSearchInput["ariaLabelButton"];
+  'prop:ariaLabelButton'?: CfpbFormSearchInput['ariaLabelButton'];
   /**  */
-  "prop:borderless"?: CfpbFormSearchInput["borderless"];
+  'prop:borderless'?: CfpbFormSearchInput['borderless'];
   /**  */
-  "on:enter-down"?: (e: CustomEvent) => void;
+  'on:enter-down'?: (e: CustomEvent) => void;
   /**  */
-  "on:blur"?: (e: Event) => void;
+  'on:blur'?: (e: Event) => void;
   /**  */
-  "on:clear"?: (e: CustomEvent) => void;
+  'on:clear'?: (e: CustomEvent) => void;
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -504,22 +467,62 @@ export type CfpbFormSearchInputSolidJsProps = {
   textContent?: string | number;
 };
 
-export type CfpbIconProps = {
+export type CfpbFormSearchProps = {
   /**  */
-  name?: CfpbIcon["name"];
+  disabled?: CfpbFormSearch['disabled'];
   /**  */
-  color?: CfpbIcon["color"];
+  validation?: CfpbFormSearch['validation'];
   /**  */
-  spin?: CfpbIcon["spin"];
+  label?: CfpbFormSearch['label'];
+  /**  */
+  name?: CfpbFormSearch['name'];
+  /**  */
+  title?: CfpbFormSearch['title'];
+  /**  */
+  value?: CfpbFormSearch['value'];
+  /**  */
+  maxlength?: CfpbFormSearch['maxlength'];
+  /**  */
+  placeholder?: CfpbFormSearch['placeholder'];
+  /**  */
+  'aria-label-input'?: CfpbFormSearch['ariaLabelInput'];
+  /**  */
+  ariaLabelInput?: CfpbFormSearch['ariaLabelInput'];
+  /**  */
+  'aria-label-button'?: CfpbFormSearch['ariaLabelButton'];
+  /**  */
+  ariaLabelButton?: CfpbFormSearch['ariaLabelButton'];
+  /**  */
+  searchList?: CfpbFormSearch['searchList'];
 };
 
-export type CfpbIconSolidJsProps = {
+export type CfpbFormSearchSolidJsProps = {
   /**  */
-  "prop:name"?: CfpbIcon["name"];
+  'prop:disabled'?: CfpbFormSearch['disabled'];
   /**  */
-  "prop:color"?: CfpbIcon["color"];
+  'prop:validation'?: CfpbFormSearch['validation'];
   /**  */
-  "prop:spin"?: CfpbIcon["spin"];
+  'prop:label'?: CfpbFormSearch['label'];
+  /**  */
+  'prop:name'?: CfpbFormSearch['name'];
+  /**  */
+  'prop:title'?: CfpbFormSearch['title'];
+  /**  */
+  'prop:value'?: CfpbFormSearch['value'];
+  /**  */
+  'prop:maxlength'?: CfpbFormSearch['maxlength'];
+  /**  */
+  'prop:placeholder'?: CfpbFormSearch['placeholder'];
+  /**  */
+  'attr:aria-label-input'?: CfpbFormSearch['ariaLabelInput'];
+  /**  */
+  'prop:ariaLabelInput'?: CfpbFormSearch['ariaLabelInput'];
+  /**  */
+  'attr:aria-label-button'?: CfpbFormSearch['ariaLabelButton'];
+  /**  */
+  'prop:ariaLabelButton'?: CfpbFormSearch['ariaLabelButton'];
+  /**  */
+  'prop:searchList'?: CfpbFormSearch['searchList'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -529,68 +532,99 @@ export type CfpbIconSolidJsProps = {
 
 export type CfpbIconTextProps = {
   /**  */
-  disabled?: CfpbIconText["disabled"];
+  'div-color'?: CfpbIconText['divColor'];
   /**  */
-  "div-color"?: CfpbIconText["divColor"];
+  divColor?: CfpbIconText['divColor'];
   /**  */
-  divColor?: CfpbIconText["divColor"];
+  disabled?: CfpbIconText['disabled'];
   /**  */
-  iconLeft?: CfpbIconText["iconLeft"];
+  'icon-left'?: CfpbIconText['iconLeft'];
   /**  */
-  iconRight?: CfpbIconText["iconRight"];
+  iconLeft?: CfpbIconText['iconLeft'];
   /**  */
-  iconleftspin?: CfpbIconText["isIconLeftSpin"];
+  'icon-right'?: CfpbIconText['iconRight'];
   /**  */
-  isIconLeftSpin?: CfpbIconText["isIconLeftSpin"];
+  iconRight?: CfpbIconText['iconRight'];
   /**  */
-  iconrightspin?: CfpbIconText["isIconRightSpin"];
+  'icon-left-spin'?: CfpbIconText['isIconLeftSpin'];
   /**  */
-  isIconRightSpin?: CfpbIconText["isIconRightSpin"];
+  isIconLeftSpin?: CfpbIconText['isIconLeftSpin'];
   /**  */
-  "has-div"?: CfpbIconText["hasDiv"];
+  'icon-right-spin'?: CfpbIconText['isIconRightSpin'];
   /**  */
-  hasDiv?: CfpbIconText["hasDiv"];
+  isIconRightSpin?: CfpbIconText['isIconRightSpin'];
   /**  */
-  underline?: CfpbIconText["underline"];
+  'has-div'?: CfpbIconText['hasDiv'];
   /**  */
-  "mobile-icon-align-end"?: CfpbIconText["mobileIconAlignEnd"];
+  hasDiv?: CfpbIconText['hasDiv'];
   /**  */
-  mobileIconAlignEnd?: CfpbIconText["mobileIconAlignEnd"];
+  underline?: CfpbIconText['underline'];
   /**  */
-  inline?: CfpbIconText["inline"];
+  'mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'];
+  /**  */
+  mobileIconAlignEnd?: CfpbIconText['mobileIconAlignEnd'];
+  /**  */
+  inline?: CfpbIconText['inline'];
 };
 
 export type CfpbIconTextSolidJsProps = {
   /**  */
-  "prop:disabled"?: CfpbIconText["disabled"];
+  'attr:div-color'?: CfpbIconText['divColor'];
   /**  */
-  "attr:div-color"?: CfpbIconText["divColor"];
+  'prop:divColor'?: CfpbIconText['divColor'];
   /**  */
-  "prop:divColor"?: CfpbIconText["divColor"];
+  'prop:disabled'?: CfpbIconText['disabled'];
   /**  */
-  "prop:iconLeft"?: CfpbIconText["iconLeft"];
+  'attr:icon-left'?: CfpbIconText['iconLeft'];
   /**  */
-  "prop:iconRight"?: CfpbIconText["iconRight"];
+  'prop:iconLeft'?: CfpbIconText['iconLeft'];
   /**  */
-  "bool:iconleftspin"?: CfpbIconText["isIconLeftSpin"];
+  'attr:icon-right'?: CfpbIconText['iconRight'];
   /**  */
-  "prop:isIconLeftSpin"?: CfpbIconText["isIconLeftSpin"];
+  'prop:iconRight'?: CfpbIconText['iconRight'];
   /**  */
-  "bool:iconrightspin"?: CfpbIconText["isIconRightSpin"];
+  'bool:icon-left-spin'?: CfpbIconText['isIconLeftSpin'];
   /**  */
-  "prop:isIconRightSpin"?: CfpbIconText["isIconRightSpin"];
+  'prop:isIconLeftSpin'?: CfpbIconText['isIconLeftSpin'];
   /**  */
-  "bool:has-div"?: CfpbIconText["hasDiv"];
+  'bool:icon-right-spin'?: CfpbIconText['isIconRightSpin'];
   /**  */
-  "prop:hasDiv"?: CfpbIconText["hasDiv"];
+  'prop:isIconRightSpin'?: CfpbIconText['isIconRightSpin'];
   /**  */
-  "prop:underline"?: CfpbIconText["underline"];
+  'bool:has-div'?: CfpbIconText['hasDiv'];
   /**  */
-  "bool:mobile-icon-align-end"?: CfpbIconText["mobileIconAlignEnd"];
+  'prop:hasDiv'?: CfpbIconText['hasDiv'];
   /**  */
-  "prop:mobileIconAlignEnd"?: CfpbIconText["mobileIconAlignEnd"];
+  'prop:underline'?: CfpbIconText['underline'];
   /**  */
-  "prop:inline"?: CfpbIconText["inline"];
+  'bool:mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'];
+  /**  */
+  'prop:mobileIconAlignEnd'?: CfpbIconText['mobileIconAlignEnd'];
+  /**  */
+  'prop:inline'?: CfpbIconText['inline'];
+
+  /** Set the innerHTML of the element */
+  innerHTML?: string;
+  /** Set the textContent of the element */
+  textContent?: string | number;
+};
+
+export type CfpbIconProps = {
+  /**  */
+  color?: CfpbIcon['color'];
+  /**  */
+  name?: CfpbIcon['name'];
+  /**  */
+  spin?: CfpbIcon['spin'];
+};
+
+export type CfpbIconSolidJsProps = {
+  /**  */
+  'prop:color'?: CfpbIcon['color'];
+  /**  */
+  'prop:name'?: CfpbIcon['name'];
+  /**  */
+  'prop:spin'?: CfpbIcon['spin'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -600,16 +634,16 @@ export type CfpbIconTextSolidJsProps = {
 
 export type CfpbLabelProps = {
   /**  */
-  block?: CfpbLabel["block"];
+  block?: CfpbLabel['block'];
   /**  */
-  for?: CfpbLabel["for"];
+  for?: CfpbLabel['for'];
 };
 
 export type CfpbLabelSolidJsProps = {
   /**  */
-  "prop:block"?: CfpbLabel["block"];
+  'prop:block'?: CfpbLabel['block'];
   /**  */
-  "prop:for"?: CfpbLabel["for"];
+  'prop:for'?: CfpbLabel['for'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -619,68 +653,56 @@ export type CfpbLabelSolidJsProps = {
 
 export type CfpbLinkProps = {
   /**  */
-  linkText?: CfpbLink["linkText"];
+  linkText?: CfpbLink['linkText'];
   /**  */
-  linkAttributes?: CfpbLink["linkAttributes"];
+  linkAttributes?: CfpbLink['linkAttributes'];
   /**  */
-  "link-variant"?: CfpbLink["linkVariant"];
+  'link-variant'?: CfpbLink['linkVariant'];
   /**  */
-  linkVariant?: CfpbLink["linkVariant"];
+  linkVariant?: CfpbLink['linkVariant'];
   /**  */
-  "no-top-border"?: CfpbLink["noTopBorder"];
+  size?: CfpbLink['size'];
   /**  */
-  noTopBorder?: CfpbLink["noTopBorder"];
+  'color-theme'?: CfpbLink['colorTheme'];
   /**  */
-  inline?: CfpbLink["inline"];
+  colorTheme?: CfpbLink['colorTheme'];
+  /**  */
+  'no-underline'?: CfpbLink['noUnderline'];
+  /**  */
+  noUnderline?: CfpbLink['noUnderline'];
+  /**  */
+  'no-top-border'?: CfpbLink['noTopBorder'];
+  /**  */
+  noTopBorder?: CfpbLink['noTopBorder'];
+  /**  */
+  inline?: CfpbLink['inline'];
 };
 
 export type CfpbLinkSolidJsProps = {
   /**  */
-  "prop:linkText"?: CfpbLink["linkText"];
+  'prop:linkText'?: CfpbLink['linkText'];
   /**  */
-  "prop:linkAttributes"?: CfpbLink["linkAttributes"];
+  'prop:linkAttributes'?: CfpbLink['linkAttributes'];
   /**  */
-  "attr:link-variant"?: CfpbLink["linkVariant"];
+  'attr:link-variant'?: CfpbLink['linkVariant'];
   /**  */
-  "prop:linkVariant"?: CfpbLink["linkVariant"];
+  'prop:linkVariant'?: CfpbLink['linkVariant'];
   /**  */
-  "bool:no-top-border"?: CfpbLink["noTopBorder"];
+  'prop:size'?: CfpbLink['size'];
   /**  */
-  "prop:noTopBorder"?: CfpbLink["noTopBorder"];
+  'attr:color-theme'?: CfpbLink['colorTheme'];
   /**  */
-  "prop:inline"?: CfpbLink["inline"];
-
-  /** Set the innerHTML of the element */
-  innerHTML?: string;
-  /** Set the textContent of the element */
-  textContent?: string | number;
-};
-
-export type CfpbListProps = {
+  'prop:colorTheme'?: CfpbLink['colorTheme'];
   /**  */
-  childdata?: CfpbList["childData"];
+  'bool:no-underline'?: CfpbLink['noUnderline'];
   /**  */
-  childData?: CfpbList["childData"];
-
-  /** A tag was clicked. */
-  "onitem-click"?: (e: CustomEvent) => void;
-  /** A tag was added to the group. */
-  "onitem-added"?: (e: CustomEvent) => void;
-  /** A tag was removed to the group. */
-  "onitem-removed"?: (e: CustomEvent) => void;
-};
-
-export type CfpbListSolidJsProps = {
+  'prop:noUnderline'?: CfpbLink['noUnderline'];
   /**  */
-  "attr:childdata"?: CfpbList["childData"];
+  'bool:no-top-border'?: CfpbLink['noTopBorder'];
   /**  */
-  "prop:childData"?: CfpbList["childData"];
-  /** A tag was clicked. */
-  "on:item-click"?: (e: CustomEvent) => void;
-  /** A tag was added to the group. */
-  "on:item-added"?: (e: CustomEvent) => void;
-  /** A tag was removed to the group. */
-  "on:item-removed"?: (e: CustomEvent) => void;
+  'prop:noTopBorder'?: CfpbLink['noTopBorder'];
+  /**  */
+  'prop:inline'?: CfpbLink['inline'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -697,47 +719,39 @@ export type CfpbListItemSolidJsProps = {
   textContent?: string | number;
 };
 
-export type CfpbListboxProps = {
+export type CfpbListProps = {
   /**  */
-  childdata?: CfpbListbox["childData"];
+  childdata?: CfpbList['childData'];
   /**  */
-  childData?: CfpbListbox["childData"];
+  childData?: CfpbList['childData'];
   /**  */
-  multiple?: CfpbListbox["multiple"];
+  'color-theme'?: CfpbList['colorTheme'];
   /**  */
-  type?: CfpbListbox["type"];
-  /**  */
-  "aria-label"?: CfpbListbox["ariaLabel"];
-  /**  */
-  ariaLabel?: CfpbListbox["ariaLabel"];
+  colorTheme?: CfpbList['colorTheme'];
 
-  /**  */
-  "onitems-ready"?: (e: CustomEvent) => void;
-  /**  */
-  "onitem-click"?: (e: CustomEvent) => void;
-  /**  */
-  "onitems-filter"?: (e: CustomEvent) => void;
+  /** An item was clicked. */
+  'onitem-click'?: (e: CustomEvent) => void;
+  /** An item was added to the group. */
+  'onitem-added'?: (e: CustomEvent) => void;
+  /** An item was removed to the group. */
+  'onitem-removed'?: (e: CustomEvent) => void;
 };
 
-export type CfpbListboxSolidJsProps = {
+export type CfpbListSolidJsProps = {
   /**  */
-  "attr:childdata"?: CfpbListbox["childData"];
+  'attr:childdata'?: CfpbList['childData'];
   /**  */
-  "prop:childData"?: CfpbListbox["childData"];
+  'prop:childData'?: CfpbList['childData'];
   /**  */
-  "prop:multiple"?: CfpbListbox["multiple"];
+  'attr:color-theme'?: CfpbList['colorTheme'];
   /**  */
-  "prop:type"?: CfpbListbox["type"];
-  /**  */
-  "attr:aria-label"?: CfpbListbox["ariaLabel"];
-  /**  */
-  "prop:ariaLabel"?: CfpbListbox["ariaLabel"];
-  /**  */
-  "on:items-ready"?: (e: CustomEvent) => void;
-  /**  */
-  "on:item-click"?: (e: CustomEvent) => void;
-  /**  */
-  "on:items-filter"?: (e: CustomEvent) => void;
+  'prop:colorTheme'?: CfpbList['colorTheme'];
+  /** An item was clicked. */
+  'on:item-click'?: (e: CustomEvent) => void;
+  /** An item was added to the group. */
+  'on:item-added'?: (e: CustomEvent) => void;
+  /** An item was removed to the group. */
+  'on:item-removed'?: (e: CustomEvent) => void;
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -747,37 +761,85 @@ export type CfpbListboxSolidJsProps = {
 
 export type CfpbListboxItemProps = {
   /**  */
-  type?: CfpbListboxItem["type"];
+  type?: CfpbListboxItem['type'];
   /**  */
-  checked?: CfpbListboxItem["checked"];
+  checked?: CfpbListboxItem['checked'];
   /**  */
-  disabled?: CfpbListboxItem["disabled"];
+  disabled?: CfpbListboxItem['disabled'];
   /**  */
-  hidden?: CfpbListboxItem["hidden"];
+  hidden?: CfpbListboxItem['hidden'];
   /**  */
-  href?: CfpbListboxItem["href"];
+  href?: CfpbListboxItem['href'];
   /**  */
-  value?: CfpbListboxItem["value"];
+  value?: CfpbListboxItem['value'];
 
   /**  */
-  "onitem-click"?: (e: CustomEvent) => void;
+  'onitem-click'?: (e: CustomEvent) => void;
 };
 
 export type CfpbListboxItemSolidJsProps = {
   /**  */
-  "prop:type"?: CfpbListboxItem["type"];
+  'prop:type'?: CfpbListboxItem['type'];
   /**  */
-  "prop:checked"?: CfpbListboxItem["checked"];
+  'prop:checked'?: CfpbListboxItem['checked'];
   /**  */
-  "prop:disabled"?: CfpbListboxItem["disabled"];
+  'prop:disabled'?: CfpbListboxItem['disabled'];
   /**  */
-  "prop:hidden"?: CfpbListboxItem["hidden"];
+  'prop:hidden'?: CfpbListboxItem['hidden'];
   /**  */
-  "prop:href"?: CfpbListboxItem["href"];
+  'prop:href'?: CfpbListboxItem['href'];
   /**  */
-  "prop:value"?: CfpbListboxItem["value"];
+  'prop:value'?: CfpbListboxItem['value'];
   /**  */
-  "on:item-click"?: (e: CustomEvent) => void;
+  'on:item-click'?: (e: CustomEvent) => void;
+
+  /** Set the innerHTML of the element */
+  innerHTML?: string;
+  /** Set the textContent of the element */
+  textContent?: string | number;
+};
+
+export type CfpbListboxProps = {
+  /**  */
+  childdata?: CfpbListbox['childData'];
+  /**  */
+  childData?: CfpbListbox['childData'];
+  /**  */
+  multiple?: CfpbListbox['multiple'];
+  /**  */
+  type?: CfpbListbox['type'];
+  /**  */
+  'aria-label'?: CfpbListbox['ariaLabel'];
+  /**  */
+  ariaLabel?: CfpbListbox['ariaLabel'];
+
+  /**  */
+  'onitems-ready'?: (e: CustomEvent) => void;
+  /**  */
+  'onitem-click'?: (e: CustomEvent) => void;
+  /**  */
+  'onitems-filter'?: (e: CustomEvent) => void;
+};
+
+export type CfpbListboxSolidJsProps = {
+  /**  */
+  'attr:childdata'?: CfpbListbox['childData'];
+  /**  */
+  'prop:childData'?: CfpbListbox['childData'];
+  /**  */
+  'prop:multiple'?: CfpbListbox['multiple'];
+  /**  */
+  'prop:type'?: CfpbListbox['type'];
+  /**  */
+  'attr:aria-label'?: CfpbListbox['ariaLabel'];
+  /**  */
+  'prop:ariaLabel'?: CfpbListbox['ariaLabel'];
+  /**  */
+  'on:items-ready'?: (e: CustomEvent) => void;
+  /**  */
+  'on:item-click'?: (e: CustomEvent) => void;
+  /**  */
+  'on:items-filter'?: (e: CustomEvent) => void;
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -787,33 +849,33 @@ export type CfpbListboxItemSolidJsProps = {
 
 export type CfpbPaginationProps = {
   /**  */
-  value?: CfpbPagination["currentPage"];
+  value?: CfpbPagination['currentPage'];
   /**  */
-  currentPage?: CfpbPagination["currentPage"];
+  currentPage?: CfpbPagination['currentPage'];
   /**  */
-  max?: CfpbPagination["maxPage"];
+  max?: CfpbPagination['maxPage'];
   /**  */
-  maxPage?: CfpbPagination["maxPage"];
+  maxPage?: CfpbPagination['maxPage'];
   /**  */
-  lang?: CfpbPagination["lang"];
+  lang?: CfpbPagination['lang'];
 
   /**  */
-  "onpage-change"?: (e: CustomEvent) => void;
+  'onpage-change'?: (e: CustomEvent) => void;
 };
 
 export type CfpbPaginationSolidJsProps = {
   /**  */
-  "attr:value"?: CfpbPagination["currentPage"];
+  'attr:value'?: CfpbPagination['currentPage'];
   /**  */
-  "prop:currentPage"?: CfpbPagination["currentPage"];
+  'prop:currentPage'?: CfpbPagination['currentPage'];
   /**  */
-  "attr:max"?: CfpbPagination["maxPage"];
+  'attr:max'?: CfpbPagination['maxPage'];
   /**  */
-  "prop:maxPage"?: CfpbPagination["maxPage"];
+  'prop:maxPage'?: CfpbPagination['maxPage'];
   /**  */
-  "prop:lang"?: CfpbPagination["lang"];
+  'prop:lang'?: CfpbPagination['lang'];
   /**  */
-  "on:page-change"?: (e: CustomEvent) => void;
+  'on:page-change'?: (e: CustomEvent) => void;
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -823,41 +885,41 @@ export type CfpbPaginationSolidJsProps = {
 
 export type CfpbSelectProps = {
   /**  */
-  multiple?: CfpbSelect["multiple"];
+  multiple?: CfpbSelect['multiple'];
   /**  */
-  disabled?: CfpbSelect["disabled"];
+  disabled?: CfpbSelect['disabled'];
   /**  */
-  validation?: CfpbSelect["validation"];
+  validation?: CfpbSelect['validation'];
   /**  */
-  label?: CfpbSelect["label"];
+  label?: CfpbSelect['label'];
   /**  */
-  name?: CfpbSelect["name"];
+  name?: CfpbSelect['name'];
   /**  */
-  title?: CfpbSelect["title"];
+  title?: CfpbSelect['title'];
   /**  */
-  value?: CfpbSelect["value"];
+  value?: CfpbSelect['value'];
   /**  */
-  maxlength?: CfpbSelect["maxlength"];
+  maxlength?: CfpbSelect['maxlength'];
   /**  */
-  placeholder?: CfpbSelect["placeholder"];
+  placeholder?: CfpbSelect['placeholder'];
   /**  */
-  "aria-label-input"?: CfpbSelect["ariaLabelInput"];
+  'aria-label-input'?: CfpbSelect['ariaLabelInput'];
   /**  */
-  ariaLabelInput?: CfpbSelect["ariaLabelInput"];
+  ariaLabelInput?: CfpbSelect['ariaLabelInput'];
   /**  */
-  "aria-label-list"?: CfpbSelect["ariaLabelList"];
+  'aria-label-list'?: CfpbSelect['ariaLabelList'];
   /**  */
-  ariaLabelList?: CfpbSelect["ariaLabelList"];
+  ariaLabelList?: CfpbSelect['ariaLabelList'];
   /**  */
-  open?: CfpbSelect["isExpanded"];
+  open?: CfpbSelect['isExpanded'];
   /**  */
-  isExpanded?: CfpbSelect["isExpanded"];
+  isExpanded?: CfpbSelect['isExpanded'];
   /**  */
-  selectedTexts?: CfpbSelect["selectedTexts"];
+  selectedTexts?: CfpbSelect['selectedTexts'];
   /**  */
-  optionList?: CfpbSelect["optionList"];
+  optionList?: CfpbSelect['optionList'];
   /**  */
-  options?: CfpbSelect["options"];
+  options?: CfpbSelect['options'];
 
   /**  */
   onexpandbegin?: (e: CustomEvent) => void;
@@ -865,43 +927,43 @@ export type CfpbSelectProps = {
 
 export type CfpbSelectSolidJsProps = {
   /**  */
-  "prop:multiple"?: CfpbSelect["multiple"];
+  'prop:multiple'?: CfpbSelect['multiple'];
   /**  */
-  "prop:disabled"?: CfpbSelect["disabled"];
+  'prop:disabled'?: CfpbSelect['disabled'];
   /**  */
-  "prop:validation"?: CfpbSelect["validation"];
+  'prop:validation'?: CfpbSelect['validation'];
   /**  */
-  "prop:label"?: CfpbSelect["label"];
+  'prop:label'?: CfpbSelect['label'];
   /**  */
-  "prop:name"?: CfpbSelect["name"];
+  'prop:name'?: CfpbSelect['name'];
   /**  */
-  "prop:title"?: CfpbSelect["title"];
+  'prop:title'?: CfpbSelect['title'];
   /**  */
-  "prop:value"?: CfpbSelect["value"];
+  'prop:value'?: CfpbSelect['value'];
   /**  */
-  "prop:maxlength"?: CfpbSelect["maxlength"];
+  'prop:maxlength'?: CfpbSelect['maxlength'];
   /**  */
-  "prop:placeholder"?: CfpbSelect["placeholder"];
+  'prop:placeholder'?: CfpbSelect['placeholder'];
   /**  */
-  "attr:aria-label-input"?: CfpbSelect["ariaLabelInput"];
+  'attr:aria-label-input'?: CfpbSelect['ariaLabelInput'];
   /**  */
-  "prop:ariaLabelInput"?: CfpbSelect["ariaLabelInput"];
+  'prop:ariaLabelInput'?: CfpbSelect['ariaLabelInput'];
   /**  */
-  "attr:aria-label-list"?: CfpbSelect["ariaLabelList"];
+  'attr:aria-label-list'?: CfpbSelect['ariaLabelList'];
   /**  */
-  "prop:ariaLabelList"?: CfpbSelect["ariaLabelList"];
+  'prop:ariaLabelList'?: CfpbSelect['ariaLabelList'];
   /**  */
-  "bool:open"?: CfpbSelect["isExpanded"];
+  'bool:open'?: CfpbSelect['isExpanded'];
   /**  */
-  "prop:isExpanded"?: CfpbSelect["isExpanded"];
+  'prop:isExpanded'?: CfpbSelect['isExpanded'];
   /**  */
-  "prop:selectedTexts"?: CfpbSelect["selectedTexts"];
+  'prop:selectedTexts'?: CfpbSelect['selectedTexts'];
   /**  */
-  "prop:optionList"?: CfpbSelect["optionList"];
+  'prop:optionList'?: CfpbSelect['optionList'];
   /**  */
-  "prop:options"?: CfpbSelect["options"];
+  'prop:options'?: CfpbSelect['options'];
   /**  */
-  "on:expandbegin"?: (e: CustomEvent) => void;
+  'on:expandbegin'?: (e: CustomEvent) => void;
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -911,21 +973,21 @@ export type CfpbSelectSolidJsProps = {
 
 export type CfpbTagFilterProps = {
   /**  */
-  for?: CfpbTagFilter["for"];
+  for?: CfpbTagFilter['for'];
   /**  */
-  value?: CfpbTagFilter["value"];
+  value?: CfpbTagFilter['value'];
 
   /**  */
-  "onitem-click"?: (e: CustomEvent) => void;
+  'onitem-click'?: (e: CustomEvent) => void;
 };
 
 export type CfpbTagFilterSolidJsProps = {
   /**  */
-  "prop:for"?: CfpbTagFilter["for"];
+  'prop:for'?: CfpbTagFilter['for'];
   /**  */
-  "prop:value"?: CfpbTagFilter["value"];
+  'prop:value'?: CfpbTagFilter['value'];
   /**  */
-  "on:item-click"?: (e: CustomEvent) => void;
+  'on:item-click'?: (e: CustomEvent) => void;
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -935,16 +997,16 @@ export type CfpbTagFilterSolidJsProps = {
 
 export type CfpbTagTopicProps = {
   /**  */
-  href?: CfpbTagTopic["href"];
+  href?: CfpbTagTopic['href'];
   /**  */
-  siblingOfJumpLink?: CfpbTagTopic["siblingOfJumpLink"];
+  siblingOfJumpLink?: CfpbTagTopic['siblingOfJumpLink'];
 };
 
 export type CfpbTagTopicSolidJsProps = {
   /**  */
-  "prop:href"?: CfpbTagTopic["href"];
+  'prop:href'?: CfpbTagTopic['href'];
   /**  */
-  "prop:siblingOfJumpLink"?: CfpbTagTopic["siblingOfJumpLink"];
+  'prop:siblingOfJumpLink'?: CfpbTagTopic['siblingOfJumpLink'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -954,12 +1016,12 @@ export type CfpbTagTopicSolidJsProps = {
 
 export type CfpbTaglineProps = {
   /**  */
-  isLarge?: CfpbTagline["isLarge"];
+  isLarge?: CfpbTagline['isLarge'];
 };
 
 export type CfpbTaglineSolidJsProps = {
   /**  */
-  "prop:isLarge"?: CfpbTagline["isLarge"];
+  'prop:isLarge'?: CfpbTagline['isLarge'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -975,6 +1037,9 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
+   * - `bg`: undefined
+   * - `border`: undefined
+   * - `icon-color`/`iconColor`: undefined
    * - `status`: undefined
    * - `message`: undefined
    * - `icon`: undefined (property only) (readonly)
@@ -991,7 +1056,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-alert": Partial<CfpbAlertProps & BaseProps<CfpbAlert> & BaseEvents>;
+  'cfpb-alert': Partial<CfpbAlertProps & BaseProps<CfpbAlert> & BaseEvents>;
 
   /**
    *
@@ -1004,10 +1069,10 @@ export type CustomElements = {
    * - `href`: undefined
    * - `disabled`: undefined
    * - `variant`: undefined
-   * - `iconLeft`: undefined
-   * - `iconRight`: undefined
-   * - `iconleftspin`/`isIconLeftSpin`: undefined
-   * - `iconrightspin`/`isIconRightSpin`: undefined
+   * - `icon-left`/`iconLeft`: undefined
+   * - `icon-right`/`iconRight`: undefined
+   * - `icon-left-spin`/`isIconLeftSpin`: undefined
+   * - `icon-right-spin`/`isIconRightSpin`: undefined
    * - `full-on-mobile`/`fullOnMobile`: undefined
    * - `flush-left`/`flushLeft`: undefined
    * - `flush-right`/`flushRight`: undefined
@@ -1026,7 +1091,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-button": Partial<CfpbButtonProps & BaseProps<CfpbButton> & BaseEvents>;
+  'cfpb-button': Partial<CfpbButtonProps & BaseProps<CfpbButton> & BaseEvents>;
 
   /**
    *
@@ -1050,42 +1115,8 @@ export type CustomElements = {
    * - `blur() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-checkbox-icon": Partial<
+  'cfpb-checkbox-icon': Partial<
     CfpbCheckboxIconProps & BaseProps<CfpbCheckboxIcon> & BaseEvents
-  >;
-
-  /**
-   *
-   *
-   * ## Attributes & Properties
-   *
-   * Component attributes and properties that can be applied to the element or by using JavaScript.
-   *
-   * - `accept`: undefined
-   * - `isDetailHidden`: undefined
-   * - `fileName`: undefined
-   * - `files`: undefined
-   *
-   * ## Events
-   *
-   * Events that will be emitted by the component.
-   *
-   * - `file-change`: undefined
-   *
-   * ## Slots
-   *
-   * Areas where markup can be added to the component.
-   *
-   * - `(default)`: The main content for the upload button.
-   *
-   * ## Methods
-   *
-   * Methods that can be called to access component functionality.
-   *
-   * - `init() => void`: undefined
-   */
-  "cfpb-file-upload.": Partial<
-    CfpbFileUploadProps & BaseProps<CfpbFileUpload> & BaseEvents
   >;
 
   /**
@@ -1119,8 +1150,42 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-expandable": Partial<
+  'cfpb-expandable': Partial<
     CfpbExpandableProps & BaseProps<CfpbExpandable> & BaseEvents
+  >;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
+   * - `accept`: undefined
+   * - `isDetailHidden`: undefined
+   * - `fileName`: undefined
+   * - `files`: undefined
+   *
+   * ## Events
+   *
+   * Events that will be emitted by the component.
+   *
+   * - `file-change`: undefined
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: The main content for the upload button.
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `init() => void`: undefined
+   */
+  'cfpb-file-upload.': Partial<
+    CfpbFileUploadProps & BaseProps<CfpbFileUpload> & BaseEvents
   >;
 
   /**
@@ -1132,7 +1197,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-flag-usa": Partial<
+  'cfpb-flag-usa': Partial<
     CfpbFlagUsaProps & BaseProps<CfpbFlagUsa> & BaseEvents
   >;
 
@@ -1158,7 +1223,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-form-alert": Partial<
+  'cfpb-form-alert': Partial<
     CfpbFormAlertProps & BaseProps<CfpbFormAlert> & BaseEvents
   >;
 
@@ -1197,45 +1262,8 @@ export type CustomElements = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-form-choice": Partial<
+  'cfpb-form-choice': Partial<
     CfpbFormChoiceProps & BaseProps<CfpbFormChoice> & BaseEvents
-  >;
-
-  /**
-   *
-   *
-   * ## Attributes & Properties
-   *
-   * Component attributes and properties that can be applied to the element or by using JavaScript.
-   *
-   * - `disabled`: undefined
-   * - `validation`: undefined
-   * - `label`: undefined
-   * - `name`: undefined
-   * - `title`: undefined
-   * - `value`: undefined
-   * - `maxlength`: undefined
-   * - `placeholder`: undefined
-   * - `aria-label-input`/`ariaLabelInput`: undefined
-   * - `aria-label-button`/`ariaLabelButton`: undefined
-   * - `searchList`: undefined
-   * - `isSearchDisabled`: undefined (property only) (readonly)
-   * - `isOverMaxLength`: undefined (property only) (readonly)
-   *
-   * ## Slots
-   *
-   * Areas where markup can be added to the component.
-   *
-   * - `(default)`: Slot for list of autocomplete items.
-   *
-   * ## Methods
-   *
-   * Methods that can be called to access component functionality.
-   *
-   * - `init() => void`: undefined
-   */
-  "cfpb-form-search": Partial<
-    CfpbFormSearchProps & BaseProps<CfpbFormSearch> & BaseEvents
   >;
 
   /**
@@ -1272,7 +1300,7 @@ export type CustomElements = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-form-search-input": Partial<
+  'cfpb-form-search-input': Partial<
     CfpbFormSearchInputProps & BaseProps<CfpbFormSearchInput> & BaseEvents
   >;
 
@@ -1283,9 +1311,25 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
+   * - `disabled`: undefined
+   * - `validation`: undefined
+   * - `label`: undefined
    * - `name`: undefined
-   * - `color`: undefined
-   * - `spin`: undefined
+   * - `title`: undefined
+   * - `value`: undefined
+   * - `maxlength`: undefined
+   * - `placeholder`: undefined
+   * - `aria-label-input`/`ariaLabelInput`: undefined
+   * - `aria-label-button`/`ariaLabelButton`: undefined
+   * - `searchList`: undefined
+   * - `isSearchDisabled`: undefined (property only) (readonly)
+   * - `isOverMaxLength`: undefined (property only) (readonly)
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: Slot for list of autocomplete items.
    *
    * ## Methods
    *
@@ -1293,7 +1337,9 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-icon": Partial<CfpbIconProps & BaseProps<CfpbIcon> & BaseEvents>;
+  'cfpb-form-search': Partial<
+    CfpbFormSearchProps & BaseProps<CfpbFormSearch> & BaseEvents
+  >;
 
   /**
    * This component represents a piece of text accompanied by an icon,
@@ -1303,12 +1349,12 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `disabled`: undefined
    * - `div-color`/`divColor`: undefined
-   * - `iconLeft`: undefined
-   * - `iconRight`: undefined
-   * - `iconleftspin`/`isIconLeftSpin`: undefined
-   * - `iconrightspin`/`isIconRightSpin`: undefined
+   * - `disabled`: undefined
+   * - `icon-left`/`iconLeft`: undefined
+   * - `icon-right`/`iconRight`: undefined
+   * - `icon-left-spin`/`isIconLeftSpin`: undefined
+   * - `icon-right-spin`/`isIconRightSpin`: undefined
    * - `has-div`/`hasDiv`: undefined
    * - `underline`: undefined
    * - `mobile-icon-align-end`/`mobileIconAlignEnd`: undefined
@@ -1326,9 +1372,28 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-icon-text": Partial<
+  'cfpb-icon-text': Partial<
     CfpbIconTextProps & BaseProps<CfpbIconText> & BaseEvents
   >;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
+   * - `color`: undefined
+   * - `name`: undefined
+   * - `spin`: undefined
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `init() => void`: undefined
+   */
+  'cfpb-icon': Partial<CfpbIconProps & BaseProps<CfpbIcon> & BaseEvents>;
 
   /**
    *
@@ -1353,7 +1418,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-label.": Partial<CfpbLabelProps & BaseProps<CfpbLabel> & BaseEvents>;
+  'cfpb-label.': Partial<CfpbLabelProps & BaseProps<CfpbLabel> & BaseEvents>;
 
   /**
    *
@@ -1365,6 +1430,9 @@ export type CustomElements = {
    * - `linkText`: undefined
    * - `linkAttributes`: undefined
    * - `link-variant`/`linkVariant`: undefined
+   * - `size`: undefined
+   * - `color-theme`/`colorTheme`: undefined
+   * - `no-underline`/`noUnderline`: undefined
    * - `no-top-border`/`noTopBorder`: undefined
    * - `inline`: undefined
    *
@@ -1381,42 +1449,7 @@ export type CustomElements = {
    * - `init() => void`: undefined
    * - `renderLink() => void`: undefined
    */
-  "cfpb-link.": Partial<CfpbLinkProps & BaseProps<CfpbLink> & BaseEvents>;
-
-  /**
-   *
-   *
-   * ## Attributes & Properties
-   *
-   * Component attributes and properties that can be applied to the element or by using JavaScript.
-   *
-   * - `childdata`/`childData`: undefined
-   * - `items`: undefined (property only) (readonly)
-   *
-   * ## Events
-   *
-   * Events that will be emitted by the component.
-   *
-   * - `item-click`: A tag was clicked.
-   * - `item-added`: A tag was added to the group.
-   * - `item-removed`: A tag was removed to the group.
-   *
-   * ## Slots
-   *
-   * Areas where markup can be added to the component.
-   *
-   * - `(default)`: Slot for the list of items in the list.
-   *
-   * ## Methods
-   *
-   * Methods that can be called to access component functionality.
-   *
-   * - `focus() => void`: undefined
-   * - `addTag(tag: HTMLElement, index: number = -1) => boolean`: Add a tag to the light and dark DOM.
-   * - `removeTag(tag: HTMLElement) => void`: Remove a filter tag from the light and dark DOM.
-   * - `init() => void`: undefined
-   */
-  "cfpb-list.": Partial<CfpbListProps & BaseProps<CfpbList> & BaseEvents>;
+  'cfpb-link.': Partial<CfpbLinkProps & BaseProps<CfpbLink> & BaseEvents>;
 
   /**
    *
@@ -1433,8 +1466,80 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-list-item.": Partial<
+  'cfpb-list-item.': Partial<
     CfpbListItemProps & BaseProps<CfpbListItem> & BaseEvents
+  >;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
+   * - `childdata`/`childData`: undefined
+   * - `color-theme`/`colorTheme`: undefined
+   * - `items`: undefined (property only) (readonly)
+   *
+   * ## Events
+   *
+   * Events that will be emitted by the component.
+   *
+   * - `item-click`: An item was clicked.
+   * - `item-added`: An item was added to the group.
+   * - `item-removed`: An item was removed to the group.
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: Slot for the list of items in the list.
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `focus() => void`: undefined
+   * - `addItem(item: HTMLElement, index: number = -1) => boolean`: Add a item to the light and dark DOM.
+   * - `removeItem(item: HTMLElement) => void`: Remove a filter item from the light and dark DOM.
+   * - `init() => void`: undefined
+   */
+  'cfpb-list.': Partial<CfpbListProps & BaseProps<CfpbList> & BaseEvents>;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
+   * - `type`: undefined
+   * - `checked`: undefined
+   * - `disabled`: undefined
+   * - `hidden`: undefined
+   * - `href`: undefined
+   * - `value`: undefined (property only)
+   *
+   * ## Events
+   *
+   * Events that will be emitted by the component.
+   *
+   * - `item-click`: undefined
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: The text for the list item.
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `init() => void`: undefined
+   */
+  'cfpb-listbox-item.': Partial<
+    CfpbListboxItemProps & BaseProps<CfpbListboxItem> & BaseEvents
   >;
 
   /**
@@ -1478,44 +1583,8 @@ export type CustomElements = {
    * Pass -1 to move focus to the list container (no active item).
    * - `init() => void`: undefined
    */
-  "cfpb-listbox.": Partial<
+  'cfpb-listbox.': Partial<
     CfpbListboxProps & BaseProps<CfpbListbox> & BaseEvents
-  >;
-
-  /**
-   *
-   *
-   * ## Attributes & Properties
-   *
-   * Component attributes and properties that can be applied to the element or by using JavaScript.
-   *
-   * - `type`: undefined
-   * - `checked`: undefined
-   * - `disabled`: undefined
-   * - `hidden`: undefined
-   * - `href`: undefined
-   * - `value`: undefined (property only)
-   *
-   * ## Events
-   *
-   * Events that will be emitted by the component.
-   *
-   * - `item-click`: undefined
-   *
-   * ## Slots
-   *
-   * Areas where markup can be added to the component.
-   *
-   * - `(default)`: The text for the list item.
-   *
-   * ## Methods
-   *
-   * Methods that can be called to access component functionality.
-   *
-   * - `init() => void`: undefined
-   */
-  "cfpb-listbox-item.": Partial<
-    CfpbListboxItemProps & BaseProps<CfpbListboxItem> & BaseEvents
   >;
 
   /**
@@ -1549,7 +1618,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-pagination": Partial<
+  'cfpb-pagination': Partial<
     CfpbPaginationProps & BaseProps<CfpbPagination> & BaseEvents
   >;
 
@@ -1594,7 +1663,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-select": Partial<CfpbSelectProps & BaseProps<CfpbSelect> & BaseEvents>;
+  'cfpb-select': Partial<CfpbSelectProps & BaseProps<CfpbSelect> & BaseEvents>;
 
   /**
    *
@@ -1625,7 +1694,7 @@ export type CustomElements = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-tag-filter": Partial<
+  'cfpb-tag-filter': Partial<
     CfpbTagFilterProps & BaseProps<CfpbTagFilter> & BaseEvents
   >;
 
@@ -1652,7 +1721,7 @@ export type CustomElements = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-tag-topic.": Partial<
+  'cfpb-tag-topic.': Partial<
     CfpbTagTopicProps & BaseProps<CfpbTagTopic> & BaseEvents
   >;
 
@@ -1677,7 +1746,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-tagline": Partial<
+  'cfpb-tagline': Partial<
     CfpbTaglineProps & BaseProps<CfpbTagline> & BaseEvents
   >;
 };
@@ -1690,6 +1759,9 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
+   * - `bg`: undefined
+   * - `border`: undefined
+   * - `icon-color`/`iconColor`: undefined
    * - `status`: undefined
    * - `message`: undefined
    * - `icon`: undefined (property only) (readonly)
@@ -1706,7 +1778,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-alert": Partial<
+  'cfpb-alert': Partial<
     CfpbAlertProps & CfpbAlertSolidJsProps & BaseProps<CfpbAlert> & BaseEvents
   >;
 
@@ -1721,10 +1793,10 @@ export type CustomElementsSolidJs = {
    * - `href`: undefined
    * - `disabled`: undefined
    * - `variant`: undefined
-   * - `iconLeft`: undefined
-   * - `iconRight`: undefined
-   * - `iconleftspin`/`isIconLeftSpin`: undefined
-   * - `iconrightspin`/`isIconRightSpin`: undefined
+   * - `icon-left`/`iconLeft`: undefined
+   * - `icon-right`/`iconRight`: undefined
+   * - `icon-left-spin`/`isIconLeftSpin`: undefined
+   * - `icon-right-spin`/`isIconRightSpin`: undefined
    * - `full-on-mobile`/`fullOnMobile`: undefined
    * - `flush-left`/`flushLeft`: undefined
    * - `flush-right`/`flushRight`: undefined
@@ -1743,7 +1815,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-button": Partial<
+  'cfpb-button': Partial<
     CfpbButtonProps &
       CfpbButtonSolidJsProps &
       BaseProps<CfpbButton> &
@@ -1772,47 +1844,10 @@ export type CustomElementsSolidJs = {
    * - `blur() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-checkbox-icon": Partial<
+  'cfpb-checkbox-icon': Partial<
     CfpbCheckboxIconProps &
       CfpbCheckboxIconSolidJsProps &
       BaseProps<CfpbCheckboxIcon> &
-      BaseEvents
-  >;
-
-  /**
-   *
-   *
-   * ## Attributes & Properties
-   *
-   * Component attributes and properties that can be applied to the element or by using JavaScript.
-   *
-   * - `accept`: undefined
-   * - `isDetailHidden`: undefined
-   * - `fileName`: undefined
-   * - `files`: undefined
-   *
-   * ## Events
-   *
-   * Events that will be emitted by the component.
-   *
-   * - `file-change`: undefined
-   *
-   * ## Slots
-   *
-   * Areas where markup can be added to the component.
-   *
-   * - `(default)`: The main content for the upload button.
-   *
-   * ## Methods
-   *
-   * Methods that can be called to access component functionality.
-   *
-   * - `init() => void`: undefined
-   */
-  "cfpb-file-upload.": Partial<
-    CfpbFileUploadProps &
-      CfpbFileUploadSolidJsProps &
-      BaseProps<CfpbFileUpload> &
       BaseEvents
   >;
 
@@ -1847,10 +1882,47 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-expandable": Partial<
+  'cfpb-expandable': Partial<
     CfpbExpandableProps &
       CfpbExpandableSolidJsProps &
       BaseProps<CfpbExpandable> &
+      BaseEvents
+  >;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
+   * - `accept`: undefined
+   * - `isDetailHidden`: undefined
+   * - `fileName`: undefined
+   * - `files`: undefined
+   *
+   * ## Events
+   *
+   * Events that will be emitted by the component.
+   *
+   * - `file-change`: undefined
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: The main content for the upload button.
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `init() => void`: undefined
+   */
+  'cfpb-file-upload.': Partial<
+    CfpbFileUploadProps &
+      CfpbFileUploadSolidJsProps &
+      BaseProps<CfpbFileUpload> &
       BaseEvents
   >;
 
@@ -1863,7 +1935,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-flag-usa": Partial<
+  'cfpb-flag-usa': Partial<
     CfpbFlagUsaProps &
       CfpbFlagUsaSolidJsProps &
       BaseProps<CfpbFlagUsa> &
@@ -1892,7 +1964,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-form-alert": Partial<
+  'cfpb-form-alert': Partial<
     CfpbFormAlertProps &
       CfpbFormAlertSolidJsProps &
       BaseProps<CfpbFormAlert> &
@@ -1934,50 +2006,10 @@ export type CustomElementsSolidJs = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-form-choice": Partial<
+  'cfpb-form-choice': Partial<
     CfpbFormChoiceProps &
       CfpbFormChoiceSolidJsProps &
       BaseProps<CfpbFormChoice> &
-      BaseEvents
-  >;
-
-  /**
-   *
-   *
-   * ## Attributes & Properties
-   *
-   * Component attributes and properties that can be applied to the element or by using JavaScript.
-   *
-   * - `disabled`: undefined
-   * - `validation`: undefined
-   * - `label`: undefined
-   * - `name`: undefined
-   * - `title`: undefined
-   * - `value`: undefined
-   * - `maxlength`: undefined
-   * - `placeholder`: undefined
-   * - `aria-label-input`/`ariaLabelInput`: undefined
-   * - `aria-label-button`/`ariaLabelButton`: undefined
-   * - `searchList`: undefined
-   * - `isSearchDisabled`: undefined (property only) (readonly)
-   * - `isOverMaxLength`: undefined (property only) (readonly)
-   *
-   * ## Slots
-   *
-   * Areas where markup can be added to the component.
-   *
-   * - `(default)`: Slot for list of autocomplete items.
-   *
-   * ## Methods
-   *
-   * Methods that can be called to access component functionality.
-   *
-   * - `init() => void`: undefined
-   */
-  "cfpb-form-search": Partial<
-    CfpbFormSearchProps &
-      CfpbFormSearchSolidJsProps &
-      BaseProps<CfpbFormSearch> &
       BaseEvents
   >;
 
@@ -2015,7 +2047,7 @@ export type CustomElementsSolidJs = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-form-search-input": Partial<
+  'cfpb-form-search-input': Partial<
     CfpbFormSearchInputProps &
       CfpbFormSearchInputSolidJsProps &
       BaseProps<CfpbFormSearchInput> &
@@ -2029,9 +2061,25 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
+   * - `disabled`: undefined
+   * - `validation`: undefined
+   * - `label`: undefined
    * - `name`: undefined
-   * - `color`: undefined
-   * - `spin`: undefined
+   * - `title`: undefined
+   * - `value`: undefined
+   * - `maxlength`: undefined
+   * - `placeholder`: undefined
+   * - `aria-label-input`/`ariaLabelInput`: undefined
+   * - `aria-label-button`/`ariaLabelButton`: undefined
+   * - `searchList`: undefined
+   * - `isSearchDisabled`: undefined (property only) (readonly)
+   * - `isOverMaxLength`: undefined (property only) (readonly)
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: Slot for list of autocomplete items.
    *
    * ## Methods
    *
@@ -2039,8 +2087,11 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-icon": Partial<
-    CfpbIconProps & CfpbIconSolidJsProps & BaseProps<CfpbIcon> & BaseEvents
+  'cfpb-form-search': Partial<
+    CfpbFormSearchProps &
+      CfpbFormSearchSolidJsProps &
+      BaseProps<CfpbFormSearch> &
+      BaseEvents
   >;
 
   /**
@@ -2051,12 +2102,12 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `disabled`: undefined
    * - `div-color`/`divColor`: undefined
-   * - `iconLeft`: undefined
-   * - `iconRight`: undefined
-   * - `iconleftspin`/`isIconLeftSpin`: undefined
-   * - `iconrightspin`/`isIconRightSpin`: undefined
+   * - `disabled`: undefined
+   * - `icon-left`/`iconLeft`: undefined
+   * - `icon-right`/`iconRight`: undefined
+   * - `icon-left-spin`/`isIconLeftSpin`: undefined
+   * - `icon-right-spin`/`isIconRightSpin`: undefined
    * - `has-div`/`hasDiv`: undefined
    * - `underline`: undefined
    * - `mobile-icon-align-end`/`mobileIconAlignEnd`: undefined
@@ -2074,11 +2125,32 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-icon-text": Partial<
+  'cfpb-icon-text': Partial<
     CfpbIconTextProps &
       CfpbIconTextSolidJsProps &
       BaseProps<CfpbIconText> &
       BaseEvents
+  >;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
+   * - `color`: undefined
+   * - `name`: undefined
+   * - `spin`: undefined
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `init() => void`: undefined
+   */
+  'cfpb-icon': Partial<
+    CfpbIconProps & CfpbIconSolidJsProps & BaseProps<CfpbIcon> & BaseEvents
   >;
 
   /**
@@ -2104,7 +2176,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-label.": Partial<
+  'cfpb-label.': Partial<
     CfpbLabelProps & CfpbLabelSolidJsProps & BaseProps<CfpbLabel> & BaseEvents
   >;
 
@@ -2118,6 +2190,9 @@ export type CustomElementsSolidJs = {
    * - `linkText`: undefined
    * - `linkAttributes`: undefined
    * - `link-variant`/`linkVariant`: undefined
+   * - `size`: undefined
+   * - `color-theme`/`colorTheme`: undefined
+   * - `no-underline`/`noUnderline`: undefined
    * - `no-top-border`/`noTopBorder`: undefined
    * - `inline`: undefined
    *
@@ -2134,45 +2209,8 @@ export type CustomElementsSolidJs = {
    * - `init() => void`: undefined
    * - `renderLink() => void`: undefined
    */
-  "cfpb-link.": Partial<
+  'cfpb-link.': Partial<
     CfpbLinkProps & CfpbLinkSolidJsProps & BaseProps<CfpbLink> & BaseEvents
-  >;
-
-  /**
-   *
-   *
-   * ## Attributes & Properties
-   *
-   * Component attributes and properties that can be applied to the element or by using JavaScript.
-   *
-   * - `childdata`/`childData`: undefined
-   * - `items`: undefined (property only) (readonly)
-   *
-   * ## Events
-   *
-   * Events that will be emitted by the component.
-   *
-   * - `item-click`: A tag was clicked.
-   * - `item-added`: A tag was added to the group.
-   * - `item-removed`: A tag was removed to the group.
-   *
-   * ## Slots
-   *
-   * Areas where markup can be added to the component.
-   *
-   * - `(default)`: Slot for the list of items in the list.
-   *
-   * ## Methods
-   *
-   * Methods that can be called to access component functionality.
-   *
-   * - `focus() => void`: undefined
-   * - `addTag(tag: HTMLElement, index: number = -1) => boolean`: Add a tag to the light and dark DOM.
-   * - `removeTag(tag: HTMLElement) => void`: Remove a filter tag from the light and dark DOM.
-   * - `init() => void`: undefined
-   */
-  "cfpb-list.": Partial<
-    CfpbListProps & CfpbListSolidJsProps & BaseProps<CfpbList> & BaseEvents
   >;
 
   /**
@@ -2190,10 +2228,87 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-list-item.": Partial<
+  'cfpb-list-item.': Partial<
     CfpbListItemProps &
       CfpbListItemSolidJsProps &
       BaseProps<CfpbListItem> &
+      BaseEvents
+  >;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
+   * - `childdata`/`childData`: undefined
+   * - `color-theme`/`colorTheme`: undefined
+   * - `items`: undefined (property only) (readonly)
+   *
+   * ## Events
+   *
+   * Events that will be emitted by the component.
+   *
+   * - `item-click`: An item was clicked.
+   * - `item-added`: An item was added to the group.
+   * - `item-removed`: An item was removed to the group.
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: Slot for the list of items in the list.
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `focus() => void`: undefined
+   * - `addItem(item: HTMLElement, index: number = -1) => boolean`: Add a item to the light and dark DOM.
+   * - `removeItem(item: HTMLElement) => void`: Remove a filter item from the light and dark DOM.
+   * - `init() => void`: undefined
+   */
+  'cfpb-list.': Partial<
+    CfpbListProps & CfpbListSolidJsProps & BaseProps<CfpbList> & BaseEvents
+  >;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
+   * - `type`: undefined
+   * - `checked`: undefined
+   * - `disabled`: undefined
+   * - `hidden`: undefined
+   * - `href`: undefined
+   * - `value`: undefined (property only)
+   *
+   * ## Events
+   *
+   * Events that will be emitted by the component.
+   *
+   * - `item-click`: undefined
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: The text for the list item.
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `init() => void`: undefined
+   */
+  'cfpb-listbox-item.': Partial<
+    CfpbListboxItemProps &
+      CfpbListboxItemSolidJsProps &
+      BaseProps<CfpbListboxItem> &
       BaseEvents
   >;
 
@@ -2238,49 +2353,10 @@ export type CustomElementsSolidJs = {
    * Pass -1 to move focus to the list container (no active item).
    * - `init() => void`: undefined
    */
-  "cfpb-listbox.": Partial<
+  'cfpb-listbox.': Partial<
     CfpbListboxProps &
       CfpbListboxSolidJsProps &
       BaseProps<CfpbListbox> &
-      BaseEvents
-  >;
-
-  /**
-   *
-   *
-   * ## Attributes & Properties
-   *
-   * Component attributes and properties that can be applied to the element or by using JavaScript.
-   *
-   * - `type`: undefined
-   * - `checked`: undefined
-   * - `disabled`: undefined
-   * - `hidden`: undefined
-   * - `href`: undefined
-   * - `value`: undefined (property only)
-   *
-   * ## Events
-   *
-   * Events that will be emitted by the component.
-   *
-   * - `item-click`: undefined
-   *
-   * ## Slots
-   *
-   * Areas where markup can be added to the component.
-   *
-   * - `(default)`: The text for the list item.
-   *
-   * ## Methods
-   *
-   * Methods that can be called to access component functionality.
-   *
-   * - `init() => void`: undefined
-   */
-  "cfpb-listbox-item.": Partial<
-    CfpbListboxItemProps &
-      CfpbListboxItemSolidJsProps &
-      BaseProps<CfpbListboxItem> &
       BaseEvents
   >;
 
@@ -2315,7 +2391,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-pagination": Partial<
+  'cfpb-pagination': Partial<
     CfpbPaginationProps &
       CfpbPaginationSolidJsProps &
       BaseProps<CfpbPagination> &
@@ -2363,7 +2439,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-select": Partial<
+  'cfpb-select': Partial<
     CfpbSelectProps &
       CfpbSelectSolidJsProps &
       BaseProps<CfpbSelect> &
@@ -2399,7 +2475,7 @@ export type CustomElementsSolidJs = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-tag-filter": Partial<
+  'cfpb-tag-filter': Partial<
     CfpbTagFilterProps &
       CfpbTagFilterSolidJsProps &
       BaseProps<CfpbTagFilter> &
@@ -2429,7 +2505,7 @@ export type CustomElementsSolidJs = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  "cfpb-tag-topic.": Partial<
+  'cfpb-tag-topic.': Partial<
     CfpbTagTopicProps &
       CfpbTagTopicSolidJsProps &
       BaseProps<CfpbTagTopic> &
@@ -2457,7 +2533,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  "cfpb-tagline": Partial<
+  'cfpb-tagline': Partial<
     CfpbTaglineProps &
       CfpbTaglineSolidJsProps &
       BaseProps<CfpbTagline> &
@@ -2467,49 +2543,49 @@ export type CustomElementsSolidJs = {
 
 export type CustomCssProperties = {};
 
-declare module "react" {
+declare module 'react' {
   namespace JSX {
     interface IntrinsicElements extends CustomElements {}
   }
   export interface CSSProperties extends CustomCssProperties {}
 }
 
-declare module "preact" {
+declare module 'preact' {
   namespace JSX {
     interface IntrinsicElements extends CustomElements {}
   }
   export interface CSSProperties extends CustomCssProperties {}
 }
 
-declare module "@builder.io/qwik" {
+declare module '@builder.io/qwik' {
   namespace JSX {
     interface IntrinsicElements extends CustomElements {}
   }
   export interface CSSProperties extends CustomCssProperties {}
 }
 
-declare module "@stencil/core" {
+declare module '@stencil/core' {
   namespace JSX {
     interface IntrinsicElements extends CustomElements {}
   }
   export interface CSSProperties extends CustomCssProperties {}
 }
 
-declare module "hono/jsx" {
+declare module 'hono/jsx' {
   namespace JSX {
     interface IntrinsicElements extends CustomElements {}
   }
   export interface CSSProperties extends CustomCssProperties {}
 }
 
-declare module "react-native" {
+declare module 'react-native' {
   namespace JSX {
     interface IntrinsicElements extends CustomElements {}
   }
   export interface CSSProperties extends CustomCssProperties {}
 }
 
-declare module "solid-js" {
+declare module 'solid-js' {
   namespace JSX {
     interface IntrinsicElements extends CustomElementsSolidJs {}
   }

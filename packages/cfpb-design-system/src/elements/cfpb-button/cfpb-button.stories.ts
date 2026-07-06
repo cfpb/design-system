@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import type { Meta, StoryObj } from '@storybook/web-components';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
 import type { CfpbButtonProps } from '../../../../../storybook/custom-elements-types';
 import { CfpbButton } from './index.js';
@@ -33,11 +33,11 @@ const meta: Meta<ButtonStoryArgs> = {
       control: 'select',
       options: ['primary', 'secondary', 'warning'],
     },
-    iconLeft: {
+    'icon-left': {
       control: 'select',
       options: ['', ...iconNames],
     },
-    iconRight: {
+    'icon-right': {
       control: 'select',
       options: ['', ...iconNames],
     },
@@ -72,14 +72,14 @@ export const AsLink: Story = {
 
 export const WithIcon: Story = {
   args: {
-    iconRight: 'download',
+    'icon-right': 'download',
   },
 };
 
 export const WithSpinningIcon: Story = {
   args: {
-    iconLeft: 'updating',
-    iconleftspin: true,
+    'icon-left': 'update',
+    'icon-left-spin': true,
   },
 };
 

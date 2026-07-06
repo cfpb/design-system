@@ -1,5 +1,5 @@
-/// reference ftyps="vite/client" />
-import type { Meta, StoryObj } from '@storybook/web-components';
+/// reference types="vite/client" />
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { fn, userEvent, expect } from 'storybook/test';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
 import type { CfpbTagFilterProps } from '../../../../../storybook/custom-elements-types.d.ts';
@@ -16,6 +16,7 @@ type TagFilterStoryArgs = CfpbTagFilterProps & { 'default-slot'?: string };
 
 const meta: Meta<TagFilterStoryArgs> = {
   title: 'Web Components/cfpb-tag-filter',
+  component: 'cfpb-tag-filter',
   tags: ['autodocs'],
   args: {
     ...args,

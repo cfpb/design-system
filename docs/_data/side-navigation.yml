@@ -110,6 +110,7 @@ first-level:
           - page: Getting Started
           - page: Integrating the Design System into your project
           - page: Reference for component states
+          - page: Web Component Storybook
       - heading: Layout
         nav-items:
           - page: Blocks

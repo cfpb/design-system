@@ -1,4 +1,5 @@
-import path from 'path';
+import { fileURLToPath } from 'node:url';
+import path, { dirname } from 'path';
 import { mergeConfig } from 'vite';
 
 export default {
@@ -7,18 +8,17 @@ export default {
   ],
 
   addons: [
-    '@storybook/addon-docs',
-    '@storybook/addon-vitest',
-    '@storybook/addon-a11y'
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-vitest'),
+    getAbsolutePath('@storybook/addon-a11y'),
   ],
 
   framework: {
-    name: '@storybook/web-components-vite',
+    name: getAbsolutePath('@storybook/web-components-vite'),
     options: {},
   },
 
   docs: {
-    autodocs: 'tag',
     defaultName: 'Overview',
   },
 
@@ -58,3 +58,7 @@ export default {
     });
   },
 };
+
+function getAbsolutePath(value) {
+  return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
+}

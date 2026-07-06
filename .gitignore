@@ -88,3 +88,4 @@ docs/_site
 **/.jekyll-cache/
 .jekyll-metadata
 Gemfile.lock
+/storybook-static

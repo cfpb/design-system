@@ -58,24 +58,24 @@ export class CfpbExpandable extends LitElement {
 
     this.#flyoutMenu.init(this.isExpanded);
 
-    const _opts = { detail: { target: this }, bubbles: true, composed: true };
+    const opts = { detail: { target: this }, bubbles: true, composed: true };
 
     // Add events.
     this.#flyoutMenu.addEventListener('expandbegin', () => {
       this.isExpanded = true;
       contentDom.classList.remove('u-hidden');
-      this.dispatchEvent(new CustomEvent('expandbegin', _opts));
+      this.dispatchEvent(new CustomEvent('expandbegin', opts));
     });
     this.#flyoutMenu.addEventListener('expandend', () => {
-      this.dispatchEvent(new CustomEvent('expandend', _opts));
+      this.dispatchEvent(new CustomEvent('expandend', opts));
     });
     this.#flyoutMenu.addEventListener('collapsebegin', () => {
-      this.dispatchEvent(new CustomEvent('collapsebegin', _opts));
+      this.dispatchEvent(new CustomEvent('collapsebegin', opts));
     });
     this.#flyoutMenu.addEventListener('collapseend', () => {
       this.isExpanded = false;
       contentDom.classList.add('u-hidden');
-      this.dispatchEvent(new CustomEvent('collapseend', _opts));
+      this.dispatchEvent(new CustomEvent('collapseend', opts));
     });
   }
 

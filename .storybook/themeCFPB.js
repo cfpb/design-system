@@ -24,7 +24,7 @@ export default create({
   textMutedColor: token('--black'),
 
   // Toolbars
-  colorSecondary: token('--gray-10'),
+  colorSecondary: token('--teal'),
   barTextColor: token('--gray-40'),
   barSelectedColor: token('--teal'),
   barBg: token('--gray-10'),

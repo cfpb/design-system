@@ -2,10 +2,8 @@
    Design System
    ========================================================================== */
 
-// Import Design System packages.
-@use '@cfpb/cfpb-design-system/src/abstracts' as *;
-@use '@cfpb/cfpb-design-system/src/base' as *;
-@use '@cfpb/cfpb-design-system/dist/index.css' as *;
+// Import Design System.
+@use '@cfpb/cfpb-design-system/src' as *;
 
 // Custom modules.
 @use 'sidebar' as *;

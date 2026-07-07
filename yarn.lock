@@ -296,6 +296,7 @@ __metadata:
   resolution: "@cfpb/cfpb-design-system@workspace:packages/cfpb-design-system"
   dependencies:
     "@fontsource-variable/source-sans-3": "npm:5.2.9"
+    lit: "npm:3.3.3"
     tippy.js: "npm:6.3.7"
   languageName: unknown
   linkType: soft

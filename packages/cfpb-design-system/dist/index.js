@@ -1110,15 +1110,15 @@ var ot = (e) => {
 	render() {
 		return j`<span class="wrap">
       ${this.iconLeft ? j`<cfpb-icon
-              name="${this.iconLeft}"
-              ?spin=${this.isIconLeftSpin}
-            ></cfpb-icon
-            ><span class="div"></span>` : ""}
+                name="${this.iconLeft}"
+                ?spin=${this.isIconLeftSpin}
+              ></cfpb-icon
+              ><span class="div"></span>` : ""}
       <span class="text"><slot></slot></span>${this.iconRight ? j` <span class="div"></span
-            ><cfpb-icon
-              name="${this.iconRight}"
-              ?spin=${this.isIconRightSpin}
-            ></cfpb-icon>` : ""}
+              ><cfpb-icon
+                name="${this.iconRight}"
+                ?spin=${this.isIconRightSpin}
+              ></cfpb-icon>` : ""}
     </span>`;
 	}
 	static init() {

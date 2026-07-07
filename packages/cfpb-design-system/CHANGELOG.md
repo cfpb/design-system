@@ -2,7 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.7.0](https://github.com/cfpb/design-system/compare/v5.6.2..v5.7.0) - June 18, 2026
+## [5.8.0](https://github.com/cfpb/design-system/compare/v5.7.0..v5.8.0) - July  7, 2026
+
+### PRs in this release
+
+- PR #[2721](https://github.com/cfpb/design-system/pull/2721): Add shared theme properties config - Ans
+- PR #[2723](https://github.com/cfpb/design-system/pull/2723): Bump liquidjs, autoprefixer, cypress, eslint, eslint-plugin-jsdoc, globals, prettier, release-it, style-dictionary, stylelint, vite, yarn - Ans
+- PR #[2729](https://github.com/cfpb/design-system/pull/2729): Update addTag/removeTag to be addItem/removeItem - Ans
+- PR #[2730](https://github.com/cfpb/design-system/pull/2730): Simplify alert icon map - Ans
+- PR #[2733](https://github.com/cfpb/design-system/pull/2733): Remove `applyThemeProperties` utility - Ans
+- PR #[2734](https://github.com/cfpb/design-system/pull/2734): Add lit@3.3.3 as a dependency - Ans
+
+### General
+
+- Add shared theme properties config - ([88c7f75](https://github.com/cfpb/design-system/commit/88c7f75a8c628706665c5fa24180a88c704e0c38)) - Ans
+- Linter fixes - ([5b93d6a](https://github.com/cfpb/design-system/commit/5b93d6afcd501a25d3ad60ba0b024d50063bea51)) - Ans
+- Autolint files - ([361294b](https://github.com/cfpb/design-system/commit/361294b9f744b6bd79ab8c8839a1bbe98c206569)) - Ans
+- Lint cfpb-select/index.js - ([429b923](https://github.com/cfpb/design-system/commit/429b92334b11158d4a54ac9c3f64a084aef9381b)) - Ans
+- Rebuild index.js - ([e9e25e0](https://github.com/cfpb/design-system/commit/e9e25e04dccca2a05e1b12769cde930e84202c08)) - Ans
+- Update addTag/removeTag to be addItem/removeItem - ([83fdf1a](https://github.com/cfpb/design-system/commit/83fdf1af49657314b443a0c61bfc7ba8cfb79bdf)) - Ans
+- Simplify alert icon map - ([9cefd3e](https://github.com/cfpb/design-system/commit/9cefd3e1cbb05d3db6fb6238cf8200661e430b21)) - Ans
+- Remove `applyThemeProperties` utility - ([081f8a3](https://github.com/cfpb/design-system/commit/081f8a360c09652564e5a0b4e4df1eabfeeb4fdc)) - Ans
+- Add lit@3.3.3 as a dependency - ([8ee7747](https://github.com/cfpb/design-system/commit/8ee7747044837a81fae03ae1ed8ec249ebe459b6)) - Ans
+- Rebuild assets - ([99df580](https://github.com/cfpb/design-system/commit/99df580a9d4c5308f77e105d23cf3f7b5568e762)) - Ans
+
+## [5.7.0](https://github.com/cfpb/design-system/compare/v5.6.2..vv5.7.0) - June 18, 2026
 
 ### PRs in this release
 

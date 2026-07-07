@@ -1,8 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import {
-  applyThemeProperties,
-  defineComponent,
-} from '../utilities/shared-config';
+import { defineComponent } from '../utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { CfpbIcon } from '../cfpb-icon';
 
@@ -17,10 +14,7 @@ export class CfpbIconText extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
-  static themeProperties = ['divColor'];
-
   /**
-   * @property {boolean} divColor - The color of the divider between the icon/text.
    * @property {boolean} disabled - Apply disabled styles or not.
    * @property {string} iconLeft - The name of the icon on the left.
    * @property {string} iconRight - The name of the icon on the right.
@@ -33,7 +27,6 @@ export class CfpbIconText extends LitElement {
    * @returns {object} The map of properties.
    */
   static properties = {
-    divColor: { type: String, attribute: 'div-color', reflect: true },
     disabled: { type: Boolean, reflect: true },
     iconLeft: { type: String, attribute: 'icon-left' },
     iconRight: { type: String, attribute: 'icon-right' },
@@ -57,10 +50,6 @@ export class CfpbIconText extends LitElement {
     this.disabled = false;
     this.isIconLeftSpin = false;
     this.isIconRightSpin = false;
-  }
-
-  updated(changed) {
-    applyThemeProperties(this, changed);
   }
 
   render() {

@@ -15,18 +15,18 @@ variation_groups:
             <p>Color set via property on component:</p>
 
             <cfpb-icon name="approved" />
-            <cfpb-icon name="approved" color="gray" />
-            <cfpb-icon name="approved" color="red" />
-            <cfpb-icon name="approved" color="gold" />
-            <cfpb-icon name="approved" color="green" />
+            <cfpb-icon name="approved" style="--icon-color: var(--gray)" />
+            <cfpb-icon name="approved" style="--icon-color: var(--red)" />
+            <cfpb-icon name="approved" style="--icon-color: var(--gold)" />
+            <cfpb-icon name="approved" style="--icon-color: var(--green)" />
 
             <br>
 
             <cfpb-icon name="error-round" />
-            <cfpb-icon name="error-round" color="gray-80" />
-            <cfpb-icon name="error-round" color="red-60" />
-            <cfpb-icon name="error-round" color="gold-40" />
-            <cfpb-icon name="error-round" color="green-20" />
+            <cfpb-icon name="error-round" style="--icon-color: var(--gray-80)" />
+            <cfpb-icon name="error-round" style="--icon-color: var(--red-60)" />
+            <cfpb-icon name="error-round" style="--icon-color: var(--gold-40)" />
+            <cfpb-icon name="error-round" style="--icon-color: var(--green-20)" />
 
             <br>
             <br>
@@ -45,18 +45,18 @@ variation_groups:
         variation_code_snippet: >-
           <div>
             <cfpb-icon name="approved" />
-            <cfpb-icon name="approved" color="gray" />
-            <cfpb-icon name="approved" color="red" />
-            <cfpb-icon name="approved" color="gold" />
-            <cfpb-icon name="approved" color="green" />
+            <cfpb-icon name="approved" style="--icon-color: var(--gray)" />
+            <cfpb-icon name="approved" style="--icon-color: var(--red)" />
+            <cfpb-icon name="approved" style="--icon-color: var(--gold)" />
+            <cfpb-icon name="approved" style="--icon-color: var(--green)" />
 
             <br>
 
             <cfpb-icon name="error-round" />
-            <cfpb-icon name="error-round" color="gray-80" />
-            <cfpb-icon name="error-round" color="red-60" />
-            <cfpb-icon name="error-round" color="gold-40" />
-            <cfpb-icon name="error-round" color="green-20" />
+            <cfpb-icon name="error-round" style="--icon-color: var(--gray-80)" />
+            <cfpb-icon name="error-round" style="--icon-color: var(--red-60)" />
+            <cfpb-icon name="error-round" style="--icon-color: var(--gold-40)" />
+            <cfpb-icon name="error-round" style="--icon-color: var(--green-20)" />
 
             <br>
 
@@ -259,7 +259,7 @@ variation_groups:
 
             <br>
 
-            <cfpb-icon-text has-div div-color="red-60" icon-left="warning">Warning state</cfpb-icon-text>
+            <cfpb-icon-text has-div style="--icon-text-div-color: var(--red-60)" icon-left="warning">Warning state</cfpb-icon-text>
 
             <br>
 
@@ -350,10 +350,10 @@ variation_groups:
             });
 
             warBtn.addEventListener('click', () => {
-              if (iconTextEx.hasAttribute('div-color')) {
-                iconTextEx.removeAttribute('div-color');
+              if (iconTextEx.hasAttribute('style')) {
+                iconTextEx.removeAttribute('style');
               } else {
-                iconTextEx.divColor = 'red-60';
+                iconTextEx.style = '--icon-text-div-color: var(--red-60)';
               }
             });
 

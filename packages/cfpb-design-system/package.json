@@ -39,6 +39,7 @@
   "type": "module",
   "dependencies": {
     "@fontsource-variable/source-sans-3": "5.2.9",
+    "lit": "3.3.3",
     "tippy.js": "6.3.7"
   }
 }

@@ -1,8 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import {
-  applyThemeProperties,
-  defineComponent,
-} from '../utilities/shared-config';
+import { defineComponent } from '../utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { CfpbIcon } from '../cfpb-icon';
 import { CfpbList } from '../cfpb-list';
@@ -16,20 +13,12 @@ export class CfpbAlert extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
-  static themeProperties = ['iconColor', 'border', 'bg'];
-
   /**
-   * @property {string} bg - The background color.
-   * @property {string} border - The border color.
-   * @property {string} iconColor - The icon color.
    * @property {string} status - The alert status: error, success, warning, info, loading.
    * @property {string} message - The message heading on an alert.
    * @returns {object} The map of properties.
    */
   static properties = {
-    bg: { type: String },
-    border: { type: String },
-    iconColor: { type: String, attribute: 'icon-color' },
     status: { type: String },
     message: { type: String },
   };
@@ -38,10 +27,6 @@ export class CfpbAlert extends LitElement {
     super();
     this.status = 'info';
     this.message = 'Alert';
-  }
-
-  updated(changed) {
-    applyThemeProperties(this, changed);
   }
 
   get icon() {

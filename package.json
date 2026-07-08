@@ -41,7 +41,7 @@
     "tokens": "style-dictionary build --config ./style-dictionary.config.js && yarn lint \"packages/cfpb-design-system/src/elements/**/*.css\"",
     "storybook": "yarn analyze && storybook dev -p 6006",
     "build-storybook": "yarn analyze && storybook build",
-    "analyze": "cem analyze"
+    "analyze": "cem analyze && prettier --write storybook/custom-elements-types.d.ts storybook/custom-elements.json"
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {

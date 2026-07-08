@@ -1,5 +1,6 @@
 // Global design system styles
 @use '../packages/cfpb-design-system/src/base' as *;
 
-// Load @font-face mixin and activate the branded font
-@include licensed-font('/fonts');
+:root {
+  --font-stack-branded: 'Source Sans 3 Variable', arial, sans-serif;
+}

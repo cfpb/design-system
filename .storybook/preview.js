@@ -1,6 +1,7 @@
 import { setCustomElementsManifest } from '@storybook/web-components';
 import { setStorybookHelpersConfig } from '@wc-toolkit/storybook-helpers';
 import customElements from '../storybook/custom-elements.json';
+import '@fontsource-variable/source-sans-3';
 import './preview.scss';
 import themeCFPB from './themeCFPB';
 

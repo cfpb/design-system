@@ -4979,7 +4979,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "../abstracts"
+            "module": "packages/cfpb-design-system/src/abstracts"
           }
         },
         {
@@ -4987,7 +4987,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./utilities"
+            "module": "packages/cfpb-design-system/src/elements/utilities"
           }
         },
         {
@@ -4995,7 +4995,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-alert"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-alert"
           }
         },
         {
@@ -5003,7 +5003,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-button"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-button"
           }
         },
         {
@@ -5011,7 +5011,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-form-alert"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-form-alert"
           }
         },
         {
@@ -5019,7 +5019,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-expandable"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-expandable"
           }
         },
         {
@@ -5027,7 +5027,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-form-choice"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-form-choice"
           }
         },
         {
@@ -5035,7 +5035,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-file-upload"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-file-upload"
           }
         },
         {
@@ -5043,7 +5043,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-icon"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-icon"
           }
         },
         {
@@ -5051,7 +5051,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-label"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-label"
           }
         },
         {
@@ -5059,7 +5059,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-link"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-link"
           }
         },
         {
@@ -5067,7 +5067,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-list"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-list"
           }
         },
         {
@@ -5075,7 +5075,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-list-item"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-list-item"
           }
         },
         {
@@ -5083,7 +5083,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-listbox"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-listbox"
           }
         },
         {
@@ -5091,7 +5091,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-listbox-item"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-listbox-item"
           }
         },
         {
@@ -5099,7 +5099,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-form-search"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-form-search"
           }
         },
         {
@@ -5107,7 +5107,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-form-search-input"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-form-search-input"
           }
         },
         {
@@ -5115,7 +5115,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-tagline"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-tagline"
           }
         },
         {
@@ -5123,7 +5123,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-tag-filter"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-tag-filter"
           }
         },
         {
@@ -5131,7 +5131,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-tag-topic"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-tag-topic"
           }
         },
         {
@@ -5139,7 +5139,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-select"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-select"
           }
         },
         {
@@ -5147,7 +5147,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./cfpb-pagination"
+            "module": "packages/cfpb-design-system/src/elements/cfpb-pagination"
           }
         }
       ]

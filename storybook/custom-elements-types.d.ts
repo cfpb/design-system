@@ -100,28 +100,12 @@ type BaseEvents = {};
 
 export type CfpbAlertProps = {
   /**  */
-  bg?: CfpbAlert['bg'];
-  /**  */
-  border?: CfpbAlert['border'];
-  /**  */
-  'icon-color'?: CfpbAlert['iconColor'];
-  /**  */
-  iconColor?: CfpbAlert['iconColor'];
-  /**  */
   status?: CfpbAlert['status'];
   /**  */
   message?: CfpbAlert['message'];
 };
 
 export type CfpbAlertSolidJsProps = {
-  /**  */
-  'prop:bg'?: CfpbAlert['bg'];
-  /**  */
-  'prop:border'?: CfpbAlert['border'];
-  /**  */
-  'attr:icon-color'?: CfpbAlert['iconColor'];
-  /**  */
-  'prop:iconColor'?: CfpbAlert['iconColor'];
   /**  */
   'prop:status'?: CfpbAlert['status'];
   /**  */
@@ -532,10 +516,6 @@ export type CfpbFormSearchSolidJsProps = {
 
 export type CfpbIconTextProps = {
   /**  */
-  'div-color'?: CfpbIconText['divColor'];
-  /**  */
-  divColor?: CfpbIconText['divColor'];
-  /**  */
   disabled?: CfpbIconText['disabled'];
   /**  */
   'icon-left'?: CfpbIconText['iconLeft'];
@@ -568,10 +548,6 @@ export type CfpbIconTextProps = {
 };
 
 export type CfpbIconTextSolidJsProps = {
-  /**  */
-  'attr:div-color'?: CfpbIconText['divColor'];
-  /**  */
-  'prop:divColor'?: CfpbIconText['divColor'];
   /**  */
   'prop:disabled'?: CfpbIconText['disabled'];
   /**  */
@@ -611,16 +587,12 @@ export type CfpbIconTextSolidJsProps = {
 
 export type CfpbIconProps = {
   /**  */
-  color?: CfpbIcon['color'];
-  /**  */
   name?: CfpbIcon['name'];
   /**  */
   spin?: CfpbIcon['spin'];
 };
 
 export type CfpbIconSolidJsProps = {
-  /**  */
-  'prop:color'?: CfpbIcon['color'];
   /**  */
   'prop:name'?: CfpbIcon['name'];
   /**  */
@@ -1037,9 +1009,6 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `bg`: undefined
-   * - `border`: undefined
-   * - `icon-color`/`iconColor`: undefined
    * - `status`: undefined
    * - `message`: undefined
    * - `icon`: undefined (property only) (readonly)
@@ -1349,7 +1318,6 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `div-color`/`divColor`: undefined
    * - `disabled`: undefined
    * - `icon-left`/`iconLeft`: undefined
    * - `icon-right`/`iconRight`: undefined
@@ -1383,7 +1351,6 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `color`: undefined
    * - `name`: undefined
    * - `spin`: undefined
    *
@@ -1759,9 +1726,6 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `bg`: undefined
-   * - `border`: undefined
-   * - `icon-color`/`iconColor`: undefined
    * - `status`: undefined
    * - `message`: undefined
    * - `icon`: undefined (property only) (readonly)
@@ -2102,7 +2066,6 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `div-color`/`divColor`: undefined
    * - `disabled`: undefined
    * - `icon-left`/`iconLeft`: undefined
    * - `icon-right`/`iconRight`: undefined
@@ -2139,7 +2102,6 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `color`: undefined
    * - `name`: undefined
    * - `spin`: undefined
    *

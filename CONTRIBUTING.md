@@ -215,3 +215,7 @@ Example of a valid JSON token file structure for our project.
 ```
 
 Figma emits JSON color that adears to the [w3c design token spec](https://www.designtokens.org/tr/drafts/color/#format). Editors can supply only hex values, srgb int or srgb float while ignoring the Figma specifc metadata.
+
+## Storybook for Web Components
+
+For detailed information about how this project uses Storybook for it's Web Components and advice on contributing new stories for our Web Components please see this document: [STORYBOOK.md](STORYBOOK.md)

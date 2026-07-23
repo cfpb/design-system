@@ -10,6 +10,10 @@ import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
  * @element cfpb-expandable
  * @slot header - The header content for the expandable.
  * @slot content - The content within the expandable.
+ * @fires expandbegin - The expandable started expanding.
+ * @fires expandend - The expandable finshed expanding.
+ * @fires collapsebegin - The expandables started collapsing.
+ * @fires collapseend - The expandables finished collapsing.
  */
 export class CfpbExpandable extends LitElement {
   static styles = css`
@@ -54,21 +58,24 @@ export class CfpbExpandable extends LitElement {
 
     this.#flyoutMenu.init(this.isExpanded);
 
+    const opts = { detail: { target: this }, bubbles: true, composed: true };
+
     // Add events.
     this.#flyoutMenu.addEventListener('expandbegin', () => {
       this.isExpanded = true;
       contentDom.classList.remove('u-hidden');
-      this.dispatchEvent(
-        new CustomEvent('expandbegin', {
-          detail: { target: this },
-          bubbles: true,
-          composed: true,
-        }),
-      );
+      this.dispatchEvent(new CustomEvent('expandbegin', opts));
+    });
+    this.#flyoutMenu.addEventListener('expandend', () => {
+      this.dispatchEvent(new CustomEvent('expandend', opts));
+    });
+    this.#flyoutMenu.addEventListener('collapsebegin', () => {
+      this.dispatchEvent(new CustomEvent('collapsebegin', opts));
     });
     this.#flyoutMenu.addEventListener('collapseend', () => {
       this.isExpanded = false;
       contentDom.classList.add('u-hidden');
+      this.dispatchEvent(new CustomEvent('collapseend', opts));
     });
   }
 

@@ -34,11 +34,14 @@
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-decap": "npx decap-server",
-    "start": "concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build-docs-watch\"",
+    "start": "yarn build-storybook --output-dir docs/_site/design-system/web-components && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build-docs-watch\"",
     "test": "vitest run",
     "cy": "./scripts/cypress.sh",
     "changelog": "./scripts/changelog.sh",
-    "tokens": "style-dictionary build --config ./style-dictionary.config.js && yarn lint \"packages/cfpb-design-system/src/elements/**/*.css\""
+    "tokens": "style-dictionary build --config ./style-dictionary.config.js && yarn lint \"packages/cfpb-design-system/src/elements/**/*.css\"",
+    "storybook": "yarn analyze && storybook dev -p 6006",
+    "build-storybook": "yarn analyze && storybook build",
+    "analyze": "cem analyze && prettier --write storybook/custom-elements-types.d.ts storybook/custom-elements.json"
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
@@ -57,11 +60,19 @@
   "devDependencies": {
     "@cfpb/browserslist-config": "0.0.7",
     "@csstools/postcss-sass": "5.1.1",
+    "@custom-elements-manifest/analyzer": "0.11.0",
     "@eslint/js": "10.0.1",
     "@lhci/cli": "0.15.1",
+    "@storybook/addon-a11y": "10.5.2",
+    "@storybook/addon-docs": "10.5.2",
+    "@storybook/addon-vitest": "10.5.2",
+    "@storybook/web-components-vite": "10.5.2",
     "@testing-library/dom": "10.4.1",
     "@testing-library/user-event": "14.6.1",
-    "@vitest/coverage-v8": "4.1.9",
+    "@vitest/browser-playwright": "4.1.10",
+    "@vitest/coverage-v8": "4.1.10",
+    "@wc-toolkit/jsx-types": "1.6.0",
+    "@wc-toolkit/storybook-helpers": "10.3.0",
     "autoprefixer": "10.5.2",
     "concurrently": "10.0.3",
     "cypress": "15.18.0",
@@ -74,6 +85,7 @@
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-lit": "2.3.1",
     "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-storybook": "10.5.2",
     "eslint-plugin-vitest-globals": "1.6.1",
     "eslint-plugin-wc": "3.1.0",
     "git-cliff": "2.13.1",
@@ -81,17 +93,21 @@
     "globals": "17.7.0",
     "http-server": "14.1.1",
     "jsdom": "29.1.1",
+    "playwright": "1.61.1",
     "postcss": "8.5.16",
     "prettier": "3.9.4",
     "prop-types": "15.8.1",
     "release-it": "20.2.1",
     "sass": "1.101.0",
+    "storybook": "10.5.2",
     "style-dictionary": "5.5.0",
     "stylelint": "17.14.0",
     "stylelint-config-standard-scss": "17.0.0",
-    "svgo": "4.0.1",
+    "svgo": "4.0.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.64.0",
     "vite": "8.1.3",
-    "vitest": "4.1.9"
+    "vitest": "4.1.10"
   },
   "release-it": {
     "git": {
@@ -122,5 +138,6 @@
     "uuid": ">=13.0.1"
   },
   "type": "module",
-  "packageManager": "yarn@4.17.0"
+  "packageManager": "yarn@4.17.0",
+  "customElements": "storybook/custom-elements.json"
 }

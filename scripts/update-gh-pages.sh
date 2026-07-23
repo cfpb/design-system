@@ -27,6 +27,10 @@ yarn after-install
 # Build the design system website
 yarn build-decap
 
+# Build Storybook into the web-components subdir
+# Must run after Jekyll so the parent directory exists and Jekyll doesn't wipe it
+yarn build-storybook --output-dir "$target_dir/web-components"
+
 # Remove the built Jekyll website from .gitignore
 sed -i '/_site/d' ./.gitignore
 

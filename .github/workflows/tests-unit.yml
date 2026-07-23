@@ -17,5 +17,8 @@ jobs:
       - name: Shared setup
         uses:  ./.github/actions/shared-action-setup
 
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
       - name: Run unit tests
         run: yarn test

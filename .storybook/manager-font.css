@@ -1,0 +1,9 @@
+/* custom-props.css shitps --font-stack-branded: initial since the base
+package can't bundle a licensed font itself. @fontsource-variable/source-sans-3
+(already a dep of @cfpb/cfpb-design-system) supplies the actual
+@font-face and this points the design system's own token at it. It gets imported
+after custom-props.css in manager.js so it wins the casscade
+*/
+:root {
+  --font-stack-branded: 'Source Sans 3 Variable', arial, sans-serif;
+}

@@ -6,7 +6,7 @@ import { errorIcon as icon } from '../../components/cfpb-icons/icons-lib';
 
 /**
  *
- * @element cfpb-tag-filter.
+ * @element cfpb-tag-filter
  * @slot - The content for the filter tag.
  */
 export class CfpbTagFilter extends LitElement {

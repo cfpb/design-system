@@ -78,22 +78,8 @@ export class CfpbButton extends LitElement {
     this.disabled = false;
     this.fullOnMobile = false;
     this.styleAsLink = false;
-    this.iconLeftSpin = false;
-    this.iconRightSpin = false;
-  }
-
-  /**
-   * Hide any icon in the slot.
-   */
-  hideIcon() {
-    this.#iconTextDom.value?.hideIcon();
-  }
-
-  /**
-   * Show any icon in the slot, if it was hidden.
-   */
-  showIcon() {
-    this.#iconTextDom.value?.showIcon();
+    this.isIconLeftSpin = false;
+    this.isIconRightSpin = false;
   }
 
   get dividerColorVar() {

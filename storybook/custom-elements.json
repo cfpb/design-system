@@ -19,15 +19,6 @@
           "members": [
             {
               "kind": "field",
-              "name": "themeProperties",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "['iconColor', 'border', 'bg']"
-            },
-            {
-              "kind": "field",
               "name": "icon",
               "readonly": true
             },
@@ -58,57 +49,9 @@
               },
               "default": "'Alert'",
               "attribute": "message"
-            },
-            {
-              "kind": "field",
-              "name": "bg",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "bg"
-            },
-            {
-              "kind": "field",
-              "name": "border",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "border"
-            },
-            {
-              "kind": "field",
-              "name": "iconColor",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "icon-color"
             }
           ],
           "attributes": [
-            {
-              "name": "bg",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "bg"
-            },
-            {
-              "name": "border",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "border"
-            },
-            {
-              "name": "icon-color",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "iconColor"
-            },
             {
               "name": "status",
               "type": {
@@ -1899,15 +1842,6 @@
           ],
           "members": [
             {
-              "kind": "field",
-              "name": "themeProperties",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "['divColor']"
-            },
-            {
               "kind": "method",
               "name": "init",
               "static": true,
@@ -1945,16 +1879,6 @@
               },
               "default": "false",
               "attribute": "icon-right-spin"
-            },
-            {
-              "kind": "field",
-              "name": "divColor",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "div-color",
-              "reflects": true
             },
             {
               "kind": "field",
@@ -2016,13 +1940,6 @@
             }
           ],
           "attributes": [
-            {
-              "name": "div-color",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "divColor"
-            },
             {
               "name": "disabled",
               "type": {
@@ -2120,30 +2037,12 @@
           "name": "CfpbIcon",
           "members": [
             {
-              "kind": "field",
-              "name": "themeProperties",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "['color']"
-            },
-            {
               "kind": "method",
               "name": "init",
               "static": true,
               "type": {
                 "text": "init() => void"
               }
-            },
-            {
-              "kind": "field",
-              "name": "color",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "color"
             },
             {
               "kind": "field",
@@ -2165,13 +2064,6 @@
             }
           ],
           "attributes": [
-            {
-              "name": "color",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "color"
-            },
             {
               "name": "name",
               "type": {

@@ -4,3 +4,9 @@
 :root {
   --font-stack-branded: 'Source Sans 3 Variable', arial, sans-serif;
 }
+
+#storybook-docs pre {
+  background-color: #2b2b2b;
+  color: white;
+  line-height: 22px;
+}

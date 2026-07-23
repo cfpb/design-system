@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Google Tag Manager code -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WH4L8LB');
+    </script>
+    <title>Web Component Storybook - CFPB Design System</title>
+    <meta name="description" content="CFPB's design system">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/design-system/dist/index.css">
+    <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(
+        /(^|\s)no-js(\s|$)/,
+        '$1$2',
+      );
+    </script>
+  </head>
+  <body class="t-variation">
+    <!-- Google Tag Manager code -->
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+
+    <div class="skip-nav">
+      <cfpb-button href="#main" class="skip-nav__link">
+        Skip to main content
+      </cfpb-button>
+    </div>
+
+    <header role="banner" class="site-header-wrapper">
+
+  <div class="m-global-eyebrow">
+    <div class="m-global-eyebrow__container"><cfpb-tagline></cfpb-tagline></div>
+</div>
+
+
+  <div class="site-header">
+
+    <form id="search-form" action="/design-system/search" method="get">
+    <cfpb-form-search id="search-box" form="search-form" name="searchQuery">
+        <ul hidden>
+            <li><a href="/design-system/components/alerts">Alerts</a></li>
+            <li><a href="/design-system/components/banner-notification">Banner (notification)</a></li>
+            <li><a href="/design-system/components/banner-us-gov">Banner (US gov)</a></li>
+            <li><a href="/design-system/components/buttons">Buttons</a></li>
+            <li><a href="/design-system/components/checkboxes">Checkboxes</a></li>
+            <li><a href="/design-system/components/date-picker">Date picker</a></li>
+            <li><a href="/design-system/components/expandables">Expandables</a></li>
+            <li><a href="/design-system/components/fieldsets">Fieldsets</a></li>
+            <li><a href="/design-system/components/helper-text">Helper text</a></li>
+            <li><a href="/design-system/components/labels-and-legends">Labels and legends</a></li>
+            <li><a href="/design-system/components/links">Links</a></li>
+            <li><a href="/design-system/components/lists">Lists</a></li>
+            <li><a href="/design-system/components/pagination">Pagination</a></li>
+            <li><a href="/design-system/components/radio-buttons">Radio buttons</a></li>
+            <li><a href="/design-system/components/range-sliders">Range sliders</a></li>
+            <li><a href="/design-system/components/selects">Selects</a></li>
+            <li><a href="/design-system/components/summaries">Summaries</a></li>
+            <li><a href="/design-system/components/tables">Tables</a></li>
+            <li><a href="/design-system/components/tags">Tags</a></li>
+            <li><a href="/design-system/components/taglines">Taglines</a></li>
+            <li><a href="/design-system/components/text-inputs">Text inputs</a></li>
+            <li><a href="/design-system/components/tooltips">Tooltips</a></li>
+            <li><a href="/design-system/components/elements">Web Components</a></li>
+        </ul>
+    </cfpb-form-search>
+</form>
+
+
+    <h1 class="title">
+      <a class="title-link" href="/design-system/">
+        <span class="demi">CFPB</span> Design System
+      </a>
+    </h1>
+  </div> <!-- /.wrapper -->
+</header>
+ <main id="main" role="main">
+  <aside class="ds-sidebar">
+
+<details open class="ds-nav-container">
+
+    <summary class="h4">Navigation</summary>
+
+    <ul class="m-list m-list--links">
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/foundation">Foundation</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/components">Components</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/patterns">Patterns</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pages">Pages</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/development">Development</a>
+                </div>
+
+            
+                
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">General principles</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/atomic-components">Atomic components</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/variables">Variables</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/design-tokens">Design Tokens</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Getting started</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/getting-started">Getting Started</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/integrating-the-design-system-into-your-project">Integrating the Design System into your project</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/reference-for-component-states">Reference for component states</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/web-component-storybook">Web Component Storybook</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Layout</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/blocks">Blocks</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/main-content-and-sidebars">Main content and sidebars</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Utilities</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/helper-classes-and-mixins">Helper classes and mixins</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/development/media-queries">Media queries</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/guidelines">Guidelines</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+    </ul>
+
+</details>
+
+</aside>
+
+
+  <div class="ds-content">
+    <section>
+
+    <h1 class="component-header u-mb30">
+        Web Component Storybook
+    </h1>
+
+    
+
+    
+
+    
+
+    
+    
+    <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
+        
+        <li class="m-list__item">
+            <a href="#web-component-storybook-setup-details">Web Component Storybook setup details</a>
+        </li>
+        
+    </ul>
+    
+
+    
+    <section id="description" class="u-mb30">
+        <h3 id="pipeline-overview">Pipeline overview</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>index.js (JSDoc + LitElement)
+         |
+         V
+storybook/custom-elements.json &lt;- the custom element manifest (source of truth)
+         |
+         |- @wc-toolkit/jsx-types -&gt; storybook/custom-elements.types.d.ts (typed *Props)
+         |- setCustomElementsManifest() (storybook/preview.js)
+                        |
+         @wc-toolkit/storybook-helpers -&gt; getStorybookHelpers() { args, argTypes, template }
+                        |
+                  *.stories.ts
+</code></pre></div></div>
+
+    </section>
+    
+
+    
+
+    
+    
+    <section class="o-variation-group" id="web-component-storybook-setup-details">
+
+        
+        <h2 class="o-variation-group__title">
+            Web Component Storybook setup details
+        </h2>
+        
+
+        
+        <div class="o-variation-group__description">
+            
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    The analyzer and CEM configuration
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p><code class="language-plaintext highlighter-rouge">custom-elements-manifest.config.js</code> drives cem analyze:</p>
+
+<pre><code class="language-JS">export default {
+  globs: ['packages/cfpb-design-system/src/elements/**/*.js'],
+  exclude: ['**/*.spec.js', '**/utilities/**'],
+  outdir: 'storybook',
+  litelement: true,
+  plugins: [
+    sortModulesPlugin(),
+    jsxTypesPlugin({
+      outdir: 'storybook',
+      fileName: 'custom-elements-types.d.ts',
+      // Generate imports relative to the storybook/ output dir
+      componentTypePath: (_name, _tag, modulePath) =&gt; `../${modulePath}`,
+    }),
+  ],
+};
+</code></pre>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">litelement: true</code> tells the analyzer to understand Lit’s <code class="language-plaintext highlighter-rouge">static properties = {...}</code> shorthand (attribute name, reflect, type) instead of requiring <code class="language-plaintext highlighter-rouge">@property()</code> decorators.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">exclude: ['**/utilities/**']</code> keeps non-component helper modules (like <code class="language-plaintext highlighter-rouge">shared-config.js</code>) out of the manifest</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">sortModulesPlugin</code> is a local plugin added to make output diff-stable. Without this regenerating the manifest could produce reorder only diffs.</li>
+</ul>
+
+<p>Run it manually any time with:
+<code class="language-plaintext highlighter-rouge">yarn analyze</code></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    wc-toolkit - the two packages in use
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p><code class="language-plaintext highlighter-rouge">@wc-toolkit/jsx-types</code> (analyzer plugin at build time): reads the manifest and emits <code class="language-plaintext highlighter-rouge">storybook/custom-elements.types.d.ts</code> - one <tagname>Props type per component. For every property it emits two keys: the kebab-case attribute name and the camelCase property name, both typed off the class:</tagname></p>
+
+<pre><code class="language-JS">//storybook/custom-elements.types.d.ts snippet
+export type CfpbButtonProps = {
+  'icon-left'?: CfpbButton['iconLeft'];
+  /**  */
+  iconLeft?: CfpbButton['iconLeft'];
+  /**  */
+  'icon-right'?: CfpbButton['iconRight'];
+  /**  */
+  iconRight?: CfpbButton['iconRight'];
+  ...
+}
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">@wc-toolkit/storybook-helpers</code> (runtime, used in every <code class="language-plaintext highlighter-rouge">.stories.ts</code>) reads the <em>manifest</em> (registered once via <code class="language-plaintext highlighter-rouge">setCustomElementsManifest</code> in <code class="language-plaintext highlighter-rouge">.storybook/preview.js</code>) and turns it into ready-made Storybook <code class="language-plaintext highlighter-rouge">args/argTypes/template</code> for a given tag:</p>
+
+<pre><code class="language-JS">const { args, argTypes, template } = getStorybookHelpers&lt;CfpbButtonProps&gt;(
+   'cfpb-button',
+   { excludeCategories: ['methods] },
+);
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">excludeCategories: ['methods']</code> is used in every story file. It drops public methods from the args/controls table since methods aren’t bindable Storybook controls.</p>
+
+<p><code class="language-plaintext highlighter-rouge">setStorybookHlpersConfig({ hideArgsRef: true })</code> in <code class="language-plaintext highlighter-rouge">preview.js</code> suppresses the “ref” column the helper would otherwise add to the args table in the UI.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    JSDoc - what works and what doesn't
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Class level tags on the component’s leading doc comment work correctly and are the only reliable source of documentation right now:</p>
+
+<pre><code class="language-JS">/**
+ *
+ * @element cfpb-expandable
+ * @slot header - The header content for the expandable.
+ * @slot content - The content within the expandable.
+ * @fires expandbegin - The expandable started expanding.
+ * @fires expandend - The expandable finished expanding.
+ * @fires collapsebegin - The expandables started collapsing.
+ * @fires collapseend - The expandables finished collapsing.
+ */
+</code></pre>
+
+<p>Verified in the generated manifest, these come through with the real descriptions:</p>
+
+<pre><code class="language-JSON">// EG from the CEM  at storybook/custom-elements.json
+...
+"slots": [
+            {
+              "description": "The header content for the expandable.",
+              "name": "header"
+            },
+            {
+              "description": "The content within the expandable.",
+              "name": "content"
+            }
+          ],
+...
+"events": [
+            {
+              "name": "expandbegin",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "The expandable started expanding."
+            },
+            {
+              "name": "expandend",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "The expandable finished expanding."
+            },
+            {
+              "name": "collapsebegin",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "The expandables started collapsing."
+            },
+            {
+              "name": "collapseend",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "The expandables finished collapsing."
+            }
+          ],
+...
+</code></pre>
+
+<h4 id="gotcha-every-component-in-this-codebase-also-writes-a-property-block-directly-above-static-properties">Gotcha: every component in this codebase also writes a <code class="language-plaintext highlighter-rouge">@property</code> block directly above <code class="language-plaintext highlighter-rouge">static properties</code>
+</h4>
+
+<p>In <code class="language-plaintext highlighter-rouge">cfpb-button/index.js</code> for example:</p>
+
+<pre><code class="language-JS"> /**
+   * @property {string} type - The button type: button, submit, or reset.
+   * @property {boolean} disabled - Whether the button is disabled or not.
+   ...
+   * @returns {object} The map of properties.
+   */
+  static properties = {
+    type: { ... },
+    href: { ... },
+...
+</code></pre>
+
+<p>That looks like it should document each attribute, <em>but it doesn’t</em> because the CEM lit-plugin doesn’t attach <code class="language-plaintext highlighter-rouge">@property</code> tag text to individual manifest attributes when they are declared this way.</p>
+
+<p>The net effect of this currently is that the Storybook Controls/Docs tables do not show attribute descriptions for any component. Do not expect <code class="language-plaintext highlighter-rouge">@property {type} name - description</code> to do anything visible in Storybook for now. We can open a spike in the future to investigate the correct comment formatting for populating the CEM. I did not want to rewrite all the Web Components comments for this right now. I opted to keep it for in editor documentation, but just be aware of the implication for Storybook.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Attributes over properties for bindings
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Since custom elements only receive strings/booleans through markup, stories should drive components through their attributes (kebab-case), not JS properties. This is why every args object in the 4 examples use attribute-cased keys: icon-left, icon-right, icon-left-spin, icon-right-spin, style-as-link, full-on-mobile which is matching the <code class="language-plaintext highlighter-rouge">attribute:</code> value declaration in each <code class="language-plaintext highlighter-rouge">static properties</code> entry.</p>
+
+<p><code class="language-plaintext highlighter-rouge">getStorybookHelpers</code>’s argTypes are keyed the same way, so when you override a control you also use the attribute name:</p>
+
+<pre><code class="language-JS">argTypes {
+   ...argTypes,
+   'icon-left': { control: 'select', options: ['', ...iconNames] },
+   'icon-right': { control: 'select', options: ['', ...iconNames] },
+}
+</code></pre>
+
+<p>If a component reflects a boolean attribute (<code class="language-plaintext highlighter-rouge">reflect: true</code>), prefer testing/asserting against the DOM attribute in play functions. There is an example of this in <code class="language-plaintext highlighter-rouge">packages/cfpb-design-system/src/elements/cfpb-button/cfpb-button.stories.ts</code> under <code class="language-plaintext highlighter-rouge">CollapseProgramatically</code>. We check <code class="language-plaintext highlighter-rouge">button.getAttribute(aria-expanded)</code>, not a JS property to assert real rendered state.</p>
+
+<p>This isn’t stylistic. Prior to fixing this, <code class="language-plaintext highlighter-rouge">cfpb-button.stories.ts</code> used camelCase keys here (<code class="language-plaintext highlighter-rouge">iconLeft, iconRight</code>) which silently failed to attach the icon-select controls to the real args since <code class="language-plaintext highlighter-rouge">getStorybookHelpers</code> generates attribute-cased keys.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Walkthrough of how the 4 example stories differ
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">cfpb-button.stories.ts</code> is the fullest example. It uses the helper generated <code class="language-plaintext highlighter-rouge">template(args)</code> directly as <code class="language-plaintext highlighter-rouge">render</code> (no custom markup needed since the button has a default slot). Adds a <code class="language-plaintext highlighter-rouge">default-slot</code> pseudo-arg for the slotted button label <code class="language-plaintext highlighter-rouge">getStorybookHelpers</code> derives this arg automatically from the manifest’s unnamed slot entry (<code class="language-plaintext highlighter-rouge">slots: [{ name: '', description: '...'}]</code>) and the story just seeds a default value for it:
+<code class="language-plaintext highlighter-rouge">args: { ...args, variant: 'primary', 'deafault-slot': 'Button label' },</code>
+It also dynamically builds a select control for <code class="language-plaintext highlighter-rouge">icon-left/icon-right</code> off the actual icon SVG filenames and includes two intentionally invalid stories (<code class="language-plaintext highlighter-rouge">InvalidVariant</code>, <code class="language-plaintext highlighter-rouge">InvalidType</code>) tagged <code class="language-plaintext highlighter-rouge">['!dev','!autodocs']</code>. These exist to be picked up by the Vitest/Storybook test runner and verify that invalid values fall back gracefully without cluttering the storybook UI (sidebar/docs).</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">cfpb-expandable.stories.ts</code> can’t use the auto <code class="language-plaintext highlighter-rouge">template()</code> because it needs two <em>named</em> slots. This is the pattern to copy for any component with named slots. It also demonstrates the <code class="language-plaintext highlighter-rouge">play</code> functions exercising the component’s 4 custom events using <code class="language-plaintext highlighter-rouge">fn()</code> spies from the <code class="language-plaintext highlighter-rouge">storybook/test</code> and <code class="language-plaintext highlighter-rouge">userEvent.click</code>, plus a synthetic-event trick for the CSS-transition-driven <code class="language-plaintext highlighter-rouge">collapsend</code>/<code class="language-plaintext highlighter-rouge">expandend</code> events because the component’s internal BaseTransition listens for the Chromium-prefixed name first. <code class="language-plaintext highlighter-rouge">CollapseProgramatically</code> shows testing an imperative property write.</p>
+
+    <p>It writes a custom <code class="language-plaintext highlighter-rouge">render:</code> like this:</p>
+
+    <pre><code class="language-JS">render: ({ open, 'header-slot': header, 'content-slot': content }) =&gt;
+  html`&lt;cfpb-expandable ?open="${open}"&gt;
+    &lt;span slot="header"&gt;${header}&lt;/span&gt;
+    &lt;p slot="content"&gt;${content}&lt;/p&gt;
+  &lt;/cfpb-expandable&gt;`,
+</code></pre>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">cfpb-tag-filter.stories.ts</code> - back to auto <code class="language-plaintext highlighter-rouge">template(args)</code> since it only has a default slot. Demonstrates testing a custom even (<code class="language-plaintext highlighter-rouge">item-click</code>) via click, and a second story (<code class="language-plaintext highlighter-rouge">focused</code>) that calls the component’s own async <code class="language-plaintext highlighter-rouge">focus()</code> method directly on the element reference rather than through play-function DOM interaction. That is a useful pattern when a component exposes imperative methods that don’t correspond to any attribute.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">cfpb-tagline.stories.ts</code> - the minimal case. Single boolean property (<code class="language-plaintext highlighter-rouge">isLarge</code>, no explicit <code class="language-plaintext highlighter-rouge">attribute:</code> override so it defaults to the camelCase name), no play functions. Good starting template for the simplest components.</li>
+</ul>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Recipe: adding a story for a component
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <ul>
+  <li>Confirm the component’s <code class="language-plaintext highlighter-rouge">index.js</code> has a class-level <code class="language-plaintext highlighter-rouge">@element</code>,<code class="language-plaintext highlighter-rouge">@slot</code> and <code class="language-plaintext highlighter-rouge">@fires</code> JSDoc block since these are what renders in the Docs page</li>
+  <li>Create <code class="language-plaintext highlighter-rouge">&lt;name&gt;.stories.ts</code> next to <code class="language-plaintext highlighter-rouge">index.js</code>. Copy the <code class="language-plaintext highlighter-rouge">cfpb-tagline.stories.ts</code> as the minimal template, or <code class="language-plaintext highlighter-rouge">cfpb-button.stories.ts</code> if you are needing more than one variant.</li>
+  <li>Import <code class="language-plaintext highlighter-rouge">Meta/StoryObj</code> from <code class="language-plaintext highlighter-rouge">@storybook/web-components</code>
+</li>
+  <li>Call <code class="language-plaintext highlighter-rouge">&lt;Component&gt;.init()</code> at module scope before anything else</li>
+  <li>Call <code class="language-plaintext highlighter-rouge">getStorybookHelpers&lt;xProps&gt;('tag-name', { excludeCategories: ['methods'] })</code>, importing the <code class="language-plaintext highlighter-rouge">XProps</code> type from the <code class="language-plaintext highlighter-rouge">storybook/custom-elements-types</code>
+</li>
+  <li>Decide <code class="language-plaintext highlighter-rouge">tempalate(args)</code> vs custom <code class="language-plaintext highlighter-rouge">render:</code> use the auto <code class="language-plaintext highlighter-rouge">template</code> if the component onlhy has a default slot. Write a custom <code class="language-plaintext highlighter-rouge">html</code> render (like in the expandables story) if it has named slots or needs conditional markup.</li>
+  <li>Set <code class="language-plaintext highlighter-rouge">meta.args/meta.argTypes</code> using <em>attribute-cased keys</em>, not camelCased properties. If you do this wrong it won’t error, it just silently no-ops the control or arg</li>
+  <li>Set <code class="language-plaintext highlighter-rouge">meta.component: 'tag-name'</code> and <code class="language-plaintext highlighter-rouge">tags: ['autodocs]</code>. This isn’t optional. Without <code class="language-plaintext highlighter-rouge">component:</code> set the auto-generated <code class="language-plaintext highlighter-rouge">Overview</code> docs page fails to render its canvas and Attributes/Slots/Events table.</li>
+  <li>For components with custom events or imperative methods, add <code class="language-plaintext highlighter-rouge">play</code> functions using <code class="language-plaintext highlighter-rouge">fn()</code> + <code class="language-plaintext highlighter-rouge">userEvent</code> + <code class="language-plaintext highlighter-rouge">expect</code> from <code class="language-plaintext highlighter-rouge">storybook/test</code> following the <code class="language-plaintext highlighter-rouge">cfpb-expandable</code>/<code class="language-plaintext highlighter-rouge">cfpb-tag-filter</code> pattern. Tag test-only/invalid-input stories <code class="language-plaintext highlighter-rouge">['!dev, !autodocs]</code> so they run in the test suite but don’t clutter the sidebar or docs page.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">yarn storybook</code> (regenerates the manifest via <code class="language-plaintext highlighter-rouge">yarn analyze</code> first) and confirms the new story renders and controls bind correctly</li>
+</ul>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Linting
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Auto-generated CEM and <code class="language-plaintext highlighter-rouge">storybook/custom-elements-types.d.ts</code> get linted as part of <code class="language-plaintext highlighter-rouge">yarn analyze</code> and linting for TS files was added to the project.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Testing
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p><code class="language-plaintext highlighter-rouge">vitest.config.js</code> defines Vitest projects:</p>
+
+<ul>
+  <li>Unit (<code class="language-plaintext highlighter-rouge">packages/**/*.spec.js</code>, jsdom environment)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">storybook</code> - uses <code class="language-plaintext highlighter-rouge">storybookTest()</code> from <code class="language-plaintext highlighter-rouge">@storybook/addon-vitest/vitest-plugin</code>, pointed at <code class="language-plaintext highlighter-rouge">.storybook/</code> running in a real headless Chromium via <code class="language-plaintext highlighter-rouge">@vitest/browser-playwright</code>. This project turns every story (including the <code class="language-plaintext highlighter-rouge">[!dev]</code> tagged ones) into a Vitest test, and runs each story’s <code class="language-plaintext highlighter-rouge">play</code> function as the test body.</li>
+</ul>
+
+<p>Run everything with <code class="language-plaintext highlighter-rouge">yarn test</code></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Accessibility (@storybook/addon-a11y)
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Registered in <code class="language-plaintext highlighter-rouge">.storybook/main.js</code> and configured in <code class="language-plaintext highlighter-rouge">.storybook/preview.js</code></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">a11y</span><span class="p">:</span> <span class="p">{</span>
+    <span class="c1">// 'todo' - show a11y violations in the test UI only</span>
+    <span class="c1">// 'error' - fail CI on a11y violations</span>
+    <span class="c1">// 'off' - skip a11y checks entirely</span>
+    <span class="nl">test</span><span class="p">:</span> <span class="dl">'</span><span class="s1">todo</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">},</span>
+</code></pre></div></div>
+
+<p>Set as <code class="language-plaintext highlighter-rouge">'todo</code> means that axe core accessibility checks run against every story automatically and violations surface in the Storybook a11y panel/Vitest addon UI, but <em>DO NOT FAIL</em> <code class="language-plaintext highlighter-rouge">yarn test</code> or CI. Bumping this to <code class="language-plaintext highlighter-rouge">'error'</code> repo-wide would turn any existing violations across all stories into a build failure if we want that in the future. Importantly, new components get a11y checking for free just by having a story! No extra config per component needed.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+    </section>
+    
+    
+
+    
+    
+        <section class="sticky-header u-mb45">
+
+            
+
+            
+
+            
+
+            
+        </section>
+    
+
+    
+
+    
+
+    
+
+    
+        <section class="content-l u-mb45">
+            <div class="content-l__col content-l__col-1">
+                <div>
+                    <section>
+                        <h2 id="latest-updates">Latest updates</h2>
+                        <div class="content__line--wide content__line u-mb20"></div>
+                        <strong>Page last edited:</strong>
+                        
+                        
+                        
+                        
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/web-component-storybook.md">
+                            <time datetime="2026-07-23 15:45:09 -0400">
+                                 3:45:09 PM Jul 23, 2026
+                            </time>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+
+    </section>
+</div>
+
+<!-- .content__main --> 
+
+    <div class="o-editor" id="toggle-details">
+      <cfpb-button variant="secondary" iconright="lightbulb" title="Show all details">
+        Show all details
+      </cfpb-button>
+    </div>
+
+    
+
+    <div class="o-editor" id="edit-page">
+      <cfpb-button href="/design-system/updating-this-website?page=Web+Component+Storybook" iconright="edit" title="Edit this page in Decap CMS">
+        Edit page
+      </cfpb-button>
+    </div>
+  
+</main>
+  <footer class="ds-footer" role="contentinfo">
+
+    <hr>
+
+    <div class="block block--sub ds-footer__content">
+        <p>
+            We need your help keeping the Design System accurate and up-to-date!
+            If you see something wrong or missing,
+            <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
+            If you can’t make those changes yourself,
+            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Web%20Component%20Storybook%3A+Add+issue+description">file an issue</a>.
+            If you have a substantial change to an existing page, or a new standard you want to add,
+            <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
+        </p>
+
+        <p>
+            <small><a href="https://github.com/cfpb/design-system"><cfpb-icon name="github-square"></cfpb-icon> Website source code</a></small>
+        </p>
+    </div>
+
+</footer>
+ 
+    <script type="module" src="/design-system/dist/main.js" charset="utf-8"></script>
+
+    
+  </body>
+</html>

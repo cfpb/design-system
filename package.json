@@ -95,7 +95,7 @@
     "http-server": "14.1.1",
     "jsdom": "29.1.1",
     "playwright": "1.61.1",
-    "postcss": "8.5.16",
+    "postcss": "8.5.18",
     "prettier": "3.9.4",
     "prop-types": "15.8.1",
     "release-it": "20.2.1",

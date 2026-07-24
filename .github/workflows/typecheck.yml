@@ -1,0 +1,31 @@
+name: Typecheck
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Shared setup
+        uses:  ./.github/actions/shared-action-setup
+
+      # Regenerates the CEM, then type checks against it
+      # Catches stories that have drifted from a component's static properties
+      - name: Run typecheck
+        run: yarn typecheck
+
+      # The step above regenerates the CEM and types file in place, so a diff here means the
+      # commited CEM is stale. Run `yarn analyze` and commit the result.
+      - name: Check generated CEM is up to date
+        run: git diff --exit-code storybook/custom-elements.json storybook/custom-elements-types.d.ts

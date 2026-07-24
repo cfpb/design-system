@@ -9,7 +9,7 @@ export default create({
 
   brandTitle: 'CFPB Design System',
   brandImage: CfpbLogo,
-  brandURL: 'https://cfpb.github.io/design-system/web-components/',
+  brandUrl: 'https://cfpb.github.io/design-system/web-components/',
   brandTarget: '_blank',
 
   fontBase: token('--font-stack-branded'),

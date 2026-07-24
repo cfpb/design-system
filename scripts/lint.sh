@@ -15,8 +15,8 @@ fi
 ## Run Prettier, See ignored paths in .prettierignore
 yarn exec prettier "./**/*.{js,jsx,ts,tsx,md,css,scss}" ${PRETTIER_FLAGS[@]}
 
-## Run JS linting. See ignored paths in eslint.config.js.
-yarn exec eslint "./{.,test,docs,packages}/**/*.js" ${ESLINT_FLAGS[@]}
+## Run JS/TS linting. See ignored paths in eslint.config.js.
+yarn exec eslint "./{.,test,docs,packages}/**/*.{js,ts,tsx}" ${ESLINT_FLAGS[@]}
 
 ## Run CSS linting. See ignored paths in .stylelintignore.
 yarn exec stylelint "{docs,packages}/**/*.{css,scss}" ${STYLELINT_FLAGS[@]}

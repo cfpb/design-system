@@ -4,7 +4,7 @@ collection_name: pages
 layout: variation
 section: development
 description: >-
-  ### Pipeline overview
+  ## Pipeline overview
 
 
   ```

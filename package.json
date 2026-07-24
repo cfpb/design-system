@@ -36,6 +36,7 @@
     "serve-decap": "npx decap-server",
     "start": "yarn build-storybook --output-dir docs/_site/design-system/web-components && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build-docs-watch\"",
     "test": "vitest run",
+    "typecheck": "yarn analyze && tsc --noEmit",
     "cy": "./scripts/cypress.sh",
     "changelog": "./scripts/changelog.sh",
     "tokens": "style-dictionary build --config ./style-dictionary.config.js && yarn lint \"packages/cfpb-design-system/src/elements/**/*.css\"",

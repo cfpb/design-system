@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "bundler",
+    // TS stories import JS components, so allow JS for module resolution only
     "allowJs": true,
     "checkJs": false,
     "strict": true,
@@ -10,5 +11,13 @@
     "skipLibCheck": true,
     "types": ["vite/client"]
   },
-  "include": [".storybook/**/*.js"]
+  "include": ["**/*.ts", "**.*.tsx"],
+  "exclude": [
+    "node_modules",
+    ".yarn",
+    "docs/_site",
+    "storybook-static",
+    "packages/*/dist",
+    "cypress"
+  ]
 }

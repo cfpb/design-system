@@ -3,7 +3,7 @@ import { html } from 'lit';
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { fn, userEvent, expect } from 'storybook/test';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
-import type { CfpbExpandableProps } from '../../../../../storybook/custom-elements-types.d.ts';
+import type { CfpbExpandableProps } from '../../../../../storybook/custom-elements-types';
 import { CfpbExpandable } from './index.js';
 
 CfpbExpandable.init();

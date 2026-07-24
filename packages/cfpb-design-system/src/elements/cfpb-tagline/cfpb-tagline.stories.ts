@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
-import type { CfpbTaglineProps } from '../../../../../storybook/custom-elements-types.d.ts';
+import type { CfpbTaglineProps } from '../../../../../storybook/custom-elements-types';
 import { CfpbTagline } from './index.js';
 
 CfpbTagline.init();

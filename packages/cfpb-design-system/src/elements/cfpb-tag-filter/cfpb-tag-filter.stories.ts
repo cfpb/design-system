@@ -2,7 +2,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { fn, userEvent, expect } from 'storybook/test';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
-import type { CfpbTagFilterProps } from '../../../../../storybook/custom-elements-types.d.ts';
+import type { CfpbTagFilterProps } from '../../../../../storybook/custom-elements-types';
 import { CfpbTagFilter } from './index.js';
 
 CfpbTagFilter.init();

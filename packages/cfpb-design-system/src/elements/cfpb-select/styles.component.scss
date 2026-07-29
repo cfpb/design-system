@@ -21,7 +21,7 @@
   --select-border-focus: var(--select-border-focus-default);
 
   display: flex;
-  gap: rem-from-px(15px);
+  gap: rem-from-px(15);
   flex-direction: column;
 }
 
@@ -151,7 +151,7 @@ button {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding-left: rem-from-px(10px);
+    padding-left: rem-from-px(10);
 
     cursor: pointer;
   }
@@ -169,7 +169,7 @@ button {
     padding: 0;
 
     &::after {
-      padding-bottom: rem-from-px(15px);
+      padding-bottom: rem-from-px(15);
       width: 100%;
     }
   }

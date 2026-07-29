@@ -1,10 +1,10 @@
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 .a-form-alert {
-  margin-top: rem-from-px(15px);
+  margin-top: rem-from-px(15);
   display: flex;
   align-items: center;
-  gap: rem-from-px(5px);
+  gap: rem-from-px(5);
 
   &__text {
     display: block;

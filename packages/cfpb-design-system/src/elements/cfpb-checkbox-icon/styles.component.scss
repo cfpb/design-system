@@ -19,8 +19,8 @@
   flex-direction: column;
   border: 1px solid var(--choice-border);
   outline: var(--choice-border-width-addendum) solid var(--choice-border);
-  height: em-from-px(18px);
-  width: em-from-px(18px);
+  height: em-from-px(18);
+  width: em-from-px(18);
   background-color: var(--choice-bg);
 
   // Offset so that the checkbox/radio fits within focused area.

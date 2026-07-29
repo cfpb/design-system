@@ -17,7 +17,7 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
-  row-gap: rem-from-px(15px);
+  row-gap: rem-from-px(15);
 
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {

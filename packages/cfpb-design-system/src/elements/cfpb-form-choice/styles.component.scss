@@ -18,7 +18,7 @@
   width: max-content;
 
   .a-label + .a-text-input {
-    margin-top: rem-from-px(5px);
+    margin-top: rem-from-px(5);
   }
 
   &--checkbox,
@@ -27,7 +27,7 @@
       display: inline-grid;
 
       // 30px is width of checkbox/radio button plus the needed padding.
-      grid-template-columns: rem-from-px(30px) auto;
+      grid-template-columns: rem-from-px(30) auto;
       vertical-align: top;
       cursor: pointer;
 
@@ -110,8 +110,8 @@
         grid-row-end: 3;
         border: 1px solid var(--choice-border);
         outline: var(--choice-border-width-addendum) solid var(--choice-border);
-        height: rem-from-px(18px);
-        width: rem-from-px(18px);
+        height: rem-from-px(18);
+        width: rem-from-px(18);
         margin-right: 10px;
         background-color: var(--choice-bg);
         content: '';

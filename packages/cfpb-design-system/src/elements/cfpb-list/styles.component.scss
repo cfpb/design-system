@@ -2,7 +2,7 @@
 @use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 :host {
-  --cfpb-list-gap: 10px;
+  --cfpb-list-gap: 10;
 }
 
 :host([horizontal]) {
@@ -24,7 +24,7 @@
   ul {
     // Tablet and above.
     @include respond-to-min($bp-sm-min) {
-      --cfpb-list-gap: 5px;
+      --cfpb-list-gap: 5;
     }
   }
 }
@@ -33,7 +33,7 @@
   ul {
     // Tablet and above.
     @include respond-to-min($bp-sm-min) {
-      --cfpb-list-gap: 30px;
+      --cfpb-list-gap: 30;
     }
   }
 }
@@ -58,7 +58,7 @@ ul {
 
   // Increase gap if the list item is a filter tag.
   &:has(cfpb-tag-filter) {
-    --cfpb-list-gap: 15px;
+    --cfpb-list-gap: 15;
   }
 
   // Remove gap if list item is a standard (jump) link.

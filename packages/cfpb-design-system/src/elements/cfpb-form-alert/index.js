@@ -53,7 +53,7 @@ export class CfpbFormAlert extends LitElement {
     >
       <cfpb-icon
         name="${this.icon.name}-round"
-        color="${this.icon.colorVar}"
+        style="--icon-color: var(--${this.icon.colorVar})"
       ></cfpb-icon>
       <div class="a-form-alert__text"><slot></slot></div>
     </div>`;

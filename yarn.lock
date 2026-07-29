@@ -9700,14 +9700,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"immutable@npm:^3.7.6":
-  version: 3.8.3
-  resolution: "immutable@npm:3.8.3"
-  checksum: 10c0/bafa7b8371b7622bc3d128cd9e6bba3a654b968f09a237929629f43ac26f7e974a5879cd38baad0c26f6f0628753968611bf832add7bf0c44d647bf4306a2988
-  languageName: node
-  linkType: hard
-
-"immutable@npm:^5.1.5":
+"immutable@npm:>=4.3.9":
   version: 5.1.9
   resolution: "immutable@npm:5.1.9"
   checksum: 10c0/ae7032b60b81b682f3e7e4df13e1ec9a401a603eb81b15bb3e37331ed6666e318c71994c6936e1462eb443d32d04769396562a7e2669da22457c8ba279c03ad2

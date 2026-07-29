@@ -38,7 +38,7 @@
   "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e",
   "type": "module",
   "dependencies": {
-    "@fontsource-variable/source-sans-3": "5.2.9",
+    "@fontsource-variable/source-sans-3": "5.3.0",
     "lit": "3.3.3",
     "tippy.js": "6.3.7"
   }

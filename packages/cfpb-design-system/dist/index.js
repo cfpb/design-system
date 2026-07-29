@@ -177,7 +177,7 @@ var o = class {
 		return this.items.filter((e) => typeof e == "string" ? e.toLocaleLowerCase().includes(t) : typeof e == "object" && this.fields ? this.fields.some((n) => {
 			let r = e[n];
 			return typeof r == "string" && r.toLowerCase().includes(t);
-		}) : Object.values(e).some((e) => typeof e == "string" ? e.toLowerCase().includes(t) : !1));
+		}) : Object.values(e).some((e) => typeof e == "string" && e.toLowerCase().includes(t)));
 	}
 }, s = { iconPath: "./icons/" }, c = { ...s }, l = !1, u = Object.keys(s);
 function d(e) {
@@ -3480,7 +3480,7 @@ function pr(e, t, n) {
 	}
 	function p(e) {
 		let t, n = [], r;
-		for (let i = 0, a = e.length; i < a; i++) t = e[i], r = f() ? !1 : t.defaultSelected, n.push({
+		for (let i = 0, a = e.length; i < a; i++) t = e[i], r = !f() && t.defaultSelected, n.push({
 			id: d(t),
 			value: t.value,
 			text: t.text,

@@ -2,7 +2,36 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.8.0](https://github.com/cfpb/design-system/compare/v5.7.0..v5.8.0) - July  7, 2026
+## [5.8.1](https://github.com/cfpb/design-system/compare/v5.8.0..v5.8.1) - July 29, 2026
+
+### PRs in this release
+
+- PR #[2751](https://github.com/cfpb/design-system/pull/2751): Temporary fix for issue where Firefox is rendering fonts differently - Ans
+- PR #[2753](https://github.com/cfpb/design-system/pull/2753): Use unitless in calc() - Ans
+
+### General
+
+- Adding Storybook for web components (#2732)
+
+* Storybook for web components. Served at design-system/web-components. Adds testing with vitest and a11y. Uses wc-toolkit and CEM tooling
+
+* update to yarn lock and cache
+
+* fixing production issue with styles
+
+* tweaking cfpb-tagline story to include slot
+
+* Web Component Storybook documentation
+
+* Update side nav in docs site to add navigation to Web Component storybook
+
+* bumping deps - ([e5b2b5b](https://github.com/cfpb/design-system/commit/e5b2b5b7e6da9c49db4874fb93fbe8a3472326e0)) - itsmedavep
+- Normalize import of web components types across stories (#2745) - ([b703f56](https://github.com/cfpb/design-system/commit/b703f569965aade1db042561dd82e6ebc96827cf)) - itsmedavep
+- Create cfpb-alert.stories.ts (#2747) - ([5cc0646](https://github.com/cfpb/design-system/commit/5cc064669fae8c8ddbb2e92a78cc33a5e3095d4e)) - itsmedavep
+- Fix issue where Firefox was rendering fonts differently - ([9d09dc1](https://github.com/cfpb/design-system/commit/9d09dc1bf214b361f4876a3baea5117aba145b24)) - Ans
+- Use unitless in calc() - ([a1ddfab](https://github.com/cfpb/design-system/commit/a1ddfab1419d25ace5f2f2576bb24903574eaf7d)) - Ans
+
+## [5.8.0](https://github.com/cfpb/design-system/compare/v5.7.0..vv5.8.0) - July  7, 2026
 
 ### PRs in this release
 

@@ -56,8 +56,8 @@
 ::slotted(*) {
   display: block;
 
-  margin-top: rem-from-px(5px);
-  margin-bottom: rem-from-px(15px);
+  margin-top: rem-from-px(5);
+  margin-bottom: rem-from-px(15);
 
   @include respond-to-min($bp-sm-min) {
     // Remove default margin between explanation and list of links.
@@ -66,11 +66,11 @@
 }
 
 ::slotted(cfpb-list) {
-  margin-top: rem-from-px(15px);
+  margin-top: rem-from-px(15);
 
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {
-    margin-top: rem-from-px(5px);
+    margin-top: rem-from-px(5);
   }
 }
 
@@ -87,15 +87,15 @@ cfpb-icon {
   @include respond-to-min($bp-sm-min) {
     // Make adjustments to the icon, explanation, and links if at non-mobile.
     // Increase the icon size.
-    font-size: rem-from-px(18px);
+    font-size: rem-from-px(18);
   }
 }
 
 .container {
   display: flex;
-  gap: rem-from-px(5px);
+  gap: rem-from-px(5);
 
-  padding: rem-from-px(15px);
+  padding: rem-from-px(15);
   background: var(--alert-bg);
   border: 1px solid var(--alert-border);
 }
@@ -105,14 +105,14 @@ cfpb-icon {
 }
 
 .message {
-  font-size: rem-from-px(16px);
+  font-size: rem-from-px(16);
   line-height: 1.25;
   font-weight: 500;
 
   // Tablet and above.
   @include respond-to-min($bp-sm-min) {
     // h4 size
-    font-size: rem-from-px(18px);
+    font-size: rem-from-px(18);
   }
 }
 

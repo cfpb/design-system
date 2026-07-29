@@ -13,17 +13,17 @@
   grid-template-areas:
     'pag-btn-prev . pag-btn-next'
     'pag-form pag-form pag-form';
-  row-gap: rem-from-px(15px);
+  row-gap: rem-from-px(15);
 
   &__form {
     grid-area: pag-form;
     display: flex;
     flex-flow: wrap;
     place-content: center;
-    gap: rem-from-px(10px);
+    gap: rem-from-px(10);
 
-    padding: rem-from-px(5px);
-    border-radius: rem-from-px(4px);
+    padding: rem-from-px(5);
+    border-radius: rem-from-px(4);
     background: var(--gray-5);
     color: var(--gray);
   }
@@ -31,7 +31,7 @@
   &__current-page {
     // 45px is a magic number to provide enough room for three digits
     // and the number spinners for type="number" inputs on desktop
-    width: rem-from-px(45px);
+    width: rem-from-px(45);
 
     font-weight: 500;
     text-align: right;

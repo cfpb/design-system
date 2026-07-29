@@ -1,7 +1,7 @@
 @use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
 
 .a-tagline {
-  font-size: rem-from-px(12px);
+  font-size: rem-from-px(12);
 
   display: grid;
   grid-template-columns: 22px 1fr;
@@ -17,7 +17,7 @@
   }
 
   &--large {
-    font-size: rem-from-px(16px);
+    font-size: rem-from-px(16);
 
     & cfpb-flag-usa {
       margin-top: 4px;

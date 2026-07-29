@@ -8,7 +8,7 @@
 .a-tag-topic {
   text-decoration: none;
   display: flex;
-  gap: rem-from-px(5px);
+  gap: rem-from-px(5);
 }
 
 @include u-jump-link(

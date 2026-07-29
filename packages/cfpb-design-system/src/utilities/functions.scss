@@ -7,18 +7,22 @@ The native CSS implementation of the below would look like:
   result: calc((var(--px) / var(--base)) * 1rem);
 }
 
+TODO: 
 This can be swapped in when browser coverage is added to Firefox and Safari
 See https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function
+
+Also, Firefox does not support unitless calculations in calc(). 
+Therefore, we are expecting $px to be unitless.
 */
 
-@function rem-from-px($px, $base: $base-font-size-px) {
+@function rem-from-px($px, $base: $base-font-size) {
   @return calc(($px / $base) * 1rem);
 }
 
-@function em-from-px($px, $base: $base-font-size-px) {
+@function em-from-px($px, $base: $base-font-size) {
   @return calc(($px / $base) * 1em);
 }
 
-@function unitless-from-px($px, $base: $base-font-size-px) {
+@function unitless-from-px($px, $base: $base-font-size) {
   @return calc($px / $base);
 }

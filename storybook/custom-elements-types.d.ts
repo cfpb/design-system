@@ -477,6 +477,8 @@ export type CfpbFormSearchProps = {
   /**  */
   ariaLabelButton?: CfpbFormSearch['ariaLabelButton'];
   /**  */
+  searchlist?: CfpbFormSearch['searchList'];
+  /**  */
   searchList?: CfpbFormSearch['searchList'];
 };
 
@@ -505,6 +507,8 @@ export type CfpbFormSearchSolidJsProps = {
   'attr:aria-label-button'?: CfpbFormSearch['ariaLabelButton'];
   /**  */
   'prop:ariaLabelButton'?: CfpbFormSearch['ariaLabelButton'];
+  /**  */
+  'attr:searchlist'?: CfpbFormSearch['searchList'];
   /**  */
   'prop:searchList'?: CfpbFormSearch['searchList'];
 
@@ -625,10 +629,6 @@ export type CfpbLabelSolidJsProps = {
 
 export type CfpbLinkProps = {
   /**  */
-  linkText?: CfpbLink['linkText'];
-  /**  */
-  linkAttributes?: CfpbLink['linkAttributes'];
-  /**  */
   'link-variant'?: CfpbLink['linkVariant'];
   /**  */
   linkVariant?: CfpbLink['linkVariant'];
@@ -648,13 +648,13 @@ export type CfpbLinkProps = {
   noTopBorder?: CfpbLink['noTopBorder'];
   /**  */
   inline?: CfpbLink['inline'];
+  /**  */
+  linkText?: CfpbLink['linkText'];
+  /**  */
+  linkAttributes?: CfpbLink['linkAttributes'];
 };
 
 export type CfpbLinkSolidJsProps = {
-  /**  */
-  'prop:linkText'?: CfpbLink['linkText'];
-  /**  */
-  'prop:linkAttributes'?: CfpbLink['linkAttributes'];
   /**  */
   'attr:link-variant'?: CfpbLink['linkVariant'];
   /**  */
@@ -675,6 +675,10 @@ export type CfpbLinkSolidJsProps = {
   'prop:noTopBorder'?: CfpbLink['noTopBorder'];
   /**  */
   'prop:inline'?: CfpbLink['inline'];
+  /**  */
+  'prop:linkText'?: CfpbLink['linkText'];
+  /**  */
+  'prop:linkAttributes'?: CfpbLink['linkAttributes'];
 
   /** Set the innerHTML of the element */
   innerHTML?: string;
@@ -887,7 +891,11 @@ export type CfpbSelectProps = {
   /**  */
   isExpanded?: CfpbSelect['isExpanded'];
   /**  */
+  selectedtexts?: CfpbSelect['selectedTexts'];
+  /**  */
   selectedTexts?: CfpbSelect['selectedTexts'];
+  /**  */
+  optionlist?: CfpbSelect['optionList'];
   /**  */
   optionList?: CfpbSelect['optionList'];
   /**  */
@@ -929,7 +937,11 @@ export type CfpbSelectSolidJsProps = {
   /**  */
   'prop:isExpanded'?: CfpbSelect['isExpanded'];
   /**  */
+  'attr:selectedtexts'?: CfpbSelect['selectedTexts'];
+  /**  */
   'prop:selectedTexts'?: CfpbSelect['selectedTexts'];
+  /**  */
+  'attr:optionlist'?: CfpbSelect['optionList'];
   /**  */
   'prop:optionList'?: CfpbSelect['optionList'];
   /**  */
@@ -971,12 +983,16 @@ export type CfpbTagTopicProps = {
   /**  */
   href?: CfpbTagTopic['href'];
   /**  */
+  siblingofjumplink?: CfpbTagTopic['siblingOfJumpLink'];
+  /**  */
   siblingOfJumpLink?: CfpbTagTopic['siblingOfJumpLink'];
 };
 
 export type CfpbTagTopicSolidJsProps = {
   /**  */
   'prop:href'?: CfpbTagTopic['href'];
+  /**  */
+  'bool:siblingofjumplink'?: CfpbTagTopic['siblingOfJumpLink'];
   /**  */
   'prop:siblingOfJumpLink'?: CfpbTagTopic['siblingOfJumpLink'];
 
@@ -988,10 +1004,14 @@ export type CfpbTagTopicSolidJsProps = {
 
 export type CfpbTaglineProps = {
   /**  */
+  islarge?: CfpbTagline['isLarge'];
+  /**  */
   isLarge?: CfpbTagline['isLarge'];
 };
 
 export type CfpbTaglineSolidJsProps = {
+  /**  */
+  'bool:islarge'?: CfpbTagline['isLarge'];
   /**  */
   'prop:isLarge'?: CfpbTagline['isLarge'];
 
@@ -1131,9 +1151,9 @@ export type CustomElements = {
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
    * - `accept`: undefined
-   * - `isDetailHidden`: undefined
-   * - `fileName`: undefined
-   * - `files`: undefined
+   * - `isDetailHidden`: undefined (property only)
+   * - `fileName`: undefined (property only)
+   * - `files`: undefined (property only)
    *
    * ## Events
    *
@@ -1290,7 +1310,7 @@ export type CustomElements = {
    * - `placeholder`: undefined
    * - `aria-label-input`/`ariaLabelInput`: undefined
    * - `aria-label-button`/`ariaLabelButton`: undefined
-   * - `searchList`: undefined
+   * - `searchlist`/`searchList`: undefined
    * - `isSearchDisabled`: undefined (property only) (readonly)
    * - `isOverMaxLength`: undefined (property only) (readonly)
    *
@@ -1394,14 +1414,14 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `linkText`: undefined
-   * - `linkAttributes`: undefined
    * - `link-variant`/`linkVariant`: undefined
    * - `size`: undefined
    * - `color-theme`/`colorTheme`: undefined
    * - `no-underline`/`noUnderline`: undefined
    * - `no-top-border`/`noTopBorder`: undefined
    * - `inline`: undefined
+   * - `linkText`: undefined (property only)
+   * - `linkAttributes`: undefined (property only)
    *
    * ## Slots
    *
@@ -1608,8 +1628,8 @@ export type CustomElements = {
    * - `aria-label-input`/`ariaLabelInput`: undefined
    * - `aria-label-list`/`ariaLabelList`: undefined
    * - `open`/`isExpanded`: undefined
-   * - `selectedTexts`: undefined
-   * - `optionList`: undefined
+   * - `selectedtexts`/`selectedTexts`: undefined
+   * - `optionlist`/`optionList`: undefined
    * - `options`: undefined (property only)
    *
    * ## Events
@@ -1673,7 +1693,7 @@ export type CustomElements = {
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
    * - `href`: undefined
-   * - `siblingOfJumpLink`: undefined
+   * - `siblingofjumplink`/`siblingOfJumpLink`: undefined
    *
    * ## Slots
    *
@@ -1699,7 +1719,7 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `isLarge`: undefined
+   * - `islarge`/`isLarge`: undefined
    *
    * ## Slots
    *
@@ -1861,9 +1881,9 @@ export type CustomElementsSolidJs = {
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
    * - `accept`: undefined
-   * - `isDetailHidden`: undefined
-   * - `fileName`: undefined
-   * - `files`: undefined
+   * - `isDetailHidden`: undefined (property only)
+   * - `fileName`: undefined (property only)
+   * - `files`: undefined (property only)
    *
    * ## Events
    *
@@ -2035,7 +2055,7 @@ export type CustomElementsSolidJs = {
    * - `placeholder`: undefined
    * - `aria-label-input`/`ariaLabelInput`: undefined
    * - `aria-label-button`/`ariaLabelButton`: undefined
-   * - `searchList`: undefined
+   * - `searchlist`/`searchList`: undefined
    * - `isSearchDisabled`: undefined (property only) (readonly)
    * - `isOverMaxLength`: undefined (property only) (readonly)
    *
@@ -2149,14 +2169,14 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `linkText`: undefined
-   * - `linkAttributes`: undefined
    * - `link-variant`/`linkVariant`: undefined
    * - `size`: undefined
    * - `color-theme`/`colorTheme`: undefined
    * - `no-underline`/`noUnderline`: undefined
    * - `no-top-border`/`noTopBorder`: undefined
    * - `inline`: undefined
+   * - `linkText`: undefined (property only)
+   * - `linkAttributes`: undefined (property only)
    *
    * ## Slots
    *
@@ -2379,8 +2399,8 @@ export type CustomElementsSolidJs = {
    * - `aria-label-input`/`ariaLabelInput`: undefined
    * - `aria-label-list`/`ariaLabelList`: undefined
    * - `open`/`isExpanded`: undefined
-   * - `selectedTexts`: undefined
-   * - `optionList`: undefined
+   * - `selectedtexts`/`selectedTexts`: undefined
+   * - `optionlist`/`optionList`: undefined
    * - `options`: undefined (property only)
    *
    * ## Events
@@ -2452,7 +2472,7 @@ export type CustomElementsSolidJs = {
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
    * - `href`: undefined
-   * - `siblingOfJumpLink`: undefined
+   * - `siblingofjumplink`/`siblingOfJumpLink`: undefined
    *
    * ## Slots
    *
@@ -2481,7 +2501,7 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `isLarge`: undefined
+   * - `islarge`/`isLarge`: undefined
    *
    * ## Slots
    *

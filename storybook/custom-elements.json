@@ -733,8 +733,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
-              "attribute": "isDetailHidden"
+              "default": "true"
             },
             {
               "kind": "field",
@@ -743,8 +742,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "''",
-              "attribute": "fileName"
+              "default": "''"
             },
             {
               "kind": "field",
@@ -753,8 +751,7 @@
               "type": {
                 "text": "null"
               },
-              "default": "null",
-              "attribute": "files"
+              "default": "null"
             },
             {
               "kind": "field",
@@ -782,30 +779,6 @@
                 "text": "string"
               },
               "fieldName": "accept"
-            },
-            {
-              "name": "isDetailHidden",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "true",
-              "fieldName": "isDetailHidden"
-            },
-            {
-              "name": "fileName",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "fieldName": "fileName"
-            },
-            {
-              "name": "files",
-              "type": {
-                "text": "null"
-              },
-              "default": "null",
-              "fieldName": "files"
             }
           ],
           "superclass": {
@@ -1641,7 +1614,7 @@
                 "text": "array"
               },
               "default": "[]",
-              "attribute": "searchList"
+              "attribute": "searchlist"
             },
             {
               "kind": "field",
@@ -1798,7 +1771,7 @@
               "fieldName": "ariaLabelButton"
             },
             {
-              "name": "searchList",
+              "name": "searchlist",
               "type": {
                 "text": "array"
               },
@@ -2339,7 +2312,6 @@
                 "text": "string"
               },
               "default": "''",
-              "attribute": "linkText",
               "inheritedFrom": {
                 "name": "MixinLink",
                 "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
@@ -2353,7 +2325,6 @@
                 "text": "object"
               },
               "default": "{}",
-              "attribute": "linkAttributes",
               "inheritedFrom": {
                 "name": "MixinLink",
                 "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
@@ -2457,30 +2428,6 @@
           "tagName": "cfpb-link.",
           "customElement": true,
           "attributes": [
-            {
-              "name": "linkText",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "fieldName": "linkText",
-              "inheritedFrom": {
-                "name": "MixinLink",
-                "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
-              }
-            },
-            {
-              "name": "linkAttributes",
-              "type": {
-                "text": "object"
-              },
-              "default": "{}",
-              "fieldName": "linkAttributes",
-              "inheritedFrom": {
-                "name": "MixinLink",
-                "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
-              }
-            },
             {
               "name": "link-variant",
               "type": {
@@ -2647,8 +2594,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "''",
-              "attribute": "linkText"
+              "default": "''"
             },
             {
               "kind": "field",
@@ -2657,8 +2603,7 @@
               "type": {
                 "text": "object"
               },
-              "default": "{}",
-              "attribute": "linkAttributes"
+              "default": "{}"
             },
             {
               "kind": "field",
@@ -2722,22 +2667,6 @@
             }
           ],
           "attributes": [
-            {
-              "name": "linkText",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "fieldName": "linkText"
-            },
-            {
-              "name": "linkAttributes",
-              "type": {
-                "text": "object"
-              },
-              "default": "{}",
-              "fieldName": "linkAttributes"
-            },
             {
               "name": "link-variant",
               "type": {
@@ -4160,7 +4089,7 @@
                 "text": "array"
               },
               "default": "[]",
-              "attribute": "selectedTexts"
+              "attribute": "selectedtexts"
             },
             {
               "kind": "field",
@@ -4170,7 +4099,7 @@
                 "text": "array"
               },
               "default": "[]",
-              "attribute": "optionList"
+              "attribute": "optionlist"
             },
             {
               "kind": "field",
@@ -4368,7 +4297,7 @@
               "fieldName": "isExpanded"
             },
             {
-              "name": "selectedTexts",
+              "name": "selectedtexts",
               "type": {
                 "text": "array"
               },
@@ -4376,7 +4305,7 @@
               "fieldName": "selectedTexts"
             },
             {
-              "name": "optionList",
+              "name": "optionlist",
               "type": {
                 "text": "array"
               },
@@ -4755,7 +4684,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "attribute": "siblingOfJumpLink"
+              "attribute": "siblingofjumplink"
             }
           ],
           "attributes": [
@@ -4768,7 +4697,7 @@
               "fieldName": "href"
             },
             {
-              "name": "siblingOfJumpLink",
+              "name": "siblingofjumplink",
               "type": {
                 "text": "boolean"
               },
@@ -4827,13 +4756,13 @@
                 "text": "boolean"
               },
               "default": "false",
-              "attribute": "isLarge",
+              "attribute": "islarge",
               "reflects": true
             }
           ],
           "attributes": [
             {
-              "name": "isLarge",
+              "name": "islarge",
               "type": {
                 "text": "boolean"
               },

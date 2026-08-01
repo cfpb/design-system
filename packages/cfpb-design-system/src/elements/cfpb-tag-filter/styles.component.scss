@@ -5,7 +5,7 @@ button {
   font: inherit;
 
   // This line-height isn't 19 or 22, as 20 creates a 30px high tag.
-  line-height: unitless-from-px(20px);
+  line-height: unitless-from-px(20);
 
   // Filter tags appear in filtered contexts, often as part of multiselects.
   font-size: rem-from-px(16);

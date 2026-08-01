@@ -2,7 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.8.1](https://github.com/cfpb/design-system/compare/v5.8.0..v5.8.1) - July 29, 2026
+## [5.8.2](https://github.com/cfpb/design-system/compare/v5.8.1..v5.8.2) - July 31, 2026
+
+### PRs in this release
+
+- PR #[2752](https://github.com/cfpb/design-system/pull/2752): Fix issue where form-level alerts didn't have right color configuration - Ans
+- PR #[2754](https://github.com/cfpb/design-system/pull/2754): Bump decap-cms-app, liquidjs, marked, autoprefixer, concurrently, cypress, eslint + plugins, globals, release-it, stylelint, typescript-eslint, vite - Ans
+- PR #[2755](https://github.com/cfpb/design-system/pull/2755): Add safe immutable version to resolutions - Ans
+- PR #[2757](https://github.com/cfpb/design-system/pull/2757): Fix line-height to be unitless - Ans
+
+### General
+
+- Fix issue where form-level alerts didn't have right color configuration - ([3fb4ded](https://github.com/cfpb/design-system/commit/3fb4ded9a7e62aab630206a8a1ecef402644c212)) - Ans
+- Bump decap-cms-app, liquidjs, marked, autoprefixer, concurrently, cypress, eslint + plugins, globals, release-it, stylelint, typescript-eslint, vite - ([4f35664](https://github.com/cfpb/design-system/commit/4f356642020a08990a63dee4730842db8561ffc4)) - Ans
+- Add safe immutable version to resolutions - ([11fd770](https://github.com/cfpb/design-system/commit/11fd770cd9101914995b937931d46c2729449b96)) - Ans
+- Update cfpb-tagline to use lowercase attr name and create CEM plugins to lowercase attr names (#2756) - ([cab21b7](https://github.com/cfpb/design-system/commit/cab21b7fc26a421cb07a89606a76f73e59706e21)) - itsmedavep
+- Fix line-height to be unitless - ([f93c24c](https://github.com/cfpb/design-system/commit/f93c24cdcadad56d0ac189e4bc7f480bbfe789d5)) - Ans
+
+## [5.8.1](https://github.com/cfpb/design-system/compare/v5.8.0..vv5.8.1) - July 29, 2026
 
 ### PRs in this release
 

@@ -4,11 +4,11 @@ layout: variation
 section: foundation
 eyebrow: Brand symbols
 description: >-
-  
+
   The CFPB logo was designed to symbolize vigilance, transparency, and a consumer focus. Consumers are the foundation and focus of our mission and our logo reflects that. A soft beam of light symbolizes our efforts to illuminate the financial landscape and foster transparency in the marketplace.
 variation_groups:
   - variation_group_name: Lockups
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -109,7 +109,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -128,7 +128,7 @@ variation_groups:
 
           </div>
         variation_name: Small execution
-  - variation_group_description: ""
+  - variation_group_description: ''
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
@@ -152,7 +152,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -171,9 +171,9 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
   - variation_group_name: Lockups
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -274,7 +274,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -392,7 +392,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -411,7 +411,7 @@ variation_groups:
 
           </div>
         variation_name: Small execution
-  - variation_group_description: ""
+  - variation_group_description: ''
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
@@ -435,7 +435,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -454,7 +454,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -476,7 +476,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -495,9 +495,9 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
   - variation_group_name: Lockups
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -598,7 +598,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -716,7 +716,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -735,7 +735,7 @@ variation_groups:
 
           </div>
         variation_name: Small execution
-  - variation_group_description: ""
+  - variation_group_description: ''
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
@@ -759,7 +759,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -778,7 +778,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -800,7 +800,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -819,9 +819,9 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
   - variation_group_name: Lockups
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -922,7 +922,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1040,7 +1040,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1158,7 +1158,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1276,7 +1276,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1295,7 +1295,7 @@ variation_groups:
 
           </div>
         variation_name: Small execution
-  - variation_group_description: ""
+  - variation_group_description: ''
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
@@ -1319,7 +1319,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1338,7 +1338,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -1360,7 +1360,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1379,7 +1379,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -1401,7 +1401,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1420,7 +1420,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -1442,7 +1442,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1461,9 +1461,9 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
   - variation_group_name: Lockups
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -1564,7 +1564,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1682,7 +1682,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1701,7 +1701,7 @@ variation_groups:
 
           </div>
         variation_name: Small execution
-  - variation_group_description: ""
+  - variation_group_description: ''
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
@@ -1725,7 +1725,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1744,7 +1744,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -1766,7 +1766,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -1785,9 +1785,9 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
   - variation_group_name: Lockups
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -1888,7 +1888,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2006,7 +2006,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2124,7 +2124,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2242,7 +2242,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2261,7 +2261,7 @@ variation_groups:
 
           </div>
         variation_name: Small execution
-  - variation_group_description: ""
+  - variation_group_description: ''
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
@@ -2285,7 +2285,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2304,7 +2304,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -2326,7 +2326,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2345,7 +2345,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -2367,7 +2367,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2386,7 +2386,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -2408,7 +2408,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2427,9 +2427,9 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
   - variation_group_name: Lockups
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -2530,7 +2530,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2648,7 +2648,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2766,7 +2766,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2884,7 +2884,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2903,7 +2903,7 @@ variation_groups:
 
           </div>
         variation_name: Small execution
-  - variation_group_description: ""
+  - variation_group_description: ''
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
@@ -2927,7 +2927,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2946,7 +2946,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -2968,7 +2968,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -2987,7 +2987,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -3009,7 +3009,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -3028,7 +3028,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -3050,7 +3050,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -3069,9 +3069,9 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
   - variation_group_name: Lockups
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -3172,7 +3172,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -3290,7 +3290,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -3408,7 +3408,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -3526,7 +3526,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -3644,7 +3644,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -3762,7 +3762,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -3880,7 +3880,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -3998,7 +3998,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -4017,7 +4017,7 @@ variation_groups:
 
           </div>
         variation_name: Small execution
-  - variation_group_description: ""
+  - variation_group_description: ''
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
@@ -4041,7 +4041,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -4060,7 +4060,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -4082,7 +4082,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -4101,7 +4101,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -4123,7 +4123,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -4142,7 +4142,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -4164,7 +4164,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -4183,7 +4183,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -4205,7 +4205,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -4224,7 +4224,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -4246,7 +4246,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -4265,7 +4265,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -4287,7 +4287,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -4306,7 +4306,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -4328,7 +4328,7 @@ variation_groups:
 
 
           </div>
-        variation_specs: ""
+        variation_specs: ''
       - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
@@ -4347,7 +4347,7 @@ variation_groups:
 
           </div>
         variation_name: One color logo
-        variation_specs: ""
+        variation_specs: ''
 guidelines: >-
   ### Clear space
 

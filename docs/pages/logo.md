@@ -776,7 +776,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-33 content-first" markdown="1">
+  <div class="content-50 content-first" markdown="1">
 
 
   #### **Color**
@@ -791,7 +791,7 @@ guidelines: >-
   <br>
 
 
-  <div class="content-33 content-first misuse" markdown="1">
+  <div class="content-50 content-first misuse" markdown="1">
 
 
   ### Misuse
@@ -803,7 +803,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-67 content-last misuse" markdown="1">
+  <div class="content-50 content-last misuse" markdown="1">
 
 
   ![Example of misuse: logo without beam](/design-system/images/uploads/logo_no_beam.png)
@@ -812,7 +812,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-33 content-first misuse" markdown="1">
+  <div class="content-50 content-first misuse" markdown="1">
 
 
   {% include icons/error-round.svg %} Don’t stretch or condense. This weakens the brand.
@@ -821,7 +821,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-67 content-last misuse" markdown="1">
+  <div class="content-50 content-last misuse" markdown="1">
 
 
   ![Example of misuse: stretched logo](/design-system/images/uploads/logo_stretched.png)
@@ -833,7 +833,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-33 content-first misuse" markdown="1">
+  <div class="content-50 content-first misuse" markdown="1">
 
 
   {% include icons/error-round.svg %} Don’t apply a drop shadow.
@@ -842,7 +842,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-67 content-last misuse" markdown="1">
+  <div class="content-50 content-last misuse" markdown="1">
 
 
   ![Example of misuse: logo with drop shadow](/design-system/images/uploads/logo_dropshadow.png)
@@ -851,7 +851,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-33 content-first misuse" markdown="1">
+  <div class="content-50 content-first misuse" markdown="1">
 
 
   {% include icons/error-round.svg %} Don’t outline the logo or use other colors. This dilutes brand association.
@@ -860,7 +860,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-67 content-last misuse" markdown="1">
+  <div class="content-50 content-last misuse" markdown="1">
 
 
   ![Example of misuse: outlined logo](/design-system/images/uploads/logo_outlined.png)
@@ -872,7 +872,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-33 content-first misuse" markdown="1">
+  <div class="content-50 content-first misuse" markdown="1">
 
 
   {% include icons/error-round.svg %} Don’t rotate the symbol. This changes the connotation of the light.
@@ -881,7 +881,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-67 content-last misuse" markdown="1">
+  <div class="content-50 content-last misuse" markdown="1">
 
 
   ![Example of misuse: rotated logo](/design-system/images/uploads/logo_rotated.png)
@@ -890,7 +890,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-33 content-first misuse" markdown="1">
+  <div class="content-50 content-first misuse" markdown="1">
 
 
   {% include icons/error-round.svg %} Don’t place the logo directly on a colored background or image without a white bounding box.
@@ -899,7 +899,7 @@ guidelines: >-
   </div>
 
 
-  <div class="content-67 content-last misuse" markdown="1">
+  <div class="content-50 content-last misuse" markdown="1">
 
 
   ![Example of misuse: logo directly on color background](/design-system/images/uploads/logo_color_background.png)

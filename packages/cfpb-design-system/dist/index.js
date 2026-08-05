@@ -1350,7 +1350,7 @@ function B(e, t, n) {
 		return i.classList.add(e), this;
 	}
 	function C(e) {
-		return d ||= (h(), !0), i.classList.contains(e) ? !1 : (p(), i.classList.remove(o), o = e, f(), i.classList.add(o), !0);
+		return d ||= (h(), !0), !i.classList.contains(e) && (p(), i.classList.remove(o), o = e, f(), i.classList.add(o), !0);
 	}
 	return this.animateOff = y, this.animateOn = v, this.applyClass = C, this.halt = g, this.init = S, this.isAnimated = () => l, this.remove = _, this.setElement = x, this;
 }
@@ -1541,9 +1541,7 @@ function K(e, t = !0) {
 				this.expand();
 				break;
 			case 2:
-			case 3:
-				this.collapse();
-				break;
+			case 3: this.collapse();
 		}
 	}
 	function x() {
@@ -2404,9 +2402,7 @@ var At = class e extends I {
 			case "Home":
 				e.preventDefault(), this.focusItemAt(0);
 				break;
-			case "End":
-				e.preventDefault(), this.focusItemAt(n);
-				break;
+			case "End": e.preventDefault(), this.focusItemAt(n);
 		}
 	}
 	get focusedIndex() {
@@ -2605,7 +2601,7 @@ var At = class e extends I {
 	}
 	get isOverMaxLength() {
 		let e = this.value.length > this.maxlength;
-		return e ? this.validation = "error" : this.validation = "", e;
+		return this.validation = e ? "error" : "", e;
 	}
 	#l(e) {
 		e.preventDefault(), !this.disabled && (this.#n.setFormValue(this.value), this.#n.form?.requestSubmit());
@@ -2802,9 +2798,7 @@ var sn = Ze(on), cn = ".cf-icon-svg{vertical-align:middle;fill:currentColor;heig
 	}
 	onKeyDown(e, t) {
 		if (t.shadowRoot.activeElement.tagName === "BUTTON") switch (e.key) {
-			case "ArrowDown":
-				e.preventDefault(), t.isExpanded = !0, this.list.querySelector("cfpb-listbox-item")?.focus();
-				break;
+			case "ArrowDown": e.preventDefault(), t.isExpanded = !0, this.list.querySelector("cfpb-listbox-item")?.focus();
 		}
 	}
 }, hn = class {
@@ -2837,14 +2831,10 @@ var sn = Ze(on), cn = ".cf-icon-svg{vertical-align:middle;fill:currentColor;heig
 			case "ArrowDown":
 				e.preventDefault(), t.isExpanded ? this.list.focusItemAt(0) : t.isExpanded = !0;
 				break;
-			case "Enter":
-				e.preventDefault(), t.isExpanded = !t.isExpanded;
-				break;
+			case "Enter": e.preventDefault(), t.isExpanded = !t.isExpanded;
 		}
 		else if (n === "CFPB-LISTBOX-ITEM") switch (e.key) {
-			case "Tab":
-				e.shiftKey && this.list.focusedIndex === 0 && (e.preventDefault(), this.list.focusItemAt(-1), this.input.focus());
-				break;
+			case "Tab": e.shiftKey && this.list.focusedIndex === 0 && (e.preventDefault(), this.list.focusItemAt(-1), this.input.focus());
 		}
 		e.key === "Escape" && (e.preventDefault(), t.isExpanded = !1);
 	}
@@ -3224,7 +3214,7 @@ function q(e, t) {
 	return Cn(e, t), wn(e, t);
 }
 function J(e) {
-	return Ct(e, Sn) ? !1 : (G(e, Sn), !0);
+	return !Ct(e, Sn) && (G(e, Sn), !0);
 }
 function Y(e, t, n, r = {}) {
 	let i = (n || document).querySelectorAll(e), a = [], o, s;

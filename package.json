@@ -142,6 +142,6 @@
     "immutable": ">=4.3.9"
   },
   "type": "module",
-  "packageManager": "yarn@4.17.0",
+  "packageManager": "yarn@4.18.0",
   "customElements": "storybook/custom-elements.json"
 }

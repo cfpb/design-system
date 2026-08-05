@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";function t(){return i}function n(e,t){globalThis.customElements.get(e)||globalThis.customElements.define(e,t)}var r,i;function a(){return(a=e((()=>{r={iconPath:`./icons/`},i={...r},Object.keys(r)})))()}export{t as n,a as r,n as t};

@@ -4718,6 +4718,9 @@ guidelines: >-
   ![Example of misuse: outlined logo](/design-system/images/uploads/logo_outlined.png)
 
 
+  ![Example of misuse: logo in a different color](/design-system/images/uploads/logo_blue.png)
+
+
   </div>
 
 
@@ -4749,6 +4752,9 @@ guidelines: >-
 
 
   <div class="content-67 content-last misuse" markdown="1">
+
+
+  ![Example of misuse: logo directly on color background](/design-system/images/uploads/logo_color_background.png)
 
 
   ![Example of misuse: logo directly on image background](/design-system/images/uploads/logo_image_background.png)

@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@cfpb/cfpb-design-system': path.resolve(
-        __dirname,
+        import.meta.dirname,
         'packages/cfpb-design-system/',
       ),
     },

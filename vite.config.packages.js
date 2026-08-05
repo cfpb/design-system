@@ -1,5 +1,5 @@
 import { defineConfig, mergeConfig } from 'vite';
-import baseConfig from './vite.config.base';
+import baseConfig from './vite.config.base.js';
 import path from 'node:path';
 
 const specificConfig = defineConfig({

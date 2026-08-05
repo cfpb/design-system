@@ -54,8 +54,8 @@
     "lit": "3.3.3",
     "marked": "18.0.7",
     "minisearch": "7.2.0",
-    "react": "19.2.7",
-    "react-dom": "19.2.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "slugify": "1.6.9"
   },
   "devDependencies": {

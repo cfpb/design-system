@@ -128,9 +128,168 @@ variation_groups:
 
           </div>
         variation_name: Small execution
+      - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The horizontal lockup is the primary option and appears on our stationery and website.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Horizontal lockup logo](/design-system/images/uploads/logo_horizontal_071720.png "Horizontal lockup logo")
+
+
+          </div>
+        variation_name: Horizontal
+        variation_specs: |-
+          The logo is comprised of the following colors.
+
+          <table class="color-table">
+                <thead>
+                    <tr>
+
+          <th></th>
+                    <th>Name</th>
+                    <th>CMYK</th>
+
+           <th>PMS</th>
+
+           <th>RGB</th>
+
+          <th>HEX</th>
+          </tr>
+
+          </thead>
+
+            <tbody>
+
+          <tr>
+                <td class="swatch__field swatch__field--green"></td>
+                <td>CFPB green</td>
+
+            <td>80, 0, 100, 0</td>
+
+          <td>361</td>
+
+          <td>32, 170, 63</td>
+
+          <td>#20aa3f</td>
+
+            </tr>
+
+            <tr>
+                <td class="swatch__field swatch__field--green-60"></td>
+                <td>Green 60 (Midtone Green)</td>
+                <td>32, 0, 52, 0</td>
+
+          <td>358</td>
+
+           <td>173, 220, 145</td>
+
+          <td>#addc91</td>
+
+            </tr>
+
+            <tr>
+                <td class="swatch__field swatch__field--gray"></td>
+                <td>Gray</td>
+                <td>0, 0, 0, 77</td>
+
+          <td>Cool Gray 11C</td>
+
+          <td>90, 93, 97</td>
+
+          <td>#5a5d61</td>
+
+            </tr>
+
+            </tbody></table>
+      - variation_name: Vertical
+        variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The vertical lockup is useful for square frames or narrow columns.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Vertical lockup logo](/design-system/images/uploads/logo_vertical_071720.png "Vertical lockup logo")
+
+
+          </div>
+        variation_specs: ""
+      - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The small execution lockup is used when the logo needs to scale down to less than 0.75” or 54 pixels at 72 dpi. The small execution logo allows “Consumer Financial Protection Bureau” to remain legible.
+
+
+          </div>
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          ![Small execution logo](/design-system/images/uploads/logo1_small-execution.png "Small execution logo")
+
+
+          </div>
+        variation_name: Small execution
   - variation_group_description: ""
     variation_group_name: Variations
     variations:
+      - variation_name: Spanish logo
+        variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The Spanish logo should be used for Spanish language materials, such as websites and microsites, publications, and signage.
+
+
+          This is applicable for the horizontal, vertical, and small execution lockups.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Spanish logo](/design-system/images/uploads/logo1_spanish.png "Spanish logo")
+
+
+          </div>
+        variation_specs: ""
+      - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          When the logo is being produced for print formats conditions may not allow for full color. For these rare cases, the one-color logo may be used only in black on a white background.This is applicable for the horizontal, vertical, isolated, and small execution lockups.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![One color logo](/design-system/images/uploads/logo1_one-color.png "One color logo")
+
+
+          </div>
+        variation_name: One color logo
+        variation_specs: ""
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
@@ -411,9 +570,327 @@ variation_groups:
 
           </div>
         variation_name: Small execution
+      - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The horizontal lockup is the primary option and appears on our stationery and website.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Horizontal lockup logo](/design-system/images/uploads/logo_horizontal_071720.png "Horizontal lockup logo")
+
+
+          </div>
+        variation_name: Horizontal
+        variation_specs: |-
+          The logo is comprised of the following colors.
+
+          <table class="color-table">
+                <thead>
+                    <tr>
+
+          <th></th>
+                    <th>Name</th>
+                    <th>CMYK</th>
+
+           <th>PMS</th>
+
+           <th>RGB</th>
+
+          <th>HEX</th>
+          </tr>
+
+          </thead>
+
+            <tbody>
+
+          <tr>
+                <td class="swatch__field swatch__field--green"></td>
+                <td>CFPB green</td>
+
+            <td>80, 0, 100, 0</td>
+
+          <td>361</td>
+
+          <td>32, 170, 63</td>
+
+          <td>#20aa3f</td>
+
+            </tr>
+
+            <tr>
+                <td class="swatch__field swatch__field--green-60"></td>
+                <td>Green 60 (Midtone Green)</td>
+                <td>32, 0, 52, 0</td>
+
+          <td>358</td>
+
+           <td>173, 220, 145</td>
+
+          <td>#addc91</td>
+
+            </tr>
+
+            <tr>
+                <td class="swatch__field swatch__field--gray"></td>
+                <td>Gray</td>
+                <td>0, 0, 0, 77</td>
+
+          <td>Cool Gray 11C</td>
+
+          <td>90, 93, 97</td>
+
+          <td>#5a5d61</td>
+
+            </tr>
+
+            </tbody></table>
+      - variation_name: Vertical
+        variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The vertical lockup is useful for square frames or narrow columns.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Vertical lockup logo](/design-system/images/uploads/logo_vertical_071720.png "Vertical lockup logo")
+
+
+          </div>
+        variation_specs: ""
+      - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The small execution lockup is used when the logo needs to scale down to less than 0.75” or 54 pixels at 72 dpi. The small execution logo allows “Consumer Financial Protection Bureau” to remain legible.
+
+
+          </div>
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          ![Small execution logo](/design-system/images/uploads/logo1_small-execution.png "Small execution logo")
+
+
+          </div>
+        variation_name: Small execution
+      - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The horizontal lockup is the primary option and appears on our stationery and website.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Horizontal lockup logo](/design-system/images/uploads/logo_horizontal_071720.png "Horizontal lockup logo")
+
+
+          </div>
+        variation_name: Horizontal
+        variation_specs: |-
+          The logo is comprised of the following colors.
+
+          <table class="color-table">
+                <thead>
+                    <tr>
+
+          <th></th>
+                    <th>Name</th>
+                    <th>CMYK</th>
+
+           <th>PMS</th>
+
+           <th>RGB</th>
+
+          <th>HEX</th>
+          </tr>
+
+          </thead>
+
+            <tbody>
+
+          <tr>
+                <td class="swatch__field swatch__field--green"></td>
+                <td>CFPB green</td>
+
+            <td>80, 0, 100, 0</td>
+
+          <td>361</td>
+
+          <td>32, 170, 63</td>
+
+          <td>#20aa3f</td>
+
+            </tr>
+
+            <tr>
+                <td class="swatch__field swatch__field--green-60"></td>
+                <td>Green 60 (Midtone Green)</td>
+                <td>32, 0, 52, 0</td>
+
+          <td>358</td>
+
+           <td>173, 220, 145</td>
+
+          <td>#addc91</td>
+
+            </tr>
+
+            <tr>
+                <td class="swatch__field swatch__field--gray"></td>
+                <td>Gray</td>
+                <td>0, 0, 0, 77</td>
+
+          <td>Cool Gray 11C</td>
+
+          <td>90, 93, 97</td>
+
+          <td>#5a5d61</td>
+
+            </tr>
+
+            </tbody></table>
+      - variation_name: Vertical
+        variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The vertical lockup is useful for square frames or narrow columns.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Vertical lockup logo](/design-system/images/uploads/logo_vertical_071720.png "Vertical lockup logo")
+
+
+          </div>
+        variation_specs: ""
+      - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The small execution lockup is used when the logo needs to scale down to less than 0.75” or 54 pixels at 72 dpi. The small execution logo allows “Consumer Financial Protection Bureau” to remain legible.
+
+
+          </div>
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          ![Small execution logo](/design-system/images/uploads/logo1_small-execution.png "Small execution logo")
+
+
+          </div>
+        variation_name: Small execution
   - variation_group_description: ""
     variation_group_name: Variations
     variations:
+      - variation_name: Spanish logo
+        variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The Spanish logo should be used for Spanish language materials, such as websites and microsites, publications, and signage.
+
+
+          This is applicable for the horizontal, vertical, and small execution lockups.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Spanish logo](/design-system/images/uploads/logo1_spanish.png "Spanish logo")
+
+
+          </div>
+        variation_specs: ""
+      - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          When the logo is being produced for print formats conditions may not allow for full color. For these rare cases, the one-color logo may be used only in black on a white background.This is applicable for the horizontal, vertical, isolated, and small execution lockups.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![One color logo](/design-system/images/uploads/logo1_one-color.png "One color logo")
+
+
+          </div>
+        variation_name: One color logo
+        variation_specs: ""
+      - variation_name: Spanish logo
+        variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          The Spanish logo should be used for Spanish language materials, such as websites and microsites, publications, and signage.
+
+
+          This is applicable for the horizontal, vertical, and small execution lockups.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Spanish logo](/design-system/images/uploads/logo1_spanish.png "Spanish logo")
+
+
+          </div>
+        variation_specs: ""
+      - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
+          When the logo is being produced for print formats conditions may not allow for full color. For these rare cases, the one-color logo may be used only in black on a white background.This is applicable for the horizontal, vertical, isolated, and small execution lockups.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![One color logo](/design-system/images/uploads/logo1_one-color.png "One color logo")
+
+
+          </div>
+        variation_name: One color logo
+        variation_specs: ""
       - variation_name: Spanish logo
         variation_description: >-
           <div class="content-33 content-first" markdown="1">

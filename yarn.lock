@@ -4002,22 +4002,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wc-toolkit/jsx-types@npm:1.6.0":
-  version: 1.6.0
-  resolution: "@wc-toolkit/jsx-types@npm:1.6.0"
+"@wc-toolkit/jsx-types@npm:1.7.1":
+  version: 1.7.1
+  resolution: "@wc-toolkit/jsx-types@npm:1.7.1"
   dependencies:
     "@prettier/sync": "npm:^0.6.1"
-  checksum: 10c0/d13bdac43194c83a49919f6ab399dde17049167a57f96a8deda0a147a4f1379d14ef7470dc3458c532e0bd1c615a49f07b4c333c04fb4c3371636ac16487c0ed
+  checksum: 10c0/f1b0f6f1046eaedd95998f561aae14ceed0f400322b30c41be5a5d11886a50e6ab1f378b4e35356f342f8e073cc13750e81759af25a969680bb5cfbffdd073d9
   languageName: node
   linkType: hard
 
-"@wc-toolkit/storybook-helpers@npm:10.3.0":
-  version: 10.3.0
-  resolution: "@wc-toolkit/storybook-helpers@npm:10.3.0"
+"@wc-toolkit/storybook-helpers@npm:10.7.3":
+  version: 10.7.3
+  resolution: "@wc-toolkit/storybook-helpers@npm:10.7.3"
   peerDependencies:
     lit: ^2.0.0 || ^3.0.0
     storybook: ">=10.1.11-0 <11.0.0-0"
-  checksum: 10c0/f42d47bda7eb1299a2b0eab09b3b0fb08d5221bc6ff226cd674c150996ebd5fd33d01f2db2562c2fb3e9430d8b53571fc729f31fec7bd54313094bc0bd8680bf
+  checksum: 10c0/f17102c06be7d8886a4c7255162d2b448af85118e4c68cf611f666cb832a7cce060d8f07d1314bf5c3952a3fdd757776e960af571759720349a21710e0f97776
   languageName: node
   linkType: hard
 
@@ -5227,8 +5227,8 @@ __metadata:
     "@types/react": "npm:19.2.18"
     "@vitest/browser-playwright": "npm:4.1.10"
     "@vitest/coverage-v8": "npm:4.1.10"
-    "@wc-toolkit/jsx-types": "npm:1.6.0"
-    "@wc-toolkit/storybook-helpers": "npm:10.3.0"
+    "@wc-toolkit/jsx-types": "npm:1.7.1"
+    "@wc-toolkit/storybook-helpers": "npm:10.7.3"
     anchor-js: "npm:5.0.0"
     autoprefixer: "npm:10.5.4"
     concurrently: "npm:10.0.4"

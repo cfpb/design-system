@@ -2532,6 +2532,20 @@ declare module 'react' {
   export interface CSSProperties extends CustomCssProperties {}
 }
 
+declare module 'react/jsx-runtime' {
+  namespace JSX {
+    interface IntrinsicElements extends CustomElements {}
+  }
+  export interface CSSProperties extends CustomCssProperties {}
+}
+
+declare module 'react/jsx-dev-runtime' {
+  namespace JSX {
+    interface IntrinsicElements extends CustomElements {}
+  }
+  export interface CSSProperties extends CustomCssProperties {}
+}
+
 declare module 'preact' {
   namespace JSX {
     interface IntrinsicElements extends CustomElements {}

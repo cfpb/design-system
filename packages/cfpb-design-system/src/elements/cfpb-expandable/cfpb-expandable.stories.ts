@@ -1,5 +1,4 @@
 /// <reference types="vite/client" />
-import { html } from 'lit';
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { fn, userEvent, expect } from 'storybook/test';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
@@ -8,9 +7,16 @@ import { CfpbExpandable } from './index.js';
 
 CfpbExpandable.init();
 
-const { args, argTypes } = getStorybookHelpers<CfpbExpandableProps>(
+/**
+ * `properties` is excluded here. See `cfpb-button.stories.ts` for the reason.
+ * Specifically here `isExpanded` and `open` both describe once piece of state.
+ * `template()` binds both applying the prop _after_ the attribute. Leaving them in
+ * lets `isExpanded` default collapse the Expanded story. The prop still works on the
+ * element. See the behavior tests.....
+ */
+const { args, argTypes, template } = getStorybookHelpers<CfpbExpandableProps>(
   'cfpb-expandable',
-  { excludeCategories: ['methods'] },
+  { excludeCategories: ['methods', 'properties'] },
 );
 
 type ExpandableStoryArgs = CfpbExpandableProps & {
@@ -25,14 +31,10 @@ const meta: Meta<ExpandableStoryArgs> = {
   args: {
     ...args,
     'header-slot': 'Section header',
-    'content-slot': 'Expandable section content',
+    'content-slot': '<p>Expandable section content</p>',
   },
   argTypes,
-  render: ({ open, 'header-slot': header, 'content-slot': content }) =>
-    html`<cfpb-expandable ?open="${open}">
-      <span slot="header">${header}</span>
-      <p slot="content">${content}</p>
-    </cfpb-expandable>`,
+  render: (args) => template(args),
 };
 
 export default meta;
@@ -104,6 +106,26 @@ export const CollapseProgrammatically: Story = {
 
     await expect(expandable.isExpanded).toBe(false);
     await expect(button.getAttribute('aria-expanded')).toBe('false');
+  },
+};
+
+export const ExpandProgramamatically: Story = {
+  tags: ['!dev', '!autodocs'],
+  args: { open: false },
+  play: async ({ canvasElement }) => {
+    const expandable = canvasElement.querySelector(
+      'cfpb-expandable',
+    ) as CfpbExpandable;
+    const content = expandable.shadowRoot!.querySelector(
+      '.o-expandable__content',
+    )!;
+    expandable.isExpanded = true;
+    await expandable.updateComplete;
+
+    // The prop reflects to the attribute and drives the flyout open
+    await expect(expandable.hasAttribute('open')).toBe(true);
+    await expect(content.hasAttribute('hidden')).toBe(false);
+    await expect(content.classList.contains('u-max-height-default')).toBe(true);
   },
 };
 

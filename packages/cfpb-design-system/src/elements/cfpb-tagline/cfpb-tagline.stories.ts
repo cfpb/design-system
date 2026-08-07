@@ -6,9 +6,10 @@ import { CfpbTagline } from './index.js';
 
 CfpbTagline.init();
 
+// See cfpb-button story for why `properties` is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbTaglineProps>(
   'cfpb-tagline',
-  { excludeCategories: ['methods'] },
+  { excludeCategories: ['methods', 'properties'] },
 );
 
 type TagLineStoryArgs = CfpbTaglineProps & { 'default-slot'?: string };
@@ -17,7 +18,10 @@ const meta: Meta<TagLineStoryArgs> = {
   title: 'Web Components/cfpb-tagline',
   component: 'cfpb-tagline',
   tags: ['autodocs'],
-  args,
+  args: {
+    ...args,
+    'default-slot': 'An official website of the United States government.',
+  },
   argTypes,
   render: (args) => template(args),
 };

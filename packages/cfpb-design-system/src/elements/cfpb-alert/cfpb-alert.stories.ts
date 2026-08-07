@@ -21,9 +21,10 @@ const statusIcons = {
   loading: 'update',
 };
 
+// See cfpb-button.stories.ts for why properties is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbAlertProps>(
   'cfpb-alert',
-  { excludeCategories: ['methods'] },
+  { excludeCategories: ['methods', 'properties'] },
 );
 
 type AlertStoryArgs = CfpbAlertProps & { 'default-slot'?: string };
@@ -36,7 +37,15 @@ const meta: Meta<AlertStoryArgs> = {
     ...args,
     status: 'info',
     message: 'Information alert',
-    'default-slot': 'You can also add an explanation to the alert.',
+    /**
+     * The explanation is wrapped in an element rather than slotted as text
+     * so the alert's `::slotted()` spacing applies to it. Text is not matched
+     * by `::slotted()`. A span is used instead of a `<p>` because slotted
+     * content stays in the light DOM. In the light DOM the global `<p> { margin: 0 0 15px }`
+     * in base.scss wins over slotted content. This matches the examples on the Docs page.
+     */
+    'default-slot':
+      '<span>You can also add an explanation to the alert.</span>',
   },
   argTypes: {
     ...argTypes,
@@ -64,7 +73,7 @@ export const MessageOnly: Story = {
 export const WithLinks: Story = {
   args: {
     'default-slot': `
-            <p>This is the explanation of the alert.</p>
+            <span>This is the explanation of the alert.</span>
             <cfpb-list gap="compact">
                 <cfpb-link link-variant="nav-right">
                     <a href="#">This is a link below the explanation</a>
@@ -81,7 +90,8 @@ export const Success: Story = {
   args: {
     status: 'success',
     message: '11 results',
-    'default-slot': 'This is an optional explanation of the success message.',
+    'default-slot':
+      '<span>This is an optional explanation of the success message.</span>',
   },
 };
 
@@ -89,7 +99,8 @@ export const Warning: Story = {
   args: {
     status: 'warning',
     message: 'No results found',
-    'default-slot': 'This is an optional explanation of the warning.',
+    'default-slot':
+      '<span>This is an optional explanation of the warning.</span>',
   },
 };
 
@@ -97,7 +108,8 @@ export const Error: Story = {
   args: {
     status: 'error',
     message: 'There was a problem with your submission',
-    'default-slot': 'This is an optional explanation of the error.',
+    'default-slot':
+      '<span>This is an optional explanation of the error.</span>',
   },
 };
 
@@ -105,7 +117,8 @@ export const Loading: Story = {
   args: {
     status: 'loading',
     message: 'Loading results',
-    'default-slot': 'This is an optional explanation of the loading state.',
+    'default-slot':
+      '<span>This is an optional explanation of the loading state.</span>',
   },
 };
 

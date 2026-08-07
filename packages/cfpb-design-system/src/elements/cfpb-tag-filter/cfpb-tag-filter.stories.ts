@@ -7,9 +7,10 @@ import { CfpbTagFilter } from './index.js';
 
 CfpbTagFilter.init();
 
+// See cfpb-button story for why `properties` is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbTagFilterProps>(
   'cfpb-tag-filter',
-  { excludeCategories: ['methods'] },
+  { excludeCategories: ['methods', 'properties'] },
 );
 
 type TagFilterStoryArgs = CfpbTagFilterProps & { 'default-slot'?: string };

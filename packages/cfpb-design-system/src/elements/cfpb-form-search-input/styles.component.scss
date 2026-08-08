@@ -75,7 +75,7 @@
 
   // Add a min-width for the default width of the text input + clear button,
   // so that when the clear button appears it doesn't bump the input width.
-  min-width: 300px;
+  min-width: rem-from-px(300);
 
   background: var(--white);
 
@@ -85,13 +85,17 @@
 
   label {
     position: absolute;
-    left: 10px;
+    left: rem-from-px(10);
     cursor: pointer;
   }
 
   input {
+    // We need to override the user agent stylesheet for form controls (button, input, select, textarea).
+    font: inherit;
+
     // This line-height settings is taken from base.scss.
     line-height: unitless-from-px(19);
+    height: rem-from-px(33);
   }
 
   input[type='search'] {
@@ -99,7 +103,8 @@
     font-size: 1rem;
     width: 100%;
     white-space: nowrap;
-    padding-left: 30px;
+    padding-left: rem-from-px(30);
+    padding-right: 44px;
     cursor: text;
 
     // Remove default rounding in Safari.

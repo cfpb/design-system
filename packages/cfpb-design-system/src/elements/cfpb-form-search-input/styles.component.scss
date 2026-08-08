@@ -75,7 +75,10 @@
 
   // Add a min-width for the default width of the text input + clear button,
   // so that when the clear button appears it doesn't bump the input width.
-  min-width: rem-from-px(300);
+  min-width: 300px;
+
+  // If the base font is set smaller than 16px, we need to set a minimum height.
+  min-height: 30px;
 
   background: var(--white);
 

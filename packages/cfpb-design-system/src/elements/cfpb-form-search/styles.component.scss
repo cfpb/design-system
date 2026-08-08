@@ -10,7 +10,11 @@
 
 // This line-height settings is taken from base.scss.
 button {
-  line-height: unitless-from-px(19);
+  // We need to override the user agent stylesheet for form controls (button, input, select, textarea).
+  font: inherit;
+
+  // If the base font is set smaller than 16px, we need to set a minimum height.
+  min-height: 32px;
 }
 
 .o-form-search {
@@ -33,12 +37,15 @@ button {
   .container {
     position: relative;
     width: 100%;
+
+    // We need to set inline-flex on the container so that the input's height is correct in Firefox/Safari.
+    display: inline-flex;
   }
 
   .popup {
     display: none;
     position: absolute;
-    top: 34px;
+    top: rem-from-px(34);
     z-index: 100;
     background: white;
     border: 1px solid var(--pacific);

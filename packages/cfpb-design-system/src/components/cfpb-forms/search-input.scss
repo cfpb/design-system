@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/index' as *;
 
 .o-search-input {
   display: flex;
@@ -14,7 +15,7 @@
 
     &-label {
       position: absolute;
-      left: 10px;
+      left: rem-from-px(10);
       align-self: center;
       cursor: pointer;
       line-height: math.div(
@@ -26,10 +27,13 @@
     input[type='search'] {
       width: 100%;
       white-space: nowrap;
-      padding-left: 30px;
+      padding-left: rem-from-px(30);
+      padding-right: 44px;
 
       // Remove default rounding in Safari.
       appearance: none;
+
+      height: rem-from-px(19.2); // 1.2rem magic number.
     }
 
     // Style the clear x button, and hide it by default.

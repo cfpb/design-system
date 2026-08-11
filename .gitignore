@@ -68,7 +68,8 @@ node_modules/
 .changelog/
 yarn-error.log
 test/unit-test-coverage/
-test/cypress/screenshots
+playwright-report/
+test-results/
 .yarn/*
 !.yarn/cache
 !.yarn/patches

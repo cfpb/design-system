@@ -1,0 +1,22 @@
+name: Playwright tests
+on: [push]
+jobs:
+  playwright-run:
+    runs-on: ubuntu-latest
+    # Runs tests in parallel with matrix strategy.
+    strategy:
+      fail-fast: false
+      # matrix:
+      #  containers: [1, 2] # Uses 2 parallel instances
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Shared setup
+        uses:  ./.github/actions/shared-action-setup
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright tests
+        run: npx playwright test

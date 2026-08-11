@@ -10,7 +10,7 @@ import importPlugin from 'eslint-plugin-import';
 import jsdoc from 'eslint-plugin-jsdoc';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactPlugin from 'eslint-plugin-react';
-import pluginCypress from 'eslint-plugin-cypress';
+import pluginPlaywright from 'eslint-plugin-playwright';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import { configs as eslintPluginLit } from 'eslint-plugin-lit';
 import { configs as eslintPluginWc } from 'eslint-plugin-wc';
@@ -34,7 +34,10 @@ export default defineConfig([
   jsdoc.configs['flat/recommended'],
   jsxA11y.flatConfigs.recommended,
   reactPlugin.configs.flat.recommended,
-  pluginCypress.configs.recommended,
+  {
+    files: ['tests/**'],
+    extends: [pluginPlaywright.configs['flat/recommended']],
+  },
   eslintPluginLit['flat/recommended'],
   eslintPluginWc['flat/recommended'],
   vitestGlobals.configs['flat/recommended'], // Prettier always last

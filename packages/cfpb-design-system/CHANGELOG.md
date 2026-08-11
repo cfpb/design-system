@@ -2,7 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.8.2](https://github.com/cfpb/design-system/compare/v5.8.1..v5.8.2) - July 31, 2026
+## [5.9.0](https://github.com/cfpb/design-system/compare/v5.8.2..v5.9.0) - August 11, 2026
+
+### PRs in this release
+
+- PR #[2767](https://github.com/cfpb/design-system/pull/2767): Bump types/react, liquidjs, eslint-plugin-jsdoc, jsdom, playwright, postcss, release-it, vite - Ans
+- PR #[2781](https://github.com/cfpb/design-system/pull/2781): Fix search input height and font-family - Ans
+
+### General
+
+- Bump types/react, liquidjs, eslint-plugin-jsdoc, jsdom, playwright, postcss, release-it, vite - ([ef58040](https://github.com/cfpb/design-system/commit/ef58040c6c5d26e2aac963f96172d7661d5782ea)) - Ans
+- Re-build assets - ([a70eb55](https://github.com/cfpb/design-system/commit/a70eb5529e19d0f15a1ade83c2311e69ba0749b8)) - Ans
+- Bumping @wc-toolkit to latest and update to custom-elements-types (#2776) - ([935b04c](https://github.com/cfpb/design-system/commit/935b04c3257d78ec86c3492e4003849a93b0b7e3)) - itsmedavep
+- Fix to cfpb-alert to wrap default-slot in <span> like Doc page example, fixing expandable story so controls work, removing prop from SB controls UI for now (#2780) - ([ff5ff7b](https://github.com/cfpb/design-system/commit/ff5ff7b6191d8d025c3b7c4b10f51ef4b2f9a549)) - itsmedavep
+- Fix search input height and font-family - ([87f8813](https://github.com/cfpb/design-system/commit/87f88132b744f3c911b3b8f4333113da0756ec8b)) - Ans
+- Set minimum height - ([435218e](https://github.com/cfpb/design-system/commit/435218e4cb4db467d378adf597c64b239b032495)) - Ans
+- Add magic number height to legacy search input - ([11812ac](https://github.com/cfpb/design-system/commit/11812ac8f0b461ae51348c46da9f776d1d660426)) - Ans
+- Re-build assets - ([552ea43](https://github.com/cfpb/design-system/commit/552ea43c0b3d8204e5772cb64b41bf0fc50252ad)) - Ans
+
+## [5.8.2](https://github.com/cfpb/design-system/compare/v5.8.1..vv5.8.2) - July 31, 2026
 
 ### PRs in this release
 

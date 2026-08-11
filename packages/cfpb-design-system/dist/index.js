@@ -328,7 +328,7 @@ var D = class extends HTMLElement {
 	static finalizeStyles(e) {
 		let t = [];
 		if (Array.isArray(e)) {
-			let n = new Set(e.flat(Infinity).reverse());
+			let n = new Set(e.flat(1 / 0).reverse());
 			for (let e of n) t.unshift(S(e));
 		} else e !== void 0 && t.push(S(e));
 		return t;
@@ -507,16 +507,18 @@ var Ae = (e, t) => {
 						i.append(e[t], _e());
 					}
 				}
-			} else if (i.nodeType === 8) if (i.data === he) c.push({
-				type: 2,
-				index: a
-			});
-			else {
-				let e = -1;
-				for (; (e = i.data.indexOf(O, e + 1)) !== -1;) c.push({
-					type: 7,
+			} else if (i.nodeType === 8) {
+				if (i.data === he) c.push({
+					type: 2,
 					index: a
-				}), e += O.length - 1;
+				});
+				else {
+					let e = -1;
+					for (; (e = i.data.indexOf(O, e + 1)) !== -1;) c.push({
+						type: 7,
+						index: a
+					}), e += O.length - 1;
+				}
 			}
 			a++;
 		}
@@ -1013,9 +1015,12 @@ function at(e) {
 }
 function ot(e, t = !1, n = 0) {
 	let r = this._$AH, i = this._$AN;
-	if (i !== void 0 && i.size !== 0) if (t) if (Array.isArray(r)) for (let e = n; e < r.length; e++) nt(r[e], !1), rt(r[e]);
-	else r != null && (nt(r, !1), rt(r));
-	else nt(this, e);
+	if (i !== void 0 && i.size !== 0) {
+		if (t) {
+			if (Array.isArray(r)) for (let e = n; e < r.length; e++) nt(r[e], !1), rt(r[e]);
+			else r != null && (nt(r, !1), rt(r));
+		} else nt(this, e);
+	}
 }
 var st = (e) => {
 	e.type == Xe.CHILD && (e._$AP ??= ot, e._$AQ ??= at);
@@ -1047,10 +1052,12 @@ var st = (e) => {
 		return n && this.rt(void 0), (n || this.lt !== this.ct) && (this.G = t, this.ht = e.options?.host, this.rt(this.ct = e.element)), N;
 	}
 	rt(e) {
-		if (this.G !== void 0) if (this.isConnected || (e = void 0), typeof this.G == "function") {
-			let t = this.ht ?? globalThis, n = ut.get(t);
-			n === void 0 && (n = /* @__PURE__ */ new WeakMap(), ut.set(t, n)), n.get(this.G) !== void 0 && this.G.call(this.ht, void 0), n.set(this.G, e), e !== void 0 && this.G.call(this.ht, e);
-		} else this.G.value = e;
+		if (this.G !== void 0) {
+			if (this.isConnected || (e = void 0), typeof this.G == "function") {
+				let t = this.ht ?? globalThis, n = ut.get(t);
+				n === void 0 && (n = /* @__PURE__ */ new WeakMap(), ut.set(t, n)), n.get(this.G) !== void 0 && this.G.call(this.ht, void 0), n.set(this.G, e), e !== void 0 && this.G.call(this.ht, e);
+			} else this.G.value = e;
+		}
 	}
 	get lt() {
 		return typeof this.G == "function" ? ut.get(this.ht ?? globalThis)?.get(this.G) : this.G?.value;

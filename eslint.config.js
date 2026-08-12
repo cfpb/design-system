@@ -35,7 +35,7 @@ export default defineConfig([
   jsxA11y.flatConfigs.recommended,
   reactPlugin.configs.flat.recommended,
   {
-    files: ['tests/**'],
+    files: ['test/**'],
     extends: [pluginPlaywright.configs['flat/recommended']],
   },
   eslintPluginLit['flat/recommended'],

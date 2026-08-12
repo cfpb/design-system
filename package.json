@@ -71,7 +71,6 @@
     "@storybook/web-components-vite": "10.5.7",
     "@testing-library/dom": "10.4.1",
     "@testing-library/user-event": "14.6.3",
-    "@types/node": "26.2.0",
     "@vitest/browser-playwright": "4.1.10",
     "@vitest/coverage-v8": "4.1.10",
     "@wc-toolkit/jsx-types": "1.7.1",

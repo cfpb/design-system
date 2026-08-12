@@ -34,7 +34,7 @@ test.describe('CMS interstitial page with editing instructions', () => {
       const storageValue = await page.localStorage.getItem(
         'cms-directions-last-seen',
       );
-      await expect(storageValue).not.toBeNull();
+      expect(storageValue).not.toBeNull();
 
       await expect(page).toHaveTitle('Content Manager');
     });

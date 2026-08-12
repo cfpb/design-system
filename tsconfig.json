@@ -18,6 +18,6 @@
     "docs/_site",
     "storybook-static",
     "packages/*/dist",
-    "cypress"
+    "playwright"
   ]
 }

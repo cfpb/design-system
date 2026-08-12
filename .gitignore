@@ -52,23 +52,12 @@ __pycache__/
 *.egg-info
 .installed.cfg
 
-# Unit test / coverage reports #
-################################
-htmlcov/
-.tox/
-.coverage
-.cache
-nosetests.xml
-coverage.xml
-
 # Front-End #
 #############
 node_modules/
 .npmrc
 .changelog/
 yarn-error.log
-test/unit-test-coverage/
-test/cypress/screenshots
 .yarn/*
 !.yarn/cache
 !.yarn/patches
@@ -89,3 +78,14 @@ docs/_site
 .jekyll-metadata
 Gemfile.lock
 /storybook-static
+
+# Testing #
+#################
+test/unit-test-coverage/
+test-results/
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

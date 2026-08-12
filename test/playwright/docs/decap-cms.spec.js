@@ -31,7 +31,10 @@ async function setupCmsVisit(page, path) {
 test.describe('Decap CMS', () => {
   test.describe('Editing the homepage', () => {
     test.beforeEach(async ({ page }) => {
-      setupCmsVisit(page, 'admin/#/collections/special-pages/entries/home');
+      await setupCmsVisit(
+        page,
+        'admin/#/collections/special-pages/entries/home',
+      );
     });
 
     test('should properly render a preview of a page', async ({ page }) => {
@@ -60,7 +63,7 @@ test.describe('Decap CMS', () => {
 
   test.describe('Editing a component page', () => {
     test.beforeEach(async ({ page }) => {
-      setupCmsVisit(page, 'admin/#/collections/pages/entries/buttons');
+      await setupCmsVisit(page, 'admin/#/collections/pages/entries/buttons');
     });
 
     test('should properly render a preview of a component page', async ({

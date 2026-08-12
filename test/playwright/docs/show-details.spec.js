@@ -39,7 +39,7 @@ test.describe('The "SHOW DETAILS" toggling feature', () => {
   test('should query component names', async ({ page }) => {
     const items = page.locator('.ds-nav-2 .a-link--jump');
     let item;
-    for (let i, len = (await items.all()).length; i < len; i++) {
+    for (let i = 0, len = (await items.all()).length; i < len; i++) {
       item = String(items[i]);
       components[i] = item.substring(item.lastIndexOf('/design-system/') + 14);
     }

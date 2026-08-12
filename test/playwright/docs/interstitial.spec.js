@@ -25,18 +25,20 @@ test.describe('CMS interstitial page with editing instructions', () => {
         'Updating this website - CFPB Design System',
       );
 
+      await page.goto('components');
       await page.goto('components/banner-notification');
+
+      const storageValue = await page.localStorage.getItem(
+        'cms-directions-last-seen',
+      );
+      expect(storageValue).not.toBeNull();
+
       await expect(page.locator('#edit-page')).toBeVisible({
         timeout: PAGE_LOAD_DELAY,
       });
       await page.locator('#edit-page').click();
 
       await expect(page).toHaveTitle('Content Manager');
-
-      const storageValue = await page.localStorage.getItem(
-        'cms-directions-last-seen',
-      );
-      expect(storageValue).not.toBeNull();
     });
   });
 });

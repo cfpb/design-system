@@ -34,13 +34,20 @@ test.describe('Basic CFPB expandable', () => {
       .locator('.a-live__code button.o-expandable__header')
       .last()
       .click();
+
+    await expect(
+      page.locator('.a-live__code .o-expandable__content').last(),
+    ).toBeVisible();
+
     await expect(
       page.locator('.a-live__code .o-expandable__content').last(),
     ).not.toHaveCSS('display', 'none');
+
     await page
       .locator('.a-live__code button.o-expandable__header')
       .last()
       .click();
+
     // Expandable content.
     await expect(
       page.locator('.a-live__code .o-expandable__content').last(),

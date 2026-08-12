@@ -31,12 +31,12 @@ test.describe('CMS interstitial page with editing instructions', () => {
       });
       await page.locator('#edit-page').click();
 
+      await expect(page).toHaveTitle('Content Manager');
+
       const storageValue = await page.localStorage.getItem(
         'cms-directions-last-seen',
       );
       expect(storageValue).not.toBeNull();
-
-      await expect(page).toHaveTitle('Content Manager');
     });
   });
 });

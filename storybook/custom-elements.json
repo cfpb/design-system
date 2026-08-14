@@ -399,6 +399,88 @@
     },
     {
       "kind": "javascript-module",
+      "path": "packages/cfpb-design-system/src/elements/cfpb-card-breakout/index.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CfpbCardBreakout",
+          "slots": [
+            {
+              "description": "The main content for the card.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "init",
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "linkAnchor",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "'#'",
+              "attribute": "link-anchor"
+            },
+            {
+              "kind": "field",
+              "name": "imgSrc",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "'https://dummyimage.com/210x120/'",
+              "attribute": "img-src"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "img-src",
+              "type": {
+                "text": "string"
+              },
+              "default": "'https://dummyimage.com/210x120/'",
+              "fieldName": "imgSrc"
+            },
+            {
+              "name": "link-anchor",
+              "type": {
+                "text": "string"
+              },
+              "default": "'#'",
+              "fieldName": "linkAnchor"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cfpb-card-breakout",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-card-breakout/index.js"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CfpbCardBreakout",
+          "declaration": {
+            "name": "CfpbCardBreakout",
+            "module": "packages/cfpb-design-system/src/elements/cfpb-card-breakout/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "packages/cfpb-design-system/src/elements/cfpb-checkbox-icon/index.js",
       "declarations": [
         {
@@ -4825,6 +4907,14 @@
           "declaration": {
             "name": "*",
             "module": "packages/cfpb-design-system/src/elements/cfpb-button"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "packages/cfpb-design-system/src/elements/cfpb-card-breakout"
           }
         },
         {

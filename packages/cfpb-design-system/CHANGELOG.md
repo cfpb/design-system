@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.9.0](https://github.com/cfpb/design-system/compare/v5.8.2..v5.9.0) - August 11, 2026
+## [5.10.0](https://github.com/cfpb/design-system/compare/v5.9.0..v5.10.0) - August 14, 2026
+
+### PRs in this release
+
+- PR #[2788](https://github.com/cfpb/design-system/pull/2788): Adjust card margins - Ans
+
+### General
+
+- Adjust card margins - ([5932138](https://github.com/cfpb/design-system/commit/59321382eabd8730d5cb4370d91c46845ba7a000)) - Ans
+
+## [5.9.0](https://github.com/cfpb/design-system/compare/v5.8.2..vv5.9.0) - August 11, 2026
 
 ### PRs in this release
 

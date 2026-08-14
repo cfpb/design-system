@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
 
 // $c = default state.
 // $v = `:visited` state.
@@ -60,7 +61,7 @@
 
   &:not(.m-card--breakout) {
     & > a {
-      padding: math.div($grid-gutter-width, $base-font-size-px) + em;
+      padding: em-from-px(30);
     }
 
     .m-card__footer {
@@ -72,7 +73,7 @@
     background: var(--white);
     border: 1px solid var(--gray-20);
     border-bottom-width: 3px;
-    padding: math.div($grid-gutter-width, $base-font-size-px) + em;
+    padding: em-from-px(30);
   }
 
   &:not(.m-card--breakout, .m-card--topic),
@@ -112,7 +113,7 @@
     & .m-card__icon {
       font-size: 1em;
       margin-bottom: 0;
-      padding-right: math.div(7.5px, $base-font-size-px) + em;
+      padding-right: em-from-px(7.5);
       vertical-align: bottom;
     }
 
@@ -139,9 +140,9 @@
     }
 
     .m-card__icon {
-      font-size: math.div(30px, $base-font-size-px) + em;
+      font-size: em-from-px(30);
       color: var(--green);
-      margin-bottom: math.div(5px, $base-font-size-px) + em;
+      margin-bottom: em-from-px(5);
     }
 
     &:hover {
@@ -208,6 +209,10 @@
     .m-card__footer {
       // Subtract 6px to accommodate heading-3 size.
       margin-top: math.div($card-img-height, 2) + $grid-gutter-width - 6px;
+
+      margin-bottom: rem-from-px(20);
+      margin-left: rem-from-px(10);
+      margin-right: rem-from-px(10);
     }
 
     &:hover {

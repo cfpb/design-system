@@ -620,6 +620,7 @@
               "type": {
                 "text": "boolean"
               },
+              "default": "false",
               "attribute": "open",
               "reflects": true
             }
@@ -660,6 +661,7 @@
               "type": {
                 "text": "boolean"
               },
+              "default": "false",
               "fieldName": "isExpanded"
             }
           ],

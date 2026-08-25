@@ -1552,8 +1552,8 @@ function K(e, t = !0) {
 		}
 	}
 	function x() {
-		if (o?.halt(), a === 2 || a === 3) return this;
-		if (a = 2, t && i.removeAttribute("hidden"), this.dispatchEvent("expandbegin", {
+		if (a === 2 || a === 3) return this;
+		if (o?.halt(), a = 2, t && i.removeAttribute("hidden"), this.dispatchEvent("expandbegin", {
 			target: this,
 			type: "expandbegin"
 		}), !s || !c) return u(), this;
@@ -1561,7 +1561,8 @@ function K(e, t = !0) {
 		return e && o.addEventListener(B.END_EVENT, u), s(), e || u(), this;
 	}
 	function S() {
-		if (o?.halt(), a === 1 || a === 0) return this;
+		if (a === 1 || a === 0) return this;
+		o?.halt();
 		for (let e = 0, t = r.length; e < t; e++) g("expanded", r[e], !1);
 		if (i.setAttribute("data-open", "false"), a = 1, this.dispatchEvent("collapsebegin", {
 			target: this,
@@ -1624,7 +1625,7 @@ var At = class e extends I {
 		} };
 	}
 	constructor() {
-		super();
+		super(), this.isExpanded = !1;
 	}
 	firstUpdated() {
 		let e = this.shadowRoot.querySelector("div"), t = e.querySelector(".o-expandable__content"), n = this.isExpanded ? U.CLASSES.MH_DEFAULT : U.CLASSES.MH_ZERO;
@@ -1639,13 +1640,13 @@ var At = class e extends I {
 		}), this.#e.addEventListener("expandend", () => {
 			this.dispatchEvent(new CustomEvent("expandend", r));
 		}), this.#e.addEventListener("collapsebegin", () => {
-			this.dispatchEvent(new CustomEvent("collapsebegin", r));
+			this.isExpanded = !1, this.dispatchEvent(new CustomEvent("collapsebegin", r));
 		}), this.#e.addEventListener("collapseend", () => {
-			this.isExpanded = !1, t.classList.add("u-hidden"), this.dispatchEvent(new CustomEvent("collapseend", r));
+			t.classList.add("u-hidden"), this.dispatchEvent(new CustomEvent("collapseend", r));
 		});
 	}
 	updated(e) {
-		if (e.has("isExpanded")) {
+		if (e.has("isExpanded") && this.#e) {
 			let t = e.get("isExpanded"), n = this.isExpanded;
 			n !== t && (n ? this.#e.expand() : this.#e.collapse());
 		}
@@ -3347,13 +3348,13 @@ function Gn(e) {
 Gn.CLASSES = X;
 //#endregion
 //#region packages/cfpb-design-system/src/utilities/utilities.scss
-var Kn = /* @__PURE__ */ t({}), qn = /* @__PURE__ */ t({}), Z = "o-expandable";
-function Q(e) {
-	let t = q(e, Z), n, r, i, a, o;
+var Kn = /* @__PURE__ */ t({}), qn = /* @__PURE__ */ t({}), Jn = "o-expandable";
+function Z(e) {
+	let t = q(e, Jn), n, r, i, a, o;
 	function s() {
 		if (!J(t)) return this;
-		n = t.querySelector(`.${Z}__header`), r = t.querySelector(`.${Z}__content`), i = t.querySelector(`.${Z}__label`);
-		let e = t.classList.contains(`${Z}--onload-open`);
+		n = t.querySelector(`.${Jn}__header`), r = t.querySelector(`.${Jn}__content`), i = t.querySelector(`.${Jn}__label`);
+		let e = t.classList.contains(`${Jn}--onload-open`);
 		G(t, "behavior_flyout-menu"), G(n, "behavior_flyout-menu_trigger"), G(r, "behavior_flyout-menu_content");
 		let s = e ? U.CLASSES.MH_DEFAULT : U.CLASSES.MH_ZERO;
 		return a = new U(r).init(s), e || r.classList.add("u-hidden"), o = new K(t), o.setTransition(a, a.maxHeightZero, a.maxHeightDefault), o.init(e), o.addEventListener("expandbegin", () => {
@@ -3369,12 +3370,12 @@ function Q(e) {
 	let l = new V();
 	return this.addEventListener = l.addEventListener, this.removeEventListener = l.removeEventListener, this.dispatchEvent = l.dispatchEvent, this;
 }
-Q.BASE_CLASS = Z, Q.init = (e) => Y(`.${Q.BASE_CLASS}`, Q, e);
+Z.BASE_CLASS = Jn, Z.init = (e) => Y(`.${Z.BASE_CLASS}`, Z, e);
 //#endregion
 //#region packages/cfpb-design-system/src/components/cfpb-expandables/expandable-group.scss
-var Jn = /* @__PURE__ */ t({}), Yn = "o-expandable-group";
-function Xn(e) {
-	let t = q(e, Yn), n = t.classList.contains(`${Yn}--accordion`), r, i;
+var Yn = /* @__PURE__ */ t({}), Xn = "o-expandable-group";
+function Zn(e) {
+	let t = q(e, Xn), n = t.classList.contains(`${Xn}--accordion`), r, i;
 	function a(e) {
 		let t = e.target;
 		i && i !== t && i.collapse(), i = t;
@@ -3386,17 +3387,17 @@ function Xn(e) {
 	}
 	return this.init = o, this;
 }
-Xn.BASE_CLASS = Yn, Xn.init = (e) => {
-	(e || document).querySelectorAll(`.${Yn}`).forEach((e) => {
-		let t = Y(`.${Q.BASE_CLASS}`, Q, e);
-		new Xn(e).init(t);
+Zn.BASE_CLASS = Xn, Zn.init = (e) => {
+	(e || document).querySelectorAll(`.${Xn}`).forEach((e) => {
+		let t = Y(`.${Z.BASE_CLASS}`, Z, e);
+		new Zn(e).init(t);
 	});
 };
 //#endregion
 //#region packages/cfpb-design-system/src/components/cfpb-expandables/summary.scss
-var Zn = /* @__PURE__ */ t({}), Qn = "o-summary";
-function $n(e) {
-	let t = q(e, Qn), n = t.classList.contains(`${Qn}--mobile`), r = t.querySelector(`.${Qn}__content`), i = t.querySelector(`.${Qn}__btn`), a, o, s;
+var Qn = /* @__PURE__ */ t({}), $n = "o-summary";
+function er(e) {
+	let t = q(e, $n), n = t.classList.contains(`${$n}--mobile`), r = t.querySelector(`.${$n}__content`), i = t.querySelector(`.${$n}__btn`), a, o, s;
 	function c() {
 		return J(t) && window.addEventListener("load", l), this;
 	}
@@ -3436,12 +3437,12 @@ function $n(e) {
 	let b = new V();
 	return this.addEventListener = b.addEventListener, this.removeEventListener = b.removeEventListener, this.dispatchEvent = b.dispatchEvent, this.init = c, this;
 }
-$n.BASE_CLASS = Qn, $n.init = (e) => Y(`.${Qn}`, $n, e);
+er.BASE_CLASS = $n, er.init = (e) => Y(`.${$n}`, er, e);
 //#endregion
 //#region packages/cfpb-design-system/src/components/cfpb-expandables/summary-minimal.js
-var er = "o-summary-minimal";
-function tr(e) {
-	let t = q(e, er), n = t.querySelector(`.${er}__content`), r = t.querySelector(`.${er}__btn`), i, a;
+var tr = "o-summary-minimal";
+function nr(e) {
+	let t = q(e, tr), n = t.querySelector(`.${tr}__content`), r = t.querySelector(`.${tr}__btn`), i, a;
 	function o() {
 		return J(t) ? (G(t, "behavior_flyout-menu"), G(n, "behavior_flyout-menu_content"), G(r, "behavior_flyout-menu_trigger"), window.addEventListener("load", s), this) : this;
 	}
@@ -3457,17 +3458,17 @@ function tr(e) {
 	let u = new V();
 	return this.addEventListener = u.addEventListener, this.removeEventListener = u.removeEventListener, this.dispatchEvent = u.dispatchEvent, this.init = o, this;
 }
-tr.BASE_CLASS = er, tr.init = (e) => Y(`.${er}`, tr, e);
+nr.BASE_CLASS = tr, nr.init = (e) => Y(`.${tr}`, nr, e);
 //#endregion
 //#region packages/cfpb-design-system/src/components/cfpb-forms/form.scss
-var nr = /* @__PURE__ */ t({}), rr = /* @__PURE__ */ t({}), ir = /* @__PURE__ */ t({}), ar = /* @__PURE__ */ t({}), or = /* @__PURE__ */ t({}), sr = /* @__PURE__ */ t({}), cr = /* @__PURE__ */ t({}), lr = /* @__PURE__ */ t({}), ur = /* @__PURE__ */ t({});
-function dr(e) {
+var rr = /* @__PURE__ */ t({}), ir = /* @__PURE__ */ t({}), ar = /* @__PURE__ */ t({}), or = /* @__PURE__ */ t({}), sr = /* @__PURE__ */ t({}), cr = /* @__PURE__ */ t({}), lr = /* @__PURE__ */ t({}), ur = /* @__PURE__ */ t({}), dr = /* @__PURE__ */ t({});
+function fr(e) {
 	return e.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&");
 }
-function fr(e, t) {
-	return RegExp(dr(t.trim()), "i").test(e);
+function pr(e, t) {
+	return RegExp(fr(t.trim()), "i").test(e);
 }
-function pr(e, t, n) {
+function mr(e, t, n) {
 	let r = e, i = t, a = n?.maxSelections || 5, o = [], s = [], c = [], l = [], u = -1;
 	function d(e) {
 		return i + "-" + e.value.trim().replace(/\s+/g, "-").toLowerCase();
@@ -3494,7 +3495,7 @@ function pr(e, t, n) {
 		}), !1);
 	}
 	function g(e, t, n, r) {
-		return fr(t.text, r) && e.push(n), e;
+		return pr(t.text, r) && e.push(n), e;
 	}
 	function _(e) {
 		return Object.prototype.toString.call(e) !== "[object String]" && (e = ""), l = c, o.length > 0 && (c = o.reduce(function(t, n, r) {
@@ -3525,7 +3526,7 @@ function pr(e, t, n) {
 }
 //#endregion
 //#region packages/cfpb-design-system/src/components/cfpb-forms/multiselect-utils.js
-function $(e, t, n) {
+function Q(e, t, n) {
 	let r = document.createElement(e);
 	return Object.keys(n).forEach((e) => {
 		let t = n[e];
@@ -3534,13 +3535,13 @@ function $(e, t, n) {
 }
 //#endregion
 //#region packages/cfpb-design-system/src/components/cfpb-forms/multiselect.js
-var mr = "o-multiselect", hr = "prev", gr = "next", _r = "Enter", vr = " ", yr = "Escape", br = "ArrowUp", xr = "ArrowDown", Sr = "Tab", Cr = {
+var $ = "o-multiselect", hr = "prev", gr = "next", _r = "Enter", vr = " ", yr = "Escape", br = "ArrowUp", xr = "ArrowDown", Sr = "Tab", Cr = {
 	renderTags: !0,
 	maxSelections: 5
 };
 function wr(e) {
-	e.classList.add(mr);
-	let t = q(e, mr), n = !1, r, i, a, o, s, c, l, u, d, f, p, m = [], h;
+	e.classList.add($);
+	let t = q(e, $), n = !1, r, i, a, o, s, c, l, u, d, f, p, m = [], h;
 	function g() {
 		p.classList.remove("u-no-results"), p.classList.add("u-filtered");
 		let e = a.getLastFilterIndices();
@@ -3595,7 +3596,7 @@ function wr(e) {
 		return r + "-" + e.value.trim().replace(/[^\w]/g, "-").toLowerCase();
 	}
 	function re(e, t) {
-		let n = ne(t), r = $("li", null, { "data-option": t.value }), i = $("button", r, {
+		let n = ne(t), r = Q("li", null, { "data-option": t.value }), i = Q("button", r, {
 			type: "button",
 			class: "a-tag-filter",
 			innerHTML: "<label for=" + n + ">" + t.text + ln + "</label>"
@@ -3654,27 +3655,27 @@ function wr(e) {
 		for (let e = 0, n = t.length; e < n; e++) t[e].addEventListener("click", w), t[e].addEventListener("keydown", te);
 	}
 	function oe() {
-		c = document.createElement("div"), c.className = mr, l = $("ul", null, { className: "m-tag-group" }), u = $("header", c, { className: "o-multiselect__header" }), d = $("input", u, {
+		c = document.createElement("div"), c.className = $, l = Q("ul", null, { className: "m-tag-group" }), u = Q("header", c, { className: $ + "__header" }), d = Q("input", u, {
 			className: "o-multiselect__search a-text-input",
 			type: "text",
 			placeholder: i || "Select up to five",
 			id: t.id,
 			autocomplete: "off"
-		}), f = $("fieldset", c, {
-			className: "o-multiselect__fieldset u-invisible",
+		}), f = Q("fieldset", c, {
+			className: $ + "__fieldset u-invisible",
 			"aria-hidden": "true"
 		});
-		let e = "o-multiselect__options";
-		a.isAtMaxSelections() && (e += " u-max-selections"), p = $("ul", f, { className: e });
+		let e = $ + "__options";
+		a.isAtMaxSelections() && (e += " u-max-selections"), p = Q("ul", f, { className: e });
 		let n, h, g;
 		for (let e = 0, t = o.length; e < t; e++) {
 			n = o[e], h = ne(n), g = a.getOption(e).checked;
-			let t = $("li", p, {
+			let t = Q("li", p, {
 				"data-option": n.value,
 				"data-cy": "multiselect-option",
 				class: "m-form-field m-form-field--checkbox"
 			});
-			$("input", t, {
+			Q("input", t, {
 				id: h,
 				type: "checkbox",
 				value: n.value,
@@ -3682,10 +3683,10 @@ function wr(e) {
 				class: "a-checkbox o-multiselect__checkbox",
 				checked: g,
 				"data-index": e
-			}), $("label", t, {
+			}), Q("label", t, {
 				for: h,
 				textContent: n.text,
-				className: "o-multiselect__label a-label"
+				className: $ + "__label a-label"
 			}), m.push(t), g && s?.renderTags && re(l, n);
 		}
 		return c.insertBefore(l, u), t.parentNode.insertBefore(c, t), c.appendChild(t), c;
@@ -3696,7 +3697,7 @@ function wr(e) {
 			...Cr,
 			...e
 		}, o.length > 0) {
-			a = new pr(o, r, s).init();
+			a = new mr(o, r, s).init();
 			let e = oe();
 			t.parentNode.removeChild(t), t = e, J(t), ae();
 		}
@@ -3709,9 +3710,9 @@ function wr(e) {
 	let ce = new V();
 	return this.addEventListener = ce.addEventListener, this.removeEventListener = ce.removeEventListener, this.dispatchEvent = ce.dispatchEvent, this.getModel = se, this.updateSelections = T, this.selectionClickHandler = w, this.selectionKeyDownHandler = te, this;
 }
-wr.BASE_CLASS = mr, wr.init = (e) => Y(`.${mr}`, wr, void 0, e);
+wr.BASE_CLASS = $, wr.init = (e) => Y(`.${$}`, wr, void 0, e);
 //#endregion
 //#region packages/cfpb-design-system/src/components/cfpb-icons/icon.scss
 var Tr = /* @__PURE__ */ t({}), Er = /* @__PURE__ */ t({}), Dr = /* @__PURE__ */ t({}), Or = /* @__PURE__ */ t({}), kr = /* @__PURE__ */ t({}), Ar = /* @__PURE__ */ t({}), jr = /* @__PURE__ */ t({}), Mr = /* @__PURE__ */ t({}), Nr = /* @__PURE__ */ t({}), Pr = /* @__PURE__ */ t({}), Fr = /* @__PURE__ */ t({}), Ir = /* @__PURE__ */ t({}), Lr = /* @__PURE__ */ t({}), Rr = /* @__PURE__ */ t({}), zr = /* @__PURE__ */ t({}), Br = /* @__PURE__ */ t({}), Vr = /* @__PURE__ */ t({}), Hr = /* @__PURE__ */ t({}), Ur = /* @__PURE__ */ t({}), Wr = /* @__PURE__ */ t({});
 //#endregion
-export { Wn as AlphaTransition, xt as BEHAVIOR_PREFIX, B as BaseTransition, Ye as CfpbAlert, gt as CfpbButton, At as CfpbExpandable, zt as CfpbFileUpload, vt as CfpbFormAlert, Lt as CfpbFormChoice, en as CfpbFormSearch, $t as CfpbFormSearchInput, L as CfpbIcon, Ht as CfpbLabel, Gt as CfpbLink, Je as CfpbList, Kt as CfpbListItem, Xt as CfpbListbox, Yt as CfpbListboxItem, vn as CfpbPagination, gn as CfpbSelect, un as CfpbTagFilter, fn as CfpbTagTopic, an as CfpbTagline, An as DESKTOP, V as EventObserver, Q as Expandable, Xn as ExpandableGroup, Jn as ExpandableGroupStyles, qn as ExpandableStyles, K as FlyoutMenu, r as I18nService, W as JS_HOOK, On as MOBILE, U as MaxHeightTransition, i as MediaQueryService, Gn as MoveTransition, wr as Multiselect, St as STATE_PREFIX, o as SearchService, $n as Summary, tr as SummaryMinimal, Zn as SummaryStyles, kn as TABLET, G as add, Pr as bannerStyles, Tt as behaviorAttach, Dt as behaviorFind, bn as buttonGroupStyles, xn as buttonLinkStyles, yn as buttonStyles, Dr as cardGroupStyles, Er as cardStyles, Et as checkBehaviorDom, q as checkDom, Ct as contains, Rr as dateStyles, p as defineComponent, Or as emailSignupStyles, kr as featuredContentModuleStyles, rr as formAlertStyles, ir as formFieldStyles, nr as formStyles, Dn as getBreakpointState, f as getSharedConfig, Ar as heroStyles, Tr as iconStyles, Y as instantiateAll, zn as isArray, Rn as isDate, Pn as isDefined, Vn as isEmpty, Bn as isFunction, Hn as isMobileUserAgent, Ln as isNumber, Fn as isObject, In as isString, Nn as isUndefined, ar as labelStyles, jr as layoutStyles, zr as linkStyles, Br as listStyles, Vr as metaHeaderStyles, Fr as notificationStyles, Ir as paginationStyles, a as parseChildData, Hr as pullQuoteStyles, or as rangeStyles, sr as searchInputStyles, cr as selectStyles, J as setInitFlag, d as setSharedConfig, Ur as slugHeaderStyles, Lr as tableStyles, lr as tagStyles, Wr as taglineStyles, ur as textInputStyles, Mr as textIntroductionStyles, Kn as utilitiesStyles, n as varsBreakpoints, jn as viewportIsIn, Nr as wellStyles };
+export { Wn as AlphaTransition, xt as BEHAVIOR_PREFIX, B as BaseTransition, Ye as CfpbAlert, gt as CfpbButton, At as CfpbExpandable, zt as CfpbFileUpload, vt as CfpbFormAlert, Lt as CfpbFormChoice, en as CfpbFormSearch, $t as CfpbFormSearchInput, L as CfpbIcon, Ht as CfpbLabel, Gt as CfpbLink, Je as CfpbList, Kt as CfpbListItem, Xt as CfpbListbox, Yt as CfpbListboxItem, vn as CfpbPagination, gn as CfpbSelect, un as CfpbTagFilter, fn as CfpbTagTopic, an as CfpbTagline, An as DESKTOP, V as EventObserver, Z as Expandable, Zn as ExpandableGroup, Yn as ExpandableGroupStyles, qn as ExpandableStyles, K as FlyoutMenu, r as I18nService, W as JS_HOOK, On as MOBILE, U as MaxHeightTransition, i as MediaQueryService, Gn as MoveTransition, wr as Multiselect, St as STATE_PREFIX, o as SearchService, er as Summary, nr as SummaryMinimal, Qn as SummaryStyles, kn as TABLET, G as add, Pr as bannerStyles, Tt as behaviorAttach, Dt as behaviorFind, bn as buttonGroupStyles, xn as buttonLinkStyles, yn as buttonStyles, Dr as cardGroupStyles, Er as cardStyles, Et as checkBehaviorDom, q as checkDom, Ct as contains, Rr as dateStyles, p as defineComponent, Or as emailSignupStyles, kr as featuredContentModuleStyles, ir as formAlertStyles, ar as formFieldStyles, rr as formStyles, Dn as getBreakpointState, f as getSharedConfig, Ar as heroStyles, Tr as iconStyles, Y as instantiateAll, zn as isArray, Rn as isDate, Pn as isDefined, Vn as isEmpty, Bn as isFunction, Hn as isMobileUserAgent, Ln as isNumber, Fn as isObject, In as isString, Nn as isUndefined, or as labelStyles, jr as layoutStyles, zr as linkStyles, Br as listStyles, Vr as metaHeaderStyles, Fr as notificationStyles, Ir as paginationStyles, a as parseChildData, Hr as pullQuoteStyles, sr as rangeStyles, cr as searchInputStyles, lr as selectStyles, J as setInitFlag, d as setSharedConfig, Ur as slugHeaderStyles, Lr as tableStyles, ur as tagStyles, Wr as taglineStyles, dr as textInputStyles, Mr as textIntroductionStyles, Kn as utilitiesStyles, n as varsBreakpoints, jn as viewportIsIn, Nr as wellStyles };

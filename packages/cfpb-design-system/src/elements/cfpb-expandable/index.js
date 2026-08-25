@@ -35,6 +35,7 @@ export class CfpbExpandable extends LitElement {
 
   constructor() {
     super();
+    this.isExpanded = false;
   }
 
   firstUpdated() {
@@ -70,17 +71,17 @@ export class CfpbExpandable extends LitElement {
       this.dispatchEvent(new CustomEvent('expandend', opts));
     });
     this.#flyoutMenu.addEventListener('collapsebegin', () => {
+      this.isExpanded = false;
       this.dispatchEvent(new CustomEvent('collapsebegin', opts));
     });
     this.#flyoutMenu.addEventListener('collapseend', () => {
-      this.isExpanded = false;
       contentDom.classList.add('u-hidden');
       this.dispatchEvent(new CustomEvent('collapseend', opts));
     });
   }
 
   updated(changedProps) {
-    if (changedProps.has('isExpanded')) {
+    if (changedProps.has('isExpanded') && this.#flyoutMenu) {
       const oldVal = changedProps.get('isExpanded');
       const newVal = this.isExpanded;
 

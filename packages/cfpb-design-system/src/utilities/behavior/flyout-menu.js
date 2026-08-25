@@ -218,8 +218,9 @@ function FlyoutMenu(element, autoHideContent = true) {
    * @returns {FlyoutMenu} An instance.
    */
   function expand() {
-    _transition?.halt();
     if (_state === EXPANDING || _state === EXPANDED) return this;
+
+    _transition?.halt();
 
     _state = EXPANDING;
     if (autoHideContent) _contentDom.removeAttribute('hidden');
@@ -253,8 +254,9 @@ function FlyoutMenu(element, autoHideContent = true) {
    * @returns {FlyoutMenu} An instance.
    */
   function collapse() {
-    _transition?.halt();
     if (_state === COLLAPSING || _state === COLLAPSED) return this;
+
+    _transition?.halt();
 
     for (let i = 0, len = _triggerDoms.length; i < len; i++) {
       _setAriaAttr('expanded', _triggerDoms[i], false);

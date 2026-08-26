@@ -94,13 +94,20 @@ Ready to publish changes to npm?
 
 First, set some credentials:
 
-1. Create and export a personal access token called
-   [`GITHUB_TOKEN`](https://github.com/release-it/release-it/blob/main/docs/github-releases.md#automated).
-1. Confirm your environment has the above token properly defined and is not blank: `echo $GITHUB_TOKEN`.
+1. Create a fine grained PAT in your GitHub account with a meaningful name and the permissions: content:read/write, metadata:read.
+1. Be sure to copy your PAT to the password app or some other secure location because once you leave the screen where it is generated,
+   you won't be able to get it back. You will need it later. You can regenerate the token in GitHub if necessary.
 1. Create an npm account if you don't already have one and ensure you're
    listed as a "collaborator" on all our npm packages (e.g.
    [cfpb-buttons](https://www.npmjs.com/package/@cfpb/cfpb-buttons)).
 1. Check that you are logged in with `npm whoami`. If you aren't shown your username, run `npm login`.
+1. Launch a terminal and navigate to the cfpb-design-system repo on your system.
+1. Once in the repo, make sure you have a clean change list and do a `git push --dry-run origin main` this should trigger
+   GitHub authentication. *If you do not do this `yarn release` may stall out at the `git push` step while trying to run `yarn release`.*
+1. When prompted in the terminal for GitHub username and password, use the GitHub username/email account that you created the PAT with. **When prompted
+   for password supply your PAT!**
+1. The terminal should now show `git push --dry-run origin main` completed with a message `Everything up-to-date`.
+1. At this point you should be able to progress through the remaining steps 
 
 **Note:** If you run into issues with your npm account not approving your MFA code, try resetting your npm password at npmjs.com.
 
@@ -108,7 +115,7 @@ Then, do a release:
 
 1. Ensure you're on the `main` branch with `git checkout main`
    and pull latest with `git pull`.
-1. Run `yarn release`
+1. Run `GITHUB_TOKEN=your_pat..... yarn release` in a terminal. <-replace the `your_pat....` with the one you generated. 
 1. Follow the prompts to decide what version (major, minor, or patch)
    you will be releasing.
 

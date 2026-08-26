@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.10.0](https://github.com/cfpb/design-system/compare/v5.9.0..v5.10.0) - August 14, 2026
+## [5.10.1](https://github.com/cfpb/design-system/compare/v5.10.0..v5.10.1) - August 26, 2026
+
+### PRs in this release
+
+- PR #[2792](https://github.com/cfpb/design-system/pull/2792): Bump eslint + plugins, sass, style-dictionary, vite - Ans
+
+### General
+
+- Bump storybook + plugins, eslint + plugins, sass, style-dictionary, vite - ([fa0eddb](https://github.com/cfpb/design-system/commit/fa0eddb98ea5cb3de57a66c1d9da92c017986b74)) - Ans
+
+## [5.10.0](https://github.com/cfpb/design-system/compare/v5.9.0..vv5.10.0) - August 14, 2026
 
 ### PRs in this release
 

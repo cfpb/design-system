@@ -91,20 +91,6 @@ export const WithSpinningIcon: Story = {
   },
 };
 
-export const DisabledAsLink: Story = {
-  tags: ['!dev', '!autodocs'],
-  args: {
-    href: '#',
-    disabled: true,
-  },
-};
-
-export const InvalidVariant: Story = {
-  tags: ['!dev', '!autodocs'],
-  args: { variant: 'not-a-variant' as CfpbButtonProps['variant'] },
-};
-
-export const InvalidType: Story = {
-  tags: ['!dev', '!autodocs'],
-  args: { type: 'not-a-type' as CfpbButtonProps['type'] },
-};
+/**
+ * Behavior is covered in index.spec.js - see STORYBOOK.md for the split.
+ */

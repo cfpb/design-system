@@ -1,6 +1,5 @@
 /// <reference types="vite/client" />
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
-import { expect } from 'storybook/test';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
 import type { CfpbAlertProps } from '../../../../../storybook/custom-elements-types';
 import { CfpbAlert } from './index.js';
@@ -123,82 +122,5 @@ export const Loading: Story = {
 };
 
 /*
- * Stories below here are behavior tests
+ * Behavior is covered in index.spec.js - see STORYBOOK.md for the split.
  */
-
-export const RenderMessageAndExplanation: Story = {
-  tags: ['!dev', '!autodocs'],
-  play: async ({ canvasElement }) => {
-    const alert = canvasElement.querySelector('cfpb-alert') as CfpbAlert;
-    await alert.updateComplete;
-
-    const message = alert.shadowRoot!.querySelector('.message')!;
-    await expect(message.textContent!.trim()).toBe('Information alert');
-
-    const slot = alert.shadowRoot!.querySelector(
-      '.explanation slot',
-    ) as HTMLSlotElement;
-    const explanation = slot
-      .assignedNodes({ flatten: true })
-      .map((node) => node.textContent)
-      .join('')
-      .trim();
-    await expect(explanation).toBe(
-      'You can also add an explanation to the alert.',
-    );
-  },
-};
-
-export const HasAlertRole: Story = {
-  tags: ['!dev', '!autodocs'],
-  play: async ({ canvasElement }) => {
-    const alert = canvasElement.querySelector('cfpb-alert') as CfpbAlert;
-    await alert.updateComplete;
-
-    const container = alert.shadowRoot!.querySelector('.container')!;
-    await expect(container.getAttribute('role')).toBe('alert');
-  },
-};
-
-export const StatusIcons: Story = {
-  tags: ['!dev', '!autodocs'],
-  play: async ({ canvasElement }) => {
-    const alert = canvasElement.querySelector('cfpb-alert') as CfpbAlert;
-
-    for (const [status, iconName] of Object.entries(statusIcons)) {
-      alert.status = status;
-      await alert.updateComplete;
-
-      const icon = alert.shadowRoot!.querySelector('cfpb-icon')!;
-      await expect(icon.getAttribute('name')).toBe(iconName);
-
-      await expect(icon.hasAttribute('spin')).toBe(status === 'loading');
-    }
-  },
-};
-
-export const InvalidStatus: Story = {
-  tags: ['!dev', '!autodocs'],
-  args: { status: 'not-a-status' as CfpbAlertProps['status'] },
-  play: async ({ canvasElement }) => {
-    const alert = canvasElement.querySelector('cfpb-alert') as CfpbAlert;
-    await alert.updateComplete;
-
-    const icon = alert.shadowRoot!.querySelector('cfpb-icon')!;
-    await expect(icon.getAttribute('name')).toBe(statusIcons.info);
-
-    await expect(icon.hasAttribute('spin')).toBe(false);
-  },
-};
-
-export const MessageUpdatesProgrammatically: Story = {
-  tags: ['!dev', '!autodocs'],
-  play: async ({ canvasElement }) => {
-    const alert = canvasElement.querySelector('cfpb-alert') as CfpbAlert;
-    alert.message = 'Updated message';
-    await alert.updateComplete;
-
-    const message = alert.shadowRoot!.querySelector('.message')!;
-    await expect(message.textContent!.trim()).toBe('Updated message');
-  },
-};

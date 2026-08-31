@@ -93,41 +93,11 @@ export const CollapseOnClick: Story = {
   },
 };
 
-export const CollapseProgrammatically: Story = {
-  tags: ['!dev', '!autodocs'],
-  args: { open: true },
-  play: async ({ canvasElement }) => {
-    const expandable = canvasElement.querySelector(
-      'cfpb-expandable',
-    ) as CfpbExpandable;
-    const button = expandable.shadowRoot!.querySelector('button')!;
-    expandable.isExpanded = false;
-    await expandable.updateComplete;
-
-    await expect(expandable.isExpanded).toBe(false);
-    await expect(button.getAttribute('aria-expanded')).toBe('false');
-  },
-};
-
-export const ExpandProgramamatically: Story = {
-  tags: ['!dev', '!autodocs'],
-  args: { open: false },
-  play: async ({ canvasElement }) => {
-    const expandable = canvasElement.querySelector(
-      'cfpb-expandable',
-    ) as CfpbExpandable;
-    const content = expandable.shadowRoot!.querySelector(
-      '.o-expandable__content',
-    )!;
-    expandable.isExpanded = true;
-    await expandable.updateComplete;
-
-    // The prop reflects to the attribute and drives the flyout open
-    await expect(expandable.hasAttribute('open')).toBe(true);
-    await expect(content.hasAttribute('hidden')).toBe(false);
-    await expect(content.classList.contains('u-max-height-default')).toBe(true);
-  },
-};
+/**
+ * Programatic expand/collapse is covered in index.spec.js
+ * The event tests below stay here because they are driven
+ * by user interaction.
+ */
 
 export const ExpandEnd: Story = {
   tags: ['!dev', '!autodocs'],

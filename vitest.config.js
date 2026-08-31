@@ -17,6 +17,10 @@ export default defineConfig({
       {
         extends: true,
         test: {
+          // Naming this test so it can run on its own with `vitest --project-unit `
+          // this skips the slower browser project, and so it will be labeled
+          // `|unit|` instead of `|0|` in test output.
+          name: 'unit',
           globals: true,
           environment: 'jsdom',
           setupFiles: './test/vitest.setup.js',

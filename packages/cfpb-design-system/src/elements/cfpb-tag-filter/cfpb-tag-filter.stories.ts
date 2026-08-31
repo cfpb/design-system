@@ -33,6 +33,13 @@ export default meta;
 
 type Story = StoryObj<TagFilterStoryArgs>;
 
+/**
+ * The click interaction stays here because it is a real user interaction
+ * and this runs it in Chromium. The event's shape (detail, bubbles, composed), focus(), the
+ * for label form and value derivation are covered in index.spec.js.
+ * See STORYBOOK.md for the split
+ */
+
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const tagFilter = canvasElement.querySelector(
@@ -47,15 +54,5 @@ export const Default: Story = {
     await userEvent.click(button);
 
     await expect(spy).toHaveBeenCalledOnce();
-  },
-};
-
-export const Focused: Story = {
-  tags: ['!dev', '!autodocs'],
-  play: async ({ canvasElement }) => {
-    const tagFilter = canvasElement.querySelector(
-      'cfpb-tag-filter',
-    ) as CfpbTagFilter;
-    await tagFilter.focus();
   },
 };

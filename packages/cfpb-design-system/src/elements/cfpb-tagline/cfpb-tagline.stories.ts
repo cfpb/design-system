@@ -33,5 +33,5 @@ type Story = StoryObj<TagLineStoryArgs>;
 export const Default: Story = {};
 
 export const Large: Story = {
-  args: { isLarge: true },
+  args: { islarge: true },
 };

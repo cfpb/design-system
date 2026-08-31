@@ -95,7 +95,7 @@ variation_groups:
 
           const { args, argTypes, template } = getStorybookHelpers<CfpbButtonProps>(
              'cfpb-button',
-             { excludeCategories: ['methods] },
+             { excludeCategories: ['methods'] },
           );
 
           ```
@@ -233,7 +233,7 @@ variation_groups:
           ```
 
 
-          If a component reflects a boolean attribute (`reflect: true`), prefer testing/asserting against the DOM attribute in play functions. There is an example of this in `packages/cfpb-design-system/src/elements/cfpb-button/cfpb-button.stories.ts` under `CollapseProgramatically`. We check `button.getAttribute(aria-expanded)`, not a JS property to assert real rendered state.
+          If a component reflects a boolean attribute (`reflect: true`), prefer asserting against the DOM attribute rather than the JS property so you are checking real rendered state. There is an example of this in `packages/cfpb-design-system/elements/cfpb-expandable/index.spec.js` under `collapsing programatically` which checks `button.getAttribute('aria-expanded')` and `elm.hasAttribute('open')`.
 
 
           This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelCase keys here (`iconLeft, iconRight`) which silently failed to attach the icon-select controls to the real args since `getStorybookHelpers` generates attribute-cased keys.
@@ -247,10 +247,12 @@ variation_groups:
           this arg automatically from the manifest's unnamed slot entry (`slots:
           [{ name: '', description: '...'}]`) and the story just seeds a default
           value for it:
-            `args: { ...args, variant: 'primary', 'deafault-slot': 'Button label' },`
-            It also dynamically builds a select control for `icon-left/icon-right` off the actual icon SVG filenames and includes two intentionally invalid stories (`InvalidVariant`, `InvalidType`) tagged `['!dev','!autodocs']`. These exist to be picked up by the Vitest/Storybook test runner and verify that invalid values fall back gracefully without cluttering the storybook UI (sidebar/docs).
 
-          - `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates the `play` functions exercising the component's 4 custom events using `fn()` spies from the `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS-transition-driven `collapsend`/`expandend` events because the component's internal BaseTransition listens for the Chromium-prefixed name first. `CollapseProgramatically` shows testing an imperative property write.
+            `args: { ...args, variant: 'primary', 'default-slot': 'Button label' },`
+
+            It also dynamically builds a select control for `icon-left/icon-right` off the actual icon SVG filenames. It has no `play` functions. The button has no interaction of its own to demonstrate so its whole contract lives in `cfpb-button/index.spec.js`: variant and type fallbacks, the link form, and disabled state.
+
+          - `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates `play` functions exercising the component's 4 custom events using `fn()` spies from `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS transition drive `collapsed` / `expanded` events because the component's internal BaseTransition listens for the Chromium-prefix name first. Those 4 stay in the story because each is derived by a real click. Programatic property writes moved to `cfpb-expandable/index.spec.js`
 
             It writes a custom `render:` like this:
 
@@ -262,7 +264,7 @@ variation_groups:
               </cfpb-expandable>`,
             ```
 
-          - `cfpb-tag-filter.stories.ts` - back to auto `template(args)` since it only has a default slot. Demonstrates testing a custom even (`item-click`) via click, and a second story (`focused`) that calls the component's own async `focus()` method directly on the element reference rather than through play-function DOM interaction. That is a useful pattern when a component exposes imperative methods that don't correspond to any attribute.
+          - `cfpb-tag-filter.stories.ts` - back to auto `template(args)` since it only has a default slot. It shows the split most clearly. The `Default` story's `play` function clickc the button and asserts `item-click` fires in Chromium, while `cfpb-tag-filter/index.spec.js` covers the event's shape (`detail.target`, `bubbles`, `composed`), the async `focus()` method, the `for` label form, and value derivation from slotted text. Same component, no overlapping assertions.
 
           - `cfpb-tagline.stories.ts` - the minimal case. Single boolean property (`isLarge`, no explicit `attribute:` override so it defaults to the camelCase name), no play functions. Good starting template for the simplest components.
       - variation_is_deprecated: false
@@ -270,7 +272,7 @@ variation_groups:
         variation_description: >-
           - Confirm the component's `index.js` has a class-level
           `@element`,`@slot` and `@fires` JSDoc block since these are what
-          renders in the Docs page
+          render in the Docs page
 
           - Create `<name>.stories.ts` next to `index.js`. Copy the `cfpb-tagline.stories.ts` as the minimal template, or `cfpb-button.stories.ts` if you are needing more than one variant.
 
@@ -280,15 +282,17 @@ variation_groups:
 
           - Call `getStorybookHelpers<xProps>('tag-name', { excludeCategories: ['methods'] })`, importing the `XProps` type from the `storybook/custom-elements-types`
 
-          - Decide `tempalate(args)` vs custom `render:` use the auto `template` if the component onlhy has a default slot. Write a custom `html` render (like in the expandables story) if it has named slots or needs conditional markup.
+          - Decide between `tempalate(args)` and a custom `render:`. Use the auto `template` if the component only has a default slot. Write a custom `html` render (like in the expandables story) if it has named slots or needs conditional markup.
 
           - Set `meta.args/meta.argTypes` using _attribute-cased keys_, not camelCased properties. If you do this wrong it won't error, it just silently no-ops the control or arg
 
-          - Set `meta.component: 'tag-name'` and `tags: ['autodocs]`. This isn't optional. Without `component:` set the auto-generated `Overview` docs page fails to render its canvas and Attributes/Slots/Events table.
+          - Set `meta.component: 'tag-name'` and `tags: ['autodocs']`. This isn't optional. Without `component:` set the auto-generated `Overview` docs page fails to render its canvas and Attributes/Slots/Events table.
 
-          - For components with custom events or imperative methods, add `play` functions using `fn()` + `userEvent` + `expect` from `storybook/test` following the `cfpb-expandable`/`cfpb-tag-filter` pattern. Tag test-only/invalid-input stories `['!dev, !autodocs]` so they run in the test suite but don't clutter the sidebar or docs page.
+          - Add a `play` function only for a real user interaction (like a click or keypress) following the `cfpb-expandable/cfpb-tag-filter` pattern with `fn()` + `userEvent` + `expect` from `storybook/test`. Everything else goes in a spec. See the Testing section . 
 
-          - Run `yarn storybook` (regenerates the manifest via `yarn analyze` first) and confirms the new story renders and controls bind correctly
+          - Write `<element>/index.spec.js` alongside the story for the component's behavior contract. See Testing section. 
+
+          - Run `yarn storybook` (regenerates the manifest via `yarn analyze` first) and confirm that new story renders and the controls bind correctly.
       - variation_is_deprecated: false
         variation_name: Linting
         variation_description: Auto-generated CEM and
@@ -297,15 +301,148 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: Testing
         variation_description: >-
-          `vitest.config.js` defines Vitest projects:
+          Each element folder holds three files with separate jobs:
 
 
-          - Unit (`packages/**/*.spec.js`, jsdom environment)
+          | File            | Holds                                           | Runs in  | 
 
-          - `storybook` - uses `storybookTest()` from `@storybook/addon-vitest/vitest-plugin`, pointed at `.storybook/` running in a real headless Chromium via `@vitest/browser-playwright`. This project turns every story (including the `[!dev]` tagged ones) into a Vitest test, and runs each story's `play` function as the test body.
+          | --------------- | ----------------------------------------------- | -------- | 
+
+          | `index.js`      | the component                                   | n/a      | 
+
+          | `index.spec.js` | its behavior contract                           | jsdom    | 
+
+          | `*.stories.ts`  | what it looks like, plus real user interactions | Chromium |
 
 
-          Run everything with `yarn test`
+          If a test proves what the component looks like, it belongs in a story. If it proves what a user can do, it belongs in a `play` functions on a story. Everything else goes in `index.spec.js`: attributes, properties, emitted event shape, slots, fallbacks, error paths, matrices of values. Never assert the same thing in both places.
+
+
+          The reason to bother with the split is portability. `index.spec.js` files import the component itself, so if Storybook is ever replaced they keep running untouched. Anything proven only by a `play` functions goes when Storybook goes. Keep that set small.
+
+
+          ### Deciding where a test goes
+
+
+          | What you are proving                       | Where                 | 
+
+          | ------------------------------------------ | --------------------- | 
+
+          | Supported visual states, variants, sizes   | `*.stories.ts`        | 
+
+          | On user interaction (click, keypress)      | story `play` function | 
+
+          | Accessibility (axe)                        | free with every story | 
+
+          | A matrix of cases (`it.each`)              | `index.spec.js`       | 
+
+          | Event `detail`, `bubbles`, `composed`      | `index.spec.js`       | 
+
+          | Focus management, slots, form behavior     | `index.spec.js`       | 
+
+          | Invalid input, fallbacks, console warnings | `index.spec.js`       | 
+
+          | Pure utilities and services                | `utilities/*.spec.js` | 
+
+          | Multi-component journeys, full pages       | Playwright, rarely    |
+
+
+          `cfpb-tag-filter` is the clearest example. 
+
+
+          The `Default` story's play function clicks the button with the `userEvent` and asserts `item-click` fires in Chromium. `index.spec.js` triggers the same button with a direct `button.click()` and asserts the event's `detail.target`, `bubbles` and `composed`. 
+
+
+          Two files, two environments, no assertion in both.
+
+
+          Do no write test only stories tagged `['!dev', '!autodoc']`. We used that pattern here but removed it. Those assertions live in the specs now, where `it.each` covers a matrix in one block and nothing depends on Storybook.
+
+
+          ### Writing a spec
+
+
+          Copy `cfpb-file-upload/index.spec.js` for the minimal case, or `cfpb-button/index.spec.js` if you want a `mount()` helper. Mount the element, wait for it to be defined and rendered, assert agains the shadow root and then clean up.
+
+
+          ```js
+
+          describe('<cfpb-alert', () => {
+            let elm;
+
+            beforeEach(async () => {
+              CfpbAlert.init();
+              elm = document.createElement('cfpb-alert');
+              elm.setAttribute('status', 'info');
+              elm.setAttribute('message', 'Information alert');
+              elm.innerHTML =
+                '<span>You can also add an explanation to the alert.</span>';
+              document.body.appendChild(elm);
+
+              await customElements.whenDefined('cfpb-alert');
+              await elm.updateComplete;
+            });
+
+            afterEach(() => {
+              document.body.removeChild(elm);
+            });
+
+            ...
+
+            it('applies the alert role', () => {
+              const container = elm.shadowRoot.querySelector('.container');
+              expect(container.getAttribute('role')).toBe('alert');
+            });
+
+            ...
+          ``` 
+
+
+          Prefer `createElement` and `setAttribute` over assigning `innerHTML` template strings. Reach for `it.each` on a matrix. On named test per case beats a `for` loop inside a single test, because a failure tells you which case broke.
+
+          `globals: true` is set, so `describe`, `it`, `expect` and `vi` need no imports.
+
+
+          ### Vitest projects
+
+
+          `vitest.config.js` defines two:
+
+
+          - `unit` runs `packages/**/*.spec.js` in jsdom - `storybook` - uses `storybookTest()` from `@storybook/addon-vitest/vitest-plugin`, pointed at `.storybook/` running in a real headless Chromium via `@vitest/browser-playwright`. It turns every story into a Vitest test and runs the story's `play` function as the test body.
+
+
+          ```sh
+
+          yarn test # everything
+
+          vitest run --project-unit # just the fast jsdom tests
+
+          vitest run packages/**/elements/cfpb-alert # one element
+
+          vitest # watch mode
+
+          ```
+
+
+          ### End-to-end tests (Playwright)
+
+          Some things can only be proven with several components on a real page, like the doc site's search or and expandable inside a form. Those are Playwright tests, not Vitest ones. They live in `test/playwright/`, split into `docs/` and `packages/`. `playwright.config.ts` starts `yarn start` and points at `http://127.0.0.1:4000/designsystem`
+
+
+          ```sh
+
+          yarn playwright # run the e2e suite
+
+          yarn playwright open # run it in Playwright's UI mode
+
+          ```
+
+
+          Watch out for the collision. `@playwright/test` is the e2e runner described here. The seperate `playwright` package is only a browser driver for the `@vitest/browser-playwright`, which launches Chromium for the `storybook` Vitest project. The two have nothing to do with each other.
+
+
+          Keep this suite small. A journey you could prove at the component level belongs in `index.spec.js`, where it runs faster and fails more legibly.
       - variation_is_deprecated: false
         variation_name: Accessibility (@storybook/addon-a11y)
         variation_description: >-

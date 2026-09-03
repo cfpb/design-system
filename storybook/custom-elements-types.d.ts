@@ -51,974 +51,974 @@ export type ScopedElements<
 
 type BaseProps<T extends HTMLElement> = {
   /** Content added between the opening and closing tags of the element */
-  children?: any;
+  children?: any | undefined;
   /** Used for declaratively styling one or more elements using CSS (Cascading Stylesheets) */
-  class?: string;
+  class?: string | undefined;
   /** Used for declaratively styling one or more elements using CSS (Cascading Stylesheets) */
-  className?: string;
+  className?: string | undefined;
   /** Takes an object where the key is the class name(s) and the value is a boolean expression. When true, the class is applied, and when false, it is removed. */
-  classList?: Record<string, boolean | undefined>;
+  classList?: Record<string, boolean | undefined> | undefined;
   /** Specifies the text direction of the element. */
-  dir?: 'ltr' | 'rtl';
+  dir?: 'ltr' | 'rtl' | undefined;
   /** Contains a space-separated list of the part names of the element that should be exposed on the host element. */
-  exportparts?: string;
+  exportparts?: string | undefined;
   /** For <label> and <output>, lets you associate the label with some control. */
-  htmlFor?: string;
+  htmlFor?: string | undefined;
   /** Specifies whether the element should be hidden. */
-  hidden?: boolean | string;
+  hidden?: boolean | string | undefined;
   /** A unique identifier for the element. */
-  id?: string;
+  id?: string | undefined;
   /** Keys tell React which array item each component corresponds to */
-  key?: string | number;
+  key?: string | number | undefined;
   /** Specifies the language of the element. */
-  lang?: string;
+  lang?: string | undefined;
   /** Defines the element's semantic role for accessibility APIs. */
-  role?: string;
+  role?: string | undefined;
   /** Contains a space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the ::part pseudo-element. */
-  part?: string;
+  part?: string | undefined;
   /** Use the ref attribute with a variable to assign a DOM element to the variable once the element is rendered. */
-  ref?: T | ((e: T) => void);
+  ref?: (T | ((e: T) => void)) | undefined;
   /** Adds a reference for a custom element slot */
-  slot?: string;
+  slot?: string | undefined;
   /** Prop for setting inline styles */
-  style?: Record<string, string | number>;
+  style?: Record<string, string | number> | undefined;
   /** Overrides the default Tab button behavior. Avoid using values other than -1 and 0. */
-  tabIndex?: number;
+  tabIndex?: number | undefined;
   /** Specifies the tooltip text for the element. */
-  title?: string;
+  title?: string | undefined;
   /** Passing 'no' excludes the element content from being translated. */
-  translate?: 'yes' | 'no';
+  translate?: 'yes' | 'no' | undefined;
   /** The popover global attribute is used to designate an element as a popover element. */
-  popover?: 'auto' | 'hint' | 'manual';
+  popover?: 'auto' | 'hint' | 'manual' | undefined;
   /** Turns an element element into a popover control button; takes the ID of the popover element to control as its value. */
-  popovertarget?: 'top' | 'bottom' | 'left' | 'right' | 'auto';
+  popovertarget?: 'top' | 'bottom' | 'left' | 'right' | 'auto' | undefined;
   /** Specifies the action to be performed on a popover element being controlled by a control element. */
-  popovertargetaction?: 'show' | 'hide' | 'toggle';
+  popovertargetaction?: 'show' | 'hide' | 'toggle' | undefined;
 };
 
 type BaseEvents = {};
 
 export type CfpbAlertProps = {
   /**  */
-  status?: CfpbAlert['status'];
+  status?: CfpbAlert['status'] | undefined;
   /**  */
-  message?: CfpbAlert['message'];
+  message?: CfpbAlert['message'] | undefined;
 };
 
 export type CfpbAlertSolidJsProps = {
   /**  */
-  'prop:status'?: CfpbAlert['status'];
+  'prop:status'?: CfpbAlert['status'] | undefined;
   /**  */
-  'prop:message'?: CfpbAlert['message'];
+  'prop:message'?: CfpbAlert['message'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbButtonProps = {
   /**  */
-  type?: CfpbButton['type'];
+  type?: CfpbButton['type'] | undefined;
   /**  */
-  href?: CfpbButton['href'];
+  href?: CfpbButton['href'] | undefined;
   /**  */
-  disabled?: CfpbButton['disabled'];
+  disabled?: CfpbButton['disabled'] | undefined;
   /**  */
-  variant?: CfpbButton['variant'];
+  variant?: CfpbButton['variant'] | undefined;
   /**  */
-  'icon-left'?: CfpbButton['iconLeft'];
+  'icon-left'?: CfpbButton['iconLeft'] | undefined;
   /**  */
-  iconLeft?: CfpbButton['iconLeft'];
+  iconLeft?: CfpbButton['iconLeft'] | undefined;
   /**  */
-  'icon-right'?: CfpbButton['iconRight'];
+  'icon-right'?: CfpbButton['iconRight'] | undefined;
   /**  */
-  iconRight?: CfpbButton['iconRight'];
+  iconRight?: CfpbButton['iconRight'] | undefined;
   /**  */
-  'icon-left-spin'?: CfpbButton['isIconLeftSpin'];
+  'icon-left-spin'?: CfpbButton['isIconLeftSpin'] | undefined;
   /**  */
-  isIconLeftSpin?: CfpbButton['isIconLeftSpin'];
+  isIconLeftSpin?: CfpbButton['isIconLeftSpin'] | undefined;
   /**  */
-  'icon-right-spin'?: CfpbButton['isIconRightSpin'];
+  'icon-right-spin'?: CfpbButton['isIconRightSpin'] | undefined;
   /**  */
-  isIconRightSpin?: CfpbButton['isIconRightSpin'];
+  isIconRightSpin?: CfpbButton['isIconRightSpin'] | undefined;
   /**  */
-  'full-on-mobile'?: CfpbButton['fullOnMobile'];
+  'full-on-mobile'?: CfpbButton['fullOnMobile'] | undefined;
   /**  */
-  fullOnMobile?: CfpbButton['fullOnMobile'];
+  fullOnMobile?: CfpbButton['fullOnMobile'] | undefined;
   /**  */
-  'flush-left'?: CfpbButton['flushLeft'];
+  'flush-left'?: CfpbButton['flushLeft'] | undefined;
   /**  */
-  flushLeft?: CfpbButton['flushLeft'];
+  flushLeft?: CfpbButton['flushLeft'] | undefined;
   /**  */
-  'flush-right'?: CfpbButton['flushRight'];
+  'flush-right'?: CfpbButton['flushRight'] | undefined;
   /**  */
-  flushRight?: CfpbButton['flushRight'];
+  flushRight?: CfpbButton['flushRight'] | undefined;
   /**  */
-  'style-as-link'?: CfpbButton['styleAsLink'];
+  'style-as-link'?: CfpbButton['styleAsLink'] | undefined;
   /**  */
-  styleAsLink?: CfpbButton['styleAsLink'];
+  styleAsLink?: CfpbButton['styleAsLink'] | undefined;
 };
 
 export type CfpbButtonSolidJsProps = {
   /**  */
-  'prop:type'?: CfpbButton['type'];
+  'prop:type'?: CfpbButton['type'] | undefined;
   /**  */
-  'prop:href'?: CfpbButton['href'];
+  'prop:href'?: CfpbButton['href'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbButton['disabled'];
+  'prop:disabled'?: CfpbButton['disabled'] | undefined;
   /**  */
-  'prop:variant'?: CfpbButton['variant'];
+  'prop:variant'?: CfpbButton['variant'] | undefined;
   /**  */
-  'attr:icon-left'?: CfpbButton['iconLeft'];
+  'attr:icon-left'?: CfpbButton['iconLeft'] | undefined;
   /**  */
-  'prop:iconLeft'?: CfpbButton['iconLeft'];
+  'prop:iconLeft'?: CfpbButton['iconLeft'] | undefined;
   /**  */
-  'attr:icon-right'?: CfpbButton['iconRight'];
+  'attr:icon-right'?: CfpbButton['iconRight'] | undefined;
   /**  */
-  'prop:iconRight'?: CfpbButton['iconRight'];
+  'prop:iconRight'?: CfpbButton['iconRight'] | undefined;
   /**  */
-  'bool:icon-left-spin'?: CfpbButton['isIconLeftSpin'];
+  'bool:icon-left-spin'?: CfpbButton['isIconLeftSpin'] | undefined;
   /**  */
-  'prop:isIconLeftSpin'?: CfpbButton['isIconLeftSpin'];
+  'prop:isIconLeftSpin'?: CfpbButton['isIconLeftSpin'] | undefined;
   /**  */
-  'bool:icon-right-spin'?: CfpbButton['isIconRightSpin'];
+  'bool:icon-right-spin'?: CfpbButton['isIconRightSpin'] | undefined;
   /**  */
-  'prop:isIconRightSpin'?: CfpbButton['isIconRightSpin'];
+  'prop:isIconRightSpin'?: CfpbButton['isIconRightSpin'] | undefined;
   /**  */
-  'bool:full-on-mobile'?: CfpbButton['fullOnMobile'];
+  'bool:full-on-mobile'?: CfpbButton['fullOnMobile'] | undefined;
   /**  */
-  'prop:fullOnMobile'?: CfpbButton['fullOnMobile'];
+  'prop:fullOnMobile'?: CfpbButton['fullOnMobile'] | undefined;
   /**  */
-  'bool:flush-left'?: CfpbButton['flushLeft'];
+  'bool:flush-left'?: CfpbButton['flushLeft'] | undefined;
   /**  */
-  'prop:flushLeft'?: CfpbButton['flushLeft'];
+  'prop:flushLeft'?: CfpbButton['flushLeft'] | undefined;
   /**  */
-  'bool:flush-right'?: CfpbButton['flushRight'];
+  'bool:flush-right'?: CfpbButton['flushRight'] | undefined;
   /**  */
-  'prop:flushRight'?: CfpbButton['flushRight'];
+  'prop:flushRight'?: CfpbButton['flushRight'] | undefined;
   /**  */
-  'bool:style-as-link'?: CfpbButton['styleAsLink'];
+  'bool:style-as-link'?: CfpbButton['styleAsLink'] | undefined;
   /**  */
-  'prop:styleAsLink'?: CfpbButton['styleAsLink'];
+  'prop:styleAsLink'?: CfpbButton['styleAsLink'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbCheckboxIconProps = {
   /**  */
-  borderless?: CfpbCheckboxIcon['borderless'];
+  borderless?: CfpbCheckboxIcon['borderless'] | undefined;
   /**  */
-  checked?: CfpbCheckboxIcon['checked'];
+  checked?: CfpbCheckboxIcon['checked'] | undefined;
   /**  */
-  disabled?: CfpbCheckboxIcon['disabled'];
+  disabled?: CfpbCheckboxIcon['disabled'] | undefined;
   /**  */
-  validation?: CfpbCheckboxIcon['validation'];
+  validation?: CfpbCheckboxIcon['validation'] | undefined;
 };
 
 export type CfpbCheckboxIconSolidJsProps = {
   /**  */
-  'prop:borderless'?: CfpbCheckboxIcon['borderless'];
+  'prop:borderless'?: CfpbCheckboxIcon['borderless'] | undefined;
   /**  */
-  'prop:checked'?: CfpbCheckboxIcon['checked'];
+  'prop:checked'?: CfpbCheckboxIcon['checked'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbCheckboxIcon['disabled'];
+  'prop:disabled'?: CfpbCheckboxIcon['disabled'] | undefined;
   /**  */
-  'prop:validation'?: CfpbCheckboxIcon['validation'];
+  'prop:validation'?: CfpbCheckboxIcon['validation'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbExpandableProps = {
   /**  */
-  open?: CfpbExpandable['isExpanded'];
+  open?: CfpbExpandable['isExpanded'] | undefined;
   /**  */
-  isExpanded?: CfpbExpandable['isExpanded'];
+  isExpanded?: CfpbExpandable['isExpanded'] | undefined;
 
   /** The expandable started expanding. */
-  onexpandbegin?: (e: CustomEvent) => void;
+  onexpandbegin?: ((e: CustomEvent) => void) | undefined;
   /** The expandable finshed expanding. */
-  onexpandend?: (e: CustomEvent) => void;
+  onexpandend?: ((e: CustomEvent) => void) | undefined;
   /** The expandables started collapsing. */
-  oncollapsebegin?: (e: CustomEvent) => void;
+  oncollapsebegin?: ((e: CustomEvent) => void) | undefined;
   /** The expandables finished collapsing. */
-  oncollapseend?: (e: CustomEvent) => void;
+  oncollapseend?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbExpandableSolidJsProps = {
   /**  */
-  'bool:open'?: CfpbExpandable['isExpanded'];
+  'bool:open'?: CfpbExpandable['isExpanded'] | undefined;
   /**  */
-  'prop:isExpanded'?: CfpbExpandable['isExpanded'];
+  'prop:isExpanded'?: CfpbExpandable['isExpanded'] | undefined;
   /** The expandable started expanding. */
-  'on:expandbegin'?: (e: CustomEvent) => void;
+  'on:expandbegin'?: ((e: CustomEvent) => void) | undefined;
   /** The expandable finshed expanding. */
-  'on:expandend'?: (e: CustomEvent) => void;
+  'on:expandend'?: ((e: CustomEvent) => void) | undefined;
   /** The expandables started collapsing. */
-  'on:collapsebegin'?: (e: CustomEvent) => void;
+  'on:collapsebegin'?: ((e: CustomEvent) => void) | undefined;
   /** The expandables finished collapsing. */
-  'on:collapseend'?: (e: CustomEvent) => void;
+  'on:collapseend'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFileUploadProps = {
   /**  */
-  accept?: CfpbFileUpload['accept'];
+  accept?: CfpbFileUpload['accept'] | undefined;
   /**  */
-  isDetailHidden?: CfpbFileUpload['isDetailHidden'];
+  isDetailHidden?: CfpbFileUpload['isDetailHidden'] | undefined;
   /**  */
-  fileName?: CfpbFileUpload['fileName'];
+  fileName?: CfpbFileUpload['fileName'] | undefined;
   /**  */
-  files?: CfpbFileUpload['files'];
+  files?: CfpbFileUpload['files'] | undefined;
 
   /**  */
-  'onfile-change'?: (e: CustomEvent) => void;
+  'onfile-change'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbFileUploadSolidJsProps = {
   /**  */
-  'prop:accept'?: CfpbFileUpload['accept'];
+  'prop:accept'?: CfpbFileUpload['accept'] | undefined;
   /**  */
-  'prop:isDetailHidden'?: CfpbFileUpload['isDetailHidden'];
+  'prop:isDetailHidden'?: CfpbFileUpload['isDetailHidden'] | undefined;
   /**  */
-  'prop:fileName'?: CfpbFileUpload['fileName'];
+  'prop:fileName'?: CfpbFileUpload['fileName'] | undefined;
   /**  */
-  'prop:files'?: CfpbFileUpload['files'];
+  'prop:files'?: CfpbFileUpload['files'] | undefined;
   /**  */
-  'on:file-change'?: (e: CustomEvent) => void;
+  'on:file-change'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFlagUsaProps = {};
 
 export type CfpbFlagUsaSolidJsProps = {
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFormAlertProps = {
   /**  */
-  validation?: CfpbFormAlert['validation'];
+  validation?: CfpbFormAlert['validation'] | undefined;
 };
 
 export type CfpbFormAlertSolidJsProps = {
   /**  */
-  'prop:validation'?: CfpbFormAlert['validation'];
+  'prop:validation'?: CfpbFormAlert['validation'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFormChoiceProps = {
   /**  */
-  checked?: CfpbFormChoice['checked'];
+  checked?: CfpbFormChoice['checked'] | undefined;
   /**  */
-  disabled?: CfpbFormChoice['disabled'];
+  disabled?: CfpbFormChoice['disabled'] | undefined;
   /**  */
-  large?: CfpbFormChoice['large'];
+  large?: CfpbFormChoice['large'] | undefined;
   /**  */
-  validation?: CfpbFormChoice['validation'];
+  validation?: CfpbFormChoice['validation'] | undefined;
   /**  */
-  type?: CfpbFormChoice['type'];
+  type?: CfpbFormChoice['type'] | undefined;
   /**  */
-  name?: CfpbFormChoice['name'];
+  name?: CfpbFormChoice['name'] | undefined;
   /**  */
-  value?: CfpbFormChoice['value'];
+  value?: CfpbFormChoice['value'] | undefined;
 
   /**  */
-  onchange?: (e: Event) => void;
+  onchange?: ((e: Event) => void) | undefined;
   /**  */
-  oninput?: (e: Event) => void;
+  oninput?: ((e: Event) => void) | undefined;
 };
 
 export type CfpbFormChoiceSolidJsProps = {
   /**  */
-  'prop:checked'?: CfpbFormChoice['checked'];
+  'prop:checked'?: CfpbFormChoice['checked'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbFormChoice['disabled'];
+  'prop:disabled'?: CfpbFormChoice['disabled'] | undefined;
   /**  */
-  'prop:large'?: CfpbFormChoice['large'];
+  'prop:large'?: CfpbFormChoice['large'] | undefined;
   /**  */
-  'prop:validation'?: CfpbFormChoice['validation'];
+  'prop:validation'?: CfpbFormChoice['validation'] | undefined;
   /**  */
-  'prop:type'?: CfpbFormChoice['type'];
+  'prop:type'?: CfpbFormChoice['type'] | undefined;
   /**  */
-  'prop:name'?: CfpbFormChoice['name'];
+  'prop:name'?: CfpbFormChoice['name'] | undefined;
   /**  */
-  'prop:value'?: CfpbFormChoice['value'];
+  'prop:value'?: CfpbFormChoice['value'] | undefined;
   /**  */
-  'on:change'?: (e: Event) => void;
+  'on:change'?: ((e: Event) => void) | undefined;
   /**  */
-  'on:input'?: (e: Event) => void;
+  'on:input'?: ((e: Event) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFormSearchInputProps = {
   /**  */
-  disabled?: CfpbFormSearchInput['disabled'];
+  disabled?: CfpbFormSearchInput['disabled'] | undefined;
   /**  */
-  validation?: CfpbFormSearchInput['validation'];
+  validation?: CfpbFormSearchInput['validation'] | undefined;
   /**  */
-  label?: CfpbFormSearchInput['label'];
+  label?: CfpbFormSearchInput['label'] | undefined;
   /**  */
-  name?: CfpbFormSearchInput['name'];
+  name?: CfpbFormSearchInput['name'] | undefined;
   /**  */
-  title?: CfpbFormSearchInput['title'];
+  title?: CfpbFormSearchInput['title'] | undefined;
   /**  */
-  value?: CfpbFormSearchInput['value'];
+  value?: CfpbFormSearchInput['value'] | undefined;
   /**  */
-  maxlength?: CfpbFormSearchInput['maxlength'];
+  maxlength?: CfpbFormSearchInput['maxlength'] | undefined;
   /**  */
-  placeholder?: CfpbFormSearchInput['placeholder'];
+  placeholder?: CfpbFormSearchInput['placeholder'] | undefined;
   /**  */
-  'aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'];
+  'aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'] | undefined;
   /**  */
-  ariaLabelInput?: CfpbFormSearchInput['ariaLabelInput'];
+  ariaLabelInput?: CfpbFormSearchInput['ariaLabelInput'] | undefined;
   /**  */
-  'aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'];
+  'aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'] | undefined;
   /**  */
-  ariaLabelButton?: CfpbFormSearchInput['ariaLabelButton'];
+  ariaLabelButton?: CfpbFormSearchInput['ariaLabelButton'] | undefined;
   /**  */
-  borderless?: CfpbFormSearchInput['borderless'];
+  borderless?: CfpbFormSearchInput['borderless'] | undefined;
 
   /**  */
-  'onenter-down'?: (e: CustomEvent) => void;
+  'onenter-down'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  onblur?: (e: Event) => void;
+  onblur?: ((e: Event) => void) | undefined;
   /**  */
-  onclear?: (e: CustomEvent) => void;
+  onclear?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbFormSearchInputSolidJsProps = {
   /**  */
-  'prop:disabled'?: CfpbFormSearchInput['disabled'];
+  'prop:disabled'?: CfpbFormSearchInput['disabled'] | undefined;
   /**  */
-  'prop:validation'?: CfpbFormSearchInput['validation'];
+  'prop:validation'?: CfpbFormSearchInput['validation'] | undefined;
   /**  */
-  'prop:label'?: CfpbFormSearchInput['label'];
+  'prop:label'?: CfpbFormSearchInput['label'] | undefined;
   /**  */
-  'prop:name'?: CfpbFormSearchInput['name'];
+  'prop:name'?: CfpbFormSearchInput['name'] | undefined;
   /**  */
-  'prop:title'?: CfpbFormSearchInput['title'];
+  'prop:title'?: CfpbFormSearchInput['title'] | undefined;
   /**  */
-  'prop:value'?: CfpbFormSearchInput['value'];
+  'prop:value'?: CfpbFormSearchInput['value'] | undefined;
   /**  */
-  'prop:maxlength'?: CfpbFormSearchInput['maxlength'];
+  'prop:maxlength'?: CfpbFormSearchInput['maxlength'] | undefined;
   /**  */
-  'prop:placeholder'?: CfpbFormSearchInput['placeholder'];
+  'prop:placeholder'?: CfpbFormSearchInput['placeholder'] | undefined;
   /**  */
-  'attr:aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'];
+  'attr:aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'] | undefined;
   /**  */
-  'prop:ariaLabelInput'?: CfpbFormSearchInput['ariaLabelInput'];
+  'prop:ariaLabelInput'?: CfpbFormSearchInput['ariaLabelInput'] | undefined;
   /**  */
-  'attr:aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'];
+  'attr:aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'] | undefined;
   /**  */
-  'prop:ariaLabelButton'?: CfpbFormSearchInput['ariaLabelButton'];
+  'prop:ariaLabelButton'?: CfpbFormSearchInput['ariaLabelButton'] | undefined;
   /**  */
-  'prop:borderless'?: CfpbFormSearchInput['borderless'];
+  'prop:borderless'?: CfpbFormSearchInput['borderless'] | undefined;
   /**  */
-  'on:enter-down'?: (e: CustomEvent) => void;
+  'on:enter-down'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'on:blur'?: (e: Event) => void;
+  'on:blur'?: ((e: Event) => void) | undefined;
   /**  */
-  'on:clear'?: (e: CustomEvent) => void;
+  'on:clear'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFormSearchProps = {
   /**  */
-  disabled?: CfpbFormSearch['disabled'];
+  disabled?: CfpbFormSearch['disabled'] | undefined;
   /**  */
-  validation?: CfpbFormSearch['validation'];
+  validation?: CfpbFormSearch['validation'] | undefined;
   /**  */
-  label?: CfpbFormSearch['label'];
+  label?: CfpbFormSearch['label'] | undefined;
   /**  */
-  name?: CfpbFormSearch['name'];
+  name?: CfpbFormSearch['name'] | undefined;
   /**  */
-  title?: CfpbFormSearch['title'];
+  title?: CfpbFormSearch['title'] | undefined;
   /**  */
-  value?: CfpbFormSearch['value'];
+  value?: CfpbFormSearch['value'] | undefined;
   /**  */
-  maxlength?: CfpbFormSearch['maxlength'];
+  maxlength?: CfpbFormSearch['maxlength'] | undefined;
   /**  */
-  placeholder?: CfpbFormSearch['placeholder'];
+  placeholder?: CfpbFormSearch['placeholder'] | undefined;
   /**  */
-  'aria-label-input'?: CfpbFormSearch['ariaLabelInput'];
+  'aria-label-input'?: CfpbFormSearch['ariaLabelInput'] | undefined;
   /**  */
-  ariaLabelInput?: CfpbFormSearch['ariaLabelInput'];
+  ariaLabelInput?: CfpbFormSearch['ariaLabelInput'] | undefined;
   /**  */
-  'aria-label-button'?: CfpbFormSearch['ariaLabelButton'];
+  'aria-label-button'?: CfpbFormSearch['ariaLabelButton'] | undefined;
   /**  */
-  ariaLabelButton?: CfpbFormSearch['ariaLabelButton'];
+  ariaLabelButton?: CfpbFormSearch['ariaLabelButton'] | undefined;
   /**  */
-  searchlist?: CfpbFormSearch['searchList'];
+  searchlist?: CfpbFormSearch['searchList'] | undefined;
   /**  */
-  searchList?: CfpbFormSearch['searchList'];
+  searchList?: CfpbFormSearch['searchList'] | undefined;
 };
 
 export type CfpbFormSearchSolidJsProps = {
   /**  */
-  'prop:disabled'?: CfpbFormSearch['disabled'];
+  'prop:disabled'?: CfpbFormSearch['disabled'] | undefined;
   /**  */
-  'prop:validation'?: CfpbFormSearch['validation'];
+  'prop:validation'?: CfpbFormSearch['validation'] | undefined;
   /**  */
-  'prop:label'?: CfpbFormSearch['label'];
+  'prop:label'?: CfpbFormSearch['label'] | undefined;
   /**  */
-  'prop:name'?: CfpbFormSearch['name'];
+  'prop:name'?: CfpbFormSearch['name'] | undefined;
   /**  */
-  'prop:title'?: CfpbFormSearch['title'];
+  'prop:title'?: CfpbFormSearch['title'] | undefined;
   /**  */
-  'prop:value'?: CfpbFormSearch['value'];
+  'prop:value'?: CfpbFormSearch['value'] | undefined;
   /**  */
-  'prop:maxlength'?: CfpbFormSearch['maxlength'];
+  'prop:maxlength'?: CfpbFormSearch['maxlength'] | undefined;
   /**  */
-  'prop:placeholder'?: CfpbFormSearch['placeholder'];
+  'prop:placeholder'?: CfpbFormSearch['placeholder'] | undefined;
   /**  */
-  'attr:aria-label-input'?: CfpbFormSearch['ariaLabelInput'];
+  'attr:aria-label-input'?: CfpbFormSearch['ariaLabelInput'] | undefined;
   /**  */
-  'prop:ariaLabelInput'?: CfpbFormSearch['ariaLabelInput'];
+  'prop:ariaLabelInput'?: CfpbFormSearch['ariaLabelInput'] | undefined;
   /**  */
-  'attr:aria-label-button'?: CfpbFormSearch['ariaLabelButton'];
+  'attr:aria-label-button'?: CfpbFormSearch['ariaLabelButton'] | undefined;
   /**  */
-  'prop:ariaLabelButton'?: CfpbFormSearch['ariaLabelButton'];
+  'prop:ariaLabelButton'?: CfpbFormSearch['ariaLabelButton'] | undefined;
   /**  */
-  'attr:searchlist'?: CfpbFormSearch['searchList'];
+  'attr:searchlist'?: CfpbFormSearch['searchList'] | undefined;
   /**  */
-  'prop:searchList'?: CfpbFormSearch['searchList'];
+  'prop:searchList'?: CfpbFormSearch['searchList'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbIconTextProps = {
   /**  */
-  disabled?: CfpbIconText['disabled'];
+  disabled?: CfpbIconText['disabled'] | undefined;
   /**  */
-  'icon-left'?: CfpbIconText['iconLeft'];
+  'icon-left'?: CfpbIconText['iconLeft'] | undefined;
   /**  */
-  iconLeft?: CfpbIconText['iconLeft'];
+  iconLeft?: CfpbIconText['iconLeft'] | undefined;
   /**  */
-  'icon-right'?: CfpbIconText['iconRight'];
+  'icon-right'?: CfpbIconText['iconRight'] | undefined;
   /**  */
-  iconRight?: CfpbIconText['iconRight'];
+  iconRight?: CfpbIconText['iconRight'] | undefined;
   /**  */
-  'icon-left-spin'?: CfpbIconText['isIconLeftSpin'];
+  'icon-left-spin'?: CfpbIconText['isIconLeftSpin'] | undefined;
   /**  */
-  isIconLeftSpin?: CfpbIconText['isIconLeftSpin'];
+  isIconLeftSpin?: CfpbIconText['isIconLeftSpin'] | undefined;
   /**  */
-  'icon-right-spin'?: CfpbIconText['isIconRightSpin'];
+  'icon-right-spin'?: CfpbIconText['isIconRightSpin'] | undefined;
   /**  */
-  isIconRightSpin?: CfpbIconText['isIconRightSpin'];
+  isIconRightSpin?: CfpbIconText['isIconRightSpin'] | undefined;
   /**  */
-  'has-div'?: CfpbIconText['hasDiv'];
+  'has-div'?: CfpbIconText['hasDiv'] | undefined;
   /**  */
-  hasDiv?: CfpbIconText['hasDiv'];
+  hasDiv?: CfpbIconText['hasDiv'] | undefined;
   /**  */
-  underline?: CfpbIconText['underline'];
+  underline?: CfpbIconText['underline'] | undefined;
   /**  */
-  'mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'];
+  'mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'] | undefined;
   /**  */
-  mobileIconAlignEnd?: CfpbIconText['mobileIconAlignEnd'];
+  mobileIconAlignEnd?: CfpbIconText['mobileIconAlignEnd'] | undefined;
   /**  */
-  inline?: CfpbIconText['inline'];
+  inline?: CfpbIconText['inline'] | undefined;
 };
 
 export type CfpbIconTextSolidJsProps = {
   /**  */
-  'prop:disabled'?: CfpbIconText['disabled'];
+  'prop:disabled'?: CfpbIconText['disabled'] | undefined;
   /**  */
-  'attr:icon-left'?: CfpbIconText['iconLeft'];
+  'attr:icon-left'?: CfpbIconText['iconLeft'] | undefined;
   /**  */
-  'prop:iconLeft'?: CfpbIconText['iconLeft'];
+  'prop:iconLeft'?: CfpbIconText['iconLeft'] | undefined;
   /**  */
-  'attr:icon-right'?: CfpbIconText['iconRight'];
+  'attr:icon-right'?: CfpbIconText['iconRight'] | undefined;
   /**  */
-  'prop:iconRight'?: CfpbIconText['iconRight'];
+  'prop:iconRight'?: CfpbIconText['iconRight'] | undefined;
   /**  */
-  'bool:icon-left-spin'?: CfpbIconText['isIconLeftSpin'];
+  'bool:icon-left-spin'?: CfpbIconText['isIconLeftSpin'] | undefined;
   /**  */
-  'prop:isIconLeftSpin'?: CfpbIconText['isIconLeftSpin'];
+  'prop:isIconLeftSpin'?: CfpbIconText['isIconLeftSpin'] | undefined;
   /**  */
-  'bool:icon-right-spin'?: CfpbIconText['isIconRightSpin'];
+  'bool:icon-right-spin'?: CfpbIconText['isIconRightSpin'] | undefined;
   /**  */
-  'prop:isIconRightSpin'?: CfpbIconText['isIconRightSpin'];
+  'prop:isIconRightSpin'?: CfpbIconText['isIconRightSpin'] | undefined;
   /**  */
-  'bool:has-div'?: CfpbIconText['hasDiv'];
+  'bool:has-div'?: CfpbIconText['hasDiv'] | undefined;
   /**  */
-  'prop:hasDiv'?: CfpbIconText['hasDiv'];
+  'prop:hasDiv'?: CfpbIconText['hasDiv'] | undefined;
   /**  */
-  'prop:underline'?: CfpbIconText['underline'];
+  'prop:underline'?: CfpbIconText['underline'] | undefined;
   /**  */
-  'bool:mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'];
+  'bool:mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'] | undefined;
   /**  */
-  'prop:mobileIconAlignEnd'?: CfpbIconText['mobileIconAlignEnd'];
+  'prop:mobileIconAlignEnd'?: CfpbIconText['mobileIconAlignEnd'] | undefined;
   /**  */
-  'prop:inline'?: CfpbIconText['inline'];
+  'prop:inline'?: CfpbIconText['inline'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbIconProps = {
   /**  */
-  name?: CfpbIcon['name'];
+  name?: CfpbIcon['name'] | undefined;
   /**  */
-  spin?: CfpbIcon['spin'];
+  spin?: CfpbIcon['spin'] | undefined;
 };
 
 export type CfpbIconSolidJsProps = {
   /**  */
-  'prop:name'?: CfpbIcon['name'];
+  'prop:name'?: CfpbIcon['name'] | undefined;
   /**  */
-  'prop:spin'?: CfpbIcon['spin'];
+  'prop:spin'?: CfpbIcon['spin'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbLabelProps = {
   /**  */
-  block?: CfpbLabel['block'];
+  block?: CfpbLabel['block'] | undefined;
   /**  */
-  for?: CfpbLabel['for'];
+  for?: CfpbLabel['for'] | undefined;
 };
 
 export type CfpbLabelSolidJsProps = {
   /**  */
-  'prop:block'?: CfpbLabel['block'];
+  'prop:block'?: CfpbLabel['block'] | undefined;
   /**  */
-  'prop:for'?: CfpbLabel['for'];
+  'prop:for'?: CfpbLabel['for'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbLinkProps = {
   /**  */
-  'link-variant'?: CfpbLink['linkVariant'];
+  'link-variant'?: CfpbLink['linkVariant'] | undefined;
   /**  */
-  linkVariant?: CfpbLink['linkVariant'];
+  linkVariant?: CfpbLink['linkVariant'] | undefined;
   /**  */
-  size?: CfpbLink['size'];
+  size?: CfpbLink['size'] | undefined;
   /**  */
-  'color-theme'?: CfpbLink['colorTheme'];
+  'color-theme'?: CfpbLink['colorTheme'] | undefined;
   /**  */
-  colorTheme?: CfpbLink['colorTheme'];
+  colorTheme?: CfpbLink['colorTheme'] | undefined;
   /**  */
-  'no-underline'?: CfpbLink['noUnderline'];
+  'no-underline'?: CfpbLink['noUnderline'] | undefined;
   /**  */
-  noUnderline?: CfpbLink['noUnderline'];
+  noUnderline?: CfpbLink['noUnderline'] | undefined;
   /**  */
-  'no-top-border'?: CfpbLink['noTopBorder'];
+  'no-top-border'?: CfpbLink['noTopBorder'] | undefined;
   /**  */
-  noTopBorder?: CfpbLink['noTopBorder'];
+  noTopBorder?: CfpbLink['noTopBorder'] | undefined;
   /**  */
-  inline?: CfpbLink['inline'];
+  inline?: CfpbLink['inline'] | undefined;
   /**  */
-  linkText?: CfpbLink['linkText'];
+  linkText?: CfpbLink['linkText'] | undefined;
   /**  */
-  linkAttributes?: CfpbLink['linkAttributes'];
+  linkAttributes?: CfpbLink['linkAttributes'] | undefined;
 };
 
 export type CfpbLinkSolidJsProps = {
   /**  */
-  'attr:link-variant'?: CfpbLink['linkVariant'];
+  'attr:link-variant'?: CfpbLink['linkVariant'] | undefined;
   /**  */
-  'prop:linkVariant'?: CfpbLink['linkVariant'];
+  'prop:linkVariant'?: CfpbLink['linkVariant'] | undefined;
   /**  */
-  'prop:size'?: CfpbLink['size'];
+  'prop:size'?: CfpbLink['size'] | undefined;
   /**  */
-  'attr:color-theme'?: CfpbLink['colorTheme'];
+  'attr:color-theme'?: CfpbLink['colorTheme'] | undefined;
   /**  */
-  'prop:colorTheme'?: CfpbLink['colorTheme'];
+  'prop:colorTheme'?: CfpbLink['colorTheme'] | undefined;
   /**  */
-  'bool:no-underline'?: CfpbLink['noUnderline'];
+  'bool:no-underline'?: CfpbLink['noUnderline'] | undefined;
   /**  */
-  'prop:noUnderline'?: CfpbLink['noUnderline'];
+  'prop:noUnderline'?: CfpbLink['noUnderline'] | undefined;
   /**  */
-  'bool:no-top-border'?: CfpbLink['noTopBorder'];
+  'bool:no-top-border'?: CfpbLink['noTopBorder'] | undefined;
   /**  */
-  'prop:noTopBorder'?: CfpbLink['noTopBorder'];
+  'prop:noTopBorder'?: CfpbLink['noTopBorder'] | undefined;
   /**  */
-  'prop:inline'?: CfpbLink['inline'];
+  'prop:inline'?: CfpbLink['inline'] | undefined;
   /**  */
-  'prop:linkText'?: CfpbLink['linkText'];
+  'prop:linkText'?: CfpbLink['linkText'] | undefined;
   /**  */
-  'prop:linkAttributes'?: CfpbLink['linkAttributes'];
+  'prop:linkAttributes'?: CfpbLink['linkAttributes'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbListItemProps = {};
 
 export type CfpbListItemSolidJsProps = {
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbListProps = {
   /**  */
-  childdata?: CfpbList['childData'];
+  childdata?: CfpbList['childData'] | undefined;
   /**  */
-  childData?: CfpbList['childData'];
+  childData?: CfpbList['childData'] | undefined;
   /**  */
-  'color-theme'?: CfpbList['colorTheme'];
+  'color-theme'?: CfpbList['colorTheme'] | undefined;
   /**  */
-  colorTheme?: CfpbList['colorTheme'];
+  colorTheme?: CfpbList['colorTheme'] | undefined;
 
   /** An item was clicked. */
-  'onitem-click'?: (e: CustomEvent) => void;
+  'onitem-click'?: ((e: CustomEvent) => void) | undefined;
   /** An item was added to the group. */
-  'onitem-added'?: (e: CustomEvent) => void;
+  'onitem-added'?: ((e: CustomEvent) => void) | undefined;
   /** An item was removed to the group. */
-  'onitem-removed'?: (e: CustomEvent) => void;
+  'onitem-removed'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbListSolidJsProps = {
   /**  */
-  'attr:childdata'?: CfpbList['childData'];
+  'attr:childdata'?: CfpbList['childData'] | undefined;
   /**  */
-  'prop:childData'?: CfpbList['childData'];
+  'prop:childData'?: CfpbList['childData'] | undefined;
   /**  */
-  'attr:color-theme'?: CfpbList['colorTheme'];
+  'attr:color-theme'?: CfpbList['colorTheme'] | undefined;
   /**  */
-  'prop:colorTheme'?: CfpbList['colorTheme'];
+  'prop:colorTheme'?: CfpbList['colorTheme'] | undefined;
   /** An item was clicked. */
-  'on:item-click'?: (e: CustomEvent) => void;
+  'on:item-click'?: ((e: CustomEvent) => void) | undefined;
   /** An item was added to the group. */
-  'on:item-added'?: (e: CustomEvent) => void;
+  'on:item-added'?: ((e: CustomEvent) => void) | undefined;
   /** An item was removed to the group. */
-  'on:item-removed'?: (e: CustomEvent) => void;
+  'on:item-removed'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbListboxItemProps = {
   /**  */
-  type?: CfpbListboxItem['type'];
+  type?: CfpbListboxItem['type'] | undefined;
   /**  */
-  checked?: CfpbListboxItem['checked'];
+  checked?: CfpbListboxItem['checked'] | undefined;
   /**  */
-  disabled?: CfpbListboxItem['disabled'];
+  disabled?: CfpbListboxItem['disabled'] | undefined;
   /**  */
-  hidden?: CfpbListboxItem['hidden'];
+  hidden?: CfpbListboxItem['hidden'] | undefined;
   /**  */
-  href?: CfpbListboxItem['href'];
+  href?: CfpbListboxItem['href'] | undefined;
   /**  */
-  value?: CfpbListboxItem['value'];
+  value?: CfpbListboxItem['value'] | undefined;
 
   /**  */
-  'onitem-click'?: (e: CustomEvent) => void;
+  'onitem-click'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbListboxItemSolidJsProps = {
   /**  */
-  'prop:type'?: CfpbListboxItem['type'];
+  'prop:type'?: CfpbListboxItem['type'] | undefined;
   /**  */
-  'prop:checked'?: CfpbListboxItem['checked'];
+  'prop:checked'?: CfpbListboxItem['checked'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbListboxItem['disabled'];
+  'prop:disabled'?: CfpbListboxItem['disabled'] | undefined;
   /**  */
-  'prop:hidden'?: CfpbListboxItem['hidden'];
+  'prop:hidden'?: CfpbListboxItem['hidden'] | undefined;
   /**  */
-  'prop:href'?: CfpbListboxItem['href'];
+  'prop:href'?: CfpbListboxItem['href'] | undefined;
   /**  */
-  'prop:value'?: CfpbListboxItem['value'];
+  'prop:value'?: CfpbListboxItem['value'] | undefined;
   /**  */
-  'on:item-click'?: (e: CustomEvent) => void;
+  'on:item-click'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbListboxProps = {
   /**  */
-  childdata?: CfpbListbox['childData'];
+  childdata?: CfpbListbox['childData'] | undefined;
   /**  */
-  childData?: CfpbListbox['childData'];
+  childData?: CfpbListbox['childData'] | undefined;
   /**  */
-  multiple?: CfpbListbox['multiple'];
+  multiple?: CfpbListbox['multiple'] | undefined;
   /**  */
-  type?: CfpbListbox['type'];
+  type?: CfpbListbox['type'] | undefined;
   /**  */
-  'aria-label'?: CfpbListbox['ariaLabel'];
+  'aria-label'?: CfpbListbox['ariaLabel'] | undefined;
   /**  */
-  ariaLabel?: CfpbListbox['ariaLabel'];
+  ariaLabel?: CfpbListbox['ariaLabel'] | undefined;
 
   /**  */
-  'onitems-ready'?: (e: CustomEvent) => void;
+  'onitems-ready'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'onitem-click'?: (e: CustomEvent) => void;
+  'onitem-click'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'onitems-filter'?: (e: CustomEvent) => void;
+  'onitems-filter'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbListboxSolidJsProps = {
   /**  */
-  'attr:childdata'?: CfpbListbox['childData'];
+  'attr:childdata'?: CfpbListbox['childData'] | undefined;
   /**  */
-  'prop:childData'?: CfpbListbox['childData'];
+  'prop:childData'?: CfpbListbox['childData'] | undefined;
   /**  */
-  'prop:multiple'?: CfpbListbox['multiple'];
+  'prop:multiple'?: CfpbListbox['multiple'] | undefined;
   /**  */
-  'prop:type'?: CfpbListbox['type'];
+  'prop:type'?: CfpbListbox['type'] | undefined;
   /**  */
-  'attr:aria-label'?: CfpbListbox['ariaLabel'];
+  'attr:aria-label'?: CfpbListbox['ariaLabel'] | undefined;
   /**  */
-  'prop:ariaLabel'?: CfpbListbox['ariaLabel'];
+  'prop:ariaLabel'?: CfpbListbox['ariaLabel'] | undefined;
   /**  */
-  'on:items-ready'?: (e: CustomEvent) => void;
+  'on:items-ready'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'on:item-click'?: (e: CustomEvent) => void;
+  'on:item-click'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'on:items-filter'?: (e: CustomEvent) => void;
+  'on:items-filter'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbPaginationProps = {
   /**  */
-  value?: CfpbPagination['currentPage'];
+  value?: CfpbPagination['currentPage'] | undefined;
   /**  */
-  currentPage?: CfpbPagination['currentPage'];
+  currentPage?: CfpbPagination['currentPage'] | undefined;
   /**  */
-  max?: CfpbPagination['maxPage'];
+  max?: CfpbPagination['maxPage'] | undefined;
   /**  */
-  maxPage?: CfpbPagination['maxPage'];
+  maxPage?: CfpbPagination['maxPage'] | undefined;
   /**  */
-  lang?: CfpbPagination['lang'];
+  lang?: CfpbPagination['lang'] | undefined;
 
   /**  */
-  'onpage-change'?: (e: CustomEvent) => void;
+  'onpage-change'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbPaginationSolidJsProps = {
   /**  */
-  'attr:value'?: CfpbPagination['currentPage'];
+  'attr:value'?: CfpbPagination['currentPage'] | undefined;
   /**  */
-  'prop:currentPage'?: CfpbPagination['currentPage'];
+  'prop:currentPage'?: CfpbPagination['currentPage'] | undefined;
   /**  */
-  'attr:max'?: CfpbPagination['maxPage'];
+  'attr:max'?: CfpbPagination['maxPage'] | undefined;
   /**  */
-  'prop:maxPage'?: CfpbPagination['maxPage'];
+  'prop:maxPage'?: CfpbPagination['maxPage'] | undefined;
   /**  */
-  'prop:lang'?: CfpbPagination['lang'];
+  'prop:lang'?: CfpbPagination['lang'] | undefined;
   /**  */
-  'on:page-change'?: (e: CustomEvent) => void;
+  'on:page-change'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbSelectProps = {
   /**  */
-  multiple?: CfpbSelect['multiple'];
+  multiple?: CfpbSelect['multiple'] | undefined;
   /**  */
-  disabled?: CfpbSelect['disabled'];
+  disabled?: CfpbSelect['disabled'] | undefined;
   /**  */
-  validation?: CfpbSelect['validation'];
+  validation?: CfpbSelect['validation'] | undefined;
   /**  */
-  label?: CfpbSelect['label'];
+  label?: CfpbSelect['label'] | undefined;
   /**  */
-  name?: CfpbSelect['name'];
+  name?: CfpbSelect['name'] | undefined;
   /**  */
-  title?: CfpbSelect['title'];
+  title?: CfpbSelect['title'] | undefined;
   /**  */
-  value?: CfpbSelect['value'];
+  value?: CfpbSelect['value'] | undefined;
   /**  */
-  maxlength?: CfpbSelect['maxlength'];
+  maxlength?: CfpbSelect['maxlength'] | undefined;
   /**  */
-  placeholder?: CfpbSelect['placeholder'];
+  placeholder?: CfpbSelect['placeholder'] | undefined;
   /**  */
-  'aria-label-input'?: CfpbSelect['ariaLabelInput'];
+  'aria-label-input'?: CfpbSelect['ariaLabelInput'] | undefined;
   /**  */
-  ariaLabelInput?: CfpbSelect['ariaLabelInput'];
+  ariaLabelInput?: CfpbSelect['ariaLabelInput'] | undefined;
   /**  */
-  'aria-label-list'?: CfpbSelect['ariaLabelList'];
+  'aria-label-list'?: CfpbSelect['ariaLabelList'] | undefined;
   /**  */
-  ariaLabelList?: CfpbSelect['ariaLabelList'];
+  ariaLabelList?: CfpbSelect['ariaLabelList'] | undefined;
   /**  */
-  open?: CfpbSelect['isExpanded'];
+  open?: CfpbSelect['isExpanded'] | undefined;
   /**  */
-  isExpanded?: CfpbSelect['isExpanded'];
+  isExpanded?: CfpbSelect['isExpanded'] | undefined;
   /**  */
-  selectedtexts?: CfpbSelect['selectedTexts'];
+  selectedtexts?: CfpbSelect['selectedTexts'] | undefined;
   /**  */
-  selectedTexts?: CfpbSelect['selectedTexts'];
+  selectedTexts?: CfpbSelect['selectedTexts'] | undefined;
   /**  */
-  optionlist?: CfpbSelect['optionList'];
+  optionlist?: CfpbSelect['optionList'] | undefined;
   /**  */
-  optionList?: CfpbSelect['optionList'];
+  optionList?: CfpbSelect['optionList'] | undefined;
   /**  */
-  options?: CfpbSelect['options'];
+  options?: CfpbSelect['options'] | undefined;
 
   /**  */
-  onexpandbegin?: (e: CustomEvent) => void;
+  onexpandbegin?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbSelectSolidJsProps = {
   /**  */
-  'prop:multiple'?: CfpbSelect['multiple'];
+  'prop:multiple'?: CfpbSelect['multiple'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbSelect['disabled'];
+  'prop:disabled'?: CfpbSelect['disabled'] | undefined;
   /**  */
-  'prop:validation'?: CfpbSelect['validation'];
+  'prop:validation'?: CfpbSelect['validation'] | undefined;
   /**  */
-  'prop:label'?: CfpbSelect['label'];
+  'prop:label'?: CfpbSelect['label'] | undefined;
   /**  */
-  'prop:name'?: CfpbSelect['name'];
+  'prop:name'?: CfpbSelect['name'] | undefined;
   /**  */
-  'prop:title'?: CfpbSelect['title'];
+  'prop:title'?: CfpbSelect['title'] | undefined;
   /**  */
-  'prop:value'?: CfpbSelect['value'];
+  'prop:value'?: CfpbSelect['value'] | undefined;
   /**  */
-  'prop:maxlength'?: CfpbSelect['maxlength'];
+  'prop:maxlength'?: CfpbSelect['maxlength'] | undefined;
   /**  */
-  'prop:placeholder'?: CfpbSelect['placeholder'];
+  'prop:placeholder'?: CfpbSelect['placeholder'] | undefined;
   /**  */
-  'attr:aria-label-input'?: CfpbSelect['ariaLabelInput'];
+  'attr:aria-label-input'?: CfpbSelect['ariaLabelInput'] | undefined;
   /**  */
-  'prop:ariaLabelInput'?: CfpbSelect['ariaLabelInput'];
+  'prop:ariaLabelInput'?: CfpbSelect['ariaLabelInput'] | undefined;
   /**  */
-  'attr:aria-label-list'?: CfpbSelect['ariaLabelList'];
+  'attr:aria-label-list'?: CfpbSelect['ariaLabelList'] | undefined;
   /**  */
-  'prop:ariaLabelList'?: CfpbSelect['ariaLabelList'];
+  'prop:ariaLabelList'?: CfpbSelect['ariaLabelList'] | undefined;
   /**  */
-  'bool:open'?: CfpbSelect['isExpanded'];
+  'bool:open'?: CfpbSelect['isExpanded'] | undefined;
   /**  */
-  'prop:isExpanded'?: CfpbSelect['isExpanded'];
+  'prop:isExpanded'?: CfpbSelect['isExpanded'] | undefined;
   /**  */
-  'attr:selectedtexts'?: CfpbSelect['selectedTexts'];
+  'attr:selectedtexts'?: CfpbSelect['selectedTexts'] | undefined;
   /**  */
-  'prop:selectedTexts'?: CfpbSelect['selectedTexts'];
+  'prop:selectedTexts'?: CfpbSelect['selectedTexts'] | undefined;
   /**  */
-  'attr:optionlist'?: CfpbSelect['optionList'];
+  'attr:optionlist'?: CfpbSelect['optionList'] | undefined;
   /**  */
-  'prop:optionList'?: CfpbSelect['optionList'];
+  'prop:optionList'?: CfpbSelect['optionList'] | undefined;
   /**  */
-  'prop:options'?: CfpbSelect['options'];
+  'prop:options'?: CfpbSelect['options'] | undefined;
   /**  */
-  'on:expandbegin'?: (e: CustomEvent) => void;
+  'on:expandbegin'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbTagFilterProps = {
   /**  */
-  for?: CfpbTagFilter['for'];
+  for?: CfpbTagFilter['for'] | undefined;
   /**  */
-  value?: CfpbTagFilter['value'];
+  value?: CfpbTagFilter['value'] | undefined;
 
   /**  */
-  'onitem-click'?: (e: CustomEvent) => void;
+  'onitem-click'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbTagFilterSolidJsProps = {
   /**  */
-  'prop:for'?: CfpbTagFilter['for'];
+  'prop:for'?: CfpbTagFilter['for'] | undefined;
   /**  */
-  'prop:value'?: CfpbTagFilter['value'];
+  'prop:value'?: CfpbTagFilter['value'] | undefined;
   /**  */
-  'on:item-click'?: (e: CustomEvent) => void;
+  'on:item-click'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbTagTopicProps = {
   /**  */
-  href?: CfpbTagTopic['href'];
+  href?: CfpbTagTopic['href'] | undefined;
   /**  */
-  siblingofjumplink?: CfpbTagTopic['siblingOfJumpLink'];
+  siblingofjumplink?: CfpbTagTopic['siblingOfJumpLink'] | undefined;
   /**  */
-  siblingOfJumpLink?: CfpbTagTopic['siblingOfJumpLink'];
+  siblingOfJumpLink?: CfpbTagTopic['siblingOfJumpLink'] | undefined;
 };
 
 export type CfpbTagTopicSolidJsProps = {
   /**  */
-  'prop:href'?: CfpbTagTopic['href'];
+  'prop:href'?: CfpbTagTopic['href'] | undefined;
   /**  */
-  'bool:siblingofjumplink'?: CfpbTagTopic['siblingOfJumpLink'];
+  'bool:siblingofjumplink'?: CfpbTagTopic['siblingOfJumpLink'] | undefined;
   /**  */
-  'prop:siblingOfJumpLink'?: CfpbTagTopic['siblingOfJumpLink'];
+  'prop:siblingOfJumpLink'?: CfpbTagTopic['siblingOfJumpLink'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbTaglineProps = {
   /**  */
-  islarge?: CfpbTagline['isLarge'];
+  islarge?: CfpbTagline['isLarge'] | undefined;
   /**  */
-  isLarge?: CfpbTagline['isLarge'];
+  isLarge?: CfpbTagline['isLarge'] | undefined;
 };
 
 export type CfpbTaglineSolidJsProps = {
   /**  */
-  'bool:islarge'?: CfpbTagline['isLarge'];
+  'bool:islarge'?: CfpbTagline['isLarge'] | undefined;
   /**  */
-  'prop:isLarge'?: CfpbTagline['isLarge'];
+  'prop:isLarge'?: CfpbTagline['isLarge'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CustomElements = {

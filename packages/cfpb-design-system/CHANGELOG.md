@@ -2,7 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.10.1](https://github.com/cfpb/design-system/compare/v5.10.0..v5.10.1) - August 26, 2026
+## [5.10.2](https://github.com/cfpb/design-system/compare/v5.10.1..v5.10.2) - September  3, 2026
+
+### General
+
+- Update cfpb-tagline story to use attr name in code example (#2795)
+
+* Update cfpb-tagline story to use attr name in code example
+
+* Update CONTRIBUTING.md to fix linting problems - ([e3eacae](https://github.com/cfpb/design-system/commit/e3eacae2f53d4f28f4a81784dfb1a32abd907164)) - itsmedavep
+- Web Component testing refactor for Storybook stories and unit tests (#2796)
+
+* cfpb-alert
+
+* cfpb-button
+
+* cfpb-expandable
+
+* cfpb-tag-filter
+
+* Testing docs updates - ([95f9168](https://github.com/cfpb/design-system/commit/95f91683acf476576e3322bc5e81dd15bec29ad7)) - itsmedavep
+- Fix hover for cards that span two lines (#2794) - ([9f65675](https://github.com/cfpb/design-system/commit/9f656751b0adc9634dea2f5058997d995c9f5716)) - Ans
+
+## [5.10.1](https://github.com/cfpb/design-system/compare/v5.10.0..vv5.10.1) - August 26, 2026
 
 ### PRs in this release
 

@@ -28,14 +28,14 @@ description: Taglines are short paragraphs of text with the USA flag to their
   other apps.
 
   <div>
-  <cfpb-icon name="storybook" />
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
   <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system/web-components/?path=/docs/web-components-cfpb-tagline--overview">Web component</a></cfpb-link>
 
   </div>
 
   <div>
 
-  <cfpb-icon name="storybook" />
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
   <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system-react/?path=/docs/components-draft-alerts--overview">React</a></cfpb-link>
 
   </div>

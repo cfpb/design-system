@@ -81,7 +81,7 @@ variation_groups:
           panel](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels).
 
           <div>
-          <cfpb-icon name="storybook" />
+          <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
           <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system/web-components/?path=/docs/web-components-cfpb-tag-filter--overview">Web component</a></cfpb-link>
 
           </div>

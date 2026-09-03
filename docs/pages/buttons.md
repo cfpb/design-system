@@ -10,14 +10,14 @@ description: Buttons are interactive elements that signal actions. They should
   users to another page or further information.
 
   <div>
-  <cfpb-icon name="storybook" />
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
   <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system/web-components/?path=/docs/web-components-cfpb-button--overview">Web component</a></cfpb-link>
 
   </div>
 
   <div>
 
-  <cfpb-icon name="storybook" />
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
   <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system-react/?path=/docs/components-verified-buttons--overview">React</a></cfpb-link>
 
   </div>

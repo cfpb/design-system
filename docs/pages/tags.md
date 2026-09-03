@@ -79,6 +79,12 @@ variation_groups:
           to display categories, topics, and languages selected in a [filterable
           list control
           panel](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels).
+
+          <div>
+          <cfpb-icon name="storybook" />
+          <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system/web-components/?path=/docs/web-components-cfpb-tag-filter--overview">Web component</a></cfpb-link>
+
+          </div>
         variation_code_snippet: >-
           <ul class="m-tag-group">
             <li>

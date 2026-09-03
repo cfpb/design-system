@@ -121,6 +121,8 @@ variation_groups:
 
           | {% include icons/youtube.svg %} | {% include icons/youtube-square.svg %} | youtube | | |
 
+          | {% include icons/storybook.svg %} | | storybook | | |
+
           {: class="icon-table"}
 
 

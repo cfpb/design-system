@@ -394,14 +394,14 @@ description: Expandables are components that have additional content that can be
   vertical space by collapsing secondary information on mobile devices.
 
   <div>
-  <cfpb-icon name="storybook" />
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
   <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system/web-components/?path=/docs/web-components-cfpb-expandable--overview">Web component</a></cfpb-link>
 
   </div>
 
   <div>
 
-  <cfpb-icon name="storybook" />
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
   <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system-react/?path=/docs/components-verified-expandables--overview">React</a></cfpb-link>
 
   </div>

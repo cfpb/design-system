@@ -8,6 +8,19 @@ description: Buttons are interactive elements that signal actions. They should
   prominence of a call to action. In contrast,
   [links](https://cfpb.github.io/design-system/components/links) should lead
   users to another page or further information.
+
+  <div>
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
+  <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system/web-components/?path=/docs/web-components-cfpb-button--overview">Web component</a></cfpb-link>
+
+  </div>
+
+  <div>
+
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
+  <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system-react/?path=/docs/components-verified-buttons--overview">React</a></cfpb-link>
+
+  </div>
 variation_groups:
   - variation_group_name: Types
     variation_group_description: ''

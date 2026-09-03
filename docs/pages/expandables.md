@@ -392,6 +392,19 @@ description: Expandables are components that have additional content that can be
   opened (expanded) and closed (collapsed). They can appear on their own or in
   groups. They may be helpful for FAQ sections, schedules, and for conserving
   vertical space by collapsing secondary information on mobile devices.
+
+  <div>
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
+  <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system/web-components/?path=/docs/web-components-cfpb-expandable--overview">Web component</a></cfpb-link>
+
+  </div>
+
+  <div>
+
+  <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
+  <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system-react/?path=/docs/components-verified-expandables--overview">React</a></cfpb-link>
+
+  </div>
 use_cases: ''
 behavior: >-
   ### Collapsed

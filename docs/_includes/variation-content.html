@@ -59,6 +59,18 @@
     {% if page.description %}
     <section id="description" class="u-mb30">
         {{ page.description | markdownify }}
+        {% if page.storybooks and page.storybooks.size > 0 %}
+        <ul class="m-list m-list--links u-mt20">
+            {% for storybook in page.storybooks %}
+            <li class="m-list__item">
+                <a class="a-link a-link--jump" href="https://cfpb.github.io/{{ storybook.storybook_path }}">
+                    <cfpb-icon name="storybook" class="storybook-brand-color" />
+                    <span class="a-link__text">{{ storybook.storybook_type }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </section>
     {% endif %}
 

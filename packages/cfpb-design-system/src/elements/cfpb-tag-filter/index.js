@@ -8,16 +8,13 @@ import { errorIcon as icon } from '../../components/cfpb-icons/icons-lib';
  *
  * @element cfpb-tag-filter
  * @slot - The content for the filter tag.
+ * @property {string} for - Associate the label with an ID elsewhere.
  */
 export class CfpbTagFilter extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @property {string} for - Associate the label with an ID elsewhere.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     for: { type: String },
     value: { type: String },

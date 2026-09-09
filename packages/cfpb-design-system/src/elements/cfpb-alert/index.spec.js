@@ -1,4 +1,7 @@
+import { mount, cleanup } from '../../../../../test/plugins/element-helpers.js';
 import { CfpbAlert } from './index.js';
+
+CfpbAlert.init();
 
 // The icon each status renders, per the component's icon getter
 const statusIcons = {
@@ -9,25 +12,17 @@ const statusIcons = {
   loading: 'update',
 };
 
-describe('<cfpb-alert', () => {
+describe('<cfpb-alert>', () => {
   let elm;
 
   beforeEach(async () => {
-    CfpbAlert.init();
-    elm = document.createElement('cfpb-alert');
-    elm.setAttribute('status', 'info');
-    elm.setAttribute('message', 'Information alert');
-    elm.innerHTML =
-      '<span>You can also add an explanation to the alert.</span>';
-    document.body.appendChild(elm);
-
-    await customElements.whenDefined('cfpb-alert');
-    await elm.updateComplete;
+    elm = await mount('cfpb-alert', {
+      attributes: { status: 'info', message: 'Information alert' },
+      html: '<span>You can also add an explanation to the alert.</span>',
+    });
   });
 
-  afterEach(() => {
-    document.body.removeChild(elm);
-  });
+  afterEach(cleanup);
 
   it('renders the message', () => {
     const message = elm.shadowRoot.querySelector('.message');

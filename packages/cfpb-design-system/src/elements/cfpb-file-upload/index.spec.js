@@ -1,20 +1,16 @@
+import { mount, cleanup } from '../../../../../test/plugins/element-helpers.js';
 import { CfpbFileUpload } from './index.js';
+
+CfpbFileUpload.init();
 
 describe('<cfpb-file-upload>', () => {
   let elm;
 
   beforeEach(async () => {
-    CfpbFileUpload.init();
-    elm = document.createElement('cfpb-file-upload');
-    document.body.appendChild(elm);
-
-    await customElements.whenDefined('cfpb-file-upload');
-    await elm.updateComplete;
+    elm = await mount('cfpb-file-upload');
   });
 
-  afterEach(() => {
-    document.body.removeChild(elm);
-  });
+  afterEach(cleanup);
 
   it('renders with hidden details initially', () => {
     const details = elm.shadowRoot.querySelector('[part="upload-details"]');

@@ -3,14 +3,9 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
 import type { CfpbButtonProps } from '../../../../../storybook/custom-elements-types';
 import { CfpbButton } from './index.js';
+import { iconControl } from '../../../../../.storybook/plugins/story-helpers';
 
 CfpbButton.init();
-
-// Build the icon name list from the SVG filenames
-// TODO: Pull this out into a helper function
-const iconNames = Object.keys(
-  import.meta.glob('../../components/cfpb-icons/icons/*.svg'),
-).map((p) => p.split('/').pop()!.replace('.svg', ''));
 
 /**
  * `properties` is excluded because wc-toolkit emits a control for both a prop
@@ -41,14 +36,8 @@ const meta: Meta<ButtonStoryArgs> = {
       control: 'select',
       options: ['primary', 'secondary', 'warning'],
     },
-    'icon-left': {
-      control: 'select',
-      options: ['', ...iconNames],
-    },
-    'icon-right': {
-      control: 'select',
-      options: ['', ...iconNames],
-    },
+    'icon-left': iconControl(),
+    'icon-right': iconControl(),
   },
   render: (args) => template(args),
 };

@@ -7,6 +7,8 @@ import { CfpbList } from '../cfpb-list';
 /**
  * @element cfpb-alert
  * @slot - The main content for the tagline.
+ * @property {string} status - The alert status: error, success, warning, info, loading.
+ * @property {string} message - The message heading on an alert.
  */
 export class CfpbAlert extends LitElement {
   static styles = css`
@@ -14,8 +16,6 @@ export class CfpbAlert extends LitElement {
   `;
 
   /**
-   * @property {string} status - The alert status: error, success, warning, info, loading.
-   * @property {string} message - The message heading on an alert.
    * @returns {object} The map of properties.
    */
   static properties = {

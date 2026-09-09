@@ -6,16 +6,13 @@ import styles from './styles.component.scss?inline';
 /**
  * @element cfpb-tagline
  * @slot - The main content for the tagline.
+ * @property {boolean} isLarge - Whether to use the larger tagline appearance.
  */
 export class CfpbTagline extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @property {boolean} isLarge - Whether to use the larger tagline appearance.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     isLarge: { type: Boolean, reflect: true },
   };

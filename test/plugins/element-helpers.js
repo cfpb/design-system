@@ -50,7 +50,7 @@ export async function mount(
   mounted.add(elm);
 
   await customElements.whenDefined(tag);
-  if (elm.updatedComplete) await elm.updateComplete;
+  while (elm.updateComplete && !(await elm.updateComplete));
 
   return elm;
 }

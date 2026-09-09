@@ -33,7 +33,7 @@
     "release": "./scripts/release.sh",
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
-    "serve-decap": "npx decap-server",
+    "serve-decap": "npx decap-server@3.11.0",
     "start": "yarn build-storybook --output-dir docs/_site/design-system/web-components && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build-docs-watch\"",
     "test": "vitest run",
     "typecheck": "yarn analyze && tsc --noEmit",

@@ -8,10 +8,11 @@
         {% assign storybook_path = storybook.storybook_path %}
     {% endif %}
     <li class="m-list__item">
-        <a class="a-link a-link--jump" href="https://cfpb.github.io/{{ storybook_path }}">
-            <cfpb-icon name="storybook" class="storybook-brand-color" />
-            <span class="a-link__text">{{ storybook_type }}</span>
-        </a>
+        <cfpb-icon-text icon-left="storybook" class="storybook-brand-color">
+            <cfpb-link>
+                <a href="https://cfpb.github.io/{{ storybook_path }}">{{ storybook_type }}</a>
+            </cfpb-link>
+        </cfpb-icon-text>
     </li>
     {% endfor %}
 </ul>

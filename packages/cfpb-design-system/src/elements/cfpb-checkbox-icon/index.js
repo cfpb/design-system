@@ -8,6 +8,10 @@ const VALID_VALIDATION = ['error', 'warning', 'success'];
 
 /**
  * @element cfpb-checkbox-icon
+ * @property {boolean} borderless - Whether the checkbox has a border or not.
+ * @property {boolean} checked - Whether the checkbox is checked or not.
+ * @property {boolean} disabled - Whether the checkbox is disabled or not.
+ * @property {string} validation - Validation style: error, warning, success.
  */
 export class CfpbCheckboxIcon extends LitElement {
   static styles = css`
@@ -17,13 +21,6 @@ export class CfpbCheckboxIcon extends LitElement {
   #hover;
   #focus;
 
-  /**
-   * @property {boolean} borderless - Whether the checkbox has a border or not.
-   * @property {boolean} checked - Whether the checkbox is checked or not.
-   * @property {boolean} disabled - Whether the checkbox is disabled or not.
-   * @property {string} validation - Validation style: error, warning, success.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     borderless: { type: Boolean, reflect: true },
     checked: { type: Boolean, reflect: true },

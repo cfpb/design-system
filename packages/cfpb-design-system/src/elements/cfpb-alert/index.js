@@ -15,9 +15,6 @@ export class CfpbAlert extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @returns {object} The map of properties.
-   */
   static properties = {
     status: { type: String },
     message: { type: String },

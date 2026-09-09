@@ -7,6 +7,10 @@ import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
 /**
  * @element cfpb-listbox-item.
  * @slot - The text for the list item.
+ * @property {string} type - Choice type: plain, check, checkbox.
+ * @property {boolean} checked - Whether the list item is checked or not.
+ * @property {boolean} disabled - Whether the list item is selectable or not.
+ * @property {boolean} hidden - Whether the list item is hidden or not.
  */
 export class CfpbListboxItem extends LitElement {
   static styles = css`
@@ -17,13 +21,6 @@ export class CfpbListboxItem extends LitElement {
   #value;
   #inList = false;
 
-  /**
-   * @property {string} type - Choice type: plain, check, checkbox.
-   * @property {boolean} checked - Whether the list item is checked or not.
-   * @property {boolean} disabled - Whether the list item is selectable or not.
-   * @property {boolean} hidden - Whether the list item is hidden or not.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     type: { type: String, reflect: true },
     checked: { type: Boolean, reflect: true },

@@ -21,8 +21,8 @@ const VALID_TYPES = ['button', 'submit', 'reset'];
  * @property {string} variant - The button variant: primary, secondary, or warning.
  * @property {string} iconLeft - The name of the icon on the left.
  * @property {string} iconRight - The name of the icon on the right.
- * @property {string} isIconLeftSpin - Whether the left icon spins or not.
- * @property {string} isIconRightSpin - Whether the right icon spins or not.
+ * @property {boolean} isIconLeftSpin - Whether the left icon spins or not.
+ * @property {boolean} isIconRightSpin - Whether the right icon spins or not.
  * @property {boolean} fullOnMobile - Whether to be width 100% on mobile.
  * @property {boolean} flushLeft - Whether button is not rounded on left.
  * @property {boolean} flushRight - Whether button is not rounded on right.

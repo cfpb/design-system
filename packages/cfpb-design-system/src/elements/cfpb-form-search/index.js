@@ -10,6 +10,15 @@ import { CfpbFormAlert } from '../cfpb-form-alert';
 /**
  * @element cfpb-form-search
  * @slot - Slot for list of autocomplete items.
+ * @property {boolean} disabled - Whether the choice is disabled or not.
+ * @property {string} validation - Validation style: error, warning, success.
+ * @property {string} label - The aria-label for the input.
+ * @property {string} name - The name within a form.
+ * @property {string} value - The value within the input.
+ * @property {string} placeholder - The placeholder value.
+ * @property {string} maxlength - The maximum characters allowed in the input.
+ * @property {string} ariaLabelInput - aria-label for input.
+ * @property {string} ariaLabelButton - aria-label for button.
  */
 export class CfpbFormSearch extends LitElement {
   static styles = css`
@@ -18,18 +27,6 @@ export class CfpbFormSearch extends LitElement {
 
   static formAssociated = true;
 
-  /**
-   * @property {boolean} disabled - Whether the choice is disabled or not.
-   * @property {string} validation - Validation style: error, warning, success.
-   * @property {string} label - The aria-label for the input.
-   * @property {string} name - The name within a form.
-   * @property {string} value - The value within the input.
-   * @property {string} placeholder - The placeholder value.
-   * @property {string} maxlength - The maximum characters allowed in the input.
-   * @property {string} ariaLabelInput - aria-label for input.
-   * @property {string} ariaLabelButton - aria-label for button.
-   * @returns {object} The map of properties.
-   */
   static get properties() {
     return {
       disabled: { type: Boolean },

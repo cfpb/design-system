@@ -1,0 +1,17 @@
+<ul class="m-list m-list--links u-mt20">
+    {% for storybook in include.storybooks %}
+    {% if include.scope == "variation" %}
+        {% assign storybook_type = storybook.variation_storybook_type %}
+        {% assign storybook_path = storybook.variation_storybook_path %}   
+    {% else %}
+        {% assign storybook_type = storybook.storybook_type %}
+        {% assign storybook_path = storybook.storybook_path %}
+    {% endif %}
+    <li class="m-list__item">
+        <a class="a-link a-link--jump" href="https://cfpb.github.io/{{ storybook_path }}">
+            <cfpb-icon name="storybook" class="storybook-brand-color" />
+            <span class="a-link__text">{{ storybook_type }}</span>
+        </a>
+    </li>
+    {% endfor %}
+</ul>

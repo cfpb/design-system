@@ -79,12 +79,9 @@ variation_groups:
           to display categories, topics, and languages selected in a [filterable
           list control
           panel](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels).
-
-          <div>
-          <span class="storybook-brand-color"><cfpb-icon name="storybook" /></span>
-          <cfpb-link link-variant="external"><a href="https://cfpb.github.io/design-system/web-components/?path=/docs/web-components-cfpb-tag-filter--overview">Web component</a></cfpb-link>
-
-          </div>
+        variation_storybooks:
+          - variation_storybook_type: Web component
+            variation_storybook_path: design-system/web-components/?path=/docs/web-components-cfpb-tag-filter--overview
         variation_code_snippet: >-
           <ul class="m-tag-group">
             <li>

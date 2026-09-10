@@ -162,6 +162,23 @@ collections:
         hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
         widget: 'markdown'
         minimal: true
+      - name: 'storybooks'
+        label: 'Storybook stories'
+        widget: 'list'
+        required: false
+        fields:
+          - name: 'storybook_type'
+            label: 'Storybook type'
+            widget: 'select'
+            options:
+              - label: 'Web component'
+                value: 'Web component'
+              - label: 'React component'
+                value: 'React'
+          - name: 'storybook_path'
+            label: 'Path to Storybook story'
+            hint: 'Everything after https://cfpb.github.io/ in the URL for the story page'
+            widget: 'string-trimmed'
       - name: 'variation_groups'
         label: 'Variation groups'
         widget: 'list'
@@ -195,6 +212,23 @@ collections:
                 widget: 'markdown'
                 required: false
                 minimal: true
+              - name: 'variation_storybooks'
+                label: 'Storybook stories for the variation'
+                widget: 'list'
+                required: false
+                fields:
+                  - name: 'variation_storybook_type'
+                    label: 'Storybook type'
+                    widget: 'select'
+                    options:
+                      - label: 'Web component'
+                        value: 'Web component'
+                      - label: 'React component'
+                        value: 'React'
+                  - name: 'variation_storybook_path'
+                    label: 'Path to Storybook story'
+                    hint: 'Everything after https://cfpb.github.io/ in the URL for the story page'
+                    widget: 'string-trimmed'
               - name: 'variation_code_snippet'
                 label: 'Variation code snippet'
                 widget: 'text'

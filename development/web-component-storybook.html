@@ -304,6 +304,7 @@ storybook/custom-elements.json &lt;- the custom element manifest (source of trut
                   *.stories.ts
 </code></pre></div></div>
 
+        
     </section>
     
 
@@ -376,6 +377,7 @@ storybook/custom-elements.json &lt;- the custom element manifest (source of trut
 <p>Run it manually any time with:
 <code class="language-plaintext highlighter-rouge">yarn analyze</code></p>
 
+                
             </div>
             
 
@@ -436,6 +438,7 @@ export type CfpbButtonProps = {
 
 <p><code class="language-plaintext highlighter-rouge">setStorybookHlpersConfig({ hideArgsRef: true })</code> in <code class="language-plaintext highlighter-rouge">preview.js</code> suppresses the “ref” column the helper would otherwise add to the args table in the UI.</p>
 
+                
             </div>
             
 
@@ -552,6 +555,7 @@ export type CfpbButtonProps = {
 
 <p>The net effect of this currently is that the Storybook Controls/Docs tables do not show attribute descriptions for any component. Do not expect <code class="language-plaintext highlighter-rouge">@property {type} name - description</code> to do anything visible in Storybook for now. We can open a spike in the future to investigate the correct comment formatting for populating the CEM. I did not want to rewrite all the Web Components comments for this right now. I opted to keep it for in editor documentation, but just be aware of the implication for Storybook.</p>
 
+                
             </div>
             
 
@@ -600,6 +604,7 @@ export type CfpbButtonProps = {
 
 <p>This isn’t stylistic. Prior to fixing this, <code class="language-plaintext highlighter-rouge">cfpb-button.stories.ts</code> used camelCase keys here (<code class="language-plaintext highlighter-rouge">iconLeft, iconRight</code>) which silently failed to attach the icon-select controls to the real args since <code class="language-plaintext highlighter-rouge">getStorybookHelpers</code> generates attribute-cased keys.</p>
 
+                
             </div>
             
 
@@ -659,6 +664,7 @@ export type CfpbButtonProps = {
 <code class="language-plaintext highlighter-rouge">cfpb-tagline.stories.ts</code> - the minimal case. Single boolean property (<code class="language-plaintext highlighter-rouge">isLarge</code>, no explicit <code class="language-plaintext highlighter-rouge">attribute:</code> override so it defaults to the camelCase name), no play functions. Good starting template for the simplest components.</li>
 </ul>
 
+                
             </div>
             
 
@@ -708,6 +714,7 @@ export type CfpbButtonProps = {
   <li>Run <code class="language-plaintext highlighter-rouge">yarn storybook</code> (regenerates the manifest via <code class="language-plaintext highlighter-rouge">yarn analyze</code> first) and confirm that new story renders and the controls bind correctly.</li>
 </ul>
 
+                
             </div>
             
 
@@ -743,6 +750,7 @@ export type CfpbButtonProps = {
             <div class="m-variation__description">
                 <p>Auto-generated CEM and <code class="language-plaintext highlighter-rouge">storybook/custom-elements-types.d.ts</code> get linted as part of <code class="language-plaintext highlighter-rouge">yarn analyze</code> and linting for TS files was added to the project.</p>
 
+                
             </div>
             
 
@@ -930,6 +938,7 @@ yarn playwright open <span class="c"># run it in Playwright's UI mode</span>
 
 <p>Keep this suite small. A journey you could prove at the component level belongs in <code class="language-plaintext highlighter-rouge">index.spec.js</code>, where it runs faster and fails more legibly.</p>
 
+                
             </div>
             
 
@@ -975,6 +984,7 @@ yarn playwright open <span class="c"># run it in Playwright's UI mode</span>
 
 <p>Set as <code class="language-plaintext highlighter-rouge">'todo</code> means that axe core accessibility checks run against every story automatically and violations surface in the Storybook a11y panel/Vitest addon UI, but <em>DO NOT FAIL</em> <code class="language-plaintext highlighter-rouge">yarn test</code> or CI. Bumping this to <code class="language-plaintext highlighter-rouge">'error'</code> repo-wide would turn any existing violations across all stories into a build failure if we want that in the future. Importantly, new components get a11y checking for free just by having a story! No extra config per component needed.</p>
 
+                
             </div>
             
 
@@ -1027,8 +1037,8 @@ yarn playwright open <span class="c"># run it in Playwright's UI mode</span>
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/web-component-storybook.md">
-                            <time datetime="2026-09-10 10:04:18 -0400">
-                                10:04:18 AM Sep 10, 2026
+                            <time datetime="2026-09-10 11:34:33 -0400">
+                                11:34:33 AM Sep 10, 2026
                             </time>
                         </a>
                     </section>

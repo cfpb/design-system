@@ -47,6 +47,12 @@ export default {
       css: {
         transformer: 'lightningcss',
       },
+      // Vitest turns off Vite's dep discovery so any Lit entry point missing from the
+      // pre-bundle is served from node_modules and loads a second lit-html. AKA
+      // "Multipe versions of Lit loaded".
+      optimizeDeps: {
+        include: ['lit/directive-helpers.js', 'lit/directives/if-defined.js'],
+      },
       resolve: {
         alias: {
           '@cfpb/cfpb-design-system': path.resolve(

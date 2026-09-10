@@ -8,6 +8,11 @@ description: Alerts draw a user's attention to a change in the status of a form
   the form title. Field-level alerts appear inline with input fields and can
   highlight successful submissions, errors that need to be corrected, or details
   to know before submitting a form.
+storybooks:
+  - storybook_type: Web component
+    storybook_path: design-system/web-components/?path=/docs/web-components-cfpb-alert--overview
+  - storybook_type: React
+    storybook_path: design-system-react/?path=/docs/components-draft-alerts--overview
 variation_groups:
   - variation_group_name: Form-level alerts
     variations:

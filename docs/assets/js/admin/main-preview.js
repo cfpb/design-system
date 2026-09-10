@@ -2,6 +2,7 @@
 
 import {
   CfpbButton,
+  CfpbLink,
   Expandable,
   ExpandableGroup,
   Summary,
@@ -9,6 +10,8 @@ import {
   Multiselect,
 } from '@cfpb/cfpb-design-system';
 
+CfpbButton.init();
+CfpbLink.init();
 CfpbButton.init();
 Summary.init();
 SummaryMinimal.init();

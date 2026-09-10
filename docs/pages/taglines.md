@@ -26,6 +26,11 @@ title: Taglines
 description: Taglines are short paragraphs of text with the USA flag to their
   left that are used in the header and footer across consumerfinance.gov and
   other apps.
+storybooks:
+  - storybook_type: Web component
+    storybook_path: design-system/web-components/?path=/docs/web-components-cfpb-tagline--overview
+  - storybook_type: React
+    storybook_path: design-system-react/?path=/docs/components-verified-taglines--overview
 use_cases: ''
 behavior: ''
 accessibility: ''

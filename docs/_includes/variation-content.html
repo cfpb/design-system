@@ -60,7 +60,22 @@
     <section id="description" class="u-mb30">
         {{ page.description | markdownify }}
         {% if page.storybooks and page.storybooks.size > 0 %}
-            {% include storybook-links.html storybooks=page.storybooks scope="component" %}
+            {% comment %}
+                TODO: Storybook links could be moved to an include if we get rid of Decap.
+                Rendering them as an include was breaking Decap previews, so we're putting
+                them directly into this template for now.
+            {% endcomment %}
+            <ul class="m-list m-list--links u-mt20">
+                {% for storybook in page.storybooks %}
+                <li class="m-list__item">
+                    <cfpb-icon-text icon-left="storybook" class="storybook-brand-color">
+                        <cfpb-link>
+                            <a href="https://cfpb.github.io/{{ storybook.storybook_path }}">{{ storybook.storybook_type }}</a>
+                        </cfpb-link>
+                    </cfpb-icon-text>
+                </li>
+                {% endfor %}
+            </ul>
         {% endif %}
     </section>
     {% endif %}
@@ -131,7 +146,22 @@
             <div class="m-variation__description">
                 {{ variation_description }}
                 {% if variation.variation_storybooks and variation.variation_storybooks.size > 0 %}
-                    {% include storybook-links.html storybooks=variation.variation_storybooks scope="variation" %}
+                    {% comment %}
+                        TODO: Storybook links could be moved to an include if we get rid of Decap.
+                        Rendering them as an include was breaking Decap previews, so we're putting
+                        them directly into this template for now.
+                    {% endcomment %}
+                    <ul class="m-list m-list--links m-list--horizontal u-mt20">
+                        {% for storybook in variation.variation_storybooks %}
+                        <li class="m-list__item">
+                            <cfpb-icon-text icon-left="storybook" class="storybook-brand-color">
+                                <cfpb-link>
+                                    <a href="https://cfpb.github.io/{{ storybook.variation_storybook_path }}">{{ storybook.variation_storybook_type }}</a>
+                                </cfpb-link>
+                            </cfpb-icon-text>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 {% endif %}
             </div>
             {% endif %}

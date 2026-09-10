@@ -14,6 +14,13 @@ const VALID_TYPES = ['checkbox', 'radio'];
 /**
  * @element cfpb-form-choice
  * @slot - The label for the form input.
+ * @property {boolean} checked - Whether the choice is checked or not.
+ * @property {boolean} disabled - Whether the choice is disabled or not.
+ * @property {boolean} large - Whether the choice has a large target area.
+ * @property {string} validation - Validation style: error, warning, success.
+ * @property {string} type - Choice type: checkbox or radio.
+ * @property {string} name - The name within a form.
+ * @property {string} value - The value to submit within a form.
  */
 export class CfpbFormChoice extends LitElement {
   static styles = css`
@@ -22,16 +29,6 @@ export class CfpbFormChoice extends LitElement {
 
   #checkboxIcon = createRef();
 
-  /**
-   * @property {boolean} checked - Whether the choice is checked or not.
-   * @property {boolean} disabled - Whether the choice is disabled or not.
-   * @property {boolean} large - Whether the choice has a large target area.
-   * @property {string} validation - Validation style: error, warning, success.
-   * @property {string} type - Choice type: checkbox or radio.
-   * @property {string} name - The name within a form.
-   * @property {string} value - The value to submit within a form.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     checked: { type: Boolean, reflect: true },
     disabled: { type: Boolean },

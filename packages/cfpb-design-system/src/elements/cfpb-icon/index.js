@@ -4,16 +4,13 @@ import styles from './styles.component.css?inline';
 
 /**
  * @element cfpb-icon
+ * @property {boolean} name - The name of the icon.
  */
 export class CfpbIcon extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @property {boolean} name - The name of the icon.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     name: { type: String },
     spin: { type: Boolean, attribute: true },

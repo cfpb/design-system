@@ -17,6 +17,9 @@ import { MultipleSelectEventProxy } from './multiple-select-event-proxy.js';
  *
  * @element cfpb-select
  * @slot - The main content for the select.
+ * @property {boolean} multiple - Whether the select supports multiple or not.
+ * @property {boolean} isExpanded - Whether the select is expanded or not.
+ * @property {Array} selectedTexts - Text of selected options.
  */
 export class CfpbSelect extends LitElement {
   static styles = css`
@@ -37,12 +40,6 @@ export class CfpbSelect extends LitElement {
   #boundOnOutsideFocus;
   #noResults = false;
 
-  /**
-   * @property {boolean} multiple - Whether the select supports multiple or not.
-   * @property {boolean} isExpanded - Whether the select is expanded or not.
-   * @property {Array} selectedTexts - Text of selected options.
-   * @returns {object} The map of properties.
-   */
   static get properties() {
     return {
       multiple: { type: Boolean, reflect: true },

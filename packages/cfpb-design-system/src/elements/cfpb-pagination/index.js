@@ -8,6 +8,8 @@ import { I18nService, MediaQueryService } from '../utilities/';
  *
  * @element cfpb-pagination
  * @slot - Slot for passing in i18n (internationalization) service strings via a <template>.
+ * @property {number} currentPage - The currently selected page.
+ * @property {number} maxPage - The maximum page count.
  */
 export class CfpbPagination extends LitElement {
   #mediaService;
@@ -18,11 +20,6 @@ export class CfpbPagination extends LitElement {
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @property {number} currentPage - The currently selected page.
-   * @property {number} maxPage - The maximum page count.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     currentPage: { type: Number, attribute: 'value', reflect: true },
     maxPage: { type: Number, attribute: 'max', reflect: true },

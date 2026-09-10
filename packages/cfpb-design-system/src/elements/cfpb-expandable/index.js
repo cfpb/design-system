@@ -14,6 +14,7 @@ import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
  * @fires expandend - The expandable finshed expanding.
  * @fires collapsebegin - The expandables started collapsing.
  * @fires collapseend - The expandables finished collapsing.
+ * @property {boolean} isExpanded - Whether the expandable is expanded or not.
  */
 export class CfpbExpandable extends LitElement {
   static styles = css`
@@ -23,10 +24,6 @@ export class CfpbExpandable extends LitElement {
   #flyoutMenu;
   #transition;
 
-  /**
-   * @property {boolean} isExpanded - Whether the expandable is expanded or not.
-   * @returns {object} The map of properties.
-   */
   static get properties() {
     return {
       isExpanded: { type: Boolean, attribute: 'open', reflect: true },

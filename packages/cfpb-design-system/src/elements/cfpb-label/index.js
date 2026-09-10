@@ -8,17 +8,14 @@ import { ifDefined } from 'lit/directives/if-defined.js';
  * @element cfpb-label.
  * @slot label - The content for the label text.
  * @slot helper - The content for the label helper text.
+ * @property {boolean} block - Whether this has block or inline helper text.
+ * @property {string} for - Associate the label with an ID elsewhere.
  */
 export class CfpbLabel extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @property {boolean} block - Whether this has block or inline helper text.
-   * @property {string} for - Associate the label with an ID elsewhere.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     block: { type: Boolean, reflect: true },
     for: { type: String },

@@ -6,16 +6,13 @@ import { CfpbIcon } from '../cfpb-icon';
 /**
  * @element cfpb-form-alert
  * @slot - The text for the form alert.
+ * @property {string} validation - Validation style: error, warning, success.
  */
 export class CfpbFormAlert extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @property {string} validation - Validation style: error, warning, success.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     validation: { type: String },
   };

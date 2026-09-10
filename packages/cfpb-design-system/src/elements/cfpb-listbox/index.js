@@ -8,6 +8,10 @@ import { parseChildData } from '../utilities/parse-child-data';
 /**
  * @element cfpb-listbox.
  * @slot - Slot for the list of items in the list box.
+ * @property {Array} childData - Structure data to create child components.
+ * @property {boolean} multiple - Whether the select supports multiple or not.
+ * @property {string} type - List item type: plain, check, or checkbox.
+ * @property {string} ariaLabel - The aria-label for the list container.
  */
 export class CfpbListbox extends LitElement {
   static styles = css`
@@ -26,13 +30,6 @@ export class CfpbListbox extends LitElement {
   // WeakMap to store per-item click listeners.
   #clickListeners = new WeakMap();
 
-  /**
-   * @property {Array} childData - Structure data to create child components.
-   * @property {boolean} multiple - Whether the select supports multiple or not.
-   * @property {string} type - List item type: plain, check, or checkbox.
-   * @property {string} ariaLabel - The aria-label for the list container.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     childData: { type: Array, attribute: 'childdata' },
     multiple: { type: Boolean, reflect: true },

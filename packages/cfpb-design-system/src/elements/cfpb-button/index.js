@@ -15,28 +15,24 @@ const VALID_TYPES = ['button', 'submit', 'reset'];
  *
  * @element cfpb-button
  * @slot - The main content for the button.
+ * @property {string} type - The button type: button, submit, or reset.
+ * @property {string} href - The URL to link to (makes the button a link).
+ * @property {boolean} disabled - Whether the button is disabled or not.
+ * @property {string} variant - The button variant: primary, secondary, or warning.
+ * @property {string} iconLeft - The name of the icon on the left.
+ * @property {string} iconRight - The name of the icon on the right.
+ * @property {boolean} isIconLeftSpin - Whether the left icon spins or not.
+ * @property {boolean} isIconRightSpin - Whether the right icon spins or not.
+ * @property {boolean} fullOnMobile - Whether to be width 100% on mobile.
+ * @property {boolean} flushLeft - Whether button is not rounded on left.
+ * @property {boolean} flushRight - Whether button is not rounded on right.
+ * @property {boolean} styleAsLink - Style the button as a link.
  */
 export class CfpbButton extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @property {string} type - The button type: button, submit, or reset.
-   * @property {string} href - The URL to link to (makes the button a link).
-   * @property {boolean} disabled - Whether the button is disabled or not.
-   * @property {string} variant
-   *   The button variant: primary, secondary, or warning.
-   * @property {string} iconLeft - The name of the icon on the left.
-   * @property {string} iconRight - The name of the icon on the right.
-   * @property {string} isIconLeftSpin - Whether the left icon spins or not.
-   * @property {string} isIconRightSpin - Whether the right icon spins or not.
-   * @property {boolean} fullOnMobile - Whether to be width 100% on mobile.
-   * @property {boolean} flushLeft - Whether button is not rounded on left.
-   * @property {boolean} flushRight - Whether button is not rounded on right.
-   * @property {boolean} styleAsLink - Style the button as a link.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     type: { type: String },
     href: { type: String },

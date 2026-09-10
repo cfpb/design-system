@@ -6,25 +6,22 @@ import { CfpbIcon } from '../cfpb-icon';
 
 /**
  * @element cfpb-form-search-input
+ * @property {boolean} disabled - Whether the input is disabled or not.
+ * @property {string} validation - Validation style: error, warning, success.
+ * @property {string} label - The aria-label for the input.
+ * @property {string} name - The name within a form.
+ * @property {string} value - The value within the input.
+ * @property {number} maxlength - The maximum characters allowed in the input.
+ * @property {string} placeholder - The placeholder value.
+ * @property {string} ariaLabelInput - aria-label for input.
+ * @property {string} ariaLabelButton - aria-label for button.
+ * @property {boolean} borderless - Whether the input has a border or not.
  */
 export class CfpbFormSearchInput extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @property {boolean} disabled - Whether the input is disabled or not.
-   * @property {string} validation - Validation style: error, warning, success.
-   * @property {string} label - The aria-label for the input.
-   * @property {string} name - The name within a form.
-   * @property {string} value - The value within the input.
-   * @property {number} maxlength - The maximum characters allowed in the input.
-   * @property {string} placeholder - The placeholder value.
-   * @property {string} ariaLabelInput - aria-label for input.
-   * @property {string} ariaLabelButton - aria-label for button.
-   * @property {boolean} borderless - Whether the input has a border or not.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     disabled: { type: Boolean, reflect: true },
     validation: { type: String, reflect: true },

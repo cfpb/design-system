@@ -22,6 +22,8 @@ const SUPPORTED_TAG_LIST = new Set([
  * @fires item-added - An item was added to the group.
  * @fires item-click - An item was clicked.
  * @fires item-removed - An item was removed to the group.
+ * @property {string} childData - Structure data to create child components.
+ * @property {string} colorTheme - The color theme of the link. Takes 'dark'.
  */
 export class CfpbList extends LitElement {
   static styles = css`
@@ -30,11 +32,6 @@ export class CfpbList extends LitElement {
 
   #items = [];
 
-  /**
-   * @property {string} childData - Structure data to create child components.
-   * @property {string} colorTheme - The color theme of the link. Takes 'dark'.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     childData: { type: String, attribute: 'childdata' },
     colorTheme: { type: String, reflect: true, attribute: 'color-theme' },

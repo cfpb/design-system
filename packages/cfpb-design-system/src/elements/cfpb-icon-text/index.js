@@ -8,24 +8,21 @@ import { CfpbIcon } from '../cfpb-icon';
  * which may or may not have a divider.
  * @element cfpb-icon-text
  * @slot - The main content for the text and icon.
+ * @property {boolean} disabled - Apply disabled styles or not.
+ * @property {string} iconLeft - The name of the icon on the left.
+ * @property {string} iconRight - The name of the icon on the right.
+ * @property {string} isIconLeftSpin - Whether the left icon spins or not.
+ * @property {string} isIconRightSpin - Whether the right icon spins or not.
+ * @property {boolean} hasDiv - If true, render a divider.
+ * @property {boolean} underline -
+ *   "all" for all screen sizes, "tablet-up", for tablet and above, "none", for only on hover on tablet and above.
+ * @property {boolean} mobileUnderline - If true render an underline at mobile.
  */
 export class CfpbIconText extends LitElement {
   static styles = css`
     ${unsafeCSS(styles)}
   `;
 
-  /**
-   * @property {boolean} disabled - Apply disabled styles or not.
-   * @property {string} iconLeft - The name of the icon on the left.
-   * @property {string} iconRight - The name of the icon on the right.
-   * @property {string} isIconLeftSpin - Whether the left icon spins or not.
-   * @property {string} isIconRightSpin - Whether the right icon spins or not.
-   * @property {boolean} hasDiv - If true, render a divider.
-   * @property {boolean} underline -
-   *   "all" for all screen sizes, "tablet-up", for tablet and above, "none", for only on hover on tablet and above.
-   * @property {boolean} mobileUnderline - If true render an underline at mobile.
-   * @returns {object} The map of properties.
-   */
   static properties = {
     disabled: { type: Boolean, reflect: true },
     iconLeft: { type: String, attribute: 'icon-left' },

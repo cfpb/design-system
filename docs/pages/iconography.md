@@ -6,6 +6,26 @@ variation_groups:
     variations:
       - variation_code_snippet: ''
         variation_description: >-
+
+          <div class="content-75 content-first" markdown="1">
+
+
+            <h2 class="h3">Download web icons</h2>
+
+
+            The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
+
+
+            <a class="a-link"
+              href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons">
+                <span class="a-link__text">View on GitHub</span>
+                {% include icons/download.svg %}
+            </a>
+
+
+            </div>
+
+
           Use the canonical icon name when referencing the icons in code,
           however, "aliases" are provided in the table below to help you search
           this page for a particular icon.
@@ -634,25 +654,11 @@ description: >-
   They are visually simple, quickly recognizable, and easy to understand. They
   are almost always used in context with descriptive text and function to
   reinforce the message of that text.
-
-
-  <div class="content-50 content-first" markdown="1">
-
-
-  <h2 class="h3">Download web icons</h2>
-
-
-  The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
-
-
-  <a class="a-link"
-     href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons">
-      <span class="a-link__text">View on GitHub</span>
-      {% include icons/download.svg %}
-  </a>
-
-
-  </div>
+storybooks:
+  - storybook_type: Web component
+    storybook_path: design-system/web-components/?path=/docs/web-components-cfpb-icon--overview
+  - storybook_type: React
+    storybook_path: design-system-react/?path=/docs/components-draft-icons--overview
 use_cases: ''
 behavior: >-
   ### SVG icon basics

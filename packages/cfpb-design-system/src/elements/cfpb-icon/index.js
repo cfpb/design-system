@@ -4,7 +4,8 @@ import styles from './styles.component.css?inline';
 
 /**
  * @element cfpb-icon
- * @property {boolean} name - The name of the icon.
+ * @property {string} name - The name of the icon, based off the SVG filename.
+ * @property {boolean} spin - Whether the icon spins, for loading and in progress states.
  */
 export class CfpbIcon extends LitElement {
   static styles = css`

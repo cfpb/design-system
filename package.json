@@ -137,8 +137,7 @@
     "qs": ">=6.14.2",
     "uuid": ">=13.0.1",
     "shell-quote": ">=1.10.0",
-    "tmp": ">=0.2.7",
-    "immutable": ">=4.3.9"
+    "tmp": ">=0.2.7"
   },
   "type": "module",
   "packageManager": "yarn@4.18.0",

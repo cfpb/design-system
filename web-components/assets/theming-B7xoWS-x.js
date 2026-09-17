@@ -1,0 +1,1 @@
+import{n as e}from"./chunk-GLOGC42D-CNH1R6ia.js";import"./react-Q1GcV6wX.js";import{Mt as t}from"./DocsRenderer-JROSPFPF-ClbMdDbf.js";t();export{e as color};

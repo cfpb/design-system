@@ -25,10 +25,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -78,8 +75,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-alert",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-alert/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -162,10 +158,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -410,8 +403,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-button",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-button/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -466,31 +458,19 @@
             },
             {
               "kind": "method",
-              "name": "mouseover",
-              "type": {
-                "text": "mouseover() => void"
-              }
+              "name": "mouseover"
             },
             {
               "kind": "method",
-              "name": "mouseleave",
-              "type": {
-                "text": "mouseleave() => void"
-              }
+              "name": "mouseleave"
             },
             {
               "kind": "method",
-              "name": "focus",
-              "type": {
-                "text": "focus() => void"
-              }
+              "name": "focus"
             },
             {
               "kind": "method",
-              "name": "blur",
-              "type": {
-                "text": "blur() => void"
-              }
+              "name": "blur"
             },
             {
               "kind": "method",
@@ -500,10 +480,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -597,8 +574,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-checkbox-icon",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-checkbox-icon/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -644,10 +620,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -708,8 +681,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-expandable",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-expandable/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -761,10 +733,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -826,8 +795,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-file-upload.",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-file-upload/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -853,10 +821,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             }
           ],
           "superclass": {
@@ -864,8 +829,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-flag-usa",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-flag-usa/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -902,10 +866,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -935,8 +896,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-form-alert",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-alert/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -1007,10 +967,7 @@
             },
             {
               "kind": "method",
-              "name": "focus",
-              "type": {
-                "text": "focus() => void"
-              }
+              "name": "focus"
             },
             {
               "kind": "field",
@@ -1050,10 +1007,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -1218,8 +1172,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-form-choice",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-choice/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -1284,18 +1237,12 @@
             },
             {
               "kind": "method",
-              "name": "focus",
-              "type": {
-                "text": "focus() => void"
-              }
+              "name": "focus"
             },
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -1545,8 +1492,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-form-search-input",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -1667,10 +1613,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -1878,8 +1821,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-form-search",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-search/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -1911,10 +1853,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -2101,8 +2040,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-icon-text",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-icon-text/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -2128,10 +2066,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -2175,8 +2110,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-icon",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-icon/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -2218,10 +2152,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -2272,8 +2203,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-label.",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-label/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -2305,10 +2235,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -2421,9 +2348,6 @@
               "inheritedFrom": {
                 "name": "MixinLink",
                 "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
-              },
-              "type": {
-                "text": "renderLink() => void"
               }
             },
             {
@@ -2616,8 +2540,7 @@
                 "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
               }
             }
-          ],
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-link/index.js"
+          ]
         }
       ],
       "exports": [
@@ -2868,10 +2791,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             }
           ],
           "superclass": {
@@ -2879,8 +2799,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-list-item.",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-list-item/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -2952,10 +2871,7 @@
             },
             {
               "kind": "method",
-              "name": "focus",
-              "type": {
-                "text": "focus() => void"
-              }
+              "name": "focus"
             },
             {
               "kind": "method",
@@ -3073,9 +2989,6 @@
                 "type": {
                   "text": "boolean"
                 }
-              },
-              "type": {
-                "text": "addItem(item: HTMLElement, index: number = -1) => boolean"
               }
             },
             {
@@ -3154,10 +3067,7 @@
                   }
                 }
               ],
-              "description": "Remove a filter item from the light and dark DOM.",
-              "type": {
-                "text": "removeItem(item: HTMLElement) => void"
-              }
+              "description": "Remove a filter item from the light and dark DOM."
             },
             {
               "kind": "method",
@@ -3182,10 +3092,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -3257,8 +3164,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-list.",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-list/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -3363,10 +3269,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -3486,8 +3389,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-listbox-item.",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -3649,17 +3551,11 @@
                 "type": {
                   "text": "Array"
                 }
-              },
-              "type": {
-                "text": "filterItems(queryList: Array) => Array"
               }
             },
             {
               "kind": "method",
-              "name": "showAllItems",
-              "type": {
-                "text": "showAllItems() => void"
-              }
+              "name": "showAllItems"
             },
             {
               "kind": "method",
@@ -3688,9 +3584,6 @@
                 "type": {
                   "text": "undefined"
                 }
-              },
-              "type": {
-                "text": "focusItemAt(index: number) => undefined"
               }
             },
             {
@@ -3721,10 +3614,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -3836,8 +3726,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-listbox.",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-listbox/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -3939,10 +3828,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -4021,8 +3907,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-pagination",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-pagination/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -4203,10 +4088,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -4470,8 +4352,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-select",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-select/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -4691,10 +4572,7 @@
           "members": [
             {
               "kind": "method",
-              "name": "focus",
-              "type": {
-                "text": "focus() => void"
-              }
+              "name": "focus"
             },
             {
               "kind": "method",
@@ -4709,10 +4587,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -4768,8 +4643,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-tag-filter",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-tag-filter/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -4800,10 +4674,7 @@
           "members": [
             {
               "kind": "method",
-              "name": "focus",
-              "type": {
-                "text": "focus() => void"
-              }
+              "name": "focus"
             },
             {
               "kind": "field",
@@ -4814,10 +4685,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -4868,8 +4736,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-tag-topic.",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-tag-topic/index.js"
+          "customElement": true
         }
       ],
       "exports": [
@@ -4901,10 +4768,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -4935,8 +4799,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-tagline",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-tagline/index.js"
+          "customElement": true
         }
       ],
       "exports": [

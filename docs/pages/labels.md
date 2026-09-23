@@ -1,7 +1,11 @@
 ---
+title: Labels and legends
 layout: variation
 section: components
 status: Released
+description: 'Labels and legends are used to help users understand the meaning
+  of a form input. Legends are used exclusively for
+  [fieldsets](https://cfpb.github.io/design-system/components/fieldsets). '
 variation_groups:
   - variations:
       - variation_code_snippet: |-
@@ -47,10 +51,11 @@ variation_groups:
     variation_group_name: Types
 guidelines: ''
 eyebrow: Components
-title: Labels and legends
-description: 'Labels and legends are used to help users understand the meaning
-  of a form input. Legends are used exclusively for
-  [fieldsets](https://cfpb.github.io/design-system/components/fieldsets). '
+storybooks:
+  - storybook_type: Web component
+    storybook_path: design-system/web-components/?path=/docs/web-components-cfpb-label--overview
+  - storybook_type: React
+    storybook_path: design-system-react/?path=/docs/components-verified-labels--overview
 use_cases: ''
 behavior: ''
 accessibility: ''

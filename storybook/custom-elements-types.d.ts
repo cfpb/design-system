@@ -594,16 +594,16 @@ export type CfpbIconTextSolidJsProps = {
 };
 
 export type CfpbIconProps = {
-  /** The name of the icon. */
+  /** The name of the icon, based off the SVG filename. */
   name?: CfpbIcon['name'] | undefined;
-  /**  */
+  /** Whether the icon spins, for loading and in progress states. */
   spin?: CfpbIcon['spin'] | undefined;
 };
 
 export type CfpbIconSolidJsProps = {
-  /** The name of the icon. */
+  /** The name of the icon, based off the SVG filename. */
   'prop:name'?: CfpbIcon['name'] | undefined;
-  /**  */
+  /** Whether the icon spins, for loading and in progress states. */
   'prop:spin'?: CfpbIcon['spin'] | undefined;
 
   /** Set the innerHTML of the element */
@@ -1177,7 +1177,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-file-upload.': Partial<
+  'cfpb-file-upload': Partial<
     CfpbFileUploadProps & BaseProps<CfpbFileUpload> & BaseEvents
   >;
 
@@ -1376,8 +1376,8 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `name`: The name of the icon.
-   * - `spin`: undefined
+   * - `name`: The name of the icon, based off the SVG filename.
+   * - `spin`: Whether the icon spins, for loading and in progress states.
    *
    * ## Methods
    *
@@ -1410,7 +1410,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-label.': Partial<CfpbLabelProps & BaseProps<CfpbLabel> & BaseEvents>;
+  'cfpb-label': Partial<CfpbLabelProps & BaseProps<CfpbLabel> & BaseEvents>;
 
   /**
    *
@@ -1908,7 +1908,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-file-upload.': Partial<
+  'cfpb-file-upload': Partial<
     CfpbFileUploadProps &
       CfpbFileUploadSolidJsProps &
       BaseProps<CfpbFileUpload> &
@@ -2128,8 +2128,8 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `name`: The name of the icon.
-   * - `spin`: undefined
+   * - `name`: The name of the icon, based off the SVG filename.
+   * - `spin`: Whether the icon spins, for loading and in progress states.
    *
    * ## Methods
    *
@@ -2164,7 +2164,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-label.': Partial<
+  'cfpb-label': Partial<
     CfpbLabelProps & CfpbLabelSolidJsProps & BaseProps<CfpbLabel> & BaseEvents
   >;
 

@@ -632,56 +632,56 @@ export type CfpbLabelSolidJsProps = {
 };
 
 export type CfpbLinkProps = {
-  /**  */
+  /** The configuration of the link. EG external, download, nav-left, nav-right */
   'link-variant'?: CfpbLink['linkVariant'] | undefined;
-  /**  */
+  /** The configuration of the link. EG external, download, nav-left, nav-right */
   linkVariant?: CfpbLink['linkVariant'] | undefined;
-  /**  */
+  /** The size of the link, EG, h4. When omitted it's standard link size. */
   size?: CfpbLink['size'] | undefined;
-  /**  */
+  /** Color theme of the link. Takes `dark`. */
   'color-theme'?: CfpbLink['colorTheme'] | undefined;
-  /**  */
+  /** Color theme of the link. Takes `dark`. */
   colorTheme?: CfpbLink['colorTheme'] | undefined;
-  /**  */
+  /** Removes the underline (other than hover). */
   'no-underline'?: CfpbLink['noUnderline'] | undefined;
-  /**  */
+  /** Removes the underline (other than hover). */
   noUnderline?: CfpbLink['noUnderline'] | undefined;
-  /**  */
+  /** Removes the top border on mobile. */
   'no-top-border'?: CfpbLink['noTopBorder'] | undefined;
-  /**  */
+  /** Removes the top border on mobile. */
   noTopBorder?: CfpbLink['noTopBorder'] | undefined;
-  /**  */
+  /** Whether the link is an inline link. */
   inline?: CfpbLink['inline'] | undefined;
-  /**  */
+  /** The text of the slotted link. Read off the slotted `<a>`. */
   linkText?: CfpbLink['linkText'] | undefined;
-  /**  */
+  /** The attributes on the slotted link. Read off the slotted `<a>`. */
   linkAttributes?: CfpbLink['linkAttributes'] | undefined;
 };
 
 export type CfpbLinkSolidJsProps = {
-  /**  */
+  /** The configuration of the link. EG external, download, nav-left, nav-right */
   'attr:link-variant'?: CfpbLink['linkVariant'] | undefined;
-  /**  */
+  /** The configuration of the link. EG external, download, nav-left, nav-right */
   'prop:linkVariant'?: CfpbLink['linkVariant'] | undefined;
-  /**  */
+  /** The size of the link, EG, h4. When omitted it's standard link size. */
   'prop:size'?: CfpbLink['size'] | undefined;
-  /**  */
+  /** Color theme of the link. Takes `dark`. */
   'attr:color-theme'?: CfpbLink['colorTheme'] | undefined;
-  /**  */
+  /** Color theme of the link. Takes `dark`. */
   'prop:colorTheme'?: CfpbLink['colorTheme'] | undefined;
-  /**  */
+  /** Removes the underline (other than hover). */
   'bool:no-underline'?: CfpbLink['noUnderline'] | undefined;
-  /**  */
+  /** Removes the underline (other than hover). */
   'prop:noUnderline'?: CfpbLink['noUnderline'] | undefined;
-  /**  */
+  /** Removes the top border on mobile. */
   'bool:no-top-border'?: CfpbLink['noTopBorder'] | undefined;
-  /**  */
+  /** Removes the top border on mobile. */
   'prop:noTopBorder'?: CfpbLink['noTopBorder'] | undefined;
-  /**  */
+  /** Whether the link is an inline link. */
   'prop:inline'?: CfpbLink['inline'] | undefined;
-  /**  */
+  /** The text of the slotted link. Read off the slotted `<a>`. */
   'prop:linkText'?: CfpbLink['linkText'] | undefined;
-  /**  */
+  /** The attributes on the slotted link. Read off the slotted `<a>`. */
   'prop:linkAttributes'?: CfpbLink['linkAttributes'] | undefined;
 
   /** Set the innerHTML of the element */
@@ -1419,14 +1419,14 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `link-variant`/`linkVariant`: undefined
-   * - `size`: undefined
-   * - `color-theme`/`colorTheme`: undefined
-   * - `no-underline`/`noUnderline`: undefined
-   * - `no-top-border`/`noTopBorder`: undefined
-   * - `inline`: undefined
-   * - `linkText`: undefined (property only)
-   * - `linkAttributes`: undefined (property only)
+   * - `link-variant`/`linkVariant`: The configuration of the link. EG external, download, nav-left, nav-right
+   * - `size`: The size of the link, EG, h4. When omitted it's standard link size.
+   * - `color-theme`/`colorTheme`: Color theme of the link. Takes `dark`.
+   * - `no-underline`/`noUnderline`: Removes the underline (other than hover).
+   * - `no-top-border`/`noTopBorder`: Removes the top border on mobile.
+   * - `inline`: Whether the link is an inline link.
+   * - `linkText`: The text of the slotted link. Read off the slotted `<a>`. (property only)
+   * - `linkAttributes`: The attributes on the slotted link. Read off the slotted `<a>`. (property only)
    *
    * ## Slots
    *
@@ -1441,7 +1441,7 @@ export type CustomElements = {
    * - `init() => void`: undefined
    * - `renderLink() => void`: undefined
    */
-  'cfpb-link.': Partial<CfpbLinkProps & BaseProps<CfpbLink> & BaseEvents>;
+  'cfpb-link': Partial<CfpbLinkProps & BaseProps<CfpbLink> & BaseEvents>;
 
   /**
    *
@@ -2175,14 +2175,14 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `link-variant`/`linkVariant`: undefined
-   * - `size`: undefined
-   * - `color-theme`/`colorTheme`: undefined
-   * - `no-underline`/`noUnderline`: undefined
-   * - `no-top-border`/`noTopBorder`: undefined
-   * - `inline`: undefined
-   * - `linkText`: undefined (property only)
-   * - `linkAttributes`: undefined (property only)
+   * - `link-variant`/`linkVariant`: The configuration of the link. EG external, download, nav-left, nav-right
+   * - `size`: The size of the link, EG, h4. When omitted it's standard link size.
+   * - `color-theme`/`colorTheme`: Color theme of the link. Takes `dark`.
+   * - `no-underline`/`noUnderline`: Removes the underline (other than hover).
+   * - `no-top-border`/`noTopBorder`: Removes the top border on mobile.
+   * - `inline`: Whether the link is an inline link.
+   * - `linkText`: The text of the slotted link. Read off the slotted `<a>`. (property only)
+   * - `linkAttributes`: The attributes on the slotted link. Read off the slotted `<a>`. (property only)
    *
    * ## Slots
    *
@@ -2197,7 +2197,7 @@ export type CustomElementsSolidJs = {
    * - `init() => void`: undefined
    * - `renderLink() => void`: undefined
    */
-  'cfpb-link.': Partial<
+  'cfpb-link': Partial<
     CfpbLinkProps & CfpbLinkSolidJsProps & BaseProps<CfpbLink> & BaseEvents
   >;
 

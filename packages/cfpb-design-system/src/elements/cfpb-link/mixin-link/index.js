@@ -11,33 +11,31 @@ export const MixinLink = (superClass) =>
 
     #anchorRef = createRef();
 
-    /**
-     * @property {string} linkText - The text of the slotted link.
-     * @property {object} linkAttributes - The attributes on the slotted link.
-     * @property {string} linkVariant - The configuration of the link.
-     * @property {string} size - The size of link, for example, h4. When omitted it's standard link size.
-     * @property {string} colorTheme - The color theme of the link. Takes 'dark'.
-     * @property {boolean} noUnderline - Remove underline (other than hover).
-     * @property {boolean} noTopBorder - Remove the top border on mobile.
-     * @property {boolean} inline - Whether the link is an inline link.
-     * @returns {object} The map of properties.
-     */
     static properties = {
+      // Removing the previous JSDoc comments to allow descriptions to populate Storybook controls table descriptions.
+      /** The text of the slotted link. Read off the slotted `<a>`.*/
       linkText: { type: String, state: true },
+      /** The attributes on the slotted link. Read off the slotted `<a>`. */
       linkAttributes: { type: Object, state: true },
+      /** The configuration of the link. EG external, download, nav-left, nav-right */
       linkVariant: { type: String, reflect: true, attribute: 'link-variant' },
+      /** The size of the link, EG, h4. When omitted it's standard link size. */
       size: { type: String, reflect: true },
+      /** Color theme of the link. Takes `dark`. */
       colorTheme: { type: String, reflect: true, attribute: 'color-theme' },
+      /** Removes the underline (other than hover). */
       noUnderline: {
         type: Boolean,
         reflect: true,
         attribute: 'no-underline',
       },
+      /** Removes the top border on mobile. */
       noTopBorder: {
         type: Boolean,
         reflect: true,
         attribute: 'no-top-border',
       },
+      /** Whether the link is an inline link. */
       inline: { type: Boolean, reflect: true },
     };
 

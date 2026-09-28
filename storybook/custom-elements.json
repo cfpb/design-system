@@ -3408,7 +3408,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-listbox-item.",
+          "tagName": "cfpb-listbox-item",
           "customElement": true
         }
       ],
@@ -3745,7 +3745,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-listbox.",
+          "tagName": "cfpb-listbox",
           "customElement": true
         }
       ],
@@ -4755,7 +4755,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-tag-topic.",
+          "tagName": "cfpb-tag-topic",
           "customElement": true
         }
       ],

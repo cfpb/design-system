@@ -1530,7 +1530,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-listbox-item.': Partial<
+  'cfpb-listbox-item': Partial<
     CfpbListboxItemProps & BaseProps<CfpbListboxItem> & BaseEvents
   >;
 
@@ -1575,7 +1575,7 @@ export type CustomElements = {
    * Pass -1 to move focus to the list container (no active item).
    * - `init() => void`: undefined
    */
-  'cfpb-listbox.': Partial<
+  'cfpb-listbox': Partial<
     CfpbListboxProps & BaseProps<CfpbListbox> & BaseEvents
   >;
 
@@ -1713,7 +1713,7 @@ export type CustomElements = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  'cfpb-tag-topic.': Partial<
+  'cfpb-tag-topic': Partial<
     CfpbTagTopicProps & BaseProps<CfpbTagTopic> & BaseEvents
   >;
 
@@ -2293,7 +2293,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-listbox-item.': Partial<
+  'cfpb-listbox-item': Partial<
     CfpbListboxItemProps &
       CfpbListboxItemSolidJsProps &
       BaseProps<CfpbListboxItem> &
@@ -2341,7 +2341,7 @@ export type CustomElementsSolidJs = {
    * Pass -1 to move focus to the list container (no active item).
    * - `init() => void`: undefined
    */
-  'cfpb-listbox.': Partial<
+  'cfpb-listbox': Partial<
     CfpbListboxProps &
       CfpbListboxSolidJsProps &
       BaseProps<CfpbListbox> &
@@ -2493,7 +2493,7 @@ export type CustomElementsSolidJs = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  'cfpb-tag-topic.': Partial<
+  'cfpb-tag-topic': Partial<
     CfpbTagTopicProps &
       CfpbTagTopicSolidJsProps &
       BaseProps<CfpbTagTopic> &

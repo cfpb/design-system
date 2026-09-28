@@ -2818,7 +2818,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-list-item.",
+          "tagName": "cfpb-list-item",
           "customElement": true
         }
       ],
@@ -3183,7 +3183,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-list.",
+          "tagName": "cfpb-list",
           "customElement": true
         }
       ],

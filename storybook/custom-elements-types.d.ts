@@ -1458,7 +1458,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-list-item.': Partial<
+  'cfpb-list-item': Partial<
     CfpbListItemProps & BaseProps<CfpbListItem> & BaseEvents
   >;
 
@@ -1496,7 +1496,7 @@ export type CustomElements = {
    * - `removeItem(item: HTMLElement) => void`: Remove a filter item from the light and dark DOM.
    * - `init() => void`: undefined
    */
-  'cfpb-list.': Partial<CfpbListProps & BaseProps<CfpbList> & BaseEvents>;
+  'cfpb-list': Partial<CfpbListProps & BaseProps<CfpbList> & BaseEvents>;
 
   /**
    *
@@ -2216,7 +2216,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-list-item.': Partial<
+  'cfpb-list-item': Partial<
     CfpbListItemProps &
       CfpbListItemSolidJsProps &
       BaseProps<CfpbListItem> &
@@ -2257,7 +2257,7 @@ export type CustomElementsSolidJs = {
    * - `removeItem(item: HTMLElement) => void`: Remove a filter item from the light and dark DOM.
    * - `init() => void`: undefined
    */
-  'cfpb-list.': Partial<
+  'cfpb-list': Partial<
     CfpbListProps & CfpbListSolidJsProps & BaseProps<CfpbList> & BaseEvents
   >;
 

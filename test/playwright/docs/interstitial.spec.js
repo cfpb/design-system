@@ -1,7 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-const PAGE_LOAD_DELAY = 120_000;
-
 test.describe('CMS interstitial page with editing instructions', () => {
   test.describe('Editing a component page', () => {
     test.beforeEach(async ({ page }) => {
@@ -25,6 +23,13 @@ test.describe('CMS interstitial page with editing instructions', () => {
         'Updating this website - CFPB Design System',
       );
 
+      // The title is set before the interstitial script runs,
+      // so wait for the script to record that the page was seen.
+
+      await expect
+        .poll(() => page.localStorage.getItem('cms-directions-last-seen'))
+        .not.toBeNull();
+
       await page.goto('components');
       await page.goto('components/banner-notification');
 
@@ -33,9 +38,7 @@ test.describe('CMS interstitial page with editing instructions', () => {
       );
       expect(storageValue).not.toBeNull();
 
-      await expect(page.locator('#edit-page')).toBeVisible({
-        timeout: PAGE_LOAD_DELAY,
-      });
+      await expect(page.locator('#edit-page')).toBeVisible();
       await page.locator('#edit-page').click();
 
       await expect(page).toHaveTitle('Content Manager');

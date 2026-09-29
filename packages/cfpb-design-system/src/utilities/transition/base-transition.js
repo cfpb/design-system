@@ -20,6 +20,7 @@ function BaseTransition(element, classes, child) {
   let _lastClass;
   let _transitionEndEvent;
   let _transitionCompleteBinded;
+  let _transitionCancelBinded;
 
   let _isAnimated = false;
   let _isAnimating = false;
@@ -50,6 +51,7 @@ function BaseTransition(element, classes, child) {
     */
     if (_transitionEndEvent && _isAnimated) {
       _dom.addEventListener(_transitionEndEvent, _transitionCompleteBinded);
+      _dom.addEventListener('transitioncancel', _transitionCancelBinded);
       _child.dispatchEvent(BaseTransition.BEGIN_EVENT, {
         target: _child,
         type: BaseTransition.BEGIN_EVENT,
@@ -71,6 +73,31 @@ function BaseTransition(element, classes, child) {
    */
   function _removeEventListener() {
     _dom.removeEventListener(_transitionEndEvent, _transitionCompleteBinded);
+    _dom.removeEventListener('transitioncancel', _transitionCancelBinded);
+  }
+
+  /**
+   * Handle a canceled transtion.
+   * @param {TransitionEvent} evt - Transition event object.
+   */
+  function _transitionCanceled(evt) {
+    if (evt.target !== _dom || evt.propertyName !== _classes.CSS_PROPERTY) {
+      return;
+    }
+
+    // Without getAnimations we can't tell if a replacement is running
+    // so keep waiting for the end event.
+    if (typeof _dom.getAnimations !== 'function') return;
+
+    const hasReplacement = _dom
+      .getAnimations()
+      .some(
+        (animation) =>
+          animation.transitionProperty === _classes.CSS_PROPERTY &&
+          animation.playState === 'running',
+      );
+
+    if (!hasReplacement) _transitionComplete();
   }
 
   /**
@@ -122,7 +149,7 @@ function BaseTransition(element, classes, child) {
     _dom.style.mozTransitionDuration = '0';
     _dom.style.oTransitionDuration = '0';
     _dom.style.transitionDuration = '0';
-    _dom.removeEventListener(_transitionEndEvent, _transitionCompleteBinded);
+    _removeEventListener();
     _transitionCompleteBinded();
     _dom.style.webkitTransitionDuration = '';
     _dom.style.mozTransitionDuration = '';
@@ -208,6 +235,7 @@ function BaseTransition(element, classes, child) {
   function init(initialClass) {
     _isAnimated = !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
     _transitionCompleteBinded = _transitionComplete.bind(this);
+    _transitionCancelBinded = _transitionCanceled.bind(this);
     setElement(_dom);
     if (!initialClass) {
       throw new Error(

@@ -6,7 +6,7 @@ import { CfpbListboxItem } from '../cfpb-listbox-item';
 import { parseChildData } from '../utilities/parse-child-data';
 
 /**
- * @element cfpb-listbox.
+ * @element cfpb-listbox
  * @slot - Slot for the list of items in the list box.
  * @property {Array} childData - Structure data to create child components.
  * @property {boolean} multiple - Whether the select supports multiple or not.

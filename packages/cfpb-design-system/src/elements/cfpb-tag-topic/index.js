@@ -4,7 +4,7 @@ import styles from './styles.component.scss?inline';
 
 /**
  *
- * @element cfpb-tag-topic.
+ * @element cfpb-tag-topic
  * @slot - The content for the topic tag.
  * @property {string} href - href attribute, if this is a topic link.
  * @property {boolean} siblingOfJumpLink - Whether the preceding sibling is a jump link or not.

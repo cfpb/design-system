@@ -6,7 +6,7 @@ import { CfpbButton } from '../cfpb-button';
 
 /**
  *
- * @element cfpb-file-upload.
+ * @element cfpb-file-upload
  * @slot - The main content for the upload button.
  */
 export class CfpbFileUpload extends LitElement {

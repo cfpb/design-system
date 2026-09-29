@@ -794,7 +794,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-file-upload.",
+          "tagName": "cfpb-file-upload",
           "customElement": true
         }
       ],
@@ -2073,9 +2073,9 @@
               "name": "name",
               "privacy": "public",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "description": "The name of the icon.",
+              "description": "The name of the icon, based off the SVG filename.",
               "attribute": "name"
             },
             {
@@ -2085,6 +2085,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Whether the icon spins, for loading and in progress states.",
               "attribute": "spin"
             }
           ],
@@ -2092,9 +2093,9 @@
             {
               "name": "name",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "description": "The name of the icon.",
+              "description": "The name of the icon, based off the SVG filename.",
               "fieldName": "name"
             },
             {
@@ -2102,6 +2103,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Whether the icon spins, for loading and in progress states.",
               "fieldName": "spin"
             }
           ],
@@ -2202,7 +2204,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-label.",
+          "tagName": "cfpb-label",
           "customElement": true
         }
       ],
@@ -2263,12 +2265,7 @@
                 "text": "object"
               },
               "static": true,
-              "default": "{ linkText: { type: String, state: true }, linkAttributes: { type: Object, state: true }, linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, size: { type: String, reflect: true }, colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, inline: { type: Boolean, reflect: true }, }",
-              "return": {
-                "type": {
-                  "text": "object"
-                }
-              },
+              "default": "{ // Removing the previous JSDoc comments to allow descriptions to populate Storybook controls table descriptions. /** The text of the slotted link. Read off the slotted `<a>`.*/ linkText: { type: String, state: true }, /** The attributes on the slotted link. Read off the slotted `<a>`. */ linkAttributes: { type: Object, state: true }, /** The configuration of the link. EG external, download, nav-left, nav-right */ linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, /** The size of the link, EG, h4. When omitted it's standard link size. */ size: { type: String, reflect: true }, /** Color theme of the link. Takes `dark`. */ colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, /** Removes the underline (other than hover). */ noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, /** Removes the top border on mobile. */ noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, /** Whether the link is an inline link. */ inline: { type: Boolean, reflect: true }, }",
               "inheritedFrom": {
                 "name": "MixinLink",
                 "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
@@ -2357,6 +2354,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The text of the slotted link. Read off the slotted `<a>`.",
               "default": "''",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2370,6 +2368,7 @@
               "type": {
                 "text": "object"
               },
+              "description": "The attributes on the slotted link. Read off the slotted `<a>`.",
               "default": "{}",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2383,6 +2382,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The configuration of the link. EG external, download, nav-left, nav-right",
               "attribute": "link-variant",
               "reflects": true,
               "inheritedFrom": {
@@ -2397,6 +2397,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The size of the link, EG, h4. When omitted it's standard link size.",
               "attribute": "size",
               "reflects": true,
               "inheritedFrom": {
@@ -2411,6 +2412,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "Color theme of the link. Takes `dark`.",
               "attribute": "color-theme",
               "reflects": true,
               "inheritedFrom": {
@@ -2425,6 +2427,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Removes the underline (other than hover).",
               "attribute": "no-underline",
               "reflects": true,
               "inheritedFrom": {
@@ -2439,6 +2442,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Removes the top border on mobile.",
               "attribute": "no-top-border",
               "reflects": true,
               "inheritedFrom": {
@@ -2453,6 +2457,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Whether the link is an inline link.",
               "attribute": "inline",
               "reflects": true,
               "inheritedFrom": {
@@ -2471,7 +2476,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-link.",
+          "tagName": "cfpb-link",
           "customElement": true,
           "attributes": [
             {
@@ -2479,6 +2484,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The configuration of the link. EG external, download, nav-left, nav-right",
               "fieldName": "linkVariant",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2490,6 +2496,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The size of the link, EG, h4. When omitted it's standard link size.",
               "fieldName": "size",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2501,6 +2508,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "Color theme of the link. Takes `dark`.",
               "fieldName": "colorTheme",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2512,6 +2520,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Removes the underline (other than hover).",
               "fieldName": "noUnderline",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2523,6 +2532,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Removes the top border on mobile.",
               "fieldName": "noTopBorder",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2534,6 +2544,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Whether the link is an inline link.",
               "fieldName": "inline",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2581,12 +2592,7 @@
                 "text": "object"
               },
               "static": true,
-              "default": "{ linkText: { type: String, state: true }, linkAttributes: { type: Object, state: true }, linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, size: { type: String, reflect: true }, colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, inline: { type: Boolean, reflect: true }, }",
-              "return": {
-                "type": {
-                  "text": "object"
-                }
-              }
+              "default": "{ // Removing the previous JSDoc comments to allow descriptions to populate Storybook controls table descriptions. /** The text of the slotted link. Read off the slotted `<a>`.*/ linkText: { type: String, state: true }, /** The attributes on the slotted link. Read off the slotted `<a>`. */ linkAttributes: { type: Object, state: true }, /** The configuration of the link. EG external, download, nav-left, nav-right */ linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, /** The size of the link, EG, h4. When omitted it's standard link size. */ size: { type: String, reflect: true }, /** Color theme of the link. Takes `dark`. */ colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, /** Removes the underline (other than hover). */ noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, /** Removes the top border on mobile. */ noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, /** Whether the link is an inline link. */ inline: { type: Boolean, reflect: true }, }"
             },
             {
               "kind": "field",
@@ -2639,6 +2645,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The text of the slotted link. Read off the slotted `<a>`.",
               "default": "''"
             },
             {
@@ -2648,6 +2655,7 @@
               "type": {
                 "text": "object"
               },
+              "description": "The attributes on the slotted link. Read off the slotted `<a>`.",
               "default": "{}"
             },
             {
@@ -2657,6 +2665,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The configuration of the link. EG external, download, nav-left, nav-right",
               "attribute": "link-variant",
               "reflects": true
             },
@@ -2667,6 +2676,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The size of the link, EG, h4. When omitted it's standard link size.",
               "attribute": "size",
               "reflects": true
             },
@@ -2677,6 +2687,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "Color theme of the link. Takes `dark`.",
               "attribute": "color-theme",
               "reflects": true
             },
@@ -2687,6 +2698,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Removes the underline (other than hover).",
               "attribute": "no-underline",
               "reflects": true
             },
@@ -2697,6 +2709,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Removes the top border on mobile.",
               "attribute": "no-top-border",
               "reflects": true
             },
@@ -2707,6 +2720,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Whether the link is an inline link.",
               "attribute": "inline",
               "reflects": true
             }
@@ -2717,6 +2731,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The configuration of the link. EG external, download, nav-left, nav-right",
               "fieldName": "linkVariant"
             },
             {
@@ -2724,6 +2739,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "The size of the link, EG, h4. When omitted it's standard link size.",
               "fieldName": "size"
             },
             {
@@ -2731,6 +2747,7 @@
               "type": {
                 "text": "string"
               },
+              "description": "Color theme of the link. Takes `dark`.",
               "fieldName": "colorTheme"
             },
             {
@@ -2738,6 +2755,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Removes the underline (other than hover).",
               "fieldName": "noUnderline"
             },
             {
@@ -2745,6 +2763,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Removes the top border on mobile.",
               "fieldName": "noTopBorder"
             },
             {
@@ -2752,6 +2771,7 @@
               "type": {
                 "text": "boolean"
               },
+              "description": "Whether the link is an inline link.",
               "fieldName": "inline"
             }
           ],
@@ -2798,7 +2818,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-list-item.",
+          "tagName": "cfpb-list-item",
           "customElement": true
         }
       ],
@@ -3163,7 +3183,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-list.",
+          "tagName": "cfpb-list",
           "customElement": true
         }
       ],
@@ -3388,7 +3408,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-listbox-item.",
+          "tagName": "cfpb-listbox-item",
           "customElement": true
         }
       ],
@@ -3725,7 +3745,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-listbox.",
+          "tagName": "cfpb-listbox",
           "customElement": true
         }
       ],
@@ -4735,7 +4755,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-tag-topic.",
+          "tagName": "cfpb-tag-topic",
           "customElement": true
         }
       ],

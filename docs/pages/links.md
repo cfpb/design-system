@@ -1,7 +1,12 @@
 ---
+title: Links
 layout: variation
 section: components
 status: Released
+description: Links are navigational elements that connect users to other
+  locations, either on the current page or to a different page or site. In
+  contrast, [buttons](/design-system/components/buttons) are used to signal
+  important actions.
 variation_groups:
   - variation_group_name: Types
     variations:
@@ -74,9 +79,7 @@ variation_groups:
 
           \        <a class=\"a-link\" href=\"#\"><span
           class=\"a-link__text\">non-CFPB webpage</span> {% include
-          icons/external-link.svg %}</a>.\
-
-          </p>
+          icons/external-link.svg %}</a>. </p>
 
           <h4>Standalone</h4>
 
@@ -84,21 +87,16 @@ variation_groups:
           <a class=\"a-link a-link--jump\" href=\"#\">{% include
           icons/left.svg %} <span class=\"a-link__text\">Go back</span>
 
-          </a>      \
+          </a>     \
 
-
-          <br><br>   \
-
+          <br><br>  \
 
           <a class=\"a-link a-link--jump\" href=\"#\"><span
           class=\"a-link__text\">Continue</span> {% include icons/right.svg %}
 
           </a>
 
-          \   \
-
-          <br><br>   \
-
+          \    <br><br>  \
 
           <a class=\"a-link a-link--jump\" href=\"#\"><span
           class=\"a-link__text\">External link</span> {% include
@@ -107,8 +105,7 @@ variation_groups:
           </a>
 
 
-          <br><br>   \
-
+          <br><br>  \
 
           <a class=\"a-link a-link--jump\" href=\"#\"><span
           class=\"a-link__text\">Document or file</span> {% include
@@ -181,11 +178,11 @@ variation_groups:
     variation_group_description: ''
 guidelines: ''
 eyebrow: Components
-title: Links
-description: Links are navigational elements that connect users to other
-  locations, either on the current page or to a different page or site. In
-  contrast, [buttons](/design-system/components/buttons) are used to signal
-  important actions.
+storybooks:
+  - storybook_type: Web component
+    storybook_path: design-system/web-components/?path=/docs/web-components-cfpb-link--overview
+  - storybook_type: React
+    storybook_path: design-system-react/?path=/docs/components-verified-links--overview
 use_cases: ''
 behavior: >-
   ### Opening a link in the current tab (default)

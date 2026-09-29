@@ -11,7 +11,7 @@ const SUPPORTED_TAG_LIST = new Set([
 ]);
 
 /**
- * @element cfpb-list.
+ * @element cfpb-list
  * @description A list of items (filter or topic tags, list-items, or links),
  *   which can be added and removed.
  *

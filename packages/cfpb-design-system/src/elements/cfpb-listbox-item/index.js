@@ -5,7 +5,7 @@ import { ref, createRef } from 'lit/directives/ref.js';
 import { CfpbCheckboxIcon } from '../cfpb-checkbox-icon';
 
 /**
- * @element cfpb-listbox-item.
+ * @element cfpb-listbox-item
  * @slot - The text for the list item.
  * @property {string} type - Choice type: plain, check, checkbox.
  * @property {boolean} checked - Whether the list item is checked or not.

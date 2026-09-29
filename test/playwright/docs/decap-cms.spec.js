@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-const PAGE_LOAD_DELAY = 120_000;
+// Decap is big. Give it longer than the default 5s to load.
+const CMS_LOAD_TIMEOUT = 15_000;
 
 /**
  * Load up the CMS at a particular path.
@@ -11,7 +12,7 @@ async function setupCmsVisit(page, path) {
   await page.reload();
   await page.goto(path);
   await expect(page.locator('button').getByText(/Login/).first()).toBeVisible({
-    timeout: PAGE_LOAD_DELAY,
+    timeout: CMS_LOAD_TIMEOUT,
   });
   await page.locator('button').getByText(/Login/).first().click();
   await expect(
@@ -25,7 +26,7 @@ async function setupCmsVisit(page, path) {
       .locator('label')
       .getByText(/Page title/)
       .first(),
-  ).toBeVisible({ timeout: PAGE_LOAD_DELAY });
+  ).toBeVisible({ timeout: CMS_LOAD_TIMEOUT });
 }
 
 test.describe('Decap CMS', () => {
@@ -43,7 +44,7 @@ test.describe('Decap CMS', () => {
           .locator('label')
           .getByText(/Page title/)
           .first(),
-      ).toBeVisible({ timeout: PAGE_LOAD_DELAY });
+      ).toBeVisible();
       // The homepage's body field
       await expect(
         page.locator('#nc-root #description-field-2').first(),
@@ -70,9 +71,7 @@ test.describe('Decap CMS', () => {
       page,
     }) => {
       // The button page's title field
-      await expect(page.locator('#nc-root #title-field-1')).toBeVisible({
-        timeout: PAGE_LOAD_DELAY,
-      });
+      await expect(page.locator('#nc-root #title-field-1')).toBeVisible();
       await page.locator('#nc-root #title-field-1').clear();
       await page.locator('#nc-root #title-field-1').fill('😄');
       await expect(page.locator('#nc-root #title-field-1')).toHaveValue('😄');
@@ -92,7 +91,7 @@ test.describe('Decap CMS', () => {
           .locator('label')
           .getByText(/Page title/)
           .first(),
-      ).toBeVisible({ timeout: PAGE_LOAD_DELAY });
+      ).toBeVisible();
 
       const frame = page.frameLocator('#preview-pane');
       await expect(

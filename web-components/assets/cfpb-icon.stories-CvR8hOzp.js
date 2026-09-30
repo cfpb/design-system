@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{n as t,p as n,r,v as i}from"./iframe-BOvtIoIC.js";import{n as a,t as o}from"./cfpb-icon-Dt_3bLwD.js";import{n as s,t as c}from"./story-helpers-DcbfWiMF.js";var l,u,d,f,p,m,h,g,_;function v(){return(v=e((()=>{n(),r(),a(),s(),o.init(),{args:l,argTypes:u,template:d}=t(`cfpb-icon`,{excludeCategories:[`methods`,`properties`]}),f={title:`Web Components/cfpb-icon`,component:`cfbp-icon`,tags:[`autodocs`],args:{...l,name:`approved-round`},argTypes:{...u,name:c()},render:e=>d(e)},p={},m={args:{name:`update`,spin:!0}},h={render:e=>i`
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{n as t,p as n,r,v as i}from"./iframe-BQu0u3mr.js";import{n as a,t as o}from"./cfpb-icon-CNRbbn5F.js";import{n as s,t as c}from"./story-helpers-DPG4PxJd.js";var l,u,d,f,p,m,h,g,_;function v(){return(v=e((()=>{n(),r(),a(),s(),o.init(),{args:l,argTypes:u,template:d}=t(`cfpb-icon`,{excludeCategories:[`methods`,`properties`]}),f={title:`Web Components/cfpb-icon`,component:`cfbp-icon`,tags:[`autodocs`],args:{...l,name:`approved-round`},argTypes:{...u,name:c()},render:e=>d(e)},p={},m={args:{name:`update`,spin:!0}},h={render:e=>i`
     <cfpb-icon name=${e.name??``}></cfpb-icon>
     <cfpb-icon
       name=${e.name??``}
@@ -46,7 +46,7 @@ import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{n as t,p as n,r,v as i
       style="--icon-color: var(--green)"
     ></cfpb-icon>
   \`
-}`,...h.parameters?.docs?.source},description:{story:"There is no `color` attribute. The icon is a masked <span> whose background\nis `currentcolor`. It is colored either by setting `--icon-color` on the element\nor by setting `color` on the ancestor. Both stories below need a custom render\nbecause `template()` only emits the CEM attributes and neither of these is one.",...h.parameters?.docs?.description}}},g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
+}`,...h.parameters?.docs?.source}}},g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
   render: args => html\`
     <span style="color: var(--pacific)">
       <cfpb-icon name=\${args.name ?? ''}></cfpb-icon>

@@ -367,14 +367,14 @@ storybook/custom-elements.json &lt;- the custom element manifest (source of trut
 
 <ul>
   <li>
-<code class="language-plaintext highlighter-rouge">litelement: true</code> tells the analyzer to understand Lit’s <code class="language-plaintext highlighter-rouge">static properties = {...}</code> shorthand (attribute name, reflect, type) instead of requiring <code class="language-plaintext highlighter-rouge">@property()</code> decorators.</li>
+<code class="language-plaintext highlighter-rouge">litelement: true</code> tells the CEM analyzer to understand Lit’s <code class="language-plaintext highlighter-rouge">static properties = {...}</code> shorthand (attribute name, reflect, type)</li>
   <li>
-<code class="language-plaintext highlighter-rouge">exclude: ['**/utilities/**']</code> keeps non-component helper modules (like <code class="language-plaintext highlighter-rouge">shared-config.js</code>) out of the manifest</li>
+<code class="language-plaintext highlighter-rouge">exclude: ['**/utilities/**']</code> keeps non-component helper modules out</li>
   <li>
-<code class="language-plaintext highlighter-rouge">sortModulesPlugin</code> is a local plugin added to make output diff-stable. Without this regenerating the manifest could produce reorder only diffs.</li>
+<code class="language-plaintext highlighter-rouge">sortModulesPlugin</code> is a local plugin added to make output alphabetical sorted.</li>
 </ul>
 
-<p>Run it manually any time with:
+<p>Run it with:
 <code class="language-plaintext highlighter-rouge">yarn analyze</code></p>
 
                 
@@ -411,7 +411,7 @@ storybook/custom-elements.json &lt;- the custom element manifest (source of trut
 
             
             <div class="m-variation__description">
-                <p><code class="language-plaintext highlighter-rouge">@wc-toolkit/jsx-types</code> (analyzer plugin at build time): reads the manifest and emits <code class="language-plaintext highlighter-rouge">storybook/custom-elements.types.d.ts</code> - one <tagname>Props type per component. For every property it emits two keys: the kebab-case attribute name and the camelCase property name, both typed off the class:</tagname></p>
+                <p><code class="language-plaintext highlighter-rouge">@wc-toolkit/jsx-types</code> reads the CEM and generates <code class="language-plaintext highlighter-rouge">storybook/custom-elements.types.d.ts</code> - Which ends up being one <tagname>Props type per Web Component. For every property it creates two keys: the kebab-case attribute and the camelCase property both typed off the class:</tagname></p>
 
 <pre><code class="language-JS">//storybook/custom-elements.types.d.ts snippet
 export type CfpbButtonProps = {
@@ -426,7 +426,7 @@ export type CfpbButtonProps = {
 }
 </code></pre>
 
-<p><code class="language-plaintext highlighter-rouge">@wc-toolkit/storybook-helpers</code> (runtime, used in every <code class="language-plaintext highlighter-rouge">.stories.ts</code>) reads the <em>manifest</em> (registered once via <code class="language-plaintext highlighter-rouge">setCustomElementsManifest</code> in <code class="language-plaintext highlighter-rouge">.storybook/preview.js</code>) and turns it into ready-made Storybook <code class="language-plaintext highlighter-rouge">args/argTypes/template</code> for a given tag:</p>
+<p><code class="language-plaintext highlighter-rouge">@wc-toolkit/storybook-helpers</code> reads the CEM (registered in <code class="language-plaintext highlighter-rouge">setCustomElementsManifest</code> in <code class="language-plaintext highlighter-rouge">.storybook/preview.js</code>) and turns that into a Storybook <code class="language-plaintext highlighter-rouge">args/argTypes/template</code> for a tag:</p>
 
 <pre><code class="language-JS">const { args, argTypes, template } = getStorybookHelpers&lt;CfpbButtonProps&gt;(
    'cfpb-button',
@@ -434,9 +434,9 @@ export type CfpbButtonProps = {
 );
 </code></pre>
 
-<p><code class="language-plaintext highlighter-rouge">excludeCategories: ['methods']</code> is used in every story file. It drops public methods from the args/controls table since methods aren’t bindable Storybook controls.</p>
+<p><code class="language-plaintext highlighter-rouge">excludeCategories: ['methods', 'properties']</code> is used in every story file. It removes methods from the args/controls table because they are not bindable in Storybook. <code class="language-plaintext highlighter-rouge">properties</code> is excluded because Web Components favor attrributes. But, also that <code class="language-plaintext highlighter-rouge">wc-toolkit</code> creates a control for both props and attributes whenever they are named differently (EG <code class="language-plaintext highlighter-rouge">styleAsLink</code> and <code class="language-plaintext highlighter-rouge">style-as-link</code>). <code class="language-plaintext highlighter-rouge">template()</code> binds both of them and that created a bug where using <code class="language-plaintext highlighter-rouge">properties</code> in Storybook would apply the prop after the attribute so leaving them let a prop with a default overwrite what the story set with the attribute.</p>
 
-<p><code class="language-plaintext highlighter-rouge">setStorybookHlpersConfig({ hideArgsRef: true })</code> in <code class="language-plaintext highlighter-rouge">preview.js</code> suppresses the “ref” column the helper would otherwise add to the args table in the UI.</p>
+<p><code class="language-plaintext highlighter-rouge">setStorybookHlpersConfig({ hideArgsRef: true })</code> in <code class="language-plaintext highlighter-rouge">preview.js</code> hides the “ref” column the helper that clutters up the Storybook UI.</p>
 
                 
             </div>
@@ -464,7 +464,7 @@ export type CfpbButtonProps = {
             
             <div class="m-variation__name">
                 <h3>
-                    JSDoc - what works and what doesn't
+                    JSDoc
                     
                 </h3>
             </div>
@@ -472,7 +472,7 @@ export type CfpbButtonProps = {
 
             
             <div class="m-variation__description">
-                <p>Class level tags on the component’s leading doc comment work correctly and are the only reliable source of documentation right now:</p>
+                <p>Class level tags on the component’s leading doc comment work correctly:</p>
 
 <pre><code class="language-JS">/**
  *
@@ -486,7 +486,7 @@ export type CfpbButtonProps = {
  */
 </code></pre>
 
-<p>Verified in the generated manifest, these come through with the real descriptions:</p>
+<p>These come through with the correct descriptions in Storybook UI:</p>
 
 <pre><code class="language-JSON">// EG from the CEM  at storybook/custom-elements.json
 ...
@@ -534,7 +534,7 @@ export type CfpbButtonProps = {
 ...
 </code></pre>
 
-<h4 id="gotcha-every-component-in-this-codebase-also-writes-a-property-block-directly-above-static-properties">Gotcha: every component in this codebase also writes a <code class="language-plaintext highlighter-rouge">@property</code> block directly above <code class="language-plaintext highlighter-rouge">static properties</code>
+<h4 id="every-component-in-this-codebase-got-its-property-moved-to-above-the-class-instead-of-static-properties">Every component in this codebase got its <code class="language-plaintext highlighter-rouge">@property</code> moved to above the class instead of <code class="language-plaintext highlighter-rouge">static properties</code>
 </h4>
 
 <p>In <code class="language-plaintext highlighter-rouge">cfpb-button/index.js</code> for example:</p>
@@ -542,7 +542,7 @@ export type CfpbButtonProps = {
 <pre><code class="language-JS"> /**
    * @property {string} type - The button type: button, submit, or reset.
    * @property {boolean} disabled - Whether the button is disabled or not.
-   ...
+   * ...
    * @returns {object} The map of properties.
    */
   static properties = {
@@ -551,9 +551,9 @@ export type CfpbButtonProps = {
 ...
 </code></pre>
 
-<p>That looks like it should document each attribute, <em>but it doesn’t</em> because the CEM lit-plugin doesn’t attach <code class="language-plaintext highlighter-rouge">@property</code> tag text to individual manifest attributes when they are declared this way.</p>
+<p>That looks like it should work with the CEM, <em>but it doesn’t</em> because the CEM lit-plugin doesn’t attach <code class="language-plaintext highlighter-rouge">@property</code> tag text to individual manifest attributes.</p>
 
-<p>The net effect of this currently is that the Storybook Controls/Docs tables do not show attribute descriptions for any component. Do not expect <code class="language-plaintext highlighter-rouge">@property {type} name - description</code> to do anything visible in Storybook for now. We can open a spike in the future to investigate the correct comment formatting for populating the CEM. I did not want to rewrite all the Web Components comments for this right now. I opted to keep it for in editor documentation, but just be aware of the implication for Storybook.</p>
+<p>The the result of that was the Storybook Controls/Docs tables did not show attribute descriptions for any component. Do not expect <code class="language-plaintext highlighter-rouge">@property {type} name - description</code> to do anything in Storybook for now. We moved these comments from above <code class="language-plaintext highlighter-rouge">static properties</code> to above <code class="language-plaintext highlighter-rouge">export class</code>.</p>
 
                 
             </div>
@@ -581,7 +581,7 @@ export type CfpbButtonProps = {
             
             <div class="m-variation__name">
                 <h3>
-                    Attributes over properties for bindings
+                    Attr over props
                     
                 </h3>
             </div>
@@ -589,9 +589,9 @@ export type CfpbButtonProps = {
 
             
             <div class="m-variation__description">
-                <p>Since custom elements only receive strings/booleans through markup, stories should drive components through their attributes (kebab-case), not JS properties. This is why every args object in the 4 examples use attribute-cased keys: icon-left, icon-right, icon-left-spin, icon-right-spin, style-as-link, full-on-mobile which is matching the <code class="language-plaintext highlighter-rouge">attribute:</code> value declaration in each <code class="language-plaintext highlighter-rouge">static properties</code> entry.</p>
+                <p>Since custom elements only receive strings/booleans through markup, stories should drive components through their attributes not JS properties. This is why every args object example use attribute-cased keys: icon-left, icon-right, icon-left-spin, icon-right-spin, style-as-link.</p>
 
-<p><code class="language-plaintext highlighter-rouge">getStorybookHelpers</code>’s argTypes are keyed the same way, so when you override a control you also use the attribute name:</p>
+<p><code class="language-plaintext highlighter-rouge">getStorybookHelpers</code>’s argTypes are done the same way. When you override a control you also use the attribute name:</p>
 
 <pre><code class="language-JS">argTypes {
    ...argTypes,
@@ -600,69 +600,9 @@ export type CfpbButtonProps = {
 }
 </code></pre>
 
-<p>If a component reflects a boolean attribute (<code class="language-plaintext highlighter-rouge">reflect: true</code>), prefer asserting against the DOM attribute rather than the JS property so you are checking real rendered state. There is an example of this in <code class="language-plaintext highlighter-rouge">packages/cfpb-design-system/elements/cfpb-expandable/index.spec.js</code> under <code class="language-plaintext highlighter-rouge">collapsing programatically</code> which checks <code class="language-plaintext highlighter-rouge">button.getAttribute('aria-expanded')</code> and <code class="language-plaintext highlighter-rouge">elm.hasAttribute('open')</code>.</p>
+<p>If a component reflects a boolean attribute (<code class="language-plaintext highlighter-rouge">reflect: true</code>) assert against the DOM attribute rather than the JS property. That way you are checking real rendered state. There is an example of this in <code class="language-plaintext highlighter-rouge">packages/cfpb-design-system/elements/cfpb-expandable/index.spec.js</code> under <code class="language-plaintext highlighter-rouge">collapsing programatically</code> which checks <code class="language-plaintext highlighter-rouge">button.getAttribute('aria-expanded')</code> and <code class="language-plaintext highlighter-rouge">elm.hasAttribute('open')</code></p>
 
 <p>This isn’t stylistic. Prior to fixing this, <code class="language-plaintext highlighter-rouge">cfpb-button.stories.ts</code> used camelCase keys here (<code class="language-plaintext highlighter-rouge">iconLeft, iconRight</code>) which silently failed to attach the icon-select controls to the real args since <code class="language-plaintext highlighter-rouge">getStorybookHelpers</code> generates attribute-cased keys.</p>
-
-                
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
-                    Walkthrough of how the 4 example stories differ
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">cfpb-button.stories.ts</code> is the fullest example. It uses the helper generated <code class="language-plaintext highlighter-rouge">template(args)</code> directly as <code class="language-plaintext highlighter-rouge">render</code> (no custom markup needed since the button has a default slot). Adds a <code class="language-plaintext highlighter-rouge">default-slot</code> pseudo-arg for the slotted button label <code class="language-plaintext highlighter-rouge">getStorybookHelpers</code> derives this arg automatically from the manifest’s unnamed slot entry (<code class="language-plaintext highlighter-rouge">slots: [{ name: '', description: '...'}]</code>) and the story just seeds a default value for it:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">args: { ...args, variant: 'primary', 'default-slot': 'Button label' },</code></p>
-
-    <p>It also dynamically builds a select control for <code class="language-plaintext highlighter-rouge">icon-left/icon-right</code> off the actual icon SVG filenames. It has no <code class="language-plaintext highlighter-rouge">play</code> functions. The button has no interaction of its own to demonstrate so its whole contract lives in <code class="language-plaintext highlighter-rouge">cfpb-button/index.spec.js</code>: variant and type fallbacks, the link form, and disabled state.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">cfpb-expandable.stories.ts</code> can’t use the auto <code class="language-plaintext highlighter-rouge">template()</code> because it needs two <em>named</em> slots. This is the pattern to copy for any component with named slots. It also demonstrates <code class="language-plaintext highlighter-rouge">play</code> functions exercising the component’s 4 custom events using <code class="language-plaintext highlighter-rouge">fn()</code> spies from <code class="language-plaintext highlighter-rouge">storybook/test</code> and <code class="language-plaintext highlighter-rouge">userEvent.click</code>, plus a synthetic-event trick for the CSS transition drive <code class="language-plaintext highlighter-rouge">collapsed</code> / <code class="language-plaintext highlighter-rouge">expanded</code> events because the component’s internal BaseTransition listens for the Chromium-prefix name first. Those 4 stay in the story because each is derived by a real click. Programatic property writes moved to <code class="language-plaintext highlighter-rouge">cfpb-expandable/index.spec.js</code></p>
-
-    <p>It writes a custom <code class="language-plaintext highlighter-rouge">render:</code> like this:</p>
-
-    <pre><code class="language-JS">render: ({ open, 'header-slot': header, 'content-slot': content }) =&gt;
-  html`&lt;cfpb-expandable ?open="${open}"&gt;
-    &lt;span slot="header"&gt;${header}&lt;/span&gt;
-    &lt;p slot="content"&gt;${content}&lt;/p&gt;
-  &lt;/cfpb-expandable&gt;`,
-</code></pre>
-  </li>
-  <li>
-<code class="language-plaintext highlighter-rouge">cfpb-tag-filter.stories.ts</code> - back to auto <code class="language-plaintext highlighter-rouge">template(args)</code> since it only has a default slot. It shows the split most clearly. The <code class="language-plaintext highlighter-rouge">Default</code> story’s <code class="language-plaintext highlighter-rouge">play</code> function clickc the button and asserts <code class="language-plaintext highlighter-rouge">item-click</code> fires in Chromium, while <code class="language-plaintext highlighter-rouge">cfpb-tag-filter/index.spec.js</code> covers the event’s shape (<code class="language-plaintext highlighter-rouge">detail.target</code>, <code class="language-plaintext highlighter-rouge">bubbles</code>, <code class="language-plaintext highlighter-rouge">composed</code>), the async <code class="language-plaintext highlighter-rouge">focus()</code> method, the <code class="language-plaintext highlighter-rouge">for</code> label form, and value derivation from slotted text. Same component, no overlapping assertions.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">cfpb-tagline.stories.ts</code> - the minimal case. Single boolean property (<code class="language-plaintext highlighter-rouge">isLarge</code>, no explicit <code class="language-plaintext highlighter-rouge">attribute:</code> override so it defaults to the camelCase name), no play functions. Good starting template for the simplest components.</li>
-</ul>
 
                 
             </div>
@@ -699,18 +639,18 @@ export type CfpbButtonProps = {
             
             <div class="m-variation__description">
                 <ul>
-  <li>Confirm the component’s <code class="language-plaintext highlighter-rouge">index.js</code> has a class-level <code class="language-plaintext highlighter-rouge">@element</code>,<code class="language-plaintext highlighter-rouge">@slot</code> and <code class="language-plaintext highlighter-rouge">@fires</code> JSDoc block since these are what render in the Docs page</li>
-  <li>Create <code class="language-plaintext highlighter-rouge">&lt;name&gt;.stories.ts</code> next to <code class="language-plaintext highlighter-rouge">index.js</code>. Copy the <code class="language-plaintext highlighter-rouge">cfpb-tagline.stories.ts</code> as the minimal template, or <code class="language-plaintext highlighter-rouge">cfpb-button.stories.ts</code> if you are needing more than one variant.</li>
+  <li>Confirm the component’s <code class="language-plaintext highlighter-rouge">index.js</code> has a class-level <code class="language-plaintext highlighter-rouge">@element</code>,<code class="language-plaintext highlighter-rouge">@slot</code> and <code class="language-plaintext highlighter-rouge">@fires</code> JSDoc block as necessary since these are what renders in the Docs page</li>
+  <li>Create <code class="language-plaintext highlighter-rouge">&lt;name&gt;.stories.ts</code> next to <code class="language-plaintext highlighter-rouge">index.js</code>. Look at the <code class="language-plaintext highlighter-rouge">cfpb-tagline.stories.ts</code> or <code class="language-plaintext highlighter-rouge">cfpb-button.stories.ts</code> for examples.</li>
   <li>Import <code class="language-plaintext highlighter-rouge">Meta/StoryObj</code> from <code class="language-plaintext highlighter-rouge">@storybook/web-components</code>
 </li>
-  <li>Call <code class="language-plaintext highlighter-rouge">&lt;Component&gt;.init()</code> at module scope before anything else</li>
-  <li>Call <code class="language-plaintext highlighter-rouge">getStorybookHelpers&lt;xProps&gt;('tag-name', { excludeCategories: ['methods'] })</code>, importing the <code class="language-plaintext highlighter-rouge">XProps</code> type from the <code class="language-plaintext highlighter-rouge">storybook/custom-elements-types</code>
+  <li>Call <code class="language-plaintext highlighter-rouge">&lt;Component&gt;.init()</code> before anything else</li>
+  <li>Call <code class="language-plaintext highlighter-rouge">getStorybookHelpers&lt;xProps&gt;('tag-name', { excludeCategories: ['methods', 'properties'] })</code>, importing the <code class="language-plaintext highlighter-rouge">XProps</code> type from the <code class="language-plaintext highlighter-rouge">storybook/custom-elements-types</code>
 </li>
-  <li>Decide between <code class="language-plaintext highlighter-rouge">tempalate(args)</code> and a custom <code class="language-plaintext highlighter-rouge">render:</code>. Use the auto <code class="language-plaintext highlighter-rouge">template</code> if the component only has a default slot. Write a custom <code class="language-plaintext highlighter-rouge">html</code> render (like in the expandables story) if it has named slots or needs conditional markup.</li>
-  <li>Set <code class="language-plaintext highlighter-rouge">meta.args/meta.argTypes</code> using <em>attribute-cased keys</em>, not camelCased properties. If you do this wrong it won’t error, it just silently no-ops the control or arg</li>
-  <li>Set <code class="language-plaintext highlighter-rouge">meta.component: 'tag-name'</code> and <code class="language-plaintext highlighter-rouge">tags: ['autodocs']</code>. This isn’t optional. Without <code class="language-plaintext highlighter-rouge">component:</code> set the auto-generated <code class="language-plaintext highlighter-rouge">Overview</code> docs page fails to render its canvas and Attributes/Slots/Events table.</li>
-  <li>Add a <code class="language-plaintext highlighter-rouge">play</code> function only for a real user interaction (like a click or keypress) following the <code class="language-plaintext highlighter-rouge">cfpb-expandable/cfpb-tag-filter</code> pattern with <code class="language-plaintext highlighter-rouge">fn()</code> + <code class="language-plaintext highlighter-rouge">userEvent</code> + <code class="language-plaintext highlighter-rouge">expect</code> from <code class="language-plaintext highlighter-rouge">storybook/test</code>. Everything else goes in a spec. See the Testing section .</li>
-  <li>Write <code class="language-plaintext highlighter-rouge">&lt;element&gt;/index.spec.js</code> alongside the story for the component’s behavior contract. See Testing section.</li>
+  <li>Decide if you need <code class="language-plaintext highlighter-rouge">tempalate(args)</code> or a custom <code class="language-plaintext highlighter-rouge">render:</code>. Use the <code class="language-plaintext highlighter-rouge">wc-toolkit</code> <code class="language-plaintext highlighter-rouge">template()</code> if the component only has a default slot. Write a custom <code class="language-plaintext highlighter-rouge">html</code> render (like in the expandables story) if it has named slots or needs conditional markup.</li>
+  <li>Set <code class="language-plaintext highlighter-rouge">meta.args/meta.argTypes</code> using <em>attribute-cased keys</em>, not camelCased properties. If you do this wrong it won’t error it just silently doesn’t work.</li>
+  <li>Set <code class="language-plaintext highlighter-rouge">meta.component: 'tag-name'</code> and <code class="language-plaintext highlighter-rouge">tags: ['autodocs]</code>. Without <code class="language-plaintext highlighter-rouge">component:</code> set the auto-generated <code class="language-plaintext highlighter-rouge">Overview</code> docs page fails to render Attributes/Slots/Events table.</li>
+  <li>Add a <code class="language-plaintext highlighter-rouge">play</code> function only for user interaction (like a click or keypress) following the <code class="language-plaintext highlighter-rouge">cfpb-expandable/cfpb-tag-filter</code> pattern with <code class="language-plaintext highlighter-rouge">fn()</code> + <code class="language-plaintext highlighter-rouge">userEvent</code> + <code class="language-plaintext highlighter-rouge">expect</code> from <code class="language-plaintext highlighter-rouge">storybook/test</code>. Everything else goes in a spec. See section 8.</li>
+  <li>Write <code class="language-plaintext highlighter-rouge">&lt;element&gt;/index.spec.js</code> alongside the story for the component’s behavior. See section 8.</li>
   <li>Run <code class="language-plaintext highlighter-rouge">yarn storybook</code> (regenerates the manifest via <code class="language-plaintext highlighter-rouge">yarn analyze</code> first) and confirm that new story renders and the controls bind correctly.</li>
 </ul>
 
@@ -802,7 +742,7 @@ export type CfpbButtonProps = {
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">index.spec.js</code></td>
-      <td>its behavior contract</td>
+      <td>its behavior</td>
       <td>jsdom</td>
     </tr>
     <tr>
@@ -813,9 +753,9 @@ export type CfpbButtonProps = {
   </tbody>
 </table>
 
-<p>If a test proves what the component looks like, it belongs in a story. If it proves what a user can do, it belongs in a <code class="language-plaintext highlighter-rouge">play</code> functions on a story. Everything else goes in <code class="language-plaintext highlighter-rouge">index.spec.js</code>: attributes, properties, emitted event shape, slots, fallbacks, error paths, matrices of values. Never assert the same thing in both places.</p>
+<p>If a test proves what the component looks like it should be in a story. If it is what a user can do it belongs in a <code class="language-plaintext highlighter-rouge">play</code> functions in a story. Everything else goes in <code class="language-plaintext highlighter-rouge">index.spec.js</code>: attributes, properties, emitted event shape, slots, fallbacks, error paths, matricies of values. Never assert the same thing in both places.</p>
 
-<p>The reason to bother with the split is portability. <code class="language-plaintext highlighter-rouge">index.spec.js</code> files import the component itself, so if Storybook is ever replaced they keep running untouched. Anything proven only by a <code class="language-plaintext highlighter-rouge">play</code> functions goes when Storybook goes. Keep that set small.</p>
+<p>The reason for the split is because we may move from Storybook. <code class="language-plaintext highlighter-rouge">index.spec.js</code> files import the component itself so if Storybook ever goes bye bye anything that happens by a <code class="language-plaintext highlighter-rouge">play</code> functions goes when Storybook goes.</p>
 
 <h3 id="deciding-where-a-test-goes">Deciding where a test goes</h3>
 
@@ -832,7 +772,7 @@ export type CfpbButtonProps = {
       <td><code class="language-plaintext highlighter-rouge">*.stories.ts</code></td>
     </tr>
     <tr>
-      <td>On user interaction (click, keypress)</td>
+      <td>User interaction (click, keypress)</td>
       <td>story <code class="language-plaintext highlighter-rouge">play</code> function</td>
     </tr>
     <tr>
@@ -867,76 +807,7 @@ export type CfpbButtonProps = {
   </tbody>
 </table>
 
-<p><code class="language-plaintext highlighter-rouge">cfpb-tag-filter</code> is the clearest example.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">Default</code> story’s play function clicks the button with the <code class="language-plaintext highlighter-rouge">userEvent</code> and asserts <code class="language-plaintext highlighter-rouge">item-click</code> fires in Chromium. <code class="language-plaintext highlighter-rouge">index.spec.js</code> triggers the same button with a direct <code class="language-plaintext highlighter-rouge">button.click()</code> and asserts the event’s <code class="language-plaintext highlighter-rouge">detail.target</code>, <code class="language-plaintext highlighter-rouge">bubbles</code> and <code class="language-plaintext highlighter-rouge">composed</code>.</p>
-
-<p>Two files, two environments, no assertion in both.</p>
-
-<p>Do no write test only stories tagged <code class="language-plaintext highlighter-rouge">['!dev', '!autodoc']</code>. We used that pattern here but removed it. Those assertions live in the specs now, where <code class="language-plaintext highlighter-rouge">it.each</code> covers a matrix in one block and nothing depends on Storybook.</p>
-
-<h3 id="writing-a-spec">Writing a spec</h3>
-
-<p>Copy <code class="language-plaintext highlighter-rouge">cfpb-file-upload/index.spec.js</code> for the minimal case, or <code class="language-plaintext highlighter-rouge">cfpb-button/index.spec.js</code> if you want a <code class="language-plaintext highlighter-rouge">mount()</code> helper. Mount the element, wait for it to be defined and rendered, assert agains the shadow root and then clean up.</p>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;cfpb-alert</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">elm</span><span class="p">;</span>
-
-  <span class="nf">beforeEach</span><span class="p">(</span><span class="k">async </span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">CfpbAlert</span><span class="p">.</span><span class="nf">init</span><span class="p">();</span>
-    <span class="nx">elm</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">cfpb-alert</span><span class="dl">'</span><span class="p">);</span>
-    <span class="nx">elm</span><span class="p">.</span><span class="nf">setAttribute</span><span class="p">(</span><span class="dl">'</span><span class="s1">status</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">info</span><span class="dl">'</span><span class="p">);</span>
-    <span class="nx">elm</span><span class="p">.</span><span class="nf">setAttribute</span><span class="p">(</span><span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Information alert</span><span class="dl">'</span><span class="p">);</span>
-    <span class="nx">elm</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span>
-      <span class="dl">'</span><span class="s1">&lt;span&gt;You can also add an explanation to the alert.&lt;/span&gt;</span><span class="dl">'</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nf">appendChild</span><span class="p">(</span><span class="nx">elm</span><span class="p">);</span>
-
-    <span class="k">await</span> <span class="nx">customElements</span><span class="p">.</span><span class="nf">whenDefined</span><span class="p">(</span><span class="dl">'</span><span class="s1">cfpb-alert</span><span class="dl">'</span><span class="p">);</span>
-    <span class="k">await</span> <span class="nx">elm</span><span class="p">.</span><span class="nx">updateComplete</span><span class="p">;</span>
-  <span class="p">});</span>
-
-  <span class="nf">afterEach</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nf">removeChild</span><span class="p">(</span><span class="nx">elm</span><span class="p">);</span>
-  <span class="p">});</span>
-
-  <span class="p">...</span>
-
-  <span class="nf">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">applies the alert role</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="kd">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nx">elm</span><span class="p">.</span><span class="nx">shadowRoot</span><span class="p">.</span><span class="nf">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.container</span><span class="dl">'</span><span class="p">);</span>
-    <span class="nf">expect</span><span class="p">(</span><span class="nx">container</span><span class="p">.</span><span class="nf">getAttribute</span><span class="p">(</span><span class="dl">'</span><span class="s1">role</span><span class="dl">'</span><span class="p">)).</span><span class="nf">toBe</span><span class="p">(</span><span class="dl">'</span><span class="s1">alert</span><span class="dl">'</span><span class="p">);</span>
-  <span class="p">});</span>
-
-  <span class="p">...</span>
-</code></pre></div></div>
-
-<p>Prefer <code class="language-plaintext highlighter-rouge">createElement</code> and <code class="language-plaintext highlighter-rouge">setAttribute</code> over assigning <code class="language-plaintext highlighter-rouge">innerHTML</code> template strings. Reach for <code class="language-plaintext highlighter-rouge">it.each</code> on a matrix. On named test per case beats a <code class="language-plaintext highlighter-rouge">for</code> loop inside a single test, because a failure tells you which case broke.
-<code class="language-plaintext highlighter-rouge">globals: true</code> is set, so <code class="language-plaintext highlighter-rouge">describe</code>, <code class="language-plaintext highlighter-rouge">it</code>, <code class="language-plaintext highlighter-rouge">expect</code> and <code class="language-plaintext highlighter-rouge">vi</code> need no imports.</p>
-
-<h3 id="vitest-projects">Vitest projects</h3>
-
-<p><code class="language-plaintext highlighter-rouge">vitest.config.js</code> defines two:</p>
-
-<ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">unit</code> runs <code class="language-plaintext highlighter-rouge">packages/**/*.spec.js</code> in jsdom - <code class="language-plaintext highlighter-rouge">storybook</code> - uses <code class="language-plaintext highlighter-rouge">storybookTest()</code> from <code class="language-plaintext highlighter-rouge">@storybook/addon-vitest/vitest-plugin</code>, pointed at <code class="language-plaintext highlighter-rouge">.storybook/</code> running in a real headless Chromium via <code class="language-plaintext highlighter-rouge">@vitest/browser-playwright</code>. It turns every story into a Vitest test and runs the story’s <code class="language-plaintext highlighter-rouge">play</code> function as the test body.</li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn <span class="nb">test</span> <span class="c"># everything</span>
-vitest run <span class="nt">--project-unit</span> <span class="c"># just the fast jsdom tests</span>
-vitest run packages/<span class="k">**</span>/elements/cfpb-alert <span class="c"># one element</span>
-vitest <span class="c"># watch mode</span>
-</code></pre></div></div>
-
-<h3 id="end-to-end-tests-playwright">End-to-end tests (Playwright)</h3>
-<p>Some things can only be proven with several components on a real page, like the doc site’s search or and expandable inside a form. Those are Playwright tests, not Vitest ones. They live in <code class="language-plaintext highlighter-rouge">test/playwright/</code>, split into <code class="language-plaintext highlighter-rouge">docs/</code> and <code class="language-plaintext highlighter-rouge">packages/</code>. <code class="language-plaintext highlighter-rouge">playwright.config.ts</code> starts <code class="language-plaintext highlighter-rouge">yarn start</code> and points at <code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000/designsystem</code></p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn playwright <span class="c"># run the e2e suite</span>
-yarn playwright open <span class="c"># run it in Playwright's UI mode</span>
-</code></pre></div></div>
-
-<p>Watch out for the collision. <code class="language-plaintext highlighter-rouge">@playwright/test</code> is the e2e runner described here. The seperate <code class="language-plaintext highlighter-rouge">playwright</code> package is only a browser driver for the <code class="language-plaintext highlighter-rouge">@vitest/browser-playwright</code>, which launches Chromium for the <code class="language-plaintext highlighter-rouge">storybook</code> Vitest project. The two have nothing to do with each other.</p>
-
-<p>Keep this suite small. A journey you could prove at the component level belongs in <code class="language-plaintext highlighter-rouge">index.spec.js</code>, where it runs faster and fails more legibly.</p>
+<p><code class="language-plaintext highlighter-rouge">cfpb-tag-filter</code> is a good example. The <code class="language-plaintext highlighter-rouge">Default</code> story’s play function clicks the button with the <code class="language-plaintext highlighter-rouge">userEvent</code> and asserts <code class="language-plaintext highlighter-rouge">item-click</code> fires in Chromium. <code class="language-plaintext highlighter-rouge">index.spec.js</code> triggers the same button with a direct <code class="language-plaintext highlighter-rouge">button.click()</code> and asserts the event’s <code class="language-plaintext highlighter-rouge">detail.target</code>, <code class="language-plaintext highlighter-rouge">bubbles</code> and <code class="language-plaintext highlighter-rouge">composed</code>. Two files in two different environments and no duplication.</p>
 
                 
             </div>
@@ -982,7 +853,7 @@ yarn playwright open <span class="c"># run it in Playwright's UI mode</span>
   <span class="p">},</span>
 </code></pre></div></div>
 
-<p>Set as <code class="language-plaintext highlighter-rouge">'todo</code> means that axe core accessibility checks run against every story automatically and violations surface in the Storybook a11y panel/Vitest addon UI, but <em>DO NOT FAIL</em> <code class="language-plaintext highlighter-rouge">yarn test</code> or CI. Bumping this to <code class="language-plaintext highlighter-rouge">'error'</code> repo-wide would turn any existing violations across all stories into a build failure if we want that in the future. Importantly, new components get a11y checking for free just by having a story! No extra config per component needed.</p>
+<p>Set as <code class="language-plaintext highlighter-rouge">'todo</code> means that axe core accessibility checks run against every story automatically and violations surface in the Storybook a11y panel/Vitest addon UI. They <em>DO NOT FAIL</em> <code class="language-plaintext highlighter-rouge">yarn test</code> or CI. Setting this to <code class="language-plaintext highlighter-rouge">'error'</code> repo-wide would turn any violations across all stories into a build failure. New components get a11y checking for free just by having a story! No extra config needed.</p>
 
                 
             </div>
@@ -1037,8 +908,8 @@ yarn playwright open <span class="c"># run it in Playwright's UI mode</span>
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/web-component-storybook.md">
-                            <time datetime="2026-09-29 13:41:49 -0400">
-                                 1:41:49 PM Sep 29, 2026
+                            <time datetime="2026-09-30 09:46:55 -0400">
+                                 9:46:55 AM Sep 30, 2026
                             </time>
                         </a>
                     </section>

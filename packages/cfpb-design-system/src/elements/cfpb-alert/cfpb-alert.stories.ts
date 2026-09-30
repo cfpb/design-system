@@ -11,7 +11,7 @@ CfpbAlert.init();
 CfpbLink.init();
 CfpbList.init();
 
-// The icon each status renders, per the component's icon getter
+// The icon each status renders
 const statusIcons = {
   info: 'warning-round',
   warning: 'warning-round',
@@ -20,7 +20,6 @@ const statusIcons = {
   loading: 'update',
 };
 
-// See cfpb-button.stories.ts for why properties is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbAlertProps>(
   'cfpb-alert',
   { excludeCategories: ['methods', 'properties'] },
@@ -37,11 +36,8 @@ const meta: Meta<AlertStoryArgs> = {
     status: 'info',
     message: 'Information alert',
     /**
-     * The explanation is wrapped in an element rather than slotted as text
-     * so the alert's `::slotted()` spacing applies to it. Text is not matched
-     * by `::slotted()`. A span is used instead of a `<p>` because slotted
-     * content stays in the light DOM. In the light DOM the global `<p> { margin: 0 0 15px }`
-     * in base.scss wins over slotted content. This matches the examples on the Docs page.
+     * A span is used instead of a `<p>` because slotted
+     * content stays in the light DOM. This matches the examples on the Docs page.
      */
     'default-slot':
       '<span>You can also add an explanation to the alert.</span>',
@@ -120,7 +116,3 @@ export const Loading: Story = {
       '<span>This is an optional explanation of the loading state.</span>',
   },
 };
-
-/*
- * Behavior is covered in index.spec.js - see STORYBOOK.md for the split.
- */

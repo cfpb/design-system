@@ -7,13 +7,6 @@ import { CfpbExpandable } from './index.js';
 
 CfpbExpandable.init();
 
-/**
- * `properties` is excluded here. See `cfpb-button.stories.ts` for the reason.
- * Specifically here `isExpanded` and `open` both describe once piece of state.
- * `template()` binds both applying the prop _after_ the attribute. Leaving them in
- * lets `isExpanded` default collapse the Expanded story. The prop still works on the
- * element. See the behavior tests.....
- */
 const { args, argTypes, template } = getStorybookHelpers<CfpbExpandableProps>(
   'cfpb-expandable',
   { excludeCategories: ['methods', 'properties'] },
@@ -43,12 +36,9 @@ type Story = StoryObj<ExpandableStoryArgs>;
 
 /**
  * The component has two visual states so it has two stories.
- * All four of its events are driven by the same click that moves between
- * these states so each story asserts the begin/end pair for its own
- * direction rather than splitting into a story per event.
- *
- * Programatic expand/collapse is covered in index.spec.js
- * See STORYBOOK.md for the split.
+ * Its events are driven by the same click that moves between
+ * these states. Each story asserts the begin/end pair for its own
+ * direction.
  */
 
 /**

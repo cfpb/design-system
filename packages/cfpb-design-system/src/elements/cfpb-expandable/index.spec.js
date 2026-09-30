@@ -2,7 +2,7 @@ import { describe, expect } from 'vitest';
 import { CfpbExpandable } from './index.js';
 
 /**
- * Mount a cfpb-expandable with header and content slots filled.
+ * Mount a cfpb-expandable with filled slots
  * @param {boolean} open - Whether to start expanded.
  * @returns {Promise<HTMLElement>} The mounted element.
  */
@@ -66,14 +66,12 @@ describe('<cfpb-expandable>', () => {
   /**
    * KNOWN BUG - this test is expected to fail until the component is fixed.
    *
-   * When the expandable mounts already open, `firstUpdated()` applies the
-   * `u-max-height-default` class but never computes and inline max-height.
-   * MaxHeightTransition only calls `refersh()` from three spots and none
-   * run on an initially open mount and a custom element upgraded after `load`
-   * has already fired never recieves that event at all.
+   * When an expandadable is set to `open` on a page by default and a user
+   * clicks on its button it does not collapse correctly. It attempts to close but
+   * leaves 15px of space
    *
-   * Toggling open after mount goes thorugh `maxHeightDefault()` works which
-   * is why this reproduces on initial load.
+   * Toggling it open and then closed works and the bug only shows up when the
+   * expandable is set to open by default.
    *
    * The fix is to refresh the transition when mounting in the expanded state.
    */

@@ -31,12 +31,6 @@ describe('<cfpb-tag-filter>', () => {
     expect(assignedNodes[0].textContent).toBe('Earth');
   });
 
-  /**
-   * These trigger the button directly instead of simulating a user click.
-   * That the click interaction works is proven in Chromium by the Default
-   * story's play function. These cover the shape of the event it emits.
-   */
-
   it('names the element as the item-click detail target', () => {
     const mockHandler = vi.fn();
     elm.addEventListener('item-click', mockHandler);

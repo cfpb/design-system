@@ -6,7 +6,6 @@ import { CfpbLabel } from './index.js';
 
 CfpbLabel.init();
 
-// See cfpb-button story for why `properties` is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbLabelProps>(
   'cfpb-label',
   { excludeCategories: ['methods', 'properties'] },

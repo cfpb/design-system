@@ -7,7 +7,6 @@ import { CfpbLink } from './index.js';
 
 CfpbLink.init();
 
-// See cfpb-button story for why `properties` is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbLinkProps>(
   'cfpb-link',
   { excludeCategories: ['methods', 'properties'] },
@@ -15,8 +14,7 @@ const { args, argTypes, template } = getStorybookHelpers<CfpbLinkProps>(
 
 type LinkStoryArgs = CfpbLinkProps & { 'default-slot'?: string };
 
-// cfpb-link decorates a slotted <a> rather than rendering its own, so the slot
-// takes the whole anchor not just its text.
+// cfpb-link decorates a slotted <a>
 const link = (text: string) => `<a href="#">${text}</a>`;
 
 const meta: Meta<LinkStoryArgs> = {
@@ -78,9 +76,7 @@ export const InLine: Story = {
   `,
 };
 
-// `size=h4` sets the link at the the h4 type size for a link that stands in for
-// a heading. `color-theme="dark"` does not set a dark background (despite the name).
-// It swaps the link color to black.
+// `size=h4` sets the link at h4. `color-theme="dark"` makes the link color black
 export const HeadingSized: Story = {
   args: {
     size: 'h4',
@@ -90,10 +86,8 @@ export const HeadingSized: Story = {
   },
 };
 
-// Adjacent links are what the top border is for. Below tablet break points each
-// one carries a divider so they read as a stack. In a cfpb-list the list drops
-// the top border of every link after the first. That keeps the dividers from
-// doubling up.
+// Adjacent links use top border. Below tablet break points each one stacks. In a cfpb-list the list drops
+// the top border of every link except the first.
 export const AdjacentLinks: Story = {
   render: () => html`
     <cfpb-link><a href="#">Mortgages</a></cfpb-link>
@@ -102,8 +96,7 @@ export const AdjacentLinks: Story = {
   `,
 };
 
-// Set by hand on the first link of a stack where there is no preceding link to
-// divide it from.
+// Set by hand on the first link of a stack where there is no other links
 export const NoTopBorder: Story = {
   args: {
     'no-top-border': true,

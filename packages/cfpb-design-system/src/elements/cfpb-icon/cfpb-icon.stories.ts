@@ -8,7 +8,6 @@ import { iconControl } from '../../../../../.storybook/plugins/story-helpers';
 
 CfpbIcon.init();
 
-// See cfpb-button story for why `properties` is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbIconProps>(
   'cfpb-icon',
   { excludeCategories: ['methods', 'properties'] },
@@ -38,13 +37,6 @@ export const Default: Story = {};
 export const Spinning: Story = {
   args: { name: 'update', spin: true },
 };
-
-/**
- * There is no `color` attribute. The icon is a masked <span> whose background
- * is `currentcolor`. It is colored either by setting `--icon-color` on the element
- * or by setting `color` on the ancestor. Both stories below need a custom render
- * because `template()` only emits the CEM attributes and neither of these is one.
- */
 
 export const Colors: Story = {
   render: (args) => html`

@@ -3,7 +3,7 @@ import { CfpbAlert } from './index.js';
 
 CfpbAlert.init();
 
-// The icon each status renders, per the component's icon getter
+// The icon each status renders
 const statusIcons = {
   info: 'warning-round',
   warning: 'warning-round',

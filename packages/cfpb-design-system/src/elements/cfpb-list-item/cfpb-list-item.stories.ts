@@ -6,7 +6,6 @@ import { CfpbListItem } from './index.js';
 
 CfpbListItem.init();
 
-// See cfpb-button story for why `properties` is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbListItemProps>(
   'cfpb-list-item',
   { excludeCategories: ['methods', 'properties'] },

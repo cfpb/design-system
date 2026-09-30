@@ -4,7 +4,7 @@ import { CfpbListItem } from './index.js';
 CfpbListItem.init();
 
 /**
- * Read the text a slot is actually rendering
+ * Read the text
  * @param {HTMLSlotElement} slot - The slot to read
  * @returns {string} The assigned text, trimmed
  */

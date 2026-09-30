@@ -7,7 +7,6 @@ import { CfpbTagFilter } from './index.js';
 
 CfpbTagFilter.init();
 
-// See cfpb-button story for why `properties` is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbTagFilterProps>(
   'cfpb-tag-filter',
   { excludeCategories: ['methods', 'properties'] },
@@ -32,13 +31,6 @@ const meta: Meta<TagFilterStoryArgs> = {
 export default meta;
 
 type Story = StoryObj<TagFilterStoryArgs>;
-
-/**
- * The click interaction stays here because it is a real user interaction
- * and this runs it in Chromium. The event's shape (detail, bubbles, composed), focus(), the
- * for label form and value derivation are covered in index.spec.js.
- * See STORYBOOK.md for the split
- */
 
 export const Default: Story = {
   play: async ({ canvasElement }) => {

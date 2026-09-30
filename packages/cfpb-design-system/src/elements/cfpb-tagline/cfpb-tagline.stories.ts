@@ -6,7 +6,6 @@ import { CfpbTagline } from './index.js';
 
 CfpbTagline.init();
 
-// See cfpb-button story for why `properties` is excluded
 const { args, argTypes, template } = getStorybookHelpers<CfpbTaglineProps>(
   'cfpb-tagline',
   { excludeCategories: ['methods', 'properties'] },

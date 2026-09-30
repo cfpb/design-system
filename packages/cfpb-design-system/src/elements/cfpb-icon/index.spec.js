@@ -48,7 +48,7 @@ describe('<cfpb-icon>', () => {
     const elm = await mount('cfpb-icon', { attributes: { name: 'download' } });
     const img = elm.shadowRoot.querySelector('img');
 
-    // The icon is decorative. Meaning comes from the surrounding component.
+    // The icon is decorative
     expect(img.getAttribute('alt')).toBe('');
     expect(img.getAttribute('aria-hidden')).toBe('true');
   });

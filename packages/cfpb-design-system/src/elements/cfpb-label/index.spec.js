@@ -16,7 +16,7 @@ const mountLabel = (attributes = {}) =>
   });
 
 /**
- * Read the text a named slot is actually rendering.
+ * Read the text
  * @param {HTMLElement} elm - The mounted label.
  * @param {string} name - The slot name.
  * @returns {string} The assigned text, trimmed.
@@ -61,7 +61,6 @@ describe('<cfpb-label>', () => {
       const elm = await mountLabel();
       const label = elm.shadowRoot.querySelector('label');
 
-      // ifDefined omits the attribute rather than rendering for=""
       expect(label.hasAttribute('for')).toBe(false);
     });
 

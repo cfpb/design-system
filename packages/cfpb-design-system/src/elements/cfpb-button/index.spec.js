@@ -4,7 +4,7 @@ import { CfpbButton } from './index.js';
 
 CfpbButton.init();
 
-// Every mount in this file slots the same label; only attributes vary.
+// Every mount in this file slots the same label only attributes vary
 const mountButton = (attributes) =>
   mount('cfpb-button', { attributes, text: 'Button label' });
 

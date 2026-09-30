@@ -5,10 +5,10 @@ import { ref, createRef } from 'lit/directives/ref.js';
 import styles from './styles.component.scss?inline';
 import { CfpbIconText } from '../cfpb-icon-text';
 
-// The variants are different color themes of the button.
+// The variants are different color themes
 const VALID_VARIANTS = ['primary', 'secondary', 'warning'];
 
-// The types are a regular button, or submit/reset that are used in forms.
+// The types are a regular or submit/reset that are used in forms
 const VALID_TYPES = ['button', 'submit', 'reset'];
 
 /**

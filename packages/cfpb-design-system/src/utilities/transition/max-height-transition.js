@@ -166,7 +166,7 @@ function MaxHeightTransition(element) {
   }
 
   /**
-   * Collapses thte max-height completely.
+   * Collapses the max-height completely.
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightZero() {

@@ -10,7 +10,7 @@
   --expandable-border: var(--gray-40);
 }
 
-// Overide heading defaults.
+// Override heading defaults.
 ::slotted([slot='header']) {
   margin-bottom: 0 !important;
   color: var(--black) !important;

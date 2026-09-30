@@ -55,7 +55,7 @@
     }
 
     // We create a faux focus rectangle in the ::after pseudoelement to better
-    // control the positioning of the focus rectangle, which would overwise
+    // control the positioning of the focus rectangle, which would otherwise
     // overlap the top border of the jumplink when it appears in a group.
     &:focus-visible {
       position: relative;

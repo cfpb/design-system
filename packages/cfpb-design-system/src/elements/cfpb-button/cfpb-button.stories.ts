@@ -11,7 +11,7 @@ CfpbButton.init();
  * `properties` is excluded because wc-toolkit emits a control for both a prop
  * and its attribute whenever the two are named differently (EG `styleAsLink and`
  * `style-as-link`). Both describe one piece of state and `template()` binds both.
- * In doing that it applys the prop _after_ the attr. So, leaving them in lets a property
+ * In doing that it applies the prop _after_ the attr. So, leaving them in lets a property
  * with a default overwrite whatever a story set through the attribute name
  */
 const { args, argTypes, template } = getStorybookHelpers<CfpbButtonProps>(

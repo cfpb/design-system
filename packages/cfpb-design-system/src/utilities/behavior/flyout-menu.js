@@ -60,7 +60,7 @@ function FlyoutMenu(element, autoHideContent = true) {
   // Whether this instance's behaviors are suspended or not.
   let _suspended = true;
 
-  /* Event immediately preceeding mouseover is touchstart,
+  /* Event immediately preceding mouseover is touchstart,
      if that event's present we'll want to ignore mouseover
      to avoid a mouseover and click immediately after each other. */
   let _touchTriggered = false;

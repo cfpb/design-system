@@ -1,0 +1,149 @@
+@use 'sass:math';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/utilities/functions' as *;
+
+// $c = default state.
+// $v = `:visited` state.
+// $h = `:hover` state.
+// $f = `:focus` state.
+// $a = `:active` state.
+@mixin u-link-card-colors($c, $v, $h, $f, $a) {
+  .m-card__footer > span {
+    display: inline;
+    text-decoration-color: $c;
+    text-decoration-style: dotted;
+    font-weight: 500;
+    color: $c;
+  }
+
+  & > a:visited .m-card__footer > span {
+    text-decoration-color: $v;
+    color: $v;
+  }
+
+  // Border changes on the regular cards happen on the top-level `article`
+  // element, so for consistency we trigger the hover styles on the parent
+  // instead of on the link. This differs from the visited, focus,
+  // and active states, which add styles onto the link.
+  &:hover .m-card__footer > span {
+    text-decoration-style: solid;
+    text-decoration-color: $h;
+    color: $h;
+  }
+
+  & > a:focus .m-card__footer > span {
+    text-decoration-color: $f;
+    color: $f;
+  }
+
+  & > a:active .m-card__footer > span {
+    text-decoration-color: $a;
+    text-decoration-style: solid;
+    color: $a;
+  }
+}
+
+@mixin u-card-bottom-bar() {
+  // Bottom green hover bar.
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    height: 5px;
+    width: 100%;
+    background: var(--green);
+  }
+}
+
+.m-card {
+  position: relative;
+
+  & > a {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  & a:focus {
+    outline-offset: 2px;
+  }
+
+  &__footer > a {
+    font-weight: 500;
+    border-bottom-width: 1px;
+  }
+
+  // Breakout cards.
+  $card-img-width: 210px;
+  $card-img-height: 120px;
+
+  &--breakout {
+    min-width: 210px;
+    text-align: center;
+
+    // Provide padding offset set to half the image height.
+    > a {
+      padding-top: math.div($card-img-height, 2);
+    }
+
+    .m-card__inner-wrapper {
+      position: relative;
+      z-index: 0;
+      min-height: $card-img-height + math.div($grid-gutter-width, 2);
+
+      background: var(--gray-5);
+      border: 1px solid var(--gray-20);
+      border-bottom-width: 3px;
+    }
+
+    .m-card__img {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 50%;
+      width: $card-img-width;
+      height: $card-img-height;
+
+      // Match half of image width.
+      margin-left: math.div($card-img-width, 2) * -1;
+    }
+
+    .m-card__footer {
+      // Subtract 6px to accommodate heading-3 size.
+      margin-top: math.div($card-img-height, 2) + $grid-gutter-width - 6px;
+
+      margin-bottom: rem-from-px(20);
+      margin-left: rem-from-px(10);
+      margin-right: rem-from-px(10);
+    }
+
+    &:hover {
+      .m-card__inner-wrapper {
+        box-shadow:
+          0 2px 0 0 inset var(--gray-20),
+          2px 0 0 0 inset var(--gray-20),
+          -2px 0 0 0 inset var(--gray-20);
+      }
+
+      @include u-card-bottom-bar;
+    }
+
+    // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+    @include u-link-card-colors(
+      var(--pacific),
+      var(--teal),
+      var(--pacific-dark),
+      var(--pacific),
+      var(--navy)
+    );
+
+    // Breakout cards have larger links.
+    .m-card__footer > span {
+      @include heading-3($is-responsive: false);
+    }
+  }
+}

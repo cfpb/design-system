@@ -13,6 +13,7 @@ export * from './utilities';
 // Component styles.
 export * from './cfpb-alert';
 export * from './cfpb-button';
+export * from './cfpb-card-breakout';
 export * from './cfpb-form-alert';
 export * from './cfpb-expandable';
 export * from './cfpb-form-choice';

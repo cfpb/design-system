@@ -1,5 +1,6 @@
 import type { CfpbAlert } from '../packages/cfpb-design-system/src/elements/cfpb-alert/index.js';
 import type { CfpbButton } from '../packages/cfpb-design-system/src/elements/cfpb-button/index.js';
+import type { CfpbCardBreakout } from '../packages/cfpb-design-system/src/elements/cfpb-card-breakout/index.js';
 import type { CfpbCheckboxIcon } from '../packages/cfpb-design-system/src/elements/cfpb-checkbox-icon/index.js';
 import type { CfpbExpandable } from '../packages/cfpb-design-system/src/elements/cfpb-expandable/index.js';
 import type { CfpbFileUpload } from '../packages/cfpb-design-system/src/elements/cfpb-file-upload/index.js';
@@ -201,6 +202,33 @@ export type CfpbButtonSolidJsProps = {
   'bool:style-as-link'?: CfpbButton['styleAsLink'] | undefined;
   /** Style the button as a link. */
   'prop:styleAsLink'?: CfpbButton['styleAsLink'] | undefined;
+
+  /** Set the innerHTML of the element */
+  innerHTML?: string | undefined;
+  /** Set the textContent of the element */
+  textContent?: string | number | undefined;
+};
+
+export type CfpbCardBreakoutProps = {
+  /**  */
+  'img-src'?: CfpbCardBreakout['imgSrc'] | undefined;
+  /**  */
+  imgSrc?: CfpbCardBreakout['imgSrc'] | undefined;
+  /**  */
+  'link-anchor'?: CfpbCardBreakout['linkAnchor'] | undefined;
+  /**  */
+  linkAnchor?: CfpbCardBreakout['linkAnchor'] | undefined;
+};
+
+export type CfpbCardBreakoutSolidJsProps = {
+  /**  */
+  'attr:img-src'?: CfpbCardBreakout['imgSrc'] | undefined;
+  /**  */
+  'prop:imgSrc'?: CfpbCardBreakout['imgSrc'] | undefined;
+  /**  */
+  'attr:link-anchor'?: CfpbCardBreakout['linkAnchor'] | undefined;
+  /**  */
+  'prop:linkAnchor'?: CfpbCardBreakout['linkAnchor'] | undefined;
 
   /** Set the innerHTML of the element */
   innerHTML?: string | undefined;
@@ -1093,6 +1121,32 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
+   * - `img-src`/`imgSrc`: undefined
+   * - `link-anchor`/`linkAnchor`: undefined
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: The main content for the card.
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `init() => void`: undefined
+   */
+  'cfpb-card-breakout': Partial<
+    CfpbCardBreakoutProps & BaseProps<CfpbCardBreakout> & BaseEvents
+  >;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
    * - `borderless`: Whether the checkbox has a border or not.
    * - `checked`: Whether the checkbox is checked or not.
    * - `disabled`: Whether the checkbox is disabled or not.
@@ -1808,6 +1862,35 @@ export type CustomElementsSolidJs = {
     CfpbButtonProps &
       CfpbButtonSolidJsProps &
       BaseProps<CfpbButton> &
+      BaseEvents
+  >;
+
+  /**
+   *
+   *
+   * ## Attributes & Properties
+   *
+   * Component attributes and properties that can be applied to the element or by using JavaScript.
+   *
+   * - `img-src`/`imgSrc`: undefined
+   * - `link-anchor`/`linkAnchor`: undefined
+   *
+   * ## Slots
+   *
+   * Areas where markup can be added to the component.
+   *
+   * - `(default)`: The main content for the card.
+   *
+   * ## Methods
+   *
+   * Methods that can be called to access component functionality.
+   *
+   * - `init() => void`: undefined
+   */
+  'cfpb-card-breakout': Partial<
+    CfpbCardBreakoutProps &
+      CfpbCardBreakoutSolidJsProps &
+      BaseProps<CfpbCardBreakout> &
       BaseEvents
   >;
 

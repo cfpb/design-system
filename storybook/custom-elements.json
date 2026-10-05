@@ -435,10 +435,7 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true,
-              "type": {
-                "text": "init() => void"
-              }
+              "static": true
             },
             {
               "kind": "field",
@@ -484,8 +481,7 @@
             "package": "lit"
           },
           "tagName": "cfpb-card-breakout",
-          "customElement": true,
-          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-card-breakout/index.js"
+          "customElement": true
         }
       ],
       "exports": [

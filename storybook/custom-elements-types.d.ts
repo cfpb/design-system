@@ -52,1001 +52,1005 @@ export type ScopedElements<
 
 type BaseProps<T extends HTMLElement> = {
   /** Content added between the opening and closing tags of the element */
-  children?: any;
+  children?: any | undefined;
   /** Used for declaratively styling one or more elements using CSS (Cascading Stylesheets) */
-  class?: string;
+  class?: string | undefined;
   /** Used for declaratively styling one or more elements using CSS (Cascading Stylesheets) */
-  className?: string;
+  className?: string | undefined;
   /** Takes an object where the key is the class name(s) and the value is a boolean expression. When true, the class is applied, and when false, it is removed. */
-  classList?: Record<string, boolean | undefined>;
+  classList?: Record<string, boolean | undefined> | undefined;
   /** Specifies the text direction of the element. */
-  dir?: 'ltr' | 'rtl';
+  dir?: 'ltr' | 'rtl' | undefined;
   /** Contains a space-separated list of the part names of the element that should be exposed on the host element. */
-  exportparts?: string;
+  exportparts?: string | undefined;
   /** For <label> and <output>, lets you associate the label with some control. */
-  htmlFor?: string;
+  htmlFor?: string | undefined;
   /** Specifies whether the element should be hidden. */
-  hidden?: boolean | string;
+  hidden?: boolean | string | undefined;
   /** A unique identifier for the element. */
-  id?: string;
+  id?: string | undefined;
   /** Keys tell React which array item each component corresponds to */
-  key?: string | number;
+  key?: string | number | undefined;
   /** Specifies the language of the element. */
-  lang?: string;
+  lang?: string | undefined;
   /** Defines the element's semantic role for accessibility APIs. */
-  role?: string;
+  role?: string | undefined;
   /** Contains a space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the ::part pseudo-element. */
-  part?: string;
+  part?: string | undefined;
   /** Use the ref attribute with a variable to assign a DOM element to the variable once the element is rendered. */
-  ref?: T | ((e: T) => void);
+  ref?: (T | ((e: T) => void)) | undefined;
   /** Adds a reference for a custom element slot */
-  slot?: string;
+  slot?: string | undefined;
   /** Prop for setting inline styles */
-  style?: Record<string, string | number>;
+  style?: Record<string, string | number> | undefined;
   /** Overrides the default Tab button behavior. Avoid using values other than -1 and 0. */
-  tabIndex?: number;
+  tabIndex?: number | undefined;
   /** Specifies the tooltip text for the element. */
-  title?: string;
+  title?: string | undefined;
   /** Passing 'no' excludes the element content from being translated. */
-  translate?: 'yes' | 'no';
+  translate?: 'yes' | 'no' | undefined;
   /** The popover global attribute is used to designate an element as a popover element. */
-  popover?: 'auto' | 'hint' | 'manual';
+  popover?: 'auto' | 'hint' | 'manual' | undefined;
   /** Turns an element element into a popover control button; takes the ID of the popover element to control as its value. */
-  popovertarget?: 'top' | 'bottom' | 'left' | 'right' | 'auto';
+  popovertarget?: 'top' | 'bottom' | 'left' | 'right' | 'auto' | undefined;
   /** Specifies the action to be performed on a popover element being controlled by a control element. */
-  popovertargetaction?: 'show' | 'hide' | 'toggle';
+  popovertargetaction?: 'show' | 'hide' | 'toggle' | undefined;
 };
 
 type BaseEvents = {};
 
 export type CfpbAlertProps = {
-  /**  */
-  status?: CfpbAlert['status'];
-  /**  */
-  message?: CfpbAlert['message'];
+  /** The alert status: error, success, warning, info, loading. */
+  status?: CfpbAlert['status'] | undefined;
+  /** The message heading on an alert. */
+  message?: CfpbAlert['message'] | undefined;
 };
 
 export type CfpbAlertSolidJsProps = {
-  /**  */
-  'prop:status'?: CfpbAlert['status'];
-  /**  */
-  'prop:message'?: CfpbAlert['message'];
+  /** The alert status: error, success, warning, info, loading. */
+  'prop:status'?: CfpbAlert['status'] | undefined;
+  /** The message heading on an alert. */
+  'prop:message'?: CfpbAlert['message'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbButtonProps = {
-  /**  */
-  type?: CfpbButton['type'];
-  /**  */
-  href?: CfpbButton['href'];
-  /**  */
-  disabled?: CfpbButton['disabled'];
-  /**  */
-  variant?: CfpbButton['variant'];
-  /**  */
-  'icon-left'?: CfpbButton['iconLeft'];
-  /**  */
-  iconLeft?: CfpbButton['iconLeft'];
-  /**  */
-  'icon-right'?: CfpbButton['iconRight'];
-  /**  */
-  iconRight?: CfpbButton['iconRight'];
-  /**  */
-  'icon-left-spin'?: CfpbButton['isIconLeftSpin'];
-  /**  */
-  isIconLeftSpin?: CfpbButton['isIconLeftSpin'];
-  /**  */
-  'icon-right-spin'?: CfpbButton['isIconRightSpin'];
-  /**  */
-  isIconRightSpin?: CfpbButton['isIconRightSpin'];
-  /**  */
-  'full-on-mobile'?: CfpbButton['fullOnMobile'];
-  /**  */
-  fullOnMobile?: CfpbButton['fullOnMobile'];
-  /**  */
-  'flush-left'?: CfpbButton['flushLeft'];
-  /**  */
-  flushLeft?: CfpbButton['flushLeft'];
-  /**  */
-  'flush-right'?: CfpbButton['flushRight'];
-  /**  */
-  flushRight?: CfpbButton['flushRight'];
-  /**  */
-  'style-as-link'?: CfpbButton['styleAsLink'];
-  /**  */
-  styleAsLink?: CfpbButton['styleAsLink'];
+  /** The button type: button, submit, or reset. */
+  type?: CfpbButton['type'] | undefined;
+  /** The URL to link to (makes the button a link). */
+  href?: CfpbButton['href'] | undefined;
+  /** Whether the button is disabled or not. */
+  disabled?: CfpbButton['disabled'] | undefined;
+  /** The button variant: primary, secondary, or warning. */
+  variant?: CfpbButton['variant'] | undefined;
+  /** The name of the icon on the left. */
+  'icon-left'?: CfpbButton['iconLeft'] | undefined;
+  /** The name of the icon on the left. */
+  iconLeft?: CfpbButton['iconLeft'] | undefined;
+  /** The name of the icon on the right. */
+  'icon-right'?: CfpbButton['iconRight'] | undefined;
+  /** The name of the icon on the right. */
+  iconRight?: CfpbButton['iconRight'] | undefined;
+  /** Whether the left icon spins or not. */
+  'icon-left-spin'?: CfpbButton['isIconLeftSpin'] | undefined;
+  /** Whether the left icon spins or not. */
+  isIconLeftSpin?: CfpbButton['isIconLeftSpin'] | undefined;
+  /** Whether the right icon spins or not. */
+  'icon-right-spin'?: CfpbButton['isIconRightSpin'] | undefined;
+  /** Whether the right icon spins or not. */
+  isIconRightSpin?: CfpbButton['isIconRightSpin'] | undefined;
+  /** Whether to be width 100% on mobile. */
+  'full-on-mobile'?: CfpbButton['fullOnMobile'] | undefined;
+  /** Whether to be width 100% on mobile. */
+  fullOnMobile?: CfpbButton['fullOnMobile'] | undefined;
+  /** Whether button is not rounded on left. */
+  'flush-left'?: CfpbButton['flushLeft'] | undefined;
+  /** Whether button is not rounded on left. */
+  flushLeft?: CfpbButton['flushLeft'] | undefined;
+  /** Whether button is not rounded on right. */
+  'flush-right'?: CfpbButton['flushRight'] | undefined;
+  /** Whether button is not rounded on right. */
+  flushRight?: CfpbButton['flushRight'] | undefined;
+  /** Style the button as a link. */
+  'style-as-link'?: CfpbButton['styleAsLink'] | undefined;
+  /** Style the button as a link. */
+  styleAsLink?: CfpbButton['styleAsLink'] | undefined;
 };
 
 export type CfpbButtonSolidJsProps = {
-  /**  */
-  'prop:type'?: CfpbButton['type'];
-  /**  */
-  'prop:href'?: CfpbButton['href'];
-  /**  */
-  'prop:disabled'?: CfpbButton['disabled'];
-  /**  */
-  'prop:variant'?: CfpbButton['variant'];
-  /**  */
-  'attr:icon-left'?: CfpbButton['iconLeft'];
-  /**  */
-  'prop:iconLeft'?: CfpbButton['iconLeft'];
-  /**  */
-  'attr:icon-right'?: CfpbButton['iconRight'];
-  /**  */
-  'prop:iconRight'?: CfpbButton['iconRight'];
-  /**  */
-  'bool:icon-left-spin'?: CfpbButton['isIconLeftSpin'];
-  /**  */
-  'prop:isIconLeftSpin'?: CfpbButton['isIconLeftSpin'];
-  /**  */
-  'bool:icon-right-spin'?: CfpbButton['isIconRightSpin'];
-  /**  */
-  'prop:isIconRightSpin'?: CfpbButton['isIconRightSpin'];
-  /**  */
-  'bool:full-on-mobile'?: CfpbButton['fullOnMobile'];
-  /**  */
-  'prop:fullOnMobile'?: CfpbButton['fullOnMobile'];
-  /**  */
-  'bool:flush-left'?: CfpbButton['flushLeft'];
-  /**  */
-  'prop:flushLeft'?: CfpbButton['flushLeft'];
-  /**  */
-  'bool:flush-right'?: CfpbButton['flushRight'];
-  /**  */
-  'prop:flushRight'?: CfpbButton['flushRight'];
-  /**  */
-  'bool:style-as-link'?: CfpbButton['styleAsLink'];
-  /**  */
-  'prop:styleAsLink'?: CfpbButton['styleAsLink'];
+  /** The button type: button, submit, or reset. */
+  'prop:type'?: CfpbButton['type'] | undefined;
+  /** The URL to link to (makes the button a link). */
+  'prop:href'?: CfpbButton['href'] | undefined;
+  /** Whether the button is disabled or not. */
+  'prop:disabled'?: CfpbButton['disabled'] | undefined;
+  /** The button variant: primary, secondary, or warning. */
+  'prop:variant'?: CfpbButton['variant'] | undefined;
+  /** The name of the icon on the left. */
+  'attr:icon-left'?: CfpbButton['iconLeft'] | undefined;
+  /** The name of the icon on the left. */
+  'prop:iconLeft'?: CfpbButton['iconLeft'] | undefined;
+  /** The name of the icon on the right. */
+  'attr:icon-right'?: CfpbButton['iconRight'] | undefined;
+  /** The name of the icon on the right. */
+  'prop:iconRight'?: CfpbButton['iconRight'] | undefined;
+  /** Whether the left icon spins or not. */
+  'bool:icon-left-spin'?: CfpbButton['isIconLeftSpin'] | undefined;
+  /** Whether the left icon spins or not. */
+  'prop:isIconLeftSpin'?: CfpbButton['isIconLeftSpin'] | undefined;
+  /** Whether the right icon spins or not. */
+  'bool:icon-right-spin'?: CfpbButton['isIconRightSpin'] | undefined;
+  /** Whether the right icon spins or not. */
+  'prop:isIconRightSpin'?: CfpbButton['isIconRightSpin'] | undefined;
+  /** Whether to be width 100% on mobile. */
+  'bool:full-on-mobile'?: CfpbButton['fullOnMobile'] | undefined;
+  /** Whether to be width 100% on mobile. */
+  'prop:fullOnMobile'?: CfpbButton['fullOnMobile'] | undefined;
+  /** Whether button is not rounded on left. */
+  'bool:flush-left'?: CfpbButton['flushLeft'] | undefined;
+  /** Whether button is not rounded on left. */
+  'prop:flushLeft'?: CfpbButton['flushLeft'] | undefined;
+  /** Whether button is not rounded on right. */
+  'bool:flush-right'?: CfpbButton['flushRight'] | undefined;
+  /** Whether button is not rounded on right. */
+  'prop:flushRight'?: CfpbButton['flushRight'] | undefined;
+  /** Style the button as a link. */
+  'bool:style-as-link'?: CfpbButton['styleAsLink'] | undefined;
+  /** Style the button as a link. */
+  'prop:styleAsLink'?: CfpbButton['styleAsLink'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbCardBreakoutProps = {
   /**  */
-  'img-src'?: CfpbCardBreakout['imgSrc'];
+  'img-src'?: CfpbCardBreakout['imgSrc'] | undefined;
   /**  */
-  imgSrc?: CfpbCardBreakout['imgSrc'];
+  imgSrc?: CfpbCardBreakout['imgSrc'] | undefined;
   /**  */
-  'link-anchor'?: CfpbCardBreakout['linkAnchor'];
+  'link-anchor'?: CfpbCardBreakout['linkAnchor'] | undefined;
   /**  */
-  linkAnchor?: CfpbCardBreakout['linkAnchor'];
+  linkAnchor?: CfpbCardBreakout['linkAnchor'] | undefined;
 };
 
 export type CfpbCardBreakoutSolidJsProps = {
   /**  */
-  'attr:img-src'?: CfpbCardBreakout['imgSrc'];
+  'attr:img-src'?: CfpbCardBreakout['imgSrc'] | undefined;
   /**  */
-  'prop:imgSrc'?: CfpbCardBreakout['imgSrc'];
+  'prop:imgSrc'?: CfpbCardBreakout['imgSrc'] | undefined;
   /**  */
-  'attr:link-anchor'?: CfpbCardBreakout['linkAnchor'];
+  'attr:link-anchor'?: CfpbCardBreakout['linkAnchor'] | undefined;
   /**  */
-  'prop:linkAnchor'?: CfpbCardBreakout['linkAnchor'];
+  'prop:linkAnchor'?: CfpbCardBreakout['linkAnchor'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbCheckboxIconProps = {
-  /**  */
-  borderless?: CfpbCheckboxIcon['borderless'];
-  /**  */
-  checked?: CfpbCheckboxIcon['checked'];
-  /**  */
-  disabled?: CfpbCheckboxIcon['disabled'];
-  /**  */
-  validation?: CfpbCheckboxIcon['validation'];
+  /** Whether the checkbox has a border or not. */
+  borderless?: CfpbCheckboxIcon['borderless'] | undefined;
+  /** Whether the checkbox is checked or not. */
+  checked?: CfpbCheckboxIcon['checked'] | undefined;
+  /** Whether the checkbox is disabled or not. */
+  disabled?: CfpbCheckboxIcon['disabled'] | undefined;
+  /** Validation style: error, warning, success. */
+  validation?: CfpbCheckboxIcon['validation'] | undefined;
 };
 
 export type CfpbCheckboxIconSolidJsProps = {
-  /**  */
-  'prop:borderless'?: CfpbCheckboxIcon['borderless'];
-  /**  */
-  'prop:checked'?: CfpbCheckboxIcon['checked'];
-  /**  */
-  'prop:disabled'?: CfpbCheckboxIcon['disabled'];
-  /**  */
-  'prop:validation'?: CfpbCheckboxIcon['validation'];
+  /** Whether the checkbox has a border or not. */
+  'prop:borderless'?: CfpbCheckboxIcon['borderless'] | undefined;
+  /** Whether the checkbox is checked or not. */
+  'prop:checked'?: CfpbCheckboxIcon['checked'] | undefined;
+  /** Whether the checkbox is disabled or not. */
+  'prop:disabled'?: CfpbCheckboxIcon['disabled'] | undefined;
+  /** Validation style: error, warning, success. */
+  'prop:validation'?: CfpbCheckboxIcon['validation'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbExpandableProps = {
-  /**  */
-  open?: CfpbExpandable['isExpanded'];
-  /**  */
-  isExpanded?: CfpbExpandable['isExpanded'];
+  /** Whether the expandable is expanded or not. */
+  open?: CfpbExpandable['isExpanded'] | undefined;
+  /** Whether the expandable is expanded or not. */
+  isExpanded?: CfpbExpandable['isExpanded'] | undefined;
 
   /** The expandable started expanding. */
-  onexpandbegin?: (e: CustomEvent) => void;
+  onexpandbegin?: ((e: CustomEvent) => void) | undefined;
   /** The expandable finshed expanding. */
-  onexpandend?: (e: CustomEvent) => void;
+  onexpandend?: ((e: CustomEvent) => void) | undefined;
   /** The expandables started collapsing. */
-  oncollapsebegin?: (e: CustomEvent) => void;
+  oncollapsebegin?: ((e: CustomEvent) => void) | undefined;
   /** The expandables finished collapsing. */
-  oncollapseend?: (e: CustomEvent) => void;
+  oncollapseend?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbExpandableSolidJsProps = {
-  /**  */
-  'bool:open'?: CfpbExpandable['isExpanded'];
-  /**  */
-  'prop:isExpanded'?: CfpbExpandable['isExpanded'];
+  /** Whether the expandable is expanded or not. */
+  'bool:open'?: CfpbExpandable['isExpanded'] | undefined;
+  /** Whether the expandable is expanded or not. */
+  'prop:isExpanded'?: CfpbExpandable['isExpanded'] | undefined;
   /** The expandable started expanding. */
-  'on:expandbegin'?: (e: CustomEvent) => void;
+  'on:expandbegin'?: ((e: CustomEvent) => void) | undefined;
   /** The expandable finshed expanding. */
-  'on:expandend'?: (e: CustomEvent) => void;
+  'on:expandend'?: ((e: CustomEvent) => void) | undefined;
   /** The expandables started collapsing. */
-  'on:collapsebegin'?: (e: CustomEvent) => void;
+  'on:collapsebegin'?: ((e: CustomEvent) => void) | undefined;
   /** The expandables finished collapsing. */
-  'on:collapseend'?: (e: CustomEvent) => void;
+  'on:collapseend'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFileUploadProps = {
   /**  */
-  accept?: CfpbFileUpload['accept'];
+  accept?: CfpbFileUpload['accept'] | undefined;
   /**  */
-  isDetailHidden?: CfpbFileUpload['isDetailHidden'];
+  isDetailHidden?: CfpbFileUpload['isDetailHidden'] | undefined;
   /**  */
-  fileName?: CfpbFileUpload['fileName'];
+  fileName?: CfpbFileUpload['fileName'] | undefined;
   /**  */
-  files?: CfpbFileUpload['files'];
+  files?: CfpbFileUpload['files'] | undefined;
 
   /**  */
-  'onfile-change'?: (e: CustomEvent) => void;
+  'onfile-change'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbFileUploadSolidJsProps = {
   /**  */
-  'prop:accept'?: CfpbFileUpload['accept'];
+  'prop:accept'?: CfpbFileUpload['accept'] | undefined;
   /**  */
-  'prop:isDetailHidden'?: CfpbFileUpload['isDetailHidden'];
+  'prop:isDetailHidden'?: CfpbFileUpload['isDetailHidden'] | undefined;
   /**  */
-  'prop:fileName'?: CfpbFileUpload['fileName'];
+  'prop:fileName'?: CfpbFileUpload['fileName'] | undefined;
   /**  */
-  'prop:files'?: CfpbFileUpload['files'];
+  'prop:files'?: CfpbFileUpload['files'] | undefined;
   /**  */
-  'on:file-change'?: (e: CustomEvent) => void;
+  'on:file-change'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFlagUsaProps = {};
 
 export type CfpbFlagUsaSolidJsProps = {
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFormAlertProps = {
-  /**  */
-  validation?: CfpbFormAlert['validation'];
+  /** Validation style: error, warning, success. */
+  validation?: CfpbFormAlert['validation'] | undefined;
 };
 
 export type CfpbFormAlertSolidJsProps = {
-  /**  */
-  'prop:validation'?: CfpbFormAlert['validation'];
+  /** Validation style: error, warning, success. */
+  'prop:validation'?: CfpbFormAlert['validation'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFormChoiceProps = {
-  /**  */
-  checked?: CfpbFormChoice['checked'];
-  /**  */
-  disabled?: CfpbFormChoice['disabled'];
-  /**  */
-  large?: CfpbFormChoice['large'];
-  /**  */
-  validation?: CfpbFormChoice['validation'];
-  /**  */
-  type?: CfpbFormChoice['type'];
-  /**  */
-  name?: CfpbFormChoice['name'];
-  /**  */
-  value?: CfpbFormChoice['value'];
+  /** Whether the choice is checked or not. */
+  checked?: CfpbFormChoice['checked'] | undefined;
+  /** Whether the choice is disabled or not. */
+  disabled?: CfpbFormChoice['disabled'] | undefined;
+  /** Whether the choice has a large target area. */
+  large?: CfpbFormChoice['large'] | undefined;
+  /** Validation style: error, warning, success. */
+  validation?: CfpbFormChoice['validation'] | undefined;
+  /** Choice type: checkbox or radio. */
+  type?: CfpbFormChoice['type'] | undefined;
+  /** The name within a form. */
+  name?: CfpbFormChoice['name'] | undefined;
+  /** The value to submit within a form. */
+  value?: CfpbFormChoice['value'] | undefined;
 
   /**  */
-  onchange?: (e: Event) => void;
+  onchange?: ((e: Event) => void) | undefined;
   /**  */
-  oninput?: (e: Event) => void;
+  oninput?: ((e: Event) => void) | undefined;
 };
 
 export type CfpbFormChoiceSolidJsProps = {
+  /** Whether the choice is checked or not. */
+  'prop:checked'?: CfpbFormChoice['checked'] | undefined;
+  /** Whether the choice is disabled or not. */
+  'prop:disabled'?: CfpbFormChoice['disabled'] | undefined;
+  /** Whether the choice has a large target area. */
+  'prop:large'?: CfpbFormChoice['large'] | undefined;
+  /** Validation style: error, warning, success. */
+  'prop:validation'?: CfpbFormChoice['validation'] | undefined;
+  /** Choice type: checkbox or radio. */
+  'prop:type'?: CfpbFormChoice['type'] | undefined;
+  /** The name within a form. */
+  'prop:name'?: CfpbFormChoice['name'] | undefined;
+  /** The value to submit within a form. */
+  'prop:value'?: CfpbFormChoice['value'] | undefined;
   /**  */
-  'prop:checked'?: CfpbFormChoice['checked'];
+  'on:change'?: ((e: Event) => void) | undefined;
   /**  */
-  'prop:disabled'?: CfpbFormChoice['disabled'];
-  /**  */
-  'prop:large'?: CfpbFormChoice['large'];
-  /**  */
-  'prop:validation'?: CfpbFormChoice['validation'];
-  /**  */
-  'prop:type'?: CfpbFormChoice['type'];
-  /**  */
-  'prop:name'?: CfpbFormChoice['name'];
-  /**  */
-  'prop:value'?: CfpbFormChoice['value'];
-  /**  */
-  'on:change'?: (e: Event) => void;
-  /**  */
-  'on:input'?: (e: Event) => void;
+  'on:input'?: ((e: Event) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFormSearchInputProps = {
+  /** Whether the input is disabled or not. */
+  disabled?: CfpbFormSearchInput['disabled'] | undefined;
+  /** Validation style: error, warning, success. */
+  validation?: CfpbFormSearchInput['validation'] | undefined;
+  /** The aria-label for the input. */
+  label?: CfpbFormSearchInput['label'] | undefined;
+  /** The name within a form. */
+  name?: CfpbFormSearchInput['name'] | undefined;
   /**  */
-  disabled?: CfpbFormSearchInput['disabled'];
-  /**  */
-  validation?: CfpbFormSearchInput['validation'];
-  /**  */
-  label?: CfpbFormSearchInput['label'];
-  /**  */
-  name?: CfpbFormSearchInput['name'];
-  /**  */
-  title?: CfpbFormSearchInput['title'];
-  /**  */
-  value?: CfpbFormSearchInput['value'];
-  /**  */
-  maxlength?: CfpbFormSearchInput['maxlength'];
-  /**  */
-  placeholder?: CfpbFormSearchInput['placeholder'];
-  /**  */
-  'aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'];
-  /**  */
-  ariaLabelInput?: CfpbFormSearchInput['ariaLabelInput'];
-  /**  */
-  'aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'];
-  /**  */
-  ariaLabelButton?: CfpbFormSearchInput['ariaLabelButton'];
-  /**  */
-  borderless?: CfpbFormSearchInput['borderless'];
+  title?: CfpbFormSearchInput['title'] | undefined;
+  /** The value within the input. */
+  value?: CfpbFormSearchInput['value'] | undefined;
+  /** The maximum characters allowed in the input. */
+  maxlength?: CfpbFormSearchInput['maxlength'] | undefined;
+  /** The placeholder value. */
+  placeholder?: CfpbFormSearchInput['placeholder'] | undefined;
+  /** aria-label for input. */
+  'aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'] | undefined;
+  /** aria-label for input. */
+  ariaLabelInput?: CfpbFormSearchInput['ariaLabelInput'] | undefined;
+  /** aria-label for button. */
+  'aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'] | undefined;
+  /** aria-label for button. */
+  ariaLabelButton?: CfpbFormSearchInput['ariaLabelButton'] | undefined;
+  /** Whether the input has a border or not. */
+  borderless?: CfpbFormSearchInput['borderless'] | undefined;
 
   /**  */
-  'onenter-down'?: (e: CustomEvent) => void;
+  'onenter-down'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  onblur?: (e: Event) => void;
+  onblur?: ((e: Event) => void) | undefined;
   /**  */
-  onclear?: (e: CustomEvent) => void;
+  onclear?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbFormSearchInputSolidJsProps = {
+  /** Whether the input is disabled or not. */
+  'prop:disabled'?: CfpbFormSearchInput['disabled'] | undefined;
+  /** Validation style: error, warning, success. */
+  'prop:validation'?: CfpbFormSearchInput['validation'] | undefined;
+  /** The aria-label for the input. */
+  'prop:label'?: CfpbFormSearchInput['label'] | undefined;
+  /** The name within a form. */
+  'prop:name'?: CfpbFormSearchInput['name'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbFormSearchInput['disabled'];
+  'prop:title'?: CfpbFormSearchInput['title'] | undefined;
+  /** The value within the input. */
+  'prop:value'?: CfpbFormSearchInput['value'] | undefined;
+  /** The maximum characters allowed in the input. */
+  'prop:maxlength'?: CfpbFormSearchInput['maxlength'] | undefined;
+  /** The placeholder value. */
+  'prop:placeholder'?: CfpbFormSearchInput['placeholder'] | undefined;
+  /** aria-label for input. */
+  'attr:aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'] | undefined;
+  /** aria-label for input. */
+  'prop:ariaLabelInput'?: CfpbFormSearchInput['ariaLabelInput'] | undefined;
+  /** aria-label for button. */
+  'attr:aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'] | undefined;
+  /** aria-label for button. */
+  'prop:ariaLabelButton'?: CfpbFormSearchInput['ariaLabelButton'] | undefined;
+  /** Whether the input has a border or not. */
+  'prop:borderless'?: CfpbFormSearchInput['borderless'] | undefined;
   /**  */
-  'prop:validation'?: CfpbFormSearchInput['validation'];
+  'on:enter-down'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'prop:label'?: CfpbFormSearchInput['label'];
+  'on:blur'?: ((e: Event) => void) | undefined;
   /**  */
-  'prop:name'?: CfpbFormSearchInput['name'];
-  /**  */
-  'prop:title'?: CfpbFormSearchInput['title'];
-  /**  */
-  'prop:value'?: CfpbFormSearchInput['value'];
-  /**  */
-  'prop:maxlength'?: CfpbFormSearchInput['maxlength'];
-  /**  */
-  'prop:placeholder'?: CfpbFormSearchInput['placeholder'];
-  /**  */
-  'attr:aria-label-input'?: CfpbFormSearchInput['ariaLabelInput'];
-  /**  */
-  'prop:ariaLabelInput'?: CfpbFormSearchInput['ariaLabelInput'];
-  /**  */
-  'attr:aria-label-button'?: CfpbFormSearchInput['ariaLabelButton'];
-  /**  */
-  'prop:ariaLabelButton'?: CfpbFormSearchInput['ariaLabelButton'];
-  /**  */
-  'prop:borderless'?: CfpbFormSearchInput['borderless'];
-  /**  */
-  'on:enter-down'?: (e: CustomEvent) => void;
-  /**  */
-  'on:blur'?: (e: Event) => void;
-  /**  */
-  'on:clear'?: (e: CustomEvent) => void;
+  'on:clear'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbFormSearchProps = {
+  /** Whether the choice is disabled or not. */
+  disabled?: CfpbFormSearch['disabled'] | undefined;
+  /** Validation style: error, warning, success. */
+  validation?: CfpbFormSearch['validation'] | undefined;
+  /** The aria-label for the input. */
+  label?: CfpbFormSearch['label'] | undefined;
+  /** The name within a form. */
+  name?: CfpbFormSearch['name'] | undefined;
   /**  */
-  disabled?: CfpbFormSearch['disabled'];
+  title?: CfpbFormSearch['title'] | undefined;
+  /** The value within the input. */
+  value?: CfpbFormSearch['value'] | undefined;
+  /** The maximum characters allowed in the input. */
+  maxlength?: CfpbFormSearch['maxlength'] | undefined;
+  /** The placeholder value. */
+  placeholder?: CfpbFormSearch['placeholder'] | undefined;
+  /** aria-label for input. */
+  'aria-label-input'?: CfpbFormSearch['ariaLabelInput'] | undefined;
+  /** aria-label for input. */
+  ariaLabelInput?: CfpbFormSearch['ariaLabelInput'] | undefined;
+  /** aria-label for button. */
+  'aria-label-button'?: CfpbFormSearch['ariaLabelButton'] | undefined;
+  /** aria-label for button. */
+  ariaLabelButton?: CfpbFormSearch['ariaLabelButton'] | undefined;
   /**  */
-  validation?: CfpbFormSearch['validation'];
+  searchlist?: CfpbFormSearch['searchList'] | undefined;
   /**  */
-  label?: CfpbFormSearch['label'];
-  /**  */
-  name?: CfpbFormSearch['name'];
-  /**  */
-  title?: CfpbFormSearch['title'];
-  /**  */
-  value?: CfpbFormSearch['value'];
-  /**  */
-  maxlength?: CfpbFormSearch['maxlength'];
-  /**  */
-  placeholder?: CfpbFormSearch['placeholder'];
-  /**  */
-  'aria-label-input'?: CfpbFormSearch['ariaLabelInput'];
-  /**  */
-  ariaLabelInput?: CfpbFormSearch['ariaLabelInput'];
-  /**  */
-  'aria-label-button'?: CfpbFormSearch['ariaLabelButton'];
-  /**  */
-  ariaLabelButton?: CfpbFormSearch['ariaLabelButton'];
-  /**  */
-  searchlist?: CfpbFormSearch['searchList'];
-  /**  */
-  searchList?: CfpbFormSearch['searchList'];
+  searchList?: CfpbFormSearch['searchList'] | undefined;
 };
 
 export type CfpbFormSearchSolidJsProps = {
+  /** Whether the choice is disabled or not. */
+  'prop:disabled'?: CfpbFormSearch['disabled'] | undefined;
+  /** Validation style: error, warning, success. */
+  'prop:validation'?: CfpbFormSearch['validation'] | undefined;
+  /** The aria-label for the input. */
+  'prop:label'?: CfpbFormSearch['label'] | undefined;
+  /** The name within a form. */
+  'prop:name'?: CfpbFormSearch['name'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbFormSearch['disabled'];
+  'prop:title'?: CfpbFormSearch['title'] | undefined;
+  /** The value within the input. */
+  'prop:value'?: CfpbFormSearch['value'] | undefined;
+  /** The maximum characters allowed in the input. */
+  'prop:maxlength'?: CfpbFormSearch['maxlength'] | undefined;
+  /** The placeholder value. */
+  'prop:placeholder'?: CfpbFormSearch['placeholder'] | undefined;
+  /** aria-label for input. */
+  'attr:aria-label-input'?: CfpbFormSearch['ariaLabelInput'] | undefined;
+  /** aria-label for input. */
+  'prop:ariaLabelInput'?: CfpbFormSearch['ariaLabelInput'] | undefined;
+  /** aria-label for button. */
+  'attr:aria-label-button'?: CfpbFormSearch['ariaLabelButton'] | undefined;
+  /** aria-label for button. */
+  'prop:ariaLabelButton'?: CfpbFormSearch['ariaLabelButton'] | undefined;
   /**  */
-  'prop:validation'?: CfpbFormSearch['validation'];
+  'attr:searchlist'?: CfpbFormSearch['searchList'] | undefined;
   /**  */
-  'prop:label'?: CfpbFormSearch['label'];
-  /**  */
-  'prop:name'?: CfpbFormSearch['name'];
-  /**  */
-  'prop:title'?: CfpbFormSearch['title'];
-  /**  */
-  'prop:value'?: CfpbFormSearch['value'];
-  /**  */
-  'prop:maxlength'?: CfpbFormSearch['maxlength'];
-  /**  */
-  'prop:placeholder'?: CfpbFormSearch['placeholder'];
-  /**  */
-  'attr:aria-label-input'?: CfpbFormSearch['ariaLabelInput'];
-  /**  */
-  'prop:ariaLabelInput'?: CfpbFormSearch['ariaLabelInput'];
-  /**  */
-  'attr:aria-label-button'?: CfpbFormSearch['ariaLabelButton'];
-  /**  */
-  'prop:ariaLabelButton'?: CfpbFormSearch['ariaLabelButton'];
-  /**  */
-  'attr:searchlist'?: CfpbFormSearch['searchList'];
-  /**  */
-  'prop:searchList'?: CfpbFormSearch['searchList'];
+  'prop:searchList'?: CfpbFormSearch['searchList'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbIconTextProps = {
+  /** Apply disabled styles or not. */
+  disabled?: CfpbIconText['disabled'] | undefined;
+  /** The name of the icon on the left. */
+  'icon-left'?: CfpbIconText['iconLeft'] | undefined;
+  /** The name of the icon on the left. */
+  iconLeft?: CfpbIconText['iconLeft'] | undefined;
+  /** The name of the icon on the right. */
+  'icon-right'?: CfpbIconText['iconRight'] | undefined;
+  /** The name of the icon on the right. */
+  iconRight?: CfpbIconText['iconRight'] | undefined;
+  /** Whether the left icon spins or not. */
+  'icon-left-spin'?: CfpbIconText['isIconLeftSpin'] | undefined;
+  /** Whether the left icon spins or not. */
+  isIconLeftSpin?: CfpbIconText['isIconLeftSpin'] | undefined;
+  /** Whether the right icon spins or not. */
+  'icon-right-spin'?: CfpbIconText['isIconRightSpin'] | undefined;
+  /** Whether the right icon spins or not. */
+  isIconRightSpin?: CfpbIconText['isIconRightSpin'] | undefined;
+  /** If true, render a divider. */
+  'has-div'?: CfpbIconText['hasDiv'] | undefined;
+  /** If true, render a divider. */
+  hasDiv?: CfpbIconText['hasDiv'] | undefined;
+  /** "all" for all screen sizes, "tablet-up", for tablet and above, "none", for only on hover on tablet and above. */
+  underline?: CfpbIconText['underline'] | undefined;
   /**  */
-  disabled?: CfpbIconText['disabled'];
+  'mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'] | undefined;
   /**  */
-  'icon-left'?: CfpbIconText['iconLeft'];
+  mobileIconAlignEnd?: CfpbIconText['mobileIconAlignEnd'] | undefined;
   /**  */
-  iconLeft?: CfpbIconText['iconLeft'];
-  /**  */
-  'icon-right'?: CfpbIconText['iconRight'];
-  /**  */
-  iconRight?: CfpbIconText['iconRight'];
-  /**  */
-  'icon-left-spin'?: CfpbIconText['isIconLeftSpin'];
-  /**  */
-  isIconLeftSpin?: CfpbIconText['isIconLeftSpin'];
-  /**  */
-  'icon-right-spin'?: CfpbIconText['isIconRightSpin'];
-  /**  */
-  isIconRightSpin?: CfpbIconText['isIconRightSpin'];
-  /**  */
-  'has-div'?: CfpbIconText['hasDiv'];
-  /**  */
-  hasDiv?: CfpbIconText['hasDiv'];
-  /**  */
-  underline?: CfpbIconText['underline'];
-  /**  */
-  'mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'];
-  /**  */
-  mobileIconAlignEnd?: CfpbIconText['mobileIconAlignEnd'];
-  /**  */
-  inline?: CfpbIconText['inline'];
+  inline?: CfpbIconText['inline'] | undefined;
+  /** If true render an underline at mobile. */
+  mobileUnderline?: CfpbIconText['mobileUnderline'] | undefined;
 };
 
 export type CfpbIconTextSolidJsProps = {
+  /** Apply disabled styles or not. */
+  'prop:disabled'?: CfpbIconText['disabled'] | undefined;
+  /** The name of the icon on the left. */
+  'attr:icon-left'?: CfpbIconText['iconLeft'] | undefined;
+  /** The name of the icon on the left. */
+  'prop:iconLeft'?: CfpbIconText['iconLeft'] | undefined;
+  /** The name of the icon on the right. */
+  'attr:icon-right'?: CfpbIconText['iconRight'] | undefined;
+  /** The name of the icon on the right. */
+  'prop:iconRight'?: CfpbIconText['iconRight'] | undefined;
+  /** Whether the left icon spins or not. */
+  'attr:icon-left-spin'?: CfpbIconText['isIconLeftSpin'] | undefined;
+  /** Whether the left icon spins or not. */
+  'prop:isIconLeftSpin'?: CfpbIconText['isIconLeftSpin'] | undefined;
+  /** Whether the right icon spins or not. */
+  'attr:icon-right-spin'?: CfpbIconText['isIconRightSpin'] | undefined;
+  /** Whether the right icon spins or not. */
+  'prop:isIconRightSpin'?: CfpbIconText['isIconRightSpin'] | undefined;
+  /** If true, render a divider. */
+  'bool:has-div'?: CfpbIconText['hasDiv'] | undefined;
+  /** If true, render a divider. */
+  'prop:hasDiv'?: CfpbIconText['hasDiv'] | undefined;
+  /** "all" for all screen sizes, "tablet-up", for tablet and above, "none", for only on hover on tablet and above. */
+  'prop:underline'?: CfpbIconText['underline'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbIconText['disabled'];
+  'bool:mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'] | undefined;
   /**  */
-  'attr:icon-left'?: CfpbIconText['iconLeft'];
+  'prop:mobileIconAlignEnd'?: CfpbIconText['mobileIconAlignEnd'] | undefined;
   /**  */
-  'prop:iconLeft'?: CfpbIconText['iconLeft'];
-  /**  */
-  'attr:icon-right'?: CfpbIconText['iconRight'];
-  /**  */
-  'prop:iconRight'?: CfpbIconText['iconRight'];
-  /**  */
-  'bool:icon-left-spin'?: CfpbIconText['isIconLeftSpin'];
-  /**  */
-  'prop:isIconLeftSpin'?: CfpbIconText['isIconLeftSpin'];
-  /**  */
-  'bool:icon-right-spin'?: CfpbIconText['isIconRightSpin'];
-  /**  */
-  'prop:isIconRightSpin'?: CfpbIconText['isIconRightSpin'];
-  /**  */
-  'bool:has-div'?: CfpbIconText['hasDiv'];
-  /**  */
-  'prop:hasDiv'?: CfpbIconText['hasDiv'];
-  /**  */
-  'prop:underline'?: CfpbIconText['underline'];
-  /**  */
-  'bool:mobile-icon-align-end'?: CfpbIconText['mobileIconAlignEnd'];
-  /**  */
-  'prop:mobileIconAlignEnd'?: CfpbIconText['mobileIconAlignEnd'];
-  /**  */
-  'prop:inline'?: CfpbIconText['inline'];
+  'prop:inline'?: CfpbIconText['inline'] | undefined;
+  /** If true render an underline at mobile. */
+  'prop:mobileUnderline'?: CfpbIconText['mobileUnderline'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbIconProps = {
-  /**  */
-  name?: CfpbIcon['name'];
-  /**  */
-  spin?: CfpbIcon['spin'];
+  /** The name of the icon, based off the SVG filename. */
+  name?: CfpbIcon['name'] | undefined;
+  /** Whether the icon spins, for loading and in progress states. */
+  spin?: CfpbIcon['spin'] | undefined;
 };
 
 export type CfpbIconSolidJsProps = {
-  /**  */
-  'prop:name'?: CfpbIcon['name'];
-  /**  */
-  'prop:spin'?: CfpbIcon['spin'];
+  /** The name of the icon, based off the SVG filename. */
+  'prop:name'?: CfpbIcon['name'] | undefined;
+  /** Whether the icon spins, for loading and in progress states. */
+  'prop:spin'?: CfpbIcon['spin'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbLabelProps = {
-  /**  */
-  block?: CfpbLabel['block'];
-  /**  */
-  for?: CfpbLabel['for'];
+  /** Whether this has block or inline helper text. */
+  block?: CfpbLabel['block'] | undefined;
+  /** Associate the label with an ID elsewhere. */
+  for?: CfpbLabel['for'] | undefined;
 };
 
 export type CfpbLabelSolidJsProps = {
-  /**  */
-  'prop:block'?: CfpbLabel['block'];
-  /**  */
-  'prop:for'?: CfpbLabel['for'];
+  /** Whether this has block or inline helper text. */
+  'prop:block'?: CfpbLabel['block'] | undefined;
+  /** Associate the label with an ID elsewhere. */
+  'prop:for'?: CfpbLabel['for'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbLinkProps = {
-  /**  */
-  'link-variant'?: CfpbLink['linkVariant'];
-  /**  */
-  linkVariant?: CfpbLink['linkVariant'];
-  /**  */
-  size?: CfpbLink['size'];
-  /**  */
-  'color-theme'?: CfpbLink['colorTheme'];
-  /**  */
-  colorTheme?: CfpbLink['colorTheme'];
-  /**  */
-  'no-underline'?: CfpbLink['noUnderline'];
-  /**  */
-  noUnderline?: CfpbLink['noUnderline'];
-  /**  */
-  'no-top-border'?: CfpbLink['noTopBorder'];
-  /**  */
-  noTopBorder?: CfpbLink['noTopBorder'];
-  /**  */
-  inline?: CfpbLink['inline'];
-  /**  */
-  linkText?: CfpbLink['linkText'];
-  /**  */
-  linkAttributes?: CfpbLink['linkAttributes'];
+  /** The configuration of the link. EG external, download, nav-left, nav-right */
+  'link-variant'?: CfpbLink['linkVariant'] | undefined;
+  /** The configuration of the link. EG external, download, nav-left, nav-right */
+  linkVariant?: CfpbLink['linkVariant'] | undefined;
+  /** The size of the link, EG, h4. When omitted it's standard link size. */
+  size?: CfpbLink['size'] | undefined;
+  /** Color theme of the link. Takes `dark`. */
+  'color-theme'?: CfpbLink['colorTheme'] | undefined;
+  /** Color theme of the link. Takes `dark`. */
+  colorTheme?: CfpbLink['colorTheme'] | undefined;
+  /** Removes the underline (other than hover). */
+  'no-underline'?: CfpbLink['noUnderline'] | undefined;
+  /** Removes the underline (other than hover). */
+  noUnderline?: CfpbLink['noUnderline'] | undefined;
+  /** Removes the top border on mobile. */
+  'no-top-border'?: CfpbLink['noTopBorder'] | undefined;
+  /** Removes the top border on mobile. */
+  noTopBorder?: CfpbLink['noTopBorder'] | undefined;
+  /** Whether the link is an inline link. */
+  inline?: CfpbLink['inline'] | undefined;
+  /** The text of the slotted link. Read off the slotted `<a>`. */
+  linkText?: CfpbLink['linkText'] | undefined;
+  /** The attributes on the slotted link. Read off the slotted `<a>`. */
+  linkAttributes?: CfpbLink['linkAttributes'] | undefined;
 };
 
 export type CfpbLinkSolidJsProps = {
-  /**  */
-  'attr:link-variant'?: CfpbLink['linkVariant'];
-  /**  */
-  'prop:linkVariant'?: CfpbLink['linkVariant'];
-  /**  */
-  'prop:size'?: CfpbLink['size'];
-  /**  */
-  'attr:color-theme'?: CfpbLink['colorTheme'];
-  /**  */
-  'prop:colorTheme'?: CfpbLink['colorTheme'];
-  /**  */
-  'bool:no-underline'?: CfpbLink['noUnderline'];
-  /**  */
-  'prop:noUnderline'?: CfpbLink['noUnderline'];
-  /**  */
-  'bool:no-top-border'?: CfpbLink['noTopBorder'];
-  /**  */
-  'prop:noTopBorder'?: CfpbLink['noTopBorder'];
-  /**  */
-  'prop:inline'?: CfpbLink['inline'];
-  /**  */
-  'prop:linkText'?: CfpbLink['linkText'];
-  /**  */
-  'prop:linkAttributes'?: CfpbLink['linkAttributes'];
+  /** The configuration of the link. EG external, download, nav-left, nav-right */
+  'attr:link-variant'?: CfpbLink['linkVariant'] | undefined;
+  /** The configuration of the link. EG external, download, nav-left, nav-right */
+  'prop:linkVariant'?: CfpbLink['linkVariant'] | undefined;
+  /** The size of the link, EG, h4. When omitted it's standard link size. */
+  'prop:size'?: CfpbLink['size'] | undefined;
+  /** Color theme of the link. Takes `dark`. */
+  'attr:color-theme'?: CfpbLink['colorTheme'] | undefined;
+  /** Color theme of the link. Takes `dark`. */
+  'prop:colorTheme'?: CfpbLink['colorTheme'] | undefined;
+  /** Removes the underline (other than hover). */
+  'bool:no-underline'?: CfpbLink['noUnderline'] | undefined;
+  /** Removes the underline (other than hover). */
+  'prop:noUnderline'?: CfpbLink['noUnderline'] | undefined;
+  /** Removes the top border on mobile. */
+  'bool:no-top-border'?: CfpbLink['noTopBorder'] | undefined;
+  /** Removes the top border on mobile. */
+  'prop:noTopBorder'?: CfpbLink['noTopBorder'] | undefined;
+  /** Whether the link is an inline link. */
+  'prop:inline'?: CfpbLink['inline'] | undefined;
+  /** The text of the slotted link. Read off the slotted `<a>`. */
+  'prop:linkText'?: CfpbLink['linkText'] | undefined;
+  /** The attributes on the slotted link. Read off the slotted `<a>`. */
+  'prop:linkAttributes'?: CfpbLink['linkAttributes'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbListItemProps = {};
 
 export type CfpbListItemSolidJsProps = {
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbListProps = {
-  /**  */
-  childdata?: CfpbList['childData'];
-  /**  */
-  childData?: CfpbList['childData'];
-  /**  */
-  'color-theme'?: CfpbList['colorTheme'];
-  /**  */
-  colorTheme?: CfpbList['colorTheme'];
+  /** Structure data to create child components. */
+  childdata?: CfpbList['childData'] | undefined;
+  /** Structure data to create child components. */
+  childData?: CfpbList['childData'] | undefined;
+  /** The color theme of the link. Takes 'dark'. */
+  'color-theme'?: CfpbList['colorTheme'] | undefined;
+  /** The color theme of the link. Takes 'dark'. */
+  colorTheme?: CfpbList['colorTheme'] | undefined;
 
   /** An item was clicked. */
-  'onitem-click'?: (e: CustomEvent) => void;
+  'onitem-click'?: ((e: CustomEvent) => void) | undefined;
   /** An item was added to the group. */
-  'onitem-added'?: (e: CustomEvent) => void;
+  'onitem-added'?: ((e: CustomEvent) => void) | undefined;
   /** An item was removed to the group. */
-  'onitem-removed'?: (e: CustomEvent) => void;
+  'onitem-removed'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbListSolidJsProps = {
-  /**  */
-  'attr:childdata'?: CfpbList['childData'];
-  /**  */
-  'prop:childData'?: CfpbList['childData'];
-  /**  */
-  'attr:color-theme'?: CfpbList['colorTheme'];
-  /**  */
-  'prop:colorTheme'?: CfpbList['colorTheme'];
+  /** Structure data to create child components. */
+  'attr:childdata'?: CfpbList['childData'] | undefined;
+  /** Structure data to create child components. */
+  'prop:childData'?: CfpbList['childData'] | undefined;
+  /** The color theme of the link. Takes 'dark'. */
+  'attr:color-theme'?: CfpbList['colorTheme'] | undefined;
+  /** The color theme of the link. Takes 'dark'. */
+  'prop:colorTheme'?: CfpbList['colorTheme'] | undefined;
   /** An item was clicked. */
-  'on:item-click'?: (e: CustomEvent) => void;
+  'on:item-click'?: ((e: CustomEvent) => void) | undefined;
   /** An item was added to the group. */
-  'on:item-added'?: (e: CustomEvent) => void;
+  'on:item-added'?: ((e: CustomEvent) => void) | undefined;
   /** An item was removed to the group. */
-  'on:item-removed'?: (e: CustomEvent) => void;
+  'on:item-removed'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbListboxItemProps = {
+  /** Choice type: plain, check, checkbox. */
+  type?: CfpbListboxItem['type'] | undefined;
+  /** Whether the list item is checked or not. */
+  checked?: CfpbListboxItem['checked'] | undefined;
+  /** Whether the list item is selectable or not. */
+  disabled?: CfpbListboxItem['disabled'] | undefined;
+  /** Whether the list item is hidden or not. */
+  hidden?: CfpbListboxItem['hidden'] | undefined;
   /**  */
-  type?: CfpbListboxItem['type'];
+  href?: CfpbListboxItem['href'] | undefined;
   /**  */
-  checked?: CfpbListboxItem['checked'];
-  /**  */
-  disabled?: CfpbListboxItem['disabled'];
-  /**  */
-  hidden?: CfpbListboxItem['hidden'];
-  /**  */
-  href?: CfpbListboxItem['href'];
-  /**  */
-  value?: CfpbListboxItem['value'];
+  value?: CfpbListboxItem['value'] | undefined;
 
   /**  */
-  'onitem-click'?: (e: CustomEvent) => void;
+  'onitem-click'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbListboxItemSolidJsProps = {
+  /** Choice type: plain, check, checkbox. */
+  'prop:type'?: CfpbListboxItem['type'] | undefined;
+  /** Whether the list item is checked or not. */
+  'prop:checked'?: CfpbListboxItem['checked'] | undefined;
+  /** Whether the list item is selectable or not. */
+  'prop:disabled'?: CfpbListboxItem['disabled'] | undefined;
+  /** Whether the list item is hidden or not. */
+  'prop:hidden'?: CfpbListboxItem['hidden'] | undefined;
   /**  */
-  'prop:type'?: CfpbListboxItem['type'];
+  'prop:href'?: CfpbListboxItem['href'] | undefined;
   /**  */
-  'prop:checked'?: CfpbListboxItem['checked'];
+  'prop:value'?: CfpbListboxItem['value'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbListboxItem['disabled'];
-  /**  */
-  'prop:hidden'?: CfpbListboxItem['hidden'];
-  /**  */
-  'prop:href'?: CfpbListboxItem['href'];
-  /**  */
-  'prop:value'?: CfpbListboxItem['value'];
-  /**  */
-  'on:item-click'?: (e: CustomEvent) => void;
+  'on:item-click'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbListboxProps = {
-  /**  */
-  childdata?: CfpbListbox['childData'];
-  /**  */
-  childData?: CfpbListbox['childData'];
-  /**  */
-  multiple?: CfpbListbox['multiple'];
-  /**  */
-  type?: CfpbListbox['type'];
-  /**  */
-  'aria-label'?: CfpbListbox['ariaLabel'];
-  /**  */
-  ariaLabel?: CfpbListbox['ariaLabel'];
+  /** Structure data to create child components. */
+  childdata?: CfpbListbox['childData'] | undefined;
+  /** Structure data to create child components. */
+  childData?: CfpbListbox['childData'] | undefined;
+  /** Whether the select supports multiple or not. */
+  multiple?: CfpbListbox['multiple'] | undefined;
+  /** List item type: plain, check, or checkbox. */
+  type?: CfpbListbox['type'] | undefined;
+  /** The aria-label for the list container. */
+  'aria-label'?: CfpbListbox['ariaLabel'] | undefined;
+  /** The aria-label for the list container. */
+  ariaLabel?: CfpbListbox['ariaLabel'] | undefined;
 
   /**  */
-  'onitems-ready'?: (e: CustomEvent) => void;
+  'onitems-ready'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'onitem-click'?: (e: CustomEvent) => void;
+  'onitem-click'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'onitems-filter'?: (e: CustomEvent) => void;
+  'onitems-filter'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbListboxSolidJsProps = {
+  /** Structure data to create child components. */
+  'attr:childdata'?: CfpbListbox['childData'] | undefined;
+  /** Structure data to create child components. */
+  'prop:childData'?: CfpbListbox['childData'] | undefined;
+  /** Whether the select supports multiple or not. */
+  'prop:multiple'?: CfpbListbox['multiple'] | undefined;
+  /** List item type: plain, check, or checkbox. */
+  'prop:type'?: CfpbListbox['type'] | undefined;
+  /** The aria-label for the list container. */
+  'attr:aria-label'?: CfpbListbox['ariaLabel'] | undefined;
+  /** The aria-label for the list container. */
+  'prop:ariaLabel'?: CfpbListbox['ariaLabel'] | undefined;
   /**  */
-  'attr:childdata'?: CfpbListbox['childData'];
+  'on:items-ready'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'prop:childData'?: CfpbListbox['childData'];
+  'on:item-click'?: ((e: CustomEvent) => void) | undefined;
   /**  */
-  'prop:multiple'?: CfpbListbox['multiple'];
-  /**  */
-  'prop:type'?: CfpbListbox['type'];
-  /**  */
-  'attr:aria-label'?: CfpbListbox['ariaLabel'];
-  /**  */
-  'prop:ariaLabel'?: CfpbListbox['ariaLabel'];
-  /**  */
-  'on:items-ready'?: (e: CustomEvent) => void;
-  /**  */
-  'on:item-click'?: (e: CustomEvent) => void;
-  /**  */
-  'on:items-filter'?: (e: CustomEvent) => void;
+  'on:items-filter'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbPaginationProps = {
+  /** The currently selected page. */
+  value?: CfpbPagination['currentPage'] | undefined;
+  /** The currently selected page. */
+  currentPage?: CfpbPagination['currentPage'] | undefined;
+  /** The maximum page count. */
+  max?: CfpbPagination['maxPage'] | undefined;
+  /** The maximum page count. */
+  maxPage?: CfpbPagination['maxPage'] | undefined;
   /**  */
-  value?: CfpbPagination['currentPage'];
-  /**  */
-  currentPage?: CfpbPagination['currentPage'];
-  /**  */
-  max?: CfpbPagination['maxPage'];
-  /**  */
-  maxPage?: CfpbPagination['maxPage'];
-  /**  */
-  lang?: CfpbPagination['lang'];
+  lang?: CfpbPagination['lang'] | undefined;
 
   /**  */
-  'onpage-change'?: (e: CustomEvent) => void;
+  'onpage-change'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbPaginationSolidJsProps = {
+  /** The currently selected page. */
+  'attr:value'?: CfpbPagination['currentPage'] | undefined;
+  /** The currently selected page. */
+  'prop:currentPage'?: CfpbPagination['currentPage'] | undefined;
+  /** The maximum page count. */
+  'attr:max'?: CfpbPagination['maxPage'] | undefined;
+  /** The maximum page count. */
+  'prop:maxPage'?: CfpbPagination['maxPage'] | undefined;
   /**  */
-  'attr:value'?: CfpbPagination['currentPage'];
+  'prop:lang'?: CfpbPagination['lang'] | undefined;
   /**  */
-  'prop:currentPage'?: CfpbPagination['currentPage'];
-  /**  */
-  'attr:max'?: CfpbPagination['maxPage'];
-  /**  */
-  'prop:maxPage'?: CfpbPagination['maxPage'];
-  /**  */
-  'prop:lang'?: CfpbPagination['lang'];
-  /**  */
-  'on:page-change'?: (e: CustomEvent) => void;
+  'on:page-change'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbSelectProps = {
+  /** Whether the select supports multiple or not. */
+  multiple?: CfpbSelect['multiple'] | undefined;
   /**  */
-  multiple?: CfpbSelect['multiple'];
+  disabled?: CfpbSelect['disabled'] | undefined;
   /**  */
-  disabled?: CfpbSelect['disabled'];
+  validation?: CfpbSelect['validation'] | undefined;
   /**  */
-  validation?: CfpbSelect['validation'];
+  label?: CfpbSelect['label'] | undefined;
   /**  */
-  label?: CfpbSelect['label'];
+  name?: CfpbSelect['name'] | undefined;
   /**  */
-  name?: CfpbSelect['name'];
+  title?: CfpbSelect['title'] | undefined;
   /**  */
-  title?: CfpbSelect['title'];
+  value?: CfpbSelect['value'] | undefined;
   /**  */
-  value?: CfpbSelect['value'];
+  maxlength?: CfpbSelect['maxlength'] | undefined;
   /**  */
-  maxlength?: CfpbSelect['maxlength'];
+  placeholder?: CfpbSelect['placeholder'] | undefined;
   /**  */
-  placeholder?: CfpbSelect['placeholder'];
+  'aria-label-input'?: CfpbSelect['ariaLabelInput'] | undefined;
   /**  */
-  'aria-label-input'?: CfpbSelect['ariaLabelInput'];
+  ariaLabelInput?: CfpbSelect['ariaLabelInput'] | undefined;
   /**  */
-  ariaLabelInput?: CfpbSelect['ariaLabelInput'];
+  'aria-label-list'?: CfpbSelect['ariaLabelList'] | undefined;
   /**  */
-  'aria-label-list'?: CfpbSelect['ariaLabelList'];
+  ariaLabelList?: CfpbSelect['ariaLabelList'] | undefined;
+  /** Whether the select is expanded or not. */
+  open?: CfpbSelect['isExpanded'] | undefined;
+  /** Whether the select is expanded or not. */
+  isExpanded?: CfpbSelect['isExpanded'] | undefined;
+  /** Text of selected options. */
+  selectedtexts?: CfpbSelect['selectedTexts'] | undefined;
+  /** Text of selected options. */
+  selectedTexts?: CfpbSelect['selectedTexts'] | undefined;
   /**  */
-  ariaLabelList?: CfpbSelect['ariaLabelList'];
+  optionlist?: CfpbSelect['optionList'] | undefined;
   /**  */
-  open?: CfpbSelect['isExpanded'];
+  optionList?: CfpbSelect['optionList'] | undefined;
   /**  */
-  isExpanded?: CfpbSelect['isExpanded'];
-  /**  */
-  selectedtexts?: CfpbSelect['selectedTexts'];
-  /**  */
-  selectedTexts?: CfpbSelect['selectedTexts'];
-  /**  */
-  optionlist?: CfpbSelect['optionList'];
-  /**  */
-  optionList?: CfpbSelect['optionList'];
-  /**  */
-  options?: CfpbSelect['options'];
+  options?: CfpbSelect['options'] | undefined;
 
   /**  */
-  onexpandbegin?: (e: CustomEvent) => void;
+  onexpandbegin?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbSelectSolidJsProps = {
+  /** Whether the select supports multiple or not. */
+  'prop:multiple'?: CfpbSelect['multiple'] | undefined;
   /**  */
-  'prop:multiple'?: CfpbSelect['multiple'];
+  'prop:disabled'?: CfpbSelect['disabled'] | undefined;
   /**  */
-  'prop:disabled'?: CfpbSelect['disabled'];
+  'prop:validation'?: CfpbSelect['validation'] | undefined;
   /**  */
-  'prop:validation'?: CfpbSelect['validation'];
+  'prop:label'?: CfpbSelect['label'] | undefined;
   /**  */
-  'prop:label'?: CfpbSelect['label'];
+  'prop:name'?: CfpbSelect['name'] | undefined;
   /**  */
-  'prop:name'?: CfpbSelect['name'];
+  'prop:title'?: CfpbSelect['title'] | undefined;
   /**  */
-  'prop:title'?: CfpbSelect['title'];
+  'prop:value'?: CfpbSelect['value'] | undefined;
   /**  */
-  'prop:value'?: CfpbSelect['value'];
+  'prop:maxlength'?: CfpbSelect['maxlength'] | undefined;
   /**  */
-  'prop:maxlength'?: CfpbSelect['maxlength'];
+  'prop:placeholder'?: CfpbSelect['placeholder'] | undefined;
   /**  */
-  'prop:placeholder'?: CfpbSelect['placeholder'];
+  'attr:aria-label-input'?: CfpbSelect['ariaLabelInput'] | undefined;
   /**  */
-  'attr:aria-label-input'?: CfpbSelect['ariaLabelInput'];
+  'prop:ariaLabelInput'?: CfpbSelect['ariaLabelInput'] | undefined;
   /**  */
-  'prop:ariaLabelInput'?: CfpbSelect['ariaLabelInput'];
+  'attr:aria-label-list'?: CfpbSelect['ariaLabelList'] | undefined;
   /**  */
-  'attr:aria-label-list'?: CfpbSelect['ariaLabelList'];
+  'prop:ariaLabelList'?: CfpbSelect['ariaLabelList'] | undefined;
+  /** Whether the select is expanded or not. */
+  'bool:open'?: CfpbSelect['isExpanded'] | undefined;
+  /** Whether the select is expanded or not. */
+  'prop:isExpanded'?: CfpbSelect['isExpanded'] | undefined;
+  /** Text of selected options. */
+  'attr:selectedtexts'?: CfpbSelect['selectedTexts'] | undefined;
+  /** Text of selected options. */
+  'prop:selectedTexts'?: CfpbSelect['selectedTexts'] | undefined;
   /**  */
-  'prop:ariaLabelList'?: CfpbSelect['ariaLabelList'];
+  'attr:optionlist'?: CfpbSelect['optionList'] | undefined;
   /**  */
-  'bool:open'?: CfpbSelect['isExpanded'];
+  'prop:optionList'?: CfpbSelect['optionList'] | undefined;
   /**  */
-  'prop:isExpanded'?: CfpbSelect['isExpanded'];
+  'prop:options'?: CfpbSelect['options'] | undefined;
   /**  */
-  'attr:selectedtexts'?: CfpbSelect['selectedTexts'];
-  /**  */
-  'prop:selectedTexts'?: CfpbSelect['selectedTexts'];
-  /**  */
-  'attr:optionlist'?: CfpbSelect['optionList'];
-  /**  */
-  'prop:optionList'?: CfpbSelect['optionList'];
-  /**  */
-  'prop:options'?: CfpbSelect['options'];
-  /**  */
-  'on:expandbegin'?: (e: CustomEvent) => void;
+  'on:expandbegin'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbTagFilterProps = {
+  /** Associate the label with an ID elsewhere. */
+  for?: CfpbTagFilter['for'] | undefined;
   /**  */
-  for?: CfpbTagFilter['for'];
-  /**  */
-  value?: CfpbTagFilter['value'];
+  value?: CfpbTagFilter['value'] | undefined;
 
   /**  */
-  'onitem-click'?: (e: CustomEvent) => void;
+  'onitem-click'?: ((e: CustomEvent) => void) | undefined;
 };
 
 export type CfpbTagFilterSolidJsProps = {
+  /** Associate the label with an ID elsewhere. */
+  'prop:for'?: CfpbTagFilter['for'] | undefined;
   /**  */
-  'prop:for'?: CfpbTagFilter['for'];
+  'prop:value'?: CfpbTagFilter['value'] | undefined;
   /**  */
-  'prop:value'?: CfpbTagFilter['value'];
-  /**  */
-  'on:item-click'?: (e: CustomEvent) => void;
+  'on:item-click'?: ((e: CustomEvent) => void) | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbTagTopicProps = {
-  /**  */
-  href?: CfpbTagTopic['href'];
-  /**  */
-  siblingofjumplink?: CfpbTagTopic['siblingOfJumpLink'];
-  /**  */
-  siblingOfJumpLink?: CfpbTagTopic['siblingOfJumpLink'];
+  /** href attribute, if this is a topic link. */
+  href?: CfpbTagTopic['href'] | undefined;
+  /** Whether the preceding sibling is a jump link or not. */
+  siblingofjumplink?: CfpbTagTopic['siblingOfJumpLink'] | undefined;
+  /** Whether the preceding sibling is a jump link or not. */
+  siblingOfJumpLink?: CfpbTagTopic['siblingOfJumpLink'] | undefined;
 };
 
 export type CfpbTagTopicSolidJsProps = {
-  /**  */
-  'prop:href'?: CfpbTagTopic['href'];
-  /**  */
-  'bool:siblingofjumplink'?: CfpbTagTopic['siblingOfJumpLink'];
-  /**  */
-  'prop:siblingOfJumpLink'?: CfpbTagTopic['siblingOfJumpLink'];
+  /** href attribute, if this is a topic link. */
+  'prop:href'?: CfpbTagTopic['href'] | undefined;
+  /** Whether the preceding sibling is a jump link or not. */
+  'bool:siblingofjumplink'?: CfpbTagTopic['siblingOfJumpLink'] | undefined;
+  /** Whether the preceding sibling is a jump link or not. */
+  'prop:siblingOfJumpLink'?: CfpbTagTopic['siblingOfJumpLink'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CfpbTaglineProps = {
-  /**  */
-  islarge?: CfpbTagline['isLarge'];
-  /**  */
-  isLarge?: CfpbTagline['isLarge'];
+  /** Whether to use the larger tagline appearance. */
+  islarge?: CfpbTagline['isLarge'] | undefined;
+  /** Whether to use the larger tagline appearance. */
+  isLarge?: CfpbTagline['isLarge'] | undefined;
 };
 
 export type CfpbTaglineSolidJsProps = {
-  /**  */
-  'bool:islarge'?: CfpbTagline['isLarge'];
-  /**  */
-  'prop:isLarge'?: CfpbTagline['isLarge'];
+  /** Whether to use the larger tagline appearance. */
+  'bool:islarge'?: CfpbTagline['isLarge'] | undefined;
+  /** Whether to use the larger tagline appearance. */
+  'prop:isLarge'?: CfpbTagline['isLarge'] | undefined;
 
   /** Set the innerHTML of the element */
-  innerHTML?: string;
+  innerHTML?: string | undefined;
   /** Set the textContent of the element */
-  textContent?: string | number;
+  textContent?: string | number | undefined;
 };
 
 export type CustomElements = {
@@ -1057,8 +1061,8 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `status`: undefined
-   * - `message`: undefined
+   * - `status`: The alert status: error, success, warning, info, loading.
+   * - `message`: The message heading on an alert.
    * - `icon`: undefined (property only) (readonly)
    *
    * ## Slots
@@ -1082,18 +1086,18 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `type`: undefined
-   * - `href`: undefined
-   * - `disabled`: undefined
-   * - `variant`: undefined
-   * - `icon-left`/`iconLeft`: undefined
-   * - `icon-right`/`iconRight`: undefined
-   * - `icon-left-spin`/`isIconLeftSpin`: undefined
-   * - `icon-right-spin`/`isIconRightSpin`: undefined
-   * - `full-on-mobile`/`fullOnMobile`: undefined
-   * - `flush-left`/`flushLeft`: undefined
-   * - `flush-right`/`flushRight`: undefined
-   * - `style-as-link`/`styleAsLink`: undefined
+   * - `type`: The button type: button, submit, or reset.
+   * - `href`: The URL to link to (makes the button a link).
+   * - `disabled`: Whether the button is disabled or not.
+   * - `variant`: The button variant: primary, secondary, or warning.
+   * - `icon-left`/`iconLeft`: The name of the icon on the left.
+   * - `icon-right`/`iconRight`: The name of the icon on the right.
+   * - `icon-left-spin`/`isIconLeftSpin`: Whether the left icon spins or not.
+   * - `icon-right-spin`/`isIconRightSpin`: Whether the right icon spins or not.
+   * - `full-on-mobile`/`fullOnMobile`: Whether to be width 100% on mobile.
+   * - `flush-left`/`flushLeft`: Whether button is not rounded on left.
+   * - `flush-right`/`flushRight`: Whether button is not rounded on right.
+   * - `style-as-link`/`styleAsLink`: Style the button as a link.
    * - `dividerColorVar`: undefined (property only) (readonly)
    *
    * ## Slots
@@ -1143,10 +1147,10 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `borderless`: undefined
-   * - `checked`: undefined
-   * - `disabled`: undefined
-   * - `validation`: undefined
+   * - `borderless`: Whether the checkbox has a border or not.
+   * - `checked`: Whether the checkbox is checked or not.
+   * - `disabled`: Whether the checkbox is disabled or not.
+   * - `validation`: Validation style: error, warning, success.
    *
    * ## Methods
    *
@@ -1169,7 +1173,7 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `open`/`isExpanded`: undefined
+   * - `open`/`isExpanded`: Whether the expandable is expanded or not.
    *
    * ## Events
    *
@@ -1227,7 +1231,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-file-upload.': Partial<
+  'cfpb-file-upload': Partial<
     CfpbFileUploadProps & BaseProps<CfpbFileUpload> & BaseEvents
   >;
 
@@ -1251,7 +1255,7 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `validation`: undefined
+   * - `validation`: Validation style: error, warning, success.
    * - `icon`: undefined (property only) (readonly)
    *
    * ## Slots
@@ -1277,13 +1281,13 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `checked`: undefined
-   * - `disabled`: undefined
-   * - `large`: undefined
-   * - `validation`: undefined
-   * - `type`: undefined
-   * - `name`: undefined
-   * - `value`: undefined
+   * - `checked`: Whether the choice is checked or not.
+   * - `disabled`: Whether the choice is disabled or not.
+   * - `large`: Whether the choice has a large target area.
+   * - `validation`: Validation style: error, warning, success.
+   * - `type`: Choice type: checkbox or radio.
+   * - `name`: The name within a form.
+   * - `value`: The value to submit within a form.
    *
    * ## Events
    *
@@ -1316,17 +1320,17 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `disabled`: undefined
-   * - `validation`: undefined
-   * - `label`: undefined
-   * - `name`: undefined
+   * - `disabled`: Whether the input is disabled or not.
+   * - `validation`: Validation style: error, warning, success.
+   * - `label`: The aria-label for the input.
+   * - `name`: The name within a form.
    * - `title`: undefined
-   * - `value`: undefined
-   * - `maxlength`: undefined
-   * - `placeholder`: undefined
-   * - `aria-label-input`/`ariaLabelInput`: undefined
-   * - `aria-label-button`/`ariaLabelButton`: undefined
-   * - `borderless`: undefined
+   * - `value`: The value within the input.
+   * - `maxlength`: The maximum characters allowed in the input.
+   * - `placeholder`: The placeholder value.
+   * - `aria-label-input`/`ariaLabelInput`: aria-label for input.
+   * - `aria-label-button`/`ariaLabelButton`: aria-label for button.
+   * - `borderless`: Whether the input has a border or not.
    *
    * ## Events
    *
@@ -1354,16 +1358,16 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `disabled`: undefined
-   * - `validation`: undefined
-   * - `label`: undefined
-   * - `name`: undefined
+   * - `disabled`: Whether the choice is disabled or not.
+   * - `validation`: Validation style: error, warning, success.
+   * - `label`: The aria-label for the input.
+   * - `name`: The name within a form.
    * - `title`: undefined
-   * - `value`: undefined
-   * - `maxlength`: undefined
-   * - `placeholder`: undefined
-   * - `aria-label-input`/`ariaLabelInput`: undefined
-   * - `aria-label-button`/`ariaLabelButton`: undefined
+   * - `value`: The value within the input.
+   * - `maxlength`: The maximum characters allowed in the input.
+   * - `placeholder`: The placeholder value.
+   * - `aria-label-input`/`ariaLabelInput`: aria-label for input.
+   * - `aria-label-button`/`ariaLabelButton`: aria-label for button.
    * - `searchlist`/`searchList`: undefined
    * - `isSearchDisabled`: undefined (property only) (readonly)
    * - `isOverMaxLength`: undefined (property only) (readonly)
@@ -1392,15 +1396,16 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `disabled`: undefined
-   * - `icon-left`/`iconLeft`: undefined
-   * - `icon-right`/`iconRight`: undefined
-   * - `icon-left-spin`/`isIconLeftSpin`: undefined
-   * - `icon-right-spin`/`isIconRightSpin`: undefined
-   * - `has-div`/`hasDiv`: undefined
-   * - `underline`: undefined
+   * - `disabled`: Apply disabled styles or not.
+   * - `icon-left`/`iconLeft`: The name of the icon on the left.
+   * - `icon-right`/`iconRight`: The name of the icon on the right.
+   * - `icon-left-spin`/`isIconLeftSpin`: Whether the left icon spins or not.
+   * - `icon-right-spin`/`isIconRightSpin`: Whether the right icon spins or not.
+   * - `has-div`/`hasDiv`: If true, render a divider.
+   * - `underline`: "all" for all screen sizes, "tablet-up", for tablet and above, "none", for only on hover on tablet and above.
    * - `mobile-icon-align-end`/`mobileIconAlignEnd`: undefined
    * - `inline`: undefined
+   * - `mobileUnderline`: If true render an underline at mobile. (property only)
    *
    * ## Slots
    *
@@ -1425,8 +1430,8 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `name`: undefined
-   * - `spin`: undefined
+   * - `name`: The name of the icon, based off the SVG filename.
+   * - `spin`: Whether the icon spins, for loading and in progress states.
    *
    * ## Methods
    *
@@ -1443,8 +1448,8 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `block`: undefined
-   * - `for`: undefined
+   * - `block`: Whether this has block or inline helper text.
+   * - `for`: Associate the label with an ID elsewhere.
    *
    * ## Slots
    *
@@ -1459,7 +1464,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-label.': Partial<CfpbLabelProps & BaseProps<CfpbLabel> & BaseEvents>;
+  'cfpb-label': Partial<CfpbLabelProps & BaseProps<CfpbLabel> & BaseEvents>;
 
   /**
    *
@@ -1468,14 +1473,14 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `link-variant`/`linkVariant`: undefined
-   * - `size`: undefined
-   * - `color-theme`/`colorTheme`: undefined
-   * - `no-underline`/`noUnderline`: undefined
-   * - `no-top-border`/`noTopBorder`: undefined
-   * - `inline`: undefined
-   * - `linkText`: undefined (property only)
-   * - `linkAttributes`: undefined (property only)
+   * - `link-variant`/`linkVariant`: The configuration of the link. EG external, download, nav-left, nav-right
+   * - `size`: The size of the link, EG, h4. When omitted it's standard link size.
+   * - `color-theme`/`colorTheme`: Color theme of the link. Takes `dark`.
+   * - `no-underline`/`noUnderline`: Removes the underline (other than hover).
+   * - `no-top-border`/`noTopBorder`: Removes the top border on mobile.
+   * - `inline`: Whether the link is an inline link.
+   * - `linkText`: The text of the slotted link. Read off the slotted `<a>`. (property only)
+   * - `linkAttributes`: The attributes on the slotted link. Read off the slotted `<a>`. (property only)
    *
    * ## Slots
    *
@@ -1490,7 +1495,7 @@ export type CustomElements = {
    * - `init() => void`: undefined
    * - `renderLink() => void`: undefined
    */
-  'cfpb-link.': Partial<CfpbLinkProps & BaseProps<CfpbLink> & BaseEvents>;
+  'cfpb-link': Partial<CfpbLinkProps & BaseProps<CfpbLink> & BaseEvents>;
 
   /**
    *
@@ -1507,7 +1512,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-list-item.': Partial<
+  'cfpb-list-item': Partial<
     CfpbListItemProps & BaseProps<CfpbListItem> & BaseEvents
   >;
 
@@ -1518,8 +1523,8 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `childdata`/`childData`: undefined
-   * - `color-theme`/`colorTheme`: undefined
+   * - `childdata`/`childData`: Structure data to create child components.
+   * - `color-theme`/`colorTheme`: The color theme of the link. Takes 'dark'.
    * - `items`: undefined (property only) (readonly)
    *
    * ## Events
@@ -1545,7 +1550,7 @@ export type CustomElements = {
    * - `removeItem(item: HTMLElement) => void`: Remove a filter item from the light and dark DOM.
    * - `init() => void`: undefined
    */
-  'cfpb-list.': Partial<CfpbListProps & BaseProps<CfpbList> & BaseEvents>;
+  'cfpb-list': Partial<CfpbListProps & BaseProps<CfpbList> & BaseEvents>;
 
   /**
    *
@@ -1554,10 +1559,10 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `type`: undefined
-   * - `checked`: undefined
-   * - `disabled`: undefined
-   * - `hidden`: undefined
+   * - `type`: Choice type: plain, check, checkbox.
+   * - `checked`: Whether the list item is checked or not.
+   * - `disabled`: Whether the list item is selectable or not.
+   * - `hidden`: Whether the list item is hidden or not.
    * - `href`: undefined
    * - `value`: undefined (property only)
    *
@@ -1579,7 +1584,7 @@ export type CustomElements = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-listbox-item.': Partial<
+  'cfpb-listbox-item': Partial<
     CfpbListboxItemProps & BaseProps<CfpbListboxItem> & BaseEvents
   >;
 
@@ -1590,10 +1595,10 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `childdata`/`childData`: undefined
-   * - `multiple`: undefined
-   * - `type`: undefined
-   * - `aria-label`/`ariaLabel`: undefined
+   * - `childdata`/`childData`: Structure data to create child components.
+   * - `multiple`: Whether the select supports multiple or not.
+   * - `type`: List item type: plain, check, or checkbox.
+   * - `aria-label`/`ariaLabel`: The aria-label for the list container.
    * - `items`: undefined (property only) (readonly)
    * - `checkedItems`: undefined (property only) (readonly)
    * - `visibleItems`: undefined (property only) (readonly)
@@ -1624,7 +1629,7 @@ export type CustomElements = {
    * Pass -1 to move focus to the list container (no active item).
    * - `init() => void`: undefined
    */
-  'cfpb-listbox.': Partial<
+  'cfpb-listbox': Partial<
     CfpbListboxProps & BaseProps<CfpbListbox> & BaseEvents
   >;
 
@@ -1635,8 +1640,8 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `value`/`currentPage`: undefined
-   * - `max`/`maxPage`: undefined
+   * - `value`/`currentPage`: The currently selected page.
+   * - `max`/`maxPage`: The maximum page count.
    * - `lang`: undefined
    * - `isAtMin`: undefined (property only) (readonly)
    * - `isAtMax`: undefined (property only) (readonly)
@@ -1670,7 +1675,7 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `multiple`: undefined
+   * - `multiple`: Whether the select supports multiple or not.
    * - `disabled`: undefined
    * - `validation`: undefined
    * - `label`: undefined
@@ -1681,8 +1686,8 @@ export type CustomElements = {
    * - `placeholder`: undefined
    * - `aria-label-input`/`ariaLabelInput`: undefined
    * - `aria-label-list`/`ariaLabelList`: undefined
-   * - `open`/`isExpanded`: undefined
-   * - `selectedtexts`/`selectedTexts`: undefined
+   * - `open`/`isExpanded`: Whether the select is expanded or not.
+   * - `selectedtexts`/`selectedTexts`: Text of selected options.
    * - `optionlist`/`optionList`: undefined
    * - `options`: undefined (property only)
    *
@@ -1713,7 +1718,7 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `for`: undefined
+   * - `for`: Associate the label with an ID elsewhere.
    * - `value`: undefined
    *
    * ## Events
@@ -1746,8 +1751,8 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `href`: undefined
-   * - `siblingofjumplink`/`siblingOfJumpLink`: undefined
+   * - `href`: href attribute, if this is a topic link.
+   * - `siblingofjumplink`/`siblingOfJumpLink`: Whether the preceding sibling is a jump link or not.
    *
    * ## Slots
    *
@@ -1762,7 +1767,7 @@ export type CustomElements = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  'cfpb-tag-topic.': Partial<
+  'cfpb-tag-topic': Partial<
     CfpbTagTopicProps & BaseProps<CfpbTagTopic> & BaseEvents
   >;
 
@@ -1773,7 +1778,7 @@ export type CustomElements = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `islarge`/`isLarge`: undefined
+   * - `islarge`/`isLarge`: Whether to use the larger tagline appearance.
    *
    * ## Slots
    *
@@ -1800,8 +1805,8 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `status`: undefined
-   * - `message`: undefined
+   * - `status`: The alert status: error, success, warning, info, loading.
+   * - `message`: The message heading on an alert.
    * - `icon`: undefined (property only) (readonly)
    *
    * ## Slots
@@ -1827,18 +1832,18 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `type`: undefined
-   * - `href`: undefined
-   * - `disabled`: undefined
-   * - `variant`: undefined
-   * - `icon-left`/`iconLeft`: undefined
-   * - `icon-right`/`iconRight`: undefined
-   * - `icon-left-spin`/`isIconLeftSpin`: undefined
-   * - `icon-right-spin`/`isIconRightSpin`: undefined
-   * - `full-on-mobile`/`fullOnMobile`: undefined
-   * - `flush-left`/`flushLeft`: undefined
-   * - `flush-right`/`flushRight`: undefined
-   * - `style-as-link`/`styleAsLink`: undefined
+   * - `type`: The button type: button, submit, or reset.
+   * - `href`: The URL to link to (makes the button a link).
+   * - `disabled`: Whether the button is disabled or not.
+   * - `variant`: The button variant: primary, secondary, or warning.
+   * - `icon-left`/`iconLeft`: The name of the icon on the left.
+   * - `icon-right`/`iconRight`: The name of the icon on the right.
+   * - `icon-left-spin`/`isIconLeftSpin`: Whether the left icon spins or not.
+   * - `icon-right-spin`/`isIconRightSpin`: Whether the right icon spins or not.
+   * - `full-on-mobile`/`fullOnMobile`: Whether to be width 100% on mobile.
+   * - `flush-left`/`flushLeft`: Whether button is not rounded on left.
+   * - `flush-right`/`flushRight`: Whether button is not rounded on right.
+   * - `style-as-link`/`styleAsLink`: Style the button as a link.
    * - `dividerColorVar`: undefined (property only) (readonly)
    *
    * ## Slots
@@ -1896,10 +1901,10 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `borderless`: undefined
-   * - `checked`: undefined
-   * - `disabled`: undefined
-   * - `validation`: undefined
+   * - `borderless`: Whether the checkbox has a border or not.
+   * - `checked`: Whether the checkbox is checked or not.
+   * - `disabled`: Whether the checkbox is disabled or not.
+   * - `validation`: Validation style: error, warning, success.
    *
    * ## Methods
    *
@@ -1925,7 +1930,7 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `open`/`isExpanded`: undefined
+   * - `open`/`isExpanded`: Whether the expandable is expanded or not.
    *
    * ## Events
    *
@@ -1986,7 +1991,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-file-upload.': Partial<
+  'cfpb-file-upload': Partial<
     CfpbFileUploadProps &
       CfpbFileUploadSolidJsProps &
       BaseProps<CfpbFileUpload> &
@@ -2016,7 +2021,7 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `validation`: undefined
+   * - `validation`: Validation style: error, warning, success.
    * - `icon`: undefined (property only) (readonly)
    *
    * ## Slots
@@ -2045,13 +2050,13 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `checked`: undefined
-   * - `disabled`: undefined
-   * - `large`: undefined
-   * - `validation`: undefined
-   * - `type`: undefined
-   * - `name`: undefined
-   * - `value`: undefined
+   * - `checked`: Whether the choice is checked or not.
+   * - `disabled`: Whether the choice is disabled or not.
+   * - `large`: Whether the choice has a large target area.
+   * - `validation`: Validation style: error, warning, success.
+   * - `type`: Choice type: checkbox or radio.
+   * - `name`: The name within a form.
+   * - `value`: The value to submit within a form.
    *
    * ## Events
    *
@@ -2087,17 +2092,17 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `disabled`: undefined
-   * - `validation`: undefined
-   * - `label`: undefined
-   * - `name`: undefined
+   * - `disabled`: Whether the input is disabled or not.
+   * - `validation`: Validation style: error, warning, success.
+   * - `label`: The aria-label for the input.
+   * - `name`: The name within a form.
    * - `title`: undefined
-   * - `value`: undefined
-   * - `maxlength`: undefined
-   * - `placeholder`: undefined
-   * - `aria-label-input`/`ariaLabelInput`: undefined
-   * - `aria-label-button`/`ariaLabelButton`: undefined
-   * - `borderless`: undefined
+   * - `value`: The value within the input.
+   * - `maxlength`: The maximum characters allowed in the input.
+   * - `placeholder`: The placeholder value.
+   * - `aria-label-input`/`ariaLabelInput`: aria-label for input.
+   * - `aria-label-button`/`ariaLabelButton`: aria-label for button.
+   * - `borderless`: Whether the input has a border or not.
    *
    * ## Events
    *
@@ -2128,16 +2133,16 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `disabled`: undefined
-   * - `validation`: undefined
-   * - `label`: undefined
-   * - `name`: undefined
+   * - `disabled`: Whether the choice is disabled or not.
+   * - `validation`: Validation style: error, warning, success.
+   * - `label`: The aria-label for the input.
+   * - `name`: The name within a form.
    * - `title`: undefined
-   * - `value`: undefined
-   * - `maxlength`: undefined
-   * - `placeholder`: undefined
-   * - `aria-label-input`/`ariaLabelInput`: undefined
-   * - `aria-label-button`/`ariaLabelButton`: undefined
+   * - `value`: The value within the input.
+   * - `maxlength`: The maximum characters allowed in the input.
+   * - `placeholder`: The placeholder value.
+   * - `aria-label-input`/`ariaLabelInput`: aria-label for input.
+   * - `aria-label-button`/`ariaLabelButton`: aria-label for button.
    * - `searchlist`/`searchList`: undefined
    * - `isSearchDisabled`: undefined (property only) (readonly)
    * - `isOverMaxLength`: undefined (property only) (readonly)
@@ -2169,15 +2174,16 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `disabled`: undefined
-   * - `icon-left`/`iconLeft`: undefined
-   * - `icon-right`/`iconRight`: undefined
-   * - `icon-left-spin`/`isIconLeftSpin`: undefined
-   * - `icon-right-spin`/`isIconRightSpin`: undefined
-   * - `has-div`/`hasDiv`: undefined
-   * - `underline`: undefined
+   * - `disabled`: Apply disabled styles or not.
+   * - `icon-left`/`iconLeft`: The name of the icon on the left.
+   * - `icon-right`/`iconRight`: The name of the icon on the right.
+   * - `icon-left-spin`/`isIconLeftSpin`: Whether the left icon spins or not.
+   * - `icon-right-spin`/`isIconRightSpin`: Whether the right icon spins or not.
+   * - `has-div`/`hasDiv`: If true, render a divider.
+   * - `underline`: "all" for all screen sizes, "tablet-up", for tablet and above, "none", for only on hover on tablet and above.
    * - `mobile-icon-align-end`/`mobileIconAlignEnd`: undefined
    * - `inline`: undefined
+   * - `mobileUnderline`: If true render an underline at mobile. (property only)
    *
    * ## Slots
    *
@@ -2205,8 +2211,8 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `name`: undefined
-   * - `spin`: undefined
+   * - `name`: The name of the icon, based off the SVG filename.
+   * - `spin`: Whether the icon spins, for loading and in progress states.
    *
    * ## Methods
    *
@@ -2225,8 +2231,8 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `block`: undefined
-   * - `for`: undefined
+   * - `block`: Whether this has block or inline helper text.
+   * - `for`: Associate the label with an ID elsewhere.
    *
    * ## Slots
    *
@@ -2241,7 +2247,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-label.': Partial<
+  'cfpb-label': Partial<
     CfpbLabelProps & CfpbLabelSolidJsProps & BaseProps<CfpbLabel> & BaseEvents
   >;
 
@@ -2252,14 +2258,14 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `link-variant`/`linkVariant`: undefined
-   * - `size`: undefined
-   * - `color-theme`/`colorTheme`: undefined
-   * - `no-underline`/`noUnderline`: undefined
-   * - `no-top-border`/`noTopBorder`: undefined
-   * - `inline`: undefined
-   * - `linkText`: undefined (property only)
-   * - `linkAttributes`: undefined (property only)
+   * - `link-variant`/`linkVariant`: The configuration of the link. EG external, download, nav-left, nav-right
+   * - `size`: The size of the link, EG, h4. When omitted it's standard link size.
+   * - `color-theme`/`colorTheme`: Color theme of the link. Takes `dark`.
+   * - `no-underline`/`noUnderline`: Removes the underline (other than hover).
+   * - `no-top-border`/`noTopBorder`: Removes the top border on mobile.
+   * - `inline`: Whether the link is an inline link.
+   * - `linkText`: The text of the slotted link. Read off the slotted `<a>`. (property only)
+   * - `linkAttributes`: The attributes on the slotted link. Read off the slotted `<a>`. (property only)
    *
    * ## Slots
    *
@@ -2274,7 +2280,7 @@ export type CustomElementsSolidJs = {
    * - `init() => void`: undefined
    * - `renderLink() => void`: undefined
    */
-  'cfpb-link.': Partial<
+  'cfpb-link': Partial<
     CfpbLinkProps & CfpbLinkSolidJsProps & BaseProps<CfpbLink> & BaseEvents
   >;
 
@@ -2293,7 +2299,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-list-item.': Partial<
+  'cfpb-list-item': Partial<
     CfpbListItemProps &
       CfpbListItemSolidJsProps &
       BaseProps<CfpbListItem> &
@@ -2307,8 +2313,8 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `childdata`/`childData`: undefined
-   * - `color-theme`/`colorTheme`: undefined
+   * - `childdata`/`childData`: Structure data to create child components.
+   * - `color-theme`/`colorTheme`: The color theme of the link. Takes 'dark'.
    * - `items`: undefined (property only) (readonly)
    *
    * ## Events
@@ -2334,7 +2340,7 @@ export type CustomElementsSolidJs = {
    * - `removeItem(item: HTMLElement) => void`: Remove a filter item from the light and dark DOM.
    * - `init() => void`: undefined
    */
-  'cfpb-list.': Partial<
+  'cfpb-list': Partial<
     CfpbListProps & CfpbListSolidJsProps & BaseProps<CfpbList> & BaseEvents
   >;
 
@@ -2345,10 +2351,10 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `type`: undefined
-   * - `checked`: undefined
-   * - `disabled`: undefined
-   * - `hidden`: undefined
+   * - `type`: Choice type: plain, check, checkbox.
+   * - `checked`: Whether the list item is checked or not.
+   * - `disabled`: Whether the list item is selectable or not.
+   * - `hidden`: Whether the list item is hidden or not.
    * - `href`: undefined
    * - `value`: undefined (property only)
    *
@@ -2370,7 +2376,7 @@ export type CustomElementsSolidJs = {
    *
    * - `init() => void`: undefined
    */
-  'cfpb-listbox-item.': Partial<
+  'cfpb-listbox-item': Partial<
     CfpbListboxItemProps &
       CfpbListboxItemSolidJsProps &
       BaseProps<CfpbListboxItem> &
@@ -2384,10 +2390,10 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `childdata`/`childData`: undefined
-   * - `multiple`: undefined
-   * - `type`: undefined
-   * - `aria-label`/`ariaLabel`: undefined
+   * - `childdata`/`childData`: Structure data to create child components.
+   * - `multiple`: Whether the select supports multiple or not.
+   * - `type`: List item type: plain, check, or checkbox.
+   * - `aria-label`/`ariaLabel`: The aria-label for the list container.
    * - `items`: undefined (property only) (readonly)
    * - `checkedItems`: undefined (property only) (readonly)
    * - `visibleItems`: undefined (property only) (readonly)
@@ -2418,7 +2424,7 @@ export type CustomElementsSolidJs = {
    * Pass -1 to move focus to the list container (no active item).
    * - `init() => void`: undefined
    */
-  'cfpb-listbox.': Partial<
+  'cfpb-listbox': Partial<
     CfpbListboxProps &
       CfpbListboxSolidJsProps &
       BaseProps<CfpbListbox> &
@@ -2432,8 +2438,8 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `value`/`currentPage`: undefined
-   * - `max`/`maxPage`: undefined
+   * - `value`/`currentPage`: The currently selected page.
+   * - `max`/`maxPage`: The maximum page count.
    * - `lang`: undefined
    * - `isAtMin`: undefined (property only) (readonly)
    * - `isAtMax`: undefined (property only) (readonly)
@@ -2470,7 +2476,7 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `multiple`: undefined
+   * - `multiple`: Whether the select supports multiple or not.
    * - `disabled`: undefined
    * - `validation`: undefined
    * - `label`: undefined
@@ -2481,8 +2487,8 @@ export type CustomElementsSolidJs = {
    * - `placeholder`: undefined
    * - `aria-label-input`/`ariaLabelInput`: undefined
    * - `aria-label-list`/`ariaLabelList`: undefined
-   * - `open`/`isExpanded`: undefined
-   * - `selectedtexts`/`selectedTexts`: undefined
+   * - `open`/`isExpanded`: Whether the select is expanded or not.
+   * - `selectedtexts`/`selectedTexts`: Text of selected options.
    * - `optionlist`/`optionList`: undefined
    * - `options`: undefined (property only)
    *
@@ -2518,7 +2524,7 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `for`: undefined
+   * - `for`: Associate the label with an ID elsewhere.
    * - `value`: undefined
    *
    * ## Events
@@ -2554,8 +2560,8 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `href`: undefined
-   * - `siblingofjumplink`/`siblingOfJumpLink`: undefined
+   * - `href`: href attribute, if this is a topic link.
+   * - `siblingofjumplink`/`siblingOfJumpLink`: Whether the preceding sibling is a jump link or not.
    *
    * ## Slots
    *
@@ -2570,7 +2576,7 @@ export type CustomElementsSolidJs = {
    * - `focus() => void`: undefined
    * - `init() => void`: undefined
    */
-  'cfpb-tag-topic.': Partial<
+  'cfpb-tag-topic': Partial<
     CfpbTagTopicProps &
       CfpbTagTopicSolidJsProps &
       BaseProps<CfpbTagTopic> &
@@ -2584,7 +2590,7 @@ export type CustomElementsSolidJs = {
    *
    * Component attributes and properties that can be applied to the element or by using JavaScript.
    *
-   * - `islarge`/`isLarge`: undefined
+   * - `islarge`/`isLarge`: Whether to use the larger tagline appearance.
    *
    * ## Slots
    *

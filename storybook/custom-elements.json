@@ -25,7 +25,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -35,7 +38,6 @@
                 "text": "string"
               },
               "default": "'info'",
-              "description": "The alert status: error, success, warning, info, loading.",
               "attribute": "status"
             },
             {
@@ -46,7 +48,6 @@
                 "text": "string"
               },
               "default": "'Alert'",
-              "description": "The message heading on an alert.",
               "attribute": "message"
             }
           ],
@@ -57,7 +58,6 @@
                 "text": "string"
               },
               "default": "'info'",
-              "description": "The alert status: error, success, warning, info, loading.",
               "fieldName": "status"
             },
             {
@@ -66,7 +66,6 @@
                 "text": "string"
               },
               "default": "'Alert'",
-              "description": "The message heading on an alert.",
               "fieldName": "message"
             }
           ],
@@ -75,7 +74,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-alert",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-alert/index.js"
         }
       ],
       "exports": [
@@ -158,7 +158,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -168,7 +171,6 @@
                 "text": "string"
               },
               "default": "'button'",
-              "description": "The button type: button, submit, or reset.",
               "attribute": "type"
             },
             {
@@ -179,7 +181,6 @@
                 "text": "string"
               },
               "default": "'primary'",
-              "description": "The button variant: primary, secondary, or warning.",
               "attribute": "variant"
             },
             {
@@ -190,7 +191,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the button is disabled or not.",
               "attribute": "disabled",
               "reflects": true
             },
@@ -202,7 +202,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether to be width 100% on mobile.",
               "attribute": "full-on-mobile",
               "reflects": true
             },
@@ -214,7 +213,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Style the button as a link.",
               "attribute": "style-as-link",
               "reflects": true
             },
@@ -226,7 +224,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the left icon spins or not.",
               "attribute": "icon-left-spin"
             },
             {
@@ -237,7 +234,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the right icon spins or not.",
               "attribute": "icon-right-spin"
             },
             {
@@ -247,7 +243,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The URL to link to (makes the button a link).",
               "attribute": "href"
             },
             {
@@ -257,7 +252,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon on the left.",
               "attribute": "icon-left"
             },
             {
@@ -267,7 +261,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon on the right.",
               "attribute": "icon-right"
             },
             {
@@ -277,7 +270,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether button is not rounded on left.",
               "attribute": "flush-left",
               "reflects": true
             },
@@ -288,7 +280,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether button is not rounded on right.",
               "attribute": "flush-right",
               "reflects": true
             }
@@ -300,7 +291,6 @@
                 "text": "string"
               },
               "default": "'button'",
-              "description": "The button type: button, submit, or reset.",
               "fieldName": "type"
             },
             {
@@ -308,7 +298,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The URL to link to (makes the button a link).",
               "fieldName": "href"
             },
             {
@@ -317,7 +306,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the button is disabled or not.",
               "fieldName": "disabled"
             },
             {
@@ -326,7 +314,6 @@
                 "text": "string"
               },
               "default": "'primary'",
-              "description": "The button variant: primary, secondary, or warning.",
               "fieldName": "variant"
             },
             {
@@ -334,7 +321,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon on the left.",
               "fieldName": "iconLeft"
             },
             {
@@ -342,7 +328,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon on the right.",
               "fieldName": "iconRight"
             },
             {
@@ -351,7 +336,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the left icon spins or not.",
               "fieldName": "isIconLeftSpin"
             },
             {
@@ -360,7 +344,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the right icon spins or not.",
               "fieldName": "isIconRightSpin"
             },
             {
@@ -369,7 +352,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether to be width 100% on mobile.",
               "fieldName": "fullOnMobile"
             },
             {
@@ -377,7 +359,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether button is not rounded on left.",
               "fieldName": "flushLeft"
             },
             {
@@ -385,7 +366,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether button is not rounded on right.",
               "fieldName": "flushRight"
             },
             {
@@ -394,7 +374,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Style the button as a link.",
               "fieldName": "styleAsLink"
             }
           ],
@@ -403,7 +382,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-button",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-button/index.js"
         }
       ],
       "exports": [
@@ -435,7 +415,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -481,7 +464,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-card-breakout",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-card-breakout/index.js"
         }
       ],
       "exports": [
@@ -536,19 +520,31 @@
             },
             {
               "kind": "method",
-              "name": "mouseover"
+              "name": "mouseover",
+              "type": {
+                "text": "mouseover() => void"
+              }
             },
             {
               "kind": "method",
-              "name": "mouseleave"
+              "name": "mouseleave",
+              "type": {
+                "text": "mouseleave() => void"
+              }
             },
             {
               "kind": "method",
-              "name": "focus"
+              "name": "focus",
+              "type": {
+                "text": "focus() => void"
+              }
             },
             {
               "kind": "method",
-              "name": "blur"
+              "name": "blur",
+              "type": {
+                "text": "blur() => void"
+              }
             },
             {
               "kind": "method",
@@ -558,7 +554,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -568,7 +567,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the checkbox has a border or not.",
               "attribute": "borderless",
               "reflects": true
             },
@@ -580,7 +578,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the checkbox is checked or not.",
               "attribute": "checked",
               "reflects": true
             },
@@ -592,7 +589,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the checkbox is disabled or not.",
               "attribute": "disabled",
               "reflects": true
             },
@@ -604,7 +600,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Validation style: error, warning, success.",
               "attribute": "validation",
               "reflects": true
             }
@@ -616,7 +611,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the checkbox has a border or not.",
               "fieldName": "borderless"
             },
             {
@@ -625,7 +619,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the checkbox is checked or not.",
               "fieldName": "checked"
             },
             {
@@ -634,7 +627,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the checkbox is disabled or not.",
               "fieldName": "disabled"
             },
             {
@@ -643,7 +635,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Validation style: error, warning, success.",
               "fieldName": "validation"
             }
           ],
@@ -652,7 +643,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-checkbox-icon",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-checkbox-icon/index.js"
         }
       ],
       "exports": [
@@ -698,7 +690,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -707,8 +702,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
-              "description": "Whether the expandable is expanded or not.",
               "attribute": "open",
               "reflects": true
             }
@@ -749,8 +742,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
-              "description": "Whether the expandable is expanded or not.",
               "fieldName": "isExpanded"
             }
           ],
@@ -759,7 +750,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-expandable",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-expandable/index.js"
         }
       ],
       "exports": [
@@ -811,7 +803,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -872,8 +867,9 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-file-upload",
-          "customElement": true
+          "tagName": "cfpb-file-upload.",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-file-upload/index.js"
         }
       ],
       "exports": [
@@ -899,7 +895,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             }
           ],
           "superclass": {
@@ -907,7 +906,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-flag-usa",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-flag-usa/index.js"
         }
       ],
       "exports": [
@@ -944,7 +944,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -954,7 +957,6 @@
                 "text": "string"
               },
               "default": "'error'",
-              "description": "Validation style: error, warning, success.",
               "attribute": "validation"
             }
           ],
@@ -965,7 +967,6 @@
                 "text": "string"
               },
               "default": "'error'",
-              "description": "Validation style: error, warning, success.",
               "fieldName": "validation"
             }
           ],
@@ -974,7 +975,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-form-alert",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-alert/index.js"
         }
       ],
       "exports": [
@@ -1045,7 +1047,10 @@
             },
             {
               "kind": "method",
-              "name": "focus"
+              "name": "focus",
+              "type": {
+                "text": "focus() => void"
+              }
             },
             {
               "kind": "field",
@@ -1085,7 +1090,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -1095,7 +1103,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the choice is checked or not.",
               "attribute": "checked",
               "reflects": true
             },
@@ -1107,7 +1114,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the choice is disabled or not.",
               "attribute": "disabled"
             },
             {
@@ -1118,7 +1124,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the choice has a large target area.",
               "attribute": "large"
             },
             {
@@ -1129,7 +1134,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Validation style: error, warning, success.",
               "attribute": "validation"
             },
             {
@@ -1140,7 +1144,6 @@
                 "text": "string"
               },
               "default": "'checkbox'",
-              "description": "Choice type: checkbox or radio.",
               "attribute": "type"
             },
             {
@@ -1151,7 +1154,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The name within a form.",
               "attribute": "name"
             },
             {
@@ -1162,7 +1164,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The value to submit within a form.",
               "attribute": "value"
             }
           ],
@@ -1187,7 +1188,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the choice is checked or not.",
               "fieldName": "checked"
             },
             {
@@ -1196,7 +1196,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the choice is disabled or not.",
               "fieldName": "disabled"
             },
             {
@@ -1205,7 +1204,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the choice has a large target area.",
               "fieldName": "large"
             },
             {
@@ -1214,7 +1212,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Validation style: error, warning, success.",
               "fieldName": "validation"
             },
             {
@@ -1223,7 +1220,6 @@
                 "text": "string"
               },
               "default": "'checkbox'",
-              "description": "Choice type: checkbox or radio.",
               "fieldName": "type"
             },
             {
@@ -1232,7 +1228,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The name within a form.",
               "fieldName": "name"
             },
             {
@@ -1241,7 +1236,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The value to submit within a form.",
               "fieldName": "value"
             }
           ],
@@ -1250,7 +1244,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-form-choice",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-choice/index.js"
         }
       ],
       "exports": [
@@ -1315,12 +1310,18 @@
             },
             {
               "kind": "method",
-              "name": "focus"
+              "name": "focus",
+              "type": {
+                "text": "focus() => void"
+              }
             },
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -1330,7 +1331,6 @@
                 "text": "string"
               },
               "default": "'Search'",
-              "description": "The aria-label for the input.",
               "attribute": "label"
             },
             {
@@ -1341,7 +1341,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The name within a form.",
               "attribute": "name"
             },
             {
@@ -1362,7 +1361,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The value within the input.",
               "attribute": "value"
             },
             {
@@ -1373,7 +1371,6 @@
                 "text": "number"
               },
               "default": "75",
-              "description": "The maximum characters allowed in the input.",
               "attribute": "maxlength",
               "reflects": true
             },
@@ -1385,7 +1382,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The placeholder value.",
               "attribute": "placeholder"
             },
             {
@@ -1396,7 +1392,6 @@
                 "text": "string"
               },
               "default": "'Search input'",
-              "description": "aria-label for input.",
               "attribute": "aria-label-input"
             },
             {
@@ -1407,7 +1402,6 @@
                 "text": "string"
               },
               "default": "'Clear search'",
-              "description": "aria-label for button.",
               "attribute": "aria-label-button"
             },
             {
@@ -1418,7 +1412,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the input is disabled or not.",
               "attribute": "disabled",
               "reflects": true
             },
@@ -1430,7 +1423,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the input has a border or not.",
               "attribute": "borderless",
               "reflects": true
             },
@@ -1441,7 +1433,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "Validation style: error, warning, success.",
               "attribute": "validation",
               "reflects": true
             }
@@ -1473,7 +1464,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the input is disabled or not.",
               "fieldName": "disabled"
             },
             {
@@ -1481,7 +1471,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "Validation style: error, warning, success.",
               "fieldName": "validation"
             },
             {
@@ -1490,7 +1479,6 @@
                 "text": "string"
               },
               "default": "'Search'",
-              "description": "The aria-label for the input.",
               "fieldName": "label"
             },
             {
@@ -1499,7 +1487,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The name within a form.",
               "fieldName": "name"
             },
             {
@@ -1516,7 +1503,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The value within the input.",
               "fieldName": "value"
             },
             {
@@ -1525,7 +1511,6 @@
                 "text": "number"
               },
               "default": "75",
-              "description": "The maximum characters allowed in the input.",
               "fieldName": "maxlength"
             },
             {
@@ -1534,7 +1519,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The placeholder value.",
               "fieldName": "placeholder"
             },
             {
@@ -1543,7 +1527,6 @@
                 "text": "string"
               },
               "default": "'Search input'",
-              "description": "aria-label for input.",
               "fieldName": "ariaLabelInput"
             },
             {
@@ -1552,7 +1535,6 @@
                 "text": "string"
               },
               "default": "'Clear search'",
-              "description": "aria-label for button.",
               "fieldName": "ariaLabelButton"
             },
             {
@@ -1561,7 +1543,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the input has a border or not.",
               "fieldName": "borderless"
             }
           ],
@@ -1570,7 +1551,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-form-search-input",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-search-input/index.js"
         }
       ],
       "exports": [
@@ -1691,7 +1673,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -1701,7 +1686,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The value within the input.",
               "attribute": "value"
             },
             {
@@ -1721,7 +1705,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether the choice is disabled or not.",
               "attribute": "disabled"
             },
             {
@@ -1731,7 +1714,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "Validation style: error, warning, success.",
               "attribute": "validation"
             },
             {
@@ -1741,7 +1723,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The aria-label for the input.",
               "attribute": "label"
             },
             {
@@ -1751,48 +1732,7 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name within a form.",
               "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "placeholder",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "description": "The placeholder value.",
-              "attribute": "placeholder"
-            },
-            {
-              "kind": "field",
-              "name": "maxlength",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "description": "The maximum characters allowed in the input.",
-              "attribute": "maxlength"
-            },
-            {
-              "kind": "field",
-              "name": "ariaLabelInput",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "description": "aria-label for input.",
-              "attribute": "aria-label-input"
-            },
-            {
-              "kind": "field",
-              "name": "ariaLabelButton",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "description": "aria-label for button.",
-              "attribute": "aria-label-button"
             },
             {
               "kind": "field",
@@ -1802,6 +1742,42 @@
                 "text": "boolean"
               },
               "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "maxlength",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "attribute": "maxlength"
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "placeholder"
+            },
+            {
+              "kind": "field",
+              "name": "ariaLabelInput",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "aria-label-input"
+            },
+            {
+              "kind": "field",
+              "name": "ariaLabelButton",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "aria-label-button"
             }
           ],
           "attributes": [
@@ -1810,7 +1786,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether the choice is disabled or not.",
               "fieldName": "disabled"
             },
             {
@@ -1818,7 +1793,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "Validation style: error, warning, success.",
               "fieldName": "validation"
             },
             {
@@ -1826,7 +1800,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The aria-label for the input.",
               "fieldName": "label"
             },
             {
@@ -1834,7 +1807,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name within a form.",
               "fieldName": "name"
             },
             {
@@ -1850,15 +1822,13 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The value within the input.",
               "fieldName": "value"
             },
             {
               "name": "maxlength",
               "type": {
-                "text": "string"
+                "text": "number"
               },
-              "description": "The maximum characters allowed in the input.",
               "fieldName": "maxlength"
             },
             {
@@ -1866,7 +1836,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The placeholder value.",
               "fieldName": "placeholder"
             },
             {
@@ -1874,7 +1843,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "aria-label for input.",
               "fieldName": "ariaLabelInput"
             },
             {
@@ -1882,7 +1850,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "aria-label for button.",
               "fieldName": "ariaLabelButton"
             },
             {
@@ -1899,7 +1866,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-form-search",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-form-search/index.js"
         }
       ],
       "exports": [
@@ -1931,7 +1899,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -1941,7 +1912,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Apply disabled styles or not.",
               "attribute": "disabled",
               "reflects": true
             },
@@ -1950,10 +1920,9 @@
               "name": "isIconLeftSpin",
               "privacy": "public",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the left icon spins or not.",
               "attribute": "icon-left-spin"
             },
             {
@@ -1961,10 +1930,9 @@
               "name": "isIconRightSpin",
               "privacy": "public",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the right icon spins or not.",
               "attribute": "icon-right-spin"
             },
             {
@@ -1974,7 +1942,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon on the left.",
               "attribute": "icon-left"
             },
             {
@@ -1984,7 +1951,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon on the right.",
               "attribute": "icon-right"
             },
             {
@@ -1994,7 +1960,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "If true, render a divider.",
               "attribute": "has-div",
               "reflects": true
             },
@@ -2003,19 +1968,10 @@
               "name": "underline",
               "privacy": "public",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "description": "\"all\" for all screen sizes, \"tablet-up\", for tablet and above, \"none\", for only on hover on tablet and above.",
               "attribute": "underline",
               "reflects": true
-            },
-            {
-              "type": {
-                "text": "boolean"
-              },
-              "description": "If true render an underline at mobile.",
-              "name": "mobileUnderline",
-              "kind": "field"
             },
             {
               "kind": "field",
@@ -2045,7 +2001,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Apply disabled styles or not.",
               "fieldName": "disabled"
             },
             {
@@ -2053,7 +2008,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon on the left.",
               "fieldName": "iconLeft"
             },
             {
@@ -2061,25 +2015,22 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon on the right.",
               "fieldName": "iconRight"
             },
             {
               "name": "icon-left-spin",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the left icon spins or not.",
               "fieldName": "isIconLeftSpin"
             },
             {
               "name": "icon-right-spin",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the right icon spins or not.",
               "fieldName": "isIconRightSpin"
             },
             {
@@ -2087,15 +2038,13 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "If true, render a divider.",
               "fieldName": "hasDiv"
             },
             {
               "name": "underline",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "description": "\"all\" for all screen sizes, \"tablet-up\", for tablet and above, \"none\", for only on hover on tablet and above.",
               "fieldName": "underline"
             },
             {
@@ -2118,7 +2067,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-icon-text",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-icon-text/index.js"
         }
       ],
       "exports": [
@@ -2144,7 +2094,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -2153,7 +2106,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon, based off the SVG filename.",
               "attribute": "name"
             },
             {
@@ -2163,7 +2115,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether the icon spins, for loading and in progress states.",
               "attribute": "spin"
             }
           ],
@@ -2173,7 +2124,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The name of the icon, based off the SVG filename.",
               "fieldName": "name"
             },
             {
@@ -2181,7 +2131,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether the icon spins, for loading and in progress states.",
               "fieldName": "spin"
             }
           ],
@@ -2190,7 +2139,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-icon",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-icon/index.js"
         }
       ],
       "exports": [
@@ -2232,7 +2182,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -2242,7 +2195,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether this has block or inline helper text.",
               "attribute": "block",
               "reflects": true
             },
@@ -2254,7 +2206,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Associate the label with an ID elsewhere.",
               "attribute": "for"
             }
           ],
@@ -2265,7 +2216,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether this has block or inline helper text.",
               "fieldName": "block"
             },
             {
@@ -2274,7 +2224,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Associate the label with an ID elsewhere.",
               "fieldName": "for"
             }
           ],
@@ -2282,8 +2231,9 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-label",
-          "customElement": true
+          "tagName": "cfpb-label.",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-label/index.js"
         }
       ],
       "exports": [
@@ -2315,7 +2265,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -2343,7 +2296,12 @@
                 "text": "object"
               },
               "static": true,
-              "default": "{ // Removing the previous JSDoc comments to allow descriptions to populate Storybook controls table descriptions. /** The text of the slotted link. Read off the slotted `<a>`.*/ linkText: { type: String, state: true }, /** The attributes on the slotted link. Read off the slotted `<a>`. */ linkAttributes: { type: Object, state: true }, /** The configuration of the link. EG external, download, nav-left, nav-right */ linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, /** The size of the link, EG, h4. When omitted it's standard link size. */ size: { type: String, reflect: true }, /** Color theme of the link. Takes `dark`. */ colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, /** Removes the underline (other than hover). */ noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, /** Removes the top border on mobile. */ noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, /** Whether the link is an inline link. */ inline: { type: Boolean, reflect: true }, }",
+              "default": "{ linkText: { type: String, state: true }, linkAttributes: { type: Object, state: true }, linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, size: { type: String, reflect: true }, colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, inline: { type: Boolean, reflect: true }, }",
+              "return": {
+                "type": {
+                  "text": "object"
+                }
+              },
               "inheritedFrom": {
                 "name": "MixinLink",
                 "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
@@ -2423,6 +2381,9 @@
               "inheritedFrom": {
                 "name": "MixinLink",
                 "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
+              },
+              "type": {
+                "text": "renderLink() => void"
               }
             },
             {
@@ -2432,7 +2393,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The text of the slotted link. Read off the slotted `<a>`.",
               "default": "''",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2446,7 +2406,6 @@
               "type": {
                 "text": "object"
               },
-              "description": "The attributes on the slotted link. Read off the slotted `<a>`.",
               "default": "{}",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2460,7 +2419,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The configuration of the link. EG external, download, nav-left, nav-right",
               "attribute": "link-variant",
               "reflects": true,
               "inheritedFrom": {
@@ -2475,7 +2433,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The size of the link, EG, h4. When omitted it's standard link size.",
               "attribute": "size",
               "reflects": true,
               "inheritedFrom": {
@@ -2490,7 +2447,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "Color theme of the link. Takes `dark`.",
               "attribute": "color-theme",
               "reflects": true,
               "inheritedFrom": {
@@ -2505,7 +2461,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Removes the underline (other than hover).",
               "attribute": "no-underline",
               "reflects": true,
               "inheritedFrom": {
@@ -2520,7 +2475,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Removes the top border on mobile.",
               "attribute": "no-top-border",
               "reflects": true,
               "inheritedFrom": {
@@ -2535,7 +2489,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether the link is an inline link.",
               "attribute": "inline",
               "reflects": true,
               "inheritedFrom": {
@@ -2554,7 +2507,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-link",
+          "tagName": "cfpb-link.",
           "customElement": true,
           "attributes": [
             {
@@ -2562,7 +2515,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The configuration of the link. EG external, download, nav-left, nav-right",
               "fieldName": "linkVariant",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2574,7 +2526,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The size of the link, EG, h4. When omitted it's standard link size.",
               "fieldName": "size",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2586,7 +2537,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "Color theme of the link. Takes `dark`.",
               "fieldName": "colorTheme",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2598,7 +2548,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Removes the underline (other than hover).",
               "fieldName": "noUnderline",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2610,7 +2559,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Removes the top border on mobile.",
               "fieldName": "noTopBorder",
               "inheritedFrom": {
                 "name": "MixinLink",
@@ -2622,14 +2570,14 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether the link is an inline link.",
               "fieldName": "inline",
               "inheritedFrom": {
                 "name": "MixinLink",
                 "module": "packages/cfpb-design-system/src/elements/cfpb-link/mixin-link/index.js"
               }
             }
-          ]
+          ],
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-link/index.js"
         }
       ],
       "exports": [
@@ -2670,7 +2618,12 @@
                 "text": "object"
               },
               "static": true,
-              "default": "{ // Removing the previous JSDoc comments to allow descriptions to populate Storybook controls table descriptions. /** The text of the slotted link. Read off the slotted `<a>`.*/ linkText: { type: String, state: true }, /** The attributes on the slotted link. Read off the slotted `<a>`. */ linkAttributes: { type: Object, state: true }, /** The configuration of the link. EG external, download, nav-left, nav-right */ linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, /** The size of the link, EG, h4. When omitted it's standard link size. */ size: { type: String, reflect: true }, /** Color theme of the link. Takes `dark`. */ colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, /** Removes the underline (other than hover). */ noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, /** Removes the top border on mobile. */ noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, /** Whether the link is an inline link. */ inline: { type: Boolean, reflect: true }, }"
+              "default": "{ linkText: { type: String, state: true }, linkAttributes: { type: Object, state: true }, linkVariant: { type: String, reflect: true, attribute: 'link-variant' }, size: { type: String, reflect: true }, colorTheme: { type: String, reflect: true, attribute: 'color-theme' }, noUnderline: { type: Boolean, reflect: true, attribute: 'no-underline', }, noTopBorder: { type: Boolean, reflect: true, attribute: 'no-top-border', }, inline: { type: Boolean, reflect: true }, }",
+              "return": {
+                "type": {
+                  "text": "object"
+                }
+              }
             },
             {
               "kind": "field",
@@ -2723,7 +2676,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The text of the slotted link. Read off the slotted `<a>`.",
               "default": "''"
             },
             {
@@ -2733,7 +2685,6 @@
               "type": {
                 "text": "object"
               },
-              "description": "The attributes on the slotted link. Read off the slotted `<a>`.",
               "default": "{}"
             },
             {
@@ -2743,7 +2694,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The configuration of the link. EG external, download, nav-left, nav-right",
               "attribute": "link-variant",
               "reflects": true
             },
@@ -2754,7 +2704,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The size of the link, EG, h4. When omitted it's standard link size.",
               "attribute": "size",
               "reflects": true
             },
@@ -2765,7 +2714,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "Color theme of the link. Takes `dark`.",
               "attribute": "color-theme",
               "reflects": true
             },
@@ -2776,7 +2724,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Removes the underline (other than hover).",
               "attribute": "no-underline",
               "reflects": true
             },
@@ -2787,7 +2734,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Removes the top border on mobile.",
               "attribute": "no-top-border",
               "reflects": true
             },
@@ -2798,7 +2744,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether the link is an inline link.",
               "attribute": "inline",
               "reflects": true
             }
@@ -2809,7 +2754,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The configuration of the link. EG external, download, nav-left, nav-right",
               "fieldName": "linkVariant"
             },
             {
@@ -2817,7 +2761,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The size of the link, EG, h4. When omitted it's standard link size.",
               "fieldName": "size"
             },
             {
@@ -2825,7 +2768,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "Color theme of the link. Takes `dark`.",
               "fieldName": "colorTheme"
             },
             {
@@ -2833,7 +2775,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Removes the underline (other than hover).",
               "fieldName": "noUnderline"
             },
             {
@@ -2841,7 +2782,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Removes the top border on mobile.",
               "fieldName": "noTopBorder"
             },
             {
@@ -2849,7 +2789,6 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether the link is an inline link.",
               "fieldName": "inline"
             }
           ],
@@ -2889,15 +2828,19 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             }
           ],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-list-item",
-          "customElement": true
+          "tagName": "cfpb-list-item.",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-list-item/index.js"
         }
       ],
       "exports": [
@@ -2969,7 +2912,10 @@
             },
             {
               "kind": "method",
-              "name": "focus"
+              "name": "focus",
+              "type": {
+                "text": "focus() => void"
+              }
             },
             {
               "kind": "method",
@@ -3087,6 +3033,9 @@
                 "type": {
                   "text": "boolean"
                 }
+              },
+              "type": {
+                "text": "addItem(item: HTMLElement, index: number = -1) => boolean"
               }
             },
             {
@@ -3165,7 +3114,10 @@
                   }
                 }
               ],
-              "description": "Remove a filter item from the light and dark DOM."
+              "description": "Remove a filter item from the light and dark DOM.",
+              "type": {
+                "text": "removeItem(item: HTMLElement) => void"
+              }
             },
             {
               "kind": "method",
@@ -3190,7 +3142,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -3200,7 +3155,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Structure data to create child components.",
               "attribute": "childdata"
             },
             {
@@ -3210,7 +3164,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The color theme of the link. Takes 'dark'.",
               "attribute": "color-theme",
               "reflects": true
             }
@@ -3245,7 +3198,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Structure data to create child components.",
               "fieldName": "childData"
             },
             {
@@ -3253,7 +3205,6 @@
               "type": {
                 "text": "string"
               },
-              "description": "The color theme of the link. Takes 'dark'.",
               "fieldName": "colorTheme"
             }
           ],
@@ -3261,8 +3212,9 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-list",
-          "customElement": true
+          "tagName": "cfpb-list.",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-list/index.js"
         }
       ],
       "exports": [
@@ -3367,7 +3319,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -3377,7 +3332,6 @@
                 "text": "string"
               },
               "default": "'plain'",
-              "description": "Choice type: plain, check, checkbox.",
               "attribute": "type",
               "reflects": true
             },
@@ -3389,7 +3343,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the list item is checked or not.",
               "attribute": "checked",
               "reflects": true
             },
@@ -3401,7 +3354,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the list item is selectable or not.",
               "attribute": "disabled",
               "reflects": true
             },
@@ -3413,7 +3365,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the list item is hidden or not.",
               "attribute": "hidden",
               "reflects": true
             },
@@ -3443,7 +3394,6 @@
                 "text": "string"
               },
               "default": "'plain'",
-              "description": "Choice type: plain, check, checkbox.",
               "fieldName": "type"
             },
             {
@@ -3452,7 +3402,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the list item is checked or not.",
               "fieldName": "checked"
             },
             {
@@ -3461,7 +3410,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the list item is selectable or not.",
               "fieldName": "disabled"
             },
             {
@@ -3470,7 +3418,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the list item is hidden or not.",
               "fieldName": "hidden"
             },
             {
@@ -3486,8 +3433,9 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-listbox-item",
-          "customElement": true
+          "tagName": "cfpb-listbox-item.",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-listbox-item/index.js"
         }
       ],
       "exports": [
@@ -3649,11 +3597,17 @@
                 "type": {
                   "text": "Array"
                 }
+              },
+              "type": {
+                "text": "filterItems(queryList: Array) => Array"
               }
             },
             {
               "kind": "method",
-              "name": "showAllItems"
+              "name": "showAllItems",
+              "type": {
+                "text": "showAllItems() => void"
+              }
             },
             {
               "kind": "method",
@@ -3682,6 +3636,9 @@
                 "type": {
                   "text": "undefined"
                 }
+              },
+              "type": {
+                "text": "focusItemAt(index: number) => undefined"
               }
             },
             {
@@ -3712,17 +3669,19 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
               "name": "childData",
               "privacy": "public",
               "type": {
-                "text": "Array"
+                "text": "string"
               },
               "default": "''",
-              "description": "Structure data to create child components.",
               "attribute": "childdata"
             },
             {
@@ -3733,7 +3692,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the select supports multiple or not.",
               "attribute": "multiple",
               "reflects": true
             },
@@ -3745,7 +3703,6 @@
                 "text": "string"
               },
               "default": "'plain'",
-              "description": "List item type: plain, check, or checkbox.",
               "attribute": "type",
               "reflects": true
             },
@@ -3757,7 +3714,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The aria-label for the list container.",
               "attribute": "aria-label"
             }
           ],
@@ -3785,10 +3741,9 @@
             {
               "name": "childdata",
               "type": {
-                "text": "Array"
+                "text": "string"
               },
               "default": "''",
-              "description": "Structure data to create child components.",
               "fieldName": "childData"
             },
             {
@@ -3797,7 +3752,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the select supports multiple or not.",
               "fieldName": "multiple"
             },
             {
@@ -3806,7 +3760,6 @@
                 "text": "string"
               },
               "default": "'plain'",
-              "description": "List item type: plain, check, or checkbox.",
               "fieldName": "type"
             },
             {
@@ -3815,7 +3768,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The aria-label for the list container.",
               "fieldName": "ariaLabel"
             }
           ],
@@ -3823,8 +3775,9 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-listbox",
-          "customElement": true
+          "tagName": "cfpb-listbox.",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-listbox/index.js"
         }
       ],
       "exports": [
@@ -3926,7 +3879,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -3936,7 +3892,6 @@
                 "text": "number"
               },
               "default": "1",
-              "description": "The currently selected page.",
               "attribute": "value",
               "reflects": true
             },
@@ -3948,7 +3903,6 @@
                 "text": "number"
               },
               "default": "1",
-              "description": "The maximum page count.",
               "attribute": "max",
               "reflects": true
             },
@@ -3979,7 +3933,6 @@
                 "text": "number"
               },
               "default": "1",
-              "description": "The currently selected page.",
               "fieldName": "currentPage"
             },
             {
@@ -3988,7 +3941,6 @@
                 "text": "number"
               },
               "default": "1",
-              "description": "The maximum page count.",
               "fieldName": "maxPage"
             },
             {
@@ -4005,7 +3957,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-pagination",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-pagination/index.js"
         }
       ],
       "exports": [
@@ -4186,7 +4139,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -4196,7 +4152,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the select supports multiple or not.",
               "attribute": "multiple",
               "reflects": true
             },
@@ -4213,10 +4168,9 @@
               "name": "selectedTexts",
               "privacy": "public",
               "type": {
-                "text": "Array"
+                "text": "array"
               },
               "default": "[]",
-              "description": "Text of selected options.",
               "attribute": "selectedtexts"
             },
             {
@@ -4228,17 +4182,6 @@
               },
               "default": "[]",
               "attribute": "optionlist"
-            },
-            {
-              "kind": "field",
-              "name": "isExpanded",
-              "privacy": "public",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Whether the select is expanded or not.",
-              "attribute": "open",
-              "reflects": true
             },
             {
               "kind": "field",
@@ -4329,6 +4272,16 @@
                 "text": "string"
               },
               "attribute": "aria-label-list"
+            },
+            {
+              "kind": "field",
+              "name": "isExpanded",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "open",
+              "reflects": true
             }
           ],
           "events": [
@@ -4346,7 +4299,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the select supports multiple or not.",
               "fieldName": "multiple"
             },
             {
@@ -4424,16 +4376,14 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Whether the select is expanded or not.",
               "fieldName": "isExpanded"
             },
             {
               "name": "selectedtexts",
               "type": {
-                "text": "Array"
+                "text": "array"
               },
               "default": "[]",
-              "description": "Text of selected options.",
               "fieldName": "selectedTexts"
             },
             {
@@ -4450,7 +4400,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-select",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-select/index.js"
         }
       ],
       "exports": [
@@ -4670,7 +4621,10 @@
           "members": [
             {
               "kind": "method",
-              "name": "focus"
+              "name": "focus",
+              "type": {
+                "text": "focus() => void"
+              }
             },
             {
               "kind": "method",
@@ -4685,7 +4639,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -4695,7 +4652,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Associate the label with an ID elsewhere.",
               "attribute": "for"
             },
             {
@@ -4724,7 +4680,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Associate the label with an ID elsewhere.",
               "fieldName": "for"
             },
             {
@@ -4741,7 +4696,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-tag-filter",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-tag-filter/index.js"
         }
       ],
       "exports": [
@@ -4772,7 +4728,10 @@
           "members": [
             {
               "kind": "method",
-              "name": "focus"
+              "name": "focus",
+              "type": {
+                "text": "focus() => void"
+              }
             },
             {
               "kind": "field",
@@ -4783,7 +4742,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -4793,7 +4755,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "href attribute, if this is a topic link.",
               "attribute": "href",
               "reflects": true
             },
@@ -4805,7 +4766,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the preceding sibling is a jump link or not.",
               "attribute": "siblingofjumplink"
             }
           ],
@@ -4816,7 +4776,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "href attribute, if this is a topic link.",
               "fieldName": "href"
             },
             {
@@ -4825,7 +4784,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the preceding sibling is a jump link or not.",
               "fieldName": "siblingOfJumpLink"
             }
           ],
@@ -4833,8 +4791,9 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "cfpb-tag-topic",
-          "customElement": true
+          "tagName": "cfpb-tag-topic.",
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-tag-topic/index.js"
         }
       ],
       "exports": [
@@ -4866,7 +4825,10 @@
             {
               "kind": "method",
               "name": "init",
-              "static": true
+              "static": true,
+              "type": {
+                "text": "init() => void"
+              }
             },
             {
               "kind": "field",
@@ -4876,7 +4838,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether to use the larger tagline appearance.",
               "attribute": "islarge",
               "reflects": true
             }
@@ -4888,7 +4849,6 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether to use the larger tagline appearance.",
               "fieldName": "isLarge"
             }
           ],
@@ -4897,7 +4857,8 @@
             "package": "lit"
           },
           "tagName": "cfpb-tagline",
-          "customElement": true
+          "customElement": true,
+          "modulePath": "packages/cfpb-design-system/src/elements/cfpb-tagline/index.js"
         }
       ],
       "exports": [

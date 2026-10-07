@@ -229,3 +229,15 @@
 ::placeholder {
   color: var(--input-text-placeholder-default);
 }
+
+// Make it so descender text doesn't get clipped but horizontal text does
+// so that it doesn't run into the clear button. Chromium does placeholder text
+// at `line-height: normal` and `overflow: hidden` which winds up meaning that
+// the `descent-override` value is actually shorter than the descender so it was
+// getting clipped.
+@supports (overflow: clip) {
+  .a-text-input::placeholder {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+}

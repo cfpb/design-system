@@ -63,7 +63,13 @@ button {
     }
   }
 
+  // Fallback for old versions. Chrome 69 & 72, Firefox 5, IE 8
   .popup.show {
     display: block;
+
+    // Works because popup contents are in cfpb-listbox light DOM.
+    &:not(:has(cfpb-listbox-item:not([hidden]))) {
+      display: none;
+    }
   }
 }

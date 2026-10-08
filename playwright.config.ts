@@ -76,10 +76,24 @@ export default defineConfig({
     // },
   ],
 
-  /* Run your local dev server before starting the tests */
-  webServer: {
-    command: 'yarn start',
-    url: 'http://127.0.0.1:4000/design-system/',
-    reuseExistingServer: !process.env.CI,
-  },
+  /* Build the docs site once, then serve it statically. No watchers so 
+     cat't be rebuilt mid-run and the server isn't reported as ready until the
+     docs JS has been built.  
+  */
+  webServer: [
+    {
+      command:
+        'yarn vite build --config vite.config.docs.js && bundle exec jekyll build && yarn http-server docs/_site -a 127.0.0.1 -p 4000 -s -c-1',
+      url: 'http://127.0.0.1:4000/design-system/',
+      reuseExistingServer: !process.env.CI,
+      timeout: 100_000,
+      stdout: 'pipe',
+    },
+    {
+      command: 'npx decap-server@3.11.0',
+      port: 8081,
+      reuseExistingServer: !process.env.CI,
+      stdout: 'pipe',
+    },
+  ],
 });

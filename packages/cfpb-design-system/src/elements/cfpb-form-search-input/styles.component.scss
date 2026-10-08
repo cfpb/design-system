@@ -98,7 +98,7 @@
 
     // This line-height settings is taken from base.scss.
     line-height: unitless-from-px(19);
-    height: rem-from-px(33);
+    min-height: rem-from-px(33);
   }
 
   input[type='search'] {

@@ -33,7 +33,9 @@
       // Remove default rounding in Safari.
       appearance: none;
 
-      height: rem-from-px(19.2); // 1.2rem magic number.
+      // Match the 19px `line-height`. This + padding and border makes 35px tall and matches the button.
+      // A larger height pushes the text down and clips descenders.
+      height: rem-from-px(19);
     }
 
     // Style the clear x button, and hide it by default.

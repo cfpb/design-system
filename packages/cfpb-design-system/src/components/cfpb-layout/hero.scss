@@ -50,6 +50,11 @@ $hero-desktop-height: 285px;
 
   &__heading {
     @include heading-1($is-responsive: false);
+
+    // Special case for cf.gov homepage heading text
+    &:not(:has(+ .m-hero__subhead)) {
+      font-size-adjust: var(--font-size-adjust-body);
+    }
   }
 
   &__subhead {

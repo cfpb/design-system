@@ -15,7 +15,9 @@
   // Reset the browser's default styling.
   appearance: none;
   display: inline-block;
-  padding: math.div(7px, $base-font-size-px) + em;
+  padding: math.div(6px, $base-font-size-px) + em
+    math.div(7px, $base-font-size-px) + em;
+  line-height: math.div(21px, $base-font-size-px);
   border: 1px solid var(--input-border);
   outline: 0 solid var(--input-border);
   background: var(--input-bg);
@@ -72,6 +74,12 @@
   }
 }
 
+// Put textareas back
+textarea.a-text-input {
+  padding: math.div(7px, $base-font-size-px) + em;
+  line-height: math.div(19px, $base-font-size-px);
+}
+
 // Overrides extra left padding.
 // http://stackoverflow.com/questions/11127891/how-can-i-get-rid-of-horizontal-padding-or-indent-in-html5-search-inputs-in-webk
 ::-webkit-search-decoration {
@@ -81,6 +89,18 @@
 // Change place holder text to dark gray (#43484e).
 ::placeholder {
   color: var(--input-text-placeholder);
+}
+
+// Make it so descender text doesn't get clipped but horizontal text does
+// so that it doesn't run into the clear button. Chromium does placeholder text
+// at `line-height: normal` and `overflow: hidden` which winds up meaning that
+// the `descent-override` value is actually shorter than the descender so it was
+// getting clipped.
+@supports (overflow: clip) {
+  .a-text-input::placeholder {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
 }
 
 // Force placeholder text color change for "date" field type.

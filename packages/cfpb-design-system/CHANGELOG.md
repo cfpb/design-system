@@ -2,7 +2,68 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.10.2](https://github.com/cfpb/design-system/compare/v5.10.1..v5.10.2) - September  3, 2026
+## [5.10.3](https://github.com/cfpb/design-system/compare/v5.10.2..v5.10.3) - October  9, 2026
+
+### General
+
+- Refactor JSDoc comments and helpers for testing and Stories (#2804)
+
+* create helpers
+
+* hooking up cfpb-expandable and refactor component JSDoc comments
+
+* refactor the rest of the WC JSDoc comments and regen - ([54f0262](https://github.com/cfpb/design-system/commit/54f026224db0c6a2ccb6edbb53760545a6c61426)) - itsmedavep
+- Add Storybook links to the docs site for Web Components and RDS Storybook (#2801)
+
+* Adding links on docs to React and WC Storybooks
+
+* Adding brand coloring to Storybook Icons
+
+* Make Storybook links templated
+
+* Make Storybook links an include
+
+* Use more web components in Storybook links
+
+* Import CfpbLink in previews
+
+* Make Storybook links not an include
+
+---------
+
+Co-authored-by: Nicholas Johnson <nicholas.johnson@cfpb.gov> - ([bc6250c](https://github.com/cfpb/design-system/commit/bc6250c118365b5bab41c928b9610ceadc139814)) - itsmedavep
+- Add Web Component stories and unit tests: cfpb-icon, cfpb-label, cfpb-link, cfpb-list-item (#2811)
+
+* cfpb-icon
+
+* cfpb-label
+
+* cfpb-link
+
+Update mixin-link comments to populate CEM and types
+
+* cfpb-list-item
+
+* Remove "." in JSDoc element name and regen CEM and types - ([aabd96c](https://github.com/cfpb/design-system/commit/aabd96c3487cff866455bb9505cbc50bec2734f8)) - itsmedavep
+- Web component Storybook doc update (#2816) - ([e7c44ad](https://github.com/cfpb/design-system/commit/e7c44ad34004d6e19470bb8703591343dc23bb60)) - itsmedavep
+- Deps bump, dedupe, and rebuild dist assets. prettier, sass, vite (#2817) - ([f30975d](https://github.com/cfpb/design-system/commit/f30975d30c565e066eb48c261f05040b79ae2795)) - itsmedavep
+- Fix errant popup menu draw (#2824) - ([9ca9d13](https://github.com/cfpb/design-system/commit/9ca9d13983d113518ffa13d88c354ed5ec8ecee5)) - itsmedavep
+- Fix font-size-adjust-base typo so that we are using the CSS custom prop (#2826)
+
+* fix font-size-adjust-base typo to that we are actually using the CSS custom prop
+
+* adding special case for cf.gov homepage hero text with no subhead - ([3d79ad2](https://github.com/cfpb/design-system/commit/3d79ad21016cbdcfb53e0eff40354b3b0f746687)) - itsmedavep
+- Fix have ::placeholder text not clip descenders by making overflow visible (#2825)
+
+* Have ::placeholder text not clip descenders by making overflow visible
+
+* Update legacy component search input height to fix clipped input text
+
+* fix web component search input clipping on descenders
+
+* regen dist - ([4ac1aed](https://github.com/cfpb/design-system/commit/4ac1aed55feefbfb6051e4fdefb01f0fbd5c9dbc)) - itsmedavep
+
+## [5.10.2](https://github.com/cfpb/design-system/compare/v5.10.1..vv5.10.2) - September  3, 2026
 
 ### General
 

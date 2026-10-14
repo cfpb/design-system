@@ -32,38 +32,33 @@ var e = Object.defineProperty, t = (t, n) => {
 	}
 	connectedCallback() {
 		let e = [], t = this.querySelector("template");
-		if (!t) {
-			e.push(["missing-template", "No <template> found inside <i18n-service>"]);
-			return;
-		}
-		try {
-			let n = t.innerHTML.trim(), r = JSON.parse(n);
-			(typeof r != "object" || Array.isArray(r)) && e.push(["invalid-format", "Translations JSON must be an object keyed by the language codes"]), this.#e = r;
-			let i = this.availableLanguages;
-			i.length > 0 && !this.#t && (this.language = i[0]);
-		} catch (t) {
-			e.push([
-				"parse-error",
-				"Failed to parse i18n template JSON",
-				{ err: t }
-			]);
-		}
-		requestAnimationFrame(() => {
-			e.forEach((e) => {
-				this.#n(...e);
+		if (!t) e.push(["missing-template", "No <template> found inside <i18n-service>"]);
+		else {
+			try {
+				let n = t.innerHTML.trim(), r = JSON.parse(n);
+				(typeof r != "object" || Array.isArray(r)) && e.push(["invalid-format", "Translations JSON must be an object keyed by the language codes"]), this.#e = r;
+				let i = this.availableLanguages;
+				i.length > 0 && !this.#t && (this.language = i[0]);
+			} catch (t) {
+				e.push([
+					"parse-error",
+					"Failed to parse i18n template JSON",
+					{ err: t }
+				]);
+			}
+			requestAnimationFrame(() => {
+				e.forEach((e) => {
+					this.#n(...e);
+				});
 			});
-		});
+		}
 	}
 	set language(e) {
-		if (!this.#e[e]) {
-			this.#n("invalid-language", `Unsupported language: ${e}`, { lang: e });
-			return;
-		}
-		this.#t !== e && (this.#t = e, this.dispatchEvent(new CustomEvent("i18n-change", {
+		this.#e[e] ? this.#t !== e && (this.#t = e, this.dispatchEvent(new CustomEvent("i18n-change", {
 			detail: { language: e },
 			bubbles: !0,
 			composed: !0
-		})));
+		}))) : this.#n("invalid-language", `Unsupported language: ${e}`, { lang: e });
 	}
 	get language() {
 		return this.#t;
@@ -181,15 +176,14 @@ var o = class {
 	}
 }, s = { iconPath: "./icons/" }, c = { ...s }, l = !1, u = Object.keys(s);
 function d(e) {
-	if (l) {
-		console.warn("CFPB Design System config already initialized");
-		return;
+	if (l) console.warn("CFPB Design System config already initialized");
+	else {
+		for (let t of Object.keys(e)) u.includes(t) || console.warn(`CFPB Design System invalid config key: ${t}`);
+		c = {
+			...c,
+			...e
+		}, l = !0;
 	}
-	for (let t of Object.keys(e)) u.includes(t) || console.warn(`CFPB Design System invalid config key: ${t}`);
-	c = {
-		...c,
-		...e
-	}, l = !0;
 }
 function f() {
 	return c;
@@ -1886,15 +1880,11 @@ var At = class e extends I {
 	}
 	#t() {
 		let e = this.#e.value.files;
-		if (!e?.length) {
-			this.#n();
-			return;
-		}
-		this.fileName = e[0].name, this.files = e, this.isDetailHidden = !1, this.dispatchEvent(new CustomEvent("file-change", {
+		e?.length ? (this.fileName = e[0].name, this.files = e, this.isDetailHidden = !1, this.dispatchEvent(new CustomEvent("file-change", {
 			detail: { files: e },
 			bubbles: !0,
 			composed: !0
-		}));
+		}))) : this.#n();
 	}
 	#n() {
 		this.fileName = "", this.files = null, this.isDetailHidden = !0;
@@ -2332,15 +2322,11 @@ var At = class e extends I {
 		this.#e = !0, this.childData = e, this.#e = !1;
 	}
 	#u() {
-		if (![
+		[
 			"plain",
 			"check",
 			"checkbox"
-		].includes(this.type)) {
-			console.warn(`<cfpb-listbox>: invalid type "${this.type}".`);
-			return;
-		}
-		this.#n.forEach((e) => e.type = this.type);
+		].includes(this.type) ? this.#n.forEach((e) => e.type = this.type) : console.warn(`<cfpb-listbox>: invalid type "${this.type}".`);
 	}
 	#d(e, t, n) {
 		this.multiple ? t ? this.#r.includes(e) || this.#r.push(e) : this.#r = this.#r.filter((t) => t !== e) : t ? (this.#n.forEach((t) => {
@@ -3444,7 +3430,7 @@ var tr = "o-summary-minimal";
 function nr(e) {
 	let t = q(e, tr), n = t.querySelector(`.${tr}__content`), r = t.querySelector(`.${tr}__btn`), i, a;
 	function o() {
-		return J(t) ? (G(t, "behavior_flyout-menu"), G(n, "behavior_flyout-menu_content"), G(r, "behavior_flyout-menu_trigger"), window.addEventListener("load", s), this) : this;
+		return J(t) && (G(t, "behavior_flyout-menu"), G(n, "behavior_flyout-menu_content"), G(r, "behavior_flyout-menu_trigger"), window.addEventListener("load", s)), this;
 	}
 	function s() {
 		window.removeEventListener("load", s), a = new K(t, !1), i = new U(n), i.init(U.CLASSES.MH_SUMMARY), a.setTransition(i, i.maxHeightSummary, i.maxHeightDefault), a.init(), t.addEventListener("focusin", c), n.addEventListener("click", l), a.collapse(), i.animateOn();

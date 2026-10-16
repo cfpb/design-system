@@ -102,6 +102,17 @@ h6,
   @include heading-6;
 }
 
+// Eyebrow heading is a short label above a page's main heading
+.eyebrow {
+  @include heading-5;
+
+  // Keep the 15px gap at all breakpoints
+  + h1,
+  + .h1 {
+    margin-top: 0;
+  }
+}
+
 .lead-paragraph {
   @include u-lead-paragraph;
 }

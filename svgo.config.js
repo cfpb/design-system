@@ -1,4 +1,4 @@
-import addClassesToSVGElement from './scripts/svgo-plugin-add-classes-to-svg-element.cjs';
+import path from 'path';
 
 export default {
   multipass: true,
@@ -28,8 +28,12 @@ export default {
     },
     {
       name: 'addClassesToSVGElement',
-      params: { className: 'cf-icon-svg', suffixPattern: '--$FILENAME' },
-      fn: addClassesToSVGElement.fn,
+      params: {
+        className: (_, info) => {
+          const filename = path.basename(info.path, '.svg');
+          return `cf-icon-svg cf-icon-svg--${filename}`;
+        },
+      },
     },
   ],
 };

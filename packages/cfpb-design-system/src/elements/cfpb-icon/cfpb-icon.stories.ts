@@ -15,7 +15,7 @@ const { args, argTypes, template } = getStorybookHelpers<CfpbIconProps>(
 
 const meta: Meta<CfpbIconProps> = {
   title: 'Web Components/cfpb-icon',
-  component: 'cfbp-icon',
+  component: 'cfpb-icon',
   tags: ['autodocs'],
   args: {
     ...args,

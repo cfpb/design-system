@@ -12,7 +12,7 @@
           "name": "CfpbAlert",
           "slots": [
             {
-              "description": "The main content for the tagline.",
+              "description": "The main explanation and optional list.",
               "name": ""
             }
           ],
@@ -2803,7 +2803,7 @@
           "name": "CfpbListItem",
           "slots": [
             {
-              "description": "The content for the topic tag.",
+              "description": "The content for the list item.",
               "name": ""
             }
           ],

@@ -1,5 +1,6 @@
 /// <reference types='vite/client' />
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
 import { CfpbListItemProps } from '../../../../../storybook/custom-elements-types';
 import { CfpbListItem } from './index.js';
@@ -33,6 +34,8 @@ export const Default: Story = {};
 
 export const WithMarkup: Story = {
   args: {
-    'default-slot': '<a href="#">A link inside a list item</a>',
+    'default-slot': 'A link inside a list item',
   },
+  render: ({ 'default-slot': text, ...args }) =>
+    template(args, html`<a href="#">${text}</a>`),
 };

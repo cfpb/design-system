@@ -1041,7 +1041,7 @@ export type CustomElements = {
    *
    * Areas where markup can be added to the component.
    *
-   * - `(default)`: The main content for the tagline.
+   * - `(default)`: The main explanation and optional list.
    *
    * ## Methods
    *
@@ -1450,7 +1450,7 @@ export type CustomElements = {
    *
    * Areas where markup can be added to the component.
    *
-   * - `(default)`: The content for the topic tag.
+   * - `(default)`: The content for the list item.
    *
    * ## Methods
    *
@@ -1759,7 +1759,7 @@ export type CustomElementsSolidJs = {
    *
    * Areas where markup can be added to the component.
    *
-   * - `(default)`: The main content for the tagline.
+   * - `(default)`: The main explanation and optional list.
    *
    * ## Methods
    *
@@ -2208,7 +2208,7 @@ export type CustomElementsSolidJs = {
    *
    * Areas where markup can be added to the component.
    *
-   * - `(default)`: The content for the topic tag.
+   * - `(default)`: The content for the list item.
    *
    * ## Methods
    *

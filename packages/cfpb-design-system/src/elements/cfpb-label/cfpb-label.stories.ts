@@ -1,5 +1,6 @@
 /// <reference types="vite/client" />
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html, nothing } from 'lit';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
 import type { CfpbLabelProps } from '../../../../../storybook/custom-elements-types';
 import { CfpbLabel } from './index.js';
@@ -26,7 +27,13 @@ const meta: Meta<LabelStoryArgs> = {
     'helper-slot': 'We will only use this to reply to you',
   },
   argTypes,
-  render: (args) => template(args),
+  // Label and helper text content in a `<div>`. Controls only have text.
+  render: ({ 'label-slot': label, 'helper-slot': helper, ...args }) =>
+    template(
+      args,
+      html`${label ? html`<div slot="label">${label}</div>` : nothing}
+      ${helper ? html`<div slot="helper">${helper}</div>` : nothing}`,
+    ),
 };
 
 export default meta;

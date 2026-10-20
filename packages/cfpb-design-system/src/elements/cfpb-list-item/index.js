@@ -5,7 +5,7 @@ import styles from './styles.component.scss?inline';
 /**
  *
  * @element cfpb-list-item
- * @slot - The content for the topic tag.
+ * @slot - The content for the list item.
  */
 export class CfpbListItem extends LitElement {
   static styles = css`

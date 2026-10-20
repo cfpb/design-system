@@ -7,6 +7,28 @@ import themeCFPB from './themeCFPB';
 setCustomElementsManifest(customElements);
 setStorybookHelpersConfig({ hideArgRef: true });
 
+/**
+ * We want bool attributes to show up correctly in the show code examples
+ * (EG `disabled` not as `disabled=true`).
+ * @param {string} code - The rendered HTML.
+ * @param {object} context - The story context.
+ * @param {object} context.argTypes - The story argTypes.
+ * @returns {string} The bare boolean attr
+ */
+function plainBooleanAttr(code, { argTypes }) {
+  const booleans = new Set(
+    Object.keys(argTypes).filter(
+      (name) => argTypes[name].type?.name === 'boolean',
+    ),
+  );
+
+  return code.replace(/<[^>]+>/g, (tag) =>
+    tag.replace(/(\s([^\s=/>]+))="(true)?"/g, (attr, bare, name, isTrue) =>
+      isTrue && !booleans.has(name) ? attr : bare,
+    ),
+  );
+}
+
 export const parameters = {
   controls: {
     expand: true,
@@ -19,6 +41,9 @@ export const parameters = {
 
   docs: {
     theme: themeCFPB,
+    source: {
+      transform: plainBooleanAttr,
+    },
   },
 
   a11y: {

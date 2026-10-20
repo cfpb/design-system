@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
-import { html } from 'lit';
+import { html, type TemplateResult } from 'lit';
+import { keyed } from 'lit/directives/keyed.js';
 import { getStorybookHelpers } from '@wc-toolkit/storybook-helpers';
 import { CfpbLinkProps } from '../../../../../storybook/custom-elements-types';
 import { CfpbLink } from './index.js';
@@ -14,8 +15,13 @@ const { args, argTypes, template } = getStorybookHelpers<CfpbLinkProps>(
 
 type LinkStoryArgs = CfpbLinkProps & { 'default-slot'?: string };
 
-// cfpb-link decorates a slotted <a>
-const link = (text: string) => `<a href="#">${text}</a>`;
+/**
+ * cfpb-link is a slotted `<a>` so link text should go in it. UI control is only text.
+ * @param {LinkStoryArgs} args - Story args
+ * @returns {TemplateResult} The actual link
+ */
+const makeLink = ({ 'default-slot': text, ...args }: LinkStoryArgs) =>
+  html`${keyed(text, template(args, html`<a href="#">${text}</a>`))}`;
 
 const meta: Meta<LinkStoryArgs> = {
   title: 'Web Components/cfpb-link',
@@ -23,10 +29,10 @@ const meta: Meta<LinkStoryArgs> = {
   tags: ['autodocs'],
   args: {
     ...args,
-    'default-slot': link('Learn more about mortgages'),
+    'default-slot': 'Learn more about mortgages',
   },
   argTypes,
-  render: (args) => template(args),
+  render: (args) => makeLink(args),
 };
 
 export default meta;
@@ -38,39 +44,39 @@ export const Default: Story = {};
 export const External: Story = {
   args: {
     'link-variant': 'external',
-    'default-slot': link('Visit an external site'),
+    'default-slot': 'Visit an external site',
   },
 };
 
 export const Download: Story = {
   args: {
     'link-variant': 'download',
-    'default-slot': link('Download the report'),
+    'default-slot': 'Download the report',
   },
 };
 
 export const NavRight: Story = {
   args: {
     'link-variant': 'nav-right',
-    'default-slot': link('Next page'),
+    'default-slot': 'Next page',
   },
 };
 
 export const NavLeft: Story = {
   args: {
     'link-variant': 'nav-left',
-    'default-slot': link('Previous page'),
+    'default-slot': 'Previous page',
   },
 };
 
 export const InLine: Story = {
   args: {
     inline: true,
-    'default-slot': link('an inline link'),
+    'default-slot': 'an inline link',
   },
   render: (args) => html`
     <p>
-      Body copy that runs on for a while and contains ${template(args)} in the
+      Body copy that runs on for a while and contains ${makeLink(args)} in the
       middle of a sentence.
     </p>
   `,
@@ -82,7 +88,7 @@ export const HeadingSized: Story = {
     size: 'h4',
     'color-theme': 'dark',
     'no-underline': true,
-    'default-slot': link('Paying for college'),
+    'default-slot': 'Paying for college',
   },
 };
 
@@ -100,6 +106,6 @@ export const AdjacentLinks: Story = {
 export const NoTopBorder: Story = {
   args: {
     'no-top-border': true,
-    'default-slot': link('Mortgages'),
+    'default-slot': 'Mortgages',
   },
 };

@@ -6,7 +6,7 @@ import { CfpbList } from '../cfpb-list';
 
 /**
  * @element cfpb-alert
- * @slot - The main content for the tagline.
+ * @slot - The main explanation and optional list.
  * @property {string} status - The alert status: error, success, warning, info, loading.
  * @property {string} message - The message heading on an alert.
  */

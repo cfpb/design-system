@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{n as t,p as n,r,v as i}from"./iframe-CW6NFI5s.js";import{n as a,t as o}from"./cfpb-icon-Bk3SkIbX.js";import{n as s,t as c}from"./story-helpers-D4KS-b6b.js";var l,u,d,f,p,m,h,g,_;function v(){return(v=e((()=>{n(),r(),a(),s(),o.init(),{args:l,argTypes:u,template:d}=t(`cfpb-icon`,{excludeCategories:[`methods`,`properties`]}),f={title:`Web Components/cfpb-icon`,component:`cfpb-icon`,tags:[`autodocs`],args:{...l,name:`approved-round`},argTypes:{...u,name:c()},render:e=>d(e)},p={},m={args:{name:`update`,spin:!0}},h={render:e=>i`
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{b as t,h as n,n as r,r as i}from"./iframe-DQpG6sFX.js";import{n as a,t as o}from"./cfpb-icon-DFGLCTSQ.js";import{n as s,t as c}from"./story-helpers-DALvg3zo.js";var l,u,d,f,p,m,h,g,_;function v(){return(v=e((()=>{n(),i(),a(),s(),o.init(),{args:l,argTypes:u,template:d}=r(`cfpb-icon`,{excludeCategories:[`methods`,`properties`]}),f={title:`Web Components/cfpb-icon`,component:`cfpb-icon`,tags:[`autodocs`],args:{...l,name:`approved-round`},argTypes:{...u,name:c()},render:e=>d(e)},p={},m={args:{name:`update`,spin:!0}},h={render:e=>t`
     <cfpb-icon name=${e.name??``}></cfpb-icon>
     <cfpb-icon
       name=${e.name??``}
@@ -16,7 +16,7 @@ import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{n as t,p as n,r,v as i
       name=${e.name??``}
       style="--icon-color: var(--green)"
     ></cfpb-icon>
-  `},g={render:e=>i`
+  `},g={render:e=>t`
     <span style="color: var(--pacific)">
       <cfpb-icon name=${e.name??``}></cfpb-icon>
       Text and icon share one color.

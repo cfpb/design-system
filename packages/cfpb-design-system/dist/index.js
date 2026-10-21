@@ -1293,43 +1293,46 @@ var st = (e) => {
 function B(e, t, n) {
 	let r = t, i = e;
 	if (!n) throw Error("Child transition argument must be defined!");
-	let a = n, o, s, c, l = !1, u = !1, d = !1;
+	let a = n, o, s, c, l, u = !1, d = !1, f = !1;
 	if (r.CSS_PROPERTY === void 0 || r.BASE_CLASS === void 0) throw Error("Transitions require CSS_PROPERTY and BASE_CLASS to be passed into BaseTransition.");
-	function f() {
-		s && l ? (i.addEventListener(s, c), a.dispatchEvent(B.BEGIN_EVENT, {
+	function p() {
+		s && u ? (i.addEventListener(s, c), i.addEventListener("transitioncancel", l), a.dispatchEvent(B.BEGIN_EVENT, {
 			target: a,
 			type: B.BEGIN_EVENT
-		}), i.classList.add(B.ANIMATING_CLASS), u = !0) : (a.dispatchEvent(B.BEGIN_EVENT, {
+		}), i.classList.add(B.ANIMATING_CLASS), d = !0) : (a.dispatchEvent(B.BEGIN_EVENT, {
 			target: a,
 			type: B.BEGIN_EVENT
 		}), c());
 	}
-	function p() {
-		i.removeEventListener(s, c);
+	function m() {
+		i.removeEventListener(s, c), i.removeEventListener("transitioncancel", l);
 	}
-	function m(e) {
-		return e && e.propertyName !== r.CSS_PROPERTY ? !1 : (p(), i.classList.remove(B.ANIMATING_CLASS), a.dispatchEvent(B.END_EVENT, {
+	function h(e) {
+		e.target === i && e.propertyName === r.CSS_PROPERTY && typeof i.getAnimations == "function" && (i.getAnimations().some((e) => e.transitionProperty === r.CSS_PROPERTY && e.playState === "running") || g());
+	}
+	function g(e) {
+		return e && e.propertyName !== r.CSS_PROPERTY ? !1 : (m(), i.classList.remove(B.ANIMATING_CLASS), a.dispatchEvent(B.END_EVENT, {
 			target: a,
 			type: B.END_EVENT
-		}), u = !1, !0);
+		}), d = !1, !0);
 	}
-	function h() {
+	function _() {
 		let e;
 		for (e in r) ({}).hasOwnProperty.call(r, e) && r[e] !== r.BASE_CLASS && i.classList.contains(r[e]) && i.classList.remove(r[e]);
 	}
-	function g() {
-		u && (i.style.webkitTransitionDuration = "0", i.style.mozTransitionDuration = "0", i.style.oTransitionDuration = "0", i.style.transitionDuration = "0", i.removeEventListener(s, c), c(), i.style.webkitTransitionDuration = "", i.style.mozTransitionDuration = "", i.style.oTransitionDuration = "", i.style.transitionDuration = "");
-	}
-	function _() {
-		g(), h(), i.classList.remove(r.BASE_CLASS);
-	}
 	function v() {
-		i.classList.remove(B.NO_ANIMATION_CLASS), l = !0;
+		d && (i.style.webkitTransitionDuration = "0", i.style.mozTransitionDuration = "0", i.style.oTransitionDuration = "0", i.style.transitionDuration = "0", m(), c(), i.style.webkitTransitionDuration = "", i.style.mozTransitionDuration = "", i.style.oTransitionDuration = "", i.style.transitionDuration = "");
 	}
 	function y() {
-		i.classList.add(B.NO_ANIMATION_CLASS), l = !1;
+		v(), _(), i.classList.remove(r.BASE_CLASS);
 	}
-	function b(e) {
+	function b() {
+		i.classList.remove(B.NO_ANIMATION_CLASS), u = !0;
+	}
+	function x() {
+		i.classList.add(B.NO_ANIMATION_CLASS), u = !1;
+	}
+	function S(e) {
 		if (!e) throw Error("Element does not have TransitionEnd event. It may be null!");
 		let t, n = {
 			WebkitTransition: "webkitTransitionEnd",
@@ -1343,17 +1346,17 @@ function B(e, t, n) {
 		}
 		return t;
 	}
-	function x(e) {
-		_(), v(), i = e, i.classList.add(r.BASE_CLASS), s = b(i);
+	function C(e) {
+		y(), b(), i = e, i.classList.add(r.BASE_CLASS), s = S(i);
 	}
-	function S(e) {
-		if (l = !i.classList.contains(B.NO_ANIMATION_CLASS), c = m.bind(this), x(i), !e) throw Error("Transition needs to be passed an initial CSS class on initialization!");
+	function ee(e) {
+		if (u = !i.classList.contains(B.NO_ANIMATION_CLASS), c = g.bind(this), l = h.bind(this), C(i), !e) throw Error("Transition needs to be passed an initial CSS class on initialization!");
 		return i.classList.add(e), this;
 	}
-	function C(e) {
-		return d ||= (h(), !0), !i.classList.contains(e) && (p(), i.classList.remove(o), o = e, f(), i.classList.add(o), !0);
+	function w(e) {
+		return f ||= (_(), !0), !i.classList.contains(e) && (m(), i.classList.remove(o), o = e, p(), i.classList.add(o), !0);
 	}
-	return this.animateOff = y, this.animateOn = v, this.applyClass = C, this.halt = g, this.init = S, this.isAnimated = () => l, this.remove = _, this.setElement = x, this;
+	return this.animateOff = x, this.animateOn = b, this.applyClass = w, this.halt = v, this.init = ee, this.isAnimated = () => u, this.remove = y, this.setElement = C, this;
 }
 B.BEGIN_EVENT = "transitionbegin", B.END_EVENT = "transitionend", B.NO_ANIMATION_CLASS = "u-no-animation", B.ANIMATING_CLASS = "u-is-animating";
 //#endregion

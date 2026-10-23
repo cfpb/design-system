@@ -135,8 +135,9 @@ variation_groups:
 
 
           An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/).
+          Use the `eyebrow` class on an element directly before the h1. It will keep the 15px gap between the eyebrow and heading at all breakpoints.
         variation_code_snippet: |
-          <div class="h5">eyebrow heading</div> <div class="h1">Heading 1</div>
+          <div class="eyebrow">eyebrow heading</div> <div class="h1">Heading 1</div>
         variation_specs: >-
           | **Heading**     | **Font weight** | **Font size** |
           **Font-size-adjust*** | **Line height**            | **Responsive

@@ -342,3 +342,13 @@
   font-weight: normal;
   line-height: 1.25;
 }
+
+@mixin u-eyebrow() {
+  @include heading-5;
+
+  // Keep the 15px gap at all breakpoints
+  + h1,
+  + .h1 {
+    margin-top: 0;
+  }
+}

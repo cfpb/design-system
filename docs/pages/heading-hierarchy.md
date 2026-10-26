@@ -16,9 +16,9 @@ variation_groups:
           Example of a non heading element:
           <p class="h1">A non-heading element</p>
           -->
-        variation_description: ''
-        variation_jinja_code_snippet: ''
-        variation_name: ''
+        variation_description: ""
+        variation_jinja_code_snippet: ""
+        variation_name: ""
         variation_specs: >-
           | **Heading** | **Font weight**   | **Font size** |
           **Font-size-adjust*** | **Line height**             |  **Responsive
@@ -41,8 +41,7 @@ variation_groups:
 
           \*See [Normalization](https://cfpb.github.io/design-system/foundation/fonts#normalization) to learn why we use font-size-adjust.
     variation_group_name: Web headings
-    variation_group_description:
-      At screen widths of 600px and below, the Display
+    variation_group_description: At screen widths of 600px and below, the Display
       heading and Headings 1-4 drop in size. Heading 5 remains consistent at all
       screen widths.
   - variation_group_name: Print headings
@@ -51,26 +50,26 @@ variation_groups:
           <h1 style="font-size:60pt; font-weight:500;
           line-height:66pt">Display</h1>
 
-          <h1 style="font-size:38pt; font-weight:400; line-height:40pt">Heading 1</h1>
+          <h1 style="font-size:38pt; font-weight:500; line-height:42pt">Heading 1</h1>
 
-          <h2 style="font-size:26pt; font-weight:400; line-height:28pt">Heading 2</h2>
+          <h2 style="font-size:24pt; font-weight:400; line-height:28pt">Heading 2</h2>
 
-          <h3 style="font-size: 16pt; font-weight:600; line-height: 18pt">Heading 3</h3>
+          <h3 style="font-size: 16pt; font-weight:500; line-height: 18pt">Heading 3</h3>
 
           <h4 style=font-size:14pt; font-weight:500; line-height:16pt">Heading 4</h4>
 
           <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading 5</h5>
 
           <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading 6</p>
-        variation_name: ''
-        variation_description: ''
+        variation_name: ""
+        variation_description: ""
         variation_specs: |-
           | **Heading** | **Font weight** | **Font size** | **Line height** |
           | ----------- | --------------- | ------------- | --------------- |
           | **Display** | 500 (Medium)    | 60pt          | 66pt            |
-          | **H1**      | 400 (Regular)   | 38pt          | 40pt            |
-          | **H2**      | 400 (Regular)   | 26pt          | 28pt            |
-          | **H3**      | 600 (Semi Bold) | 16pt          | 18pt            |
+          | **H1**      | 500 (Medium)    | 38pt          | 42pt            |
+          | **H2**      | 400 (Regular)   | 24pt          | 28pt            |
+          | **H3**      | 500 (Medium)    | 16pt          | 18pt            |
           | **H4**      | 500 (Medium)    | 14pt          | 16pt            |
           | **H5**      | 600 (Semi Bold) | 10pt all caps | 12pt            |
           | **H6**      | 500 (Medium)    | 12pt          | 14pt            |
@@ -82,8 +81,7 @@ variation_groups:
   - variation_group_name: Variations
     variations:
       - variation_name: Meta header
-        variation_description:
-          The meta header is typically used for listing categories
+        variation_description: The meta header is typically used for listing categories
           on pages like the [blog
           page](https://www.consumerfinance.gov/about-us/blog/).
         variation_code_snippet: |-
@@ -149,8 +147,7 @@ variation_groups:
 
           \*See [Normalization](<>) to learn why we use font-size-adjust.
       - variation_name: Slug heading
-        variation_description:
-          Slug headings are used to call attention to and lead
+        variation_description: Slug headings are used to call attention to and lead
           content on sidebars and prefooters, inset modules, and inset email
           modules.
         variation_code_snippet: |-
@@ -195,8 +192,8 @@ description: A successful type hierarchy establishes the order of importance of
   elements on a page. Consistent scaling, weights, and capitalization are used
   to create distinction between heading levels and provide users with  familiar
   focus points when scanning text.
-use_cases: ''
-behavior: ''
+use_cases: ""
+behavior: ""
 accessibility: Since categories can be repetitive, we suggest placing a label
   with `@include u-visually-hidden` prior to the headings with icons to add more
   context for screen readers.
@@ -204,5 +201,5 @@ related_items: |-
   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
   * [Fonts](https://cfpb.github.io/design-system/foundation/fonts)
 last_updated: 2019-10-21T21:54:52.744Z
-research: ''
+research: ""
 ---

@@ -102,6 +102,11 @@ h6,
   @include heading-6;
 }
 
+// Eyebrow heading is a short label above a page's main heading
+.eyebrow {
+  @include u-eyebrow;
+}
+
 .lead-paragraph {
   @include u-lead-paragraph;
 }

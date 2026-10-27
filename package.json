@@ -81,7 +81,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.5",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jsdoc": "65.4.0",
+    "eslint-plugin-jsdoc": "65.4.2",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-lit": "2.3.1",
     "eslint-plugin-playwright": "2.12.1",
@@ -98,7 +98,7 @@
     "prettier": "3.9.10",
     "prop-types": "15.8.1",
     "release-it": "21.1.1",
-    "sass": "1.105.2",
+    "sass": "1.106.1",
     "storybook": "10.6.3",
     "style-dictionary": "5.7.0",
     "stylelint": "17.16.0",
@@ -106,7 +106,7 @@
     "svgo": "4.1.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.72.0",
-    "vite": "8.3.4",
+    "vite": "8.3.5",
     "vitest": "4.1.12"
   },
   "release-it": {

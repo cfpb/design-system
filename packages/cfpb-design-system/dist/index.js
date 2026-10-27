@@ -1,4 +1,4 @@
-//#region \0rolldown/runtime.js
+// \0rolldown/runtime.js
 var e = Object.defineProperty, t = (t, n) => {
 	let r = {};
 	for (var i in t) e(r, i, {
@@ -140,8 +140,7 @@ var e = Object.defineProperty, t = (t, n) => {
 		this.#t.clear(), this.#n.clear(), this.#r.clear();
 	}
 };
-//#endregion
-//#region packages/cfpb-design-system/src/elements/utilities/parse-child-data.js
+// packages/cfpb-design-system/src/elements/utilities/parse-child-data.js
 function a(e, t = {}) {
 	let { allowSingleQuotes: n = !0 } = t;
 	if (!e) return null;
@@ -157,8 +156,7 @@ function a(e, t = {}) {
 		return console.error("Failed to parse childData JSON:", e), null;
 	}
 }
-//#endregion
-//#region packages/cfpb-design-system/src/elements/utilities/search-service.js
+// packages/cfpb-design-system/src/elements/utilities/search-service.js
 var o = class {
 	constructor(e = [], t = {}) {
 		this.items = e, this.fields = t.fields || null;
@@ -191,8 +189,7 @@ function f() {
 function p(e, t) {
 	globalThis.customElements.get(e) || globalThis.customElements.define(e, t);
 }
-//#endregion
-//#region node_modules/@lit/reactive-element/css-tag.js
+// node_modules/@lit/reactive-element/css-tag.js
 var m = globalThis, h = m.ShadowRoot && (m.ShadyCSS === void 0 || m.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, g = Symbol(), _ = /* @__PURE__ */ new WeakMap(), v = class {
 	constructor(e, t, n) {
 		if (this._$cssResult$ = !0, n !== g) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
@@ -446,8 +443,7 @@ var D = class extends HTMLElement {
 	firstUpdated(e) {}
 };
 D.elementStyles = [], D.shadowRootOptions = { mode: "open" }, D[E("elementProperties")] = /* @__PURE__ */ new Map(), D[E("finalized")] = /* @__PURE__ */ new Map(), oe?.({ ReactiveElement: D }), (T.reactiveElementVersions ??= []).push("2.1.2");
-//#endregion
-//#region node_modules/lit-html/lit-html.js
+// node_modules/lit-html/lit-html.js
 var ue = globalThis, de = (e) => e, fe = ue.trustedTypes, pe = fe ? fe.createPolicy("lit-html", { createHTML: (e) => e }) : void 0, me = "$lit$", O = `lit$${Math.random().toFixed(9).slice(2)}$`, he = "?" + O, ge = `<${he}>`, k = document, _e = () => k.createComment(""), ve = (e) => e === null || typeof e != "object" && typeof e != "function", ye = Array.isArray, be = (e) => ye(e) || typeof e?.[Symbol.iterator] == "function", xe = "[ 	\n\f\r]", Se = /<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g, Ce = /-->/g, we = />/g, A = RegExp(`>|${xe}(?:([^\\s"'>=/]+)(${xe}*=${xe}*(?:[^ \t\n\f\r"'\`<>=]|("|')|))|$)`, "g"), Te = /'/g, Ee = /"/g, De = /^(?:script|style|textarea|title)$/i, j = ((e) => (t, ...n) => ({
 	_$litType$: e,
 	strings: t,
@@ -717,8 +713,7 @@ var Ve = (e, t, n) => {
 I._$litElement$ = !0, I.finalized = !0, He.litElementHydrateSupport?.({ LitElement: I });
 var Ue = He.litElementPolyfillSupport;
 Ue?.({ LitElement: I }), (He.litElementVersions ??= []).push("4.2.2");
-//#endregion
-//#region packages/cfpb-design-system/src/elements/cfpb-alert/styles.component.scss?inline
+// packages/cfpb-design-system/src/elements/cfpb-alert/styles.component.scss?inline
 var We = ".cf-icon-svg{vertical-align:middle;fill:currentColor;height:1.1875em}.cf-icon-svg--updating,.cf-icon-svg--updating-round{transform-origin:50%;animation:1.25s linear infinite updating-animation}@keyframes updating-animation{0%{transform:rotate(0)}to{transform:rotate(359deg)}}html[lang=ar] .cf-icon-svg--right,html[lang=ar] .cf-icon-svg--right-round,html[lang=ar] .cf-icon-svg--left,html[lang=ar] .cf-icon-svg--left-round,html[lang=ar] .cf-icon-svg--arrow-right,html[lang=ar] .cf-icon-svg--arrow-right-round,html[lang=ar] .cf-icon-svg--arrow-left,html[lang=ar] .cf-icon-svg--arrow-left-round,html[lang=ar] .cf-icon-svg--help,html[lang=ar] .cf-icon-svg--help-round,html[lang=ar] .cf-icon-svg--book,html[lang=ar] .cf-icon-svg--book-round,html[lang=ar] .cf-icon-svg--document,html[lang=ar] .cf-icon-svg--document-round,html[lang=ar] .cf-icon-svg--edit,html[lang=ar] .cf-icon-svg--edit-round,html[lang=ar] .cf-icon-svg--paper-clip,html[lang=ar] .cf-icon-svg--paper-clip-round,html[lang=ar] .cf-icon-svg--cart,html[lang=ar] .cf-icon-svg--cart-round,html[lang=ar] .cf-icon-svg--disability,html[lang=ar] .cf-icon-svg--disability-round,html[lang=ar] .cf-icon-svg--travel,html[lang=ar] .cf-icon-svg--travel-round,html[lang=ar] .cf-icon-svg--bullhorn,html[lang=ar] .cf-icon-svg--bullhorn-round,html[lang=ar] .cf-icon-svg--chart,html[lang=ar] .cf-icon-svg--chart-round,html[lang=ar] .cf-icon-svg--list,html[lang=ar] .cf-icon-svg--list-round,html[lang=ar] .cf-icon-svg--external-link,html[lang=ar] .cf-icon-svg--external-link-round{transform:scaleX(-1)}.u-no-animation{transition-duration:0s!important}.u-move-transition{transition:transform .25s ease-out}.u-move-to-origin{transform:translate(0,0)}.u-move-left{transform:translate(-100%)}.u-move-left-2x{transform:translate(-200%)}.u-move-left-3x{transform:translate(-300%)}.u-move-right{transform:translate(100%)}.u-move-up{transform:translateY(-100%)}.u-alpha-transition{transition:opacity .25s linear}.u-alpha-100{opacity:1}.u-alpha-0{opacity:0}.u-max-height-transition{contain:paint;transition:max-height .2s ease-out;overflow:hidden}.u-max-height-zero{max-height:0!important}.u-max-height-summary{max-height:88px!important}.no-js .u-js-only,.u-hide-if-js{display:none!important}.no-js .u-hide-if-js{display:block!important}@media screen{.u-print-only{display:none}}@media print{.u-screen-only{display:none}}.u-clearfix:after{content:\"\";clear:both;display:table}.u-visually-hidden{clip:rect(0 0 0 0);border:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}@media only screen and (width<=37.5em){.u-hide-on-mobile{display:none}}@media only screen and (width>=37.5625em){.u-show-on-mobile{display:none}}.u-hidden{display:none!important}.u-invisible{visibility:hidden}.u-right{float:right}.u-nowrap{white-space:nowrap}.u-flexible-container{height:0;padding-bottom:56.25%;position:relative}.u-flexible-container__inner{width:100%;height:100%;position:absolute;top:0;left:0}.u-flexible-container--4-3{height:0;padding-bottom:75%;position:relative}.u-mt0{margin-top:0!important}.u-mb0{margin-bottom:0!important}.u-mt5{margin-top:5px!important}.u-mb5{margin-bottom:5px!important}.u-mt10{margin-top:10px!important}.u-mb10{margin-bottom:10px!important}.u-mt15{margin-top:15px!important}.u-mb15{margin-bottom:15px!important}.u-mt20{margin-top:20px!important}.u-mb20{margin-bottom:20px!important}.u-mt30{margin-top:30px!important}.u-mb30{margin-bottom:30px!important}.u-mt45{margin-top:45px!important}.u-mb45{margin-bottom:45px!important}.u-mt60{margin-top:60px!important}.u-mb60{margin-bottom:60px!important}.u-w100pct{width:100%}.u-w90pct{width:90%}.u-w80pct{width:80%}.u-w70pct{width:70%}.u-w60pct{width:60%}.u-w50pct{width:50%}.u-w40pct{width:40%}.u-w30pct{width:30%}.u-w20pct{width:20%}.u-w10pct{width:10%}.u-w75pct{width:75%}.u-w65pct{width:65%}.u-w25pct{width:25%}.u-w15pct{width:15%}.u-w66pct{width:66.6667%}.u-w33pct{width:33.3333%}small,.u-small-text{font-size:.875em}small--subtle,.u-small-text--subtle{color:var(--gray)}:host{--alert-bg-default:var(--gray-5);--alert-bg-success:var(--green-10);--alert-bg-warning:var(--gold-10);--alert-bg-error:var(--red-10);--alert-border-default:var(--gray-40);--alert-border-success:var(--green);--alert-border-warning:var(--gold);--alert-border-error:var(--red);--alert-icon-color-default:var(--gray);--alert-icon-color-success:var(--green);--alert-icon-color-warning:var(--gold);--alert-icon-color-error:var(--red);--alert-icon-color-loading:var(--gray);--alert-bg:var(--alert-bg-default);--alert-border:var(--alert-border-default);--alert-icon-color:var(--alert-icon-color-default)}:host([status=success]){--alert-bg:var(--alert-bg-success);--alert-border:var(--alert-border-success);--alert-icon-color:var(--alert-icon-color-success)}:host([status=warning]){--alert-bg:var(--alert-bg-warning);--alert-border:var(--alert-border-warning);--alert-icon-color:var(--alert-icon-color-warning)}:host([status=error]){--alert-bg:var(--alert-bg-error);--alert-border:var(--alert-border-error);--alert-icon-color:var(--alert-icon-color-error)}:host([status]) a{color:var(--pacific-mid-dark);-webkit-text-decoration-color:var(--pacific-mid-dark);-webkit-text-decoration-color:var(--pacific-mid-dark);text-decoration-color:var(--pacific-mid-dark)}:host([status]) a:visited,:host([status]) a.visited{-webkit-text-decoration-color:var(--teal);-webkit-text-decoration-color:var(--teal);text-decoration-color:var(--teal);color:var(--teal)}:host([status]) a:hover,:host([status]) a.hover{-webkit-text-decoration-color:var(--pacific-dark);-webkit-text-decoration-color:var(--pacific-dark);text-decoration-color:var(--pacific-dark);color:var(--pacific-dark)}:host([status]) a:focus,:host([status]) a.focus{-webkit-text-decoration-color:var(--pacific-mid-dark);-webkit-text-decoration-color:var(--pacific-mid-dark);text-decoration-color:var(--pacific-mid-dark);color:var(--pacific-mid-dark)}:host([status]) a:active,:host([status]) a.active{-webkit-text-decoration-color:var(--navy-dark);-webkit-text-decoration-color:var(--navy-dark);text-decoration-color:var(--navy-dark);color:var(--navy-dark)}::slotted(*){margin-top:.3125rem;margin-bottom:.9375rem;display:block}@media only screen and (width>=37.5625em){::slotted(*){margin-bottom:0}}::slotted(cfpb-list){margin-top:.9375rem}@media only screen and (width>=37.5625em){::slotted(cfpb-list){margin-top:.3125rem}}cfpb-icon{color:var(--alert-icon-color);flex:none}cfpb-icon+.content{flex-grow:1}@media only screen and (width>=37.5625em){cfpb-icon{font-size:1.125rem}}.container{background:var(--alert-bg);border:1px solid var(--alert-border);gap:.3125rem;padding:.9375rem;display:flex}.content{max-width:41.875rem}.message{font-size:1rem;font-weight:500;line-height:1.25}@media only screen and (width>=37.5625em){.message{font-size:1.125rem}}", Ge = ":host{--icon-mask-image-url:\"\";vertical-align:middle;height:1.1875em;color:var(--icon-color,inherit);display:inline-block}:host([spin]){transform-origin:50%;animation:1.25s linear infinite spin-animation}@keyframes spin-animation{0%{transform:rotate(0)}to{transform:rotate(359deg)}}span{-webkit-mask-image:var(--icon-mask-image-url);-webkit-mask-image:var(--icon-mask-image-url);mask-image:var(--icon-mask-image-url);background-color:currentColor;line-height:0;display:inline-block;-webkit-mask-position:50%;mask-position:50%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}img{opacity:0;height:1.1875em}", L = class e extends I {
 	static styles = b`
     ${y(Ge)}
@@ -1288,8 +1283,7 @@ var st = (e) => {
 		L.init(), p("cfpb-form-alert", e);
 	}
 }, yt = "html{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%;font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{margin:.67em 0;font-size:2em}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:\"“\" \"”\" \"‘\" \"’\"}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sup{top:-.5em}sub{bottom:-.25em}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{margin:0;font-family:inherit;font-size:100%}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button{appearance:none}input[type=search]::-webkit-search-decoration{appearance:none}button::-moz-focus-inner{border:0;padding:0}input::-moz-focus-inner{border:0;padding:0}textarea{vertical-align:top;overflow:auto}table{border-collapse:collapse;border-spacing:0}:not(:defined){border-radius:4px;width:100%;animation:1.5s infinite pulse-background;display:block;box-shadow:inset 0 0 3px #5a5d611a}@keyframes pulse-background{0%{background-color:#0000}50%{background-color:#5a5d610d}to{background-color:#0000}}cfpb-tagline:not(:defined){min-height:16.5px}cfpb-tagline[islarge]:not(:defined){min-height:22px}cfpb-form-search:not(:defined){min-height:35px}@media only screen and (width<=37.5625em){cfpb-form-search:not(:defined){min-height:85px}}body{color:var(--text);font-family:var(--font-stack);font-size-adjust:var(--font-adjust-body);-webkit-font-smoothing:antialiased;font-size:100%;line-height:1.375}button,input,select,textarea{font-family:var(--font-stack);font-size-adjust:var(--font-adjust-body);line-height:1.1875}input[type=date]{display:revert;min-width:100px;min-height:35px;padding-top:0;padding-bottom:0}input[type=date].a-text-input--full{min-width:100%}hr{border:none;border-top:1px solid var(--gray-40)}strong,b{font-weight:600}h1,h2,h3,h4,h5,h6{margin-top:0}h1,.h1{font-size-adjust:var(--font-adjust-h1);letter-spacing:inherit;text-transform:inherit;margin-bottom:.441176em;font-size:2.125em;font-weight:600;line-height:1.25}p+h1,ul+h1,ol+h1,dl+h1,figure+h1,img+h1,table+h1,blockquote+h1,p+.h1,ul+.h1,ol+.h1,dl+.h1,figure+.h1,img+.h1,table+.h1,blockquote+.h1{margin-top:1.76471em}@media only screen and (width<=37.5em){h2+h1,.h2+h1,h3+h1,.h3+h1,h4+h1,.h4+h1,h5+h1,.h5+h1,h6+h1,.h6+h1,h2+.h1,.h2+.h1,h3+.h1,.h3+.h1,h4+.h1,.h4+.h1,h5+.h1,.h5+.h1,h6+.h1,.h6+.h1{margin-top:1.15385em}h1,.h1{font-size-adjust:var(--font-adjust-h2);letter-spacing:inherit;text-transform:inherit;margin-bottom:.576923em;font-size:1.625em;font-weight:600;line-height:1.25}p+h1,ul+h1,ol+h1,dl+h1,figure+h1,img+h1,table+h1,blockquote+h1,p+.h1,ul+.h1,ol+.h1,dl+.h1,figure+.h1,img+.h1,table+.h1,blockquote+.h1{margin-top:1.73077em}h1+h1,.h1+h1,h3+h1,.h3+h1,h4+h1,.h4+h1,h5+h1,.h5+h1,h6+h1,.h6+h1,h1+.h1,.h1+.h1,h3+.h1,.h3+.h1,h4+.h1,.h4+.h1,h5+.h1,.h5+.h1,h6+.h1,.h6+.h1{margin-top:1.15385em}}h2,.h2{font-size-adjust:var(--font-adjust-h2);letter-spacing:inherit;text-transform:inherit;margin-bottom:.576923em;font-size:1.625em;font-weight:600;line-height:1.25}p+h2,ul+h2,ol+h2,dl+h2,figure+h2,img+h2,table+h2,blockquote+h2,p+.h2,ul+.h2,ol+.h2,dl+.h2,figure+.h2,img+.h2,table+.h2,blockquote+.h2{margin-top:1.73077em}h1+h2,.h1+h2,h3+h2,.h3+h2,h4+h2,.h4+h2,h5+h2,.h5+h2,h6+h2,.h6+h2,h1+.h2,.h1+.h2,h3+.h2,.h3+.h2,h4+.h2,.h4+.h2,h5+.h2,.h5+.h2,h6+.h2,.h6+.h2{margin-top:1.15385em}@media only screen and (width<=37.5em){p+h2,ul+h2,ol+h2,dl+h2,figure+h2,img+h2,table+h2,blockquote+h2,p+.h2,ul+.h2,ol+.h2,dl+.h2,figure+.h2,img+.h2,table+.h2,blockquote+.h2{margin-top:1.36364em}h2,.h2{font-size-adjust:var(--font-adjust-h3);letter-spacing:inherit;text-transform:inherit;margin-bottom:.681818em;font-size:1.375em;font-weight:600;line-height:1.25}p+h2,ul+h2,ol+h2,dl+h2,figure+h2,img+h2,table+h2,blockquote+h2,h1+h2,.h1+h2,h2+h2,.h2+h2,h4+h2,.h4+h2,h5+h2,.h5+h2,h6+h2,.h6+h2,p+.h2,ul+.h2,ol+.h2,dl+.h2,figure+.h2,img+.h2,table+.h2,blockquote+.h2,h1+.h2,.h1+.h2,h2+.h2,.h2+.h2,h4+.h2,.h4+.h2,h5+.h2,.h5+.h2,h6+.h2,.h6+.h2{margin-top:1.36364em}}h3,.h3{font-size-adjust:var(--font-adjust-h3);letter-spacing:inherit;text-transform:inherit;margin-bottom:.681818em;font-size:1.375em;font-weight:400;line-height:1.25}p+h3,ul+h3,ol+h3,dl+h3,figure+h3,img+h3,table+h3,blockquote+h3,h1+h3,.h1+h3,h2+h3,.h2+h3,h4+h3,.h4+h3,h5+h3,.h5+h3,h6+h3,.h6+h3,p+.h3,ul+.h3,ol+.h3,dl+.h3,figure+.h3,img+.h3,table+.h3,blockquote+.h3,h1+.h3,.h1+.h3,h2+.h3,.h2+.h3,h4+.h3,.h4+.h3,h5+.h3,.h5+.h3,h6+.h3,.h6+.h3{margin-top:1.36364em}@media only screen and (width<=37.5em){h3,.h3{font-size-adjust:var(--font-adjust-h4);letter-spacing:inherit;text-transform:inherit;margin-bottom:.833333em;font-size:1.125em;font-weight:500;line-height:1.25}p+h3,ul+h3,ol+h3,dl+h3,figure+h3,img+h3,table+h3,blockquote+h3,h1+h3,.h1+h3,h2+h3,.h2+h3,h3+h3,.h3+h3,h5+h3,.h5+h3,h6+h3,.h6+h3,p+.h3,ul+.h3,ol+.h3,dl+.h3,figure+.h3,img+.h3,table+.h3,blockquote+.h3,h1+.h3,.h1+.h3,h2+.h3,.h2+.h3,h3+.h3,.h3+.h3,h5+.h3,.h5+.h3,h6+.h3,.h6+.h3{margin-top:1.66667em}}h4,.h4{font-size-adjust:var(--font-adjust-h4);letter-spacing:inherit;text-transform:inherit;margin-bottom:.833333em;font-size:1.125em;font-weight:500;line-height:1.25}p+h4,ul+h4,ol+h4,dl+h4,figure+h4,img+h4,table+h4,blockquote+h4,h1+h4,.h1+h4,h2+h4,.h2+h4,h3+h4,.h3+h4,h5+h4,.h5+h4,h6+h4,.h6+h4,p+.h4,ul+.h4,ol+.h4,dl+.h4,figure+.h4,img+.h4,table+.h4,blockquote+.h4,h1+.h4,.h1+.h4,h2+.h4,.h2+.h4,h3+.h4,.h3+.h4,h5+.h4,.h5+.h4,h6+.h4,.h6+.h4{margin-top:1.66667em}@media only screen and (width<=37.5em){h4,.h4{margin-bottom:.625em;font-size:1em;line-height:1.125}}h5,.h5{font-size-adjust:var(--font-adjust-h5);letter-spacing:1px;text-transform:uppercase;margin-bottom:1.07143em;font-size:.875em;font-weight:600;line-height:1.25}p+h5,ul+h5,ol+h5,dl+h5,figure+h5,img+h5,table+h5,blockquote+h5,h1+h5,.h1+h5,h2+h5,.h2+h5,h3+h5,.h3+h5,h4+h5,.h4+h5,h6+h5,.h6+h5,p+.h5,ul+.h5,ol+.h5,dl+.h5,figure+.h5,img+.h5,table+.h5,blockquote+.h5,h1+.h5,.h1+.h5,h2+.h5,.h2+.h5,h3+.h5,.h3+.h5,h4+.h5,.h4+.h5,h6+.h5,.h6+.h5{margin-top:2.14286em}h6,.h6{font-size-adjust:var(--font-adjust-h6);letter-spacing:1px;text-transform:uppercase;margin-bottom:1.25em;font-size:.75em;font-weight:600;line-height:1.25}p+h6,ul+h6,ol+h6,dl+h6,figure+h6,img+h6,table+h6,blockquote+h6,h1+h6,.h1+h6,h2+h6,.h2+h6,h3+h6,.h3+h6,h4+h6,.h4+h6,h5+h6,.h5+h6,p+.h6,ul+.h6,ol+.h6,dl+.h6,figure+.h6,img+.h6,table+.h6,blockquote+.h6,h1+.h6,.h1+.h6,h2+.h6,.h2+.h6,h3+.h6,.h3+.h6,h4+.h6,.h4+.h6,h5+.h6,.h5+.h6{margin-top:2.5em}.lead-paragraph{font-size-adjust:var(--font-adjust-h3);letter-spacing:inherit;text-transform:inherit;margin-top:0;margin-bottom:15px;font-size:1.375em;font-weight:400;line-height:1.25}@media only screen and (width<=37.5em){.lead-paragraph{font-size-adjust:var(--font-adjust-h4);letter-spacing:inherit;text-transform:inherit;font-size:1.125em;font-weight:500;line-height:1.25}}.superheading{margin-bottom:.416667em;font-size:3em;font-weight:400;line-height:1.25}p,ul,ol,dl,figure,table,blockquote{margin-top:0;margin-bottom:.9375em}p:last-child,ul:last-child,ol:last-child,dl:last-child,figure:last-child,table:last-child,blockquote:last-child{margin-bottom:0}p+ul,p+ol{margin-top:-.3125em}ul ul,ol ol,ul ol,ol ul{margin-top:.5em}li{margin-bottom:.5em}li:last-child,nav li{margin-bottom:0}a{color:var(--link-text);-webkit-text-decoration-color:var(--link-underline);-webkit-text-decoration-color:var(--link-underline);text-decoration-color:var(--link-underline);text-underline-offset:4.5px;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-thickness:1px}a:visited,a.visited{-webkit-text-decoration-color:var(--link-underline-visited);-webkit-text-decoration-color:var(--link-underline-visited);text-decoration-color:var(--link-underline-visited);color:var(--link-text-visited)}a:hover,a.hover{text-decoration-style:solid;-webkit-text-decoration-color:var(--link-underline-hover);-webkit-text-decoration-color:var(--link-underline-hover);text-decoration-color:var(--link-underline-hover);color:var(--link-text-hover)}a:focus,a.focus{outline-offset:1px;outline:thin dotted}a:active,a.active{text-decoration-style:solid;-webkit-text-decoration-color:var(--link-underline-active);-webkit-text-decoration-color:var(--link-underline-active);text-decoration-color:var(--link-underline-active);color:var(--link-text-active)}nav a{text-decoration-line:none}ul{padding-left:1.125em;list-style:square}ul ul{list-style-type:circle}ol{padding-left:1.3125em}ol li:nth-last-child(n+10),ol li:nth-last-child(n+10)~li{margin-left:.5625rem}ol ol{list-style-type:lower-alpha}ol ol li{margin-left:0!important}ol ol ol{list-style-type:lower-roman}nav ul,nav ol,nav ul ul,nav ol ol{list-style:none}caption{text-align:left;margin-bottom:.625em}th,td{padding:.625em}thead th,thead td{background:var(--table-head-bg);color:var(--table-head-text);vertical-align:top;padding:.714286em;font-size:1em}thead,tbody tr{border-bottom:1px solid var(--table-border)}th{text-align:left;font-weight:600}thead th h2,thead th .h2,thead th h3,thead th .h3,thead th h4,thead th .h4,thead th h5,thead th .h5,thead th h6,thead th .h6{font-size:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-transform:inherit;margin:0}blockquote{margin-left:.9375em;margin-right:.9375em}@media only screen and (width>=37.5625em){blockquote{margin-left:1.875em;margin-right:1.875em}}img{max-width:100%}figure{margin-left:0;margin-right:0}figure img{vertical-align:middle}pre,code{background:var(--code-bg);color:var(--code-text);border-radius:4px;font-family:Input Mono,Consolas,Monaco,Courier New,monospace}code{padding:.230769em .230769em 0;font-size:.8125em}pre{white-space:pre-wrap;overflow-wrap:break-word;padding:.625em .9375em;display:block}pre code{background-color:#0000;padding:0}:root{--beige:#bea96f;--beige-30:#f0e8d8;--beige-60:#d8c8a0;--black:#101820;--font-stack:var(--font-stack-branded,system-ui, sans-serif);--font-stack-branded:initial;--gold:#ff9e1b;--gold-10:#fff6ec;--gold-20:#fff0dd;--gold-30:#ffe8cb;--gold-40:#ffe1b9;--gold-50:#ffd8a3;--gold-60:#ffce8d;--gold-70:#ffc372;--gold-80:#ffb858;--gold-90:#ffab39;--gold-dark:#dc731c;--gold-mid-dark:#ed881b;--gray:#5a5d61;--gray-10:#e7e8e9;--gray-15:#dcdddf;--gray-20:#d2d3d5;--gray-30:#c3c4c4;--gray-40:#b4b5b6;--gray-5:#f7f8f9;--gray-50:#a2a3a4;--gray-60:#919395;--gray-70:#838588;--gray-80:#75787b;--gray-90:#676a6f;--gray-dark:#43484e;--gray-darker:#293037;--gray-mid-dark:#4f5257;--green:#20aa3f;--green-10:#f0f8eb;--green-20:#e2efd8;--green-30:#d4eac6;--green-40:#c7e5b3;--green-50:#bae0a2;--green-60:#addc91;--green-70:#93cf7c;--green-80:#66c368;--green-90:#48b753;--green-dark:#1e9642;--green-mid-dark:#1fa040;--navy:#254b87;--navy-10:#f4f6fa;--navy-20:#d3daeb;--navy-30:#c3cde2;--navy-40:#b3c0d9;--navy-50:#9daecc;--navy-60:#889cc0;--navy-70:#6f88b2;--navy-80:#5674a3;--navy-90:#3e5f95;--navy-dark:#002d72;--navy-mid-dark:#123c7c;--neutral:#8a6c57;--neutral-10:#f8f5f2;--neutral-20:#e7ddd7;--neutral-30:#ddd1c9;--neutral-40:#d3c5bc;--neutral-50:#c6b4a9;--neutral-60:#baa496;--neutral-70:#ad9484;--neutral-80:#a18573;--neutral-90:#957865;--neutral-dark:#745745;--neutral-mid-dark:#7d604b;--pacific:#0072ce;--pacific-10:#eff8fd;--pacific-20:#d6e8fa;--pacific-30:#c3ddf6;--pacific-40:#afd2f2;--pacific-50:#96c4ed;--pacific-60:#7eb7e8;--pacific-70:#61a7e2;--pacific-80:#4497dc;--pacific-90:#2284d5;--pacific-dark:#0050b4;--pacific-mid-dark:#0061c1;--purple:#b4267a;--purple-10:#fdf3f8;--purple-20:#f0d8e2;--purple-30:#ebc9d9;--purple-40:#e3b2cc;--purple-50:#dc9cbf;--purple-60:#d486b2;--purple-70:#cd70a5;--purple-80:#c55998;--purple-90:#be438b;--purple-dark:#a01b68;--purple-mid-dark:#aa2071;--red:#d14124;--red-10:#fbefec;--red-20:#f7e0d9;--red-30:#f3d1c8;--red-40:#f0c3b8;--red-50:#ebb0a3;--red-60:#e79e8e;--red-70:#e28875;--red-80:#dd735d;--red-90:#d75a40;--red-dark:#b63014;--red-mid-dark:#c3381c;--teal:#257675;--teal-10:#f0f7f6;--teal-20:#d4e7e6;--teal-30:#c4dddc;--teal-40:#b4d2d1;--teal-50:#9ec4c3;--teal-60:#89b6b5;--teal-70:#70a6a5;--teal-80:#579695;--teal-90:#3e8685;--teal-dark:#005e5d;--teal-mid-dark:#126b69;--white:#fff;--font-adjust-base:.517;--font-adjust-step:.0054;--font-adjust-h1:calc(var(--font-adjust-base) + (5 * var(--font-adjust-step)));--font-adjust-h2:calc(var(--font-adjust-base) + (4 * var(--font-adjust-step)));--font-adjust-h3:calc(var(--font-adjust-base) + (3 * var(--font-adjust-step)));--font-adjust-h4:calc(var(--font-adjust-base) + (2 * var(--font-adjust-step)));--font-adjust-h5:calc(var(--font-adjust-base) + (1 * var(--font-adjust-step)));--font-adjust-h6:var(--font-adjust-base);--font-adjust-body:var(--font-adjust-base);--select-border-width-default:1px;--select-border-width-error:2px;--block-bg:var(--gray-5);--block-border:var(--gray-40);--btn-bg:var(--pacific);--btn-bg-active:var(--navy);--btn-bg-hover:var(--pacific-dark);--btn-disabled-bg:var(--gray-20);--btn-disabled-divider:var(--gray-60);--btn-disabled-outline:var(--gray-20);--btn-disabled-text:var(--gray-dark);--btn-divider:var(--pacific-60);--btn-secondary-bg:var(--white);--btn-secondary-bg-active:var(--pacific-20);--btn-secondary-bg-hover:var(--pacific-10);--btn-secondary-border:var(--pacific);--btn-secondary-border-active:var(--navy);--btn-secondary-border-hover:var(--pacific-dark);--btn-secondary-divider:var(--pacific-60);--btn-secondary-text:var(--pacific);--btn-secondary-text-active:var(--navy);--btn-secondary-text-hover:var(--pacific-dark);--btn-text:var(--white);--btn-warning-bg:var(--red-mid-dark);--btn-warning-bg-active:var(--gray-dark);--btn-warning-bg-hover:var(--red-dark);--btn-warning-divider:var(--red-60);--btn-warning-text:var(--white);--choice-bg-default:var(--white);--choice-bg-disabled:var(--gray-10);--choice-bg-selected-default:var(--pacific);--choice-bg-selected-disabled:var(--gray-40);--choice-bg-selected-focus-default:var(--pacific);--choice-border-default:var(--gray-60);--choice-border-disabled:var(--gray-60);--choice-border-error:var(--red);--choice-border-focus-default:var(--pacific);--choice-border-hover-default:var(--pacific);--choice-border-success:var(--green);--choice-border-warning:var(--gold);--choice-label-disabled-default:var(--gray-dark);--choice-mark-default:var(--black);--choice-mark-disabled-default:var(--gray-60);--choice-outline-focus-default:var(--pacific);--code-bg:var(--gray-5);--content-main-border:var(--gray-40);--form-alert-icon-color-default:var(--gray);--form-alert-icon-color-error:var(--red);--form-alert-icon-color-success:var(--green);--form-alert-icon-color-warning:var(--gold);--form-field-input-lg-target-bg:var(--gray-10);--form-field-input-lg-target-bg-disabled:var(--gray-20);--form-field-input-lg-target-bg-selected:var(--pacific-20);--form-field-input-lg-target-border:var(--pacific);--input-bg-default:var(--white);--input-bg-disabled-default:var(--gray-10);--input-border-default:var(--gray-60);--input-border-disabled:var(--gray-60);--input-border-error:var(--red);--input-border-focus-default:var(--pacific);--input-border-hover-default:var(--pacific);--input-border-success:var(--green);--input-border-warning:var(--gold);--input-text-default:var(--black);--input-text-disabled-default:var(--gray-dark);--input-text-placeholder-default:var(--gray-dark);--label-helper:var(--gray-dark);--link-text:var(--pacific);--link-text-active:var(--navy);--link-text-hover:var(--pacific-dark);--link-text-visited:var(--teal);--link-underline:var(--pacific);--link-underline-active:var(--navy);--link-underline-hover:var(--pacific-dark);--link-underline-visited:var(--teal);--range-bg:var(--gray-10);--range-bg-focused:var(--pacific-20);--range-bg-track:var(--gray-80);--range-border:var(--gray-40);--range-border-focused:var(--pacific);--select-bg-disabled-default:var(--gray-10);--select-border-default:var(--gray-60);--select-border-error:var(--red);--select-border-focus-default:var(--pacific);--select-border-hover-default:var(--pacific);--select-icon-bg-default:var(--gray-10);--select-text-disabled-default:var(--gray-dark);--table-border:var(--gray);--table-head-bg:var(--gray-5);--text:var(--black);--block-border-bottom:var(--block-border);--block-border-left:var(--block-border);--block-border-right:var(--block-border);--block-border-top:var(--block-border);--code-text:var(--text);--table-head-text:var(--text)}.u-hidden{display:none!important}.u-visually-hidden{clip:rect(0 0 0 0);border:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.u-no-animation{transition-duration:0s!important}.u-move-transition{transition:transform .25s ease-out}.u-move-to-origin{transform:translate(0,0)}.u-move-left{transform:translate(-100%)}.u-move-left-2x{transform:translate(-200%)}.u-move-left-3x{transform:translate(-300%)}.u-move-right{transform:translate(100%)}.u-move-up{transform:translateY(-100%)}.u-alpha-transition{transition:opacity .25s linear}.u-alpha-100{opacity:1}.u-alpha-0{opacity:0}.u-max-height-transition{contain:paint;transition:max-height .2s ease-out;overflow:hidden}.u-max-height-zero{max-height:0!important}.u-max-height-summary{max-height:88px!important}:host{--expandable-border:var(--gray-40)}::slotted([slot=header]){color:var(--black)!important;margin-bottom:0!important;font-size:1.125em!important;font-weight:500!important}@media only screen and (width<=37.5em){::slotted([slot=header]){font-size:1em!important}}.o-expandable{position:relative}.o-expandable__header{cursor:pointer;background-color:#0000;border:0;justify-content:space-between;gap:10px;padding:.625em .9375em;display:flex}.o-expandable__header:focus{outline:1px dotted var(--black);outline-offset:2px}.o-expandable__header .o-expandable__cue-close,.o-expandable__header .o-expandable__cue-open{display:none}.o-expandable__header[aria-expanded=false] .o-expandable__cue-open,.o-expandable__header[aria-expanded=true] .o-expandable__cue-close{display:block}.o-expandable button.o-expandable__header{text-align:left;width:100%}.o-expandable__label{flex-grow:1}.o-expandable__icon,.o-expandable__label{font-size:1.125em!important}@media only screen and (width<=37.5em){.o-expandable__icon,.o-expandable__label{font-size:1em!important}}.o-expandable__cues{color:var(--pacific);align-self:center;font-size:1em;line-height:1.375}.o-expandable__content{padding:0 .9375em .9375em}.o-expandable__content:before{content:\"\";border-top:1px solid var(--expandable-border);padding-top:.9375em;display:block}.o-expandable__content:after{width:100%;padding-bottom:.9375em}.o-expandable--background{background:var(--gray-5)}.o-expandable--border{border:1px solid var(--expandable-border)}.o-expandable-group .o-expandable{border-bottom:1px solid var(--expandable-border)}.o-expandable-group .o-expandable:first-child{border-top:1px solid var(--expandable-border)}@media print{.o-expandable__header[aria-expanded=true] .o-expandable__cue-close,.o-expandable__header[aria-expanded=false] .o-expandable__cue-open{display:none}.o-expandable__content[aria-expanded=false]{display:block;max-height:99999px!important}}html[lang=ar] :host .o-expandable__header{text-align:right}html[lang=ar] :host .o-expandable__cues{text-align:left}";
-//#endregion
-//#region packages/cfpb-design-system/src/utilities/transition/base-transition.js
+// packages/cfpb-design-system/src/utilities/transition/base-transition.js
 function B(e, t, n) {
 	let r = t, i = e;
 	if (!n) throw Error("Child transition argument must be defined!");
@@ -1359,8 +1353,7 @@ function B(e, t, n) {
 	return this.animateOff = x, this.animateOn = b, this.applyClass = w, this.halt = v, this.init = ee, this.isAnimated = () => u, this.remove = y, this.setElement = C, this;
 }
 B.BEGIN_EVENT = "transitionbegin", B.END_EVENT = "transitionend", B.NO_ANIMATION_CLASS = "u-no-animation", B.ANIMATING_CLASS = "u-is-animating";
-//#endregion
-//#region packages/cfpb-design-system/src/utilities/event-observer.js
+// packages/cfpb-design-system/src/utilities/event-observer.js
 function V() {
 	let e = {};
 	function t(t, n) {
@@ -1380,8 +1373,7 @@ function V() {
 	}
 	return this.addEventListener = t, this.removeEventListener = n, this.dispatchEvent = r, this.getRegisteredEvents = () => e, this;
 }
-//#endregion
-//#region packages/cfpb-design-system/src/utilities/transition/max-height-transition.js
+// packages/cfpb-design-system/src/utilities/transition/max-height-transition.js
 var bt = "transitiondir", H = {
 	CSS_PROPERTY: "max-height",
 	BASE_CLASS: "u-max-height-transition",
@@ -1441,11 +1433,9 @@ function U(e) {
 	return this.addEventListener = n.addEventListener, this.dispatchEvent = n.dispatchEvent, this.removeEventListener = n.removeEventListener, this.animateOff = r.animateOff, this.animateOn = r.animateOn, this.halt = r.halt, this.isAnimated = r.isAnimated, this.setElement = r.setElement, this.refresh = a, this.remove = p, this.init = c, this.maxHeightDefault = l, this.maxHeightSummary = u, this.maxHeightZero = f, this.maxHeightDynamic = d, this;
 }
 U.CLASSES = H;
-//#endregion
-//#region packages/cfpb-design-system/src/utilities/standard-type.js
+// packages/cfpb-design-system/src/utilities/standard-type.js
 var W = "data-js-hook", xt = "behavior_", St = "state_";
-//#endregion
-//#region packages/cfpb-design-system/src/utilities/data-hook.js
+// packages/cfpb-design-system/src/utilities/data-hook.js
 function Ct(e, t) {
 	if (!e) return !1;
 	let n = e.getAttribute(W);
@@ -1460,8 +1450,7 @@ function G(e, t) {
 	let n = e.getAttribute(W);
 	return n !== null && (t = n + " " + t), e.setAttribute(W, t), t;
 }
-//#endregion
-//#region packages/cfpb-design-system/src/utilities/behavior/behavior.js
+// packages/cfpb-design-system/src/utilities/behavior/behavior.js
 function wt(e, t) {
 	t ||= document;
 	let n = [];
@@ -1495,8 +1484,7 @@ function Et(e, t) {
 function Dt(e, t) {
 	return e = W + "*=" + xt + e, e = "[" + e + "]", wt(e, t);
 }
-//#endregion
-//#region packages/cfpb-design-system/src/utilities/behavior/flyout-menu.js
+// packages/cfpb-design-system/src/utilities/behavior/flyout-menu.js
 var Ot = xt + "flyout-menu", kt = "[" + W + "=" + Ot;
 function K(e, t = !0) {
 	let n = Et(e, Ot), r = m(e), i = Et(e, Ot + "_content"), a = 0, o, s, c, l = ee.bind(this), u = C.bind(this), d, f = !0, p = !1;
@@ -1606,8 +1594,7 @@ function K(e, t = !0) {
 	let ae = new V();
 	return this.addEventListener = ae.addEventListener, this.removeEventListener = ae.removeEventListener, this.dispatchEvent = ae.dispatchEvent, this.init = h, this.expand = x, this.collapse = S, this.setTransition = w, this.clearTransition = te, this.getData = () => d, this.getTransition = () => o, this.getDom = ne, this.isAnimating = () => a === 2 || a === 1, this.isExpanded = () => a === 3, this.resume = re, this.setData = ie, this.suspend = T, K.BASE_CLASS = Ot, this;
 }
-//#endregion
-//#region packages/cfpb-design-system/src/elements/cfpb-expandable/index.js
+// packages/cfpb-design-system/src/elements/cfpb-expandable/index.js
 var At = class e extends I {
 	static styles = b`
     ${y(yt)}
@@ -3218,8 +3205,7 @@ function Y(e, t, n, r = {}) {
 	for (let e = 0, n = i.length; e < n; e++) s = i[e], Ct(s, Sn) === !1 && (o = new t(s), o.init(r), a.push(o));
 	return a;
 }
-//#endregion
-//#region packages/cfpb-design-system/src/components/utilities/breakpoint-state.js
+// packages/cfpb-design-system/src/components/utilities/breakpoint-state.js
 function Tn() {
 	let e = getComputedStyle(document.body).fontSize;
 	return e = e === "" ? -1 : e, parseFloat(e);
@@ -3240,8 +3226,7 @@ function jn(e) {
 	let t = !1, n = Dn();
 	return (e === "mobile" && n.bpXS || e === "tablet" && n.bpSM || e === "desktop" && (n.bpMED || n.bpLG || n.bpXL)) && (t = !0), t;
 }
-//#endregion
-//#region packages/cfpb-design-system/src/components/utilities/type-checkers.js
+// packages/cfpb-design-system/src/components/utilities/type-checkers.js
 var Mn = Object.prototype.toString;
 function Nn(e) {
 	return e === void 0;
@@ -3270,13 +3255,11 @@ function Bn(e) {
 function Vn(e) {
 	return Nn(e) || e === null || In(e) && e.length <= 0 || /^\s*$/.test(e);
 }
-//#endregion
-//#region packages/cfpb-design-system/src/components/utilities/media-helpers.js
+// packages/cfpb-design-system/src/components/utilities/media-helpers.js
 function Hn() {
 	return !!(/* @__PURE__ */ new RegExp(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)).test(navigator.userAgent);
 }
-//#endregion
-//#region packages/cfpb-design-system/src/components/utilities/transition/alpha-transition.js
+// packages/cfpb-design-system/src/components/utilities/transition/alpha-transition.js
 var Un = {
 	CSS_PROPERTY: "opacity",
 	BASE_CLASS: "u-alpha-transition",
@@ -3297,8 +3280,7 @@ function Wn(e) {
 	return this.addEventListener = t.addEventListener, this.dispatchEvent = t.dispatchEvent, this.removeEventListener = t.removeEventListener, this.animateOff = n.animateOff, this.animateOn = n.animateOn, this.halt = n.halt, this.isAnimated = n.isAnimated, this.remove = n.remove, this.setElement = n.setElement, this.fadeIn = i, this.fadeOut = a, this.init = r, this;
 }
 Wn.CLASSES = Un;
-//#endregion
-//#region packages/cfpb-design-system/src/components/utilities/transition/move-transition.js
+// packages/cfpb-design-system/src/components/utilities/transition/move-transition.js
 var X = {
 	CSS_PROPERTY: "transform",
 	BASE_CLASS: "u-move-transition",
@@ -3335,8 +3317,7 @@ function Gn(e) {
 	return this.addEventListener = t.addEventListener, this.dispatchEvent = t.dispatchEvent, this.removeEventListener = t.removeEventListener, this.animateOff = n.animateOff, this.animateOn = n.animateOn, this.halt = n.halt, this.isAnimated = n.isAnimated, this.setElement = n.setElement, this.remove = n.remove, this.init = r, this.moveLeft = () => a(1), this.moveLeft2 = () => a(2), this.moveLeft3 = () => a(3), this.moveRight = o, this.moveToOrigin = i, this.moveUp = s, this;
 }
 Gn.CLASSES = X;
-//#endregion
-//#region packages/cfpb-design-system/src/utilities/utilities.scss
+// packages/cfpb-design-system/src/utilities/utilities.scss
 var Kn = /* @__PURE__ */ t({}), qn = /* @__PURE__ */ t({}), Jn = "o-expandable";
 function Z(e) {
 	let t = q(e, Jn), n, r, i, a, o;
@@ -3360,8 +3341,7 @@ function Z(e) {
 	return this.addEventListener = l.addEventListener, this.removeEventListener = l.removeEventListener, this.dispatchEvent = l.dispatchEvent, this;
 }
 Z.BASE_CLASS = Jn, Z.init = (e) => Y(`.${Z.BASE_CLASS}`, Z, e);
-//#endregion
-//#region packages/cfpb-design-system/src/components/cfpb-expandables/expandable-group.scss
+// packages/cfpb-design-system/src/components/cfpb-expandables/expandable-group.scss
 var Yn = /* @__PURE__ */ t({}), Xn = "o-expandable-group";
 function Zn(e) {
 	let t = q(e, Xn), n = t.classList.contains(`${Xn}--accordion`), r, i;
@@ -3382,8 +3362,7 @@ Zn.BASE_CLASS = Xn, Zn.init = (e) => {
 		new Zn(e).init(t);
 	});
 };
-//#endregion
-//#region packages/cfpb-design-system/src/components/cfpb-expandables/summary.scss
+// packages/cfpb-design-system/src/components/cfpb-expandables/summary.scss
 var Qn = /* @__PURE__ */ t({}), $n = "o-summary";
 function er(e) {
 	let t = q(e, $n), n = t.classList.contains(`${$n}--mobile`), r = t.querySelector(`.${$n}__content`), i = t.querySelector(`.${$n}__btn`), a, o, s;
@@ -3427,8 +3406,7 @@ function er(e) {
 	return this.addEventListener = b.addEventListener, this.removeEventListener = b.removeEventListener, this.dispatchEvent = b.dispatchEvent, this.init = c, this;
 }
 er.BASE_CLASS = $n, er.init = (e) => Y(`.${$n}`, er, e);
-//#endregion
-//#region packages/cfpb-design-system/src/components/cfpb-expandables/summary-minimal.js
+// packages/cfpb-design-system/src/components/cfpb-expandables/summary-minimal.js
 var tr = "o-summary-minimal";
 function nr(e) {
 	let t = q(e, tr), n = t.querySelector(`.${tr}__content`), r = t.querySelector(`.${tr}__btn`), i, a;
@@ -3448,8 +3426,7 @@ function nr(e) {
 	return this.addEventListener = u.addEventListener, this.removeEventListener = u.removeEventListener, this.dispatchEvent = u.dispatchEvent, this.init = o, this;
 }
 nr.BASE_CLASS = tr, nr.init = (e) => Y(`.${tr}`, nr, e);
-//#endregion
-//#region packages/cfpb-design-system/src/components/cfpb-forms/form.scss
+// packages/cfpb-design-system/src/components/cfpb-forms/form.scss
 var rr = /* @__PURE__ */ t({}), ir = /* @__PURE__ */ t({}), ar = /* @__PURE__ */ t({}), or = /* @__PURE__ */ t({}), sr = /* @__PURE__ */ t({}), cr = /* @__PURE__ */ t({}), lr = /* @__PURE__ */ t({}), ur = /* @__PURE__ */ t({}), dr = /* @__PURE__ */ t({});
 function fr(e) {
 	return e.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&");
@@ -3513,8 +3490,7 @@ function mr(e, t, n) {
 		return u = -1, u;
 	}, this.getOption = v, this;
 }
-//#endregion
-//#region packages/cfpb-design-system/src/components/cfpb-forms/multiselect-utils.js
+// packages/cfpb-design-system/src/components/cfpb-forms/multiselect-utils.js
 function Q(e, t, n) {
 	let r = document.createElement(e);
 	return Object.keys(n).forEach((e) => {
@@ -3522,8 +3498,7 @@ function Q(e, t, n) {
 		e in r ? r[e] = t : r.setAttribute(e, t);
 	}), t && t.appendChild(r), r;
 }
-//#endregion
-//#region packages/cfpb-design-system/src/components/cfpb-forms/multiselect.js
+// packages/cfpb-design-system/src/components/cfpb-forms/multiselect.js
 var $ = "o-multiselect", hr = "prev", gr = "next", _r = "Enter", vr = " ", yr = "Escape", br = "ArrowUp", xr = "ArrowDown", Sr = "Tab", Cr = {
 	renderTags: !0,
 	maxSelections: 5
@@ -3700,8 +3675,6 @@ function wr(e) {
 	return this.addEventListener = ce.addEventListener, this.removeEventListener = ce.removeEventListener, this.dispatchEvent = ce.dispatchEvent, this.getModel = se, this.updateSelections = T, this.selectionClickHandler = w, this.selectionKeyDownHandler = te, this;
 }
 wr.BASE_CLASS = $, wr.init = (e) => Y(`.${$}`, wr, void 0, e);
-//#endregion
-//#region packages/cfpb-design-system/src/components/cfpb-icons/icon.scss
+// packages/cfpb-design-system/src/components/cfpb-icons/icon.scss
 var Tr = /* @__PURE__ */ t({}), Er = /* @__PURE__ */ t({}), Dr = /* @__PURE__ */ t({}), Or = /* @__PURE__ */ t({}), kr = /* @__PURE__ */ t({}), Ar = /* @__PURE__ */ t({}), jr = /* @__PURE__ */ t({}), Mr = /* @__PURE__ */ t({}), Nr = /* @__PURE__ */ t({}), Pr = /* @__PURE__ */ t({}), Fr = /* @__PURE__ */ t({}), Ir = /* @__PURE__ */ t({}), Lr = /* @__PURE__ */ t({}), Rr = /* @__PURE__ */ t({}), zr = /* @__PURE__ */ t({}), Br = /* @__PURE__ */ t({}), Vr = /* @__PURE__ */ t({}), Hr = /* @__PURE__ */ t({}), Ur = /* @__PURE__ */ t({}), Wr = /* @__PURE__ */ t({});
-//#endregion
 export { Wn as AlphaTransition, xt as BEHAVIOR_PREFIX, B as BaseTransition, Ye as CfpbAlert, gt as CfpbButton, At as CfpbExpandable, zt as CfpbFileUpload, vt as CfpbFormAlert, Lt as CfpbFormChoice, en as CfpbFormSearch, $t as CfpbFormSearchInput, L as CfpbIcon, Ht as CfpbLabel, Gt as CfpbLink, Je as CfpbList, Kt as CfpbListItem, Xt as CfpbListbox, Yt as CfpbListboxItem, vn as CfpbPagination, gn as CfpbSelect, un as CfpbTagFilter, fn as CfpbTagTopic, an as CfpbTagline, An as DESKTOP, V as EventObserver, Z as Expandable, Zn as ExpandableGroup, Yn as ExpandableGroupStyles, qn as ExpandableStyles, K as FlyoutMenu, r as I18nService, W as JS_HOOK, On as MOBILE, U as MaxHeightTransition, i as MediaQueryService, Gn as MoveTransition, wr as Multiselect, St as STATE_PREFIX, o as SearchService, er as Summary, nr as SummaryMinimal, Qn as SummaryStyles, kn as TABLET, G as add, Pr as bannerStyles, Tt as behaviorAttach, Dt as behaviorFind, bn as buttonGroupStyles, xn as buttonLinkStyles, yn as buttonStyles, Dr as cardGroupStyles, Er as cardStyles, Et as checkBehaviorDom, q as checkDom, Ct as contains, Rr as dateStyles, p as defineComponent, Or as emailSignupStyles, kr as featuredContentModuleStyles, ir as formAlertStyles, ar as formFieldStyles, rr as formStyles, Dn as getBreakpointState, f as getSharedConfig, Ar as heroStyles, Tr as iconStyles, Y as instantiateAll, zn as isArray, Rn as isDate, Pn as isDefined, Vn as isEmpty, Bn as isFunction, Hn as isMobileUserAgent, Ln as isNumber, Fn as isObject, In as isString, Nn as isUndefined, or as labelStyles, jr as layoutStyles, zr as linkStyles, Br as listStyles, Vr as metaHeaderStyles, Fr as notificationStyles, Ir as paginationStyles, a as parseChildData, Hr as pullQuoteStyles, sr as rangeStyles, cr as searchInputStyles, lr as selectStyles, J as setInitFlag, d as setSharedConfig, Ur as slugHeaderStyles, Lr as tableStyles, ur as tagStyles, Wr as taglineStyles, dr as textInputStyles, Mr as textIntroductionStyles, Kn as utilitiesStyles, n as varsBreakpoints, jn as viewportIsIn, Nr as wellStyles };

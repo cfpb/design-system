@@ -133,11 +133,8 @@
   },
   "resolutions": {
     "trim": ">=0.0.2",
-    "minimatch": ">=7.4.8",
     "qs": ">=6.16.1",
-    "uuid": ">=13.0.1",
-    "shell-quote": ">=1.11.0",
-    "tmp": ">=0.2.7"
+    "uuid": ">=13.0.1"
   },
   "type": "module",
   "packageManager": "yarn@4.18.0",

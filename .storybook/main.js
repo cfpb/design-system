@@ -51,7 +51,11 @@ export default {
       // pre-bundle is served from node_modules and loads a second lit-html. AKA
       // "Multipe versions of Lit loaded".
       optimizeDeps: {
-        include: ['lit/directive-helpers.js', 'lit/directives/if-defined.js'],
+        include: [
+          'lit/directive-helpers.js',
+          'lit/directives/if-defined.js',
+          'tippy.js',
+        ],
       },
       resolve: {
         alias: {

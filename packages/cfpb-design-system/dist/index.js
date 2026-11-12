@@ -2468,7 +2468,7 @@ var At = class e extends I {
 		}));
 	}
 	#i(e) {
-		e.preventDefault(), !this.disabled && (this.value = "", this.#e.value?.focus(), this.dispatchEvent(new CustomEvent("clear", {
+		e.preventDefault(), this.disabled || (this.value = "", this.#e.value?.focus(), this.dispatchEvent(new CustomEvent("clear", {
 			detail: "",
 			bubbles: !0,
 			composed: !0
@@ -2482,12 +2482,9 @@ var At = class e extends I {
       <div
         class="o-search-input ${this.validation ? `o-search-input--${this.validation}` : ""}"
       >
-        <label
-          for="search-text"
-          class="o-search-input__input-label"
-          aria-label=${this.label}
-        >
+        <label for="search-text" class="o-search-input__input-label">
           <cfpb-icon name="search"></cfpb-icon>
+          <span class="u-visually-hidden">${this.label}</span>
         </label>
         <input
           id="search-text"
@@ -2588,7 +2585,7 @@ var At = class e extends I {
 		return this.validation = e ? "error" : "", e;
 	}
 	#l(e) {
-		e.preventDefault(), !this.disabled && (this.#n.setFormValue(this.value), this.#n.form?.requestSubmit());
+		e.preventDefault(), this.disabled || (this.#n.setFormValue(this.value), this.#n.form?.requestSubmit());
 	}
 	render() {
 		return j` <!--Light DOM content-->

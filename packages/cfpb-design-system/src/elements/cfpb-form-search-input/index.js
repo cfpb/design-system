@@ -8,7 +8,7 @@ import { CfpbIcon } from '../cfpb-icon';
  * @element cfpb-form-search-input
  * @property {boolean} disabled - Whether the input is disabled or not.
  * @property {string} validation - Validation style: error, warning, success.
- * @property {string} label - The aria-label for the input.
+ * @property {string} label - The inpupt text that is visually hidden.
  * @property {string} name - The name within a form.
  * @property {string} value - The value within the input.
  * @property {number} maxlength - The maximum characters allowed in the input.
@@ -101,12 +101,9 @@ export class CfpbFormSearchInput extends LitElement {
           this.validation ? `o-search-input--${this.validation}` : ''
         }"
       >
-        <label
-          for="search-text"
-          class="o-search-input__input-label"
-          aria-label=${this.label}
-        >
+        <label for="search-text" class="o-search-input__input-label">
           <cfpb-icon name="search"></cfpb-icon>
+          <span class="u-visually-hidden">${this.label}</span>
         </label>
         <input
           id="search-text"

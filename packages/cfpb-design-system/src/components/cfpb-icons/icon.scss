@@ -11,8 +11,8 @@
   vertical-align: middle;
   fill: currentcolor;
 
-  updating,
-  updating-round {
+  &--updating,
+  &--updating-round {
     animation: updating-animation 1.25s infinite linear;
     transform-origin: 50% 50%;
   }

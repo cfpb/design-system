@@ -1252,7 +1252,7 @@
                 "text": "string"
               },
               "default": "'Search'",
-              "description": "The aria-label for the input.",
+              "description": "The inpupt text that is visually hidden.",
               "attribute": "label"
             },
             {
@@ -1412,7 +1412,7 @@
                 "text": "string"
               },
               "default": "'Search'",
-              "description": "The aria-label for the input.",
+              "description": "The inpupt text that is visually hidden.",
               "fieldName": "label"
             },
             {

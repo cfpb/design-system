@@ -66,8 +66,9 @@ variation_groups:
           <form>
               <div class="o-search-input">
                   <div class="o-search-input__input">
-                      <label for="example-search-text" class="o-search-input__input-label" aria-label="Search for a term">
+                      <label for="example-search-text" class="o-search-input__input-label" >
                         {% include icons/search.svg %}
+                        <span class="u-visually-hidden">Enter your search term(s)</span>
                       </label>
                       <input type="search" id="example-search-text" name="example-search-text" value="" class="a-text-input" placeholder="Enter your search term(s)" title="Enter your search term(s)" autocomplete="off" maxlength="75">
                       <button type="reset" onclick="document.getElementById('example-search-text').setAttribute('value','')" aria-label="Clear search" title="Clear search">

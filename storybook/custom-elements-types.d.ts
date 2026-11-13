@@ -380,7 +380,7 @@ export type CfpbFormSearchInputProps = {
   disabled?: CfpbFormSearchInput['disabled'] | undefined;
   /** Validation style: error, warning, success. */
   validation?: CfpbFormSearchInput['validation'] | undefined;
-  /** The aria-label for the input. */
+  /** The inpupt text that is visually hidden. */
   label?: CfpbFormSearchInput['label'] | undefined;
   /** The name within a form. */
   name?: CfpbFormSearchInput['name'] | undefined;
@@ -416,7 +416,7 @@ export type CfpbFormSearchInputSolidJsProps = {
   'prop:disabled'?: CfpbFormSearchInput['disabled'] | undefined;
   /** Validation style: error, warning, success. */
   'prop:validation'?: CfpbFormSearchInput['validation'] | undefined;
-  /** The aria-label for the input. */
+  /** The inpupt text that is visually hidden. */
   'prop:label'?: CfpbFormSearchInput['label'] | undefined;
   /** The name within a form. */
   'prop:name'?: CfpbFormSearchInput['name'] | undefined;
@@ -1268,7 +1268,7 @@ export type CustomElements = {
    *
    * - `disabled`: Whether the input is disabled or not.
    * - `validation`: Validation style: error, warning, success.
-   * - `label`: The aria-label for the input.
+   * - `label`: The inpupt text that is visually hidden.
    * - `name`: The name within a form.
    * - `title`: undefined
    * - `value`: The value within the input.
@@ -2011,7 +2011,7 @@ export type CustomElementsSolidJs = {
    *
    * - `disabled`: Whether the input is disabled or not.
    * - `validation`: Validation style: error, warning, success.
-   * - `label`: The aria-label for the input.
+   * - `label`: The inpupt text that is visually hidden.
    * - `name`: The name within a form.
    * - `title`: undefined
    * - `value`: The value within the input.

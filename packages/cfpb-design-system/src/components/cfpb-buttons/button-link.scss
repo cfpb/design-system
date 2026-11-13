@@ -10,7 +10,7 @@
   text-decoration-style: dotted;
   text-underline-offset: 4.5px;
 
-  &:has(svg) {
+  &:has(svg, cfpb-icon) {
     // Button links should be closer to their icon.
     gap: math.div(5px, $base-font-size-px) + rem;
 

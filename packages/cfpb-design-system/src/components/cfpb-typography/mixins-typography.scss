@@ -47,7 +47,8 @@
       width: 100%;
 
       // Only right-hand align arrow icons.
-      .cf-icon-svg--right {
+      .cf-icon-svg--right,
+      cfpb-icon[name='right'] {
         margin-left: auto;
       }
 

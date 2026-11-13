@@ -38,7 +38,8 @@ $meta-header-item-gap: 21px;
       margin-bottom: math.div(5px, $base-font-size-px) + rem;
     }
 
-    .cf-icon-svg {
+    .cf-icon-svg,
+    cfpb-icon {
       margin-right: math.div(5px, $base-font-size-px) + rem;
     }
 

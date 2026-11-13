@@ -19,7 +19,8 @@
   text-align: left;
   min-width: fit-content;
 
-  .cf-icon-svg {
+  .cf-icon-svg,
+  cfpb-icon {
     pointer-events: none;
 
     // Prevent flexbox from squishing icon when tag text is long.

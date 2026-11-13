@@ -56,7 +56,8 @@
       padding: 5px;
       text-align: right;
 
-      > svg {
+      > svg,
+      > cfpb-icon {
         // Set width of SVG width to create a box for the focus rectangle.
         width: 25px;
         cursor: pointer;
@@ -77,7 +78,8 @@
       // Put the focus rectangle on the icon
       // because the button touch target is larger and would be lop-sided if
       // we put the rectangle on the button.
-      > svg {
+      > svg,
+      > cfpb-icon {
         outline: 1px dotted var(--pacific);
       }
     }

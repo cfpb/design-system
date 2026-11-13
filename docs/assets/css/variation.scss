@@ -54,11 +54,13 @@
 }
 
 // The icon colors on the restrictions do/do not sections.
-.component-restrictions__heading-do svg {
+.component-restrictions__heading-do svg,
+.component-restrictions__heading-do cfpb-icon {
   color: var(--green);
 }
 
-.component-restrictions__heading-donot svg {
+.component-restrictions__heading-donot svg,
+.component-restrictions__heading-donot cfpb-icon {
   color: var(--red);
 }
 

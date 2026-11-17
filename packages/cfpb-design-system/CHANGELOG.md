@@ -2,7 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
-## [5.10.3](https://github.com/cfpb/design-system/compare/v5.10.2..v5.10.3) - October  9, 2026
+## [5.10.4](https://github.com/cfpb/design-system/compare/v5.10.3..v5.10.4) - November 17, 2026
+
+### General
+
+- Bump deps, remove undici resolution, rebuild dist (#2833) - ([a48649e](https://github.com/cfpb/design-system/commit/a48649ec1ad9923774db19eea3bc90a9c9736b61)) - itsmedavep
+- Bump deps and dedupe (#2834) - ([1de8fd0](https://github.com/cfpb/design-system/commit/1de8fd09c7753b0169e2d91d061c7dbf3fd3d743)) - itsmedavep
+- Making stories show bool correctly and fixing expandable `play` functions (#2835) - ([9b48c49](https://github.com/cfpb/design-system/commit/9b48c49b2e426939466e6ea10b8c0e2b4b2cb53d)) - itsmedavep
+- Fix "flaky" and failing e2e tests (#2814)
+
+* remove excessive timeout, fix base-transition race, update decap-cms spec  and interstitial spec with changes, remove screenshot with potentially bad character in the filename
+
+* regen dist - ([3e3ea1d](https://github.com/cfpb/design-system/commit/3e3ea1d2437ef01deb4c765229de6b77b74e7461)) - itsmedavep
+- Bump eslint-plugin-jsdoc, sass, vite & regen dist (#2843) - ([26fbeca](https://github.com/cfpb/design-system/commit/26fbeca9e26b5259fc82fc28c4b3c9ab33092788)) - itsmedavep
+- Deps - Bump Lighthouse CI, Playwright, Storybook, Vitest and 5 others, fix search input label a11y and drop unused resolutions (#2849)
+
+* bump-lhci/cli_playwright/test_storybook(and-associated-addons)_concurrently_eslint-plugin-jsdoc_eslint-plugin-playwright_estlint-plugin-storybook_glob_globals_jsdom_marked_sass_style-dictionary
+
+* bump: vitest/browser-playwright_vitest/coverage-v8,glob,jsdom,vite,vitest
+
+* removing resolutions, removing aria-label on search input since lhci bump causes errors, adding tippy.js to optimizeDeps, regen types and CEM, regen dist
+
+* force update body-parser and ip-address - ([992b6c9](https://github.com/cfpb/design-system/commit/992b6c938dbbbafbb3f6ca70e160dfac4fe38cc6)) - itsmedavep
+- Legacy components to now use svg & cfpb-icon (#2850) - ([631f7cb](https://github.com/cfpb/design-system/commit/631f7cb0bed21dc2d4c42682fdd6894d4abec4cc)) - itsmedavep
+
+## [5.10.3](https://github.com/cfpb/design-system/compare/v5.10.2..vv5.10.3) - October  9, 2026
 
 ### General
 

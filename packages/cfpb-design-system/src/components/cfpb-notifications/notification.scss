@@ -13,17 +13,21 @@
   background: $notification-bg;
   border: 1px solid $notification-border;
 
-  & > .cf-icon-svg {
+  & > .cf-icon-svg,
+  & > cfpb-icon {
     flex: none;
     fill: $notification-icon;
+    color: $notification-icon;
   }
 
   &--success {
     background: $notification-bg-success;
     border-color: $notification-border-success;
 
-    & > .cf-icon-svg {
+    & > .cf-icon-svg,
+    & > cfpb-icon {
       fill: $notification-icon-success;
+      color: $notification-icon-success;
     }
   }
 
@@ -31,8 +35,10 @@
     background: $notification-bg-warning;
     border-color: $notification-border-warning;
 
-    & > .cf-icon-svg {
+    & > .cf-icon-svg,
+    & > cfpb-icon {
       fill: $notification-icon-warning;
+      color: $notification-icon-warning;
     }
   }
 
@@ -40,8 +46,10 @@
     background: $notification-bg-error;
     border-color: $notification-border-error;
 
-    & > .cf-icon-svg {
+    & > .cf-icon-svg,
+    & > cfpb-icon {
       fill: $notification-icon-error;
+      color: $notification-icon-error;
     }
   }
 
@@ -71,7 +79,8 @@
   }
 
   // Only adding left padding if an icon is present.
-  .cf-icon-svg + &__content {
+  .cf-icon-svg + &__content,
+  cfpb-icon + &__content {
     flex-grow: 1;
   }
 
@@ -101,7 +110,8 @@
   @include respond-to-min($bp-sm-min) {
     // Make adjustments to the icon, explanation, and links if at non-mobile.
     // Increase the icon size.
-    .cf-icon-svg {
+    .cf-icon-svg,
+    cfpb-icon {
       font-size: math.div(18px, $base-font-size-px) + rem;
     } // Remove default margin between explanation and list of links.
     &__explanation {
@@ -118,7 +128,8 @@
 
 // Handle right-to-left (RTL) adjustments.
 html[lang='ar'] .m-notification {
-  .cf-icon-svg + .m-notification__content {
+  .cf-icon-svg + .m-notification__content,
+  cfpb-icon + .m-notification__content {
     padding-left: initial;
     padding-right: math.div(25px, $base-font-size-px) + rem;
   }

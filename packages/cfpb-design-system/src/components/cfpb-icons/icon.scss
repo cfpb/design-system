@@ -1,3 +1,4 @@
+@use 'sass:list';
 @use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 /* ==========================================================================
@@ -27,41 +28,57 @@
 }
 
 // Right-to-left (RTL) certain icons on arabic pages.
+$rtl-icons: (
+  right,
+  right-round,
+  left,
+  left-round,
+  arrow-right,
+  arrow-right-round,
+  arrow-left,
+  arrow-left-round,
+  help,
+  help-round,
+  book,
+  book-round,
+  document,
+  document-round,
+  edit,
+  edit-round,
+  paper-clip,
+  paper-clip-round,
+  cart,
+  cart-round,
+  disability,
+  disability-round,
+  travel,
+  travel-round,
+  bullhorn,
+  bullhorn-round,
+  chart,
+  chart-round,
+  list,
+  list-round,
+  external-link,
+  external-link-round
+);
+$rtl-icon-selectors: ();
+
+@each $icon in $rtl-icons {
+  $rtl-icon-selectors: list.append(
+    $rtl-icon-selectors,
+    '.cf-icon-svg--#{$icon}',
+    $separator: comma
+  );
+  $rtl-mirror-icon-selectors: list.append(
+    $rtl-icon-selectors,
+    "cfpb-icon[name='#{$icon}']",
+    $separator: comma
+  );
+}
+
 html[lang='ar'] {
-  .cf-icon-svg {
-    &--right,
-    &--right-round,
-    &--left,
-    &--left-round,
-    &--arrow-right,
-    &--arrow-right-round,
-    &--arrow-left,
-    &--arrow-left-round,
-    &--help,
-    &--help-round,
-    &--book,
-    &--book-round,
-    &--document,
-    &--document-round,
-    &--edit,
-    &--edit-round,
-    &--paper-clip,
-    &--paper-clip-round,
-    &--cart,
-    &--cart-round,
-    &--disability,
-    &--disability-round,
-    &--travel,
-    &--travel-round,
-    &--bullhorn,
-    &--bullhorn-round,
-    &--chart,
-    &--chart-round,
-    &--list,
-    &--list-round,
-    &--external-link,
-    &--external-link-round {
-      transform: scaleX(-1);
-    }
+  #{$rtl-icon-selectors} {
+    transform: scaleX(-1);
   }
 }

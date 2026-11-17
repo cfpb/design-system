@@ -29,7 +29,8 @@
     color: var(--pacific);
     background: #fff;
 
-    svg {
+    svg,
+    cfpb-icon {
       // Prevent icon from shrinking when button wraps.
       flex: none;
     }

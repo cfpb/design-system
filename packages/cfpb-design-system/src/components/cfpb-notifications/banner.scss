@@ -36,8 +36,10 @@ $banner-dark-foreground: var(--white);
     .m-notification {
       background: $banner-dark-background;
 
-      .cf-icon-svg {
+      .cf-icon-svg,
+      cfpb-icon {
         fill: $banner-dark-foreground;
+        color: $banner-dark-foreground;
       }
 
       a {

@@ -7,7 +7,8 @@
   display: flex;
   gap: math.div(5px, $base-font-size-px) + rem;
 
-  .cf-icon-svg {
+  .cf-icon-svg,
+  cfpb-icon {
     color: var(--form-alert-icon-color);
     flex: none;
     margin-top: math.div(1px, $base-font-size-px) + rem;
@@ -17,15 +18,18 @@
     display: block;
   }
 
-  &--success .cf-icon-svg {
+  &--success .cf-icon-svg,
+  &--success cfpb-icon {
     --form-alert-icon-color: var(--form-alert-icon-color-success);
   }
 
-  &--warning .cf-icon-svg {
+  &--warning .cf-icon-svg,
+  &--warning cfpb-icon {
     --form-alert-icon-color: var(--form-alert-icon-color-warning);
   }
 
-  &--error .cf-icon-svg {
+  &--error .cf-icon-svg,
+  &--error cfpb-icon {
     --form-alert-icon-color: var(--form-alert-icon-color-error);
   }
 }

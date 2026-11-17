@@ -174,14 +174,16 @@ input.a-btn::-moz-focus-inner {
   }
 
   // Set either the text or icon as the last item in the button.
-  &:has(svg + span) {
+  // Since migrating cf.gov to use cfpb-icon, icons can be either inline svg or cfpb-icon
+  &:has(svg + span, cfpb-icon + span) {
     span {
       order: 3;
     }
   }
 
-  &:has(span + svg) {
-    svg {
+  &:has(span + svg, span + cfpb-icon) {
+    svg,
+    cfpb-icon {
       order: 3;
 
       // Prevent icon from shrinking when button wraps.
@@ -190,30 +192,31 @@ input.a-btn::-moz-focus-inner {
   }
 
   // Handle button with icon divider logic.
-  &:not(.a-btn--hide-icon):has(svg + span)::before,
-  &:not(.a-btn--hide-icon):has(span + svg)::before {
+  &:not(.a-btn--hide-icon):has(svg + span, cfpb-icon + span)::before,
+  &:not(.a-btn--hide-icon):has(span + svg, span + cfpb-icon)::before {
     @include legacy-u-btn-divider;
   }
 
   // Handle different coloring in divider.
-  &--secondary:has(svg)::before {
+  &--secondary:has(svg, cfpb-icon)::before {
     border-color: var(--btn-secondary-divider) !important;
   }
 
-  &--warning:has(svg)::before {
+  &--warning:has(svg, cfpb-icon)::before {
     border-color: var(--btn-warning-divider) !important;
   }
 
-  &--disabled:has(svg)::before,
-  &[disabled]:has(svg)::before,
-  &[aria-disabled='true']:has(svg)::before {
+  &--disabled:has(svg, cfpb-icon)::before,
+  &[disabled]:has(svg, cfpb-icon)::before,
+  &[aria-disabled='true']:has(svg, cfpb-icon)::before {
     border-color: var(--btn-disabled-divider) !important;
   }
 
   // Hide the icon if the a-btn--hide-icon modifier is set.
   // Useful for showing and hiding a loading icon, for example.
   &--hide-icon {
-    svg {
+    svg,
+    cfpb-icon {
       display: none;
     }
   }
